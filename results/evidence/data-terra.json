@@ -1,0 +1,1443 @@
+{
+  "node_id": "data-terra",
+  "node_name": "Data Terra",
+  "requested_url": "https://www.data-terra.org/eosc/",
+  "fetched_at": "2026-09-17T14:53:09+00:00",
+  "final_url": "https://www.data-terra.org/eosc/",
+  "http_status": 200,
+  "redirect_chain": [],
+  "robots_allowed": true,
+  "robots_note": "robots.txt consulted",
+  "title": "The EOSC Node for the Earth system and environmental sciences (under construction) | Infrastructure de recherche Data Terra",
+  "lang_attr": "fr-FR",
+  "main_text": "Accueil The EOSC Node f... The EOSC Node for the Earth system and environmental sciences (under construction) The EOSC node’s digital gateway plays a crucial role in connecting research organizations to the broader European ecosystem. It serves as a single-entry point to the European Open Science Cloud (EOSC), facilitating access to open science resources and services across Europe. The DATA TERRA RI is at the heart of the data chain, filling the gap between fundamental research and field application. It also emphasizes interdisciplinary research and open collaboration. The Data Terra Node’s major contributions to the EOSC federation: 0 A seamless access High-quality, trusted FAIR and AI-ready multi-domain and multi-source data for the Earth, climate, environment and biodiversity system with rich metadata, semantic interoperability and provenance information. 0 Cross-domain data analysis workflows addressing emerging urgent multidisciplinary research challenges in relation to global changes, climate adaptation, extreme events characterisation, loss of biodiversity and societal impacts enhancing the linkages with other Data-Spaces and Data-hubs in Europe and beyond. 0 A federated layer towards the environment-oriented Research Infrastructures in coordination, as well as with other European organisations and programs such as Copernicus and Destination Earth. DATA TERRA THEMATIC HUBS AND CROSS-CUTTING SERVICES Data Terra is organized around several thematic hubs and cross-cutting services that cover key components of the Earth system for integrated observation, understanding, and prediction in response to global changes. 5 thematic hubs Data Terra consists of five main data and service hubs (or poles), each dedicated to a specific compartment of the Earth system: AERIS (Atmosphere) : This hub focuses on atmospheric data, collecting, validating, and harmonizing data from field surveys, long-term observation sites, and satellites. It coordinates multiple data centers and laboratories that provide atmospheric data for research and commercial use. FormaTerre (Solid Earth) : Dedicated to solid Earth observation including geophysics and seismicity, this hub fosters the development of products and services that add value to satellite and in-situ data for solid Earth sciences. ODATIS (Ocean) : This ocean-specific hub provides data, software, and services for marine science research, covering all oceanic components such as circulation, physical and chemical properties, biogeochemical cycles, ecosystems, and coastal dynamics. It supports researchers through data warehouses, visualization tools, and virtual research environments. THEIA (Land Surfaces) : This hub handles land surfaces observation and monitoring, including ecosystem and environmental data at the national level. PNDB (Biodiversity) : Focuses on biodiversity data, both marine and terrestrial. It collects and manages observation, collection, and experimental data for biodiversity research and conservation. 3 Cross-Cutting Services DINAMIS : providing access to very high-resolution commercial satellite imagery, including mutualized programming for satellite image acquisition, mainly for public institutions and research projects. French Regional Thematic animation (ART) : bring together public and private structures on a territorial basis, with an interest in the collection, processing and interpretation of data for public action. INTER-POLES : Facilitating exchanges between managers and experts on topics that cut across data hubs. Use case 1 : Galaxy for the Earth System A better understanding of global environmental challenges is essential to their mitigation. These challenges are multifaceted and require a multidisciplinary approach. Unfortunately, this work is often laborious and time-consuming for researchers, who must navigate through vast datasets that are often scattered and not interoperable. The open-source collaborative workflow platform Galaxy provides researchers and data scientists with an efficient solution for data analysis. Read more on the FAIR-EASE project website Use case 2 : Volcano Space Observatory A new multidisciplinary web portal for monitoring volcanic activity and associated atmospheric hazards worldwide. The Volcano Space Observatory, a FAIR-EASE’s pilot, exemplifies this approach by aggregating atmospheric and Solid Earth geophysical data. The aim is to support the assessment of volcanic and atmospheric hazards in near-real time on several geographical scales for the protection of populations. Read more on the FAIR-EASE project website About DATA TERRA Data Terra is a French research e-infrastructure dedicated to the integrated observation, understanding, and prediction of the Earth system, including its environmental dynamics and global changes. It was established in 2016 and brings together multiple scientific and technical communities, providing a structure for accessing and processing multi-source data, products, and services relevant to land, atmosphere, ocean, solid Earth, and biodiversity domains. Data Terra coordinates distributed digital hubs and cross-cutting services in collaboration with national, European, and international partners, and operates according to open science and FAIR principles to support both researchers and societal stakeholders. Data Terra works with 34 partner organizations, including academic, scientific, and technical institutions, as part of its mission to coordinate Earth system data infrastructure and services. These partners encompass leading French research centers, universities, national agencies, and several international collaborators engaged in scientific observation, data management, and innovation Nos partenaires",
+  "full_text": "Menu Français Allemand Anglais Bulgare Croate Danois Espagnol Estonien Finnois Grec Hongrois Irlandais Italien Letton Lituanien Maltais Néerlandais Polonais Portugais Roumain Slovaque Slovène Suédois Tchèque FRA Select Language Abkhaz Acehnese Acholi Afar Afrikaans Albanian Alur Amharic Arabic Armenian Assamese Avar Awadhi Aymara Azerbaijani Balinese Baluchi Bambara Baoulé Bashkir Basque Batak Karo Batak Simalungun Batak Toba Belarusian Bemba Bengali Betawi Bhojpuri Bikol Bosnian Breton Bulgarian Buryat Cantonese Catalan Cebuano Chamorro Chechen Chichewa Chinese (Simplified) Chinese (Traditional) Chuukese Chuvash Corsican Crimean Tatar (Cyrillic) Crimean Tatar (Latin) Croatian Czech Danish Dari Dhivehi Dinka Dogri Dombe Dutch Dyula Dzongkha English Esperanto Estonian Ewe Faroese Fijian Filipino Finnish Fon French (Canada) Frisian Friulian Fulani Ga Galician Georgian German Greek Guarani Gujarati Haitian Creole Hakha Chin Hausa Hawaiian Hebrew Hiligaynon Hindi Hmong Hungarian Hunsrik Iban Icelandic Igbo Ilocano Indonesian Inuktut (Latin) Inuktut (Syllabics) Irish Italian Jamaican Patois Japanese Javanese Jingpo Kalaallisut Kannada Kanuri Kapampangan Kazakh Khasi Khmer Kiga Kikongo Kinyarwanda Kituba Kokborok Komi Konkani Korean Krio Kurdish (Kurmanji) Kurdish (Sorani) Kyrgyz Lao Latgalian Latin Latvian Ligurian Limburgish Lingala Lithuanian Lombard Luganda Luo Luxembourgish Macedonian Madurese Maithili Makassar Malagasy Malay Malay (Jawi) Malayalam Maltese Mam Manx Maori Marathi Marshallese Marwadi Mauritian Creole Meadow Mari Meiteilon (Manipuri) Minang Mizo Mongolian Myanmar (Burmese) Nahuatl (Eastern Huasteca) Ndau Ndebele (South) Nepalbhasa (Newari) Nepali NKo Norwegian Nuer Occitan Odia (Oriya) Oromo Ossetian Pangasinan Papiamento Pashto Persian Polish Portuguese (Brazil) Portuguese (Portugal) Punjabi (Gurmukhi) Punjabi (Shahmukhi) Quechua Qʼeqchiʼ Romani Romanian Rundi Russian Sami (North) Samoan Sango Sanskrit Santali (Latin) Santali (Ol Chiki) Scots Gaelic Sepedi Serbian Sesotho Seychellois Creole Shan Shona Sicilian Silesian Sindhi Sinhala Slovak Slovenian Somali Spanish Sundanese Susu Swahili Swati Swedish Tahitian Tajik Tamazight Tamazight (Tifinagh) Tamil Tatar Telugu Tetum Thai Tibetan Tigrinya Tiv Tok Pisin Tongan Tshiluba Tsonga Tswana Tulu Tumbuka Turkish Turkmen Tuvan Twi Udmurt Ukrainian Urdu Uyghur Uzbek Venda Venetian Vietnamese Waray Welsh Wolof Xhosa Yakut Yiddish Yoruba Yucatec Maya Zapotec Zulu Powered by Translate Accessibilité Police (dyslexie) Animations Interlignage Contraste Défaut Renforcés Inversés NOUS CONNAÎTRE Le mot des directeurs Gouvernance Nos missions E-Infrastructure de Recherche Tutelles et partenaires NOS ACTIVITES Événements Les services proposés Groupes de travail Projets techniques & scientifiques Innovation Médiation LES RÉSEAUX DE DATA TERRA Les actualités Les rendez-vous Cafés Data Terra Témoignage en immersion Suivez-nous sur Linkedin CONTACT ET FAQ Contact & accès Foire aux questions Ressources et Médias Médiathèque Chaîne Youtube La presse en parle Afficher nos 5 pôles de données et nos dispositifs transverses 5 pôles de données AERIS Atmosphère Océans THEIA Surfaces continentales FormaTerre Terre solide PNDB Biodiversité 3 dispositifs transverses Dinamis Interpole ART Accueil The EOSC Node f... The EOSC Node for the Earth system and environmental sciences (under construction) The EOSC node’s digital gateway plays a crucial role in connecting research organizations to the broader European ecosystem. It serves as a single-entry point to the European Open Science Cloud (EOSC), facilitating access to open science resources and services across Europe. The DATA TERRA RI is at the heart of the data chain, filling the gap between fundamental research and field application. It also emphasizes interdisciplinary research and open collaboration. The Data Terra Node’s major contributions to the EOSC federation: 0 A seamless access High-quality, trusted FAIR and AI-ready multi-domain and multi-source data for the Earth, climate, environment and biodiversity system with rich metadata, semantic interoperability and provenance information. 0 Cross-domain data analysis workflows addressing emerging urgent multidisciplinary research challenges in relation to global changes, climate adaptation, extreme events characterisation, loss of biodiversity and societal impacts enhancing the linkages with other Data-Spaces and Data-hubs in Europe and beyond. 0 A federated layer towards the environment-oriented Research Infrastructures in coordination, as well as with other European organisations and programs such as Copernicus and Destination Earth. DATA TERRA THEMATIC HUBS AND CROSS-CUTTING SERVICES Data Terra is organized around several thematic hubs and cross-cutting services that cover key components of the Earth system for integrated observation, understanding, and prediction in response to global changes. 5 thematic hubs Data Terra consists of five main data and service hubs (or poles), each dedicated to a specific compartment of the Earth system: AERIS (Atmosphere) : This hub focuses on atmospheric data, collecting, validating, and harmonizing data from field surveys, long-term observation sites, and satellites. It coordinates multiple data centers and laboratories that provide atmospheric data for research and commercial use. FormaTerre (Solid Earth) : Dedicated to solid Earth observation including geophysics and seismicity, this hub fosters the development of products and services that add value to satellite and in-situ data for solid Earth sciences. ODATIS (Ocean) : This ocean-specific hub provides data, software, and services for marine science research, covering all oceanic components such as circulation, physical and chemical properties, biogeochemical cycles, ecosystems, and coastal dynamics. It supports researchers through data warehouses, visualization tools, and virtual research environments. THEIA (Land Surfaces) : This hub handles land surfaces observation and monitoring, including ecosystem and environmental data at the national level. PNDB (Biodiversity) : Focuses on biodiversity data, both marine and terrestrial. It collects and manages observation, collection, and experimental data for biodiversity research and conservation. 3 Cross-Cutting Services DINAMIS : providing access to very high-resolution commercial satellite imagery, including mutualized programming for satellite image acquisition, mainly for public institutions and research projects. French Regional Thematic animation (ART) : bring together public and private structures on a territorial basis, with an interest in the collection, processing and interpretation of data for public action. INTER-POLES : Facilitating exchanges between managers and experts on topics that cut across data hubs. Use case 1 : Galaxy for the Earth System A better understanding of global environmental challenges is essential to their mitigation. These challenges are multifaceted and require a multidisciplinary approach. Unfortunately, this work is often laborious and time-consuming for researchers, who must navigate through vast datasets that are often scattered and not interoperable. The open-source collaborative workflow platform Galaxy provides researchers and data scientists with an efficient solution for data analysis. Read more on the FAIR-EASE project website Use case 2 : Volcano Space Observatory A new multidisciplinary web portal for monitoring volcanic activity and associated atmospheric hazards worldwide. The Volcano Space Observatory, a FAIR-EASE’s pilot, exemplifies this approach by aggregating atmospheric and Solid Earth geophysical data. The aim is to support the assessment of volcanic and atmospheric hazards in near-real time on several geographical scales for the protection of populations. Read more on the FAIR-EASE project website About DATA TERRA Data Terra is a French research e-infrastructure dedicated to the integrated observation, understanding, and prediction of the Earth system, including its environmental dynamics and global changes. It was established in 2016 and brings together multiple scientific and technical communities, providing a structure for accessing and processing multi-source data, products, and services relevant to land, atmosphere, ocean, solid Earth, and biodiversity domains. Data Terra coordinates distributed digital hubs and cross-cutting services in collaboration with national, European, and international partners, and operates according to open science and FAIR principles to support both researchers and societal stakeholders. Data Terra works with 34 partner organizations, including academic, scientific, and technical institutions, as part of its mission to coordinate Earth system data infrastructure and services. These partners encompass leading French research centers, universities, national agencies, and several international collaborators engaged in scientific observation, data management, and innovation Nos partenaires Newsletter Inscrivez-vous à notre newsletter pour recevoir les dernières actualités, événements et ressources de Data Terra Merci pour votre inscription, elle a bien été prise en compte Saisissez votre adresse e-mail * Contact & accès FAQ Charte réseaux sociaux Accessibilité : Non-conforme Politique de confidentialité et vie privée Mentions légales Crédit : Agence La Jungle Que recherchez-vous ? Rechercher We use cookies on our website for its proper functioning and for audience measurement purposes in order to provide you with an improved and personalized visiting experience. By clicking on « Accpet all », you consent to the use of all cookies placed on our site. By clicking on « Refuse all », only the cookies strictly necessary for the operation of the site and its security will be used. To choose or modify your cookie preferences and withdraw your consent at any time, click on « Customize » or on the link « Cookies » at the bottom of the screen. To learn more about the cookies and personal data we use : read our privacy policy ACCEPT ALL REFUSE ALL CUSTOMIZE Cookies Fermer Information on available parameters We use cookies on our website for its proper functioning and for audience measurement purposes in order to provide you with an improved and personalized visiting experience. Of these cookies, those in the \"Necessary\" category are stored in your brows... Nécessaires Nécessaires Toujours activé Les cookies nécessaires sont cruciaux pour les fonctions de base du site internet et celui-ci ne fonctionnera pas comme prévu sans eux. Ces cookies ne stockent aucune donnée personnellement identifiable. Cookie Durée Description cli_user_preference 1 an Stocke le statut de consentement des cookies de l'utilisateur. cookielawinfo-checkbox-advertisement 1 an Ce cookie est installé par le module de bannière de cookies. Il est utilisé pour enregistrer le consentement de l'utilisateur pour les cookies de type \"Publicitaires\". cookielawinfo-checkbox-analytics 1 an Ce cookie est installé par le module de bannière de cookies. Il est utilisé pour enregistrer le consentement de l'utilisateur pour les cookies de type \"Statistiques\". cookielawinfo-checkbox-necessary 1 an Ce cookie est installé par le module de bannière de cookies. Il est utilisé pour enregistrer le consentement de l'utilisateur pour les cookies de type \"Nécessaire\". CookieLawInfoConsent 1 an Utilisé pour stocker votre consentement à l’utilisation des cookies PHPSESSID 1 mois Ce cookie est installé par les applications PHP. Le cookie est utilisé pour stocker et identifier l'ID de session unique de l'utilisateur afin de gérer la session de l'utilisateur sur le site Internet. Ce cookie est un cookie de session et sera supprimé lorsque toutes les fenêtres du navigateur seront fermées. pll_language 1 an Le cookie pll _language est utilisé par Polylang pour se souvenir de la langue sélectionnée par l'utilisateur lorsqu'il revient sur le site Web, et également pour obtenir les informations relatives à la langue lorsqu'elles ne sont pas disponibles d'une autre manière. viewed_cookie_policy 1 an Ce cookie est installé par le module de bannière de cookies, il est utilisé pour enregistrer le fait que vous ayez ou non accepté l'utilisation de cookies. Il ne stocke aucune information personnelle. Necessary Necessary Toujours activé Necessary cookies are crucial for the basic functions of the website and the website will not work in its intended way without them. These cookies do not store any personally identifiable data. Cookie Durée Description cli_user_preference 1 year Stores the status of the user's cookie consent. cookielawinfo-checkbox-advertisement 1 year The cookie is set by GDPR cookie consent to record the user consent for the cookies in the category \"Advertisement\". cookielawinfo-checkbox-analytics 1 year This cookies is set by GDPR Cookie Consent WordPress Plugin. The cookie is used to remember the user consent for the cookies under the category \"Analytics\". cookielawinfo-checkbox-necessary 1 year This cookie is set by GDPR Cookie Consent plugin. The cookies is used to store the user consent for the cookies in the category \"Necessary\". CookieLawInfoConsent 1 year The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data. PHPSESSID 1 month This cookie is native to PHP applications. The cookie is used to store and identify a users' unique session ID for the purpose of managing user session on the website. The cookie is a session cookies and is deleted when all the browser windows are closed. pll_language 1 year The pll _language cookie is used by Polylang to remember the language selected by the user when returning to the website, and also to get the language information when not available in another way. viewed_cookie_policy 1 year The cookie is set by the GDPR Cookie Consent plugin and is used to store whether or not user has consented to the use of cookies. It does not store any personal data. Statistiques analytics-fr Les cookies statistiques permettent de mesurer la fréquentation, la consommation de contenus et mesurer l’audience de notre site (par exemple le nombre de visiteurs). Ils sont configurés afin que les données recueillies soient collectées et stockées de manière anonyme. Ces cookies sont exemptés de consentement car ils répondent aux critères d’exemption prévus par la délibération de la CNIL n°2020-091 du 17 septembre 2020, §50 et 51 : la CNIL n°2020-091 du 17 septembre 2020, §50 et 51. Cependant, france tv studio vous laisse la possibilité de décocher cette case si vous ne souhaitez pas que des cookies de cette catégorie soient déposés. Vous trouverez ci-dessous les cookies que nous utilisons dans cette catégorie ainsi que le détail de leur finalité : Cookie Durée Description _ga 13 mois Ces cookies sont installés par Google Universal Analytics pour ralentir le taux de demande afin de limiter la collecte de données sur les sites à fort trafic. _ga_VPFH7RRNKZ 2 ans Ce cookie est installé par Google Analytics. Le cookie est utilisé pour enregistrer vos visites et suivre votre utilisation du site, à des fins de mesures statistiques et de mesure d'audience. Le cookie stocke des informations anonymes et assigne un nombre aléatoire pour identifier les visiteurs uniques. _ga_WMB4K6EZ2C 2 ans Ce cookie est installé par Google Analytics. Le cookie est utilisé pour enregistrer vos visites et suivre votre utilisation du site, à des fins de mesures statistiques et de mesure d'audience. Le cookie stocke des informations anonymes et assigne un nombre aléatoire pour identifier les visiteurs uniques. _gat 1 minute Ces cookies sont installés par Google Universal Analytics pour ralentir le taux de demande afin de limiter la collecte de données sur les sites à fort trafic. _gid 1 day Ce cookie est installé par Google Analytics. Le cookie est utilisé pour stocker des informations sur la façon dont les visiteurs utilisent un site Web et aide à créer un rapport d'analyse sur la façon dont le site Web fonctionne. Les données collectées, y compris le nombre de visiteurs, la source d'où ils viennent et les pages visitées sous une forme anonyme. Publicitaires advertisement-fr Les cookies publicitaires sont utilisés pour que vous puissiez avoir accès à la fonctionnalité vidéo du Site. Ils servent aussi à traquer les visiteurs à travers plusieurs sites et collecter des informations pour lui fournir des publicités personnalisées. Vous trouverez ci-dessous les cookies que nous utilisons dans cette catégorie ainsi que le détail de leur finalité : Cookie Durée Description __Secure-3PAPISID, __Secure-3PSID, __Secure-3PSIDCC, APISID, HSID, LOGIN_INFO, PREF, SAPISID, SID, SIDCC, SSID 1 an Google définit un certain nombre de cookies sur toute page contenant une vidéo Youtube. Ils semblent inclure un mélange d'informations pour mesurer le nombre et le comportement des utilisateurs de Youtube, y compris des informations qui relient vos visites sur notre site Web à votre compte Google si vous êtes connecté. CONSENT 16 ans 8 mois 17 jours 12 heures Ce cookie est utilisé par Youtube pour enregistrer votre consentement. VISITOR_INFO1_LIVE 5 mois 27 jours Ce cookie est défini par Youtube. Utilisé pour suivre les informations des vidéos YouTube intégrées sur un site Web. YSC session Ces cookies sont définis par Youtube et sont utilisés pour suivre les vues des vidéos intégrées. Advertisement advertisement-en Advertisement cookies are used to provide visitors with relevant ads and marketing campaigns. These cookies track visitors across websites and collect information to provide customized ads. Cookie Durée Description VISITOR_INFO1_LIVE 5 months 27 days A cookie set by YouTube to measure bandwidth that determines whether the user gets the new or old player interface. YSC session YSC cookie is set by Youtube and is used to track the views of embedded videos on Youtube pages. yt-remote-connected-devices never YouTube sets this cookie to store the video preferences of the user using embedded YouTube video. yt-remote-device-id never YouTube sets this cookie to store the video preferences of the user using embedded YouTube video. Analytics analytics-en Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics the number of visitors, bounce rate, traffic source, etc. Cookie Durée Description _ga 2 years This cookie is installed by Google Analytics. The cookie is used to calculate visitor, session, campaign data and keep track of site usage for the site's analytics report. The cookies store information anonymously and assign a randomly generated number to identify unique visitors _ga_VPFH7RRNKZ 2 ans This cookie is installed by Google Analytics. The cookie is used to record your visits and follow your use of the site, for statistical measures and audience measurement. The cookie stores anonymous information and assigns a random number to identify unique visitors. _ga_WMB4K6EZ2C 2 ans This cookie is installed by Google Analytics. The cookie is used to record your visits and follow your use of the site, for statistical measures and audience measurement. The cookie stores anonymous information and assigns a random number to identify unique visitors. CONSENT 2 years YouTube sets this cookie via embedded youtube-videos and registers anonymous statistical data. SAUVEGARDER & ACCEPTER Powered by GDPR Cookie Compliance Original text Rate this translation Your feedback will be used to help improve Google Translate",
+  "links": [
+    {
+      "href": "https://www.data-terra.org",
+      "text": "Infrastructure de recherche Data Terra",
+      "visible": true
+    },
+    {
+      "href": "https://intranet.data-terra.org/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://translate.google.com",
+      "text": "Translate",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/le-mot-des-directeurs/",
+      "text": "Le mot des directeurs",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/gouvernace/",
+      "text": "Gouvernance",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/nos-missions/",
+      "text": "Nos missions",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/e-infrastructure-de-recherche/",
+      "text": "E-Infrastructure de Recherche",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/tutelles-partenaires/",
+      "text": "Tutelles et partenaires",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/evenement/",
+      "text": "Événements",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/services/",
+      "text": "Les services proposés",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/coordination-de-groupes-de-travail/",
+      "text": "Groupes de travail",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/projets-techniques-scientifiques/",
+      "text": "Projets techniques & scientifiques",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/innovation/",
+      "text": "Innovation",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/mediation/",
+      "text": "Médiation",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/actualite/",
+      "text": "Les actualités",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/les-rendez-vous-cafes-data-terra/",
+      "text": "Les rendez-vous Cafés Data Terra",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/temoignage/",
+      "text": "Témoignage en immersion",
+      "visible": true
+    },
+    {
+      "href": "https://www.linkedin.com/company/dataterraorg/",
+      "text": "Suivez-nous sur Linkedin",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/contact-acces/",
+      "text": "Contact & accès",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/foire-aux-questions/",
+      "text": "Foire aux questions",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/ressource/",
+      "text": "Médiathèque",
+      "visible": true
+    },
+    {
+      "href": "https://www.youtube.com/channel/UC9AzzlHA2iSgA5yajmoUcrw",
+      "text": "Chaîne Youtube",
+      "visible": true
+    },
+    {
+      "href": "https://www.scoop.it/topic/data-terra-systeme-terre",
+      "text": "La presse en parle",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/les-poles-de-donnees-et-dispositifs/pole-aeris/",
+      "text": "AERIS Atmosphère",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/pole-odatis/",
+      "text": "Océans",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/nous-connaitre/les-poles-de-donnees-et-dispositifs/pole-theia/",
+      "text": "THEIA Surfaces continentales",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/les-poles-de-donnees-et-dispositifs/pole-formaterre/",
+      "text": "FormaTerre Terre solide",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/les-poles-de-donnees-et-dispositifs/pndb-biodiversite/",
+      "text": "PNDB Biodiversité",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/nous-connaitre/les-poles-de-donnees-et-dispositifs/dinamis/",
+      "text": "Dinamis",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/nous-connaitre/les-poles-de-donnees-et-dispositifs/inter-poles/",
+      "text": "Interpole",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/animations-regionales-thematiques/",
+      "text": "ART",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/",
+      "text": "Accueil",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/eosc/",
+      "text": "The EOSC Node f...",
+      "visible": true
+    },
+    {
+      "href": "https://www.fairease.eu/kers/galaxy",
+      "text": "Read more on the FAIR-EASE project website",
+      "visible": true
+    },
+    {
+      "href": "https://www.fairease.eu/kers/volcano-space-observatory",
+      "text": "Read more on the FAIR-EASE project website",
+      "visible": true
+    },
+    {
+      "href": "https://www.enseignementsup-recherche.gouv.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.cnrs.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://cnes.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://wwz.ifremer.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.ign.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.ird.fr/node/8",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.inrae.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://meteofrance.com/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.enseignementsup-recherche.gouv.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.cnrs.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://cnes.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://wwz.ifremer.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.ign.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.ird.fr/node/8",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.inrae.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://meteofrance.com/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.enseignementsup-recherche.gouv.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.cnrs.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://cnes.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://wwz.ifremer.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.ign.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.ird.fr/node/8",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.inrae.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://meteofrance.com/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.enseignementsup-recherche.gouv.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.cnrs.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "http://www.ipgp.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.cea.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.shom.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.brgm.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.cerema.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.cirad.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.ineris.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.onera.fr/fr",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.oca.eu/fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.observatoiredeparis.psl.eu/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.polytechnique.edu/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.sorbonne-universite.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.univ-toulouse.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.univ-lille.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.univ-grenoble-alpes.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.uca.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.unistra.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.umontpellier.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.hautsdefrance.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "http://www2.agroparistech.fr/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.facebook.com/dataterraIR/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://fr.linkedin.com/company/dataterraorg",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/contact-acces/",
+      "text": "Contact & accès",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/foire-aux-questions/",
+      "text": "FAQ",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/reseaux-sociaux/",
+      "text": "Charte réseaux sociaux",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/accessibilite-non-conforme/",
+      "text": "Accessibilité : Non-conforme",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/politique-de-confidentialite-et-vie-privee/",
+      "text": "Politique de confidentialité et vie privée",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/mentions-legales/",
+      "text": "Mentions légales",
+      "visible": true
+    },
+    {
+      "href": "https://lajungle.fr/",
+      "text": "Agence La Jungle",
+      "visible": true
+    },
+    {
+      "href": "https://www.data-terra.org/politique-de-confidentialite-et-vie-privee/",
+      "text": "read our privacy policy",
+      "visible": true
+    },
+    {
+      "href": "https://www.webtoffee.com/product/gdpr-cookie-consent/",
+      "text": "WebToffee Logo",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://www.data-terra.org/content/themes/dataterra/resources/assets/images/logos/header-logo-rf.svg",
+      "alt": "Infrastructure de recherche Data Terra",
+      "aria_label": "",
+      "title": "",
+      "css_class": "logo",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/themes/dataterra/resources/assets/images/logos/header-logo.svg",
+      "alt": "Infrastructure de recherche Data Terra",
+      "aria_label": "",
+      "title": "",
+      "css_class": "logo",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_42x16dp.png",
+      "alt": "Google Translate",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/themes/dataterra/resources/assets/images/poles.png",
+      "alt": "Les 5 pôles data terra",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/06/logoAeris-1.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/06/Logo-Odatis_fullsize-1.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/10/Theia-horizontal.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/06/logo_formater.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/logo-pndb-8S-tAXpg_400x400.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/10/EOSCNodeDataTerra_ColourPos-scaled.jpg",
+      "alt": "eosc node data terra environment",
+      "aria_label": "",
+      "title": "",
+      "css_class": "attachment-full size-full",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/10/2.jpg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "aligncenter wp-image-10545 size-full",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/10/Capture-decran-2025-10-30-a-11.25.19.png",
+      "alt": "Galaxy for Earth System and environment was implemented within the project Fair-Ease.",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/10/Capture-decran-2025-10-30-a-11.31.13.png",
+      "alt": "The Volcano Space Observatory: an example for interdisciplinary data integration",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/MESRI-Footer-2-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/08/Logo_Centre_national_de_la_recherche_scientifique_2023-.svg-100x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/06/Capture-décran-2021-06-09-à-15.28.23-108x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/Ifremer-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/ING-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/08/5-Logo_IRD_2016_BLOC_FR_COUL-118x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/INRAE-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/MF-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/MESRI-Footer-2-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/08/Logo_Centre_national_de_la_recherche_scientifique_2023-.svg-100x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/06/Capture-décran-2021-06-09-à-15.28.23-108x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/Ifremer-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/ING-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/08/5-Logo_IRD_2016_BLOC_FR_COUL-118x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/INRAE-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/MF-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/MESRI-Footer-2-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/08/Logo_Centre_national_de_la_recherche_scientifique_2023-.svg-100x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/06/Capture-décran-2021-06-09-à-15.28.23-108x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/Ifremer-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/ING-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/08/5-Logo_IRD_2016_BLOC_FR_COUL-118x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/INRAE-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/MF-Footer-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/MESRI-Footer-2-94x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/08/Logo_Centre_national_de_la_recherche_scientifique_2023-.svg-100x100.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/univ-lille-logo-228x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/CEA-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/SHOM-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/BRGM-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/CEREMA-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/CIRAD-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/INERIS-FOOTER-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/ONERA-footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/OCA-FOOTER-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/PSL-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/POLYTECHNIQUE-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/Sorbonne-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/Univ-Toulouse-Footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/Univ-Lille-footer-70x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/Univ-Grenoble-122x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/24-logo_UCA-1-77x75.jpg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/23-Signature_Universite_Strasbourg_Unistra2_Blanc-206x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/univ-montpellier-239x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/26-haut-de-france-logo-75x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2021/11/21-logo_agroparistech-1-308x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/UniversiteRennes_Apres-167x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/logo-ofb-actualite-100x75.jpg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/Logo_Universite_Paris-Saclay.svg-222x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/Logo_Universite_de_Franche-Comte_2018-273x75.png",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/UBO-75x75.gif",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/uploads/2025/02/ecole-pratique-hautes-etudes-ephe-134x75.jpg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.data-terra.org/content/plugins/webtoffee-gdpr-cookie-consent/images/webtoffee-logo.svg",
+      "alt": "WebToffee Logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "VIpgJd-ZVi9od-aZ2wEe",
+      "inline_svg": true
+    }
+  ],
+  "controls": [
+    {
+      "text": "Menu",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Ouvrir la fenêtre de recherche contextuelle",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Accessibilité",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Défaut",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Renforcés",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Inversés",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Close",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Rechercher",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Fermer",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Good translation",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Poor translation",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Translate",
+      "href": "https://translate.google.com",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Le mot des directeurs",
+      "href": "https://www.data-terra.org/le-mot-des-directeurs/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Gouvernance",
+      "href": "https://www.data-terra.org/gouvernace/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Nos missions",
+      "href": "https://www.data-terra.org/nos-missions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "E-Infrastructure de Recherche",
+      "href": "https://www.data-terra.org/e-infrastructure-de-recherche/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Tutelles et partenaires",
+      "href": "https://www.data-terra.org/tutelles-partenaires/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Événements",
+      "href": "https://www.data-terra.org/evenement/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Les services proposés",
+      "href": "https://www.data-terra.org/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Groupes de travail",
+      "href": "https://www.data-terra.org/coordination-de-groupes-de-travail/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projets techniques & scientifiques",
+      "href": "https://www.data-terra.org/projets-techniques-scientifiques/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Innovation",
+      "href": "https://www.data-terra.org/innovation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Médiation",
+      "href": "https://www.data-terra.org/mediation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "LES RÉSEAUX DE DATA TERRA",
+      "href": "https://www.data-terra.org/eosc/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Les actualités",
+      "href": "https://www.data-terra.org/actualite/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Les rendez-vous Cafés Data Terra",
+      "href": "https://www.data-terra.org/les-rendez-vous-cafes-data-terra/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Témoignage en immersion",
+      "href": "https://www.data-terra.org/temoignage/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Suivez-nous sur Linkedin",
+      "href": "https://www.linkedin.com/company/dataterraorg/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact & accès",
+      "href": "https://www.data-terra.org/contact-acces/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Foire aux questions",
+      "href": "https://www.data-terra.org/foire-aux-questions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Médiathèque",
+      "href": "https://www.data-terra.org/ressource/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Chaîne Youtube",
+      "href": "https://www.youtube.com/channel/UC9AzzlHA2iSgA5yajmoUcrw",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "La presse en parle",
+      "href": "https://www.scoop.it/topic/data-terra-systeme-terre",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "AERIS Atmosphère",
+      "href": "https://www.data-terra.org/les-poles-de-donnees-et-dispositifs/pole-aeris/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Océans",
+      "href": "https://www.data-terra.org/pole-odatis/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "THEIA Surfaces continentales",
+      "href": "https://www.data-terra.org/nous-connaitre/les-poles-de-donnees-et-dispositifs/pole-theia/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "FormaTerre Terre solide",
+      "href": "https://www.data-terra.org/les-poles-de-donnees-et-dispositifs/pole-formaterre/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "PNDB Biodiversité",
+      "href": "https://www.data-terra.org/les-poles-de-donnees-et-dispositifs/pndb-biodiversite/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Dinamis",
+      "href": "https://www.data-terra.org/nous-connaitre/les-poles-de-donnees-et-dispositifs/dinamis/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Interpole",
+      "href": "https://www.data-terra.org/nous-connaitre/les-poles-de-donnees-et-dispositifs/inter-poles/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ART",
+      "href": "https://www.data-terra.org/animations-regionales-thematiques/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Accueil",
+      "href": "https://www.data-terra.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "The EOSC Node f...",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Read more on the FAIR-EASE project website",
+      "href": "https://www.fairease.eu/kers/galaxy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Read more on the FAIR-EASE project website",
+      "href": "https://www.fairease.eu/kers/volcano-space-observatory",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact & accès",
+      "href": "https://www.data-terra.org/contact-acces/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "FAQ",
+      "href": "https://www.data-terra.org/foire-aux-questions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Charte réseaux sociaux",
+      "href": "https://www.data-terra.org/reseaux-sociaux/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Accessibilité : Non-conforme",
+      "href": "https://www.data-terra.org/accessibilite-non-conforme/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Politique de confidentialité et vie privée",
+      "href": "https://www.data-terra.org/politique-de-confidentialite-et-vie-privee/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Mentions légales",
+      "href": "https://www.data-terra.org/mentions-legales/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Agence La Jungle",
+      "href": "https://lajungle.fr/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "read our privacy policy",
+      "href": "https://www.data-terra.org/politique-de-confidentialite-et-vie-privee/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "5 thematic hubs",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "h3",
+      "visible": true
+    },
+    {
+      "text": "3 Cross-Cutting Services",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "h3",
+      "visible": true
+    },
+    {
+      "text": "ACCEPT ALL",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "REFUSE ALL",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CUSTOMIZE",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "SAUVEGARDER & ACCEPTER",
+      "href": "https://www.data-terra.org/eosc/",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "",
+  "error": "",
+  "screenshot": "data-terra.png"
+}

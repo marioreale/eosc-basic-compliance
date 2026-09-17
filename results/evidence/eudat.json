@@ -1,0 +1,190 @@
+{
+  "node_id": "eudat",
+  "node_name": "EUDAT",
+  "requested_url": "https://portal.eudat.eu/",
+  "fetched_at": "2026-09-17T14:53:35+00:00",
+  "final_url": "https://portal.eudat.eu/welcome",
+  "http_status": 200,
+  "redirect_chain": [
+    "https://portal.eudat.eu/"
+  ],
+  "robots_allowed": true,
+  "robots_note": "robots.txt consulted",
+  "title": "Welcome | EUDAT",
+  "lang_attr": "en",
+  "main_text": "EOSC Node Marketplace Welcome to the EUDAT Portal Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limitless science. Uncertain where to start? Discover services Browse services offered by EUDAT and the EOSC Federation. Set up your workspace Read about the first steps in becoming an EUDAT Node user. User Guides Browse guides on how to best use the EUDAT Node for your research. Meet the EUDAT Community Learn who the main users of EUDAT Services are and about their experiences.",
+  "full_text": "Skip to main content EOSC Node Marketplace Welcome to the EUDAT Portal Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limitless science. Uncertain where to start? Discover services Browse services offered by EUDAT and the EOSC Federation. Set up your workspace Read about the first steps in becoming an EUDAT Node user. User Guides Browse guides on how to best use the EUDAT Node for your research. Meet the EUDAT Community Learn who the main users of EUDAT Services are and about their experiences. EUDAT is a pan-European network consisting of more than 25 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu Keilaranta 14, 02150 Espoo, Finland VAT number: FI 28953559 Navigation & Legal EUDAT AUP Privacy Policy Accessibility Statement FAQs Connect LinkedIn YouTube SlideShare X © 2026 EUDAT — All rights reserved.",
+  "links": [
+    {
+      "href": "https://portal.eudat.eu/welcome",
+      "text": "EOSC Node",
+      "visible": true
+    },
+    {
+      "href": "https://eudat.eu/catalogue",
+      "text": "Discover services Browse services offered by EUDAT and the EOSC Federation.",
+      "visible": true
+    },
+    {
+      "href": "https://docs.eudat.eu",
+      "text": "Set up your workspace Read about the first steps in becoming an EUDAT Node user.",
+      "visible": true
+    },
+    {
+      "href": "https://docs.eudat.eu",
+      "text": "User Guides Browse guides on how to best use the EUDAT Node for your research.",
+      "visible": true
+    },
+    {
+      "href": "https://eudat.eu/membership",
+      "text": "Meet the EUDAT Community Learn who the main users of EUDAT Services are and about their experiences.",
+      "visible": true
+    },
+    {
+      "href": "mailto:info@eudat.eu",
+      "text": "info@eudat.eu",
+      "visible": true
+    },
+    {
+      "href": "https://www.eudat.eu/eudat-cdi-aup",
+      "text": "EUDAT AUP",
+      "visible": true
+    },
+    {
+      "href": "https://www.eudat.eu/privacy-policy",
+      "text": "Privacy Policy",
+      "visible": true
+    },
+    {
+      "href": "https://www.eudat.eu/accessibility-statement",
+      "text": "Accessibility Statement",
+      "visible": true
+    },
+    {
+      "href": "https://www.eudat.eu/faq",
+      "text": "FAQs",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/eosc-node-final.webp",
+      "alt": "EOSC Node",
+      "aria_label": "",
+      "title": "",
+      "css_class": "sw-topbar__logo",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/eosc-node-final.webp",
+      "alt": "EOSC Node",
+      "aria_label": "",
+      "title": "",
+      "css_class": "ftr-logo",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    }
+  ],
+  "controls": [
+    {
+      "text": "Skip to main content",
+      "href": "https://portal.eudat.eu/welcome#main-content",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Node",
+      "href": "https://portal.eudat.eu/welcome",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Discover services Browse services offered by EUDAT and the EOSC Federation.",
+      "href": "https://eudat.eu/catalogue",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Set up your workspace Read about the first steps in becoming an EUDAT Node user.",
+      "href": "https://docs.eudat.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User Guides Browse guides on how to best use the EUDAT Node for your research.",
+      "href": "https://docs.eudat.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Meet the EUDAT Community Learn who the main users of EUDAT Services are and about their experiences.",
+      "href": "https://eudat.eu/membership",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "info@eudat.eu",
+      "href": "mailto:info@eudat.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EUDAT AUP",
+      "href": "https://www.eudat.eu/eudat-cdi-aup",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://www.eudat.eu/privacy-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Accessibility Statement",
+      "href": "https://www.eudat.eu/accessibility-statement",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "FAQs",
+      "href": "https://www.eudat.eu/faq",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "",
+  "error": "",
+  "screenshot": "eudat.png"
+}

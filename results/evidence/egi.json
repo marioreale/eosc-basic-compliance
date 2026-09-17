@@ -1,0 +1,2217 @@
+{
+  "node_id": "egi",
+  "node_name": "EGI",
+  "requested_url": "https://www.egi.eu/egi-node",
+  "fetched_at": "2026-09-17T14:54:10+00:00",
+  "final_url": "https://www.egi.eu/egi-node",
+  "http_status": 200,
+  "redirect_chain": [],
+  "robots_allowed": true,
+  "robots_note": "robots.txt consulted",
+  "title": "EGI Node - EGI",
+  "lang_attr": "en",
+  "main_text": "EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases in reproducible workflows, AI, sensitive data analysis, machine learning and federated LLM services. EGI for EOSC Objectives Impact Status Access the EGI Node Capabilities Coordination Key Objective in Capacity as a Node To act as a Node for data-intensive computing and large-scale research data exploitation, enabling seamless, cross-border access to FAIR data, advanced analytics, AI/ML models, compute, storage, workflow and federating capabilities for EOSC. Impact Science Areas The EGI Node is multidisciplinary, operating in the following areas: Data-intensive science Cloud computing High-throughput computing High-performance computing Artificial Intelligence and machine learning Cross-disciplinary research Scientific Impact EGI enables large-scale interdisciplinary data exploitation by combining compute, storage, workflows, data services, AI/ML models and EOSC federating capabilities across a distributed European infrastructure. Use Cases Reproducible workflows AI validation on sensitive health data Cross-node machine learning pipelines Federated LLM services Large-scale cross-node data processing FAIR Data Scientific datasets accessible through EGI DataHub and integrated NGI/RI resources. Domain data services such as EODC Data Catalog, HAL, Recherche Data Gouv, FAIDare API, WeNMR, DATAlife, yProvStore and PITHIA e-Science. FAIR-enabling services for data access, transfer, storage, provenance and reuse. Status The EGI Node currently has the status of Candidate Node. Technical status Federated AAI Onboarded service catalogues (EGI catalogue; NGI and RI service resources) Application workflow management Service monitoring Service and research product accounting Order management Helpdesk Management system Timeline and milestones Phased deployment roadmap for 2026-2027, with use cases expanded through EOSC Mesh and ongoing operation of EOSC federating capabilities. Deliverables Project charter Integration with Federating Capabilities: AAI and Catalogue Application Deployment Management API – Software Release Report: Use cases – Lessons learnt and next steps Integration with Federating Capabilities: Helpdesk, Monitoring, SMS Stakeholders and communities’ engagement strategy EOSC Mesh Cross-Node use case analysis and implementation plan How to access the node Services are offered to European researchers under EGI Access Policy or service-specific access policies, including open, quota-based, project-based or cost access depending on service. EGI Node Services Capabilities of Node 1 1 Federated Services EGI Check-in EGI Service Catalogue Monitoring Accounting Helpdesk Order Management Application Deployment Management 2 2 Data repositories EGI DataHub NGI-AT EODC Data Catalog NGI-FR HAL Recherche Data Gouv FAIDare API WeNMR portal DATAlife PITHIA e-Science 3 3 Virtual Research Environments EGI Notebooks EGI Replay Galaxy and community VREs through NGI/RI services 4 4 File sync-and-share EGI Online Storage EGI Data Transfer 5 5 Compute and storage EGI Cloud Compute EGI Cloud Container EGI HTC EGI Online Storage EGI Data Transfer 6 6 Other EGI Software Distribution EGI Workload Manager EGI Infrastructure Manager Secrets Store AI/ML platforms Node Coordination & Structure Coordination Dr. Diego Scardaci, EGI Foundation Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI Internal organisational structure Operated by EGI Foundation on behalf of EGI Federation Federated research data centres across Europe and beyond NGI and RI service providers Federator / hub role for EOSC core capabilities Read More Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform",
+  "full_text": "About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases in reproducible workflows, AI, sensitive data analysis, machine learning and federated LLM services. EGI for EOSC Objectives Impact Status Access the EGI Node Capabilities Coordination Key Objective in Capacity as a Node To act as a Node for data-intensive computing and large-scale research data exploitation, enabling seamless, cross-border access to FAIR data, advanced analytics, AI/ML models, compute, storage, workflow and federating capabilities for EOSC. Impact Science Areas The EGI Node is multidisciplinary, operating in the following areas: Data-intensive science Cloud computing High-throughput computing High-performance computing Artificial Intelligence and machine learning Cross-disciplinary research Scientific Impact EGI enables large-scale interdisciplinary data exploitation by combining compute, storage, workflows, data services, AI/ML models and EOSC federating capabilities across a distributed European infrastructure. Use Cases Reproducible workflows AI validation on sensitive health data Cross-node machine learning pipelines Federated LLM services Large-scale cross-node data processing FAIR Data Scientific datasets accessible through EGI DataHub and integrated NGI/RI resources. Domain data services such as EODC Data Catalog, HAL, Recherche Data Gouv, FAIDare API, WeNMR, DATAlife, yProvStore and PITHIA e-Science. FAIR-enabling services for data access, transfer, storage, provenance and reuse. Status The EGI Node currently has the status of Candidate Node. Technical status Federated AAI Onboarded service catalogues (EGI catalogue; NGI and RI service resources) Application workflow management Service monitoring Service and research product accounting Order management Helpdesk Management system Timeline and milestones Phased deployment roadmap for 2026-2027, with use cases expanded through EOSC Mesh and ongoing operation of EOSC federating capabilities. Deliverables Project charter Integration with Federating Capabilities: AAI and Catalogue Application Deployment Management API – Software Release Report: Use cases – Lessons learnt and next steps Integration with Federating Capabilities: Helpdesk, Monitoring, SMS Stakeholders and communities’ engagement strategy EOSC Mesh Cross-Node use case analysis and implementation plan How to access the node Services are offered to European researchers under EGI Access Policy or service-specific access policies, including open, quota-based, project-based or cost access depending on service. EGI Node Services Capabilities of Node 1 1 Federated Services EGI Check-in EGI Service Catalogue Monitoring Accounting Helpdesk Order Management Application Deployment Management 2 2 Data repositories EGI DataHub NGI-AT EODC Data Catalog NGI-FR HAL Recherche Data Gouv FAIDare API WeNMR portal DATAlife PITHIA e-Science 3 3 Virtual Research Environments EGI Notebooks EGI Replay Galaxy and community VREs through NGI/RI services 4 4 File sync-and-share EGI Online Storage EGI Data Transfer 5 5 Compute and storage EGI Cloud Compute EGI Cloud Container EGI HTC EGI Online Storage EGI Data Transfer 6 6 Other EGI Software Distribution EGI Workload Manager EGI Infrastructure Manager Secrets Store AI/ML platforms Node Coordination & Structure Coordination Dr. Diego Scardaci, EGI Foundation Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI Internal organisational structure Operated by EGI Foundation on behalf of EGI Federation Federated research data centres across Europe and beyond NGI and RI service providers Federator / hub role for EOSC core capabilities Read More Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform Services Services for Research Services for Business Services for Federation EGI Access Call Solutions Batch computing Interactive computing Federated access Data spaces Data federation Service hosting EGI for AI EGI for Data Spaces EGI for EOSC EGI Node Resources Magazine News Publications Subcribe to our Newsletter Training Materials EGI Conference EGI on Zenodo Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons RI-SCALE SPECTRUM Service Contracts Past projects About EGI Foundation EGI Federation EGI Infrastructure EGI Community EGI Digital Innovation Hub Foundation Team Careers Frequently Asked Questions Contact us terms of use | data protection | certifications",
+  "links": [
+    {
+      "href": "https://www.egi.eu/",
+      "text": "EGI Federation Home",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/about/",
+      "text": "About",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/about/",
+      "text": "About Us",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/",
+      "text": "EGI Foundation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-federation/",
+      "text": "EGI Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-infrastructure/",
+      "text": "EGI Infrastructure",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-community/",
+      "text": "EGI Community",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/team/",
+      "text": "Foundation Team",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+      "text": "Frequently Asked Questions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/",
+      "text": "Our Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/research/",
+      "text": "Services for Research",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/business/",
+      "text": "Services for Business",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-dih/",
+      "text": "EGI Digital Innovation Hub",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/federation/",
+      "text": "Services for Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/",
+      "text": "Solutions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/",
+      "text": "Our Solutions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/use-cases/",
+      "text": "Use Cases",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/success-stories/",
+      "text": "Success Stories",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/egi-for-ai/",
+      "text": "EGI for AI",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-ai-innovation/",
+      "text": "EGI & AI Innovation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "text": "EGI for Data Spaces",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "text": "EGI for EOSC",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-node/",
+      "text": "EGI Node",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/projects/",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/envri-hub-next/",
+      "text": "ENVRI-Hub NEXT",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-beyond/",
+      "text": "EOSC Beyond",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-data-commons/",
+      "text": "EOSC Data Commons",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-mesh",
+      "text": "EOSC Mesh",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/ri-scale/",
+      "text": "RI-SCALE",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/ensure",
+      "text": "ENSURE",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/ritrain-digit",
+      "text": "RItrain-DIGIT",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service-contracts/",
+      "text": "Service Contracts",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/projects/archive/",
+      "text": "Project Archive",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/resources/",
+      "text": "Resources",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/zenodo/",
+      "text": "EGI on Zenodo",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/magazine/",
+      "text": "Magazine",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/newsletter/",
+      "text": "Newsletter",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/publications/",
+      "text": "Publications",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/training-materials/",
+      "text": "Training Materials",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/media-kit/",
+      "text": "Media Kit",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/news-and-events/",
+      "text": "News & Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/news/",
+      "text": "News",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-conference/",
+      "text": "EGI Conference",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-community-events/",
+      "text": "Community Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/trainings-and-webinars/",
+      "text": "Trainings & Webinars",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/participate/",
+      "text": "Participate",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/our-users/",
+      "text": "Our Users",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/join-the-egi-federation/",
+      "text": "Join the EGI Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-access-call/",
+      "text": "EGI Access Call",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/careers/",
+      "text": "Careers",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/share-news-events/",
+      "text": "Share Your News and Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/contact-us/",
+      "text": "Contact Us",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/search",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/",
+      "text": "EGI Federation Home",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/search",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/about/",
+      "text": "About",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/about/",
+      "text": "About Us",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/",
+      "text": "EGI Foundation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-federation/",
+      "text": "EGI Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-infrastructure/",
+      "text": "EGI Infrastructure",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-community/",
+      "text": "EGI Community",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/team/",
+      "text": "Foundation Team",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+      "text": "Frequently Asked Questions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/",
+      "text": "Our Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/research/",
+      "text": "Services for Research",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/business/",
+      "text": "Services for Business",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-dih/",
+      "text": "EGI Digital Innovation Hub",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/federation/",
+      "text": "Services for Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/",
+      "text": "Solutions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/",
+      "text": "Our Solutions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/use-cases/",
+      "text": "Use Cases",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/success-stories/",
+      "text": "Success Stories",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/egi-for-ai/",
+      "text": "EGI for AI",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-ai-innovation/",
+      "text": "EGI & AI Innovation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "text": "EGI for Data Spaces",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "text": "EGI for EOSC",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-node/",
+      "text": "EGI Node",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/projects/",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/envri-hub-next/",
+      "text": "ENVRI-Hub NEXT",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-beyond/",
+      "text": "EOSC Beyond",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-data-commons/",
+      "text": "EOSC Data Commons",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-mesh",
+      "text": "EOSC Mesh",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/ri-scale/",
+      "text": "RI-SCALE",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/ensure",
+      "text": "ENSURE",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/ritrain-digit",
+      "text": "RItrain-DIGIT",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service-contracts/",
+      "text": "Service Contracts",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/projects/archive/",
+      "text": "Project Archive",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/resources/",
+      "text": "Resources",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/zenodo/",
+      "text": "EGI on Zenodo",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/magazine/",
+      "text": "Magazine",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/newsletter/",
+      "text": "Newsletter",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/publications/",
+      "text": "Publications",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/training-materials/",
+      "text": "Training Materials",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/media-kit/",
+      "text": "Media Kit",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/news-and-events/",
+      "text": "News & Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/news/",
+      "text": "News",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-conference/",
+      "text": "EGI Conference",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-community-events/",
+      "text": "Community Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/trainings-and-webinars/",
+      "text": "Trainings & Webinars",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/participate/",
+      "text": "Participate",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/our-users/",
+      "text": "Our Users",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/join-the-egi-federation/",
+      "text": "Join the EGI Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-access-call/",
+      "text": "EGI Access Call",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/careers/",
+      "text": "Careers",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/share-news-events/",
+      "text": "Share Your News and Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/contact-us/",
+      "text": "Contact Us",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "text": "EGI for EOSC",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/",
+      "text": "EGI Node Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/person/diego-scardaci/",
+      "text": "Coordination Dr. Diego Scardaci, EGI Foundation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/",
+      "text": "Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/research/",
+      "text": "Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "text": "EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services-enabling-federated-computing-in-eosc/",
+      "text": "Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/research/",
+      "text": "Services for Research",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/business/",
+      "text": "Services for Business",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/services/federation/",
+      "text": "Services for Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-access-call/",
+      "text": "EGI Access Call",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/",
+      "text": "Solutions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/batch-computing/",
+      "text": "Batch computing",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/interactive-computing/",
+      "text": "Interactive computing",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/federated-access/",
+      "text": "Federated access",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "text": "Data spaces",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/data-federation/",
+      "text": "Data federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/service-hosting/",
+      "text": "Service hosting",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solutions/egi-for-ai/",
+      "text": "EGI for AI",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "text": "EGI for Data Spaces",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "text": "EGI for EOSC",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-node/",
+      "text": "EGI Node",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/resources/",
+      "text": "Resources",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/magazine/",
+      "text": "Magazine",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/news/",
+      "text": "News",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/publications/",
+      "text": "Publications",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/newsletter/#subscribe",
+      "text": "Subcribe to our Newsletter",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/training-materials/",
+      "text": "Training Materials",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-conference/",
+      "text": "EGI Conference",
+      "visible": true
+    },
+    {
+      "href": "https://zenodo.org/communities/egi/",
+      "text": "EGI on Zenodo",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/projects/",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/envri-hub-next/",
+      "text": "ENVRI-Hub NEXT",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-beyond/",
+      "text": "EOSC Beyond",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/eosc-data-commons/",
+      "text": "EOSC Data Commons",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/ri-scale/",
+      "text": "RI-SCALE",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/project/spectrum/",
+      "text": "SPECTRUM",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service-contracts/",
+      "text": "Service Contracts",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/projects/archive/",
+      "text": "Past projects",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/about/",
+      "text": "About",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/",
+      "text": "EGI Foundation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-federation/",
+      "text": "EGI Federation",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-infrastructure/",
+      "text": "EGI Infrastructure",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-community/",
+      "text": "EGI Community",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-dih/",
+      "text": "EGI Digital Innovation Hub",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/team/",
+      "text": "Foundation Team",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/careers/",
+      "text": "Careers",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+      "text": "Frequently Asked Questions",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/contact-us/",
+      "text": "Contact us",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/",
+      "text": "Image",
+      "visible": true
+    },
+    {
+      "href": "https://www.linkedin.com/company/egi-foundation",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.youtube.com/c/EGIFederation/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://zenodo.org/communities/egi",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/EGI-Federation",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://bsky.app/profile/egieinfra.bsky.social",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "mailto:contact@egi.eu",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/terms-of-use/",
+      "text": "terms of use",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/privacy-notice/",
+      "text": "data protection",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/egi-foundation/certifications",
+      "text": "certifications",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://cdn.egi.eu/app/uploads/2021/11/egi-logo.svg",
+      "alt": "EGI Federation Home",
+      "aria_label": "",
+      "title": "",
+      "css_class": "max-h-[2rem] w-auto object-contain",
+      "inline_svg": false
+    },
+    {
+      "src": "https://cdn.egi.eu/app/uploads/2021/11/egi-logo.svg",
+      "alt": "EGI Federation Home",
+      "aria_label": "",
+      "title": "",
+      "css_class": "max-h-[2rem] w-auto",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2026%2F06%2FScreenshot-2026-06-10-at-11.04.30.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "lg:rounded-bl-3xl max-h-[700px] w-full object-cover",
+      "inline_svg": false
+    },
+    {
+      "src": "https://cdn.egi.eu/app/uploads/2026/07/EGI-Node.jpg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "aligncenter size-full wp-image-37472",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2026%2F06%2FScreenshot-2026-06-10-at-11.04.30.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "rounded-md",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FDiversity-Of-Data-Cloud-e1477314070687.jpg&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F11%2FScreenshot-2022-11-01-at-14.57.15.png&w=3840&q=75",
+      "alt": "Web of data and services",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F12%2F2.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://cdn.egi.eu/app/uploads/2022/02/egi-logo-white.svg",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2.5 h-2.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2.5 h-2.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2 h-2 flex-shrink-0 -rotate-90 transition-transform duration-200 group-hover/child:translate-x-0.5",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2.5 h-2.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2 h-2 flex-shrink-0 -rotate-90 transition-transform duration-200 group-hover/child:translate-x-0.5",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2 h-2 flex-shrink-0 -rotate-90 transition-transform duration-200 group-hover/child:translate-x-0.5",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2.5 h-2.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2.5 h-2.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2.5 h-2.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2.5 h-2.5 flex-shrink-0 transition-transform duration-200 group-hover:rotate-180",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-current text-white transform scale-125",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-8 h-8 fill-current text-black transform scale-90",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-3 h-3 flex-shrink-0 transition-transform duration-200",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-3 h-3 flex-shrink-0 transition-transform duration-200",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2 h-2 flex-shrink-0 -rotate-90",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-3 h-3 flex-shrink-0 transition-transform duration-200",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2 h-2 flex-shrink-0 -rotate-90",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-2 h-2 flex-shrink-0 -rotate-90",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-3 h-3 flex-shrink-0 transition-transform duration-200",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-3 h-3 flex-shrink-0 transition-transform duration-200",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-3 h-3 flex-shrink-0 transition-transform duration-200",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "text-first fill-current w-3 h-3 flex-shrink-0 transition-transform duration-200",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "absolute right-0 overflow-visible fill-current transition-all group-hover:-translate-x-1 -translate-x-4 transform text-white ml-4 opacity-0 group-hover:opacity-100 mr-2",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "absolute right-0 overflow-visible fill-current transition-all group-hover:-translate-x-1 -translate-x-4 transform text-white ml-4 opacity-0 group-hover:opacity-100 mr-2",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-current",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-white",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-white",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-white",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-white",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-white",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "fill-white",
+      "inline_svg": true
+    }
+  ],
+  "controls": [
+    {
+      "text": "Hamburger Menu Icon",
+      "href": "https://www.egi.eu/egi-node",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Back to Top of the page",
+      "href": "https://www.egi.eu/egi-node",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "About",
+      "href": "https://www.egi.eu/about/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About Us",
+      "href": "https://www.egi.eu/about/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Foundation",
+      "href": "https://www.egi.eu/egi-foundation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Federation",
+      "href": "https://www.egi.eu/egi-federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Infrastructure",
+      "href": "https://www.egi.eu/egi-infrastructure/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Community",
+      "href": "https://www.egi.eu/egi-community/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Foundation Team",
+      "href": "https://www.egi.eu/egi-foundation/team/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Frequently Asked Questions",
+      "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://www.egi.eu/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Our Services",
+      "href": "https://www.egi.eu/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Research",
+      "href": "https://www.egi.eu/services/research/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Business",
+      "href": "https://www.egi.eu/services/business/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Digital Innovation Hub",
+      "href": "https://www.egi.eu/egi-dih/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Federation",
+      "href": "https://www.egi.eu/services/federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Solutions",
+      "href": "https://www.egi.eu/solutions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Our Solutions",
+      "href": "https://www.egi.eu/solutions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Use Cases",
+      "href": "https://www.egi.eu/solutions/use-cases/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Success Stories",
+      "href": "https://www.egi.eu/solutions/success-stories/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for AI",
+      "href": "https://www.egi.eu/solutions/egi-for-ai/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI & AI Innovation",
+      "href": "https://www.egi.eu/egi-ai-innovation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for Data Spaces",
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for EOSC",
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Node",
+      "href": "https://www.egi.eu/egi-node/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://www.egi.eu/projects/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ENVRI-Hub NEXT",
+      "href": "https://www.egi.eu/project/envri-hub-next/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Beyond",
+      "href": "https://www.egi.eu/project/eosc-beyond/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Data Commons",
+      "href": "https://www.egi.eu/project/eosc-data-commons/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Mesh",
+      "href": "https://www.egi.eu/project/eosc-mesh",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "RI-SCALE",
+      "href": "https://www.egi.eu/project/ri-scale/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ENSURE",
+      "href": "https://www.egi.eu/project/ensure",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "RItrain-DIGIT",
+      "href": "https://www.egi.eu/project/ritrain-digit",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service Contracts",
+      "href": "https://www.egi.eu/service-contracts/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Project Archive",
+      "href": "https://www.egi.eu/projects/archive/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resources",
+      "href": "https://www.egi.eu/resources/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI on Zenodo",
+      "href": "https://www.egi.eu/zenodo/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Magazine",
+      "href": "https://www.egi.eu/magazine/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Newsletter",
+      "href": "https://www.egi.eu/newsletter/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Publications",
+      "href": "https://www.egi.eu/publications/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training Materials",
+      "href": "https://www.egi.eu/training-materials/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Media Kit",
+      "href": "https://www.egi.eu/media-kit/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News & Events",
+      "href": "https://www.egi.eu/news-and-events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News",
+      "href": "https://www.egi.eu/news/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Conference",
+      "href": "https://www.egi.eu/egi-conference/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Community Events",
+      "href": "https://www.egi.eu/egi-community-events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Trainings & Webinars",
+      "href": "https://www.egi.eu/trainings-and-webinars/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Participate",
+      "href": "https://www.egi.eu/participate/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Our Users",
+      "href": "https://www.egi.eu/our-users/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Join the EGI Federation",
+      "href": "https://www.egi.eu/join-the-egi-federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Access Call",
+      "href": "https://www.egi.eu/egi-access-call/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Careers",
+      "href": "https://www.egi.eu/careers/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Share Your News and Events",
+      "href": "https://www.egi.eu/share-news-events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact Us",
+      "href": "https://www.egi.eu/contact-us/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Website Homepage",
+      "href": "https://www.egi.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Search Icon",
+      "href": "https://www.egi.eu/search",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About",
+      "href": "https://www.egi.eu/about/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About Us",
+      "href": "https://www.egi.eu/about/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Foundation",
+      "href": "https://www.egi.eu/egi-foundation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Federation",
+      "href": "https://www.egi.eu/egi-federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Infrastructure",
+      "href": "https://www.egi.eu/egi-infrastructure/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Community",
+      "href": "https://www.egi.eu/egi-community/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Foundation Team",
+      "href": "https://www.egi.eu/egi-foundation/team/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Frequently Asked Questions",
+      "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://www.egi.eu/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Our Services",
+      "href": "https://www.egi.eu/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Research",
+      "href": "https://www.egi.eu/services/research/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Business",
+      "href": "https://www.egi.eu/services/business/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Digital Innovation Hub",
+      "href": "https://www.egi.eu/egi-dih/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Federation",
+      "href": "https://www.egi.eu/services/federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Solutions",
+      "href": "https://www.egi.eu/solutions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Our Solutions",
+      "href": "https://www.egi.eu/solutions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Use Cases",
+      "href": "https://www.egi.eu/solutions/use-cases/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Success Stories",
+      "href": "https://www.egi.eu/solutions/success-stories/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for AI",
+      "href": "https://www.egi.eu/solutions/egi-for-ai/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI & AI Innovation",
+      "href": "https://www.egi.eu/egi-ai-innovation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for Data Spaces",
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for EOSC",
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Node",
+      "href": "https://www.egi.eu/egi-node/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://www.egi.eu/projects/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ENVRI-Hub NEXT",
+      "href": "https://www.egi.eu/project/envri-hub-next/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Beyond",
+      "href": "https://www.egi.eu/project/eosc-beyond/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Data Commons",
+      "href": "https://www.egi.eu/project/eosc-data-commons/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Mesh",
+      "href": "https://www.egi.eu/project/eosc-mesh",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "RI-SCALE",
+      "href": "https://www.egi.eu/project/ri-scale/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ENSURE",
+      "href": "https://www.egi.eu/project/ensure",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "RItrain-DIGIT",
+      "href": "https://www.egi.eu/project/ritrain-digit",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service Contracts",
+      "href": "https://www.egi.eu/service-contracts/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Project Archive",
+      "href": "https://www.egi.eu/projects/archive/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resources",
+      "href": "https://www.egi.eu/resources/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI on Zenodo",
+      "href": "https://www.egi.eu/zenodo/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Magazine",
+      "href": "https://www.egi.eu/magazine/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Newsletter",
+      "href": "https://www.egi.eu/newsletter/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Publications",
+      "href": "https://www.egi.eu/publications/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training Materials",
+      "href": "https://www.egi.eu/training-materials/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Media Kit",
+      "href": "https://www.egi.eu/media-kit/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News & Events",
+      "href": "https://www.egi.eu/news-and-events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News",
+      "href": "https://www.egi.eu/news/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Conference",
+      "href": "https://www.egi.eu/egi-conference/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Community Events",
+      "href": "https://www.egi.eu/egi-community-events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Trainings & Webinars",
+      "href": "https://www.egi.eu/trainings-and-webinars/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Participate",
+      "href": "https://www.egi.eu/participate/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Our Users",
+      "href": "https://www.egi.eu/our-users/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Join the EGI Federation",
+      "href": "https://www.egi.eu/join-the-egi-federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Access Call",
+      "href": "https://www.egi.eu/egi-access-call/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Careers",
+      "href": "https://www.egi.eu/careers/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Share Your News and Events",
+      "href": "https://www.egi.eu/share-news-events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact Us",
+      "href": "https://www.egi.eu/contact-us/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for EOSC",
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Objectives",
+      "href": "https://www.egi.eu/egi-node#objectives",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Impact",
+      "href": "https://www.egi.eu/egi-node#impact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Status",
+      "href": "https://www.egi.eu/egi-node#status",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Access the EGI Node",
+      "href": "https://www.egi.eu/egi-node#access",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Capabilities",
+      "href": "https://www.egi.eu/egi-node#capabilities",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Coordination",
+      "href": "https://www.egi.eu/egi-node#coordination",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Node Services",
+      "href": "https://www.egi.eu/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Coordination Dr. Diego Scardaci, EGI Foundation",
+      "href": "https://www.egi.eu/person/diego-scardaci/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI",
+      "href": "https://www.egi.eu/egi-foundation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading",
+      "href": "https://www.egi.eu/services/research/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the",
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform",
+      "href": "https://www.egi.eu/services-enabling-federated-computing-in-eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://www.egi.eu/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Research",
+      "href": "https://www.egi.eu/services/research/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Business",
+      "href": "https://www.egi.eu/services/business/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for Federation",
+      "href": "https://www.egi.eu/services/federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Access Call",
+      "href": "https://www.egi.eu/egi-access-call/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Solutions",
+      "href": "https://www.egi.eu/solutions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Batch computing",
+      "href": "https://www.egi.eu/solution/batch-computing/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Interactive computing",
+      "href": "https://www.egi.eu/solution/interactive-computing/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Federated access",
+      "href": "https://www.egi.eu/solution/federated-access/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Data spaces",
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Data federation",
+      "href": "https://www.egi.eu/solution/data-federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service hosting",
+      "href": "https://www.egi.eu/solution/service-hosting/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for AI",
+      "href": "https://www.egi.eu/solutions/egi-for-ai/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for Data Spaces",
+      "href": "https://www.egi.eu/solution/data-spaces/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI for EOSC",
+      "href": "https://www.egi.eu/egi-for-eosc/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Node",
+      "href": "https://www.egi.eu/egi-node/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resources",
+      "href": "https://www.egi.eu/resources/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Magazine",
+      "href": "https://www.egi.eu/magazine/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News",
+      "href": "https://www.egi.eu/news/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Publications",
+      "href": "https://www.egi.eu/publications/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Subcribe to our Newsletter",
+      "href": "https://www.egi.eu/newsletter/#subscribe",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training Materials",
+      "href": "https://www.egi.eu/training-materials/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Conference",
+      "href": "https://www.egi.eu/egi-conference/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI on Zenodo",
+      "href": "https://zenodo.org/communities/egi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://www.egi.eu/projects/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ENVRI-Hub NEXT",
+      "href": "https://www.egi.eu/project/envri-hub-next/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Beyond",
+      "href": "https://www.egi.eu/project/eosc-beyond/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Data Commons",
+      "href": "https://www.egi.eu/project/eosc-data-commons/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "RI-SCALE",
+      "href": "https://www.egi.eu/project/ri-scale/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "SPECTRUM",
+      "href": "https://www.egi.eu/project/spectrum/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service Contracts",
+      "href": "https://www.egi.eu/service-contracts/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Past projects",
+      "href": "https://www.egi.eu/projects/archive/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About",
+      "href": "https://www.egi.eu/about/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Foundation",
+      "href": "https://www.egi.eu/egi-foundation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Federation",
+      "href": "https://www.egi.eu/egi-federation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Infrastructure",
+      "href": "https://www.egi.eu/egi-infrastructure/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Community",
+      "href": "https://www.egi.eu/egi-community/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EGI Digital Innovation Hub",
+      "href": "https://www.egi.eu/egi-dih/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Foundation Team",
+      "href": "https://www.egi.eu/egi-foundation/team/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Careers",
+      "href": "https://www.egi.eu/careers/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Frequently Asked Questions",
+      "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact us",
+      "href": "https://www.egi.eu/contact-us/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Link to Homepage",
+      "href": "https://www.egi.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "linkedin",
+      "href": "https://www.linkedin.com/company/egi-foundation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "youtube",
+      "href": "https://www.youtube.com/c/EGIFederation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "zenodo",
+      "href": "https://zenodo.org/communities/egi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "github",
+      "href": "https://github.com/EGI-Federation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "bluesky",
+      "href": "https://bsky.app/profile/egieinfra.bsky.social",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Mail",
+      "href": "mailto:contact@egi.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "terms of use",
+      "href": "https://www.egi.eu/terms-of-use/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "data protection",
+      "href": "https://www.egi.eu/privacy-notice/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "certifications",
+      "href": "https://www.egi.eu/egi-foundation/certifications",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "",
+  "error": "",
+  "screenshot": "egi.png"
+}

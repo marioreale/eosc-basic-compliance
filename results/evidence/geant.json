@@ -1,0 +1,1682 @@
+{
+  "node_id": "geant",
+  "node_name": "GÉANT",
+  "requested_url": "https://geant.org/geant-eosc-node/",
+  "fetched_at": "2026-09-17T14:54:30+00:00",
+  "final_url": "https://geant.org/projects/geant-eosc-node/",
+  "http_status": 200,
+  "redirect_chain": [
+    "https://geant.org/geant-eosc-node/"
+  ],
+  "robots_allowed": true,
+  "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
+  "title": "GÉANT EOSC Node - GÉANT",
+  "lang_attr": "en-US",
+  "main_text": "Home . Projects . GÉANT EOSC Node GÉANT EOSC Node The GÉANT EOSC Node is GÉANT's contribution to the EOSC Federation, providing trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly. GÉANT Service Catalogue The catalogue provides an overview of the GÉANT services onboarded into the EOSC Federation. EOSC Federation An evolving European federation enabling researchers to discover, access, share and reuse data and resources. EOSC Nodes A ‘system of systems’ to find and access data and services for research and innovation in Europe. GÉANT Compendium Explore GÉANT Compendium data and reports. GÉANT eAcademy An online learning space for the research and education community. GÉANT and the European Open Science Cloud (EOSC) A federated European Open Science Cloud can only thrive if researchers can connect, collaborate and access resources seamlessly. GÉANT provides the trusted digital foundations that help make this possible. EOSC is an evolving federation of digital infrastructures and services that enables researchers across Europe to discover, access, share and reuse research data and resources across disciplines and borders. As the pan-European network for research and education, GÉANT plays a key role in supporting this vision. Together with National Research and Education Networks (NRENs) and partners across Europe, GÉANT contributes trusted connectivity, identity and access management, cybersecurity, cloud integration and other core services that underpin a secure and interoperable EOSC Federation. Our involvement extends across a range of European projects that help shape, build and operate EOSC. Through these initiatives, GÉANT contributes technical expertise, community engagement and long-term sustainability, ensuring that researchers benefit from seamless access to the services, data and collaboration opportunities they need to advance science. A pan-European e-infrastructure Node The EOSC Federation is built on trusted Nodes. The GÉANT EOSC Node contributes the connectivity, trust services and expertise that help make federation work. Building on GÉANT’s long-standing expertise in networking, identity and trust services, the Node delivers core capabilities that support interoperability across the EOSC Federation, including authentication and authorisation, secure access, federation services and high-performance connectivity. GÉANT works alongside NRENs and European partners to connect national and thematic EOSC Nodes into a secure, scalable and interoperable ecosystem. For NRENs, the GÉANT EOSC Node also provides a gateway to the EOSC Federation. Organisations that are not yet participating through a national Node can onboard their services via the GÉANT Node as resource providers or use it to connect users with services and resources on demand. The GÉANT EOSC Node builds on a series of major milestones, including the launch of the EOSC EU Node in 2024, the EOSC Federation in 2025 and the EuroHPC Federation Platform in 2026, all contributing to a unified, secure and user-friendly environment for accessing Europe’s research and computing resources. What the GÉANT Node enables The GÉANT Node acts as a gateway between the EOSC Federation and the services, resources and expertise of Europe’s research and education networking community. Here are four examples of how it can make federated access and collaboration a reality. Federated access to EOSC The GÉANT Node will provide the technical solution for the Trust & Identity layer of the EOSC Federation through MyAccessID. It will connect national and institutional identities, enabling secure authentication and Single Sign-On across EOSC Nodes and services. Value to users: Researchers and service providers can use their trusted identities to access EOSC services and resources seamlessly, securely and interoperably. Access to European cloud resources The GÉANT Node will make cloud resources from the OCRE Framework available through the EOSC Federation, connecting researchers and research infrastructures with European cloud providers. Value to users: Easier access to European cloud resources, lowering barriers to cloud adoption while supporting European digital sovereignty. NREN resources through the GÉANT Node The GÉANT Node will act as a gateway for NRENs that are not themselves EOSC Nodes, enabling them to make selected services and resources available through the EOSC Federation. Value to users: A wider range of services and resources becomes accessible through EOSC, while making it easier for NRENs to contribute their capabilities to the Federation. Connecting EOSC and EuroHPC The GÉANT Node will demonstrate how EOSC and EuroHPC can work together through federated identity and Single Sign-On. The use case will connect research data, EOSC services, cloud resources and EuroHPC computing in a seamless research workflow. Value to users: Researchers can move securely between EOSC and EuroHPC resources, enabling data to be processed on European supercomputing infrastructure and the results stored and analysed through EOSC services. GÉANT Service Catalogue In short The GÉANT Node offers network, security, and Identity and Access Management services to the European research community. It enables organisations to establish compliant EOSC Nodes and provides access to services and resources from GÉANT members, including cloud resources, NREN services, AAI federation and links between EOSC and EuroHPC. Related pages EuroHPC HyperConnectivity GÉANT has been awarded a contract by the EuroHPC Joint Undertaking (JU). Membership The GÉANT Association includes 37 NRENs, NORDUnet, and associates including five Nordic NRENs, KREN, CERN, and ESA. Contact To find out more about the GÉANT EOSC Node get in touch via the contact form.",
+  "full_text": "Manage cookie consent To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions. Functional Functional Always active The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network. Preferences Preferences The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user. Statistics Statistics The technical storage or access that is used exclusively for statistical purposes. The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you. Marketing Marketing The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes. Manage options Manage services Manage {vendor_count} vendors Read more about these purposes Accept Deny View preferences Save preferences View preferences Cookie Policy Privacy Statement {title} Skip to Content Who we are Back Who we are About GÉANT Back About GÉANT Vision, mission, strategy Executive team Governance Membership Become a GÉANT member Equity, Diversity and Inclusion (EDI) Who we work with Back Who we work with National Research and Education Networks European institutions European e‑infrastructures Global partners Commercial Partnership Programme Procurement and legal Back Procurement and legal Procurement and supplier information Formalities Careers What we do Back What we do Projects Back Projects The GÉANT Project EuroHPC HyperConnectivity GÉANT EOSC Node Network and connectivity Back Network and connectivity The pan-European GÉANT Network Intercontinental connectivity Network innovation Network services Network operations Identity and Access Management (IAM) Back Identity and Access Management (IAM) eduroam eduGAIN Core AAI Platform MyAccessID MyAcademicID eduTEAMS InAcademia IAM programmes and initiatives Security Back Security Security products and services eduVPN Training and awareness GÉANT Security Operations Centre GÉANT Security Innovation Lab Compliance Clouds Back Clouds About the GÉANT Cloud Frameworks OCRE 2024 Framework eduMEET Above-the-Net Services Incubator Impact Community Back Community GÉANT Community Back GÉANT Community Community Programme Innovation Programme Community Award Learning and Development News and events Back News and events CONNECT - GÉANT community news Events Back Events TNC Security Days GÉANT Project Symposium Community events Resources Contact Search Search Search Home . Projects . GÉANT EOSC Node GÉANT EOSC Node The GÉANT EOSC Node is GÉANT's contribution to the EOSC Federation, providing trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly. GÉANT Service Catalogue The catalogue provides an overview of the GÉANT services onboarded into the EOSC Federation. EOSC Federation An evolving European federation enabling researchers to discover, access, share and reuse data and resources. EOSC Nodes A ‘system of systems’ to find and access data and services for research and innovation in Europe. GÉANT Compendium Explore GÉANT Compendium data and reports. GÉANT eAcademy An online learning space for the research and education community. GÉANT and the European Open Science Cloud (EOSC) A federated European Open Science Cloud can only thrive if researchers can connect, collaborate and access resources seamlessly. GÉANT provides the trusted digital foundations that help make this possible. EOSC is an evolving federation of digital infrastructures and services that enables researchers across Europe to discover, access, share and reuse research data and resources across disciplines and borders. As the pan-European network for research and education, GÉANT plays a key role in supporting this vision. Together with National Research and Education Networks (NRENs) and partners across Europe, GÉANT contributes trusted connectivity, identity and access management, cybersecurity, cloud integration and other core services that underpin a secure and interoperable EOSC Federation. Our involvement extends across a range of European projects that help shape, build and operate EOSC. Through these initiatives, GÉANT contributes technical expertise, community engagement and long-term sustainability, ensuring that researchers benefit from seamless access to the services, data and collaboration opportunities they need to advance science. A pan-European e-infrastructure Node The EOSC Federation is built on trusted Nodes. The GÉANT EOSC Node contributes the connectivity, trust services and expertise that help make federation work. Building on GÉANT’s long-standing expertise in networking, identity and trust services, the Node delivers core capabilities that support interoperability across the EOSC Federation, including authentication and authorisation, secure access, federation services and high-performance connectivity. GÉANT works alongside NRENs and European partners to connect national and thematic EOSC Nodes into a secure, scalable and interoperable ecosystem. For NRENs, the GÉANT EOSC Node also provides a gateway to the EOSC Federation. Organisations that are not yet participating through a national Node can onboard their services via the GÉANT Node as resource providers or use it to connect users with services and resources on demand. The GÉANT EOSC Node builds on a series of major milestones, including the launch of the EOSC EU Node in 2024, the EOSC Federation in 2025 and the EuroHPC Federation Platform in 2026, all contributing to a unified, secure and user-friendly environment for accessing Europe’s research and computing resources. What the GÉANT Node enables The GÉANT Node acts as a gateway between the EOSC Federation and the services, resources and expertise of Europe’s research and education networking community. Here are four examples of how it can make federated access and collaboration a reality. Federated access to EOSC The GÉANT Node will provide the technical solution for the Trust & Identity layer of the EOSC Federation through MyAccessID. It will connect national and institutional identities, enabling secure authentication and Single Sign-On across EOSC Nodes and services. Value to users: Researchers and service providers can use their trusted identities to access EOSC services and resources seamlessly, securely and interoperably. Access to European cloud resources The GÉANT Node will make cloud resources from the OCRE Framework available through the EOSC Federation, connecting researchers and research infrastructures with European cloud providers. Value to users: Easier access to European cloud resources, lowering barriers to cloud adoption while supporting European digital sovereignty. NREN resources through the GÉANT Node The GÉANT Node will act as a gateway for NRENs that are not themselves EOSC Nodes, enabling them to make selected services and resources available through the EOSC Federation. Value to users: A wider range of services and resources becomes accessible through EOSC, while making it easier for NRENs to contribute their capabilities to the Federation. Connecting EOSC and EuroHPC The GÉANT Node will demonstrate how EOSC and EuroHPC can work together through federated identity and Single Sign-On. The use case will connect research data, EOSC services, cloud resources and EuroHPC computing in a seamless research workflow. Value to users: Researchers can move securely between EOSC and EuroHPC resources, enabling data to be processed on European supercomputing infrastructure and the results stored and analysed through EOSC services. GÉANT Service Catalogue In short The GÉANT Node offers network, security, and Identity and Access Management services to the European research community. It enables organisations to establish compliant EOSC Nodes and provides access to services and resources from GÉANT members, including cloud resources, NREN services, AAI federation and links between EOSC and EuroHPC. Related pages EuroHPC HyperConnectivity GÉANT has been awarded a contract by the EuroHPC Joint Undertaking (JU). Membership The GÉANT Association includes 37 NRENs, NORDUnet, and associates including five Nordic NRENs, KREN, CERN, and ESA. Contact To find out more about the GÉANT EOSC Node get in touch via the contact form. Who we are About GÉANT Who we work with Procurement and legal Careers What we do Projects Network and connectivity Identity and Access Management (IAM) Security Clouds Impact Community GÉANT Community News and events CONNECT - GÉANT community news Events Resources Contact Anti-slavery policy Responsible disclosure policy GÉANT Community Code of Conduct Use of the EU funding statement Web accessibility statement Cookie Policy (EU) Disclaimer Privacy Notice Keep up to date Manage cookie consent",
+  "links": [
+    {
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+      "text": "Manage options",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-cookies-overview",
+      "text": "Manage services",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-tcf-wrapper",
+      "text": "Manage {vendor_count} vendors",
+      "visible": true
+    },
+    {
+      "href": "https://cookiedatabase.org/tcf/purposes/",
+      "text": "Read more about these purposes",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+      "text": "View preferences",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/cookie-policy-eu/",
+      "text": "Cookie Policy",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/privacy-notice/",
+      "text": "Privacy Statement",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org",
+      "text": "Geant logo icon",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/",
+      "text": "About GÉANT",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/",
+      "text": "About GÉANT",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/vision-mission-strategy/",
+      "text": "Vision, mission, strategy",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/geant-executive-team/",
+      "text": "Executive team",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/governance/",
+      "text": "Governance",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/membership/",
+      "text": "Membership",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/become-a-geant-member/",
+      "text": "Become a GÉANT member",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+      "text": "Equity, Diversity and Inclusion (EDI)",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/",
+      "text": "Who we work with",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/",
+      "text": "Who we work with",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/national-research-and-education-networks/",
+      "text": "National Research and Education Networks",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/european-institutions/",
+      "text": "European institutions",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/european-e-infrastructures/",
+      "text": "European e‑infrastructures",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/global-partners/",
+      "text": "Global partners",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/commercial-partnership-programme/",
+      "text": "Commercial Partnership Programme",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/procurement-and-legal/",
+      "text": "Procurement and legal",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/procurement-and-legal/",
+      "text": "Procurement and legal",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+      "text": "Procurement and supplier information",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/procurement-and-legal/formalities/",
+      "text": "Formalities",
+      "visible": true
+    },
+    {
+      "href": "https://careers.geant.org/",
+      "text": "Careers",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/the-geant-project/",
+      "text": "The GÉANT Project",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+      "text": "EuroHPC HyperConnectivity",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "text": "GÉANT EOSC Node",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/",
+      "text": "Network and connectivity",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/",
+      "text": "Network and connectivity",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/",
+      "text": "The pan-European GÉANT Network",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/intercontinental-connectivity/",
+      "text": "Intercontinental connectivity",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/network_innovation/",
+      "text": "Network innovation",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/services/",
+      "text": "Network services",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/network_operations/",
+      "text": "Network operations",
+      "visible": true
+    },
+    {
+      "href": "https://trustidentity.geant.org/",
+      "text": "Identity and Access Management (IAM)",
+      "visible": true
+    },
+    {
+      "href": "https://trustidentity.geant.org/",
+      "text": "Identity and Access Management (IAM)",
+      "visible": true
+    },
+    {
+      "href": "https://eduroam.org/",
+      "text": "eduroam",
+      "visible": true
+    },
+    {
+      "href": "https://edugain.org/",
+      "text": "eduGAIN",
+      "visible": true
+    },
+    {
+      "href": "https://trustidentity.geant.org/geant-core-aai-platform",
+      "text": "Core AAI Platform",
+      "visible": true
+    },
+    {
+      "href": "https://trustidentity.geant.org/myaccessid",
+      "text": "MyAccessID",
+      "visible": true
+    },
+    {
+      "href": "https://trustidentity.geant.org/myacademicid",
+      "text": "MyAcademicID",
+      "visible": true
+    },
+    {
+      "href": "https://eduteams.org/",
+      "text": "eduTEAMS",
+      "visible": true
+    },
+    {
+      "href": "https://inacademia.org/",
+      "text": "InAcademia",
+      "visible": true
+    },
+    {
+      "href": "https://trustidentity.geant.org/community/",
+      "text": "IAM programmes and initiatives",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/",
+      "text": "Security",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/",
+      "text": "Security",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/services/",
+      "text": "Security products and services",
+      "visible": true
+    },
+    {
+      "href": "https://www.eduvpn.org/",
+      "text": "eduVPN",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/training-and-events/",
+      "text": "Training and awareness",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/security-operations-centre/",
+      "text": "GÉANT Security Operations Centre",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/geant-security-innovation-lab/",
+      "text": "GÉANT Security Innovation Lab",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/compliance/",
+      "text": "Compliance",
+      "visible": true
+    },
+    {
+      "href": "https://clouds.geant.org/",
+      "text": "Clouds",
+      "visible": true
+    },
+    {
+      "href": "https://clouds.geant.org/",
+      "text": "Clouds",
+      "visible": true
+    },
+    {
+      "href": "https://clouds.geant.org/geant-cloud-frameworks/",
+      "text": "About the GÉANT Cloud Frameworks",
+      "visible": true
+    },
+    {
+      "href": "https://clouds.geant.org/the-ocre-2024-framework/",
+      "text": "OCRE 2024 Framework",
+      "visible": true
+    },
+    {
+      "href": "https://edumeet.org/",
+      "text": "eduMEET",
+      "visible": true
+    },
+    {
+      "href": "https://clouds.geant.org/above-the-net-services-incubator",
+      "text": "Above-the-Net Services Incubator",
+      "visible": true
+    },
+    {
+      "href": "https://impact.geant.org/",
+      "text": "Impact",
+      "visible": true
+    },
+    {
+      "href": "https://community.geant.org/",
+      "text": "GÉANT Community",
+      "visible": true
+    },
+    {
+      "href": "https://community.geant.org/",
+      "text": "GÉANT Community",
+      "visible": true
+    },
+    {
+      "href": "https://community.geant.org/community-programme/",
+      "text": "Community Programme",
+      "visible": true
+    },
+    {
+      "href": "https://community.geant.org/innovationprogramme/",
+      "text": "Innovation Programme",
+      "visible": true
+    },
+    {
+      "href": "https://community.geant.org/community-award/",
+      "text": "Community Award",
+      "visible": true
+    },
+    {
+      "href": "https://community.geant.org/learning/",
+      "text": "Learning and Development",
+      "visible": true
+    },
+    {
+      "href": "https://connect.geant.org/",
+      "text": "CONNECT - GÉANT community news",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/events/",
+      "text": "Events",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/events/",
+      "text": "Events",
+      "visible": true
+    },
+    {
+      "href": "https://tnc.geant.org/",
+      "text": "TNC",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/security-days/",
+      "text": "Security Days",
+      "visible": true
+    },
+    {
+      "href": "https://symposium.geant.org/",
+      "text": "GÉANT Project Symposium",
+      "visible": true
+    },
+    {
+      "href": "https://events.geant.org/",
+      "text": "Community events",
+      "visible": true
+    },
+    {
+      "href": "https://resources.geant.org/",
+      "text": "Resources",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org",
+      "text": "Home",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://geant-node-catalogue.geant.org/",
+      "text": "The catalogue provides an overview of the GÉANT services onboarded into the EOSC Federation.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "text": "An evolving European federation enabling researchers to discover, access, share and reuse data and resources.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "text": "A ‘system of systems’ to find and access data and services for research and innovation in Europe.",
+      "visible": true
+    },
+    {
+      "href": "https://compendium.geant.org/",
+      "text": "Explore GÉANT Compendium data and reports.",
+      "visible": true
+    },
+    {
+      "href": "https://e-academy.geant.org/moodle/",
+      "text": "An online learning space for the research and education community.",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/",
+      "text": "GÉANT",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/national-research-and-education-networks/",
+      "text": "National Research and Education Networks",
+      "visible": true
+    },
+    {
+      "href": "https://geant-node-catalogue.geant.org/",
+      "text": "GÉANT Service Catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+      "text": "EuroHPC HyperConnectivity GÉANT has been awarded a contract by the EuroHPC Joint Undertaking (JU).",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/membership/",
+      "text": "Membership The GÉANT Association includes 37 NRENs, NORDUnet, and associates including five Nordic NRENs, KREN, CERN, and ESA.",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/contact/",
+      "text": "Contact To find out more about the GÉANT EOSC Node get in touch via the contact form.",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/",
+      "text": "GEANT",
+      "visible": true
+    },
+    {
+      "href": "https://mstdn.social/@geant",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.linkedin.com/company/geantnetworks",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.facebook.com/GEANTcommunity/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.youtube.com/user/GEANTtv",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.instagram.com/geant_community/?hl=en",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/about-geant/",
+      "text": "About GÉANT",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/who-we-work-with/",
+      "text": "Who we work with",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/procurement-and-legal/",
+      "text": "Procurement and legal",
+      "visible": true
+    },
+    {
+      "href": "https://careers.geant.org/",
+      "text": "Careers",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/projects/",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://network.geant.org/",
+      "text": "Network and connectivity",
+      "visible": true
+    },
+    {
+      "href": "https://trustidentity.geant.org/",
+      "text": "Identity and Access Management (IAM)",
+      "visible": true
+    },
+    {
+      "href": "https://security.geant.org/",
+      "text": "Security",
+      "visible": true
+    },
+    {
+      "href": "https://clouds.geant.org/",
+      "text": "Clouds",
+      "visible": true
+    },
+    {
+      "href": "https://impact.geant.org/",
+      "text": "Impact",
+      "visible": true
+    },
+    {
+      "href": "https://community.geant.org/",
+      "text": "GÉANT Community",
+      "visible": true
+    },
+    {
+      "href": "https://connect.geant.org/",
+      "text": "CONNECT - GÉANT community news",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/events/",
+      "text": "Events",
+      "visible": true
+    },
+    {
+      "href": "https://resources.geant.org/",
+      "text": "Resources",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/anti-slavery-policy/",
+      "text": "Anti-slavery policy",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/responsible-disclosure-policy/",
+      "text": "Responsible disclosure policy",
+      "visible": true
+    },
+    {
+      "href": "https://resources.geant.org/code-of-conduct/",
+      "text": "GÉANT Community Code of Conduct",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/use-of-the-eu-funding-statement/",
+      "text": "Use of the EU funding statement",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/web-accessibility-statement/",
+      "text": "Web accessibility statement",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/cookie-policy-eu/",
+      "text": "Cookie Policy (EU)",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/disclaimer/",
+      "text": "Disclaimer",
+      "visible": true
+    },
+    {
+      "href": "https://geant.org/privacy-notice/",
+      "text": "Privacy Notice",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://geant.org/wp-content/themes/geant/images/logo-icon.svg?v=1",
+      "alt": "Geant logo icon",
+      "aria_label": "",
+      "title": "",
+      "css_class": "max-md:w-23",
+      "inline_svg": false
+    },
+    {
+      "src": "https://geant.org/wp-content/themes/geant/images/logo-text.svg",
+      "alt": "GEANT",
+      "aria_label": "",
+      "title": "",
+      "css_class": "mt-2 max-md:hidden",
+      "inline_svg": false
+    },
+    {
+      "src": "https://geant.org/wp-content/uploads/2026/08/EOSCNode-GEANT-300x59.jpg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "aligncenter wp-image-2208",
+      "inline_svg": false
+    },
+    {
+      "src": "https://geant.org/wp-content/themes/geant/images/logo-text-white.svg",
+      "alt": "GEANT",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://geant.org/wp-content/themes/geant/images/EU-logo.svg",
+      "alt": "Co-funded by the Europian Union",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "svg-inline--fa fa-times fa-w-11",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "ea11y-widget-icon",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "stroke-current stroke-3",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "ea11y-widget-icon",
+      "inline_svg": true
+    }
+  ],
+  "controls": [
+    {
+      "text": "Accept",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Deny",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "View preferences",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Save preferences",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Search submit",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Search submit",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Submit",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Manage cookie consent",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Manage options",
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Manage services",
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-cookies-overview",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Manage {vendor_count} vendors",
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-tcf-wrapper",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Read more about these purposes",
+      "href": "https://cookiedatabase.org/tcf/purposes/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "View preferences",
+      "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cookie Policy",
+      "href": "https://geant.org/cookie-policy-eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy Statement",
+      "href": "https://geant.org/privacy-notice/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "{title}",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Skip to Content",
+      "href": "https://geant.org/projects/geant-eosc-node/#main",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Who we are",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About GÉANT",
+      "href": "https://geant.org/about-geant/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About GÉANT",
+      "href": "https://geant.org/about-geant/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Vision, mission, strategy",
+      "href": "https://geant.org/about-geant/vision-mission-strategy/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Executive team",
+      "href": "https://geant.org/about-geant/geant-executive-team/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Governance",
+      "href": "https://geant.org/about-geant/governance/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Membership",
+      "href": "https://geant.org/about-geant/membership/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Become a GÉANT member",
+      "href": "https://geant.org/about-geant/become-a-geant-member/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Equity, Diversity and Inclusion (EDI)",
+      "href": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Who we work with",
+      "href": "https://geant.org/who-we-work-with/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Who we work with",
+      "href": "https://geant.org/who-we-work-with/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "National Research and Education Networks",
+      "href": "https://geant.org/who-we-work-with/national-research-and-education-networks/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "European institutions",
+      "href": "https://geant.org/who-we-work-with/european-institutions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "European e‑infrastructures",
+      "href": "https://geant.org/who-we-work-with/european-e-infrastructures/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Global partners",
+      "href": "https://geant.org/who-we-work-with/global-partners/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Commercial Partnership Programme",
+      "href": "https://geant.org/who-we-work-with/commercial-partnership-programme/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Procurement and legal",
+      "href": "https://geant.org/procurement-and-legal/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Procurement and legal",
+      "href": "https://geant.org/procurement-and-legal/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Procurement and supplier information",
+      "href": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Formalities",
+      "href": "https://geant.org/procurement-and-legal/formalities/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Careers",
+      "href": "https://careers.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "What we do",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://geant.org/projects/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://geant.org/projects/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "The GÉANT Project",
+      "href": "https://geant.org/projects/the-geant-project/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EuroHPC HyperConnectivity",
+      "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT EOSC Node",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Network and connectivity",
+      "href": "https://network.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Network and connectivity",
+      "href": "https://network.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "The pan-European GÉANT Network",
+      "href": "https://network.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Intercontinental connectivity",
+      "href": "https://network.geant.org/intercontinental-connectivity/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Network innovation",
+      "href": "https://network.geant.org/network_innovation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Network services",
+      "href": "https://network.geant.org/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Network operations",
+      "href": "https://network.geant.org/network_operations/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Identity and Access Management (IAM)",
+      "href": "https://trustidentity.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Identity and Access Management (IAM)",
+      "href": "https://trustidentity.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "eduroam",
+      "href": "https://eduroam.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "eduGAIN",
+      "href": "https://edugain.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Core AAI Platform",
+      "href": "https://trustidentity.geant.org/geant-core-aai-platform",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "MyAccessID",
+      "href": "https://trustidentity.geant.org/myaccessid",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "MyAcademicID",
+      "href": "https://trustidentity.geant.org/myacademicid",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "eduTEAMS",
+      "href": "https://eduteams.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "InAcademia",
+      "href": "https://inacademia.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "IAM programmes and initiatives",
+      "href": "https://trustidentity.geant.org/community/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Security",
+      "href": "https://security.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Security",
+      "href": "https://security.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Security products and services",
+      "href": "https://security.geant.org/services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "eduVPN",
+      "href": "https://www.eduvpn.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training and awareness",
+      "href": "https://security.geant.org/training-and-events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Security Operations Centre",
+      "href": "https://security.geant.org/security-operations-centre/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Security Innovation Lab",
+      "href": "https://security.geant.org/geant-security-innovation-lab/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Compliance",
+      "href": "https://security.geant.org/compliance/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Clouds",
+      "href": "https://clouds.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Clouds",
+      "href": "https://clouds.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About the GÉANT Cloud Frameworks",
+      "href": "https://clouds.geant.org/geant-cloud-frameworks/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "OCRE 2024 Framework",
+      "href": "https://clouds.geant.org/the-ocre-2024-framework/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "eduMEET",
+      "href": "https://edumeet.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Above-the-Net Services Incubator",
+      "href": "https://clouds.geant.org/above-the-net-services-incubator",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Impact",
+      "href": "https://impact.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Community",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Community",
+      "href": "https://community.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Community",
+      "href": "https://community.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Community Programme",
+      "href": "https://community.geant.org/community-programme/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Innovation Programme",
+      "href": "https://community.geant.org/innovationprogramme/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Community Award",
+      "href": "https://community.geant.org/community-award/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Learning and Development",
+      "href": "https://community.geant.org/learning/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News and events",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CONNECT - GÉANT community news",
+      "href": "https://connect.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Events",
+      "href": "https://geant.org/events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Back",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Events",
+      "href": "https://geant.org/events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "TNC",
+      "href": "https://tnc.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Security Days",
+      "href": "https://security.geant.org/security-days/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Project Symposium",
+      "href": "https://symposium.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Community events",
+      "href": "https://events.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resources",
+      "href": "https://resources.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://geant.org/contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Search",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Toggle main navigation",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Close",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Home",
+      "href": "https://geant.org",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://geant.org/projects/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "The catalogue provides an overview of the GÉANT services onboarded into the EOSC Federation.",
+      "href": "https://geant-node-catalogue.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "An evolving European federation enabling researchers to discover, access, share and reuse data and resources.",
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "A ‘system of systems’ to find and access data and services for research and innovation in Europe.",
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Explore GÉANT Compendium data and reports.",
+      "href": "https://compendium.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "An online learning space for the research and education community.",
+      "href": "https://e-academy.geant.org/moodle/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT",
+      "href": "https://geant.org/about-geant/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "National Research and Education Networks",
+      "href": "https://geant.org/who-we-work-with/national-research-and-education-networks/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Service Catalogue",
+      "href": "https://geant-node-catalogue.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EuroHPC HyperConnectivity GÉANT has been awarded a contract by the EuroHPC Joint Undertaking (JU).",
+      "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Membership The GÉANT Association includes 37 NRENs, NORDUnet, and associates including five Nordic NRENs, KREN, CERN, and ESA.",
+      "href": "https://geant.org/about-geant/membership/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact To find out more about the GÉANT EOSC Node get in touch via the contact form.",
+      "href": "https://geant.org/contact/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to Mastodon page",
+      "href": "https://mstdn.social/@geant",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to LinkedIn page",
+      "href": "https://www.linkedin.com/company/geantnetworks",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to Facebook page",
+      "href": "https://www.facebook.com/GEANTcommunity/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to YouTube page",
+      "href": "https://www.youtube.com/user/GEANTtv",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to Instagram page",
+      "href": "https://www.instagram.com/geant_community/?hl=en",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Who we are",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About GÉANT",
+      "href": "https://geant.org/about-geant/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Who we work with",
+      "href": "https://geant.org/who-we-work-with/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Procurement and legal",
+      "href": "https://geant.org/procurement-and-legal/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Careers",
+      "href": "https://careers.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "What we do",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://geant.org/projects/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Network and connectivity",
+      "href": "https://network.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Identity and Access Management (IAM)",
+      "href": "https://trustidentity.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Security",
+      "href": "https://security.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Clouds",
+      "href": "https://clouds.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Impact",
+      "href": "https://impact.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Community",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Community",
+      "href": "https://community.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News and events",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CONNECT - GÉANT community news",
+      "href": "https://connect.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Events",
+      "href": "https://geant.org/events/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resources",
+      "href": "https://resources.geant.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://geant.org/contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Search",
+      "href": "https://geant.org/projects/geant-eosc-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Anti-slavery policy",
+      "href": "https://geant.org/anti-slavery-policy/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Responsible disclosure policy",
+      "href": "https://geant.org/responsible-disclosure-policy/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "GÉANT Community Code of Conduct",
+      "href": "https://resources.geant.org/code-of-conduct/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Use of the EU funding statement",
+      "href": "https://geant.org/use-of-the-eu-funding-statement/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Web accessibility statement",
+      "href": "https://geant.org/web-accessibility-statement/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cookie Policy (EU)",
+      "href": "https://geant.org/cookie-policy-eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Disclaimer",
+      "href": "https://geant.org/disclaimer/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy Notice",
+      "href": "https://geant.org/privacy-notice/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Close dialog",
+      "href": "https://geant.org/projects/geant-eosc-node/",
+      "tag": "div",
+      "visible": true
+    }
+  ],
+  "meta_description": "The GÉANT EOSC Node provides trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly.",
+  "error": "",
+  "screenshot": "geant.png"
+}

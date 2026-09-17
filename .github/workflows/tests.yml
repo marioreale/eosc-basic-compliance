@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  checks: write
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - run: uv run ruff check src tests
+      - run: uv run pytest -q --junitxml=results/junit.xml
+      - name: Publish test report
+        uses: mikepenz/action-junit-report@v5
+        if: always()
+        with:
+          report_paths: results/junit.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: test-results
+          path: results/junit.xml

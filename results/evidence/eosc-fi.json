@@ -1,0 +1,1269 @@
+{
+  "node_id": "eosc-fi",
+  "node_name": "EOSC Finland",
+  "requested_url": "https://eosc.fi/",
+  "fetched_at": "2026-09-17T14:53:17+00:00",
+  "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+  "http_status": 200,
+  "redirect_chain": [
+    "https://eosc.fi/"
+  ],
+  "robots_allowed": true,
+  "robots_note": "robots.txt consulted",
+  "title": "EOSC Finland Pilot Node - Services for Research",
+  "lang_attr": "en-US",
+  "main_text": "EOSC Finland Pilot Node Dataset-as-a-Service EOSC Finland - Tools for service providers and data managers EOSC Finland for researchers More about the EOSC Federation and the Finnish Pilot Node MyAccessID - a new way to access CSC services Discover services Browse services in the EOSC federation available for researchers with a Finnish affiliation or project. Service catalogue Start using services Read about the first steps to becoming a CSC user. How to start User guides and tutorials Browse CSC’s user guides and tutorials. User guides (External link) Research outputs Discover Finnish research in Research.fi. Research.fi (External link) Data Find Finnish research datasets in the Fairdata Etsin service. Etsin (External link) Tools Browse our extensive applications catalogue. Applications catalogue (External link)",
+  "full_text": "Skip to content Services for research Docs CSC - User guides (External link) MyCSC - User portal (External link) csc.fi - Company site (External link) Services for research Search for: Service Desk Service Desk Home How to start Services Services (External link) General Service catalog Service breaks Resource allocation Applying for resources Extremely large resources Managing service quotas Service categories High-performance computing Research data management Plan data management Store & share data Publish & discover data Cloud services Services for sensitive data Compare SD Services and ePouta Sensitive Data (SD) Services for Research Overview for IT personnel and organizations Quick access page Definition of sensitive data Managing sensitive data User groups Services for science & methods AI and data analytics Biosciences Chemistry Code optimization Computational engineering Geoinformatics Geocomputing Mathematics, statistics and technical computing Physics Quantum computing Social sciences and humanities Services for education Services for commercial use Purchasing CSC’s services Use cases Blogs Training Training (External link) Training calendar Training portfolio Terms & policies Terms & policies (External link) Free-of-charge use Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Policies CSC research infrastructure data management policy Persistent identifier (PID) policy Security & privacy Protection levels Privacy notice for remote identification service Welcome to the EOSC Finland Pilot Node Home › EOSC Finland Pilot Node EOSC Finland Pilot Node Dataset-as-a-Service EOSC Finland - Tools for service providers and data managers EOSC Finland for researchers More about the EOSC Federation and the Finnish Pilot Node MyAccessID - a new way to access CSC services Discover services Browse services in the EOSC federation available for researchers with a Finnish affiliation or project. Service catalogue Start using services Read about the first steps to becoming a CSC user. How to start User guides and tutorials Browse CSC’s user guides and tutorials. User guides (External link) Research outputs Discover Finnish research in Research.fi. Research.fi (External link) Data Find Finnish research datasets in the Fairdata Etsin service. Etsin (External link) Tools Browse our extensive applications catalogue. Applications catalogue (External link) CSC - IT Center for Science Ltd. Contact information P.O. Box 405, 02101 Espoo tel. (09) 457 2001 (switchboard) Service desk Open weekdays from 8:30 to 16:00 tel. (09) 457 2821 servicedesk@csc.fi Detailed contact information (External link) Visiting addresses Espoo Life Science Center Keilaniemi Keilaranta 14, 02150 Espoo Directions (External link) Datacenter Kajaani Renforsin Ranta business area Tehdaskatu 15, 87100 Kajaani Directions (External link) Visit other CSC sites User guides – docs.csc.fi (External link) User portal – my.csc.fi (External link) Main website – csc.fi (External link) Follow us LinkedIn (External link) Instagram (External link) Facebook (External link) YouTube (External link) Subscribe to newsletters (External link) Copyright CSC – IT Center for Science Ltd. Service breaks Security & privacy Accessibility Search for: ×",
+  "links": [
+    {
+      "href": "https://research.csc.fi",
+      "text": "Services for research",
+      "visible": true
+    },
+    {
+      "href": "https://docs.csc.fi/",
+      "text": "Docs CSC - User guides (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://my.csc.fi/",
+      "text": "MyCSC - User portal (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://www.csc.fi/",
+      "text": "csc.fi - Company site (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi",
+      "text": "Services for research",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/support",
+      "text": "Service Desk",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/support",
+      "text": "Service Desk",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/",
+      "text": "Home",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/how-to-start/",
+      "text": "How to start",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/service",
+      "text": "Service catalog",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/service-break",
+      "text": "Service breaks",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/resources/",
+      "text": "Resource allocation",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/resources/applying-for-resources/",
+      "text": "Applying for resources",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+      "text": "Extremely large resources",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/resources/quotas/",
+      "text": "Managing service quotas",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/high-performance-computing/",
+      "text": "High-performance computing",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/data-management/",
+      "text": "Research data management",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/data-management/data-management-planning/",
+      "text": "Plan data management",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/data-management/storage/",
+      "text": "Store & share data",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/data-management/publish-and-discover/",
+      "text": "Publish & discover data",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/cloud-computing/",
+      "text": "Cloud services",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sensitive-data/",
+      "text": "Services for sensitive data",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/",
+      "text": "Compare SD Services and ePouta",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/",
+      "text": "Sensitive Data (SD) Services for Research",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/",
+      "text": "Overview for IT personnel and organizations",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/",
+      "text": "Quick access page",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sensitive-data/definition-of-sensitive-data/",
+      "text": "Definition of sensitive data",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sensitive-data/managing-sensitive-data/",
+      "text": "Managing sensitive data",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/",
+      "text": "Services for science & methods",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/ai-and-data-analytics/",
+      "text": "AI and data analytics",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/biosciences/",
+      "text": "Biosciences",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/chemistry/",
+      "text": "Chemistry",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/code-optimization/",
+      "text": "Code optimization",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/computational-engineering/",
+      "text": "Computational engineering",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/geoinformatics/",
+      "text": "Geoinformatics",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/geoinformatics/geocomputing/",
+      "text": "Geocomputing",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/mathematics-and-statistics/",
+      "text": "Mathematics, statistics and technical computing",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/physics/",
+      "text": "Physics",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/quantum-computing/",
+      "text": "Quantum computing",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/sciences/social-sciences-and-humanities/",
+      "text": "Social sciences and humanities",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/educational-use/",
+      "text": "Services for education",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/commercial-use/",
+      "text": "Services for commercial use",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/commercial-use/pricing/",
+      "text": "Purchasing CSC’s services",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/use-case",
+      "text": "Use cases",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/blogs",
+      "text": "Blogs",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/training",
+      "text": "Training calendar",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/training-portfolio/",
+      "text": "Training portfolio",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/free-of-charge-use/",
+      "text": "Free-of-charge use",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/terms-of-use/",
+      "text": "Terms of use",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+      "text": "Prerequisites and responsibilities for a CSC project manager",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+      "text": "Personal Data Processing Agreement",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+      "text": "Export restrictions and sanctions",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/policies/",
+      "text": "Policies",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/policies/dmpol/",
+      "text": "CSC research infrastructure data management policy",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/policies/pid-policy/",
+      "text": "Persistent identifier (PID) policy",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/security/",
+      "text": "Security & privacy",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/security/data-protection-levels/",
+      "text": "Protection levels",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/",
+      "text": "Privacy notice for remote identification service",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/",
+      "text": "Home",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "text": "EOSC Finland Pilot Node",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/dataset-as-a-service/",
+      "text": "Dataset-as-a-Service",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/eosc-the-finnish-candidate-node-relevance-for-service-providers-and-research-performing-organisation/",
+      "text": "EOSC Finland - Tools for service providers and data managers",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/eosc-the-finnish-candidate-node-relevance-for-end-users/",
+      "text": "EOSC Finland for researchers",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/",
+      "text": "More about the EOSC Federation and the Finnish Pilot Node",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/myaccessid-a-new-way-to-access-csc-services/",
+      "text": "MyAccessID - a new way to access CSC services",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/eosc-services/",
+      "text": "Service catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/how-to-start/",
+      "text": "How to start",
+      "visible": true
+    },
+    {
+      "href": "https://docs.csc.fi/",
+      "text": "User guides (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://www.research.fi",
+      "text": "Research.fi (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://etsin.fairdata.fi/",
+      "text": "Etsin (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://docs.csc.fi/apps/",
+      "text": "Applications catalogue (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://csc.fi/en/about-us/contact-information/",
+      "text": "Detailed contact information (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://csc.fi/en/about-us/contact-information/#espoo-directions-and-accessibility",
+      "text": "Directions (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://csc.fi/en/about-us/contact-information/#kajaani-directions-and-accessibility",
+      "text": "Directions (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://docs.csc.fi",
+      "text": "User guides – docs.csc.fi (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://my.csc.fi",
+      "text": "User portal – my.csc.fi (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://csc.fi",
+      "text": "Main website – csc.fi (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://www.linkedin.com/company/csc---it-center-for-science/",
+      "text": "LinkedIn (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://www.instagram.com/CSCfi/",
+      "text": "Instagram (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://www.facebook.com/CSCfi/",
+      "text": "Facebook (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://www.youtube.com/c/CSCfi",
+      "text": "YouTube (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://csc.fi/en/subscribe-to-newsletters/",
+      "text": "Subscribe to newsletters (External link)",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/service-break",
+      "text": "Service breaks",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/security",
+      "text": "Security & privacy",
+      "visible": true
+    },
+    {
+      "href": "https://research.csc.fi/accessibility",
+      "text": "Accessibility",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/csc-logo.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-7 md:h-11 w-auto",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/search.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "size-6 inline mr-1",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/headphones.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/search-blue.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "size-6 inline mr-1",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/headphones-blue.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/link.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "pointer-events-none px-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/uploads/2025/09/EOSCNode_Finland-1-1-scaled.jpg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "wp-image-4088",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/arrow-up.svg",
+      "alt": "Scroll to top",
+      "aria_label": "",
+      "title": "",
+      "css_class": "size-8",
+      "inline_svg": false
+    },
+    {
+      "src": "https://research.csc.fi/app/themes/research-csc-fi/gfx/icons/search.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "size-6 inline mr-1",
+      "inline_svg": false
+    }
+  ],
+  "controls": [
+    {
+      "text": "Toggle navigation",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Services",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Resource allocation",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Applying for resources",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Research data management",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Services for sensitive data",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Sensitive Data (SD) Services for Research",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Services for science & methods",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Geoinformatics",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Services for commercial use",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Training",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Terms & policies",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Terms of use",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Policies",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Toggle submenu Security & privacy",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "×",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Skip to content",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/#content",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for research",
+      "href": "https://research.csc.fi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Docs CSC - User guides (External link)",
+      "href": "https://docs.csc.fi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "MyCSC - User portal (External link)",
+      "href": "https://my.csc.fi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "csc.fi - Company site (External link)",
+      "href": "https://www.csc.fi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for research",
+      "href": "https://research.csc.fi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service Desk",
+      "href": "https://research.csc.fi/support",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service Desk",
+      "href": "https://research.csc.fi/support",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Home",
+      "href": "https://research.csc.fi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "How to start",
+      "href": "https://research.csc.fi/how-to-start/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service catalog",
+      "href": "https://research.csc.fi/service",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service breaks",
+      "href": "https://research.csc.fi/service-break",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resource allocation",
+      "href": "https://research.csc.fi/resources/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Applying for resources",
+      "href": "https://research.csc.fi/resources/applying-for-resources/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Extremely large resources",
+      "href": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Managing service quotas",
+      "href": "https://research.csc.fi/resources/quotas/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "High-performance computing",
+      "href": "https://research.csc.fi/high-performance-computing/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Research data management",
+      "href": "https://research.csc.fi/data-management/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Plan data management",
+      "href": "https://research.csc.fi/data-management/data-management-planning/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Store & share data",
+      "href": "https://research.csc.fi/data-management/storage/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Publish & discover data",
+      "href": "https://research.csc.fi/data-management/publish-and-discover/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cloud services",
+      "href": "https://research.csc.fi/cloud-computing/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for sensitive data",
+      "href": "https://research.csc.fi/sensitive-data/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Compare SD Services and ePouta",
+      "href": "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Sensitive Data (SD) Services for Research",
+      "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Overview for IT personnel and organizations",
+      "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Quick access page",
+      "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Definition of sensitive data",
+      "href": "https://research.csc.fi/sensitive-data/definition-of-sensitive-data/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Managing sensitive data",
+      "href": "https://research.csc.fi/sensitive-data/managing-sensitive-data/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for science & methods",
+      "href": "https://research.csc.fi/sciences/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "AI and data analytics",
+      "href": "https://research.csc.fi/sciences/ai-and-data-analytics/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Biosciences",
+      "href": "https://research.csc.fi/sciences/biosciences/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Chemistry",
+      "href": "https://research.csc.fi/sciences/chemistry/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Code optimization",
+      "href": "https://research.csc.fi/sciences/code-optimization/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Computational engineering",
+      "href": "https://research.csc.fi/sciences/computational-engineering/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Geoinformatics",
+      "href": "https://research.csc.fi/sciences/geoinformatics/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Geocomputing",
+      "href": "https://research.csc.fi/sciences/geoinformatics/geocomputing/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Mathematics, statistics and technical computing",
+      "href": "https://research.csc.fi/sciences/mathematics-and-statistics/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Physics",
+      "href": "https://research.csc.fi/sciences/physics/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Quantum computing",
+      "href": "https://research.csc.fi/sciences/quantum-computing/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Social sciences and humanities",
+      "href": "https://research.csc.fi/sciences/social-sciences-and-humanities/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for education",
+      "href": "https://research.csc.fi/educational-use/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services for commercial use",
+      "href": "https://research.csc.fi/commercial-use/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Purchasing CSC’s services",
+      "href": "https://research.csc.fi/commercial-use/pricing/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Use cases",
+      "href": "https://research.csc.fi/use-case",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Blogs",
+      "href": "https://research.csc.fi/blogs",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training calendar",
+      "href": "https://research.csc.fi/training",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training portfolio",
+      "href": "https://research.csc.fi/training-portfolio/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Terms & policies",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Free-of-charge use",
+      "href": "https://research.csc.fi/free-of-charge-use/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Terms of use",
+      "href": "https://research.csc.fi/terms-of-use/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Prerequisites and responsibilities for a CSC project manager",
+      "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Personal Data Processing Agreement",
+      "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Export restrictions and sanctions",
+      "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Policies",
+      "href": "https://research.csc.fi/policies/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CSC research infrastructure data management policy",
+      "href": "https://research.csc.fi/policies/dmpol/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Persistent identifier (PID) policy",
+      "href": "https://research.csc.fi/policies/pid-policy/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Security & privacy",
+      "href": "https://research.csc.fi/security/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Protection levels",
+      "href": "https://research.csc.fi/security/data-protection-levels/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy notice for remote identification service",
+      "href": "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Home",
+      "href": "https://research.csc.fi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Finland Pilot Node",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Dataset-as-a-Service",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/dataset-as-a-service/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Finland - Tools for service providers and data managers",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/eosc-the-finnish-candidate-node-relevance-for-service-providers-and-research-performing-organisation/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Finland for researchers",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/eosc-the-finnish-candidate-node-relevance-for-end-users/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "More about the EOSC Federation and the Finnish Pilot Node",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "MyAccessID - a new way to access CSC services",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/myaccessid-a-new-way-to-access-csc-services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service catalogue",
+      "href": "https://research.csc.fi/eosc-services/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "How to start",
+      "href": "https://research.csc.fi/how-to-start/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User guides (External link)",
+      "href": "https://docs.csc.fi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Research.fi (External link)",
+      "href": "https://www.research.fi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Etsin (External link)",
+      "href": "https://etsin.fairdata.fi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Applications catalogue (External link)",
+      "href": "https://docs.csc.fi/apps/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Detailed contact information (External link)",
+      "href": "https://csc.fi/en/about-us/contact-information/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Directions (External link)",
+      "href": "https://csc.fi/en/about-us/contact-information/#espoo-directions-and-accessibility",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Directions (External link)",
+      "href": "https://csc.fi/en/about-us/contact-information/#kajaani-directions-and-accessibility",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User guides – docs.csc.fi (External link)",
+      "href": "https://docs.csc.fi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User portal – my.csc.fi (External link)",
+      "href": "https://my.csc.fi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Main website – csc.fi (External link)",
+      "href": "https://csc.fi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "LinkedIn (External link)",
+      "href": "https://www.linkedin.com/company/csc---it-center-for-science/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Instagram (External link)",
+      "href": "https://www.instagram.com/CSCfi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Facebook (External link)",
+      "href": "https://www.facebook.com/CSCfi/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "YouTube (External link)",
+      "href": "https://www.youtube.com/c/CSCfi",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Subscribe to newsletters (External link)",
+      "href": "https://csc.fi/en/subscribe-to-newsletters/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service breaks",
+      "href": "https://research.csc.fi/service-break",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Security & privacy",
+      "href": "https://research.csc.fi/security",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Accessibility",
+      "href": "https://research.csc.fi/accessibility",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Search",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "input",
+      "visible": true
+    },
+    {
+      "text": "Search",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
+      "tag": "input",
+      "visible": true
+    }
+  ],
+  "meta_description": "",
+  "error": "",
+  "screenshot": "eosc-fi.png"
+}

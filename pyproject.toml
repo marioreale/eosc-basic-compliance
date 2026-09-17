@@ -1,0 +1,44 @@
+[project]
+name = "eosc-basic-compliance"
+version = "0.1.0"
+description = "Checks EOSC Node Landing Pages against the Node Landing Page Verification Checklist v3.0"
+requires-python = ">=3.12"
+dependencies = [
+    "playwright>=1.48",
+    "httpx>=0.27",
+    "selectolax>=0.3.21",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+    "lingua-language-detector>=2.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/basic_check"]
+
+[project.scripts]
+basic-check = "basic_check.cli:app"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "tests"]
+
+[tool.ruff]
+line-length = 100
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "SIM", "UP"]
+[tool.ruff.lint.per-file-ignores]
+# typer's API puts calls in argument defaults; that is how it is meant to be used.
+"src/basic_check/cli.py" = ["B008"]
+# Verdict messages and reviewer actions are prose meant to be read by a human in
+# a report. Wrapping them across lines to satisfy a column limit makes them
+# harder to grep and harder to keep consistent with the checklist wording.
+"src/basic_check/checks.py" = ["E501"]
+"src/basic_check/report.py" = ["E501"]
+"tests/*" = ["E501"]

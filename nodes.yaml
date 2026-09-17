@@ -1,0 +1,49 @@
+# The nine Node Landing Pages under assessment.
+#
+# `url` must be the URL registered in the EOSC EU Node Contributors Dashboard
+# ("Website address", section 1.2 field 6), because that registered URL is what
+# the checklist defines as the Node Landing Page. The URLs below were supplied
+# for assessment; where one differs from the registered value, the registered
+# value wins and should be corrected here.
+#
+# `eosc_page` is the node's dedicated entry on eosc.eu, which checklist point 4
+# requires the landing page to link to. These slugs were read from the live
+# index at eosc.eu/building-the-eosc-federation/, so a point 4 failure can name
+# the exact URL that is missing instead of just reporting an absence.
+nodes:
+  - id: bbmri-eric
+    name: BBMRI-ERIC
+    url: https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
+  - id: eosc-dto
+    name: EOSC DTO (D4Science)
+    url: https://eosc-dto.d4science.org/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean/
+  - id: data-terra
+    name: Data Terra
+    url: https://www.data-terra.org/eosc/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra/
+  - id: eosc-fi
+    name: EOSC Finland
+    url: https://eosc.fi/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-finland/
+  - id: panosc
+    name: PaNOSC
+    url: https://eosc.panosc.eu/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/
+  - id: eudat
+    name: EUDAT
+    url: https://portal.eudat.eu/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-eudat/
+  - id: egi
+    name: EGI
+    url: https://www.egi.eu/egi-node
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-egi/
+  - id: geant
+    name: GÉANT
+    url: https://geant.org/geant-eosc-node/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-geant/
+  - id: ebrains
+    name: EBRAINS
+    url: https://ebrains.eu/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/
