@@ -3,11 +3,18 @@
 Checks EOSC Node Landing Pages against the **Node Landing Page Verification
 Checklist v3.0** (15 September 2026). One result per checklist point, per node.
 
-**One HTTP request per node. No crawling.** Each landing page is loaded once in a
-headless browser, evidence is saved to disk, and every check reads only that
-saved evidence. Nothing else on the node's site is touched.
+**Deliberately light on the nodes' websites.** Each landing page is loaded once in
+a headless browser. The tool then follows **at most one level** of links, and only
+links that can actually settle a checklist point — a policy, a contact page, an
+about page. Everything else is left alone. Across all nine nodes that is **25
+extra requests in total**, roughly three per node, spaced 1.2 s apart, with
+`robots.txt` honoured per host. Evidence is saved to disk and every check reads
+only that saved evidence, so re-running the rules costs nothing.
+
+Set `--depth 0` for the strict one-request-per-node behaviour.
 
 👉 **[Latest results](results/results.md)** · [browsable HTML report](results/index.html)
+· [checklist v3.0 explained](results/checklist-v3.0.html)
 (download and open locally, or use the GitHub Pages link if enabled)
 
 ## What it found
@@ -16,15 +23,15 @@ Nine landing pages, 17 September 2026:
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| BBMRI-ERIC | PASS | review | review | review | PASS | review | review | PASS | PASS | PASS |
-| EOSC DTO (D4Science) | PASS | review | review | review | review | review | PASS | review | review | PASS |
-| Data Terra | PASS | review | review | review | **FAIL** | review | review | review | review | PASS |
-| EOSC Finland | PASS | review | review | review | **FAIL** | review | PASS | review | PASS | PASS |
-| PaNOSC | PASS | review | review | review | **FAIL** | review | review | review | review | PASS |
-| EUDAT | PASS | review | review | review | review | review | PASS | review | review | PASS |
-| EGI | PASS | review | review | review | **FAIL** | review | PASS | review | review | PASS |
-| GÉANT | PASS | review | review | review | **FAIL** | review | review | review | review | PASS |
-| EBRAINS | PASS | review | review | review | **FAIL** | review | review | review | PASS | PASS |
+| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
@@ -36,6 +43,34 @@ the exact URL that is missing, so the fix is a one-line edit.
 Point 4 is also the checklist's sharpest point: it names a specific page and
 excludes two specific near-misses, so it can be decided mechanically. Most of the
 rest cannot be.
+
+### What each column means
+
+| Column | The question it answers | Can a tool decide it? |
+|---|---|---|
+| [`1`](results/checklist-v3.0.html#p1) | Is the landing page served to an anonymous visitor, or behind an EOSC AAI login? | yes, by inspection |
+| [`1R`](results/checklist-v3.0.html#p1R) | Are the resources the page points to also public or behind EOSC AAI? | no, human judgement |
+| [`2`](results/checklist-v3.0.html#p2) | Does the page itself say what the node is and what it offers? | no, human judgement |
+| [`3`](results/checklist-v3.0.html#p3) | Does the page use the official Tripartite-approved node name? | partly |
+| [`4`](results/checklist-v3.0.html#p4) | Does the page link to this node's own page on eosc.eu? | yes, by inspection |
+| [`5a`](results/checklist-v3.0.html#p5a) | Does the page point to the policies governing its resources? | no, human judgement |
+| [`5b`](results/checklist-v3.0.html#p5b) | Is there an Acceptable Use Policy, and does it actually load? | partly |
+| [`5c`](results/checklist-v3.0.html#p5c) | Is there a User Access Policy, and does it actually load? | partly |
+| [`6`](results/checklist-v3.0.html#p6) | Can a user find a support or helpdesk route? | partly |
+| [`7`](results/checklist-v3.0.html#p7) | Is the page available in English? | yes, by inspection |
+
+Full requirement text for every point, quoted from the source document, is in
+**[checklist v3.0 explained](results/checklist-v3.0.html)** — generated from the same
+`checklist/v3.0.yaml` the checks read, so the explanation cannot drift from the rules.
+
+`1R` is not a numbered point in the source checklist. Point 1 has two sentences: the
+landing page must be public or behind EOSC AAI, and so must *"all resources pointed by
+the Node Landing Page, either directly or through links through intermediate pages"*.
+Those are different questions with different answers, so they are scored as separate
+columns. `1R` is always *review*: it quantifies over every resource reachable from the
+page, and whether a login is genuinely EOSC AAI compliant is settled during EEN
+enrolment, not by reading HTML. Splitting it out stops a node appearing to satisfy the
+whole of point 1 when only the page itself was checked.
 
 ## Why so much "review"
 
@@ -80,7 +115,10 @@ uv sync
 uv run playwright install chromium --with-deps
 
 uv run basic-check points            # the checklist, and what is decidable
-uv run basic-check collect           # one request per node -> results/evidence/
+uv run basic-check collect           # landing page + <=1 level of links -> results/evidence/
+uv run basic-check collect --depth 0 # landing pages only, one request per node
+uv run basic-check collect --max-children 4   # tighter cap (default 8 per node)
+uv run basic-check collect --only egi,geant   # a subset, for a gentle re-run
 uv run basic-check assess            # evidence -> results/{index.html,results.md,.csv,.json}
 uv run basic-check run               # collect + assess
 uv run basic-check show data-terra   # one node's results in the terminal
@@ -100,9 +138,19 @@ uv run basic-check assess --approved-names approved-names.txt
 
 ## Scope and limits
 
-- **One request per node, no link following.** Point 1R (resources behind the
-  landing page) and point 5 (per-resource policies) therefore cannot be settled
-  here; the tool lists the external hosts it saw as a reviewer work list.
+- **One level of links, not a crawl.** The tool never goes two levels deep and
+  never follows a link it cannot use. Point 1R still cannot be settled: it quantifies
+  over *every* resource reachable from the page, which one level does not cover.
+  What one level does buy is that a policy link is checked rather than believed —
+  a link labelled "Acceptable Use Policy" that 404s now **fails** point 5b instead
+  of passing on the strength of its own label.
+- **A block is not a finding.** A node that returns HTTP 403 to this tool is
+  reported as *review*, never as a failure. GÉANT served this tool HTTP 200 and
+  then 403 once crawling made a few more requests to the same host; nothing about
+  the site had changed, the tool had merely become more annoying. Turning that
+  into "not publicly accessible" would be the checker blaming a node for its own
+  request volume. Only 404/410 — a registered URL that does not resolve — fails
+  point 1.
 - **Logos** are detected from image markup. A logo delivered as a CSS background
   or an SVG sprite will be missed, so absence of logo markup is reported as *not
   proof of absence*.
@@ -116,12 +164,21 @@ uv run basic-check assess --approved-names approved-names.txt
 ## Tests
 
 ```bash
-uv run pytest -q          # 30 tests, ~0.1s, no network
+uv run pytest -q          # 53 tests, ~0.1s, no network
 uv run ruff check src tests
 ```
 
 The tests are hermetic — they construct page evidence directly, so the suite
 never touches a node's website.
+
+Three tests exist because of mistakes this tool actually made, and are worth
+reading as documentation of them:
+
+| Test | The mistake it prevents |
+|---|---|
+| `test_a_well_rendered_page_still_fails_when_the_link_is_genuinely_absent` | Reporting "no contact route of any kind was found" from a page that had not rendered. That describes the tool, not the node. Absence-based failures are now gated on the page having actually rendered — and this test stops that gate becoming a blanket excuse. |
+| `test_point1_does_not_fail_on_403_with_no_login_offered` | Asserted `FAIL` originally. Inverted after GÉANT returned 403 purely in response to this tool's own request volume. |
+| `test_every_link_a_check_can_use_is_a_link_the_crawler_will_follow` | The crawler looked for "acceptable use" while the check also accepted "terms of use", so links the checks relied on were never fetched. Four PASSes were weaker than they appeared. Nothing failed; the output was just quietly thinner than it claimed. |
 
 Two of them exist because probing found real bugs in this code:
 

@@ -2,7 +2,7 @@
   "node_id": "eosc-dto",
   "node_name": "EOSC DTO (D4Science)",
   "requested_url": "https://eosc-dto.d4science.org/",
-  "fetched_at": "2026-09-17T14:53:01+00:00",
+  "fetched_at": "2026-09-17T15:27:46+00:00",
   "final_url": "https://eosc-dto.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -140,7 +140,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1789492823642",
+      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1789413277991",
       "alt": "European-DTO Gateway",
       "aria_label": "",
       "title": "",
@@ -148,7 +148,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567588&t=1789547708570",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567588&t=1789605368198",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -156,7 +156,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1789547708572",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1789605368199",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -164,7 +164,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1789547708579",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1789605368203",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -436,5 +436,137 @@
   ],
   "meta_description": "",
   "error": "",
-  "screenshot": "eosc-dto.png"
+  "screenshot": "eosc-dto.png",
+  "crawl_depth": 1,
+  "children": [
+    {
+      "url": "https://eosc-dto.d4science.org/terms-of-use",
+      "selected_for": [
+        "5b"
+      ],
+      "link_text": "Terms of Use",
+      "http_status": 200,
+      "final_url": "https://eosc-dto.d4science.org/terms-of-use",
+      "title": "Terms of Use - D4Science Infrastructure Gateway",
+      "lang_attr": "en-US",
+      "main_text": "Terms of Use Defines the legal relationship between users and the D4Science infrastructure, including conditions of use, responsibilities, and limitations of liability. This is the final version 1.1 of the Terms of Use, which entered into force on 1 April 2026. Introduction These Terms of Use (“Terms”) define the conditions under which users may access and use the D4Science Infrastructure and the services provided through it. D4Science is a digital research infrastructure designed to support scientific communities by providing integrated environments where users can manage data, perform analyses, collaborate, and publish research results. These environments, known as Virtual Research Environments (VREs), enable distributed communities to work together using shared tools and resources. By accessing or using any component of the D4Science infrastructure, users acknowledge that they have read and understood these Terms and agree to comply with them. Users also acknowledge that the infrastructure operates within a broader governance framework composed of multiple policies, which collectively regulate its use. Purpose of the Infrastructure The D4Science infrastructure has been designed to support the full lifecycle of scientific research. It provides a set of integrated services that allow research communities to create, manage, analyse, and share knowledge in a collaborative digital environment. Through its Virtual Research Environments, D4Science enables: collaborative data analysis and interpretation management and sharing of research artefacts execution of computational workflows publication and discovery of research outputs The infrastructure promotes the principles of Open Science, encouraging transparency, reproducibility, and responsible sharing of scientific knowledge. Acknowledgement and Citation of D4Science D4Science is the result of sustained scientific and technological effort and is maintained as a shared research infrastructure. For this reason, users are strongly encouraged to acknowledge the use of the infrastructure in any scientific outputs produced with its support. Recommended citation M. Assante et al. (2019) Enacting Open Science by D4Science . Future Gener. Comput. Syst. 101: 555-563 https://doi.org/10.1016/j.future.2019.05.063 Additional guidance on how to cite D4Science, including references to specific services or Virtual Research Environments, is available at: https://www.d4science.org/how-cite Acknowledging the use of D4Science contributes to the visibility and sustainability of the infrastructure and supports its continued development. A suggested acknowledgement statement is: “This work has been enabled by the D4Science infrastructure ( https://www.d4science.org - ROR: https://ror.org/027cvs066 ).” Infrastructure Operator The D4Science infrastructure is operated by the Consiglio Nazionale delle Ricerche (CNR) through the Institute of Information Science and Technologies “A. Faedo” (ISTI) located in Pisa, Italy. The infrastructure is managed by a dedicated operational team, the D4Science Working Group, which is responsible for its design, operation, maintenance, and continuous evolution. The governance of the infrastructure includes an Executive Directorate that provides strategic direction and ensures alignment with scientific and institutional objectives. Definitions For clarity, the following terms are used throughout these Terms and the associated policy framework. D4Science Infrastructure: A distributed digital research infrastructure providing services, computing resources, and collaborative environments to scientific communities. Gateway: A web-based access point through which users authenticate and access infrastructure services. Virtual Research Environment (VRE): A customizable collaborative environment created for a specific research community or project. A VRE acts as a logical security context in which access to services and resources is controlled. Service: Any capability provided by the infrastructure, including data management, computational, collaboration, and API-based services. Research Artefact: Any digital resource used or produced within the infrastructure to support research activities, including datasets, models, workflows, software, scripts, notebooks, and applications. Scope of the Infrastructure The D4Science infrastructure provides a wide range of services supporting research activities, including data management, collaborative tools, computational platforms, and programmatic access through APIs. The infrastructure operates on a distributed model and may integrate resources hosted across: infrastructure managed by CNR infrastructure provided by GARR approved cloud providers As part of its evolution, the infrastructure periodically updates its services. For example, the DataMiner platform has been replaced by the Cloud Computing Platform (CCP), with legacy support planned until October 2026. Relationship with Other Policies These Terms are part of the D4Science Policy Framework, which includes several complementary documents addressing different aspects of infrastructure governance. These include: Access and Acceptable Use Policy Privacy and Data Protection Policy Service Policy Security and Incident Response Policy Data and Research Artefact Governance and Licensing Policy By accepting these Terms, users acknowledge that these policies apply to their use of the infrastructure. Eligibility for Access Access to the D4Science infrastructure is intended for individuals and organizations engaged in research, education, or related activities. Users typically access the infrastructure through a Gateway and may join one or more Virtual Research Environments, depending on their role and the policies defined by each community. Each VRE may define its own access rules and participation criteria. User Responsibilities Users play a key role in ensuring the proper use of the infrastructure. They are expected to use the services responsibly and in compliance with applicable laws and regulations. In particular, users must: ensure that they have the right to use and share any research artefacts they upload respect intellectual property and licensing conditions avoid actions that could compromise the security or stability of the infrastructure Responsibility: Users are responsible for maintaining the confidentiality of their credentials and for all activities performed through their accounts. Intellectual Property Users retain ownership of the research artefacts they upload, create, or manage within the infrastructure. By using the infrastructure, users grant the operator a non-exclusive licence to process such artefacts solely for the purpose of providing the services. The infrastructure operator does not claim ownership of user-generated content. Security and Monitoring The D4Science infrastructure implements security measures designed to protect its systems and users. These measures include authentication controls, monitoring of system activity, and logging of relevant events. Monitoring activities are carried out in accordance with applicable laws and institutional policies. The security framework of the infrastructure is aligned with recognized best practices and with the principles introduced by the NIS2 Directive. Service Availability The infrastructure operator makes reasonable efforts to ensure that services are available and reliable. However, services are provided on a best-effort basis, and availability may vary depending on operational conditions. Typical availability targets exceed 99.5%, although temporary interruptions may occur due to maintenance or unforeseen issues. Changes to Services D4Science evolves continuously to meet the needs of research communities and to adapt to technological and regulatory changes. Services may be updated, replaced, or discontinued over time. When possible, users will be informed in advance of significant changes affecting the services they use. Limitation of Liability The infrastructure is provided without guarantees regarding uninterrupted availability or the accuracy of results produced through its use. The operator is not responsible for: loss of data, service interruptions, inaccuracies in research artefacts, or results generated through computational services. Users remain responsible for validating their results. Termination of Access and Governing Law Access to the infrastructure may be suspended or terminated in cases such as: violation of applicable policies, security risks, misuse of services, or prolonged inactivity. Such measures are taken to protect the integrity of the infrastructure and its users. These Terms are governed by the laws of Italy. Policy Framework This document forms part of the D4Science Policy Framework .",
+      "full_text": "Terms of Use - D4Science Infrastructure Gateway We value your privacy This website uses cookies that help the website to function and also to track how you interact with our website. But for us to provide the best user experience, enable the specific cookies from Settings, and click on Accept. Read More Customise Reject All Accept All Powered by Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. Cookie JSESSIONID Duration session Description New Relic uses this cookie to store a session identifier so that New Relic can monitor session counts for an application. Cookie COOKIE_SUPPORT Duration 1 year 1 month 4 days Description This cookie is set by the Liferay. This cookie is used for verifying whether the visitor browser support cookies. Cookie __cf_bm Duration 1 hour Description This cookie, set by Cloudflare, is used to support Cloudflare Bot Management. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. Cookie _ga_* Duration 1 year 1 month 4 days Description Google Analytics sets this cookie to store and count page views. Cookie _ga Duration 1 year 1 month 4 days Description Google Analytics sets this cookie to calculate visitor, session and campaign data and track site usage for the site's analytics report. The cookie stores information anonymously and assigns a randomly generated number to recognise unique visitors. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. Cookie GUEST_LANGUAGE_ID Duration 1 year 1 month 4 days Description This cookie is used to store the visitors prefered language ID. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Uncategorised Other uncategorised cookies are those that are being analysed and have not been classified into a category as yet. Cookie LFR_SESSION_STATE_20158 Duration session Description No description available. Cookie ckan_hide_header Duration session Description Description is currently not available. Cookie SERVER_VALIDATED Duration 1 day Description Description is currently not available. Cookie ckan Duration 1 year 1 month 4 days Description Description is currently not available. Reject All Save My Preferences Accept All Powered by Skip to Content Home Virtual Labs Catalogue Catalogue Service Catalogue Sign In Terms of Use European-DTO Gateway / Terms of Use / Terms of Use Defines the legal relationship between users and the D4Science infrastructure, including conditions of use, responsibilities, and limitations of liability. This is the final version 1.1 of the Terms of Use, which entered into force on 1 April 2026. Introduction These Terms of Use (“Terms”) define the conditions under which users may access and use the D4Science Infrastructure and the services provided through it. D4Science is a digital research infrastructure designed to support scientific communities by providing integrated environments where users can manage data, perform analyses, collaborate, and publish research results. These environments, known as Virtual Research Environments (VREs), enable distributed communities to work together using shared tools and resources. By accessing or using any component of the D4Science infrastructure, users acknowledge that they have read and understood these Terms and agree to comply with them. Users also acknowledge that the infrastructure operates within a broader governance framework composed of multiple policies, which collectively regulate its use. Purpose of the Infrastructure The D4Science infrastructure has been designed to support the full lifecycle of scientific research. It provides a set of integrated services that allow research communities to create, manage, analyse, and share knowledge in a collaborative digital environment. Through its Virtual Research Environments, D4Science enables: collaborative data analysis and interpretation management and sharing of research artefacts execution of computational workflows publication and discovery of research outputs The infrastructure promotes the principles of Open Science, encouraging transparency, reproducibility, and responsible sharing of scientific knowledge. Acknowledgement and Citation of D4Science D4Science is the result of sustained scientific and technological effort and is maintained as a shared research infrastructure. For this reason, users are strongly encouraged to acknowledge the use of the infrastructure in any scientific outputs produced with its support. Recommended citation M. Assante et al. (2019) Enacting Open Science by D4Science . Future Gener. Comput. Syst. 101: 555-563 https://doi.org/10.1016/j.future.2019.05.063 Additional guidance on how to cite D4Science, including references to specific services or Virtual Research Environments, is available at: https://www.d4science.org/how-cite Acknowledging the use of D4Science contributes to the visibility and sustainability of the infrastructure and supports its continued development. A suggested acknowledgement statement is: “This work has been enabled by the D4Science infrastructure ( https://www.d4science.org - ROR: https://ror.org/027cvs066 ).” Infrastructure Operator The D4Science infrastructure is operated by the Consiglio Nazionale delle Ricerche (CNR) through the Institute of Information Science and Technologies “A. Faedo” (ISTI) located in Pisa, Italy. The infrastructure is managed by a dedicated operational team, the D4Science Working Group, which is responsible for its design, operation, maintenance, and continuous evolution. The governance of the infrastructure includes an Executive Directorate that provides strategic direction and ensures alignment with scientific and institutional objectives. Definitions For clarity, the following terms are used throughout these Terms and the associated policy framework. D4Science Infrastructure: A distributed digital research infrastructure providing services, computing resources, and collaborative environments to scientific communities. Gateway: A web-based access point through which users authenticate and access infrastructure services. Virtual Research Environment (VRE): A customizable collaborative environment created for a specific research community or project. A VRE acts as a logical security context in which access to services and resources is controlled. Service: Any capability provided by the infrastructure, including data management, computational, collaboration, and API-based services. Research Artefact: Any digital resource used or produced within the infrastructure to support research activities, including datasets, models, workflows, software, scripts, notebooks, and applications. Scope of the Infrastructure The D4Science infrastructure provides a wide range of services supporting research activities, including data management, collaborative tools, computational platforms, and programmatic access through APIs. The infrastructure operates on a distributed model and may integrate resources hosted across: infrastructure managed by CNR infrastructure provided by GARR approved cloud providers As part of its evolution, the infrastructure periodically updates its services. For example, the DataMiner platform has been replaced by the Cloud Computing Platform (CCP), with legacy support planned until October 2026. Relationship with Other Policies These Terms are part of the D4Science Policy Framework, which includes several complementary documents addressing different aspects of infrastructure governance. These include: Access and Acceptable Use Policy Privacy and Data Protection Policy Service Policy Security and Incident Response Policy Data and Research Artefact Governance and Licensing Policy By accepting these Terms, users acknowledge that these policies apply to their use of the infrastructure. Eligibility for Access Access to the D4Science infrastructure is intended for individuals and organizations engaged in research, education, or related activities. Users typically access the infrastructure through a Gateway and may join one or more Virtual Research Environments, depending on their role and the policies defined by each community. Each VRE may define its own access rules and participation criteria. User Responsibilities Users play a key role in ensuring the proper use of the infrastructure. They are expected to use the services responsibly and in compliance with applicable laws and regulations. In particular, users must: ensure that they have the right to use and share any research artefacts they upload respect intellectual property and licensing conditions avoid actions that could compromise the security or stability of the infrastructure Responsibility: Users are responsible for maintaining the confidentiality of their credentials and for all activities performed through their accounts. Intellectual Property Users retain ownership of the research artefacts they upload, create, or manage within the infrastructure. By using the infrastructure, users grant the operator a non-exclusive licence to process such artefacts solely for the purpose of providing the services. The infrastructure operator does not claim ownership of user-generated content. Security and Monitoring The D4Science infrastructure implements security measures designed to protect its systems and users. These measures include authentication controls, monitoring of system activity, and logging of relevant events. Monitoring activities are carried out in accordance with applicable laws and institutional policies. The security framework of the infrastructure is aligned with recognized best practices and with the principles introduced by the NIS2 Directive. Service Availability The infrastructure operator makes reasonable efforts to ensure that services are available and reliable. However, services are provided on a best-effort basis, and availability may vary depending on operational conditions. Typical availability targets exceed 99.5%, although temporary interruptions may occur due to maintenance or unforeseen issues. Changes to Services D4Science evolves continuously to meet the needs of research communities and to adapt to technological and regulatory changes. Services may be updated, replaced, or discontinued over time. When possible, users will be informed in advance of significant changes affecting the services they use. Limitation of Liability The infrastructure is provided without guarantees regarding uninterrupted availability or the accuracy of results produced through its use. The operator is not responsible for: loss of data, service interruptions, inaccuracies in research artefacts, or results generated through computational services. Users remain responsible for validating their results. Termination of Access and Governing Law Access to the infrastructure may be suspended or terminated in cases such as: violation of applicable policies, security risks, misuse of services, or prolonged inactivity. Such measures are taken to protect the integrity of the infrastructure and its users. These Terms are governed by the laws of Italy. Policy Framework This document forms part of the D4Science Policy Framework . Terms of Use Cookies Policy Privacy Policy Powered by The EOSC-Marine project has received funding from the European Union’s Horizon Europe research and innovation programme under grant agreement No 101292903. The views and opinions expressed in this website are the sole responsibility of the author and do not necessarily reflect the views of the European Commission.",
+      "links": [
+        {
+          "href": "https://eosc-dto.d4science.org/cookie-policy",
+          "text": "Read More",
+          "visible": true
+        },
+        {
+          "href": "https://www.cookieyes.com/product/cookie-consent/?ref=cypbcyb&utm_source=cookie-banner&utm_medium=fl-branding",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.cookieyes.com/product/cookie-consent/?ref=cypbcyb&utm_source=cookie-banner&utm_medium=sl-branding",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org:443/terms-of-use?p_p_id=49&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_49_struts_action=%2Fmy_sites%2Fview&_49_groupId=566566491&_49_privateLayout=false",
+          "text": "European-DTO Gateway",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/home",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/explore",
+          "text": "Virtual Labs",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/catalogue",
+          "text": "Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud",
+          "text": "Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/c/portal/login?p_l_id=566567590",
+          "text": "Sign In",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org",
+          "text": "European-DTO Gateway",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/terms-of-use",
+          "text": "Terms of Use",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.1016/j.future.2019.05.063",
+          "text": "https://doi.org/10.1016/j.future.2019.05.063",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "https://www.d4science.org/how-cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org",
+          "text": "https://www.d4science.org",
+          "visible": true
+        },
+        {
+          "href": "https://ror.org/027cvs066",
+          "text": "https://ror.org/027cvs066",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "D4Science Policy Framework",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/terms-of-use",
+          "text": "Terms of Use",
+          "visible": true
+        },
+        {
+          "href": "https://eosc-dto.d4science.org/cookie-policy",
+          "text": "Cookies Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en",
+          "text": "HEU programme",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [],
+  "crawl_note": "depth 1: 20 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
 }

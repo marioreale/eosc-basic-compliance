@@ -19,6 +19,35 @@ VERDICT_STYLE = {
     "ERROR": ("error", "ERROR", "!"),
 }
 
+# GitHub renders Markdown through a sanitiser that strips style attributes and
+# CSS, so the HTML report's colours do not survive there. A coloured disc is the
+# only colour primitive that renders consistently in a Markdown table on GitHub,
+# so the Markdown and CSV outputs carry one alongside the word. The word is kept
+# because colour alone fails for colour-blind readers and in plain-text diffs.
+VERDICT_MD = {
+    "PASS": "🟢 PASS",
+    "FAIL": "🔴 **FAIL**",
+    "MANUAL_REVIEW": "🟠 review",
+    "ERROR": "🟣 ERROR",
+}
+
+# One line per checklist point, for readers who will not open the checklist PDF.
+# This is what the matrix columns mean in practice, as opposed to the formal
+# requirement text, which lives in checklist/v3.0.yaml and the generated
+# checklist HTML page.
+COLUMN_GLOSS = {
+    "1": "Is the landing page itself reachable without logging in (or via EOSC AAI)?",
+    "1R": "Are the resources the landing page points to also public or behind EOSC AAI?",
+    "2": "Does the page state the node's scope, its intended users, and who runs it?",
+    "3": "Is the EOSC logo shown, together with the official Tripartite-approved node name?",
+    "4": "Does the page link to this node's own entry on eosc.eu (not the homepage or the index)?",
+    "5a": "Is there an English purpose description for the node's research resources?",
+    "5b": "Is an Acceptable Use Policy (AUP) reachable for those resources?",
+    "5c": "Is a User Access Policy (UAP) reachable for those resources?",
+    "6": "Is there a way to contact the node's helpdesk?",
+    "7": "Is the landing page in English?",
+}
+
 CSS = """
 :root{--bg:#fff;--fg:#1a1d21;--muted:#5b6470;--line:#e3e7ec;
 --pass:#0f7b3f;--pass-bg:#e7f5ec;--fail:#b3261e;--fail-bg:#fdeceb;
@@ -53,6 +82,16 @@ font-size:.72rem;font-weight:700;letter-spacing:.02em}
 .v.manual{color:var(--manual);background:var(--manual-bg)}
 .v.error{color:var(--error);background:var(--error-bg)}
 .legend{margin:.9rem 0 0;font-size:.84rem;color:var(--muted)}
+thead th.pt a{color:inherit;text-decoration:none;border-bottom:1px dotted #b9c2cd}
+thead th.pt a:hover{color:#0b5fa5;border-bottom-color:#0b5fa5}
+.cols{margin:1.6rem 0 0}
+.cols table{width:100%;border-collapse:collapse;font-size:.88rem}
+.cols th,.cols td{text-align:left;padding:.42rem .6rem;border-bottom:1px solid var(--line);
+vertical-align:top}
+.cols thead th{font-size:.74rem;text-transform:uppercase;letter-spacing:.04em;
+color:var(--muted);background:#fafbfc}
+.cols td.k{font:600 .82rem ui-monospace,SFMono-Regular,Menlo,monospace;white-space:nowrap}
+.cols td.d{white-space:nowrap;font-size:.8rem;color:var(--muted)}
 .legend .v{margin-right:.3rem}
 .legend div{margin:.3rem 0}
 details.node{border:1px solid var(--line);border-radius:7px;margin:.6rem 0;overflow:hidden}
@@ -93,8 +132,12 @@ def render_html(run: dict, out: Path) -> Path:
         for res in node["results"]:
             tally[res["verdict"]] = tally.get(res["verdict"], 0) + 1
 
+    version = run["checklist"].get("checklist_version", "3.0")
+    checklist_href = f"checklist-v{version}.html"
     head = "".join(
-        f'<th class="pt" title="{html.escape(titles.get(pid, ""))}">{html.escape(pid)}</th>'
+        f'<th class="pt" title="{html.escape(pid)} — {html.escape(titles.get(pid, ""))}: '
+        f'{html.escape(COLUMN_GLOSS.get(pid, ""))}">'
+        f'<a href="{checklist_href}#p{html.escape(pid)}">{html.escape(pid)}</a></th>'
         for pid in order
     )
     rows = []
@@ -149,6 +192,42 @@ def render_html(run: dict, out: Path) -> Path:
         if tally.get(v)
     )
 
+    dec_label = {
+        True: ("pass", "by inspection"),
+        "partial": ("manual", "partly"),
+        False: ("error", "human judgement"),
+    }
+    cols_rows = "".join(
+        f'<tr><td class="k"><a href="{checklist_href}#p{html.escape(p["id"])}">'
+        f'{html.escape(p["id"])}</a></td>'
+        f'<td>{html.escape(COLUMN_GLOSS.get(p["id"], p["title"]))}</td>'
+        f'<td class="d"><span class="v {dec_label.get(p.get("decidable"), ("manual", "?"))[0]}">'
+        f'{dec_label.get(p.get("decidable"), ("manual", "?"))[1]}</span></td></tr>'
+        for p in points
+    )
+
+    # Describe the requests actually made, computed from the evidence rather than
+    # written by hand. A hand-written "no links were followed" survived the commit
+    # that started following links, and a report that misdescribes its own method
+    # is worse than one that says less.
+    fetches = [n.get("fetch", {}) for n in run["nodes"]]
+    depths = {f.get("crawl_depth", 0) for f in fetches}
+    kids = sum(len(f.get("children", []) or []) for f in fetches)
+    if kids == 0:
+        crawl_sentence = (
+            "One page request per node was made and no links were followed, so every "
+            "verdict rests on the landing page alone."
+        )
+    else:
+        mixed = "" if depths == {1} else " (some nodes were collected at depth 0)"
+        crawl_sentence = (
+            f"{len(run['nodes'])} landing pages were requested, plus {kids} "
+            f"checklist-relevant link{'s' if kids != 1 else ''} one level down "
+            f"({kids / max(len(run['nodes']), 1):.1f} per node on average){mixed}. "
+            "Links were followed only where the target could settle a point, so a "
+            "policy link is verified rather than taken on the strength of its label."
+        )
+
     auto = [pid for pid, d in decidable.items() if d is True]
     partial = [pid for pid, d in decidable.items() if d == "partial"]
     human = [pid for pid, d in decidable.items() if d is False]
@@ -161,7 +240,7 @@ def render_html(run: dict, out: Path) -> Path:
             (
                 "MANUAL_REVIEW",
                 "A human must decide. Either the checklist point turns on a judgement, or it "
-                "quantifies over things one page request cannot see. Evidence is attached.",
+                "quantifies over more than this tool collects. Evidence is attached.",
             ),
             ("ERROR", "The tool could not assess the page at all."),
         ]
@@ -181,13 +260,19 @@ run <code>{html.escape(run["run_id"])}</code> · {html.escape(run["generated_at"
 ({", ".join(auto)}), {len(partial)} only partly ({", ".join(partial)}), and
 {len(human)} require a human reading the page ({", ".join(human)}). Every
 <span class="v manual">REVIEW</span> below is a point this tool deliberately
-refuses to guess at. One page request per node was made; no links were followed.</div>
+refuses to guess at. {crawl_sentence}</div>
 
 <div class="counts">{chips}</div>
 
 <h2>Matrix</h2>
 <table class="matrix"><thead><tr><th>Node</th>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table>
 <div class="legend">{legend_rows}</div>
+
+<div class="cols"><table>
+<thead><tr><th>Column</th><th>The question this column answers</th><th>Can a tool decide it?</th></tr></thead>
+<tbody>{cols_rows}</tbody></table>
+<p class="legend">Full requirement text for every point, as written in the checklist:
+<a href="{checklist_href}">checklist v{html.escape(version)} explained</a>.</p></div>
 
 <h2>Per-node detail</h2>
 {"".join(blocks)}
@@ -211,6 +296,124 @@ sub-points. Evidence for every verdict is in <code>results/evidence/</code>.</p>
     return out
 
 
+CHECKLIST_CSS = """
+:root{--bg:#fff;--fg:#1a1d21;--muted:#5b6470;--line:#e3e7ec;--accent:#0b5fa5;
+--yes:#0f7b3f;--yes-bg:#e7f5ec;--part:#8a5a00;--part-bg:#fdf3e0;--no:#5b21b6;--no-bg:#f3ecfd;}
+*{box-sizing:border-box}
+body{margin:0;padding:2.5rem 2rem 4rem;background:var(--bg);color:var(--fg);
+font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto}
+h1{font-size:1.7rem;margin:0 0 .3rem;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 1.6rem;font-size:.92rem}
+h2{font-size:1.12rem;margin:2.2rem 0 .6rem;padding-bottom:.3rem;border-bottom:1px solid var(--line)}
+a{color:var(--accent)}
+.note{border:1px solid #cfe0f0;background:#f2f8fd;border-left:4px solid var(--accent);
+padding:.85rem 1rem;border-radius:0 5px 5px 0;margin:0 0 1.8rem;font-size:.93rem}
+.toc{margin:0 0 2rem;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.4rem}
+.toc a{display:inline-block;border:1px solid var(--line);border-radius:20px;
+padding:.2rem .7rem;text-decoration:none;font-size:.86rem;font-weight:600}
+.point{border:1px solid var(--line);border-radius:7px;margin:0 0 1.1rem;overflow:hidden}
+.point>.hd{background:#fafbfc;padding:.7rem .95rem;border-bottom:1px solid var(--line);
+display:flex;gap:.6rem;align-items:baseline;flex-wrap:wrap}
+.point>.hd .pid{font:600 .82rem ui-monospace,SFMono-Regular,Menlo,monospace;
+background:#eef1f5;border-radius:4px;padding:.12rem .45rem}
+.point>.hd .ti{font-weight:650}
+.point>.bd{padding:.85rem .95rem}
+.q{font-size:.95rem;margin:0 0 .8rem}
+.req{margin:0 0 .8rem;padding:.6rem .8rem;background:#fbfcfd;border-left:3px solid #c9d3de;
+border-radius:0 4px 4px 0;font-size:.92rem}
+.req b{display:block;font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;
+color:var(--muted);margin-bottom:.25rem}
+.dec{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.03em;
+border-radius:4px;padding:.16rem .5rem;text-transform:uppercase}
+.dec.yes{color:var(--yes);background:var(--yes-bg)}
+.dec.part{color:var(--part);background:var(--part-bg)}
+.dec.no{color:var(--no);background:var(--no-bg)}
+.why{margin:.7rem 0 0;font-size:.9rem;color:#3c4551}
+.why b{color:var(--fg)}
+.foot{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);
+color:var(--muted);font-size:.86rem}
+"""
+
+
+def render_checklist_html(checklist: dict, out: Path) -> Path:
+    """A standalone, readable page explaining checklist v3.0 and each column.
+
+    Generated from the same YAML the checks read, so the explanation cannot drift
+    away from the rules actually applied. A hand-written description of a
+    checklist sitting next to code that implements it differently is worse than
+    none, because it is trusted.
+    """
+    version = checklist.get("checklist_version", "?")
+    points = checklist["points"]
+    dec_meta = {
+        True: ("yes", "Decidable by inspection"),
+        "partial": ("part", "Partly decidable"),
+        False: ("no", "Needs human judgement"),
+    }
+
+    toc = "".join(
+        f'<li><a href="#p{html.escape(p["id"])}">{html.escape(p["id"])}</a></li>' for p in points
+    )
+
+    blocks = []
+    for p in points:
+        cls, label = dec_meta.get(p.get("decidable"), ("part", "Unknown"))
+        gloss = COLUMN_GLOSS.get(p["id"], "")
+        why = " ".join(p.get("decidable_note", "").split())
+        blocks.append(
+            f'<div class="point" id="p{html.escape(p["id"])}">'
+            f'<div class="hd"><span class="pid">{html.escape(p["id"])}</span>'
+            f'<span class="ti">{html.escape(p["title"])}</span>'
+            f'<span class="dec {cls}">{label}</span></div>'
+            f'<div class="bd">'
+            + (f'<p class="q"><b>In the results matrix, this column asks:</b> {html.escape(gloss)}</p>' if gloss else "")
+            + f'<div class="req"><b>Requirement, as written in the checklist</b>'
+            f'{html.escape(" ".join(p["requirement"].split()))}</div>'
+            + (f'<p class="why"><b>How this tool treats it, and why:</b> {html.escape(why)}</p>' if why else "")
+            + "</div></div>"
+        )
+
+    return _write(
+        out,
+        f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Node Landing Page Verification Checklist v{html.escape(version)} — explained</title>
+<style>{CHECKLIST_CSS}</style></head><body><div class="wrap">
+<h1>Node Landing Page Verification Checklist v{html.escape(version)}</h1>
+<p class="sub">Dated {html.escape(str(checklist.get("checklist_date", "")))} ·
+source document <code>{html.escape(str(checklist.get("source_document", "")))}</code> ·
+{len(points)} points · this page is generated from
+<code>checklist/v{html.escape(version)}.yaml</code></p>
+
+<div class="note">This page explains what each column of the results matrix means, quotes the
+requirement it comes from, and states plainly whether a script can settle it. Three of the
+{len(points)} points cannot be settled by a tool at all, and four only partly. Those are reported
+as <b>review</b> with the evidence attached rather than guessed at, because a confident wrong
+verdict about a named node costs more to retract than an honest &ldquo;a human must look&rdquo;.</div>
+
+<p><b>Jump to a point:</b></p>
+<ul class="toc">{toc}</ul>
+
+<h2>The points</h2>
+{"".join(blocks)}
+
+<div class="foot">The abbreviation <b>NLP</b> in the source checklist means <i>Node Landing
+Page</i>: the URL registered for the node in the EOSC EU Node Contributors Dashboard
+(section 1.2, field 6, &ldquo;Website address&rdquo;). Point <b>1R</b> is not a separate numbered
+point in the source document &mdash; it is the second sentence of point 1, which extends the same
+access requirement from the landing page to every resource the page points to. It is scored as its
+own column because it is a different question with a different answer.<br><br>
+Back to the <a href="index.html">results matrix</a>.</div>
+</div></body></html>""",
+    )
+
+
+def _write(out: Path, doc: str) -> Path:
+    out.write_text(doc, encoding="utf-8")
+    return out
+
+
 def render_csv(run: dict, out: Path) -> Path:
     with out.open("w", newline="", encoding="utf-8") as fh:
         writer = csv.writer(fh)
@@ -228,17 +431,26 @@ def render_csv(run: dict, out: Path) -> Path:
 def render_markdown(run: dict, out: Path) -> Path:
     points = run["checklist"]["points"]
     order = [p["id"] for p in points]
-    short = {"PASS": "PASS", "FAIL": "**FAIL**", "MANUAL_REVIEW": "review", "ERROR": "ERROR"}
+    short = VERDICT_MD
+    depths = {n.get("fetch", {}).get("crawl_depth", 0) for n in run["nodes"]}
+    followed = sum(len(n.get("fetch", {}).get("children", [])) for n in run["nodes"])
+    scope = (
+        f"one page request per node plus {followed} followed link(s) in total (depth 1)"
+        if max(depths, default=0) >= 1
+        else "one page request per node, no crawling"
+    )
 
     lines = [
         f"# EOSC Node Landing Page compliance — checklist v{run['checklist']['checklist_version']}",
         "",
-        f"Run `{run['run_id']}` · {run['generated_at']} · {len(run['nodes'])} nodes · "
-        "one page request per node, no crawling.",
+        f"Run `{run['run_id']}` · {run['generated_at']} · {len(run['nodes'])} nodes · {scope}.",
         "",
-        "> **This is not a compliance statement.** Points marked `review` are ones this tool "
+        "> **This is not a compliance statement.** Points marked 🟠 review are ones this tool "
         "refuses to guess at: they either turn on a judgement (\"clearly state\") or quantify "
-        "over things a single page request cannot see (\"all research resources\").",
+        "over things this tool does not enumerate (\"all research resources\").",
+        "",
+        "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
+        "🟠 review — a human must decide · 🟣 ERROR — could not be assessed",
         "",
         "| Node | " + " | ".join(order) + " |",
         "|---|" + "---|" * len(order),
@@ -248,7 +460,25 @@ def render_markdown(run: dict, out: Path) -> Path:
         cells = [short.get(by_id[p]["verdict"], "?") if p in by_id else "—" for p in order]
         lines.append(f"| {node['name']} | " + " | ".join(cells) + " |")
 
-    lines += ["", "## Points", ""]
+    lines += [
+        "",
+        "## What each column means",
+        "",
+        "Full requirement text and the reasoning behind each verdict: "
+        "[checklist v" + run["checklist"]["checklist_version"] + " explained]"
+        "(checklist-v" + run["checklist"]["checklist_version"] + ".html).",
+        "",
+        "| Column | Question it answers | Can a tool decide it? |",
+        "|---|---|---|",
+    ]
+    dec_label = {True: "yes, by inspection", "partial": "partly", False: "no, human judgement"}
+    for p in points:
+        gloss = COLUMN_GLOSS.get(p["id"], p["title"])
+        lines.append(
+            f"| **{p['id']}** | {gloss} | {dec_label.get(p.get('decidable'), '?')} |"
+        )
+
+    lines += ["", "## Points in full", ""]
     for p in points:
         dec = (
             "decidable by inspection"
@@ -258,6 +488,9 @@ def render_markdown(run: dict, out: Path) -> Path:
         lines.append(f"**{p['id']} — {p['title']}** ({dec})  ")
         lines.append(f"{' '.join(p['requirement'].split())}")
         lines.append("")
+        if p.get("decidable_note"):
+            lines.append(f"> {' '.join(p['decidable_note'].split())}")
+            lines.append("")
 
     lines += ["## Detail", ""]
     for node in run["nodes"]:
@@ -285,8 +518,11 @@ def write_all(run: dict, results_dir: Path) -> dict[str, Path]:
         "csv": results_dir / "results.csv",
         "md": results_dir / "results.md",
     }
+    version = run["checklist"].get("checklist_version", "3.0")
+    paths["checklist"] = results_dir / f"checklist-v{version}.html"
     paths["json"].write_text(json.dumps(run, indent=2, ensure_ascii=False), encoding="utf-8")
     render_html(run, paths["html"])
+    render_checklist_html(run["checklist"], paths["checklist"])
     render_csv(run, paths["csv"])
     render_markdown(run, paths["md"])
     return paths

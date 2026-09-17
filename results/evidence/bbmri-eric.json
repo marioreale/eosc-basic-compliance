@@ -2,7 +2,7 @@
   "node_id": "bbmri-eric",
   "node_name": "BBMRI-ERIC",
   "requested_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
-  "fetched_at": "2026-09-17T14:52:52+00:00",
+  "fetched_at": "2026-09-17T15:27:24+00:00",
   "final_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
   "http_status": 200,
   "redirect_chain": [],
@@ -524,7 +524,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://pixel.wp.com/g.gif?v=ext&blog=211837515&post=84204&tz=2&srv=www.bbmri-eric.eu&j=1%3A15.0.3&host=www.bbmri-eric.eu&ref=&fcp=2432&rand=0.5655158252734583",
+      "src": "https://pixel.wp.com/g.gif?v=ext&blog=211837515&post=84204&tz=2&srv=www.bbmri-eric.eu&j=1%3A15.0.3&host=www.bbmri-eric.eu&ref=&fcp=2132&rand=0.6625458227129677",
       "alt": "",
       "aria_label": "",
       "title": "",
@@ -1016,5 +1016,3078 @@
   ],
   "meta_description": "",
   "error": "",
-  "screenshot": "bbmri-eric.png"
+  "screenshot": "bbmri-eric.png",
+  "crawl_depth": 1,
+  "children": [
+    {
+      "url": "https://www.bbmri-eric.eu/services/access-policies/",
+      "selected_for": [
+        "5c"
+      ],
+      "link_text": "Access Policies",
+      "http_status": 200,
+      "final_url": "https://www.bbmri-eric.eu/services/access-policies/",
+      "title": "Access Policies - BBMRI-ERIC",
+      "lang_attr": "en-GB",
+      "main_text": "­ Access Policies - BBMRI-ERIC Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data Access Policies for the BBMRI-ERIC Directory BBMRI-ERIC Access Policy Here you can find the BBMRI-ERIC Policy for Access to and Sharing of Biological Samples and Data . This access policy presents three areas of guidance: ethical principles; governance procedures; and practical procedures for access. This policy is a binding document for BBMRI-ERIC itself, for BBMRI-ERIC Partner Biobanks, and for any requesters who are seeking access to samples/data from BBMRI-ERIC Partner Biobanks via BBMRI-ERIC. Access Policy for CRC-Cohort The Access Policy of BBMRI-ERIC applies also for access to the centrally collected data set of the CRC-Cohort , with the following exception: Step 3 of the Access Procedure in the case of the CRC-Cohort is handled directly between requester and BBMRI-ERIC. For controlling access to the data set, BBMRI-ERIC has an Access Committee (see Appendix I) comprising all the contributing partner biobanks, in order to ensure the due data release approvals are in place, particularly when releasing pseudonymous (personal) data. After the access is approved by the Access Committee, BBMRI-ERIC signs a DTA with the requester for the use of the data for the particular project. The DTA also transfers liability on the requester to ensure due data security measures when processing the data. Setup of Access Committee: The Access Committee is comprised of Data Manager of the CRC-Cohort, one appointed person from Common Service ELSI for the ethics check, and one medical expert on colorectal cancer nominated by BBMRI-ERIC. Operations of Access Committee and involvement of contributing partner biobanks: The Access Committee is expected to deliver the decision within 1 month of submitting the request, based on the following procedure: After receiving an access request (project proposal), the Data Manager checks whether the access request conforms with the formal requirements: (a) the identity of the requester is known and their institutional affiliation is provided, (b) the request contains project description. If the formal requirements are fulfilled, the medical expert assesses relevance of the project to the scope of CRC-Cohort. If the project is within the scope, Access Committee performs Ethics Check procedure (Appendix G) (either Expedite or Full, depending on whether sufficient previous ethics vote has been provided). If all the previous steps conclude successfully, Access Committee asks all the contributing partner biobanks for veto of the release. If only subset of the CRC-Cohort is requested, only those partner biobanks are contacted, who actually contributed the data specifically subject to the release. The biobanks will be given 14 days for submitting the veto (so that 1 month overall for providing the Access Committee decision is achievable). The Access Policy was created within ADOPT BBMRI-ERIC , a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. BBMRI-ERIC AAI Privacy Policy Here you can find the BBMRI-ERIC AAI Privacy Policy (v1.1, 2017-08-23) BBMRI-ERIC AAI is a common authentication and authorization infrastructure to services provided by BBMRI-ERIC, which facilitates access to the human biological samples and data. BBMRI-ERIC AAI performs authentication of BBMRI-ERIC users and delivers their attributes (such as group membership and other personal data) necessary for authorization decisions to be done by BBMRI-ERIC services relying on it. Data Protection Policy Here you can find the Data Protection Policy for the BBMRI-ERIC Colorectal Cancer Cohort (CRC‐Cohort) This document describes data protection measure implemented and is intended for the data protection authorities supervising contributing partner biobanks and data protection experts in ethics committees. Access Policies for the BBMRI-ERIC Directory Acceptable Use Policy of BBMRI-ERIC Services Here you can find the Acceptable Use Policy of BBMRI-ERIC Services (v1.3, 2022-01-20) These usage conditions must be accepted by any authenticated User of any BBMRI-ERIC Service dealing with personal data or anonymized data (for example, but not limited to, BBMRI-ERIC Locator and BBMRI-ERIC Negotiator ) You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "full_text": "­ Access Policies - BBMRI-ERIC Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data Access Policies for the BBMRI-ERIC Directory BBMRI-ERIC Access Policy Here you can find the BBMRI-ERIC Policy for Access to and Sharing of Biological Samples and Data . This access policy presents three areas of guidance: ethical principles; governance procedures; and practical procedures for access. This policy is a binding document for BBMRI-ERIC itself, for BBMRI-ERIC Partner Biobanks, and for any requesters who are seeking access to samples/data from BBMRI-ERIC Partner Biobanks via BBMRI-ERIC. Access Policy for CRC-Cohort The Access Policy of BBMRI-ERIC applies also for access to the centrally collected data set of the CRC-Cohort , with the following exception: Step 3 of the Access Procedure in the case of the CRC-Cohort is handled directly between requester and BBMRI-ERIC. For controlling access to the data set, BBMRI-ERIC has an Access Committee (see Appendix I) comprising all the contributing partner biobanks, in order to ensure the due data release approvals are in place, particularly when releasing pseudonymous (personal) data. After the access is approved by the Access Committee, BBMRI-ERIC signs a DTA with the requester for the use of the data for the particular project. The DTA also transfers liability on the requester to ensure due data security measures when processing the data. Setup of Access Committee: The Access Committee is comprised of Data Manager of the CRC-Cohort, one appointed person from Common Service ELSI for the ethics check, and one medical expert on colorectal cancer nominated by BBMRI-ERIC. Operations of Access Committee and involvement of contributing partner biobanks: The Access Committee is expected to deliver the decision within 1 month of submitting the request, based on the following procedure: After receiving an access request (project proposal), the Data Manager checks whether the access request conforms with the formal requirements: (a) the identity of the requester is known and their institutional affiliation is provided, (b) the request contains project description. If the formal requirements are fulfilled, the medical expert assesses relevance of the project to the scope of CRC-Cohort. If the project is within the scope, Access Committee performs Ethics Check procedure (Appendix G) (either Expedite or Full, depending on whether sufficient previous ethics vote has been provided). If all the previous steps conclude successfully, Access Committee asks all the contributing partner biobanks for veto of the release. If only subset of the CRC-Cohort is requested, only those partner biobanks are contacted, who actually contributed the data specifically subject to the release. The biobanks will be given 14 days for submitting the veto (so that 1 month overall for providing the Access Committee decision is achievable). The Access Policy was created within ADOPT BBMRI-ERIC , a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. BBMRI-ERIC AAI Privacy Policy Here you can find the BBMRI-ERIC AAI Privacy Policy (v1.1, 2017-08-23) BBMRI-ERIC AAI is a common authentication and authorization infrastructure to services provided by BBMRI-ERIC, which facilitates access to the human biological samples and data. BBMRI-ERIC AAI performs authentication of BBMRI-ERIC users and delivers their attributes (such as group membership and other personal data) necessary for authorization decisions to be done by BBMRI-ERIC services relying on it. Data Protection Policy Here you can find the Data Protection Policy for the BBMRI-ERIC Colorectal Cancer Cohort (CRC‐Cohort) This document describes data protection measure implemented and is intended for the data protection authorities supervising contributing partner biobanks and data protection experts in ethics committees. Access Policies for the BBMRI-ERIC Directory Acceptable Use Policy of BBMRI-ERIC Services Here you can find the Acceptable Use Policy of BBMRI-ERIC Services (v1.3, 2022-01-20) These usage conditions must be accepted by any authenticated User of any BBMRI-ERIC Service dealing with personal data or anonymized data (for example, but not limited to, BBMRI-ERIC Locator and BBMRI-ERIC Negotiator ) You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "links": [
+        {
+          "href": "https://www.bbmri-eric.eu/privacy-notice/",
+          "text": "privacy notice",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/bbmri-eric",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/BBMRIERIC",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "Looking for info on projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for scientific publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-patient-organisations-join-for-engagement-process/",
+          "text": "Working with patient organisations",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "Looking for general information on BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/",
+          "text": "About our scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQs (what is a sample, what is a biobank)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for biobanks in your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for information on your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "How to become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for reports and statutes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/wp-content/uploads/AoM_10_8_Access-Policy_FINAL_EU.pdf",
+          "text": "BBMRI-ERIC Policy for Access to and Sharing of Biological Samples and Data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "CRC-Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/adopt-bbmri-eric/",
+          "text": "ADOPT BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://web.bbmri-eric.eu/Policies/BBMRI-ERIC-AAI-Privacy-Policy.pdf",
+          "text": "BBMRI-ERIC AAI Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://web.bbmri-eric.eu/Policies/BBMRI-ERIC-AAI-Privacy-Policy.pdf",
+          "text": "(v1.1, 2017-08-23)",
+          "visible": true
+        },
+        {
+          "href": "https://zenodo.org/record/7513756#.Y7w0ry8w1lu",
+          "text": "Data Protection Policy for the BBMRI-ERIC Colorectal Cancer Cohort (CRC‐Cohort)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/wp-content/uploads/BBMRI-ERIC-AUP-IT-Services-1_3.pdf",
+          "text": "Acceptable Use Policy of BBMRI-ERIC Services",
+          "visible": true
+        },
+        {
+          "href": "http://negotiator.bbmri-eric.eu",
+          "text": "BBMRI-ERIC Negotiator",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.bbmri-eric.eu/services-support/",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Services & Support",
+      "http_status": 200,
+      "final_url": "https://www.bbmri-eric.eu/services-support/",
+      "title": "Services and Support - BBMRI-ERIC",
+      "lang_attr": "en-GB",
+      "main_text": "Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data Services and Support Quality Management If we want researchers to be able to produce reliable findings, we need to make sure that they have access to samples and data of appropriate, defined quality. As a European research infrastructure, our ultimate goal is to make samples comparable across different countries and different biobanking systems. Our Quality Management services ELSI How does the EU General Data Protection Regulation affect health research? Have I addressed all the relevant topics in the compulsory ethics self-assessment section of my proposal? If you have any questions concerning legislation or any other ethical topics, we have a team of experts from all over Europe that offer guidance on ethical, legal, and societal issues (ELSI) that biobankers and researchers may encounter. Our ELSI services GDPR Code of Conduct for Health Research Now that the new EU General Data Protection Regulation has entered into force, there are a lot of question marks around the use of data in health research. For this reason, BBMRI-ERIC has launched an initiative to draft a code of conduct for health research. Go to the Code of Conduct website Find and access samples & data online We are operating the world’s largest biobank catalogue – the BBMRI-ERIC Directory. Anyone can use it to identify candidate biobanks to get access to samples and data sets. Alternately, use our Federated Search Platforms for a more detailed search of selected biobanks. Then, proceed to the Negotiator to communicate directly with the relevant biobanks to gain access to the samples and data you need. Access Samples & Data Common Service IT BBMRI-ERIC serves biobanks and biomedical researchers by helping ensure that biomolecular resources are FAIR: Findable, Accessible, Interoperable and Reusable. Our Common Service IT You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "full_text": "Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data Services and Support Quality Management If we want researchers to be able to produce reliable findings, we need to make sure that they have access to samples and data of appropriate, defined quality. As a European research infrastructure, our ultimate goal is to make samples comparable across different countries and different biobanking systems. Our Quality Management services ELSI How does the EU General Data Protection Regulation affect health research? Have I addressed all the relevant topics in the compulsory ethics self-assessment section of my proposal? If you have any questions concerning legislation or any other ethical topics, we have a team of experts from all over Europe that offer guidance on ethical, legal, and societal issues (ELSI) that biobankers and researchers may encounter. Our ELSI services GDPR Code of Conduct for Health Research Now that the new EU General Data Protection Regulation has entered into force, there are a lot of question marks around the use of data in health research. For this reason, BBMRI-ERIC has launched an initiative to draft a code of conduct for health research. Go to the Code of Conduct website Find and access samples & data online We are operating the world’s largest biobank catalogue – the BBMRI-ERIC Directory. Anyone can use it to identify candidate biobanks to get access to samples and data sets. Alternately, use our Federated Search Platforms for a more detailed search of selected biobanks. Then, proceed to the Negotiator to communicate directly with the relevant biobanks to gain access to the samples and data you need. Access Samples & Data Common Service IT BBMRI-ERIC serves biobanks and biomedical researchers by helping ensure that biomolecular resources are FAIR: Findable, Accessible, Interoperable and Reusable. Our Common Service IT You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "links": [
+        {
+          "href": "https://www.bbmri-eric.eu/privacy-notice/",
+          "text": "privacy notice",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/bbmri-eric",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/BBMRIERIC",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "Looking for info on projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for scientific publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-patient-organisations-join-for-engagement-process/",
+          "text": "Working with patient organisations",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "Looking for general information on BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/",
+          "text": "About our scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQs (what is a sample, what is a biobank)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for biobanks in your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for information on your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "How to become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for reports and statutes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Our Quality Management services",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "Our ELSI services",
+          "visible": true
+        },
+        {
+          "href": "http://code-of-conduct-for-health-research.eu/",
+          "text": "Go to the Code of Conduct website",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Access Samples & Data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/common-service-it/",
+          "text": "Our Common Service IT",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "orange-marker",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "... read more",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/e-learning/",
+          "text": "... read more",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.bbmri-eric.eu/contact/",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Contact",
+      "http_status": 200,
+      "final_url": "https://www.bbmri-eric.eu/contact/",
+      "title": "Contact - BBMRI-ERIC",
+      "lang_attr": "en-GB",
+      "main_text": "Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data CONTACT BBMRI-ERIC Central Executive Management Office Postal Address BBMRI-ERIC Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 E-Mail: contact@bbmri-eric.eu ELSI Services & Research elsi-helpdesk@bbmri-eric.eu Common Service IT it@helpdesk.bbmri-eric.eu Rare Diseases rd@helpdesk.bbmri-eric.eu Contact individual team members here . Directions to the BBMRI-ERIC HQ Name* Company E-Mail* Phone Country Message* Your contact information will be stored for the purpose of contacting you within the scope of this request. By submitting this form you agree to this use. More information can be found in our privacy notice . Visit us You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "full_text": "Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data CONTACT BBMRI-ERIC Central Executive Management Office Postal Address BBMRI-ERIC Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 E-Mail: contact@bbmri-eric.eu ELSI Services & Research elsi-helpdesk@bbmri-eric.eu Common Service IT it@helpdesk.bbmri-eric.eu Rare Diseases rd@helpdesk.bbmri-eric.eu Contact individual team members here . Directions to the BBMRI-ERIC HQ Name* Company E-Mail* Phone Country Message* Your contact information will be stored for the purpose of contacting you within the scope of this request. By submitting this form you agree to this use. More information can be found in our privacy notice . Visit us You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "links": [
+        {
+          "href": "https://www.bbmri-eric.eu/privacy-notice/",
+          "text": "privacy notice",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/bbmri-eric",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/BBMRIERIC",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "Looking for info on projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for scientific publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-patient-organisations-join-for-engagement-process/",
+          "text": "Working with patient organisations",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "Looking for general information on BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/",
+          "text": "About our scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQs (what is a sample, what is a biobank)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for biobanks in your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for information on your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "How to become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for reports and statutes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "tel:0043316349917",
+          "text": "+43 316 34 99 17",
+          "visible": true
+        },
+        {
+          "href": "mailto:contact@bbmri-eric.eu",
+          "text": "contact@bbmri-eric.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:elsi-helpdesk@bbmri-eric.eu",
+          "text": "elsi-helpdesk@bbmri-eric.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:it@helpdesk.bbmri-eric.eu",
+          "text": "it@helpdesk.bbmri-eric.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:rd@helpdesk.bbmri-eric.eu",
+          "text": "rd@helpdesk.bbmri-eric.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "here",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/wp-content/uploads/2016/07/DIRECTIONS_TO_THE_BBMRI_HQ_V1.1.pdf",
+          "text": "Directions to the BBMRI-ERIC HQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/privacy-notice/",
+          "text": "privacy notice",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.bbmri-eric.eu/about/",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "About",
+      "http_status": 200,
+      "final_url": "https://www.bbmri-eric.eu/about/",
+      "title": "About us - BBMRI-ERIC",
+      "lang_attr": "en-GB",
+      "main_text": "Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data About us BBMRI-ERIC is a European research infrastructure for biobanking. We bring together all the main players from the biobanking field – researchers, biobankers, industry, and patients – to boost biomedical research. To that end, we offer quality management services, support with ethical, legal and societal issues, and a number of online tools and software solutions for biobankers and researchers. Ultimately, our goal is to make new treatments possible. What is biobanking? Typically, a biobank is a place to store all types of human biological samples, such as blood, tissue, cells or DNA. It also stores data related to the samples as well as other biomolecular resources that can be used in health research. Find out more about us below or take a look at our FAQ Who we are BBMRI-ERIC currently includes 23 countries and one international organisation, making it one of the largest European research infrastructures. Find out more about our Members and Observers Members and Observers All our Member and Observer States have a National Node, i.e. a national contact point coordinating the biobanking activities in that country. Our National Nodes Stakeholder Forum The BBMRI-ERIC Stakeholder Forum is the main interface for European patients’ organisations, civil society, industry and academia to interact with the biobanking universe. BBMRI-ERIC Stakeholder Forum Vacancies Looking for a job? In addition to our own open positions, we also advertise vacancies from other research infrastructures and similar organisations. Vacancies Governance Who takes important decisions at BBMRI-ERIC and how are they executed? You can find out more about our governance structure here. Governance Staff Located in Graz, Austria, the BBMRI-ERIC Central Executive Management Office is where the work done by the National Nodes is coordinated. It is also where the Director General, the administrative staff, the project managers, the communications team, and the people managing our Quality, IT and ELSI Services are based. The BBMRI-ERIC Team Intranet We use our Intranet to provide access to important documents. It is for internal use only. Intranet You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "full_text": "Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downloads Home x bbmri-eric website Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact Home Find samples and data About Member States & National Nodes Governance Stakeholder Forum Expert Centres Staff Jobs BBMRI-ERIC Podcast Services & Support Join the BBMRI-ERIC Federated Platform EOSC Node – BBMRI-ERIC IT SERVICES & RESEARCH Find samples and data MIABIS Access Policies Tools Federated Search Task-Force Colorectal Cancer Cohort Quality Management ELSI Services & Research GDPR Code of Conduct COVID-19 Research List COVID-Ready Samples and Data on our Directory EU Grants AHEAD BigPicture BIOINDUSTRY 4.0 CANDLE canSERV CETOCOEN Excellence TEAMING Phase II CY-BIOBANK DIAMONDS EOSC4CANCER EPND EPPerMed ERDERA ERIC Forum 2 EUCAIM EU-CIP EvolveBBMRI GDI INTEGRATE-LMedC INTERVENE ISIDORe PERIFORMANCE PRIMTECH3R PROPHET QUANTUM RI-SCALE UNCAN-Connect Completed Projects News & Events News Events Contact FAQ Downloads Home I am looking for information as Researcher Looking for biobanks Looking for samples & data Looking for trusted partners (Expert Centres) Looking for ELSI guidance Looking for scientific collaboration Looking for advice on standardisation Looking for info on projects Looking for scientific publications Industry Looking for biobanks Looking for trusted partners (Expert Centres) Looking for samples & data Looking for advice on standardisation Looking for scientific collaboration Patient Working with patient organisations About ethics, rights & societal issues Looking for general information on BBMRI-ERIC About our scientific collaboration Citizen FAQs (what is a sample, what is a biobank) Looking for biobanks in your country Member States Looking for information on your country How to become a Member Looking for reports and statutes Looking for samples & data About us BBMRI-ERIC is a European research infrastructure for biobanking. We bring together all the main players from the biobanking field – researchers, biobankers, industry, and patients – to boost biomedical research. To that end, we offer quality management services, support with ethical, legal and societal issues, and a number of online tools and software solutions for biobankers and researchers. Ultimately, our goal is to make new treatments possible. What is biobanking? Typically, a biobank is a place to store all types of human biological samples, such as blood, tissue, cells or DNA. It also stores data related to the samples as well as other biomolecular resources that can be used in health research. Find out more about us below or take a look at our FAQ Who we are BBMRI-ERIC currently includes 23 countries and one international organisation, making it one of the largest European research infrastructures. Find out more about our Members and Observers Members and Observers All our Member and Observer States have a National Node, i.e. a national contact point coordinating the biobanking activities in that country. Our National Nodes Stakeholder Forum The BBMRI-ERIC Stakeholder Forum is the main interface for European patients’ organisations, civil society, industry and academia to interact with the biobanking universe. BBMRI-ERIC Stakeholder Forum Vacancies Looking for a job? In addition to our own open positions, we also advertise vacancies from other research infrastructures and similar organisations. Vacancies Governance Who takes important decisions at BBMRI-ERIC and how are they executed? You can find out more about our governance structure here. Governance Staff Located in Graz, Austria, the BBMRI-ERIC Central Executive Management Office is where the work done by the National Nodes is coordinated. It is also where the Director General, the administrative staff, the project managers, the communications team, and the people managing our Quality, IT and ELSI Services are based. The BBMRI-ERIC Team Intranet We use our Intranet to provide access to important documents. It is for internal use only. Intranet You may also be interested in National Nodes National Nodes & contact points for local biobanks Find our National Nodes and contact points for local biobanks. Merken Merken Merken ... read more Training BBMRI.QM Academy E-Learning Live educational webinars and webinars on demand (recordings) on Pre-Analytical Phases of Biobanking. ... read more ‹ › Recent News COVID-19: European Medical Research Infrastructures are Part of the Global Response Together with EATRIS and ECRIN we just published our top 5 recommendations to accelerate #COVID19 research... ... read more BBMRI-ERIC receives two new grants for coronavirus initiatives With BY-COVID and ISIDORe, BBMRI-ERIC will contribute to European preparedness for current and future pandemics ... read more ﻿ The website was co-funded within ADOPT BBMRI-ERIC, a project that has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 676550. Neue Stiftingtalstrasse 2/B/6 8010 Graz, Austria Phone: +43 316 34 99 17 Mail: contact@bbmri-eric.eu Favourites About us News & Events Publications Quicklinks Directory Negotiator National Nodes How to find us Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: Follow us (c) BBMRI-ERIC® - Legal Notice - Privacy Notice TOP Website by Werbeagentur Rubikon We use cookies to analyse the traffic on our websites. All personal data is anonymized and not shared with third parties! Click here for more information. Accept",
+      "links": [
+        {
+          "href": "https://www.bbmri-eric.eu/privacy-notice/",
+          "text": "privacy notice",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/bbmri-eric",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/BBMRIERIC",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Member States & National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Expert Centres",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "Staff",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Jobs",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/bbmri-eric-podcast/",
+          "text": "BBMRI-ERIC Podcast",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services-support/",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-platform/",
+          "text": "Join the BBMRI-ERIC Federated Platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
+          "text": "EOSC Node – BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/it/",
+          "text": "IT SERVICES & RESEARCH",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-sample-and-data-portal/",
+          "text": "Find samples and data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/howtomiabis/",
+          "text": "MIABIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/access-policies/",
+          "text": "Access Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/other-services/",
+          "text": "Tools",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/federated-search-task-force/",
+          "text": "Federated Search Task-Force",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/colorectal-cancer-cohort/",
+          "text": "Colorectal Cancer Cohort",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/quality-management/",
+          "text": "Quality Management",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/elsi/",
+          "text": "ELSI Services & Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+          "text": "GDPR Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/covid-19/",
+          "text": "COVID-19 Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+          "text": "List COVID-Ready Samples and Data on our Directory",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "EU Grants",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ahead/",
+          "text": "AHEAD",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bigpicture/",
+          "text": "BigPicture",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/bioindustry4-0/",
+          "text": "BIOINDUSTRY 4.0",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/candle/",
+          "text": "CANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/canserv/",
+          "text": "canSERV",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cetocoen-excellence2/",
+          "text": "CETOCOEN Excellence TEAMING Phase II",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/cy-biobank/",
+          "text": "CY-BIOBANK",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/diamonds/",
+          "text": "DIAMONDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eosc4cancer/",
+          "text": "EOSC4CANCER",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/epnd/",
+          "text": "EPND",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eppermed/",
+          "text": "EPPerMed",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/erdera/",
+          "text": "ERDERA",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ericforum/",
+          "text": "ERIC Forum 2",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eucaim/",
+          "text": "EUCAIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/eu-cip/",
+          "text": "EU-CIP",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/evolvebbmri/",
+          "text": "EvolveBBMRI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/gdi/",
+          "text": "GDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/integrate/",
+          "text": "INTEGRATE-LMedC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/intervene/",
+          "text": "INTERVENE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/isidore/",
+          "text": "ISIDORe",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/periformance/",
+          "text": "PERIFORMANCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/primtech3r/",
+          "text": "PRIMTECH3R",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/prophet/",
+          "text": "PROPHET",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/quantum/",
+          "text": "QUANTUM",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/uncan-connect/",
+          "text": "UNCAN-Connect",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/completed-projects/",
+          "text": "Completed Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-event/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/downloads/",
+          "text": "Downloads",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/eu-grants/",
+          "text": "Looking for info on projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for scientific publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/expert-centre/",
+          "text": "Looking for trusted partners (Expert Centres)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/services/standardisation/",
+          "text": "Looking for advice on standardisation",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/scientific-collaboration/how-to-partner-up-with-bbmri-eric/",
+          "text": "Looking for scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-patient-organisations-join-for-engagement-process/",
+          "text": "Working with patient organisations",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "Looking for general information on BBMRI-ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/",
+          "text": "About our scientific collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQs (what is a sample, what is a biobank)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for biobanks in your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Looking for information on your country",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "How to become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/publications/",
+          "text": "Looking for reports and statutes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/?post_type=services&p=96",
+          "text": "Looking for samples & data",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/faq/",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Find out more about our Members and Observers",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/national-nodes/",
+          "text": "Our National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/stakeholder-forum/",
+          "text": "BBMRI-ERIC Stakeholder Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/careers/",
+          "text": "Vacancies",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/governance-structure/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.bbmri-eric.eu/bbmri-eric/staff/",
+          "text": "The BBMRI-ERIC Team",
+          "visible": true
+        },
+        {
+          "href": "http://old.bbmri-eric.eu/bbmri-eric-directory?p_p_state=maximized&p_p_mode=view&saveLastPath=false&_58_struts_action=%2Flogin%2Flogin&p_p_id=58&p_p_lifecycle=0&_58_redirect=%2Fintranet",
+          "text": "Intranet",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [],
+  "crawl_note": "depth 1: 84 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
 }

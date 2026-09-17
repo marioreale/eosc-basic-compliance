@@ -22,6 +22,14 @@ from dataclasses import dataclass, field
 from urllib.parse import urlparse
 
 from .fetch import PageEvidence
+from .patterns import (
+    AAI_HINTS,
+    AUP_PATTERNS,
+    CONTACT_PATTERNS,
+    HELPDESK_SPECIFIC,
+    LOGIN_PATTERNS,
+    UAP_PATTERNS,
+)
 
 PASS = "PASS"
 FAIL = "FAIL"
@@ -42,58 +50,8 @@ class Result:
 
 # --- shared vocabulary -------------------------------------------------------
 
-# English-only, and that is a real limitation: a node serving a Dutch or Finnish
-# contact page can be missed. Point 7 requires English, so for these particular
-# points the bias is tolerable — but it is a bias, not an absence of one.
-CONTACT_PATTERNS = [
-    r"(?i)\bhelpdesk\b",
-    r"(?i)\bhelp\s?desk\b",
-    r"(?i)\bservice\s+desk\b",
-    r"(?i)\bsupport\b",
-    r"(?i)\bcontact\b",
-    r"(?i)\bget\s+in\s+touch\b",
-    r"(?i)\bticket",
-]
-HELPDESK_SPECIFIC = [
-    r"(?i)\bhelpdesk\b",
-    r"(?i)\bhelp\s?desk\b",
-    r"(?i)\bservice\s+desk\b",
-    r"(?i)\bsupport\b",
-    r"(?i)\bticket",
-]
-AUP_PATTERNS = [
-    r"(?i)\bacceptable\s+use\s+polic",
-    r"(?i)\bAUP\b",
-    r"(?i)\bterms\s+of\s+(use|service)\b",
-    r"(?i)\bconditions\s+of\s+use\b",
-    r"(?i)\buser\s+agreement\b",
-]
-UAP_PATTERNS = [
-    r"(?i)\buser\s+access\s+polic",
-    r"(?i)\bUAP\b",
-    r"(?i)\baccess\s+polic",
-    r"(?i)\bconditions\s+of\s+access\b",
-    r"(?i)\baccess\s+conditions\b",
-]
-LOGIN_PATTERNS = [
-    r"(?i)\blog\s?in\b",
-    r"(?i)\bsign\s?in\b",
-    r"(?i)\bmy\s+account\b",
-    r"(?i)\bauthenticate\b",
-    r"(?i)\bsso\b",
-]
-# Markers that a login is EOSC AAI specifically, not a local IdP. Presence is
-# suggestive only; the checklist says this is verified during EEN enrolment.
-AAI_HINTS = [
-    r"(?i)eosc[\s\-]?aai",
-    r"(?i)aai\.eosc",
-    r"(?i)\bmyaccessid\b",
-    r"(?i)\begi\s+check-?in\b",
-    r"(?i)aai\.egi\.eu",
-    r"(?i)\blife\s?science\s+(ri|login)\b",
-    r"(?i)\bmyaccess\b",
-    r"(?i)proxy\.aai",
-]
+# Defined in patterns.py, which the crawler also reads. See that module for why
+# these must not be duplicated here.
 
 
 def _match(text: str, patterns: list[str]) -> list[str]:
@@ -207,22 +165,64 @@ def check_1(ev: PageEvidence) -> Result:
                 [f"HTTP {status}", f"login indicators: {', '.join(logins[:4])}"],
                 reviewer_action="Confirm with the EEN that the node's login is EOSC AAI compliant.",
             )
+        # A 403 with no login in sight is weak evidence about public accessibility.
+        # Genuine access control almost always redirects to a login page; a bare
+        # 403 to an automated client is far more often bot mitigation, which says
+        # nothing about what a researcher with a browser would see. This was not
+        # hypothetical: a node here served HTTP 200 to this tool and then 403 once
+        # the crawl made a handful more requests. Reporting that as "not publicly
+        # accessible" would have been the tool blaming a node for its own
+        # rate-limiting, so it is a review item, never a FAIL.
+        wall = _match(ev.full_text + " " + ev.title, BOT_WALL_PATTERNS)
+        detail = (
+            f"bot-protection wording seen: {', '.join(sorted(set(wall))[:4])}"
+            if wall
+            else "no login affordance and no explicit bot-protection wording"
+        )
+        return Result(
+            "1",
+            "NLP publicly accessible or via EOSC AAI",
+            MANUAL_REVIEW,
+            f"HTTP {status} to this tool's anonymous request, with no login affordance found. "
+            "This is most likely bot protection reacting to an automated client rather than an "
+            "access policy, so it is not treated as a failure: a browser may well be served "
+            "normally. It could not be verified either way.",
+            [f"HTTP {status}", detail, f"final URL: {ev.final_url}"],
+            reviewer_action="Open the URL in a normal browser. If it loads, this point passes and "
+            "the block was bot protection. If it demands a login, confirm with the EEN that the "
+            "login is EOSC AAI compliant.",
+        )
+
+    if status in DEAD_STATUSES:
         return Result(
             "1",
             "NLP publicly accessible or via EOSC AAI",
             FAIL,
-            f"HTTP {status} to an anonymous request, with no login affordance found. "
-            "Neither branch (a) nor (b) is satisfied.",
-            [f"HTTP {status}"],
+            f"The landing page returned HTTP {status}: the registered URL does not resolve to a "
+            "page, so it cannot be accessible by either branch.",
+            [f"HTTP {status}", f"final URL: {ev.final_url}"],
+            reviewer_action="Check the URL registered in the EOSC EU Node Contributors Dashboard.",
+        )
+
+    if status is not None and status >= 500:
+        return Result(
+            "1",
+            "NLP publicly accessible or via EOSC AAI",
+            MANUAL_REVIEW,
+            f"The landing page returned HTTP {status}, a server-side error. This is often "
+            "transient, so it is not recorded as a checklist failure without a retry.",
+            [f"HTTP {status}", f"final URL: {ev.final_url}"],
+            reviewer_action="Retry later; if it persists, raise it with the node.",
         )
 
     if status is not None and status >= 400:
         return Result(
             "1",
             "NLP publicly accessible or via EOSC AAI",
-            FAIL,
-            f"The landing page returned HTTP {status}.",
+            MANUAL_REVIEW,
+            f"The landing page returned HTTP {status} to this tool.",
             [f"HTTP {status}", f"final URL: {ev.final_url}"],
+            reviewer_action="Open the URL in a browser to see what a researcher would get.",
         )
 
     return Result(
@@ -266,13 +266,25 @@ def check_1R(ev: PageEvidence) -> Result:
     if aai:
         lines.append(f"EOSC AAI indicators seen: {', '.join(sorted(set(aai))[:4])}")
 
+    if ev.crawl_depth >= 1 and ev.children:
+        reached = [c for c in ev.children if c.ok]
+        blocked = [c for c in ev.children if not c.ok and c.robots_allowed is not False]
+        lines.append(
+            f"depth 1: {len(reached)} of {len(ev.children)} followed page(s) were served "
+            f"anonymously, so those are publicly accessible"
+        )
+        for child in blocked[:5]:
+            detail = child.error or f"HTTP {child.http_status}"
+            lines.append(f"not served anonymously: {child.url} -> {detail}")
+
     return Result(
         "1R",
         "Linked resources public or via EOSC AAI",
         MANUAL_REVIEW,
-        "Not assessable without following every resource link and confirming each login "
-        "is EOSC AAI. This tool makes one request per node by design, and AAI compliance "
-        "is verified during EEN enrolment rather than by reading a page.",
+        "Not assessable in full: it quantifies over every resource reachable through the "
+        "landing page, including through intermediate pages, and whether a given login is "
+        "genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading "
+        "HTML. One level of crawling narrows this but cannot close it.",
         lines,
         reviewer_action="Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.",
     )
@@ -308,6 +320,16 @@ def check_2(ev: PageEvidence) -> Result:
         lines.append(f"organisation-like names found: {'; '.join(o.strip() for o in orgs[:6])}")
     else:
         lines.append("no organisation-like names matched by pattern")
+
+    about = _verify_child(ev, "2", [])
+    if about is not None and about.ok:
+        # The checklist asks the landing page to state these things, so an About
+        # page cannot satisfy it on the page's behalf. It is offered as context
+        # for the reviewer, clearly marked as one level down.
+        lines.append(
+            f'about page one level down: {about.url} (HTTP {about.http_status}) '
+            f'opening text: "{(about.main_text or about.full_text)[:260]}..."'
+        )
 
     return Result(
         "2",
@@ -476,6 +498,32 @@ def check_5a(ev: PageEvidence) -> Result:
     )
 
 
+# Wording that a genuine policy document contains, used to tell a real policy
+# page apart from a navigation stub that merely has "policy" in its link text.
+POLICY_BODY_PATTERNS = [
+    r"(?i)\bmust not\b", r"(?i)\byou (?:may|must|shall|agree)\b", r"(?i)\bpermitted\b",
+    r"(?i)\bprohibit", r"(?i)\bterms\b", r"(?i)\bpolicy\b", r"(?i)\bconditions\b",
+    r"(?i)\bresponsib", r"(?i)\bcomply\b", r"(?i)\bauthorised\b", r"(?i)\bauthorized\b",
+]
+DEAD_STATUSES = (404, 410)
+
+# Signals that a 403 came from bot mitigation rather than from an access policy.
+BOT_WALL_PATTERNS = [
+    r"(?i)just a moment", r"(?i)attention required", r"(?i)cloudflare",
+    r"(?i)access denied", r"(?i)captcha", r"(?i)are you a (?:human|robot)",
+    r"(?i)enable javascript and cookies", r"(?i)unusual traffic",
+    r"(?i)request (?:was )?blocked", r"(?i)ray id", r"(?i)akamai", r"(?i)incapsula",
+    r"(?i)perimeterx", r"(?i)forbidden",
+]
+
+
+def _verify_child(ev: PageEvidence, point: str, patterns: list[str]):
+    """Return the fetched child page that was followed for this point, or None."""
+    for child in ev.children_for(point):
+        return child
+    return None
+
+
 def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str], what: str) -> Result:
     if ev.error:
         return Result(point, title, ERROR, f"Page not fetched: {ev.error}")
@@ -484,13 +532,73 @@ def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str],
     text_hits = _match(ev.full_text, patterns)
 
     if links:
+        child = _verify_child(ev, point, patterns)
+
+        # Without a level of crawling the tool can only say a link exists. That is
+        # weaker than it looks: a link labelled "Acceptable Use Policy" pointing at
+        # a 404 satisfies the letter of "there is a link" while failing the actual
+        # requirement, which is that the policy be *accessible*.
+        if child is None:
+            return Result(
+                point,
+                title,
+                PASS,
+                f"The landing page links to what appears to be {what}. "
+                "The link target was not fetched, so this is a pointer, not a verified document.",
+                [_fmt(link) for link in links[:4]],
+                reviewer_action=f"Open the link and confirm the target really is {what}, in English. Re-run with --depth 1 to have the tool check it.",
+            )
+
+        if child.http_status in DEAD_STATUSES:
+            return Result(
+                point,
+                title,
+                FAIL,
+                f"The landing page links to {what}, but that link is broken "
+                f"(HTTP {child.http_status}), so the policy is not accessible.",
+                [_fmt(link) for link in links[:2]] + [f"followed: {child.url} -> HTTP {child.http_status}"],
+                reviewer_action="Fix or repoint the link.",
+            )
+
+        if not child.ok:
+            return Result(
+                point,
+                title,
+                MANUAL_REVIEW,
+                f"The landing page links to what appears to be {what}, but the tool could not "
+                f"read the target, so it is unverified. This may be a bot restriction rather "
+                f"than a real problem.",
+                [_fmt(link) for link in links[:2]]
+                + [f"followed: {child.url} -> {child.error or f'HTTP {child.http_status}'}"],
+                reviewer_action="Open the link manually and confirm the policy is reachable.",
+            )
+
+        body = _match(child.main_text or child.full_text, POLICY_BODY_PATTERNS)
+        if len(child.main_text) < 400 or not body:
+            return Result(
+                point,
+                title,
+                MANUAL_REVIEW,
+                f"The link target was fetched but does not read like {what}: "
+                f"{len(child.main_text)} characters of main text and "
+                f"{'no policy-like wording' if not body else 'little substance'}. "
+                "It may be a landing stub that points further on.",
+                [f"followed: {child.url} -> HTTP {child.http_status}",
+                 f"title: {child.title or '(none)'}"],
+                reviewer_action=f"Open the target and find where {what} is actually published.",
+            )
+
         return Result(
             point,
             title,
             PASS,
-            f"The landing page links to what appears to be {what}.",
-            [_fmt(link) for link in links[:4]],
-            reviewer_action=f"Confirm the target really is {what}, is in English, and covers all the node's resources.",
+            f"The landing page links to {what}, and the target was fetched and reads like a "
+            f"policy document.",
+            [_fmt(link) for link in links[:2]]
+            + [f"followed: {child.url} -> HTTP {child.http_status}, "
+               f"{len(child.main_text)} chars, title: {child.title or '(none)'}",
+               f"policy wording found: {', '.join(sorted(set(body))[:4])}"],
+            reviewer_action="Confirm it covers all the node's resources and is in English.",
         )
 
     if text_hits:
@@ -553,6 +661,53 @@ def check_6(ev: PageEvidence) -> Result:
         )
 
     if contact_links or mailtos:
+        child = _verify_child(ev, "6", CONTACT_PATTERNS)
+
+        # A "Contact" link is ambiguous on its own. The page behind it usually is
+        # not: it either names a helpdesk and offers a form or address, or it does
+        # not. One request settles what keyword matching cannot.
+        if child is not None and child.ok:
+            text = child.main_text or child.full_text
+            desk = _match(text, HELPDESK_SPECIFIC)
+            child_mailtos = [ln for ln in child.links if ln.href.lower().startswith("mailto:")]
+            if desk:
+                return Result(
+                    "6",
+                    "Means of contacting the node helpdesk",
+                    PASS,
+                    "The contact page reached from the landing page identifies a support or "
+                    "helpdesk route.",
+                    [_fmt(link) for link in (contact_links + mailtos)[:2]]
+                    + [f"followed: {child.url} -> HTTP {child.http_status}",
+                       f"helpdesk wording on that page: {', '.join(sorted(set(desk))[:4])}"]
+                    + [f"address given: {ln.href}" for ln in child_mailtos[:2]],
+                    reviewer_action="Confirm the route reaches the node's user support.",
+                )
+            if child_mailtos or _match(text, [r"(?i)contact\s*form", r"(?i)<?\bsubmit\b"]):
+                return Result(
+                    "6",
+                    "Means of contacting the node helpdesk",
+                    MANUAL_REVIEW,
+                    "A contact page exists and offers a way to get in touch, but nothing on it "
+                    "identifies a helpdesk specifically. The checklist asks for the node "
+                    "helpdesk, and general enquiries may not satisfy that.",
+                    [f"followed: {child.url} -> HTTP {child.http_status}"]
+                    + [f"address given: {ln.href}" for ln in child_mailtos[:3]],
+                    reviewer_action="Confirm this reaches the node's user support, not a general mailbox.",
+                )
+
+        if child is not None and child.http_status in DEAD_STATUSES:
+            return Result(
+                "6",
+                "Means of contacting the node helpdesk",
+                FAIL,
+                f"The landing page's contact link is broken (HTTP {child.http_status}), so no "
+                "working means of contact is offered by that route.",
+                [_fmt(link) for link in contact_links[:2]]
+                + [f"followed: {child.url} -> HTTP {child.http_status}"],
+                reviewer_action="Fix or repoint the contact link.",
+            )
+
         return Result(
             "6",
             "Means of contacting the node helpdesk",

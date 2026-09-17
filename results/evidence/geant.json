@@ -2,7 +2,7 @@
   "node_id": "geant",
   "node_name": "GÉANT",
   "requested_url": "https://geant.org/geant-eosc-node/",
-  "fetched_at": "2026-09-17T14:54:30+00:00",
+  "fetched_at": "2026-09-17T15:32:44+00:00",
   "final_url": "https://geant.org/projects/geant-eosc-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -1678,5 +1678,1860 @@
   ],
   "meta_description": "The GÉANT EOSC Node provides trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly.",
   "error": "",
-  "screenshot": "geant.png"
+  "screenshot": "geant.png",
+  "crawl_depth": 1,
+  "children": [
+    {
+      "url": "https://geant.org/contact",
+      "selected_for": [
+        "6",
+        "2"
+      ],
+      "link_text": "Contact",
+      "http_status": 200,
+      "final_url": "https://geant.org/contact/",
+      "title": "Contact - GÉANT",
+      "lang_attr": "en-US",
+      "main_text": "Home . Contact Contact Get in touch, learn more or request support. GDPR For questions related to our Privacy Notice and how GÉANT processes your personal data. Contact us General enquiries Submit a general enquiry, and we will put you in contact with the appropriate team. Contact us Invoicing For questions related to invoicing, billing, and payments. Contact us Press and communications For media enquiries, interview requests, press information and materials. Contact us Recruitment For questions about careers at GÉANT, open vacancies, and recruitment queries. Contact us Click to accept marketing cookies and enable this content Contact GDPR General enquiries Invoicing Press and communications Recruitment General enquiries First Name * Email Address * Phone Number Message 0 / 500 Get in touch *Indicates a required field. GÉANT CERT For reporting of security incidents on the GÉANT network or potential security risks. [ Contact us ] GÉANT Operations Centre (GOC) For GÉANT service subscribers and other Network Operation Centres (NOCs) to report network issues or request operational support. [ Find out more ] GÉANT offices AMS Hoekenrode 3 6th floor 1102 BR Amsterdam The Netherlands T:+31(0)20 5304488 Amsterdam office on Google Maps Getting to the Amsterdam office (PDF) CAM City House, 126-130 Hills Rd Cambridge CB2 1PQ United Kingdom T:+44 (0)1223 371 300 City House security: +44 (0)1223 363 628 Cambridge office on Goo​gle Maps Getting to the Cambridge office (PDF) FAQs 01. What is GÉANT and what does it do? The GÉANT Association is a membership of 37 European National Research and Education Networks (NRENs) and one Nordic representative member. For decades, we have been building physical and human networks across Europe and around the world. Our unique collaboration model delivers an unmatched multiplier effect and creates the digital foundation for research and education in Europe. Together, and as a trusted partner of the European Commission, we power the knowledge sharing and innovation essential for strengthening Europe’s competitiveness, security, and prosperity. Find out more about GÉANT. 02. I have a question about GÉANT, but I don’t know who to contact. Fill in the form on this page selecting the option “General enquiries”. We will put you in contact with the relevant team at GÉANT! 03. What services does GÉANT provide? GÉANT delivers the pan-European GÉANT network for scientific excellence, research, education and innovation, as well as an integrated catalogue of connectivity, Identity and Access Management (IAM), cloud, and security services. 04. Does GÉANT work with organisations outside Europe? Yes, through extensive global partnerships, and thanks to funding from the European Commission, GÉANT interconnects over 110 countries worldwide. 05. Where can I find the new GÉANT logo, as well as GÉANT materials and resources? Visit the GÉANT Resources website, bringing together a growing range of documents and materials to support our members and partners. resources.geant.org",
+      "full_text": "Manage cookie consent To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions. Functional Functional Always active The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network. Preferences Preferences The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user. Statistics Statistics The technical storage or access that is used exclusively for statistical purposes. The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you. Marketing Marketing The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes. Manage options Manage services Manage {vendor_count} vendors Read more about these purposes Accept Deny View preferences Save preferences View preferences Cookie Policy Privacy Statement {title} Skip to Content Who we are Back Who we are About GÉANT Back About GÉANT Vision, mission, strategy Executive team Governance Membership Become a GÉANT member Equity, Diversity and Inclusion (EDI) Who we work with Back Who we work with National Research and Education Networks European institutions European e‑infrastructures Global partners Commercial Partnership Programme Procurement and legal Back Procurement and legal Procurement and supplier information Formalities Careers What we do Back What we do Projects Back Projects The GÉANT Project EuroHPC HyperConnectivity GÉANT EOSC Node Network and connectivity Back Network and connectivity The pan-European GÉANT Network Intercontinental connectivity Network innovation Network services Network operations Identity and Access Management (IAM) Back Identity and Access Management (IAM) eduroam eduGAIN Core AAI Platform MyAccessID MyAcademicID eduTEAMS InAcademia IAM programmes and initiatives Security Back Security Security products and services eduVPN Training and awareness GÉANT Security Operations Centre GÉANT Security Innovation Lab Compliance Clouds Back Clouds About the GÉANT Cloud Frameworks OCRE 2024 Framework eduMEET Above-the-Net Services Incubator Impact Community Back Community GÉANT Community Back GÉANT Community Community Programme Innovation Programme Community Award Learning and Development News and events Back News and events CONNECT - GÉANT community news Events Back Events TNC Security Days GÉANT Project Symposium Community events Resources Contact Search Search Search Home . Contact Contact Get in touch, learn more or request support. GDPR For questions related to our Privacy Notice and how GÉANT processes your personal data. Contact us General enquiries Submit a general enquiry, and we will put you in contact with the appropriate team. Contact us Invoicing For questions related to invoicing, billing, and payments. Contact us Press and communications For media enquiries, interview requests, press information and materials. Contact us Recruitment For questions about careers at GÉANT, open vacancies, and recruitment queries. Contact us Click to accept marketing cookies and enable this content Contact GDPR General enquiries Invoicing Press and communications Recruitment General enquiries First Name * Email Address * Phone Number Message 0 / 500 Get in touch *Indicates a required field. GÉANT CERT For reporting of security incidents on the GÉANT network or potential security risks. [ Contact us ] GÉANT Operations Centre (GOC) For GÉANT service subscribers and other Network Operation Centres (NOCs) to report network issues or request operational support. [ Find out more ] GÉANT offices AMS Hoekenrode 3 6th floor 1102 BR Amsterdam The Netherlands T:+31(0)20 5304488 Amsterdam office on Google Maps Getting to the Amsterdam office (PDF) CAM City House, 126-130 Hills Rd Cambridge CB2 1PQ United Kingdom T:+44 (0)1223 371 300 City House security: +44 (0)1223 363 628 Cambridge office on Goo​gle Maps Getting to the Cambridge office (PDF) FAQs 01. What is GÉANT and what does it do? The GÉANT Association is a membership of 37 European National Research and Education Networks (NRENs) and one Nordic representative member. For decades, we have been building physical and human networks across Europe and around the world. Our unique collaboration model delivers an unmatched multiplier effect and creates the digital foundation for research and education in Europe. Together, and as a trusted partner of the European Commission, we power the knowledge sharing and innovation essential for strengthening Europe’s competitiveness, security, and prosperity. Find out more about GÉANT. 02. I have a question about GÉANT, but I don’t know who to contact. Fill in the form on this page selecting the option “General enquiries”. We will put you in contact with the relevant team at GÉANT! 03. What services does GÉANT provide? GÉANT delivers the pan-European GÉANT network for scientific excellence, research, education and innovation, as well as an integrated catalogue of connectivity, Identity and Access Management (IAM), cloud, and security services. 04. Does GÉANT work with organisations outside Europe? Yes, through extensive global partnerships, and thanks to funding from the European Commission, GÉANT interconnects over 110 countries worldwide. 05. Where can I find the new GÉANT logo, as well as GÉANT materials and resources? Visit the GÉANT Resources website, bringing together a growing range of documents and materials to support our members and partners. resources.geant.org Who we are About GÉANT Who we work with Procurement and legal Careers What we do Projects Network and connectivity Identity and Access Management (IAM) Security Clouds Impact Community GÉANT Community News and events CONNECT - GÉANT community news Events Resources Contact Anti-slavery policy Responsible disclosure policy GÉANT Community Code of Conduct Use of the EU funding statement Web accessibility statement Cookie Policy (EU) Disclaimer Privacy Notice Keep up to date Manage cookie consent",
+      "links": [
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+          "text": "Manage options",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-cookies-overview",
+          "text": "Manage services",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-tcf-wrapper",
+          "text": "Manage {vendor_count} vendors",
+          "visible": true
+        },
+        {
+          "href": "https://cookiedatabase.org/tcf/purposes/",
+          "text": "Read more about these purposes",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+          "text": "View preferences",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/",
+          "text": "Cookie Policy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/privacy-notice/",
+          "text": "Privacy Statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org",
+          "text": "Geant logo icon",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/vision-mission-strategy/",
+          "text": "Vision, mission, strategy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/geant-executive-team/",
+          "text": "Executive team",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/governance/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/membership/",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/become-a-geant-member/",
+          "text": "Become a GÉANT member",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+          "text": "Equity, Diversity and Inclusion (EDI)",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/national-research-and-education-networks/",
+          "text": "National Research and Education Networks",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/european-institutions/",
+          "text": "European institutions",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/european-e-infrastructures/",
+          "text": "European e‑infrastructures",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/global-partners/",
+          "text": "Global partners",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/commercial-partnership-programme/",
+          "text": "Commercial Partnership Programme",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+          "text": "Procurement and supplier information",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/formalities/",
+          "text": "Formalities",
+          "visible": true
+        },
+        {
+          "href": "https://careers.geant.org/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/the-geant-project/",
+          "text": "The GÉANT Project",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+          "text": "EuroHPC HyperConnectivity",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/geant-eosc-node/",
+          "text": "GÉANT EOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "The pan-European GÉANT Network",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/intercontinental-connectivity/",
+          "text": "Intercontinental connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/network_innovation/",
+          "text": "Network innovation",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/services/",
+          "text": "Network services",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/network_operations/",
+          "text": "Network operations",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://eduroam.org/",
+          "text": "eduroam",
+          "visible": true
+        },
+        {
+          "href": "https://edugain.org/",
+          "text": "eduGAIN",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/geant-core-aai-platform",
+          "text": "Core AAI Platform",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/myaccessid",
+          "text": "MyAccessID",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/myacademicid",
+          "text": "MyAcademicID",
+          "visible": true
+        },
+        {
+          "href": "https://eduteams.org/",
+          "text": "eduTEAMS",
+          "visible": true
+        },
+        {
+          "href": "https://inacademia.org/",
+          "text": "InAcademia",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/community/",
+          "text": "IAM programmes and initiatives",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/services/",
+          "text": "Security products and services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eduvpn.org/",
+          "text": "eduVPN",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/training-and-events/",
+          "text": "Training and awareness",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/security-operations-centre/",
+          "text": "GÉANT Security Operations Centre",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/geant-security-innovation-lab/",
+          "text": "GÉANT Security Innovation Lab",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/compliance/",
+          "text": "Compliance",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/geant-cloud-frameworks/",
+          "text": "About the GÉANT Cloud Frameworks",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/the-ocre-2024-framework/",
+          "text": "OCRE 2024 Framework",
+          "visible": true
+        },
+        {
+          "href": "https://edumeet.org/",
+          "text": "eduMEET",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/above-the-net-services-incubator",
+          "text": "Above-the-Net Services Incubator",
+          "visible": true
+        },
+        {
+          "href": "https://impact.geant.org/",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/community-programme/",
+          "text": "Community Programme",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/innovationprogramme/",
+          "text": "Innovation Programme",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/community-award/",
+          "text": "Community Award",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/learning/",
+          "text": "Learning and Development",
+          "visible": true
+        },
+        {
+          "href": "https://connect.geant.org/",
+          "text": "CONNECT - GÉANT community news",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://tnc.geant.org/",
+          "text": "TNC",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/security-days/",
+          "text": "Security Days",
+          "visible": true
+        },
+        {
+          "href": "https://symposium.geant.org/",
+          "text": "GÉANT Project Symposium",
+          "visible": true
+        },
+        {
+          "href": "https://events.geant.org/",
+          "text": "Community events",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/contact/",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/geant-operations-centre_goc/",
+          "text": "Find out more",
+          "visible": true
+        },
+        {
+          "href": "tel:+31(0)20%205304488",
+          "text": "T:+31(0)20 5304488",
+          "visible": true
+        },
+        {
+          "href": "https://www.google.nl/maps/place/Hoekenrode+3,+1102+BR+Amsterdam-Zuidoost,+Netherlands/@52.3132621,4.946626,17z/data=!3m1!4b1!4m5!3m4!1s0x47c60b9050de291b:0xb996bef8b77be2cf!8m2!3d52.3132588!4d4.9488147",
+          "text": "Amsterdam office on Google Maps",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/wp-content/uploads/2026/06/Directions-to-the-GEANT-Amsterdam-office-2026.pdf",
+          "text": "Getting to the Amsterdam office (PDF)",
+          "visible": true
+        },
+        {
+          "href": "tel:+44%20(0)1223%20371%20300",
+          "text": "T:+44 (0)1223 371 300",
+          "visible": true
+        },
+        {
+          "href": "tel:+44%20(0)1223%20363%20628",
+          "text": "City House security: +44 (0)1223 363 628",
+          "visible": true
+        },
+        {
+          "href": "https://www.google.co.uk/maps/place/Cambridge,+Cambridgeshire+CB2+1PQ/@52.1921226,0.1310111,17z/data=!3m1!4b1!4m2!3m1!1s0x47d87082bbeb485f:0x59d658b8c91db472",
+          "text": "Cambridge office on Goo​gle Maps",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/wp-content/uploads/2026/06/Directions-to-the-GEANT-Cambridge-office-2026.pdf",
+          "text": "Getting to the Cambridge office (PDF)",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "Find out more about GÉANT.",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/",
+          "text": "resources.geant.org",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/",
+          "text": "GEANT",
+          "visible": true
+        },
+        {
+          "href": "https://mstdn.social/@geant",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/geantnetworks",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/GEANTcommunity/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/GEANTtv",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/geant_community/?hl=en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://careers.geant.org/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://impact.geant.org/",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://connect.geant.org/",
+          "text": "CONNECT - GÉANT community news",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/anti-slavery-policy/",
+          "text": "Anti-slavery policy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/responsible-disclosure-policy/",
+          "text": "Responsible disclosure policy",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/code-of-conduct/",
+          "text": "GÉANT Community Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/use-of-the-eu-funding-statement/",
+          "text": "Use of the EU funding statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/web-accessibility-statement/",
+          "text": "Web accessibility statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/",
+          "text": "Cookie Policy (EU)",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/disclaimer/",
+          "text": "Disclaimer",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/privacy-notice/",
+          "text": "Privacy Notice",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://geant.org/about-geant/",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "About GÉANT",
+      "http_status": 200,
+      "final_url": "https://geant.org/about-geant/",
+      "title": "About GÉANT",
+      "lang_attr": "en-US",
+      "main_text": "Home . About GÉANT About GÉANT We provide and advance the digital infrastructure and services required to accelerate research, education, and innovation. Working closely with our members, we support a secure and competitive Europe. Contact us V Vision, mission, strategy G GÉANT Executive Team G Governance M Membership B Become a GÉANT member E Equity, Diversity and Inclusion (EDI) GÉANT in numbers 43 National Research and Education Networks represented 50M+ Researchers, students and educators connected in Europe 110 National networks reached globally Find out more about GÉANT TNC The largest and most prestigious research and education networking conference attracts 900+ participants from 70+ countries Network Delivering secure connectivity for Europe’s supercomputing infrastructure Identity and Access eduroam provides secure Wi-Fi connectivity in over 100 countries Strategy GÉANT Association Strategy 2026-2030 Annual Report Explore our key activities from 2025",
+      "full_text": "Manage cookie consent To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions. Functional Functional Always active The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network. Preferences Preferences The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user. Statistics Statistics The technical storage or access that is used exclusively for statistical purposes. The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you. Marketing Marketing The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes. Manage options Manage services Manage {vendor_count} vendors Read more about these purposes Accept Deny View preferences Save preferences View preferences Cookie Policy Privacy Statement {title} Skip to Content Who we are Back Who we are About GÉANT Back About GÉANT Vision, mission, strategy Executive team Governance Membership Become a GÉANT member Equity, Diversity and Inclusion (EDI) Who we work with Back Who we work with National Research and Education Networks European institutions European e‑infrastructures Global partners Commercial Partnership Programme Procurement and legal Back Procurement and legal Procurement and supplier information Formalities Careers What we do Back What we do Projects Back Projects The GÉANT Project EuroHPC HyperConnectivity GÉANT EOSC Node Network and connectivity Back Network and connectivity The pan-European GÉANT Network Intercontinental connectivity Network innovation Network services Network operations Identity and Access Management (IAM) Back Identity and Access Management (IAM) eduroam eduGAIN Core AAI Platform MyAccessID MyAcademicID eduTEAMS InAcademia IAM programmes and initiatives Security Back Security Security products and services eduVPN Training and awareness GÉANT Security Operations Centre GÉANT Security Innovation Lab Compliance Clouds Back Clouds About the GÉANT Cloud Frameworks OCRE 2024 Framework eduMEET Above-the-Net Services Incubator Impact Community Back Community GÉANT Community Back GÉANT Community Community Programme Innovation Programme Community Award Learning and Development News and events Back News and events CONNECT - GÉANT community news Events Back Events TNC Security Days GÉANT Project Symposium Community events Resources Contact Search Search Search Home . About GÉANT About GÉANT We provide and advance the digital infrastructure and services required to accelerate research, education, and innovation. Working closely with our members, we support a secure and competitive Europe. Contact us V Vision, mission, strategy G GÉANT Executive Team G Governance M Membership B Become a GÉANT member E Equity, Diversity and Inclusion (EDI) GÉANT in numbers 43 National Research and Education Networks represented 50M+ Researchers, students and educators connected in Europe 110 National networks reached globally Find out more about GÉANT TNC The largest and most prestigious research and education networking conference attracts 900+ participants from 70+ countries Network Delivering secure connectivity for Europe’s supercomputing infrastructure Identity and Access eduroam provides secure Wi-Fi connectivity in over 100 countries Strategy GÉANT Association Strategy 2026-2030 Annual Report Explore our key activities from 2025 Who we are About GÉANT Who we work with Procurement and legal Careers What we do Projects Network and connectivity Identity and Access Management (IAM) Security Clouds Impact Community GÉANT Community News and events CONNECT - GÉANT community news Events Resources Contact Anti-slavery policy Responsible disclosure policy GÉANT Community Code of Conduct Use of the EU funding statement Web accessibility statement Cookie Policy (EU) Disclaimer Privacy Notice Keep up to date Manage cookie consent",
+      "links": [
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+          "text": "Manage options",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-cookies-overview",
+          "text": "Manage services",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-tcf-wrapper",
+          "text": "Manage {vendor_count} vendors",
+          "visible": true
+        },
+        {
+          "href": "https://cookiedatabase.org/tcf/purposes/",
+          "text": "Read more about these purposes",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+          "text": "View preferences",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/",
+          "text": "Cookie Policy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/privacy-notice/",
+          "text": "Privacy Statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org",
+          "text": "Geant logo icon",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/vision-mission-strategy/",
+          "text": "Vision, mission, strategy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/geant-executive-team/",
+          "text": "Executive team",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/governance/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/membership/",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/become-a-geant-member/",
+          "text": "Become a GÉANT member",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+          "text": "Equity, Diversity and Inclusion (EDI)",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/national-research-and-education-networks/",
+          "text": "National Research and Education Networks",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/european-institutions/",
+          "text": "European institutions",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/european-e-infrastructures/",
+          "text": "European e‑infrastructures",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/global-partners/",
+          "text": "Global partners",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/commercial-partnership-programme/",
+          "text": "Commercial Partnership Programme",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+          "text": "Procurement and supplier information",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/formalities/",
+          "text": "Formalities",
+          "visible": true
+        },
+        {
+          "href": "https://careers.geant.org/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/the-geant-project/",
+          "text": "The GÉANT Project",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+          "text": "EuroHPC HyperConnectivity",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/geant-eosc-node/",
+          "text": "GÉANT EOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "The pan-European GÉANT Network",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/intercontinental-connectivity/",
+          "text": "Intercontinental connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/network_innovation/",
+          "text": "Network innovation",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/services/",
+          "text": "Network services",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/network_operations/",
+          "text": "Network operations",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://eduroam.org/",
+          "text": "eduroam",
+          "visible": true
+        },
+        {
+          "href": "https://edugain.org/",
+          "text": "eduGAIN",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/geant-core-aai-platform",
+          "text": "Core AAI Platform",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/myaccessid",
+          "text": "MyAccessID",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/myacademicid",
+          "text": "MyAcademicID",
+          "visible": true
+        },
+        {
+          "href": "https://eduteams.org/",
+          "text": "eduTEAMS",
+          "visible": true
+        },
+        {
+          "href": "https://inacademia.org/",
+          "text": "InAcademia",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/community/",
+          "text": "IAM programmes and initiatives",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/services/",
+          "text": "Security products and services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eduvpn.org/",
+          "text": "eduVPN",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/training-and-events/",
+          "text": "Training and awareness",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/security-operations-centre/",
+          "text": "GÉANT Security Operations Centre",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/geant-security-innovation-lab/",
+          "text": "GÉANT Security Innovation Lab",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/compliance/",
+          "text": "Compliance",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/geant-cloud-frameworks/",
+          "text": "About the GÉANT Cloud Frameworks",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/the-ocre-2024-framework/",
+          "text": "OCRE 2024 Framework",
+          "visible": true
+        },
+        {
+          "href": "https://edumeet.org/",
+          "text": "eduMEET",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/above-the-net-services-incubator",
+          "text": "Above-the-Net Services Incubator",
+          "visible": true
+        },
+        {
+          "href": "https://impact.geant.org/",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/community-programme/",
+          "text": "Community Programme",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/innovationprogramme/",
+          "text": "Innovation Programme",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/community-award/",
+          "text": "Community Award",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/learning/",
+          "text": "Learning and Development",
+          "visible": true
+        },
+        {
+          "href": "https://connect.geant.org/",
+          "text": "CONNECT - GÉANT community news",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://tnc.geant.org/",
+          "text": "TNC",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/security-days/",
+          "text": "Security Days",
+          "visible": true
+        },
+        {
+          "href": "https://symposium.geant.org/",
+          "text": "GÉANT Project Symposium",
+          "visible": true
+        },
+        {
+          "href": "https://events.geant.org/",
+          "text": "Community events",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/contact/",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/vision-mission-strategy/",
+          "text": "V Vision, mission, strategy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/geant-executive-team/",
+          "text": "G GÉANT Executive Team",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/governance/",
+          "text": "G Governance",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/membership/",
+          "text": "M Membership",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/become-a-geant-member/",
+          "text": "B Become a GÉANT member",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+          "text": "E Equity, Diversity and Inclusion (EDI)",
+          "visible": true
+        },
+        {
+          "href": "https://tnc.geant.org/",
+          "text": "TNC The largest and most prestigious research and education networking conference attracts 900+ participants from 70+ countries",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+          "text": "Network Delivering secure connectivity for Europe’s supercomputing infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://eduroam.org/",
+          "text": "Identity and Access eduroam provides secure Wi-Fi connectivity in over 100 countries",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/vision-mission-strategy/",
+          "text": "Strategy GÉANT Association Strategy 2026-2030",
+          "visible": true
+        },
+        {
+          "href": "https://ar.geant.org/ar2025/",
+          "text": "Annual Report Explore our key activities from 2025",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/",
+          "text": "GEANT",
+          "visible": true
+        },
+        {
+          "href": "https://mstdn.social/@geant",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/geantnetworks",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/GEANTcommunity/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/GEANTtv",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/geant_community/?hl=en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://careers.geant.org/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://impact.geant.org/",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://connect.geant.org/",
+          "text": "CONNECT - GÉANT community news",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/anti-slavery-policy/",
+          "text": "Anti-slavery policy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/responsible-disclosure-policy/",
+          "text": "Responsible disclosure policy",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/code-of-conduct/",
+          "text": "GÉANT Community Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/use-of-the-eu-funding-statement/",
+          "text": "Use of the EU funding statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/web-accessibility-statement/",
+          "text": "Web accessibility statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/",
+          "text": "Cookie Policy (EU)",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/disclaimer/",
+          "text": "Disclaimer",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/privacy-notice/",
+          "text": "Privacy Notice",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://geant.org/about-geant/vision-mission-strategy/",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "Vision, mission, strategy",
+      "http_status": 200,
+      "final_url": "https://geant.org/about-geant/vision-mission-strategy/",
+      "title": "Vision, mission, strategy - GÉANT",
+      "lang_attr": "en-US",
+      "main_text": "Home . About GÉANT . Vision, mission, strategy Vision, mission, strategy The GÉANT Association provides and advances the digital infrastructure and services required to accelerate research, education, and innovation for a secure and competitive Europe. Membership The GÉANT Association includes 37 NRENs, NORDUnet, and associates including five Nordic NRENs, KREN, CERN, and ESA. Governance The General Assembly is the GÉANT Association’s highest governing body, consisting of representatives from each member. Projects GÉANT projects drive innovation across networking, Identity and Access Management (IAM), global collaboration and more. Vision and mission The GÉANT Association consists of 43 European National Research and Education Networks (NRENs). For decades, we have been building physical and human networks across Europe and around the world. Our unique collaboration model delivers an unmatched multiplier effect and creates the digital foundation for research and education (R&E) in Europe. Together, and as a trusted partner of the European Commission, we power the knowledge sharing and innovation essential for strengthening Europe’s competitiveness, security, and prosperity. Our vision Powering Knowledge for Europe. Our mission The GÉANT Association provides and advances the digital infrastructure and services required to accelerate research, education, and innovation for a secure and competitive Europe. GÉANT Association Strategy 2026-2030 Strategic goals Collaborate to strengthen physical and human networks across Europe and beyond We will further strengthen collaboration between our unique and diverse human network – the most effective way to achieve not just the highest quality and geographic reach of the physical network, but the advancement of the entire digital foundation for research and education. Create scalable, innovative services prioritised by the community We will identify, co-create, and deliver digital services that integrate emerging technology to comprehensively address community priorities, while linking seamlessly to the digital infrastructure we provide. Build a sustainable financial model We will build a sustainable financial model that allows the GÉANT Association to continue its core operations, expand to new markets and end users, realise healthy service and product life cycles, and thrive in a rapidly advancing and commercially competitive technology landscape. Challenges The challenges we face as the GÉANT Association are not static. These are the current primary uncertainties, challenges or risks, and they will be monitored and updated annually: Geopolitical uncertainty with the risk of fragmentation. A diverse association with a spectrum of needs. A highly uncertain funding landscape. A changing EU regulatory environment​. Evolving technology and user expectations. Transformations To both achieve our strategic goals and mitigate challenges, we strive to reach the following transformations by 2030: Realise platforms for NREN collaboration that facilitate both unity and NREN to NREN mutual benefit.​ Ensure organisational and association resilience through a sustainable business and governance model. ​ Establish and execute a common vision on services and innovation with equal access across Europe and globally.​ Leverage our unique position in Europe to increase visibility and influence policy. ​ Mainstream a proactive mindset and approach to anticipate and mitigate future uncertainties. GÉANT Association Strategy Framework 2026-2030 The GÉANT Association Strategy 2026-2030 is underpinned by this Strategy Framework that further elaborates on the strategy and provides the framework for joint execution by the association . It also supports the creation of roadmaps and annual plans which inform the Annual Operating Plan and Budget. Guiding principles The GÉANT Association’s guiding principles provide the foundation for decision making and long term sustainability. They are the lens through which priorities, investments and collaboration models will be assessed. Member centred | Innovation | Scalability | Financial logic | Proactive | Impact Strategic service portfolio The strategic service portfolio is the centrepiece of the GÉANT Association’s future direction. It reflects the association’s commitment to deliver high value, scalable services that meet evolving NREN and R&E user needs while maintaining financial sustainability. It is also diversifying into a complementary set of emerging and professional services to strengthen the human and organisational aspects of the community. Joint design and delivery with NRENs and partners will be reinforced by an effective Product Lifecycle Management system and aligned with an innovation funnel and diversified funding channels. Each of the portfolio areas will ultimately be guided by thematic roadmaps, building on GÉANT’s CTO workshop results where relevant, and each service will have a clear Service Value Statement. Technical services: Network infrastructure | Identity and Access Management (IAM) | Security Emerging services: Data | Education | AI Professional services: Events management | Advisory | Learning and talent development Engagement and partnerships Active engagement and partnerships are what enable and drive GÉANT to build trust, shape policy, expand its reach and co create services with members and partners. As funding opportunities evolve, the GÉANT Association must cultivate a broader and more dynamic partnership model and broaden its ecosystem to integrate new stakeholders from the digital R&E sphere. Engagement is a strategic capability that channels new knowledge, collaborative approaches, donor insights, and a global perspective for R&E service innovation development. Global partnerships The GÉANT Association will maintain and expand strategic partnerships with global Regional Education Networks (RENs) through collaborative projects and mutually beneficial initiatives to extend the value, reach and influence of the GÉANT Association and its members. Influencing and policy engagement The GÉANT Association will be broadly recognised as the secure, trusted, sovereign infrastructure for Europe. Together with its members it will engage proactively with the EC, relevant DGs, and policy bodies to ensure R&E needs remain visible and influential. GÉANT Community Programme The GÉANT Community Programme (GCP) will continue to be led by community representatives and serve as the primary platform for community initiatives. Expanded ecosystem To respond to emerging challenges and opportunities, the GÉANT Association will strengthen and broaden its partnerships and expand its engagement ecosystem where this adds value for NREN members, either directly through services, capabilities or efficiencies, or indirectly through influence, sustainability, scale or future opportunity. Enabling strategies The GÉANT organisation’s Enabling Strategies for Finance and Operation, People and Culture, Partner Relations, Security, and Communications will provide the environment and support needed to build a sustainable financial approach that delivers the strategic service portfolio and ensures effective engagement. Together, these components share common value and goals and help to manage resources. The functions below and accompanying core processes are key enablers of disciplined delivery, financial stability and organisational cohesion. Finance and Operation Project Portfolio and Delivery Service and Product Portfolio Management Compliance and Legal Digital, Data and AI Sustainability People and Culture Partner Relations Security Communications",
+      "full_text": "Manage cookie consent To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions. Functional Functional Always active The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network. Preferences Preferences The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user. Statistics Statistics The technical storage or access that is used exclusively for statistical purposes. The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you. Marketing Marketing The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes. Manage options Manage services Manage {vendor_count} vendors Read more about these purposes Accept Deny View preferences Save preferences View preferences Cookie Policy Privacy Statement {title} Skip to Content Who we are Back Who we are About GÉANT Back About GÉANT Vision, mission, strategy Executive team Governance Membership Become a GÉANT member Equity, Diversity and Inclusion (EDI) Who we work with Back Who we work with National Research and Education Networks European institutions European e‑infrastructures Global partners Commercial Partnership Programme Procurement and legal Back Procurement and legal Procurement and supplier information Formalities Careers What we do Back What we do Projects Back Projects The GÉANT Project EuroHPC HyperConnectivity GÉANT EOSC Node Network and connectivity Back Network and connectivity The pan-European GÉANT Network Intercontinental connectivity Network innovation Network services Network operations Identity and Access Management (IAM) Back Identity and Access Management (IAM) eduroam eduGAIN Core AAI Platform MyAccessID MyAcademicID eduTEAMS InAcademia IAM programmes and initiatives Security Back Security Security products and services eduVPN Training and awareness GÉANT Security Operations Centre GÉANT Security Innovation Lab Compliance Clouds Back Clouds About the GÉANT Cloud Frameworks OCRE 2024 Framework eduMEET Above-the-Net Services Incubator Impact Community Back Community GÉANT Community Back GÉANT Community Community Programme Innovation Programme Community Award Learning and Development News and events Back News and events CONNECT - GÉANT community news Events Back Events TNC Security Days GÉANT Project Symposium Community events Resources Contact Search Search Search Home . About GÉANT . Vision, mission, strategy Vision, mission, strategy The GÉANT Association provides and advances the digital infrastructure and services required to accelerate research, education, and innovation for a secure and competitive Europe. Membership The GÉANT Association includes 37 NRENs, NORDUnet, and associates including five Nordic NRENs, KREN, CERN, and ESA. Governance The General Assembly is the GÉANT Association’s highest governing body, consisting of representatives from each member. Projects GÉANT projects drive innovation across networking, Identity and Access Management (IAM), global collaboration and more. Vision and mission The GÉANT Association consists of 43 European National Research and Education Networks (NRENs). For decades, we have been building physical and human networks across Europe and around the world. Our unique collaboration model delivers an unmatched multiplier effect and creates the digital foundation for research and education (R&E) in Europe. Together, and as a trusted partner of the European Commission, we power the knowledge sharing and innovation essential for strengthening Europe’s competitiveness, security, and prosperity. Our vision Powering Knowledge for Europe. Our mission The GÉANT Association provides and advances the digital infrastructure and services required to accelerate research, education, and innovation for a secure and competitive Europe. GÉANT Association Strategy 2026-2030 Strategic goals Collaborate to strengthen physical and human networks across Europe and beyond We will further strengthen collaboration between our unique and diverse human network – the most effective way to achieve not just the highest quality and geographic reach of the physical network, but the advancement of the entire digital foundation for research and education. Create scalable, innovative services prioritised by the community We will identify, co-create, and deliver digital services that integrate emerging technology to comprehensively address community priorities, while linking seamlessly to the digital infrastructure we provide. Build a sustainable financial model We will build a sustainable financial model that allows the GÉANT Association to continue its core operations, expand to new markets and end users, realise healthy service and product life cycles, and thrive in a rapidly advancing and commercially competitive technology landscape. Challenges The challenges we face as the GÉANT Association are not static. These are the current primary uncertainties, challenges or risks, and they will be monitored and updated annually: Geopolitical uncertainty with the risk of fragmentation. A diverse association with a spectrum of needs. A highly uncertain funding landscape. A changing EU regulatory environment​. Evolving technology and user expectations. Transformations To both achieve our strategic goals and mitigate challenges, we strive to reach the following transformations by 2030: Realise platforms for NREN collaboration that facilitate both unity and NREN to NREN mutual benefit.​ Ensure organisational and association resilience through a sustainable business and governance model. ​ Establish and execute a common vision on services and innovation with equal access across Europe and globally.​ Leverage our unique position in Europe to increase visibility and influence policy. ​ Mainstream a proactive mindset and approach to anticipate and mitigate future uncertainties. GÉANT Association Strategy Framework 2026-2030 The GÉANT Association Strategy 2026-2030 is underpinned by this Strategy Framework that further elaborates on the strategy and provides the framework for joint execution by the association . It also supports the creation of roadmaps and annual plans which inform the Annual Operating Plan and Budget. Guiding principles The GÉANT Association’s guiding principles provide the foundation for decision making and long term sustainability. They are the lens through which priorities, investments and collaboration models will be assessed. Member centred | Innovation | Scalability | Financial logic | Proactive | Impact Strategic service portfolio The strategic service portfolio is the centrepiece of the GÉANT Association’s future direction. It reflects the association’s commitment to deliver high value, scalable services that meet evolving NREN and R&E user needs while maintaining financial sustainability. It is also diversifying into a complementary set of emerging and professional services to strengthen the human and organisational aspects of the community. Joint design and delivery with NRENs and partners will be reinforced by an effective Product Lifecycle Management system and aligned with an innovation funnel and diversified funding channels. Each of the portfolio areas will ultimately be guided by thematic roadmaps, building on GÉANT’s CTO workshop results where relevant, and each service will have a clear Service Value Statement. Technical services: Network infrastructure | Identity and Access Management (IAM) | Security Emerging services: Data | Education | AI Professional services: Events management | Advisory | Learning and talent development Engagement and partnerships Active engagement and partnerships are what enable and drive GÉANT to build trust, shape policy, expand its reach and co create services with members and partners. As funding opportunities evolve, the GÉANT Association must cultivate a broader and more dynamic partnership model and broaden its ecosystem to integrate new stakeholders from the digital R&E sphere. Engagement is a strategic capability that channels new knowledge, collaborative approaches, donor insights, and a global perspective for R&E service innovation development. Global partnerships The GÉANT Association will maintain and expand strategic partnerships with global Regional Education Networks (RENs) through collaborative projects and mutually beneficial initiatives to extend the value, reach and influence of the GÉANT Association and its members. Influencing and policy engagement The GÉANT Association will be broadly recognised as the secure, trusted, sovereign infrastructure for Europe. Together with its members it will engage proactively with the EC, relevant DGs, and policy bodies to ensure R&E needs remain visible and influential. GÉANT Community Programme The GÉANT Community Programme (GCP) will continue to be led by community representatives and serve as the primary platform for community initiatives. Expanded ecosystem To respond to emerging challenges and opportunities, the GÉANT Association will strengthen and broaden its partnerships and expand its engagement ecosystem where this adds value for NREN members, either directly through services, capabilities or efficiencies, or indirectly through influence, sustainability, scale or future opportunity. Enabling strategies The GÉANT organisation’s Enabling Strategies for Finance and Operation, People and Culture, Partner Relations, Security, and Communications will provide the environment and support needed to build a sustainable financial approach that delivers the strategic service portfolio and ensures effective engagement. Together, these components share common value and goals and help to manage resources. The functions below and accompanying core processes are key enablers of disciplined delivery, financial stability and organisational cohesion. Finance and Operation Project Portfolio and Delivery Service and Product Portfolio Management Compliance and Legal Digital, Data and AI Sustainability People and Culture Partner Relations Security Communications Who we are About GÉANT Who we work with Procurement and legal Careers What we do Projects Network and connectivity Identity and Access Management (IAM) Security Clouds Impact Community GÉANT Community News and events CONNECT - GÉANT community news Events Resources Contact Anti-slavery policy Responsible disclosure policy GÉANT Community Code of Conduct Use of the EU funding statement Web accessibility statement Cookie Policy (EU) Disclaimer Privacy Notice Keep up to date Manage cookie consent",
+      "links": [
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+          "text": "Manage options",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-cookies-overview",
+          "text": "Manage services",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-tcf-wrapper",
+          "text": "Manage {vendor_count} vendors",
+          "visible": true
+        },
+        {
+          "href": "https://cookiedatabase.org/tcf/purposes/",
+          "text": "Read more about these purposes",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/#cmplz-manage-consent-container",
+          "text": "View preferences",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/",
+          "text": "Cookie Policy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/privacy-notice/",
+          "text": "Privacy Statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org",
+          "text": "Geant logo icon",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/vision-mission-strategy/",
+          "text": "Vision, mission, strategy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/geant-executive-team/",
+          "text": "Executive team",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/governance/",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/membership/",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/become-a-geant-member/",
+          "text": "Become a GÉANT member",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+          "text": "Equity, Diversity and Inclusion (EDI)",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/national-research-and-education-networks/",
+          "text": "National Research and Education Networks",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/european-institutions/",
+          "text": "European institutions",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/european-e-infrastructures/",
+          "text": "European e‑infrastructures",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/global-partners/",
+          "text": "Global partners",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/commercial-partnership-programme/",
+          "text": "Commercial Partnership Programme",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+          "text": "Procurement and supplier information",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/formalities/",
+          "text": "Formalities",
+          "visible": true
+        },
+        {
+          "href": "https://careers.geant.org/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/the-geant-project/",
+          "text": "The GÉANT Project",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/eurohpc-hyperconnectivity/",
+          "text": "EuroHPC HyperConnectivity",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/geant-eosc-node/",
+          "text": "GÉANT EOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "The pan-European GÉANT Network",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/intercontinental-connectivity/",
+          "text": "Intercontinental connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/network_innovation/",
+          "text": "Network innovation",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/services/",
+          "text": "Network services",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/network_operations/",
+          "text": "Network operations",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://eduroam.org/",
+          "text": "eduroam",
+          "visible": true
+        },
+        {
+          "href": "https://edugain.org/",
+          "text": "eduGAIN",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/geant-core-aai-platform",
+          "text": "Core AAI Platform",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/myaccessid",
+          "text": "MyAccessID",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/myacademicid",
+          "text": "MyAcademicID",
+          "visible": true
+        },
+        {
+          "href": "https://eduteams.org/",
+          "text": "eduTEAMS",
+          "visible": true
+        },
+        {
+          "href": "https://inacademia.org/",
+          "text": "InAcademia",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/community/",
+          "text": "IAM programmes and initiatives",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/services/",
+          "text": "Security products and services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eduvpn.org/",
+          "text": "eduVPN",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/training-and-events/",
+          "text": "Training and awareness",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/security-operations-centre/",
+          "text": "GÉANT Security Operations Centre",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/geant-security-innovation-lab/",
+          "text": "GÉANT Security Innovation Lab",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/compliance/",
+          "text": "Compliance",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/geant-cloud-frameworks/",
+          "text": "About the GÉANT Cloud Frameworks",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/the-ocre-2024-framework/",
+          "text": "OCRE 2024 Framework",
+          "visible": true
+        },
+        {
+          "href": "https://edumeet.org/",
+          "text": "eduMEET",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/above-the-net-services-incubator",
+          "text": "Above-the-Net Services Incubator",
+          "visible": true
+        },
+        {
+          "href": "https://impact.geant.org/",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/community-programme/",
+          "text": "Community Programme",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/innovationprogramme/",
+          "text": "Innovation Programme",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/community-award/",
+          "text": "Community Award",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/learning/",
+          "text": "Learning and Development",
+          "visible": true
+        },
+        {
+          "href": "https://connect.geant.org/",
+          "text": "CONNECT - GÉANT community news",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://tnc.geant.org/",
+          "text": "TNC",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/security-days/",
+          "text": "Security Days",
+          "visible": true
+        },
+        {
+          "href": "https://symposium.geant.org/",
+          "text": "GÉANT Project Symposium",
+          "visible": true
+        },
+        {
+          "href": "https://events.geant.org/",
+          "text": "Community events",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/membership/",
+          "text": "The GÉANT Association includes 37 NRENs, NORDUnet, and associates including five Nordic NRENs, KREN, CERN, and ESA.",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/governance/",
+          "text": "The General Assembly is the GÉANT Association’s highest governing body, consisting of representatives from each member.",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "GÉANT projects drive innovation across networking, Identity and Access Management (IAM), global collaboration and more.",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/community-programme/",
+          "text": "GÉANT Community Programme",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/",
+          "text": "GEANT",
+          "visible": true
+        },
+        {
+          "href": "https://mstdn.social/@geant",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/geantnetworks",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/GEANTcommunity/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/GEANTtv",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/geant_community/?hl=en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/about-geant/",
+          "text": "About GÉANT",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/who-we-work-with/",
+          "text": "Who we work with",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/procurement-and-legal/",
+          "text": "Procurement and legal",
+          "visible": true
+        },
+        {
+          "href": "https://careers.geant.org/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://network.geant.org/",
+          "text": "Network and connectivity",
+          "visible": true
+        },
+        {
+          "href": "https://trustidentity.geant.org/",
+          "text": "Identity and Access Management (IAM)",
+          "visible": true
+        },
+        {
+          "href": "https://security.geant.org/",
+          "text": "Security",
+          "visible": true
+        },
+        {
+          "href": "https://clouds.geant.org/",
+          "text": "Clouds",
+          "visible": true
+        },
+        {
+          "href": "https://impact.geant.org/",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://community.geant.org/",
+          "text": "GÉANT Community",
+          "visible": true
+        },
+        {
+          "href": "https://connect.geant.org/",
+          "text": "CONNECT - GÉANT community news",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/anti-slavery-policy/",
+          "text": "Anti-slavery policy",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/responsible-disclosure-policy/",
+          "text": "Responsible disclosure policy",
+          "visible": true
+        },
+        {
+          "href": "https://resources.geant.org/code-of-conduct/",
+          "text": "GÉANT Community Code of Conduct",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/use-of-the-eu-funding-statement/",
+          "text": "Use of the EU funding statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/web-accessibility-statement/",
+          "text": "Web accessibility statement",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/cookie-policy-eu/",
+          "text": "Cookie Policy (EU)",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/disclaimer/",
+          "text": "Disclaimer",
+          "visible": true
+        },
+        {
+          "href": "https://geant.org/privacy-notice/",
+          "text": "Privacy Notice",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [
+    "https://geant.org/about-geant/geant-executive-team/ (cap for point 2)",
+    "https://geant.org/about-geant/governance/ (cap for point 2)",
+    "https://geant.org/about-geant/membership/ (cap for point 2)",
+    "https://geant.org/about-geant/become-a-geant-member/ (cap for point 2)",
+    "https://geant.org/about-geant/equity-diversity-and-inclusion/ (cap for point 2)",
+    "https://clouds.geant.org/geant-cloud-frameworks/ (cap for point 2)",
+    "https://geant.org/about-geant/membership/ (cap for point 2)"
+  ],
+  "crawl_note": "depth 1: 122 link(s) on the landing page, 3 followed because they matched a checklist point, 7 matched but dropped by a cap, the rest not relevant to any point"
 }

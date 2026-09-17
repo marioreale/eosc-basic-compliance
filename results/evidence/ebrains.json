@@ -2,7 +2,7 @@
   "node_id": "ebrains",
   "node_name": "EBRAINS",
   "requested_url": "https://ebrains.eu/",
-  "fetched_at": "2026-09-17T14:55:15+00:00",
+  "fetched_at": "2026-09-17T15:30:01+00:00",
   "final_url": "https://ebrains.eu/",
   "http_status": 200,
   "redirect_chain": [],
@@ -1873,5 +1873,2405 @@
   ],
   "meta_description": "An open research infrastructure that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ.",
   "error": "",
-  "screenshot": "ebrains.png"
+  "screenshot": "ebrains.png",
+  "crawl_depth": 1,
+  "children": [
+    {
+      "url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "EBRAINS Support for EuroHPC Applications",
+      "http_status": 200,
+      "final_url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+      "title": "EBRAINS Support for EuroHPC Applications | EBRAINS",
+      "lang_attr": "en",
+      "main_text": "Breadcrumb Start > Data, Tools & Services > Computing Infrastructure > EBRAINS Support for EuroHPC App… EBRAINS Support for EuroHPC Applications Are you interested in using Europe's most powerful HPC machines? At EBRAINS, we support you in preparing competitive applications for access to EuroHPC computational resources for your neuroscience research or tool and service development. Our support service assists you throughout the proposal preparation process. This includes: Identification of suitable EuroHPC systems and access calls Pre-assessment of software and workflow maturity Guidance on benchmark design and execution Estimation of computational resource requirements Support with the technical and scientific sections of your application Internal review of draft proposals by relevant technical experts The service aims to help you strengthen the technical quality and feasibility of your proposal before submission. Technical Support and Benchmarking As part of the pre-assessment process, we will evaluate your software to determine its readiness for large-scale HPC environments, and will identify suitable EuroHPC systems based on the requirements of your project. Follow-up support may include: Recommendations for benchmark configurations Estimation of core-hour and storage requirements Guidance on weak and strong scaling tests Advice on performance evaluation and interpretation Where appropriate, small-scale test allocations on EBRAINS-hosted HPC systems can be arranged to generate benchmarking data for proposal preparation. Proposal Preparation Support Our service provides support during the drafting phase of your application, including assistance with the following: Scientific impact statements Technical justification Resource justification Integration of benchmark results into the proposal Draft applications may undergo an internal review process involving feedback from domain and technical experts. Eligibility Our service is open to: Researchers from the neuroscience community Developers planning to utilize or deploy EBRAINS tools and services Users preparing proposals for EuroHPC access calls related to brain research. How to contact us For questions or to request support, please contact the EBRAINS for EuroHPC Application Support team by email: base-infra-resources@ebrains.eu Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register",
+      "full_text": "Skip to main content Main navigation About At a glance Mission Science Vision EBRAINS 2.0 Ethics & Society Regional presence National Nodes Members EBRAINS AISBL Governance Our People Careers Procurements Data, Tools & Services Brain Atlases Human Brain Atlas Macaque Brain Atlas Marmoset Brain Atlas Rat Brain Atlas Mouse Brain Atlas Brain Atlas Resources APIs Data Integration Analysis Medical Analytics Platform for Human Imaging (PHI) Medical Informatics Platform Human Intracerebral EEG Platform Health Data Cloud Modelling & Simulation Whole-Brain Simulation Network-Level Simulation Cellular-Level Simulation Molecular & Subcellular Simulation Neuromorphic Computing Visualisation & Analysis Inference & Validation Data & Knowledge Find Data Share Data Live Papers Collaborative Platform Collaboratory Computing Infrastructure Neuromorphic Computing High-Performance Computing (HPC) EBRAINS Support for EuroHPC Applications All Tools All Resources Impact Projects Current Projects Past Projects Collaborative Initiatives Industry Partnerships Industry Engagement EBRAINS in Use Research Workflows User Experiences Explorations Publications Participate Researchers Get an EBRAINS Account EBRAINS 10-Year Roadmap EBRAINS Community Open Calls Institutions Become a Member Education & Training Tutorials & E-Library Education Task Force Lab Visits Directory Student Community News & Events News Upcoming Events Past Events EBRAINS Summit 2025 Media EBRAINS in the Media Media Contact Press Kit Register Log In ← Back About › Data, Tools & Services › Impact › Participate › News & Events › Log In Register Breadcrumb Start > Data, Tools & Services > Computing Infrastructure > EBRAINS Support for EuroHPC App… EBRAINS Support for EuroHPC Applications Are you interested in using Europe's most powerful HPC machines? At EBRAINS, we support you in preparing competitive applications for access to EuroHPC computational resources for your neuroscience research or tool and service development. Our support service assists you throughout the proposal preparation process. This includes: Identification of suitable EuroHPC systems and access calls Pre-assessment of software and workflow maturity Guidance on benchmark design and execution Estimation of computational resource requirements Support with the technical and scientific sections of your application Internal review of draft proposals by relevant technical experts The service aims to help you strengthen the technical quality and feasibility of your proposal before submission. Technical Support and Benchmarking As part of the pre-assessment process, we will evaluate your software to determine its readiness for large-scale HPC environments, and will identify suitable EuroHPC systems based on the requirements of your project. Follow-up support may include: Recommendations for benchmark configurations Estimation of core-hour and storage requirements Guidance on weak and strong scaling tests Advice on performance evaluation and interpretation Where appropriate, small-scale test allocations on EBRAINS-hosted HPC systems can be arranged to generate benchmarking data for proposal preparation. Proposal Preparation Support Our service provides support during the drafting phase of your application, including assistance with the following: Scientific impact statements Technical justification Resource justification Integration of benchmark results into the proposal Draft applications may undergo an internal review process involving feedback from domain and technical experts. Eligibility Our service is open to: Researchers from the neuroscience community Developers planning to utilize or deploy EBRAINS tools and services Users preparing proposals for EuroHPC access calls related to brain research. How to contact us For questions or to request support, please contact the EBRAINS for EuroHPC Application Support team by email: base-infra-resources@ebrains.eu Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register Footer Pages About Data, Tools & Services Impact Participate News & Events Other Contact Us Terms & Policies Data Privacy Social Media X LinkedIn Mastodon Bluesky YouTube Newsletter Subscribe to our Newsletter Subscribe Co-funded by the European Union",
+      "links": [
+        {
+          "href": "https://ebrains.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance",
+          "text": "At a glance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/mission",
+          "text": "Mission",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/science-vision",
+          "text": "Science Vision",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ebrains-20",
+          "text": "EBRAINS 2.0",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ethics-society",
+          "text": "Ethics & Society",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence",
+          "text": "Regional presence",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/national-nodes",
+          "text": "National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl",
+          "text": "EBRAINS AISBL",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/our-people",
+          "text": "Our People",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/careers",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/procurements",
+          "text": "Procurements",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases",
+          "text": "Brain Atlases",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/human-brain",
+          "text": "Human Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/macaque-brain",
+          "text": "Macaque Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/marmoset-brain-atlas",
+          "text": "Marmoset Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/rat-brain",
+          "text": "Rat Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/mouse-brain",
+          "text": "Mouse Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/brain-atlas-resources",
+          "text": "Brain Atlas Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/apis",
+          "text": "APIs",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/data-integration",
+          "text": "Data Integration",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics",
+          "text": "Medical Analytics",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/platform-for-human-imaging-phi",
+          "text": "Platform for Human Imaging (PHI)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/medical-informatics-platform",
+          "text": "Medical Informatics Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/human-intracerebral-eeg-platform",
+          "text": "Human Intracerebral EEG Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/health-data-cloud",
+          "text": "Health Data Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation",
+          "text": "Modelling & Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/whole-brain-simulation",
+          "text": "Whole-Brain Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/network-level-simulation",
+          "text": "Network-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/cellular-level-simulation",
+          "text": "Cellular-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/molecular-and-subcellular-simulation",
+          "text": "Molecular & Subcellular Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/visualisation-analysis",
+          "text": "Visualisation & Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/inference-validation",
+          "text": "Inference & Validation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge",
+          "text": "Data & Knowledge",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/find-data",
+          "text": "Find Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/share-data",
+          "text": "Share Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/live-papers",
+          "text": "Live Papers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform",
+          "text": "Collaborative Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform/collaboratory",
+          "text": "Collaboratory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure",
+          "text": "Computing Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/high-performance-computing-hpc",
+          "text": "High-Performance Computing (HPC)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+          "text": "EBRAINS Support for EuroHPC Applications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/tools",
+          "text": "All Tools",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/resources",
+          "text": "All Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/current",
+          "text": "Current Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/past",
+          "text": "Past Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/collaborative-initiatives",
+          "text": "Collaborative Initiatives",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry",
+          "text": "Industry",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/partnerships",
+          "text": "Partnerships",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/industry-engagement",
+          "text": "Industry Engagement",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use",
+          "text": "EBRAINS in Use",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/featured-workflows",
+          "text": "Research Workflows",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/user-experience",
+          "text": "User Experiences",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/explorations",
+          "text": "Explorations",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/related-publications",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers",
+          "text": "Researchers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers/get-an-ebrains-account",
+          "text": "Get an EBRAINS Account",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/2025/call-for-contributions-to-the-ebrains-10-year-roadmap-2026-2036",
+          "text": "EBRAINS 10-Year Roadmap",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/ebrains-community",
+          "text": "EBRAINS Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions",
+          "text": "Institutions",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions/become-a-member",
+          "text": "Become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training",
+          "text": "Education & Training",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/tutorials-e-library",
+          "text": "Tutorials & E-Library",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/education-task-force",
+          "text": "Education Task Force",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/lab-visits-directory",
+          "text": "Lab Visits Directory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/student-community",
+          "text": "Student Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/news-and-press-releases",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/upcoming-events",
+          "text": "Upcoming Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/events/past-events",
+          "text": "Past Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/ebrains-summit-2025",
+          "text": "EBRAINS Summit 2025",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media",
+          "text": "Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/ebrains-in-the-media",
+          "text": "EBRAINS in the Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/media-contact",
+          "text": "Media Contact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/media/press-kit",
+          "text": "Press Kit",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/",
+          "text": "Start",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure",
+          "text": "Computing Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "mailto:base-infra-resources@ebrains.eu",
+          "text": "base-infra-resources@ebrains.eu",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/contact",
+          "text": "Contact Us",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/terms-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-privacy",
+          "text": "Data Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://x.com/EBRAINS_eu",
+          "text": "X",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/51657938/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://mastodon.social/@ebrains",
+          "text": "Mastodon",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/ebrains.bsky.social",
+          "text": "Bluesky",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/@ebrains7245",
+          "text": "YouTube",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/newsletter",
+          "text": "Subscribe",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://ebrains.eu/news-events/media/media-contact",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Media Contact",
+      "http_status": 200,
+      "final_url": "https://ebrains.eu/news-events/media/media-contact",
+      "title": "Media Contact | EBRAINS",
+      "lang_attr": "en",
+      "main_text": "Breadcrumb Start > Media > Media Contact Media Contact Media Contact Press Relations Helen Mendes press(at)ebrains(dot)eu Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register",
+      "full_text": "Skip to main content Main navigation About At a glance Mission Science Vision EBRAINS 2.0 Ethics & Society Regional presence National Nodes Members EBRAINS AISBL Governance Our People Careers Procurements Data, Tools & Services Brain Atlases Human Brain Atlas Macaque Brain Atlas Marmoset Brain Atlas Rat Brain Atlas Mouse Brain Atlas Brain Atlas Resources APIs Data Integration Analysis Medical Analytics Platform for Human Imaging (PHI) Medical Informatics Platform Human Intracerebral EEG Platform Health Data Cloud Modelling & Simulation Whole-Brain Simulation Network-Level Simulation Cellular-Level Simulation Molecular & Subcellular Simulation Neuromorphic Computing Visualisation & Analysis Inference & Validation Data & Knowledge Find Data Share Data Live Papers Collaborative Platform Collaboratory Computing Infrastructure Neuromorphic Computing High-Performance Computing (HPC) EBRAINS Support for EuroHPC Applications All Tools All Resources Impact Projects Current Projects Past Projects Collaborative Initiatives Industry Partnerships Industry Engagement EBRAINS in Use Research Workflows User Experiences Explorations Publications Participate Researchers Get an EBRAINS Account EBRAINS 10-Year Roadmap EBRAINS Community Open Calls Institutions Become a Member Education & Training Tutorials & E-Library Education Task Force Lab Visits Directory Student Community News & Events News Upcoming Events Past Events EBRAINS Summit 2025 Media EBRAINS in the Media Media Contact Press Kit Register Log In ← Back About › Data, Tools & Services › Impact › Participate › News & Events › Log In Register Breadcrumb Start > Media > Media Contact Media Contact Media Contact Press Relations Helen Mendes press(at)ebrains(dot)eu Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register Footer Pages About Data, Tools & Services Impact Participate News & Events Other Contact Us Terms & Policies Data Privacy Social Media X LinkedIn Mastodon Bluesky YouTube Newsletter Subscribe to our Newsletter Subscribe Co-funded by the European Union",
+      "links": [
+        {
+          "href": "https://ebrains.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance",
+          "text": "At a glance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/mission",
+          "text": "Mission",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/science-vision",
+          "text": "Science Vision",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ebrains-20",
+          "text": "EBRAINS 2.0",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ethics-society",
+          "text": "Ethics & Society",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence",
+          "text": "Regional presence",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/national-nodes",
+          "text": "National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl",
+          "text": "EBRAINS AISBL",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/our-people",
+          "text": "Our People",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/careers",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/procurements",
+          "text": "Procurements",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases",
+          "text": "Brain Atlases",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/human-brain",
+          "text": "Human Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/macaque-brain",
+          "text": "Macaque Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/marmoset-brain-atlas",
+          "text": "Marmoset Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/rat-brain",
+          "text": "Rat Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/mouse-brain",
+          "text": "Mouse Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/brain-atlas-resources",
+          "text": "Brain Atlas Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/apis",
+          "text": "APIs",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/data-integration",
+          "text": "Data Integration",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics",
+          "text": "Medical Analytics",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/platform-for-human-imaging-phi",
+          "text": "Platform for Human Imaging (PHI)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/medical-informatics-platform",
+          "text": "Medical Informatics Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/human-intracerebral-eeg-platform",
+          "text": "Human Intracerebral EEG Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/health-data-cloud",
+          "text": "Health Data Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation",
+          "text": "Modelling & Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/whole-brain-simulation",
+          "text": "Whole-Brain Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/network-level-simulation",
+          "text": "Network-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/cellular-level-simulation",
+          "text": "Cellular-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/molecular-and-subcellular-simulation",
+          "text": "Molecular & Subcellular Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/visualisation-analysis",
+          "text": "Visualisation & Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/inference-validation",
+          "text": "Inference & Validation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge",
+          "text": "Data & Knowledge",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/find-data",
+          "text": "Find Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/share-data",
+          "text": "Share Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/live-papers",
+          "text": "Live Papers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform",
+          "text": "Collaborative Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform/collaboratory",
+          "text": "Collaboratory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure",
+          "text": "Computing Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/high-performance-computing-hpc",
+          "text": "High-Performance Computing (HPC)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+          "text": "EBRAINS Support for EuroHPC Applications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/tools",
+          "text": "All Tools",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/resources",
+          "text": "All Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/current",
+          "text": "Current Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/past",
+          "text": "Past Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/collaborative-initiatives",
+          "text": "Collaborative Initiatives",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry",
+          "text": "Industry",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/partnerships",
+          "text": "Partnerships",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/industry-engagement",
+          "text": "Industry Engagement",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use",
+          "text": "EBRAINS in Use",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/featured-workflows",
+          "text": "Research Workflows",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/user-experience",
+          "text": "User Experiences",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/explorations",
+          "text": "Explorations",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/related-publications",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers",
+          "text": "Researchers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers/get-an-ebrains-account",
+          "text": "Get an EBRAINS Account",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/2025/call-for-contributions-to-the-ebrains-10-year-roadmap-2026-2036",
+          "text": "EBRAINS 10-Year Roadmap",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/ebrains-community",
+          "text": "EBRAINS Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions",
+          "text": "Institutions",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions/become-a-member",
+          "text": "Become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training",
+          "text": "Education & Training",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/tutorials-e-library",
+          "text": "Tutorials & E-Library",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/education-task-force",
+          "text": "Education Task Force",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/lab-visits-directory",
+          "text": "Lab Visits Directory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/student-community",
+          "text": "Student Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/news-and-press-releases",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/upcoming-events",
+          "text": "Upcoming Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/events/past-events",
+          "text": "Past Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/ebrains-summit-2025",
+          "text": "EBRAINS Summit 2025",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media",
+          "text": "Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/ebrains-in-the-media",
+          "text": "EBRAINS in the Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/media-contact",
+          "text": "Media Contact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/media/press-kit",
+          "text": "Press Kit",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/",
+          "text": "Start",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media",
+          "text": "Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/contact",
+          "text": "Contact Us",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/terms-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-privacy",
+          "text": "Data Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://x.com/EBRAINS_eu",
+          "text": "X",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/51657938/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://mastodon.social/@ebrains",
+          "text": "Mastodon",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/ebrains.bsky.social",
+          "text": "Bluesky",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/@ebrains7245",
+          "text": "YouTube",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/newsletter",
+          "text": "Subscribe",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://ebrains.eu/about",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "About",
+      "http_status": 200,
+      "final_url": "https://ebrains.eu/about",
+      "title": "About | EBRAINS",
+      "lang_attr": "en",
+      "main_text": "Breadcrumb Start > About About A Pioneering Ecosystem for Neuroscience Breakthroughs Digital Infrastructure for Brain Research Who we are EBRAINS is Europe’s digital infrastructure for brain research. It provides unique tools and data bringing together neuroscience, computing and AI to accelerate progress in brain science and medicine. EBRAINS enables researchers to explore the brain across all levels – from the molecular and cellular levels to the whole organ. EBRAINS was born from a European spirit of scientific collaboration across countries and disciplines. Now, its powerful technologies are open to all. EBRAINS at a Glance The EBRAINS research infrastructure was originally built by the EU-funded Human Brain Project. Now, EBRAINS is being further developed with the support of the European Commission, a network of National Nodes and institutional partners from across Europe. Learn more Our Mission EBRAINS is on a mission to revolutionise how neuroscience is conducted. The digital ecosystem that we provide enables advances in brain research that translate into innovations in neuroscience, healthcare and brain-related technology. Learn more Regional Presence Building on the best of national efforts through a pan-European network of National Nodes run by EBRAINS member institutions EBRAINS works as a European-level undertaking, combining scientific contributions and perspectives from institutional and national levels. Digital technology allows us to connect the greatest European strengths in research and make them accessible to everyone. In this way, EBRAINS enables overcoming the fragmentation of research efforts and fosters large-scale coordination and cooperation. National Nodes Members Katrin Amunts, EBRAINS Joint CEO Science Vision Our vision is to revolutionise how neuroscience research is performed, changing the research culture from fragmented individual laboratory efforts to integrated platform research, ultimately leading to a better understanding of the brain and improving brain health and technology. Learn more Ethics & Society As a European research infrastructure, EBRAINS serves the scientific community and aims to promote the public good. We recognise that true scientific and technical excellence requires ethical excellence. Learn more Credit: Brain Simulation Section (head: Prof. Dr. Petra Ritter), Charité Unviersitätsmedizin Berlin EBRAINS 2.0 Since 2024, the EBRAINS infrastructure is being further developed within the EU-funded EBRAINS 2.0 project. Its aim is to establish a new standard for brain atlases, gather and connect multimodal brain data and advance digital twin approaches. Learn more The EBRAINS AISBL The EBRAINS AISBL is an international non-profit association (AISBL), headquartered in Brussels, Belgium. Learn more Discover EBRAINS Our new brochure provides insights into what the EBRAINS infrastructure has to offer and how individual researchers and institutional partners can become part of it. Download brochure (PDF) Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register",
+      "full_text": "Skip to main content Main navigation About At a glance Mission Science Vision EBRAINS 2.0 Ethics & Society Regional presence National Nodes Members EBRAINS AISBL Governance Our People Careers Procurements Data, Tools & Services Brain Atlases Human Brain Atlas Macaque Brain Atlas Marmoset Brain Atlas Rat Brain Atlas Mouse Brain Atlas Brain Atlas Resources APIs Data Integration Analysis Medical Analytics Platform for Human Imaging (PHI) Medical Informatics Platform Human Intracerebral EEG Platform Health Data Cloud Modelling & Simulation Whole-Brain Simulation Network-Level Simulation Cellular-Level Simulation Molecular & Subcellular Simulation Neuromorphic Computing Visualisation & Analysis Inference & Validation Data & Knowledge Find Data Share Data Live Papers Collaborative Platform Collaboratory Computing Infrastructure Neuromorphic Computing High-Performance Computing (HPC) EBRAINS Support for EuroHPC Applications All Tools All Resources Impact Projects Current Projects Past Projects Collaborative Initiatives Industry Partnerships Industry Engagement EBRAINS in Use Research Workflows User Experiences Explorations Publications Participate Researchers Get an EBRAINS Account EBRAINS 10-Year Roadmap EBRAINS Community Open Calls Institutions Become a Member Education & Training Tutorials & E-Library Education Task Force Lab Visits Directory Student Community News & Events News Upcoming Events Past Events EBRAINS Summit 2025 Media EBRAINS in the Media Media Contact Press Kit Register Log In ← Back About › Data, Tools & Services › Impact › Participate › News & Events › Log In Register Breadcrumb Start > About About A Pioneering Ecosystem for Neuroscience Breakthroughs Digital Infrastructure for Brain Research Who we are EBRAINS is Europe’s digital infrastructure for brain research. It provides unique tools and data bringing together neuroscience, computing and AI to accelerate progress in brain science and medicine. EBRAINS enables researchers to explore the brain across all levels – from the molecular and cellular levels to the whole organ. EBRAINS was born from a European spirit of scientific collaboration across countries and disciplines. Now, its powerful technologies are open to all. EBRAINS at a Glance The EBRAINS research infrastructure was originally built by the EU-funded Human Brain Project. Now, EBRAINS is being further developed with the support of the European Commission, a network of National Nodes and institutional partners from across Europe. Learn more Our Mission EBRAINS is on a mission to revolutionise how neuroscience is conducted. The digital ecosystem that we provide enables advances in brain research that translate into innovations in neuroscience, healthcare and brain-related technology. Learn more Regional Presence Building on the best of national efforts through a pan-European network of National Nodes run by EBRAINS member institutions EBRAINS works as a European-level undertaking, combining scientific contributions and perspectives from institutional and national levels. Digital technology allows us to connect the greatest European strengths in research and make them accessible to everyone. In this way, EBRAINS enables overcoming the fragmentation of research efforts and fosters large-scale coordination and cooperation. National Nodes Members Katrin Amunts, EBRAINS Joint CEO Science Vision Our vision is to revolutionise how neuroscience research is performed, changing the research culture from fragmented individual laboratory efforts to integrated platform research, ultimately leading to a better understanding of the brain and improving brain health and technology. Learn more Ethics & Society As a European research infrastructure, EBRAINS serves the scientific community and aims to promote the public good. We recognise that true scientific and technical excellence requires ethical excellence. Learn more Credit: Brain Simulation Section (head: Prof. Dr. Petra Ritter), Charité Unviersitätsmedizin Berlin EBRAINS 2.0 Since 2024, the EBRAINS infrastructure is being further developed within the EU-funded EBRAINS 2.0 project. Its aim is to establish a new standard for brain atlases, gather and connect multimodal brain data and advance digital twin approaches. Learn more The EBRAINS AISBL The EBRAINS AISBL is an international non-profit association (AISBL), headquartered in Brussels, Belgium. Learn more Discover EBRAINS Our new brochure provides insights into what the EBRAINS infrastructure has to offer and how individual researchers and institutional partners can become part of it. Download brochure (PDF) Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register Footer Pages About Data, Tools & Services Impact Participate News & Events Other Contact Us Terms & Policies Data Privacy Social Media X LinkedIn Mastodon Bluesky YouTube Newsletter Subscribe to our Newsletter Subscribe Co-funded by the European Union",
+      "links": [
+        {
+          "href": "https://ebrains.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance",
+          "text": "At a glance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/mission",
+          "text": "Mission",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/science-vision",
+          "text": "Science Vision",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ebrains-20",
+          "text": "EBRAINS 2.0",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ethics-society",
+          "text": "Ethics & Society",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence",
+          "text": "Regional presence",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/national-nodes",
+          "text": "National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl",
+          "text": "EBRAINS AISBL",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/our-people",
+          "text": "Our People",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/careers",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/procurements",
+          "text": "Procurements",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases",
+          "text": "Brain Atlases",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/human-brain",
+          "text": "Human Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/macaque-brain",
+          "text": "Macaque Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/marmoset-brain-atlas",
+          "text": "Marmoset Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/rat-brain",
+          "text": "Rat Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/mouse-brain",
+          "text": "Mouse Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/brain-atlas-resources",
+          "text": "Brain Atlas Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/apis",
+          "text": "APIs",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/data-integration",
+          "text": "Data Integration",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics",
+          "text": "Medical Analytics",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/platform-for-human-imaging-phi",
+          "text": "Platform for Human Imaging (PHI)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/medical-informatics-platform",
+          "text": "Medical Informatics Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/human-intracerebral-eeg-platform",
+          "text": "Human Intracerebral EEG Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/health-data-cloud",
+          "text": "Health Data Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation",
+          "text": "Modelling & Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/whole-brain-simulation",
+          "text": "Whole-Brain Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/network-level-simulation",
+          "text": "Network-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/cellular-level-simulation",
+          "text": "Cellular-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/molecular-and-subcellular-simulation",
+          "text": "Molecular & Subcellular Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/visualisation-analysis",
+          "text": "Visualisation & Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/inference-validation",
+          "text": "Inference & Validation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge",
+          "text": "Data & Knowledge",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/find-data",
+          "text": "Find Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/share-data",
+          "text": "Share Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/live-papers",
+          "text": "Live Papers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform",
+          "text": "Collaborative Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform/collaboratory",
+          "text": "Collaboratory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure",
+          "text": "Computing Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/high-performance-computing-hpc",
+          "text": "High-Performance Computing (HPC)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+          "text": "EBRAINS Support for EuroHPC Applications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/tools",
+          "text": "All Tools",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/resources",
+          "text": "All Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/current",
+          "text": "Current Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/past",
+          "text": "Past Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/collaborative-initiatives",
+          "text": "Collaborative Initiatives",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry",
+          "text": "Industry",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/partnerships",
+          "text": "Partnerships",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/industry-engagement",
+          "text": "Industry Engagement",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use",
+          "text": "EBRAINS in Use",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/featured-workflows",
+          "text": "Research Workflows",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/user-experience",
+          "text": "User Experiences",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/explorations",
+          "text": "Explorations",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/related-publications",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers",
+          "text": "Researchers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers/get-an-ebrains-account",
+          "text": "Get an EBRAINS Account",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/2025/call-for-contributions-to-the-ebrains-10-year-roadmap-2026-2036",
+          "text": "EBRAINS 10-Year Roadmap",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/ebrains-community",
+          "text": "EBRAINS Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions",
+          "text": "Institutions",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions/become-a-member",
+          "text": "Become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training",
+          "text": "Education & Training",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/tutorials-e-library",
+          "text": "Tutorials & E-Library",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/education-task-force",
+          "text": "Education Task Force",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/lab-visits-directory",
+          "text": "Lab Visits Directory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/student-community",
+          "text": "Student Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/news-and-press-releases",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/upcoming-events",
+          "text": "Upcoming Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/events/past-events",
+          "text": "Past Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/ebrains-summit-2025",
+          "text": "EBRAINS Summit 2025",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media",
+          "text": "Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/ebrains-in-the-media",
+          "text": "EBRAINS in the Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/media-contact",
+          "text": "Media Contact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/media/press-kit",
+          "text": "Press Kit",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/",
+          "text": "Start",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/mission",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/national-nodes",
+          "text": "National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/science-vision",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ethics-society",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/ebrains-20",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/Discover_EBRAINS_2025.pdf",
+          "text": "Download brochure (PDF)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/contact",
+          "text": "Contact Us",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/terms-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-privacy",
+          "text": "Data Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://x.com/EBRAINS_eu",
+          "text": "X",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/51657938/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://mastodon.social/@ebrains",
+          "text": "Mastodon",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/ebrains.bsky.social",
+          "text": "Bluesky",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/@ebrains7245",
+          "text": "YouTube",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/newsletter",
+          "text": "Subscribe",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://ebrains.eu/about/at-a-glance",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "At a glance",
+      "http_status": 200,
+      "final_url": "https://ebrains.eu/about/at-a-glance",
+      "title": "At a Glance | EBRAINS",
+      "lang_attr": "en",
+      "main_text": "Breadcrumb Start > About > At a Glance About At a Glance We are a digital research infrastructure that accelerates collaborative brain research between leading organisations and researchers. The Road to EBRAINS The EBRAINS infrastructure was born from a European spirit of scientific collaboration across countries and disciplines. Now, its powerful technologies are open to all. 2012 Public Proposal “The Human Brain Project should lay the technical foundations for a new model of ICT-based brain research, driving integration between data and knowledge from different disciplines” - public proposal for the Human Brain Project (HBP) . 2013 Launch of the Human Brain Project The HBP proposal is chosen for funding by the EC as a FET Flagship. The Flagship sets sail into the “Ramp-up Phase”. Work begins on the six initial platform prototypes: Neuroinformatics, Simulation, Medical Informatics, Neuromorphic Computing, Neurorobotics and High-Performance Computing. 2016 Launch of Six Initial Platforms The six initial platforms are formally opened during an event in Geneva . A concept paper published in Neuron further specifies that the platforms are to become an integrated research infrastructure for brain research and related fields. A co-design approach is established to guide the development in response to scientific needs. 2019 The EBRAINS AISBL The EBRAINS AISBL is founded. A paper in PLOS Biology gives a first view of the HBP Joint Platform. 2020 Formal Launch of the EBRAINS Research Infrastructure The EBRAINS research Infrastructure is formally launched. EBRAINS services become increasingly interlinked, allowing cross-platform workflows for complex scientific aims. 2021 Addition to ESFRI Roadmap EBRAINS is selected for the ESFRI Roadmap of European Research Infrastructures. EBRAINS is presented in a position paper in eNeuro highlighting a paradigm shift in brain research. 2022 First National Nodes EBRAINS has 40 member institutions from 12 European countries. The infrastructure has become firmly integrated in the European brain research landscape. First National Nodes are being formed. 2023 Successful Conclusion of Human Brain Project The Human Brain Project (HBP) concludes. The HBP Toolbook is published as an overview of the hundreds of digital tools developed and made available on EBRAINS. A participatory process to develop a roadmap paper for the next decade of digital neuroscience is started. 2024 Launch of EBRAINS 2.0 The EC-funded EBRAINS 2.0 project kicks off to further develop the infrastructure, involving 59 partner institutions from 16 European countries. The roadmap paper “The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing” with more than a hundred authors is published in Imaging Neuroscience . 2025 Taking EBRAINS to the Next Level EBRAINS is advanced with support of the European Commission and a network of 11 National Nodes and 45 institutional partners from 15 countries across Europe. EBRAINS now counts around 15,000 registered users from 95 countries worldwide. The EBRAINS Summit 2025 brought together 380 participants from 35 countries in Brussels for an intensive programme of scientific exchange. 2026 EBRAINS Roadmap Symposium Researchers meet in Munich in May 2026 to co-create the EBRAINS 10-year Roadmap 2026–2036 — a shared vision and implementation plan for the next decade of digital neuroscience in Europe. 2012 2013 2016 2019 2020 2021 2022 2023 2024 2025 2026 Institutional members Registered users Contributors Data sets & models Software tools Mission EBRAINS is on a mission to revolutionise how neuroscience is conducted. The digital ecosystem that we provide enables advances in brain research that translate into innovations in neuroscience, healthcare and brain-related technology. Learn more Science Vision Our vision is to revolutionise how neuroscience research is performed, changing the research culture from fragmented individual laboratory efforts to integrated platform research, ultimately leading to a better understanding of the brain and improving brain health and technology. Learn more Ethics & Society As a European research infrastructure, EBRAINS serves the scientific community and aims to promote the public good. We recognise that true scientific and technical excellence requires ethical excellence. Learn more EBRAINS 2.0 Since 2024, the EBRAINS infrastructure is being further developed within the EU-funded EBRAINS 2.0 project. Its aim is to establish a new standard for brain atlases, gather and connect multimodal brain data and advance digital twin approaches. Learn more Regional Presence EBRAINS aims to build on the best of national efforts through the establishment of National Nodes run by EBRAINS member institutions. Learn more Governance The non-profit organization EBRAINS AISBL includes eight full members and 35 associate members. The EBRAINS AISBL is governed by three bodies: the General Assembly, the Governing Board, and the Management Board. Learn more Discover EBRAINS Our new brochure provides insights into what the EBRAINS infrastructure has to offer and how individual researchers and institutional partners can become part of it. Download brochure Further Information Material EBRAINS is a digital research infrastructure, created by the EU-funded Human Brain Project (HBP), that gathers an extensive range of data and tools for brain-related research. EBRAINS builds upon the work performed by the Human Brain Project teams in digital neuroscience, brain medicine and brain-inspired technology, taking it to the next level. Discover more about EBRAINS and the HBP in the brochures below. EBRAINS: Europe’s digital infrastructure for brain research (2025) PDF, 1.09 MB Download File Human Brain Project 10 Years Assessment (2024) PDF, 1.17 MB Download File HBP Spotlights on Major Achievements (2023) PDF, 11.66 MB Download File HBP An Extensive Guide to the Tools Developed (2023) PDF, 3.79 MB Download File Pioneering Digital Neuroscience: how the 10-year Human Brain Project has transformed brain research (2023) PDF, 19.02 MB Download File HBP A Closer Look at Scientific Advances (2023) PDF, 4.62 MB Download File Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register",
+      "full_text": "Skip to main content Main navigation About At a glance Mission Science Vision EBRAINS 2.0 Ethics & Society Regional presence National Nodes Members EBRAINS AISBL Governance Our People Careers Procurements Data, Tools & Services Brain Atlases Human Brain Atlas Macaque Brain Atlas Marmoset Brain Atlas Rat Brain Atlas Mouse Brain Atlas Brain Atlas Resources APIs Data Integration Analysis Medical Analytics Platform for Human Imaging (PHI) Medical Informatics Platform Human Intracerebral EEG Platform Health Data Cloud Modelling & Simulation Whole-Brain Simulation Network-Level Simulation Cellular-Level Simulation Molecular & Subcellular Simulation Neuromorphic Computing Visualisation & Analysis Inference & Validation Data & Knowledge Find Data Share Data Live Papers Collaborative Platform Collaboratory Computing Infrastructure Neuromorphic Computing High-Performance Computing (HPC) EBRAINS Support for EuroHPC Applications All Tools All Resources Impact Projects Current Projects Past Projects Collaborative Initiatives Industry Partnerships Industry Engagement EBRAINS in Use Research Workflows User Experiences Explorations Publications Participate Researchers Get an EBRAINS Account EBRAINS 10-Year Roadmap EBRAINS Community Open Calls Institutions Become a Member Education & Training Tutorials & E-Library Education Task Force Lab Visits Directory Student Community News & Events News Upcoming Events Past Events EBRAINS Summit 2025 Media EBRAINS in the Media Media Contact Press Kit Register Log In ← Back About › Data, Tools & Services › Impact › Participate › News & Events › Log In Register Breadcrumb Start > About > At a Glance About At a Glance We are a digital research infrastructure that accelerates collaborative brain research between leading organisations and researchers. The Road to EBRAINS The EBRAINS infrastructure was born from a European spirit of scientific collaboration across countries and disciplines. Now, its powerful technologies are open to all. 2012 Public Proposal “The Human Brain Project should lay the technical foundations for a new model of ICT-based brain research, driving integration between data and knowledge from different disciplines” - public proposal for the Human Brain Project (HBP) . 2013 Launch of the Human Brain Project The HBP proposal is chosen for funding by the EC as a FET Flagship. The Flagship sets sail into the “Ramp-up Phase”. Work begins on the six initial platform prototypes: Neuroinformatics, Simulation, Medical Informatics, Neuromorphic Computing, Neurorobotics and High-Performance Computing. 2016 Launch of Six Initial Platforms The six initial platforms are formally opened during an event in Geneva . A concept paper published in Neuron further specifies that the platforms are to become an integrated research infrastructure for brain research and related fields. A co-design approach is established to guide the development in response to scientific needs. 2019 The EBRAINS AISBL The EBRAINS AISBL is founded. A paper in PLOS Biology gives a first view of the HBP Joint Platform. 2020 Formal Launch of the EBRAINS Research Infrastructure The EBRAINS research Infrastructure is formally launched. EBRAINS services become increasingly interlinked, allowing cross-platform workflows for complex scientific aims. 2021 Addition to ESFRI Roadmap EBRAINS is selected for the ESFRI Roadmap of European Research Infrastructures. EBRAINS is presented in a position paper in eNeuro highlighting a paradigm shift in brain research. 2022 First National Nodes EBRAINS has 40 member institutions from 12 European countries. The infrastructure has become firmly integrated in the European brain research landscape. First National Nodes are being formed. 2023 Successful Conclusion of Human Brain Project The Human Brain Project (HBP) concludes. The HBP Toolbook is published as an overview of the hundreds of digital tools developed and made available on EBRAINS. A participatory process to develop a roadmap paper for the next decade of digital neuroscience is started. 2024 Launch of EBRAINS 2.0 The EC-funded EBRAINS 2.0 project kicks off to further develop the infrastructure, involving 59 partner institutions from 16 European countries. The roadmap paper “The coming decade of digital brain research: A vision for neuroscience at the intersection of technology and computing” with more than a hundred authors is published in Imaging Neuroscience . 2025 Taking EBRAINS to the Next Level EBRAINS is advanced with support of the European Commission and a network of 11 National Nodes and 45 institutional partners from 15 countries across Europe. EBRAINS now counts around 15,000 registered users from 95 countries worldwide. The EBRAINS Summit 2025 brought together 380 participants from 35 countries in Brussels for an intensive programme of scientific exchange. 2026 EBRAINS Roadmap Symposium Researchers meet in Munich in May 2026 to co-create the EBRAINS 10-year Roadmap 2026–2036 — a shared vision and implementation plan for the next decade of digital neuroscience in Europe. 2012 2013 2016 2019 2020 2021 2022 2023 2024 2025 2026 Institutional members Registered users Contributors Data sets & models Software tools Mission EBRAINS is on a mission to revolutionise how neuroscience is conducted. The digital ecosystem that we provide enables advances in brain research that translate into innovations in neuroscience, healthcare and brain-related technology. Learn more Science Vision Our vision is to revolutionise how neuroscience research is performed, changing the research culture from fragmented individual laboratory efforts to integrated platform research, ultimately leading to a better understanding of the brain and improving brain health and technology. Learn more Ethics & Society As a European research infrastructure, EBRAINS serves the scientific community and aims to promote the public good. We recognise that true scientific and technical excellence requires ethical excellence. Learn more EBRAINS 2.0 Since 2024, the EBRAINS infrastructure is being further developed within the EU-funded EBRAINS 2.0 project. Its aim is to establish a new standard for brain atlases, gather and connect multimodal brain data and advance digital twin approaches. Learn more Regional Presence EBRAINS aims to build on the best of national efforts through the establishment of National Nodes run by EBRAINS member institutions. Learn more Governance The non-profit organization EBRAINS AISBL includes eight full members and 35 associate members. The EBRAINS AISBL is governed by three bodies: the General Assembly, the Governing Board, and the Management Board. Learn more Discover EBRAINS Our new brochure provides insights into what the EBRAINS infrastructure has to offer and how individual researchers and institutional partners can become part of it. Download brochure Further Information Material EBRAINS is a digital research infrastructure, created by the EU-funded Human Brain Project (HBP), that gathers an extensive range of data and tools for brain-related research. EBRAINS builds upon the work performed by the Human Brain Project teams in digital neuroscience, brain medicine and brain-inspired technology, taking it to the next level. Discover more about EBRAINS and the HBP in the brochures below. EBRAINS: Europe’s digital infrastructure for brain research (2025) PDF, 1.09 MB Download File Human Brain Project 10 Years Assessment (2024) PDF, 1.17 MB Download File HBP Spotlights on Major Achievements (2023) PDF, 11.66 MB Download File HBP An Extensive Guide to the Tools Developed (2023) PDF, 3.79 MB Download File Pioneering Digital Neuroscience: how the 10-year Human Brain Project has transformed brain research (2023) PDF, 19.02 MB Download File HBP A Closer Look at Scientific Advances (2023) PDF, 4.62 MB Download File Create an account EBRAINS is open and free. Sign up now for complete access to our tools and services. Register Footer Pages About Data, Tools & Services Impact Participate News & Events Other Contact Us Terms & Policies Data Privacy Social Media X LinkedIn Mastodon Bluesky YouTube Newsletter Subscribe to our Newsletter Subscribe Co-funded by the European Union",
+      "links": [
+        {
+          "href": "https://ebrains.eu/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance",
+          "text": "At a glance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/mission",
+          "text": "Mission",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/science-vision",
+          "text": "Science Vision",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ebrains-20",
+          "text": "EBRAINS 2.0",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ethics-society",
+          "text": "Ethics & Society",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence",
+          "text": "Regional presence",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/national-nodes",
+          "text": "National Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl",
+          "text": "EBRAINS AISBL",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/our-people",
+          "text": "Our People",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/careers",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/procurements",
+          "text": "Procurements",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases",
+          "text": "Brain Atlases",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/human-brain",
+          "text": "Human Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/macaque-brain",
+          "text": "Macaque Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/marmoset-brain-atlas",
+          "text": "Marmoset Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/rat-brain",
+          "text": "Rat Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/mouse-brain",
+          "text": "Mouse Brain Atlas",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/brain-atlas-resources",
+          "text": "Brain Atlas Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/apis",
+          "text": "APIs",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/data-integration",
+          "text": "Data Integration",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/brain-atlases/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics",
+          "text": "Medical Analytics",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/platform-for-human-imaging-phi",
+          "text": "Platform for Human Imaging (PHI)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/medical-informatics-platform",
+          "text": "Medical Informatics Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/human-intracerebral-eeg-platform",
+          "text": "Human Intracerebral EEG Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/medical-analytics/health-data-cloud",
+          "text": "Health Data Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation",
+          "text": "Modelling & Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/whole-brain-simulation",
+          "text": "Whole-Brain Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/network-level-simulation",
+          "text": "Network-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/cellular-level-simulation",
+          "text": "Cellular-Level Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/molecular-and-subcellular-simulation",
+          "text": "Molecular & Subcellular Simulation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/visualisation-analysis",
+          "text": "Visualisation & Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/modelling-simulation/inference-validation",
+          "text": "Inference & Validation",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge",
+          "text": "Data & Knowledge",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/find-data",
+          "text": "Find Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/share-data",
+          "text": "Share Data",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/data-knowledge/live-papers",
+          "text": "Live Papers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform",
+          "text": "Collaborative Platform",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/collaborative-platform/collaboratory",
+          "text": "Collaboratory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure",
+          "text": "Computing Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/neuromorphic-computing",
+          "text": "Neuromorphic Computing",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/high-performance-computing-hpc",
+          "text": "High-Performance Computing (HPC)",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+          "text": "EBRAINS Support for EuroHPC Applications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/tools",
+          "text": "All Tools",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services/resources",
+          "text": "All Resources",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/current",
+          "text": "Current Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/past",
+          "text": "Past Projects",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/projects/collaborative-initiatives",
+          "text": "Collaborative Initiatives",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry",
+          "text": "Industry",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/partnerships",
+          "text": "Partnerships",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/industry/industry-engagement",
+          "text": "Industry Engagement",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use",
+          "text": "EBRAINS in Use",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/featured-workflows",
+          "text": "Research Workflows",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/user-experience",
+          "text": "User Experiences",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/ebrains-in-use/explorations",
+          "text": "Explorations",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact/related-publications",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers",
+          "text": "Researchers",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/for-researchers/get-an-ebrains-account",
+          "text": "Get an EBRAINS Account",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/2025/call-for-contributions-to-the-ebrains-10-year-roadmap-2026-2036",
+          "text": "EBRAINS 10-Year Roadmap",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/ebrains-community",
+          "text": "EBRAINS Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/researchers/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions",
+          "text": "Institutions",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/institutions/become-a-member",
+          "text": "Become a Member",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training",
+          "text": "Education & Training",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/tutorials-e-library",
+          "text": "Tutorials & E-Library",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/education-task-force",
+          "text": "Education Task Force",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/lab-visits-directory",
+          "text": "Lab Visits Directory",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate/education-training/student-community",
+          "text": "Student Community",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/news-and-press-releases",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/upcoming-events",
+          "text": "Upcoming Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/events/past-events",
+          "text": "Past Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/ebrains-summit-2025",
+          "text": "EBRAINS Summit 2025",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media",
+          "text": "Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/ebrains-in-the-media",
+          "text": "EBRAINS in the Media",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-events/media/media-contact",
+          "text": "Media Contact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/media/press-kit",
+          "text": "Press Kit",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/my-ebrains/login",
+          "text": "Log In",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/",
+          "text": "Start",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://sos-ch-dk-2.exo.io/public-website-production/filer_public/14/01/14014871-a946-47b9-8238-381b945468a8/hbp_report_to_the_ec_april_2012.pdf",
+          "text": "public proposal for the Human Brain Project (HBP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/watch?v=2XXz2quUWFQ",
+          "text": "an event in Geneva",
+          "visible": true
+        },
+        {
+          "href": "https://www.cell.com/neuron/fulltext/S0896-6273(16)30796-6?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS0896627316307966%3Fshowall%3Dtrue",
+          "text": "concept paper published in Neuron",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl",
+          "text": "EBRAINS AISBL",
+          "visible": true
+        },
+        {
+          "href": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000344",
+          "text": "paper in PLOS Biology",
+          "visible": true
+        },
+        {
+          "href": "https://www.eneuro.org/content/9/2/ENEURO.0316-21.2022.long",
+          "text": "position paper in eNeuro",
+          "visible": true
+        },
+        {
+          "href": "https://www.humanbrainproject.eu/en/science-development/scientific-achievements/tool-book/",
+          "text": "HBP Toolbook",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ebrains-20",
+          "text": "EBRAINS 2.0",
+          "visible": true
+        },
+        {
+          "href": "https://direct.mit.edu/imag/article/doi/10.1162/imag_a_00137/120391/The-coming-decade-of-digital-brain-research-A",
+          "text": "published in Imaging Neuroscience",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/ebrains-summit-2025",
+          "text": "EBRAINS Summit 2025",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events/events/2026/ebrains-roadmap-symposium",
+          "text": "meet in Munich in May 2026",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/mission",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/science-vision",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ethics-society",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/at-a-glance/ebrains-20",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/regional-presence",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about/ebrains-aisbl/governance",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/Discover_EBRAINS_2025.pdf",
+          "text": "Download brochure",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/EBRAINS-A5-Brochure.pdf",
+          "text": "Download File",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/hbp-10-year-assessment.pdf",
+          "text": "Download File",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/hbp_spotlights_achievements_2023_1.pdf",
+          "text": "Download File",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/hbp_tool_book_2023_1.pdf",
+          "text": "Download File",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/hbp_pioneering_digital_neuroscience.pdf",
+          "text": "Download File",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sites/default/files/downloads/2025/11/230413_hpb22_digital_1.pdf",
+          "text": "Download File",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/sign-up",
+          "text": "Register",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-tools-services",
+          "text": "Data, Tools & Services",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/impact",
+          "text": "Impact",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/participate",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/news-and-events",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/contact",
+          "text": "Contact Us",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/terms-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/data-privacy",
+          "text": "Data Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://x.com/EBRAINS_eu",
+          "text": "X",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/51657938/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://mastodon.social/@ebrains",
+          "text": "Mastodon",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/ebrains.bsky.social",
+          "text": "Bluesky",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/@ebrains7245",
+          "text": "YouTube",
+          "visible": true
+        },
+        {
+          "href": "https://ebrains.eu/newsletter",
+          "text": "Subscribe",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [
+    "https://ebrains.eu/contact (cap for point 6)",
+    "https://ebrains.eu/about/at-a-glance/mission (cap for point 2)",
+    "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)",
+    "https://ebrains.eu/about/at-a-glance/ebrains-20 (cap for point 2)",
+    "https://ebrains.eu/about/at-a-glance/ethics-society (cap for point 2)",
+    "https://ebrains.eu/about/regional-presence (cap for point 2)",
+    "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
+    "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
+    "https://ebrains.eu/about/ebrains-aisbl (cap for point 2)",
+    "https://ebrains.eu/about/ebrains-aisbl/governance (cap for point 2)",
+    "https://ebrains.eu/about/ebrains-aisbl/our-people (cap for point 2)",
+    "https://ebrains.eu/about/ebrains-aisbl/careers (cap for point 2)",
+    "https://ebrains.eu/about/ebrains-aisbl/procurements (cap for point 2)",
+    "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
+    "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
+    "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)"
+  ],
+  "crawl_note": "depth 1: 127 link(s) on the landing page, 4 followed because they matched a checklist point, 16 matched but dropped by a cap, the rest not relevant to any point"
 }

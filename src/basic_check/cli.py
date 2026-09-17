@@ -12,7 +12,7 @@ import typer
 import yaml
 
 from . import checks, report
-from .fetch import collect_all, load_evidence
+from .fetch import MAX_CHILDREN, collect_all, load_evidence
 
 app = typer.Typer(
     add_completion=False,
@@ -43,12 +43,31 @@ def collect(
     results_dir: Path = typer.Option(DEFAULT_RESULTS, "--results"),
     only: str = typer.Option("", "--only", help="Comma-separated node ids"),
     delay: float = typer.Option(2.0, "--delay", help="Seconds between hosts"),
+    depth: int = typer.Option(
+        1,
+        "--depth",
+        min=0,
+        max=1,
+        help="0 = landing page only. 1 = also follow links that can settle a "
+        "checklist point (policies, contact, about), capped per node.",
+    ),
+    max_children: int = typer.Option(
+        MAX_CHILDREN, "--max-children", help="Cap on followed pages per node at depth 1"
+    ),
 ):
-    """Fetch each landing page exactly once and save the evidence."""
+    """Fetch each landing page and save the evidence. Depth 1 by default."""
     nodes = _load_nodes(nodes_file, only)
     evidence_dir = results_dir / "evidence"
-    typer.echo(f"Fetching {len(nodes)} landing page(s), one request each, {delay}s apart:")
-    asyncio.run(collect_all(nodes, evidence_dir, delay_s=delay))
+    if depth >= 1:
+        typer.echo(
+            f"Fetching {len(nodes)} landing page(s), {delay}s apart, then following up to "
+            f"{max_children} checklist-relevant link(s) per node (depth 1):"
+        )
+    else:
+        typer.echo(f"Fetching {len(nodes)} landing page(s), one request each, {delay}s apart:")
+    asyncio.run(
+        collect_all(nodes, evidence_dir, delay_s=delay, depth=depth, max_children=max_children)
+    )
     typer.echo(f"\nEvidence written to {evidence_dir}")
 
 
@@ -103,6 +122,22 @@ def assess(
                     "error": ev.error,
                     "robots_note": ev.robots_note,
                     "screenshot": ev.screenshot,
+                    "crawl_depth": ev.crawl_depth,
+                    "crawl_note": ev.crawl_note,
+                    "children": [
+                        {
+                            "url": c.url,
+                            "final_url": c.final_url,
+                            "selected_for": c.selected_for,
+                            "link_text": c.link_text,
+                            "http_status": c.http_status,
+                            "title": c.title,
+                            "chars": len(c.main_text),
+                            "error": c.error,
+                        }
+                        for c in ev.children
+                    ],
+                    "children_skipped": ev.children_skipped,
                 },
                 "results": [asdict(r) for r in results],
             }
@@ -141,11 +176,17 @@ def run(
     results_dir: Path = typer.Option(DEFAULT_RESULTS, "--results"),
     only: str = typer.Option("", "--only"),
     delay: float = typer.Option(2.0, "--delay"),
+    depth: int = typer.Option(1, "--depth", min=0, max=1),
 ):
     """collect, then assess."""
-    ctx = typer.Context
-    del ctx
-    collect(nodes_file=nodes_file, results_dir=results_dir, only=only, delay=delay)
+    collect(
+        nodes_file=nodes_file,
+        results_dir=results_dir,
+        only=only,
+        delay=delay,
+        depth=depth,
+        max_children=MAX_CHILDREN,
+    )
     assess(nodes_file=nodes_file, results_dir=results_dir, only=only)
 
 

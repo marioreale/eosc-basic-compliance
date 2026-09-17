@@ -47,9 +47,20 @@ def test_point1_passes_when_content_is_served_anonymously():
     assert checks.check_1(ev()).verdict == checks.PASS
 
 
-def test_point1_fails_on_403_with_no_login_offered():
+def test_point1_does_not_fail_on_403_with_no_login_offered():
+    """This assertion was inverted deliberately, and the reason is worth keeping.
+
+    It originally asserted FAIL: a 403 with no login means neither branch of
+    point 1 is satisfied. That reasoning was wrong in practice. GÉANT served this
+    tool HTTP 200, and then 403 once depth-1 crawling made a few more requests to
+    the same host. Nothing about the node's accessibility had changed. Genuine
+    access control redirects to a login page; a bare 403 to an automated client is
+    usually bot mitigation, and says nothing about what a researcher would see.
+
+    A tool must not turn its own request volume into a finding against a node.
+    """
     r = checks.check_1(ev(http_status=403, full_text="Forbidden"))
-    assert r.verdict == checks.FAIL
+    assert r.verdict == checks.MANUAL_REVIEW
 
 
 def test_point1_is_manual_when_403_but_a_login_exists():

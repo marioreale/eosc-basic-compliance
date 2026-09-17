@@ -1,6 +1,6 @@
 {
-  "run_id": "2026-09-17-1458",
-  "generated_at": "2026-09-17T14:58:24+00:00",
+  "run_id": "2026-09-17-1557",
+  "generated_at": "2026-09-17T15:57:17+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
@@ -18,7 +18,7 @@
         "title": "Resources pointed to by the NLP are public or behind EOSC AAI",
         "requirement": "All resources pointed by the Node Landing Page, thus exposed to EOSC users, either directly or through links through intermediate pages, must either be publicly accessible or accessible via login through EOSC AAI.",
         "decidable": false,
-        "decidable_note": "Not decidable under this tool's no-crawl constraint, and not decidable by inspection in general. It requires following every resource link through intermediate pages, and then confirming that each login encountered is genuinely EOSC AAI rather than a local or institutional IdP. Whether a given login is EOSC AAI compliant is settled during node enrolment with the EEN, not by reading HTML. The tool lists the outbound resource links it found so a reviewer has a work list."
+        "decidable_note": "Not decidable by inspection, and one level of link following does not close the gap. The requirement quantifies over every resource reachable from the page \"either directly or through links through intermediate pages\", which is unbounded; this tool follows at most one level, and only links that can settle a specific point. Even with full traversal it would still require confirming that each login encountered is genuinely EOSC AAI rather than a local or institutional IdP, and whether a given login is EOSC AAI compliant is settled during node enrolment with the EEN, not by reading HTML. The tool reports how many followed pages were served anonymously and lists the outbound resource links it found, so a reviewer has a work list."
       },
       {
         "id": "2",
@@ -46,7 +46,7 @@
         "title": "Purpose description accessible in English for research resources",
         "requirement": "For all research resources offered by the Node to EOSC users, a purpose description must be accessible in English either directly or via the link to the resource's entry in the EOSC Catalogue.",
         "decidable": false,
-        "decidable_note": "Requires enumerating \"all research resources offered by the Node\", which is not derivable from the landing page alone, and then judging whether each description states a purpose. Scoped out by the no-crawl constraint."
+        "decidable_note": "Requires enumerating \"all research resources offered by the Node\", which is not derivable from the landing page alone and is not what this tool's single level of link following collects. Judging whether each description states a purpose is then a reading task, not a pattern match."
       },
       {
         "id": "5b",
@@ -87,10 +87,63 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-09-17T14:52:52+00:00",
+        "fetched_at": "2026-09-17T15:27:24+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
-        "screenshot": "bbmri-eric.png"
+        "screenshot": "bbmri-eric.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 84 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://www.bbmri-eric.eu/services/access-policies/",
+            "final_url": "https://www.bbmri-eric.eu/services/access-policies/",
+            "selected_for": [
+              "5c"
+            ],
+            "link_text": "Access Policies",
+            "http_status": 200,
+            "title": "Access Policies - BBMRI-ERIC",
+            "chars": 8929,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/services-support/",
+            "final_url": "https://www.bbmri-eric.eu/services-support/",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Services & Support",
+            "http_status": 200,
+            "title": "Services and Support - BBMRI-ERIC",
+            "chars": 6485,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/contact/",
+            "final_url": "https://www.bbmri-eric.eu/contact/",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Contact",
+            "http_status": 200,
+            "title": "Contact - BBMRI-ERIC",
+            "chars": 5323,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/about/",
+            "final_url": "https://www.bbmri-eric.eu/about/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About",
+            "http_status": 200,
+            "title": "About us - BBMRI-ERIC",
+            "chars": 6820,
+            "error": ""
+          }
+        ],
+        "children_skipped": []
       },
       "results": [
         {
@@ -107,7 +160,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "6 distinct external host(s) linked from the landing page",
             "directory.bbmri-eric.eu (Directory)",
@@ -116,7 +169,8 @@
             "twitter.com",
             "www.linkedin.com",
             "www.rubikon.at (Website by Werbeagentur Rubikon)",
-            "EOSC AAI indicators seen: EOSC AAI"
+            "EOSC AAI indicators seen: EOSC AAI",
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -127,7 +181,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"­ EOSC Node - BBMRI-ERIC - BBMRI-ERIC Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downl...\"",
-            "organisation-like names found: CSC; EOSC4CANCER EPND EPPerMed ERDERA ERIC; ERIC; European Research Infrastructure Consortium"
+            "organisation-like names found: CSC; EOSC4CANCER EPND EPPerMed ERDERA ERIC; ERIC; European Research Infrastructure Consortium",
+            "about page one level down: https://www.bbmri-eric.eu/about/ (HTTP 200) opening text: \"Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be ...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -177,11 +232,13 @@
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
           "verdict": "PASS",
-          "message": "The landing page links to what appears to be a User Access Policy.",
+          "message": "The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "\"Access Policies\" -> https://www.bbmri-eric.eu/services/access-policies/"
+            "\"Access Policies\" -> https://www.bbmri-eric.eu/services/access-policies/",
+            "followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8929 chars, title: Access Policies - BBMRI-ERIC",
+            "policy wording found: Policy, You may, conditions"
           ],
-          "reviewer_action": "Confirm the target really is a User Access Policy, is in English, and covers all the node's resources."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English."
         },
         {
           "point_id": "6",
@@ -213,10 +270,27 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-09-17T14:53:01+00:00",
+        "fetched_at": "2026-09-17T15:27:46+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
-        "screenshot": "eosc-dto.png"
+        "screenshot": "eosc-dto.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 20 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://eosc-dto.d4science.org/terms-of-use",
+            "final_url": "https://eosc-dto.d4science.org/terms-of-use",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "Terms of Use",
+            "http_status": 200,
+            "title": "Terms of Use - D4Science Infrastructure Gateway",
+            "chars": 8785,
+            "error": ""
+          }
+        ],
+        "children_skipped": []
       },
       "results": [
         {
@@ -233,7 +307,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "5 distinct external host(s) linked from the landing page",
             "eosc-dto.d4science.org:443 (European-DTO Gateway)",
@@ -241,7 +315,8 @@
             "research-and-innovation.ec.europa.eu (HEU programme)",
             "www.cookieyes.com",
             "www.d4science.org (D4Science platform, Privacy Policy)",
-            "EOSC AAI indicators seen: EOSC AAI"
+            "EOSC AAI indicators seen: EOSC AAI",
+            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -297,11 +372,13 @@
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
           "verdict": "PASS",
-          "message": "The landing page links to what appears to be an Acceptable Use Policy.",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "\"Terms of Use\" -> https://eosc-dto.d4science.org/terms-of-use"
+            "\"Terms of Use\" -> https://eosc-dto.d4science.org/terms-of-use",
+            "followed: https://eosc-dto.d4science.org/terms-of-use -> HTTP 200, 8785 chars, title: Terms of Use - D4Science Infrastructure Gateway",
+            "policy wording found: Terms, comply, conditions, policy"
           ],
-          "reviewer_action": "Confirm the target really is an Acceptable Use Policy, is in English, and covers all the node's resources."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English."
         },
         {
           "point_id": "5c",
@@ -343,10 +420,27 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.data-terra.org/eosc/",
-        "fetched_at": "2026-09-17T14:53:09+00:00",
+        "fetched_at": "2026-09-17T15:27:56+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
-        "screenshot": "data-terra.png"
+        "screenshot": "data-terra.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 93 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://www.data-terra.org/contact-acces/",
+            "final_url": "https://www.data-terra.org/contact-acces/",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Contact & accès",
+            "http_status": 200,
+            "title": "Contact & accès | Infrastructure de recherche Data Terra",
+            "chars": 1489,
+            "error": ""
+          }
+        ],
+        "children_skipped": []
       },
       "results": [
         {
@@ -363,7 +457,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "38 distinct external host(s) linked from the landing page",
             "cnes.fr",
@@ -377,7 +471,8 @@
             "www.cerema.fr",
             "www.cirad.fr",
             "www.cnrs.fr",
-            "www.enseignementsup-recherche.gouv.fr"
+            "www.enseignementsup-recherche.gouv.fr",
+            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -476,10 +571,51 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-09-17T14:53:17+00:00",
+        "fetched_at": "2026-09-17T15:28:06+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
-        "screenshot": "eosc-fi.png"
+        "screenshot": "eosc-fi.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 85 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://research.csc.fi/terms-of-use/",
+            "final_url": "https://research.csc.fi/terms-of-use/",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "Terms of use",
+            "http_status": 200,
+            "title": "Terms of use - Services for Research",
+            "chars": 16560,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/support",
+            "final_url": "https://research.csc.fi/support/",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Service Desk",
+            "http_status": 200,
+            "title": "CSC Service Desk - Services for Research",
+            "chars": 632,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/",
+            "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "More about the EOSC Federation and the Finnish Pilot Node",
+            "http_status": 200,
+            "title": "More about the EOSC Federation and the Finnish Pilot Node - Services for Research",
+            "chars": 1711,
+            "error": ""
+          }
+        ],
+        "children_skipped": []
       },
       "results": [
         {
@@ -497,7 +633,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "10 distinct external host(s) linked from the landing page",
             "csc.fi (Detailed contact information (External link), Directions (External link), Main website – csc.fi (External link))",
@@ -510,7 +646,8 @@
             "www.linkedin.com (LinkedIn (External link))",
             "www.research.fi (Research.fi (External link))",
             "www.youtube.com (YouTube (External link))",
-            "EOSC AAI indicators seen: MyAccessID, myaccessid"
+            "EOSC AAI indicators seen: MyAccessID, myaccessid",
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -521,7 +658,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"EOSC Finland Pilot Node Dataset-as-a-Service EOSC Finland - Tools for service providers and data managers EOSC Finland for researchers More about the EOSC Federation and the Finnish Pilot Node MyAccessID - a new way to access CSC services Discover services Browse services in the EOSC federation available for researchers with a Finnish affiliation or project. Service catalogue Start using services ...\"",
-            "organisation-like names found: Browse CSC; CSC; Copyright CSC; Docs CSC; Espoo Life Science Center; IT Center"
+            "organisation-like names found: Browse CSC; CSC; Copyright CSC; Docs CSC; Espoo Life Science Center; IT Center",
+            "about page one level down: https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/ (HTTP 200) opening text: \"EOSC Finland Pilot Node Dataset-as-a-Service EOSC Finland - Tools for service providers and data managers EOSC Finland for researchers More about the EOSC Federation and the Finnish Pilot Node MyAccessID - a new way to access CSC services More about the EOSC F...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -562,11 +700,13 @@
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
           "verdict": "PASS",
-          "message": "The landing page links to what appears to be an Acceptable Use Policy.",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "\"Terms of use\" -> https://research.csc.fi/terms-of-use/"
+            "\"Terms of use\" -> https://research.csc.fi/terms-of-use/",
+            "followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16560 chars, title: Terms of use - Services for Research",
+            "policy wording found: Terms, comply, conditions, permitted"
           ],
-          "reviewer_action": "Confirm the target really is an Acceptable Use Policy, is in English, and covers all the node's resources."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English."
         },
         {
           "point_id": "5c",
@@ -609,10 +749,54 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-09-17T14:53:25+00:00",
+        "fetched_at": "2026-09-17T15:28:22+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
-        "screenshot": "panosc.png"
+        "screenshot": "panosc.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 118 link(s) on the landing page, 3 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://www.panosc.eu/contact/",
+            "final_url": "https://www.panosc.eu/contact/",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Contact",
+            "http_status": 200,
+            "title": "Contact us - Panosc",
+            "chars": 2445,
+            "error": ""
+          },
+          {
+            "url": "https://www.panosc.eu/about-panosc/",
+            "final_url": "https://www.panosc.eu/about-panosc/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About",
+            "http_status": 200,
+            "title": "About - Panosc",
+            "chars": 7150,
+            "error": ""
+          },
+          {
+            "url": "https://www.panosc.eu/about-european-research-infrastructures/",
+            "final_url": "https://www.panosc.eu/about-european-research-infrastructures/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "European Research Infrastructures",
+            "http_status": 200,
+            "title": "European Research Infrastructures - Panosc",
+            "chars": 4611,
+            "error": ""
+          }
+        ],
+        "children_skipped": [
+          "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (cap for point 2)",
+          "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (cap for point 2)"
+        ]
       },
       "results": [
         {
@@ -630,7 +814,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "37 distinct external host(s) linked from the landing page",
             "aiidalab-qe.readthedocs.io (AiiDAlab Quantum ESPRESSO (QE) app)",
@@ -644,7 +828,8 @@
             "esrf.fr (ESRF)",
             "ess.eu (ESS)",
             "github.com (PaNOSC repository on Github)",
-            "ill.eu (ILL)"
+            "ill.eu (ILL)",
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -655,7 +840,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Pub...\"",
-            "organisation-like names found: EOSC Association; Institut; Lund University; Neutron Competence Centre; Paul Scherrer Institute"
+            "organisation-like names found: EOSC Association; Institut; Lund University; Neutron Competence Centre; Paul Scherrer Institute",
+            "about page one level down: https://www.panosc.eu/about-panosc/ (HTTP 200) opening text: \"Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node Ab...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -718,13 +904,13 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "MANUAL_REVIEW",
-          "message": "A contact route exists, but nothing identifies it as a helpdesk. The checklist asks specifically for the node helpdesk, and a general enquiries or press address does not obviously satisfy that.",
+          "message": "A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
           "evidence": [
-            "\"Contact\" -> https://www.panosc.eu/contact/",
-            "\"Contact us\" -> https://www.panosc.eu/contact/",
-            "\"Contact\" -> https://www.panosc.eu/contact/"
+            "followed: https://www.panosc.eu/contact/ -> HTTP 200",
+            "address given: mailto:contact@panosc.eu",
+            "address given: mailto:management@panosc.eu"
           ],
-          "reviewer_action": "Confirm this contact route reaches the node's user support, not a general mailbox."
+          "reviewer_action": "Confirm this reaches the node's user support, not a general mailbox."
         },
         {
           "point_id": "7",
@@ -746,10 +932,51 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-09-17T14:53:35+00:00",
+        "fetched_at": "2026-09-17T15:28:38+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
-        "screenshot": "eudat.png"
+        "screenshot": "eudat.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 10 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://www.eudat.eu/eudat-cdi-aup",
+            "final_url": "https://www.eudat.eu/eudat-cdi-aup",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "EUDAT AUP",
+            "http_status": 200,
+            "title": "EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT",
+            "chars": 3101,
+            "error": ""
+          },
+          {
+            "url": "https://docs.eudat.eu",
+            "final_url": "https://docs.eudat.eu/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Set up your workspace Read about the first steps in becoming an EUDAT Node user.",
+            "http_status": 200,
+            "title": "EUDAT Documentation",
+            "chars": 3938,
+            "error": ""
+          },
+          {
+            "url": "https://eudat.eu/membership",
+            "final_url": "https://eudat.eu/membership",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Meet the EUDAT Community Learn who the main users of EUDAT Services are and about their experiences.",
+            "http_status": 200,
+            "title": "Membership | EUDAT",
+            "chars": 2920,
+            "error": ""
+          }
+        ],
+        "children_skipped": []
       },
       "results": [
         {
@@ -767,12 +994,13 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "3 distinct external host(s) linked from the landing page",
             "docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node for your research.)",
             "eudat.eu (Discover services Browse services offered by EUDAT and the EOSC Federation., Meet the EUDAT Community Learn who the main users of EUDAT Services are and about their experiences.)",
-            "www.eudat.eu (Accessibility Statement, EUDAT AUP, FAQs)"
+            "www.eudat.eu (Accessibility Statement, EUDAT AUP, FAQs)",
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -783,7 +1011,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"EOSC Node Marketplace Welcome to the EUDAT Portal Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limitless science. Uncertain where to start? Discover services Browse services offered by EUDAT and the EOSC Federation. Set up your workspace Read about the first steps in becoming an EUDAT Node user. User Guides Browse ...\"",
-            "organisation-like names found: EUDAT Ltd"
+            "organisation-like names found: EUDAT Ltd",
+            "about page one level down: https://docs.eudat.eu (HTTP 200) opening text: \"EUDAT Documentation Documentation Documentation Table of contents Welcome to the EUDAT Documentation service Documentation Feedback Interested in EUDAT services B2ACCESS B2ACCESS Overview Assurance Concepts For Users For Users Enabling MFA Updating Email List ...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -825,11 +1054,13 @@
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
           "verdict": "PASS",
-          "message": "The landing page links to what appears to be an Acceptable Use Policy.",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "\"EUDAT AUP\" -> https://www.eudat.eu/eudat-cdi-aup"
+            "\"EUDAT AUP\" -> https://www.eudat.eu/eudat-cdi-aup",
+            "followed: https://www.eudat.eu/eudat-cdi-aup -> HTTP 200, 3101 chars, title: EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT",
+            "policy wording found: Conditions, You shall, permitted, policy"
           ],
-          "reviewer_action": "Confirm the target really is an Acceptable Use Policy, is in English, and covers all the node's resources."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English."
         },
         {
           "point_id": "5c",
@@ -871,10 +1102,51 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-09-17T14:54:10+00:00",
+        "fetched_at": "2026-09-17T15:29:36+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
-        "screenshot": "egi.png"
+        "screenshot": "egi.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 167 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://www.egi.eu/terms-of-use/",
+            "final_url": "https://www.egi.eu/terms-of-use",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "terms of use",
+            "http_status": 200,
+            "title": "Terms of Use - EGI",
+            "chars": 2362,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/contact-us/",
+            "final_url": "https://www.egi.eu/contact-us",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Contact Us",
+            "http_status": 200,
+            "title": "Contact us - EGI",
+            "chars": 1418,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/about/",
+            "final_url": "https://www.egi.eu/about",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About",
+            "http_status": 200,
+            "title": "About - EGI",
+            "chars": 5705,
+            "error": ""
+          }
+        ],
+        "children_skipped": []
       },
       "results": [
         {
@@ -891,7 +1163,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "5 distinct external host(s) linked from the landing page",
             "bsky.app",
@@ -899,7 +1171,8 @@
             "www.linkedin.com",
             "www.youtube.com",
             "zenodo.org (EGI on Zenodo)",
-            "EOSC AAI indicators seen: EGI Check-in"
+            "EOSC AAI indicators seen: EGI Check-in",
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -910,7 +1183,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases ...\"",
-            "organisation-like names found: About About Us EGI Foundation; About EGI Foundation; EGI Digital Innovation Hub Foundation; EGI Foundation; EGI Infrastructure EGI Community Foundation"
+            "organisation-like names found: About About Us EGI Foundation; About EGI Foundation; EGI Digital Innovation Hub Foundation; EGI Foundation; EGI Infrastructure EGI Community Foundation",
+            "about page one level down: https://www.egi.eu/about/ (HTTP 200) opening text: \"EGI: Open Ecosystem for Research and Innovation We support data-intensive research with a wide range of advanced computing services EGI is the federation of computing and storage resource providers united by a mission of delivering advanced computing and data ...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -951,11 +1225,13 @@
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
           "verdict": "PASS",
-          "message": "The landing page links to what appears to be an Acceptable Use Policy.",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "\"terms of use\" -> https://www.egi.eu/terms-of-use/"
+            "\"terms of use\" -> https://www.egi.eu/terms-of-use/",
+            "followed: https://www.egi.eu/terms-of-use/ -> HTTP 200, 2362 chars, title: Terms of Use - EGI",
+            "policy wording found: Conditions, Policy, Terms, You shall"
           ],
-          "reviewer_action": "Confirm the target really is an Acceptable Use Policy, is in English, and covers all the node's resources."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English."
         },
         {
           "point_id": "5c",
@@ -970,15 +1246,15 @@
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "MANUAL_REVIEW",
-          "message": "A contact route exists, but nothing identifies it as a helpdesk. The checklist asks specifically for the node helpdesk, and a general enquiries or press address does not obviously satisfy that.",
+          "verdict": "PASS",
+          "message": "The contact page reached from the landing page identifies a support or helpdesk route.",
           "evidence": [
             "\"Contact Us\" -> https://www.egi.eu/contact-us/",
             "\"Contact Us\" -> https://www.egi.eu/contact-us/",
-            "\"Contact us\" -> https://www.egi.eu/contact-us/",
-            "\"(no label)\" -> mailto:contact@egi.eu"
+            "followed: https://www.egi.eu/contact-us/ -> HTTP 200",
+            "helpdesk wording on that page: Support"
           ],
-          "reviewer_action": "Confirm this contact route reaches the node's user support, not a general mailbox."
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
@@ -1000,10 +1276,60 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://geant.org/projects/geant-eosc-node/",
-        "fetched_at": "2026-09-17T14:54:30+00:00",
+        "fetched_at": "2026-09-17T15:32:44+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
-        "screenshot": "geant.png"
+        "screenshot": "geant.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 122 link(s) on the landing page, 3 followed because they matched a checklist point, 7 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://geant.org/contact",
+            "final_url": "https://geant.org/contact/",
+            "selected_for": [
+              "6",
+              "2"
+            ],
+            "link_text": "Contact",
+            "http_status": 200,
+            "title": "Contact - GÉANT",
+            "chars": 3031,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/",
+            "final_url": "https://geant.org/about-geant/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About GÉANT",
+            "http_status": 200,
+            "title": "About GÉANT",
+            "chars": 974,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/vision-mission-strategy/",
+            "final_url": "https://geant.org/about-geant/vision-mission-strategy/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Vision, mission, strategy",
+            "http_status": 200,
+            "title": "Vision, mission, strategy - GÉANT",
+            "chars": 7644,
+            "error": ""
+          }
+        ],
+        "children_skipped": [
+          "https://geant.org/about-geant/geant-executive-team/ (cap for point 2)",
+          "https://geant.org/about-geant/governance/ (cap for point 2)",
+          "https://geant.org/about-geant/membership/ (cap for point 2)",
+          "https://geant.org/about-geant/become-a-geant-member/ (cap for point 2)",
+          "https://geant.org/about-geant/equity-diversity-and-inclusion/ (cap for point 2)",
+          "https://clouds.geant.org/geant-cloud-frameworks/ (cap for point 2)",
+          "https://geant.org/about-geant/membership/ (cap for point 2)"
+        ]
       },
       "results": [
         {
@@ -1021,7 +1347,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "27 distinct external host(s) linked from the landing page",
             "careers.geant.org (Careers)",
@@ -1036,7 +1362,8 @@
             "eduroam.org (eduroam)",
             "eduteams.org (eduTEAMS)",
             "events.geant.org (Community events)",
-            "EOSC AAI indicators seen: MyAccessID, myaccessid"
+            "EOSC AAI indicators seen: MyAccessID, myaccessid",
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1048,7 +1375,8 @@
           "evidence": [
             "meta description: \"The GÉANT EOSC Node provides trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly.\"",
             "opening main text: \"Home . Projects . GÉANT EOSC Node GÉANT EOSC Node The GÉANT EOSC Node is GÉANT's contribution to the EOSC Federation, providing trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly. GÉANT Service Catalogue The catalogue provides an overview of the GÉANT services onboarded into the EOSC Federation. EOSC Federation An evolvin...\"",
-            "organisation-like names found: Association; Security Operations Centre"
+            "organisation-like names found: Association; Security Operations Centre",
+            "about page one level down: https://geant.org/contact (HTTP 200) opening text: \"Home . Contact Contact Get in touch, learn more or request support. GDPR For questions related to our Privacy Notice and how GÉANT processes your personal data. Contact us General enquiries Submit a general enquiry, and we will put you in contact with the appr...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -1109,14 +1437,15 @@
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "MANUAL_REVIEW",
-          "message": "A contact route exists, but nothing identifies it as a helpdesk. The checklist asks specifically for the node helpdesk, and a general enquiries or press address does not obviously satisfy that.",
+          "verdict": "PASS",
+          "message": "The contact page reached from the landing page identifies a support or helpdesk route.",
           "evidence": [
             "\"Contact\" -> https://geant.org/contact",
             "\"Contact To find out more about the GÉANT EOSC Node get in touch via the contact form.\" -> https://geant.org/contact/",
-            "\"Contact\" -> https://geant.org/contact"
+            "followed: https://geant.org/contact -> HTTP 200",
+            "helpdesk wording on that page: support"
           ],
-          "reviewer_action": "Confirm this contact route reaches the node's user support, not a general mailbox."
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
@@ -1138,10 +1467,80 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://ebrains.eu/",
-        "fetched_at": "2026-09-17T14:55:15+00:00",
+        "fetched_at": "2026-09-17T15:30:01+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
-        "screenshot": "ebrains.png"
+        "screenshot": "ebrains.png",
+        "crawl_depth": 1,
+        "crawl_note": "depth 1: 127 link(s) on the landing page, 4 followed because they matched a checklist point, 16 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+            "final_url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "EBRAINS Support for EuroHPC Applications",
+            "http_status": 200,
+            "title": "EBRAINS Support for EuroHPC Applications | EBRAINS",
+            "chars": 2433,
+            "error": ""
+          },
+          {
+            "url": "https://ebrains.eu/news-events/media/media-contact",
+            "final_url": "https://ebrains.eu/news-events/media/media-contact",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Media Contact",
+            "http_status": 200,
+            "title": "Media Contact | EBRAINS",
+            "chars": 233,
+            "error": ""
+          },
+          {
+            "url": "https://ebrains.eu/about",
+            "final_url": "https://ebrains.eu/about",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About",
+            "http_status": 200,
+            "title": "About | EBRAINS",
+            "chars": 3111,
+            "error": ""
+          },
+          {
+            "url": "https://ebrains.eu/about/at-a-glance",
+            "final_url": "https://ebrains.eu/about/at-a-glance",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "At a glance",
+            "http_status": 200,
+            "title": "At a Glance | EBRAINS",
+            "chars": 6329,
+            "error": ""
+          }
+        ],
+        "children_skipped": [
+          "https://ebrains.eu/contact (cap for point 6)",
+          "https://ebrains.eu/about/at-a-glance/mission (cap for point 2)",
+          "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)",
+          "https://ebrains.eu/about/at-a-glance/ebrains-20 (cap for point 2)",
+          "https://ebrains.eu/about/at-a-glance/ethics-society (cap for point 2)",
+          "https://ebrains.eu/about/regional-presence (cap for point 2)",
+          "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
+          "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
+          "https://ebrains.eu/about/ebrains-aisbl (cap for point 2)",
+          "https://ebrains.eu/about/ebrains-aisbl/governance (cap for point 2)",
+          "https://ebrains.eu/about/ebrains-aisbl/our-people (cap for point 2)",
+          "https://ebrains.eu/about/ebrains-aisbl/careers (cap for point 2)",
+          "https://ebrains.eu/about/ebrains-aisbl/procurements (cap for point 2)",
+          "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
+          "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
+          "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)"
+        ]
       },
       "results": [
         {
@@ -1158,14 +1557,15 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable without following every resource link and confirming each login is EOSC AAI. This tool makes one request per node by design, and AAI compliance is verified during EEN enrolment rather than by reading a page.",
+          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "5 distinct external host(s) linked from the landing page",
             "bsky.app (Bluesky)",
             "mastodon.social (Mastodon)",
             "www.linkedin.com (LinkedIn)",
             "www.youtube.com (YouTube)",
-            "x.com (X)"
+            "x.com (X)",
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1177,7 +1577,8 @@
           "evidence": [
             "meta description: \"An open research infrastructure that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ.\"",
             "opening main text: \"Built for Brain Breakthroughs Europe's Digital Infrastructure for Brain Research Explore data, tools and services EBRAINS RI EBRAINS is an open research infrastructure (RI) that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ. The EBRAINS infrastructure was originally built by the EU-funded Human Brain Project and is now adva...\"",
-            "organisation-like names found: University"
+            "organisation-like names found: University",
+            "about page one level down: https://ebrains.eu/about (HTTP 200) opening text: \"Breadcrumb Start > About About A Pioneering Ecosystem for Neuroscience Breakthroughs Digital Infrastructure for Brain Research Who we are EBRAINS is Europe’s digital infrastructure for brain research. It provides unique tools and data bringing together neurosc...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },

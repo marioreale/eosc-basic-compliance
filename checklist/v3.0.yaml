@@ -35,13 +35,16 @@ points:
       publicly accessible or accessible via login through EOSC AAI.
     decidable: false
     decidable_note: >-
-      Not decidable under this tool's no-crawl constraint, and not decidable by
-      inspection in general. It requires following every resource link through
-      intermediate pages, and then confirming that each login encountered is
-      genuinely EOSC AAI rather than a local or institutional IdP. Whether a
-      given login is EOSC AAI compliant is settled during node enrolment with the
-      EEN, not by reading HTML. The tool lists the outbound resource links it
-      found so a reviewer has a work list.
+      Not decidable by inspection, and one level of link following does not close
+      the gap. The requirement quantifies over every resource reachable from the
+      page "either directly or through links through intermediate pages", which is
+      unbounded; this tool follows at most one level, and only links that can
+      settle a specific point. Even with full traversal it would still require
+      confirming that each login encountered is genuinely EOSC AAI rather than a
+      local or institutional IdP, and whether a given login is EOSC AAI compliant
+      is settled during node enrolment with the EEN, not by reading HTML. The tool
+      reports how many followed pages were served anonymously and lists the
+      outbound resource links it found, so a reviewer has a work list.
 
   - id: "2"
     title: Scope, intended users and responsible organization are stated
@@ -90,8 +93,9 @@ points:
     decidable: false
     decidable_note: >-
       Requires enumerating "all research resources offered by the Node", which is
-      not derivable from the landing page alone, and then judging whether each
-      description states a purpose. Scoped out by the no-crawl constraint.
+      not derivable from the landing page alone and is not what this tool's single
+      level of link following collects. Judging whether each description states a
+      purpose is then a reading task, not a pattern match.
 
   - id: "5b"
     title: Acceptable Use Policy (AUP) accessible for research resources
