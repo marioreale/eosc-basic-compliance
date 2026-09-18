@@ -28,14 +28,14 @@ Nine landing pages. Eight were fetched on 18 September 2026, 14:17–14:21 UTC;
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EUDAT † | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 
 90 cells: 🟢 29 PASS · 🔴 6 FAIL · 🟠 55 review.
 
-the EUDAT row (†) is carried over from 17 September.
+the EUDAT row is carried over from 17 September.
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
