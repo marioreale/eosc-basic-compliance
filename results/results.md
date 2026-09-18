@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `2026-09-17-1557` · 2026-09-17T15:57:17+00:00 · 9 nodes · one page request per node plus 25 followed link(s) in total (depth 1).
+Run `2026-09-18-0803` · 2026-09-18T08:03:27+00:00 · 9 nodes · one page request per node plus 25 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 

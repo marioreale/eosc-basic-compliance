@@ -124,6 +124,36 @@ uv run basic-check run               # collect + assess
 uv run basic-check show data-terra   # one node's results in the terminal
 ```
 
+### Checking a page that is not in `nodes.yaml`
+
+`--url` runs the full checklist against any page without editing configuration.
+Repeatable, and it writes to `results/one-off/` so a published run is never
+overwritten:
+
+```bash
+uv run basic-check run --url https://example.org/our-eosc-node/
+uv run basic-check run --url https://a.example/ --url https://b.example/
+uv run basic-check show example-org-our-eosc-node --one-off
+```
+
+Point 4 needs to know which `eosc.eu` page the node ought to link to. Without it
+the point is still checked — a link to the federation index still fails — but the
+message cannot name the URL that is missing. Supply it for a single URL with:
+
+```bash
+uv run basic-check run --url https://eosc.panosc.eu/ \
+  --eosc-page https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/
+```
+
+Reports from a `--url` run are titled **"Ad hoc page check (not a federation
+run)"** and carry a marker at the top. They are otherwise identical in layout to
+the real report, and a stray single-node file that looked official would be a
+liability while a production decision is pending. `results/one-off/` is
+git-ignored for the same reason.
+
+`--url` cannot be combined with `--only`: `--only` filters ids in the nodes file,
+and an ad hoc URL has no id there.
+
 `collect` and `assess` are separate on purpose: assessment is re-runnable offline
 against saved evidence, so changing a check never means re-requesting the pages.
 `assess` exits non-zero if any configured node has no evidence, so a short table
@@ -164,7 +194,7 @@ uv run basic-check assess --approved-names approved-names.txt
 ## Tests
 
 ```bash
-uv run pytest -q          # 53 tests, ~0.1s, no network
+uv run pytest -q          # 75 tests, ~0.2s, no network
 uv run ruff check src tests
 ```
 
@@ -178,6 +208,8 @@ reading as documentation of them:
 |---|---|
 | `test_a_well_rendered_page_still_fails_when_the_link_is_genuinely_absent` | Reporting "no contact route of any kind was found" from a page that had not rendered. That describes the tool, not the node. Absence-based failures are now gated on the page having actually rendered — and this test stops that gate becoming a blanket excuse. |
 | `test_point1_does_not_fail_on_403_with_no_login_offered` | Asserted `FAIL` originally. Inverted after GÉANT returned 403 purely in response to this tool's own request volume. |
+| `test_run_does_not_pass_typer_descriptors_to_its_helpers` | `basic-check run` was documented here as working and crashed on every invocation: calling a Typer-decorated function from Python passes its option *descriptors*, not their values. Nothing tested the CLI, so the suite was green throughout. |
+| `test_url_runs_are_written_somewhere_else_by_default` | A one-off `--url` check writing into `results/` would replace the committed nine-node report with a one-row table, since `assess` rewrites those files wholesale. |
 | `test_every_link_a_check_can_use_is_a_link_the_crawler_will_follow` | The crawler looked for "acceptable use" while the check also accepted "terms of use", so links the checks relied on were never fetched. Four PASSes were weaker than they appeared. Nothing failed; the output was just quietly thinner than it claimed. |
 
 Two of them exist because probing found real bugs in this code:

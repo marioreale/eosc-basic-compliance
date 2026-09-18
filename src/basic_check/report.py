@@ -82,6 +82,8 @@ font-size:.72rem;font-weight:700;letter-spacing:.02em}
 .v.manual{color:var(--manual);background:var(--manual-bg)}
 .v.error{color:var(--error);background:var(--error-bg)}
 .legend{margin:.9rem 0 0;font-size:.84rem;color:var(--muted)}
+.adhoc{border:1px solid #d9b8e8;background:#f9f2fd;border-left:4px solid #8e44ad;
+padding:.85rem 1rem;border-radius:0 5px 5px 0;margin:0 0 1rem;font-size:.92rem;color:#4a2560}
 thead th.pt a{color:inherit;text-decoration:none;border-bottom:1px dotted #b9c2cd}
 thead th.pt a:hover{color:#0b5fa5;border-bottom-color:#0b5fa5}
 .cols{margin:1.6rem 0 0}
@@ -210,6 +212,21 @@ def render_html(run: dict, out: Path) -> Path:
     # written by hand. A hand-written "no links were followed" survived the commit
     # that started following links, and a report that misdescribes its own method
     # is worse than one that says less.
+    # A one-off --url check produces a report with the same title and layout as
+    # the committed federation run. Those must not be confusable: this report gets
+    # circulated before a production decision, and a stray single-node file that
+    # looks official is a real hazard. Ad hoc runs say so at the top.
+    ad_hoc = [n for n in run["nodes"] if n.get("ad_hoc")]
+    ad_hoc_banner = (
+        '<div class="adhoc"><strong>Ad hoc check, not a federation run.</strong> '
+        f'{"This page was" if len(ad_hoc) == 1 else "These pages were"} checked via '
+        "<code>--url</code> and {} not part of the configured node list. No registered "
+        "Node Landing Page was involved, so nothing here should be quoted as a node's "
+        "assessment.</div>".format("is" if len(ad_hoc) == 1 else "are")
+        if ad_hoc
+        else ""
+    )
+
     fetches = [n.get("fetch", {}) for n in run["nodes"]]
     depths = {f.get("crawl_depth", 0) for f in fetches}
     kids = sum(len(f.get("children", []) or []) for f in fetches)
@@ -255,6 +272,7 @@ def render_html(run: dict, out: Path) -> Path:
 ({html.escape(run["checklist"]["checklist_date"])}) · {len(run["nodes"])} nodes ·
 run <code>{html.escape(run["run_id"])}</code> · {html.escape(run["generated_at"])}</p>
 
+{ad_hoc_banner}
 <div class="banner"><strong>This is not a compliance statement.</strong> Of the
 {len(order)} checklist points, {len(auto)} can be settled by inspection
 ({", ".join(auto)}), {len(partial)} only partly ({", ".join(partial)}), and
@@ -440,9 +458,23 @@ def render_markdown(run: dict, out: Path) -> Path:
         else "one page request per node, no crawling"
     )
 
+    ad_hoc = [n for n in run["nodes"] if n.get("ad_hoc")]
+    title = "EOSC Node Landing Page compliance"
+    if ad_hoc and len(ad_hoc) == len(run["nodes"]):
+        title = "Ad hoc page check (not a federation run)"
+
     lines = [
-        f"# EOSC Node Landing Page compliance — checklist v{run['checklist']['checklist_version']}",
+        f"# {title} — checklist v{run['checklist']['checklist_version']}",
         "",
+    ]
+    if ad_hoc:
+        lines += [
+            "> **Ad hoc check, not a federation run.** "
+            f"{len(ad_hoc)} page(s) here were checked via `--url` and are not part of the "
+            "configured node list. Nothing here should be quoted as a node's assessment.",
+            "",
+        ]
+    lines += [
         f"Run `{run['run_id']}` · {run['generated_at']} · {len(run['nodes'])} nodes · {scope}.",
         "",
         "> **This is not a compliance statement.** Points marked 🟠 review are ones this tool "

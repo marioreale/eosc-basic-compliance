@@ -5,3 +5,6 @@ __pycache__/
 .ruff_cache/
 uv.lock
 results/evidence/*.png
+
+# Ad hoc --url checks are scratch output, not part of the assessed federation run.
+results/one-off/

@@ -4,9 +4,11 @@ from __future__ import annotations
 
 import asyncio
 import json
+import re
 from dataclasses import asdict
 from datetime import UTC, datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 import typer
 import yaml
@@ -23,6 +25,78 @@ ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_NODES = ROOT / "nodes.yaml"
 DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"
 DEFAULT_RESULTS = ROOT / "results"
+# One-off --url checks write here by default rather than into results/, so an ad
+# hoc check of one candidate page cannot overwrite the committed nine-node report
+# with a one-row table. assess() rewrites results.md, index.html and results.json
+# wholesale, so sharing a directory would silently destroy the published run.
+DEFAULT_ONEOFF = ROOT / "results" / "one-off"
+
+
+def _slug(url: str) -> str:
+    """A stable, filesystem-safe node id derived from the URL.
+
+    Includes the path, because several EOSC nodes live on a shared host: a bare
+    hostname would make eosc.eu/a and eosc.eu/b collide and silently overwrite
+    each other's evidence.
+    """
+    parsed = urlparse(url)
+    raw = (parsed.netloc + parsed.path).lower()
+    raw = re.sub(r"^www\.", "", raw)
+    slug = re.sub(r"[^a-z0-9]+", "-", raw).strip("-")
+    return slug or "one-off"
+
+
+def _nodes_from_urls(urls: list[str], eosc_page: str = "") -> list[dict]:
+    """Build throwaway node records from bare URLs given on the command line."""
+    if eosc_page and len(urls) > 1:
+        raise typer.BadParameter("--eosc-page applies to a single --url; pass a nodes file instead")
+    nodes, seen = [], set()
+    for url in urls:
+        url = url.strip()
+        parsed = urlparse(url)
+        if parsed.scheme not in ("http", "https") or not parsed.netloc:
+            raise typer.BadParameter(f"--url must be an absolute http(s) URL, got {url!r}")
+        node_id = _slug(url)
+        if node_id in seen:
+            raise typer.BadParameter(f"--url given twice for the same page: {url}")
+        seen.add(node_id)
+        nodes.append(
+            {
+                "id": node_id,
+                "name": parsed.netloc.removeprefix("www."),
+                "url": url,
+                "eosc_page": eosc_page,
+                "ad_hoc": True,
+            }
+        )
+    return nodes
+
+
+def _resolve(
+    urls: list[str] | None,
+    nodes_file: Path,
+    only: str,
+    results_dir: Path | None,
+    eosc_page: str = "",
+) -> tuple[list[dict], Path]:
+    """Decide what to check and where to write it.
+
+    --url and --only are mutually exclusive rather than silently ignored: --only
+    filters a configured list by id, and an id the user never chose is not
+    something to filter on.
+    """
+    urls = [u for u in (urls or []) if u.strip()]
+    if urls:
+        if only:
+            raise typer.BadParameter(
+                "--only filters the nodes file; it cannot be combined with --url"
+            )
+        return _nodes_from_urls(urls, eosc_page), (results_dir or DEFAULT_ONEOFF)
+    if eosc_page:
+        raise typer.BadParameter(
+            "--eosc-page is only meaningful with --url; use nodes.yaml otherwise"
+        )
+    return _load_nodes(nodes_file, only), (results_dir or DEFAULT_RESULTS)
 
 
 def _load_nodes(path: Path, only: str = "") -> list[dict]:
@@ -40,8 +114,20 @@ def _load_nodes(path: Path, only: str = "") -> list[dict]:
 @app.command()
 def collect(
     nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
-    results_dir: Path = typer.Option(DEFAULT_RESULTS, "--results"),
+    results_dir: Path = typer.Option(None, "--results"),
     only: str = typer.Option("", "--only", help="Comma-separated node ids"),
+    url: list[str] = typer.Option(
+        None,
+        "--url",
+        help="Check this URL directly, without adding it to nodes.yaml. Repeatable. "
+        "Writes to results/one-off/ so a published run is never overwritten.",
+    ),
+    eosc_page: str = typer.Option(
+        "",
+        "--eosc-page",
+        help="With a single --url: the node's own eosc.eu page, so a point 4 failure "
+        "can name the exact URL that is missing.",
+    ),
     delay: float = typer.Option(2.0, "--delay", help="Seconds between hosts"),
     depth: int = typer.Option(
         1,
@@ -56,7 +142,22 @@ def collect(
     ),
 ):
     """Fetch each landing page and save the evidence. Depth 1 by default."""
-    nodes = _load_nodes(nodes_file, only)
+    nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    _do_collect(nodes, resolved, delay, depth, max_children)
+
+
+def _do_collect(
+    nodes: list[dict], results_dir: Path, delay: float, depth: int, max_children: int
+) -> None:
+    """The actual work, taking plain values.
+
+    Kept separate from the Typer command because calling a Typer-decorated
+    function directly from Python passes its OptionInfo defaults rather than the
+    real ones. `run` did exactly that and crashed with
+    "'OptionInfo' object has no attribute 'read_text'" for any argument the caller
+    did not spell out. The tests now call these _do_* functions, so that class of
+    breakage is caught.
+    """
     evidence_dir = results_dir / "evidence"
     if depth >= 1:
         typer.echo(
@@ -75,8 +176,15 @@ def collect(
 def assess(
     nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
     checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c"),
-    results_dir: Path = typer.Option(DEFAULT_RESULTS, "--results"),
+    results_dir: Path = typer.Option(None, "--results"),
     only: str = typer.Option("", "--only"),
+    url: list[str] = typer.Option(
+        None,
+        "--url",
+        help="Check this URL directly, without adding it to nodes.yaml. Repeatable. "
+        "Writes to results/one-off/ so a published run is never overwritten.",
+    ),
+    eosc_page: str = typer.Option("", "--eosc-page"),
     approved_names: Path | None = typer.Option(
         None,
         "--approved-names",
@@ -86,7 +194,18 @@ def assess(
     run_id: str = typer.Option("", "--run"),
 ):
     """Apply the checklist to already-collected evidence and write the reports."""
-    nodes = _load_nodes(nodes_file, only)
+    nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    _do_assess(nodes, resolved, checklist_file, approved_names, run_id)
+
+
+def _do_assess(
+    nodes: list[dict],
+    results_dir: Path,
+    checklist_file: Path,
+    approved_names: Path | None = None,
+    run_id: str = "",
+) -> dict:
+    """See _do_collect for why this is not the Typer command itself."""
     checklist = yaml.safe_load(checklist_file.read_text())
     evidence_dir = results_dir / "evidence"
 
@@ -115,6 +234,7 @@ def assess(
                 "id": node["id"],
                 "name": node["name"],
                 "url": node["url"],
+                "ad_hoc": node.get("ad_hoc", False),
                 "fetch": {
                     "http_status": ev.http_status,
                     "final_url": ev.final_url,
@@ -168,26 +288,32 @@ def assess(
 
     if missing:
         raise typer.Exit(2)
+    return run
 
 
 @app.command()
 def run(
     nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
-    results_dir: Path = typer.Option(DEFAULT_RESULTS, "--results"),
+    results_dir: Path = typer.Option(None, "--results"),
     only: str = typer.Option("", "--only"),
+    url: list[str] = typer.Option(
+        None,
+        "--url",
+        help="Check this URL directly, without adding it to nodes.yaml. Repeatable. "
+        "Writes to results/one-off/ so a published run is never overwritten.",
+    ),
+    eosc_page: str = typer.Option("", "--eosc-page"),
+    checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c"),
+    approved_names: Path | None = typer.Option(None, "--approved-names"),
+    run_id: str = typer.Option("", "--run"),
     delay: float = typer.Option(2.0, "--delay"),
     depth: int = typer.Option(1, "--depth", min=0, max=1),
 ):
     """collect, then assess."""
-    collect(
-        nodes_file=nodes_file,
-        results_dir=results_dir,
-        only=only,
-        delay=delay,
-        depth=depth,
-        max_children=MAX_CHILDREN,
-    )
-    assess(nodes_file=nodes_file, results_dir=results_dir, only=only)
+    # Resolve once so both phases agree on the node list and the directory.
+    nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN)
+    _do_assess(nodes, resolved, checklist_file, approved_names, run_id)
 
 
 @app.command()
@@ -204,8 +330,11 @@ def points(checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist",
 def show(
     node_id: str = typer.Argument(...),
     results_dir: Path = typer.Option(DEFAULT_RESULTS, "--results"),
+    one_off: bool = typer.Option(False, "--one-off", help="Read results/one-off/ instead"),
 ):
     """Print one node's results."""
+    if one_off:
+        results_dir = DEFAULT_ONEOFF
     data = json.loads((results_dir / "results.json").read_text())
     for node in data["nodes"]:
         if node["id"] == node_id:
