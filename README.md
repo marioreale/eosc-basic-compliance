@@ -20,7 +20,6 @@ Set `--depth 0` for the strict one-request-per-node behaviour.
 ## What it found
 
 Nine landing pages. Eight were fetched on 18 September 2026, 14:17–14:21 UTC;
-the EUDAT row (†) is carried over from 17 September.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -35,6 +34,8 @@ the EUDAT row (†) is carried over from 17 September.
 | EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 
 90 cells: 🟢 29 PASS · 🔴 6 FAIL · 🟠 55 review.
+
+the EUDAT row (†) is carried over from 17 September.
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
