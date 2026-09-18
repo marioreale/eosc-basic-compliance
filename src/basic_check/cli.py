@@ -320,10 +320,21 @@ def run(
 def points(checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c")):
     """Print the checklist points and whether each is machine-decidable."""
     checklist = yaml.safe_load(checklist_file.read_text())
+    typer.echo(
+        f"Checklist v{checklist.get('checklist_version', '?')} "
+        f"({checklist.get('checklist_date', '?')}) from {checklist_file}"
+    )
+    if checklist.get("source_file"):
+        typer.echo(
+            f"  transcribed from checklist/{checklist['source_file']} "
+            f"sha256:{str(checklist.get('source_sha256', ''))[:12]}…"
+        )
+    typer.echo("")
     for p in checklist["points"]:
         labels = {True: "by inspection", "partial": "partly", False: "human judgement"}
         dec = labels[p.get("decidable")]
-        typer.echo(f"{p['id']:4} [{dec:15}] {p['title']}")
+        impl = p.get("implemented_by", "—")
+        typer.echo(f"{p['id']:4} [{dec:15}] {impl:12} {p['title']}")
 
 
 @app.command()

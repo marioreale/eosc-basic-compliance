@@ -1,15 +1,18 @@
 {
-  "run_id": "2026-09-18-0803",
-  "generated_at": "2026-09-18T08:03:27+00:00",
+  "run_id": "provenance-check",
+  "generated_at": "2026-09-18T14:00:07+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
     "source_document": "20260910_Node_Landing_Page_Verification_Checklist_v3.0.docx",
+    "source_file": "20260910_Node_Landing_Page_Verification_Checklist_v3.0.pdf",
+    "source_sha256": "31e0acbc0c40eee271213ac6f2dcc1ef634c7b067119f515ddb06ddbc0145b59",
     "points": [
       {
         "id": "1",
         "title": "NLP is publicly accessible, or reachable via EOSC AAI login",
         "requirement": "The Node Landing Page must either be (a) publicly accessible (anonymously, i.e. without the need for users to login) or (b) accessible via login through EOSC AAI.",
+        "implemented_by": "check_1",
         "decidable": true,
         "decidable_note": "Anonymous reachability is directly observable: fetch the URL without credentials and see whether the content is served. Branch (b) only matters when (a) fails."
       },
@@ -17,6 +20,7 @@
         "id": "1R",
         "title": "Resources pointed to by the NLP are public or behind EOSC AAI",
         "requirement": "All resources pointed by the Node Landing Page, thus exposed to EOSC users, either directly or through links through intermediate pages, must either be publicly accessible or accessible via login through EOSC AAI.",
+        "implemented_by": "check_1R",
         "decidable": false,
         "decidable_note": "Not decidable by inspection, and one level of link following does not close the gap. The requirement quantifies over every resource reachable from the page \"either directly or through links through intermediate pages\", which is unbounded; this tool follows at most one level, and only links that can settle a specific point. Even with full traversal it would still require confirming that each login encountered is genuinely EOSC AAI rather than a local or institutional IdP, and whether a given login is EOSC AAI compliant is settled during node enrolment with the EEN, not by reading HTML. The tool reports how many followed pages were served anonymously and lists the outbound resource links it found, so a reviewer has a work list."
       },
@@ -24,6 +28,7 @@
         "id": "2",
         "title": "Scope, intended users and responsible organization are stated",
         "requirement": "Clearly state the Node's scope, intended users and responsible organization. (It is up to the Node to feature all the organisations involved).",
+        "implemented_by": "check_2",
         "decidable": false,
         "decidable_note": "\"Clearly state\" is a judgement about whether prose communicates three things to a researcher. A keyword match would produce confident nonsense in both directions. The tool extracts the candidate passages and names the reviewer must read."
       },
@@ -31,6 +36,7 @@
         "id": "3",
         "title": "EOSC logo and official Tripartite-approved node name are visible",
         "requirement": "Clearly and visibly show the EOSC logo and the official Tripartite-approved name of the Node.",
+        "implemented_by": "check_3",
         "decidable": "partial",
         "decidable_note": "Presence of an EOSC logo image is checkable, with caveats: a logo rendered as a CSS background or inlined SVG sprite can be missed, and \"clearly and visibly\" is a judgement. The Tripartite-approved name is NOT checkable without the authoritative list of approved node names, which the tool does not have; supply it via --approved-names to turn this into a real check."
       },
@@ -38,6 +44,7 @@
         "id": "4",
         "title": "Link to the node's own dedicated page on eosc.eu",
         "requirement": "Provide a link to the Node's own dedicated page on the eosc.eu website — the Node's entry under eosc.eu/building-the-eosc-federation, not the eosc.eu homepage or the index page itself.",
+        "implemented_by": "check_4",
         "decidable": true,
         "decidable_note": "Fully decidable and the sharpest point in the checklist: an href under eosc.eu/building-the-eosc-federation/ with a path segment beyond the index. The checklist explicitly excludes both the homepage and the index, so those are matched and rejected rather than ignored."
       },
@@ -45,6 +52,7 @@
         "id": "5a",
         "title": "Purpose description accessible in English for research resources",
         "requirement": "For all research resources offered by the Node to EOSC users, a purpose description must be accessible in English either directly or via the link to the resource's entry in the EOSC Catalogue.",
+        "implemented_by": "check_5a",
         "decidable": false,
         "decidable_note": "Requires enumerating \"all research resources offered by the Node\", which is not derivable from the landing page alone and is not what this tool's single level of link following collects. Judging whether each description states a purpose is then a reading task, not a pattern match."
       },
@@ -52,6 +60,7 @@
         "id": "5b",
         "title": "Acceptable Use Policy (AUP) accessible for research resources",
         "requirement": "For all research resources offered by the Node, the Acceptable Use Policy (AUP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.",
+        "implemented_by": "check_5b",
         "decidable": "partial",
         "decidable_note": "A pointer to an AUP on the landing page is checkable. \"For all research resources\" is not, without enumerating the resources. Absence of a pointer on the landing page is therefore reported as MANUAL_REVIEW, never FAIL: the policy may legitimately live on each resource's catalogue entry, which is exactly what the checklist permits."
       },
@@ -59,6 +68,7 @@
         "id": "5c",
         "title": "User Access Policy (UAP) accessible for research resources",
         "requirement": "For all research resources offered by the Node, the User Access Policy (UAP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.",
+        "implemented_by": "check_5c",
         "decidable": "partial",
         "decidable_note": "Same reasoning as 5b. Note that AUP and UAP are distinct documents in this checklist and must not be conflated: an \"Access Policy\" satisfies 5c, an \"Acceptable Use Policy\" satisfies 5b, and many nodes publish only one."
       },
@@ -66,6 +76,7 @@
         "id": "6",
         "title": "Means of contacting the node helpdesk",
         "requirement": "Provide means of contacting the Node helpdesk.",
+        "implemented_by": "check_6",
         "decidable": "partial",
         "decidable_note": "A contact route (mailto:, contact/support/helpdesk page, contact form) is checkable. Whether it reaches a *helpdesk* rather than a generic press or info address is a judgement, so a generic-looking contact is flagged rather than passed silently."
       },
@@ -73,6 +84,7 @@
         "id": "7",
         "title": "The page is in English",
         "requirement": "Be in English (Any other pages and information are not required to be strictly in English).",
+        "implemented_by": "check_7",
         "decidable": true,
         "decidable_note": "Statistical language detection over the page's main text, cross-checked against the declared lang attribute. Both are reported, because a mismatch between what a page declares and what it actually contains is itself worth seeing."
       }

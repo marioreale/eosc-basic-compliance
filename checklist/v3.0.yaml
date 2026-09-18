@@ -12,8 +12,29 @@
 
 checklist_version: "3.0"
 checklist_date: "2026-09-15"
-source_document: 20260910_Node_Landing_Page_Verification_Checklist_v3.0.docx
 
+# Provenance. `source_document` names the authoritative file as circulated;
+# `source_file` is the copy committed beside this YAML, and `source_sha256` is
+# its hash, asserted by tests/test_checklist.py. The point is that the
+# transcription below can be audited against the document it came from, without
+# relying on anyone's memory of what that document said.
+#
+# Note honestly what the hash does and does not prove: the committed file is a
+# PDF rendering of the .docx named in `source_document`, not that .docx itself.
+# It pins the exact bytes this transcription was made from, which is what catches
+# silent drift when a checklist is revised. It is not a signature over the
+# authoritative original. Swapping in the real .docx is a two-line change here
+# plus a re-hash.
+source_document: 20260910_Node_Landing_Page_Verification_Checklist_v3.0.docx
+source_file: 20260910_Node_Landing_Page_Verification_Checklist_v3.0.pdf
+source_sha256: 31e0acbc0c40eee271213ac6f2dcc1ef634c7b067119f515ddb06ddbc0145b59
+
+# Each point declares, in `implemented_by`, the function in basic_check.checks
+# that decides it. tests/test_checklist.py asserts the mapping is total in both
+# directions: every point resolves to a real callable, and every check function
+# is claimed by exactly one point. Without this the YAML and the rules could
+# disagree in silence -- a reworded requirement paired with unchanged logic would
+# still produce reports quoting the new wording while applying the old rule.
 points:
   - id: "1"
     title: NLP is publicly accessible, or reachable via EOSC AAI login
@@ -21,6 +42,7 @@ points:
       The Node Landing Page must either be (a) publicly accessible (anonymously,
       i.e. without the need for users to login) or (b) accessible via login
       through EOSC AAI.
+    implemented_by: check_1
     decidable: true
     decidable_note: >-
       Anonymous reachability is directly observable: fetch the URL without
@@ -33,6 +55,7 @@ points:
       All resources pointed by the Node Landing Page, thus exposed to EOSC users,
       either directly or through links through intermediate pages, must either be
       publicly accessible or accessible via login through EOSC AAI.
+    implemented_by: check_1R
     decidable: false
     decidable_note: >-
       Not decidable by inspection, and one level of link following does not close
@@ -51,6 +74,7 @@ points:
     requirement: >-
       Clearly state the Node's scope, intended users and responsible organization.
       (It is up to the Node to feature all the organisations involved).
+    implemented_by: check_2
     decidable: false
     decidable_note: >-
       "Clearly state" is a judgement about whether prose communicates three
@@ -63,6 +87,7 @@ points:
     requirement: >-
       Clearly and visibly show the EOSC logo and the official Tripartite-approved
       name of the Node.
+    implemented_by: check_3
     decidable: partial
     decidable_note: >-
       Presence of an EOSC logo image is checkable, with caveats: a logo rendered
@@ -77,6 +102,7 @@ points:
       Provide a link to the Node's own dedicated page on the eosc.eu website —
       the Node's entry under eosc.eu/building-the-eosc-federation, not the
       eosc.eu homepage or the index page itself.
+    implemented_by: check_4
     decidable: true
     decidable_note: >-
       Fully decidable and the sharpest point in the checklist: an href under
@@ -90,6 +116,7 @@ points:
       For all research resources offered by the Node to EOSC users, a purpose
       description must be accessible in English either directly or via the link
       to the resource's entry in the EOSC Catalogue.
+    implemented_by: check_5a
     decidable: false
     decidable_note: >-
       Requires enumerating "all research resources offered by the Node", which is
@@ -103,6 +130,7 @@ points:
       For all research resources offered by the Node, the Acceptable Use Policy
       (AUP) must be accessible in English either directly or via the resource's
       entry in the EOSC Catalogue.
+    implemented_by: check_5b
     decidable: partial
     decidable_note: >-
       A pointer to an AUP on the landing page is checkable. "For all research
@@ -117,6 +145,7 @@ points:
       For all research resources offered by the Node, the User Access Policy
       (UAP) must be accessible in English either directly or via the resource's
       entry in the EOSC Catalogue.
+    implemented_by: check_5c
     decidable: partial
     decidable_note: >-
       Same reasoning as 5b. Note that AUP and UAP are distinct documents in this
@@ -126,6 +155,7 @@ points:
   - id: "6"
     title: Means of contacting the node helpdesk
     requirement: Provide means of contacting the Node helpdesk.
+    implemented_by: check_6
     decidable: partial
     decidable_note: >-
       A contact route (mailto:, contact/support/helpdesk page, contact form) is
@@ -138,6 +168,7 @@ points:
     requirement: >-
       Be in English (Any other pages and information are not required to be
       strictly in English).
+    implemented_by: check_7
     decidable: true
     decidable_note: >-
       Statistical language detection over the page's main text, cross-checked

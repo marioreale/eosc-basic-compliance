@@ -354,6 +354,24 @@ color:var(--muted);font-size:.86rem}
 """
 
 
+def _provenance(checklist: dict) -> str:
+    """State which bytes this transcription was made from, and from what.
+
+    A reader who wants to check the transcription against the source needs to
+    know the source is in the repository and which copy it is. Saying only the
+    document's name invites the assumption that the name was verified.
+    """
+    name = checklist.get("source_file")
+    digest = checklist.get("source_sha256", "")
+    if not name:
+        return ""
+    return (
+        f' · transcribed from <code>checklist/{html.escape(str(name))}</code>'
+        f' (sha256 <code>{html.escape(str(digest)[:12])}…</code>), a PDF rendering'
+        " of the source document, committed so the transcription can be audited"
+    )
+
+
 def render_checklist_html(checklist: dict, out: Path) -> Path:
     """A standalone, readable page explaining checklist v3.0 and each column.
 
@@ -402,7 +420,7 @@ def render_checklist_html(checklist: dict, out: Path) -> Path:
 <p class="sub">Dated {html.escape(str(checklist.get("checklist_date", "")))} ·
 source document <code>{html.escape(str(checklist.get("source_document", "")))}</code> ·
 {len(points)} points · this page is generated from
-<code>checklist/v{html.escape(version)}.yaml</code></p>
+<code>checklist/v{html.escape(version)}.yaml</code>{_provenance(checklist)}</p>
 
 <div class="note">This page explains what each column of the results matrix means, quotes the
 requirement it comes from, and states plainly whether a script can settle it. Three of the
