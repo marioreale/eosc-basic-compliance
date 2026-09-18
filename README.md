@@ -175,9 +175,7 @@ uv run basic-check assess --approved-names approved-names.txt
   a link labelled "Acceptable Use Policy" that 404s now **fails** point 5b instead
   of passing on the strength of its own label.
 - **A block is not a finding.** A node that returns HTTP 403 to this tool is
-  reported as *review*, never as a failure. GÉANT served this tool HTTP 200 and
-  then 403 once crawling made a few more requests to the same host; nothing about
-  the site had changed, the tool had merely become more annoying. Turning that
+  reported as *review*, never as a failure.  Turning that
   into "not publicly accessible" would be the checker blaming a node for its own
   request volume. Only 404/410 — a registered URL that does not resolve — fails
   point 1.
