@@ -1,0 +1,102 @@
+name: compliance run
+
+# Checks the real Node Landing Pages against checklist v3.0 and publishes the
+# matrix to the run summary.
+#
+# Manual trigger only, deliberately. Unlike the `tests` workflow, this one sends
+# requests to nine organisations' websites. It is not on a schedule, because a
+# recurring unattended job that visits other people's sites is a different kind
+# of decision from a check someone chose to run.
+
+on:
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Nodes to check (comma-separated ids, e.g. egi,eudat). Leave empty for all nine.'
+        required: false
+        default: ''
+        type: string
+      depth:
+        description: 'Link following: 1 = follow one hop, 0 = landing page only'
+        required: false
+        default: '1'
+        type: choice
+        options: ['1', '0']
+      delay:
+        description: 'Seconds to wait between nodes'
+        required: false
+        default: '2.0'
+        type: string
+
+permissions:
+  contents: read
+
+# Never let two compliance runs hit the nodes at the same time.
+concurrency:
+  group: compliance-run
+  cancel-in-progress: false
+
+jobs:
+  compliance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - run: uv sync
+
+      # Run the unit tests before touching anyone's website. If the rules are
+      # broken, making 30-odd requests to real sites to produce wrong verdicts
+      # helps no one.
+      - name: Test the checker before using it
+        run: uv run pytest -q
+
+      - name: Install Chromium
+        run: uv run playwright install --with-deps chromium
+
+      # Inputs are passed through the environment rather than interpolated into
+      # the script, so a value containing shell metacharacters cannot execute.
+      - name: Check the node landing pages
+        env:
+          ONLY: ${{ inputs.only }}
+          DEPTH: ${{ inputs.depth }}
+          DELAY: ${{ inputs.delay }}
+          RUN_LABEL: web-${{ github.run_number }}
+        run: |
+          set -euo pipefail
+          args=(--depth "$DEPTH" --delay "$DELAY" --run "$RUN_LABEL")
+          if [ -n "$ONLY" ]; then
+            args+=(--only "$ONLY")
+          fi
+          echo "Running: basic-check run ${args[*]}"
+          uv run basic-check run "${args[@]}"
+
+      - name: Publish the matrix to the run summary
+        if: always()
+        env:
+          ACTOR: ${{ github.actor }}
+          DEPTH: ${{ inputs.depth }}
+          ONLY: ${{ inputs.only }}
+        run: |
+          set -euo pipefail
+          {
+            echo "Triggered by @${ACTOR} · depth ${DEPTH} · nodes: ${ONLY:-all}"
+            echo
+            if [ -f results/results.md ]; then
+              cat results/results.md
+            else
+              echo "No results were produced — see the log of the previous step."
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload the full reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compliance-results
+          path: |
+            results/
+            !results/evidence/*.png
+          if-no-files-found: warn
