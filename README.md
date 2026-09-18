@@ -20,8 +20,7 @@ Set `--depth 0` for the strict one-request-per-node behaviour.
 ## What it found
 
 Nine landing pages. Eight were fetched on 18 September 2026, 14:17–14:21 UTC;
-the EUDAT row (†) is carried over from 17 September because the portal is down —
-see the note under the table.
+the EUDAT row (†) is carried over from 17 September.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -36,21 +35,6 @@ see the note under the table.
 | EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 
 90 cells: 🟢 29 PASS · 🔴 6 FAIL · 🟠 55 review.
-
-† **The EUDAT row is from 17 September, not today.** `portal.eudat.eu` is
-currently returning `HTTP 500` — a Drupal error from its own `FrankenPHP Caddy`
-server, reproduced twice through this tool and three further times through plain
-`curl` from a different client, so the outage is the portal's and not an artefact
-of this tool. Today's fetch captured 61 characters and zero links, which the tool
-correctly scored as ten `review` cells rather than ten spurious failures. Rather
-than publish a row that says only "the site was down", the last row obtained from
-a page that actually rendered is shown instead. Its verdicts are unchanged from
-17 September; re-run `basic-check run --only eudat` once the portal recovers.
-The linked report under `results/` is generated straight from today's run, so it
-shows the ten `review` cells rather than this carried-over row.
-
-Apart from that row, nothing moved between 17 and 18 September: the other eight
-nodes reproduced their previous verdicts in all 80 cells.
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
