@@ -2,7 +2,7 @@
   "node_id": "eosc-dto",
   "node_name": "EOSC DTO (D4Science)",
   "requested_url": "https://eosc-dto.d4science.org/",
-  "fetched_at": "2026-09-17T15:27:46+00:00",
+  "fetched_at": "2026-09-18T14:17:42+00:00",
   "final_url": "https://eosc-dto.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -148,7 +148,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567588&t=1789605368198",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567588&t=1789734670327",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -156,7 +156,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1789605368199",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1789734670330",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -164,7 +164,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1789605368203",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1789734670334",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",

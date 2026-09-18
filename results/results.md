@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `provenance-check` · 2026-09-18T14:00:07+00:00 · 9 nodes · one page request per node plus 25 followed link(s) in total (depth 1).
+Run `2026-09-18` · 2026-09-18T14:21:47+00:00 · 9 nodes · one page request per node plus 22 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 
@@ -13,7 +13,7 @@ Run `provenance-check` · 2026-09-18T14:00:07+00:00 · 9 nodes · one page reque
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| EUDAT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
@@ -305,47 +305,41 @@ Be in English (Any other pages and information are not required to be strictly i
 ### EUDAT
 <https://portal.eudat.eu/>
 
-- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 932 characters of text rendered
-  - redirects followed: 1
+- **1** 🟠 review — The landing page returned HTTP 500, a server-side error. This is often transient, so it is not recorded as a checklist failure without a retry.
+  - HTTP 500
+  - final URL: https://portal.eudat.eu/
+  - *Reviewer action:* Retry later; if it persists, raise it with the node.
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 3 distinct external host(s) linked from the landing page
-  - docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node for your research.)
-  - eudat.eu (Discover services Browse services offered by EUDAT and the EOSC Federation., Meet the EUDAT Community Learn who the main users of EUDAT Services are and about their experiences.)
-  - www.eudat.eu (Accessibility Statement, EUDAT AUP, FAQs)
+  - 0 distinct external host(s) linked from the landing page
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "EOSC Node Marketplace Welcome to the EUDAT Portal Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limitless science. Uncertain where to start? Discover services Browse services offered by EUDAT and the EOSC Federation. Set up your workspace Read about the first steps in becoming an EUDAT Node user. User Guides Browse ..."
-  - organisation-like names found: EUDAT Ltd
-  - about page one level down: https://docs.eudat.eu (HTTP 200) opening text: "EUDAT Documentation Documentation Documentation Table of contents Welcome to the EUDAT Documentation service Documentation Feedback Interested in EUDAT services B2ACCESS B2ACCESS Overview Assurance Concepts For Users For Users Enabling MFA Updating Email List ..."
+  - opening main text: "The website encountered an unexpected error. Try again later...."
+  - no organisation-like names matched by pattern
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
-  - EOSC-referencing image asset(s): 2
-  - img: EOSC Node
-  - img: EOSC Node
-  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
-- **4** 🟠 review — No link to eosc.eu was found, but the page did not fully render, so absence cannot be concluded: only 10 links captured, low for a landing page; only 560 characters of main text captured
-  - 10 link(s) examined, none pointing to eosc.eu
+- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
+  - 0 image/SVG element(s) examined, none referencing EOSC
+  - mentions of EOSC in page text: 0
+  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
+- **4** 🟠 review — No link to eosc.eu was found, but the page did not fully render, so absence cannot be concluded: only 0 links captured, low for a landing page; only 61 characters of main text captured
+  - 0 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-eudat/ but is not linked from here
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
-  - 10 outbound link(s) on the landing page
-  - main text length: 560 characters
+  - 0 outbound link(s) on the landing page
+  - main text length: 61 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
-- **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
-  - "EUDAT AUP" -> https://www.eudat.eu/eudat-cdi-aup
-  - followed: https://www.eudat.eu/eudat-cdi-aup -> HTTP 200, 3101 chars, title: EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT
-  - policy wording found: Conditions, You shall, permitted, policy
-  - *Reviewer action:* Confirm it covers all the node's resources and is in English.
+- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
+  - 0 link(s) examined, none matching an Acceptable Use Policy
+  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 10 link(s) examined, none matching a User Access Policy
+  - 0 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟠 review — A contact route exists, but nothing identifies it as a helpdesk. The checklist asks specifically for the node helpdesk, and a general enquiries or press address does not obviously satisfy that.
-  - "info@eudat.eu" -> mailto:info@eudat.eu
-  - *Reviewer action:* Confirm this contact route reaches the node's user support, not a general mailbox.
-- **7** 🟢 PASS — The main content is English and the page declares English.
-  - declared lang attribute: "en"
-  - detected language: en (confidence 1.0)
+- **6** 🟠 review — No contact route was found, but the page did not fully render, so absence cannot be concluded: only 0 links captured, low for a landing page; only 61 characters of main text captured
+  - 0 link(s) examined
+  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
+- **7** 🟠 review — Only 61 characters of text were available — too little to detect a language.
+  - declared lang attribute: "(none)"
+  - *Reviewer action:* Open the page and confirm its content is in English.
 
 ### EGI
 <https://www.egi.eu/egi-node>

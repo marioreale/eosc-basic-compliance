@@ -19,7 +19,9 @@ Set `--depth 0` for the strict one-request-per-node behaviour.
 
 ## What it found
 
-Nine landing pages, 17 September 2026:
+Nine landing pages. Eight were fetched on 18 September 2026, 14:17–14:21 UTC;
+the EUDAT row (†) is carried over from 17 September because the portal is down —
+see the note under the table.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -28,10 +30,27 @@ Nine landing pages, 17 September 2026:
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| EUDAT † | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+
+90 cells: 🟢 29 PASS · 🔴 6 FAIL · 🟠 55 review.
+
+† **The EUDAT row is from 17 September, not today.** `portal.eudat.eu` is
+currently returning `HTTP 500` — a Drupal error from its own `FrankenPHP Caddy`
+server, reproduced twice through this tool and three further times through plain
+`curl` from a different client, so the outage is the portal's and not an artefact
+of this tool. Today's fetch captured 61 characters and zero links, which the tool
+correctly scored as ten `review` cells rather than ten spurious failures. Rather
+than publish a row that says only "the site was down", the last row obtained from
+a page that actually rendered is shown instead. Its verdicts are unchanged from
+17 September; re-run `basic-check run --only eudat` once the portal recovers.
+The linked report under `results/` is generated straight from today's run, so it
+shows the ten `review` cells rather than this carried-over row.
+
+Apart from that row, nothing moved between 17 and 18 September: the other eight
+nodes reproduced their previous verdicts in all 80 cells.
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
@@ -93,11 +112,14 @@ be sure, it says so.
 ### Absence is not concluded from a page that did not render
 
 Two pages in this run were not fully captured: the D4Science page is dominated by
-a cookie-consent overlay (530 characters of main text), and the EUDAT portal
-yielded only 10 links. Reporting "no contact route exists" from either would say
-more about the tool than about the node. Both are downgraded to `review` with the
-reason stated. A well-rendered page with a genuinely missing link still FAILs —
-the gate is not a blanket excuse (`test_a_well_rendered_page_still_fails_when_the_link_is_genuinely_absent`).
+a cookie-consent overlay (530 characters of main text, 20 links), and the EUDAT
+portal returned `HTTP 500` and yielded 61 characters and no links at all.
+Reporting "no contact route exists" from either would say more about the tool, or
+about a transient outage, than about the node. Both are downgraded to `review`
+with the reason stated — which is exactly what happened to EUDAT here, rather
+than its ten points turning into ten spurious failures. A well-rendered page with
+a genuinely missing link still FAILs — the gate is not a blanket excuse
+(`test_a_well_rendered_page_still_fails_when_the_link_is_genuinely_absent`).
 
 ## Verdicts
 
@@ -192,14 +214,14 @@ uv run basic-check assess --approved-names approved-names.txt
 ## Tests
 
 ```bash
-uv run pytest -q          # 75 tests, ~0.2s, no network
+uv run pytest -q          # 83 tests, ~0.2s, no network
 uv run ruff check src tests
 ```
 
 The tests are hermetic — they construct page evidence directly, so the suite
 never touches a node's website.
 
-Three tests exist because of mistakes this tool actually made, and are worth
+Five tests exist because of mistakes this tool actually made, and are worth
 reading as documentation of them:
 
 | Test | The mistake it prevents |

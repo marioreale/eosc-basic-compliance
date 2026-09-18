@@ -2,7 +2,7 @@
   "node_id": "bbmri-eric",
   "node_name": "BBMRI-ERIC",
   "requested_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
-  "fetched_at": "2026-09-17T15:27:24+00:00",
+  "fetched_at": "2026-09-18T14:17:19+00:00",
   "final_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
   "http_status": 200,
   "redirect_chain": [],
@@ -524,7 +524,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://pixel.wp.com/g.gif?v=ext&blog=211837515&post=84204&tz=2&srv=www.bbmri-eric.eu&j=1%3A15.0.3&host=www.bbmri-eric.eu&ref=&fcp=2132&rand=0.6625458227129677",
+      "src": "https://pixel.wp.com/g.gif?v=ext&blog=211837515&post=84204&tz=2&srv=www.bbmri-eric.eu&j=1%3A15.0.3&host=www.bbmri-eric.eu&ref=&fcp=3420&rand=0.3569342798782199",
       "alt": "",
       "aria_label": "",
       "title": "",
