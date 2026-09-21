@@ -19,25 +19,39 @@ Set `--depth 0` for the strict one-request-per-node behaviour.
 
 ## What it found
 
-Nine landing pages, all fetched 21 September 2026, 12:39–12:44 UTC, at `--depth 2`.
-Every node responded `HTTP 200`. The same tally holds at depth 1 — see
-[How deep to go](#how-deep-to-go---depth).
+Nine landing pages, all fetched 21 September 2026, 13:04–13:07 UTC, at `--depth 2`.
+Eight responded `HTTP 200`. `geant.org` returned `HTTP 403` to this run's
+anonymous request, redirecting to a Cloudflare bot-protection challenge, so
+GÉANT is unassessed here rather than assessed as failing — see below. The same
+tally holds at depth 1 — see [How deep to go](#how-deep-to-go---depth).
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-90 cells: 🟢 31 PASS · 🔴 8 FAIL · 🟠 51 review.
+90 cells: 🟢 28 PASS · 🔴 7 FAIL · 🟠 55 review.
 
-`portal.eudat.eu` returned `HTTP 500` on 18 September and was unassessable that
-day; it responded normally on 21 September and is fully assessed here.
+Two nodes have been intermittently unreachable across runs, which is worth
+knowing before quoting any single run as settled:
+
+- `portal.eudat.eu` returned `HTTP 500` on 18 September and was unassessable that
+  day; it has responded normally since and is fully assessed here.
+- `geant.org` served `HTTP 200` earlier on 21 September and `HTTP 403` later the
+  same afternoon, after several runs. The 403 redirects to a Cloudflare challenge
+  (`__cf_chl_rt_tk`), so this is bot protection reacting to an automated client,
+  not an access policy. GÉANT's four previously-decided cells therefore moved to
+  review; the tool does not convert a block into a compliance failure. A human
+  opening the page in a browser will very likely see it fine.
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
-from the live index — but only BBMRI-ERIC and EUDAT link to their own. Seven nodes
-fail outright: five link to nothing on `eosc.eu` at all, and PaNOSC and GÉANT link
-only to the federation index page, which the checklist explicitly excludes. Each failure names
-the exact URL that is missing, so the fix is a one-line edit.
+from the live index — but only BBMRI-ERIC and EUDAT link to their own. Six nodes
+fail outright: five (EOSC DTO, Data Terra, EOSC Finland, EGI, EBRAINS) link to
+nothing on `eosc.eu` at all, and PaNOSC links only to the federation index page,
+which the checklist explicitly excludes. GÉANT could not be assessed in this run;
+it failed this point on the same grounds as PaNOSC when it was reachable earlier
+on 21 September. Each failure names the exact URL that is missing, so the fix is a
+one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and
 excludes two specific near-misses, so it can be decided mechanically. Most of the
@@ -132,8 +146,8 @@ uv run basic-check show data-terra   # one node's results in the terminal
 | `--depth` | What is fetched | Requests in the 21 Sep 2026 run |
 |---|---|---|
 | `0` | The landing page only. | 9 |
-| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about pages. At most 8 per node, 2 per point. | 34 (9 + 25) |
-| `2` | The above, plus one further hop from those pages: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, and the whole run shares a single `--fetch-budget` (default 60 requests). | 52 (9 + 25 + 18) |
+| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about pages. At most 8 per node, 2 per point. | 31 (9 + 22) |
+| `2` | The above, plus one further hop from those pages: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, and the whole run shares a single `--fetch-budget` (default 60 requests). | 45 (9 + 22 + 14) |
 
 Depth 2 exists for the case where the answer is one click past where depth 1 stops. It is not the default, for two reasons. The first is other people's servers: every extra hop multiplies requests against production sites that did not ask to be tested, which is why the budget is a hard ceiling for the whole run rather than a per-node limit. The second is that, on this federation, it has not yet changed anything.
 
@@ -144,7 +158,7 @@ uv run basic-check run --depth 2 --fetch-budget 20  # stricter ceiling
 
 **A depth-2 run reports both depths.** The report renders two summary tables — *Results at depth 1* and *Results at depth 2* — followed by a *What the second hop changed* section listing every cell whose verdict differs, and a table of exactly which pages the second hop fetched and what each was followed for. Both tables are computed from the **same capture**: the shallow view is the deep evidence with the second-hop pages set aside, not a second run. So any difference between the two tables is the extra hop, not the page changing between runs.
 
-On the 21 September 2026 run, the second hop made 18 extra requests and changed **no verdict at all** — all 90 cells landed exactly where depth 1 had them. That is a finding rather than a disappointment: the points still marked review turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all research resources offered by the Node"), and no amount of fetching settles either kind. Run it yourself before assuming the same holds for another federation or a later date.
+On the 21 September 2026 run, the second hop made 14 extra requests and changed **no verdict at all** — all 90 cells landed exactly where depth 1 had them. An earlier depth-2 run the same day, with 18 second-hop requests, also changed nothing. That is a finding rather than a disappointment: the points still marked review turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all research resources offered by the Node"), and no amount of fetching settles either kind. Run it yourself before assuming the same holds for another federation or a later date.
 
 ### Checking a page that is not in `nodes.yaml`
 

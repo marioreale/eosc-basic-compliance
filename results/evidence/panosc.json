@@ -2,7 +2,7 @@
   "node_id": "panosc",
   "node_name": "PaNOSC",
   "requested_url": "https://eosc.panosc.eu/",
-  "fetched_at": "2026-09-18T14:18:15+00:00",
+  "fetched_at": "2026-09-21T13:05:21+00:00",
   "final_url": "https://www.panosc.eu/panosc-eosc-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -1860,7 +1860,7 @@
   "meta_description": "",
   "error": "",
   "screenshot": "panosc.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://www.panosc.eu/contact/",
@@ -1868,6 +1868,8 @@
         "6"
       ],
       "link_text": "Contact",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://www.panosc.eu/contact/",
       "title": "Contact us - Panosc",
@@ -2320,6 +2322,8 @@
         "2"
       ],
       "link_text": "About",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://www.panosc.eu/about-panosc/",
       "title": "About - Panosc",
@@ -2797,6 +2801,8 @@
         "2"
       ],
       "link_text": "European Research Infrastructures",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://www.panosc.eu/about-european-research-infrastructures/",
       "title": "European Research Infrastructures - Panosc",
@@ -3247,11 +3253,500 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "Photon and Neutron Competence Centre",
+      "depth": 2,
+      "parent_url": "https://www.panosc.eu/contact/",
+      "http_status": 200,
+      "final_url": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
+      "title": "Photon and Neutron Competence Centre - Panosc",
+      "lang_attr": "en-GB",
+      "main_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home About PaNOSC Photon and Neutron Competence Centre Photon and Neutron Competence Centre The OSCARS project has defined a CLuster Open science Competence Centre (CLOCC) as a virtual hub dedicated to fostering research excellence through training and knowledge transfer. The CLOCCs are community-based initiatives supported by a collaborative network of people in the context of the Science Clusters providing expertise, best practices and services in relation to Open Science, and the promotion of cross-disciplinary collaborations. With this in mind, and in order to support the Photon and Neutron Open Science Cluster (PaNOSC), the PaN Competence Centre (PaN CC) will take the shape of a collaboration between PaNOSC Research Infrastructures (RI) and the scientific community they serve to promote Open Science, FAIR data and share knowledge, best practices and training. The PaN RIs wish to continue their long-term role in framing an offer to accompany, help, involve, coordinate, and empower scientists to commit to Open Science practices, to uptake EOSC, and to foster the uptake of PaNOSC and the other Science Clusters’ services and solutions. The PaN CC will start its work by: Raising awareness of funding opportunities for PaN facilities Building and adopting a common vocabulary for Open Science Tagging PaN CC content with PaNET terms to allow easy searching for technique-appropriate material Creating a catalogue of best practices Extending a catalogue software and services that enable Open Science and FAIR data Creating a community of individuals with the expertise and competences required to help and guide others on these Improving the PaN Training Catalogue https://pan-training.eu/ with existing and new content Promoting events and trainings related to Open Science and FAIR data Are you part of the PaNOSC community? Would you like to join us? Please contact us on competence.centre@panosc.eu To ask any question about PaNOSC: Join us on our Mattermost channel Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
+      "full_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home About PaNOSC Photon and Neutron Competence Centre Photon and Neutron Competence Centre The OSCARS project has defined a CLuster Open science Competence Centre (CLOCC) as a virtual hub dedicated to fostering research excellence through training and knowledge transfer. The CLOCCs are community-based initiatives supported by a collaborative network of people in the context of the Science Clusters providing expertise, best practices and services in relation to Open Science, and the promotion of cross-disciplinary collaborations. With this in mind, and in order to support the Photon and Neutron Open Science Cluster (PaNOSC), the PaN Competence Centre (PaN CC) will take the shape of a collaboration between PaNOSC Research Infrastructures (RI) and the scientific community they serve to promote Open Science, FAIR data and share knowledge, best practices and training. The PaN RIs wish to continue their long-term role in framing an offer to accompany, help, involve, coordinate, and empower scientists to commit to Open Science practices, to uptake EOSC, and to foster the uptake of PaNOSC and the other Science Clusters’ services and solutions. The PaN CC will start its work by: Raising awareness of funding opportunities for PaN facilities Building and adopting a common vocabulary for Open Science Tagging PaN CC content with PaNET terms to allow easy searching for technique-appropriate material Creating a catalogue of best practices Extending a catalogue software and services that enable Open Science and FAIR data Creating a community of individuals with the expertise and competences required to help and guide others on these Improving the PaN Training Catalogue https://pan-training.eu/ with existing and new content Promoting events and trainings related to Open Science and FAIR data Are you part of the PaNOSC community? Would you like to join us? Please contact us on competence.centre@panosc.eu To ask any question about PaNOSC: Join us on our Mattermost channel Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
+      "links": [
+        {
+          "href": "https://www.panosc.eu/",
+          "text": "Panosc",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-european-research-infrastructures/",
+          "text": "European Research Infrastructures",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/fair-principles/",
+          "text": "FAIR Principles",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/members/",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
+          "text": "Photon and Neutron Competence Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/panosc-data-policy-framework/",
+          "text": "PaNOSC data policy framework",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/training-catalogue/",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/",
+          "text": "Data",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/e-learning-platform/",
+          "text": "E-learning platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/all-use-cases/",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/women-in-science/",
+          "text": "Women in science",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/branding-material/",
+          "text": "Branding Material",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/publications/",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/pan-presentations/",
+          "text": "PaN presentations",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/news/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events-calendar/",
+          "text": "Events’ Calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc-portal.eu",
+          "text": "EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/expands-project/",
+          "text": "ExPaNDS project (2019-2023)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/related-projects/",
+          "text": "Other related projects",
+          "visible": true
+        },
+        {
+          "href": "https://science-clusters.eu/",
+          "text": "science-clusters.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/contact/",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About PaNOSC",
+          "visible": true
+        },
+        {
+          "href": "https://pan-training.eu/",
+          "text": "https://pan-training.eu/",
+          "visible": true
+        },
+        {
+          "href": "mailto:competence.centre@panosc.eu",
+          "text": "competence.centre@panosc.eu",
+          "visible": true
+        },
+        {
+          "href": "https://mattermost.hzdr.de/signup_user_complete/?id=d79pywaakfdking68fsnc3my7w&md=link&sbr=su",
+          "text": "Join us on our Mattermost channel",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.panosc.eu%2Fabout-panosc%2Fphoton-and-neutron-competence-centre%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/intent/tweet?text=Photon%20and%20Neutron%20Competence%20Centre&url=https%3A%2F%2Fwww.panosc.eu%2Fabout-panosc%2Fphoton-and-neutron-competence-centre%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.panosc.eu%2Fabout-panosc%2Fphoton-and-neutron-competence-centre%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://api.whatsapp.com/send?text=Photon%20and%20Neutron%20Competence%20Centre%20https%3A%2F%2Fwww.panosc.eu%2Fabout-panosc%2Fphoton-and-neutron-competence-centre%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-european-research-infrastructures/",
+          "text": "European Research Infrastructures",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/fair-principles/",
+          "text": "FAIR Principles",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/members/",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
+          "text": "Photon and Neutron Competence Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/panosc-data-policy-framework/",
+          "text": "PaNOSC data policy framework",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/training-catalogue/",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/",
+          "text": "Data",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/e-learning-platform/",
+          "text": "E-learning platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/all-use-cases/",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/women-in-science/",
+          "text": "Women in science",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/branding-material/",
+          "text": "Branding Material",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/publications/",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/pan-presentations/",
+          "text": "PaN presentations",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/news/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events-calendar/",
+          "text": "Events’ Calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc-portal.eu",
+          "text": "EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/expands-project/",
+          "text": "ExPaNDS project (2019-2023)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/related-projects/",
+          "text": "Other related projects",
+          "visible": true
+        },
+        {
+          "href": "https://science-clusters.eu/",
+          "text": "science-clusters.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc-portal.eu/",
+          "text": "European Open Science Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Panosc_eu",
+          "text": "Follow us",
+          "visible": true
+        },
+        {
+          "href": "https://zenodo.org/communities/panosc/",
+          "text": "PaNOSC on Zenodo",
+          "visible": true
+        },
+        {
+          "href": "https://github.com/panosc-eu",
+          "text": "PaNOSC repository on Github",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/privacy-policy/",
+          "text": "Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/privacy-policy/",
+          "text": "Learn more",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
   "children_skipped": [
     "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (cap for point 2)",
-    "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (cap for point 2)"
+    "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (cap for point 2)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)",
+    "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)",
+    "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 1: 118 link(s) on the landing page, 3 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point"
+  "crawl_note": "depth 2: 118 link(s) on the landing page, 3 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 4 of 60 used"
 }

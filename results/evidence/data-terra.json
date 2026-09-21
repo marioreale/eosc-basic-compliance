@@ -2,7 +2,7 @@
   "node_id": "data-terra",
   "node_name": "Data Terra",
   "requested_url": "https://www.data-terra.org/eosc/",
-  "fetched_at": "2026-09-18T14:17:51+00:00",
+  "fetched_at": "2026-09-21T13:04:55+00:00",
   "final_url": "https://www.data-terra.org/eosc/",
   "http_status": 200,
   "redirect_chain": [],
@@ -1440,7 +1440,7 @@
   "meta_description": "",
   "error": "",
   "screenshot": "data-terra.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://www.data-terra.org/contact-acces/",
@@ -1448,6 +1448,8 @@
         "6"
       ],
       "link_text": "Contact & accès",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://www.data-terra.org/contact-acces/",
       "title": "Contact & accès | Infrastructure de recherche Data Terra",
@@ -1685,6 +1687,10 @@
       "error": ""
     }
   ],
-  "children_skipped": [],
-  "crawl_note": "depth 1: 93 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "children_skipped": [
+    "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)",
+    "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)",
+    "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)"
+  ],
+  "crawl_note": "depth 2: 93 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 2 of 60 used"
 }

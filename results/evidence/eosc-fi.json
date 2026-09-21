@@ -2,7 +2,7 @@
   "node_id": "eosc-fi",
   "node_name": "EOSC Finland",
   "requested_url": "https://eosc.fi/",
-  "fetched_at": "2026-09-18T14:18:01+00:00",
+  "fetched_at": "2026-09-21T13:05:06+00:00",
   "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -1266,7 +1266,7 @@
   "meta_description": "",
   "error": "",
   "screenshot": "eosc-fi.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://research.csc.fi/terms-of-use/",
@@ -1274,6 +1274,8 @@
         "5b"
       ],
       "link_text": "Terms of use",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://research.csc.fi/terms-of-use/",
       "title": "Terms of use - Services for Research",
@@ -1841,6 +1843,8 @@
         "6"
       ],
       "link_text": "Service Desk",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://research.csc.fi/support/",
       "title": "CSC Service Desk - Services for Research",
@@ -2243,6 +2247,8 @@
         "2"
       ],
       "link_text": "More about the EOSC Federation and the Finnish Pilot Node",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/",
       "title": "More about the EOSC Federation and the Finnish Pilot Node - Services for Research",
@@ -2678,8 +2684,469 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "join our weekly online research support coffee sessions",
+      "depth": 2,
+      "parent_url": "https://research.csc.fi/support/",
+      "http_status": 200,
+      "final_url": "https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/",
+      "title": "CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time - Services for Research",
+      "lang_attr": "en-US",
+      "main_text": "Advanced Beginner Fundamentals Intermediate Online CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time Starting to use a new system is often not easy with many new concepts and ways of working. Sometimes your question is just easier asked in person? In our weekly research support coffee sessions you can directly discuss with our friendly user support staff! Sessions are on holiday break during 18.12.2025 – 13.1.2026 First session after break: 14.1.2026 When? – every Wednesday at 14:00 Where? – Zoom (External link) We use a collaborative document HedgeDoc (External link) , where you can write briefly about the topic of your question beforehand or during the session – this gives us a chance to invite the topic specialist to the call You can ask both in English and Finnish – or any language our specialists available speak. Please also note our specialized user support sessions for LUMI (External link) . Don’t hesitate to contact us anytime at: servicedesk(at)csc.fi (our main channel for user support). Upcoming short talks: 22.4. SSH authentication changes to Roihu 29.4. Roihus hardware overview 6.5. Data migration to Roihu + ProjData 13.5. – 20.5. FirecREST 27.5. Roihu performance 3.6. Using Allas and Lumi-O from Roihu 10.6.SSH authentication changes to Roihu 10.6. Satama Short talk archive (External link) Time Continuous course Place Online course Related content Related use cases Related blogs Related trainings",
+      "full_text": "Skip to content Services for research Docs CSC - User guides (External link) MyCSC - User portal (External link) csc.fi - Company site (External link) Services for research Search for: Service Desk Service Desk Home How to start Services Services (External link) General Service catalog Service breaks Resource allocation Applying for resources Extremely large resources Managing service quotas Service categories High-performance computing Research data management Plan data management Store & share data Publish & discover data Cloud services Services for sensitive data Compare SD Services and ePouta Sensitive Data (SD) Services for Research Overview for IT personnel and organizations Quick access page Definition of sensitive data Managing sensitive data User groups Services for science & methods AI and data analytics Biosciences Chemistry Code optimization Computational engineering Geoinformatics Geocomputing Mathematics, statistics and technical computing Physics Quantum computing Social sciences and humanities Services for education Services for commercial use Purchasing CSC’s services Use cases Blogs Training Training (External link) Training calendar Training portfolio Terms & policies Terms & policies (External link) Free-of-charge use Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Policies CSC research infrastructure data management policy Persistent identifier (PID) policy Security & privacy Protection levels Privacy notice for remote identification service Home › Trainings › CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time Advanced Beginner Fundamentals Intermediate Online CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time Starting to use a new system is often not easy with many new concepts and ways of working. Sometimes your question is just easier asked in person? In our weekly research support coffee sessions you can directly discuss with our friendly user support staff! Sessions are on holiday break during 18.12.2025 – 13.1.2026 First session after break: 14.1.2026 When? – every Wednesday at 14:00 Where? – Zoom (External link) We use a collaborative document HedgeDoc (External link) , where you can write briefly about the topic of your question beforehand or during the session – this gives us a chance to invite the topic specialist to the call You can ask both in English and Finnish – or any language our specialists available speak. Please also note our specialized user support sessions for LUMI (External link) . Don’t hesitate to contact us anytime at: servicedesk(at)csc.fi (our main channel for user support). Upcoming short talks: 22.4. SSH authentication changes to Roihu 29.4. Roihus hardware overview 6.5. Data migration to Roihu + ProjData 13.5. – 20.5. FirecREST 27.5. Roihu performance 3.6. Using Allas and Lumi-O from Roihu 10.6.SSH authentication changes to Roihu 10.6. Satama Short talk archive (External link) Time Continuous course Place Online course Related content Related use cases Related blogs Related trainings CSC - IT Center for Science Ltd. Contact information P.O. Box 405, 02101 Espoo tel. (09) 457 2001 (switchboard) Service desk Open weekdays from 8:30 to 16:00 tel. (09) 457 2821 servicedesk@csc.fi Detailed contact information (External link) Visiting addresses Espoo Life Science Center Keilaniemi Keilaranta 14, 02150 Espoo Directions (External link) Datacenter Kajaani Renforsin Ranta business area Tehdaskatu 15, 87100 Kajaani Directions (External link) Visit other CSC sites User guides – docs.csc.fi (External link) User portal – my.csc.fi (External link) Main website – csc.fi (External link) Follow us LinkedIn (External link) Instagram (External link) Facebook (External link) YouTube (External link) Subscribe to newsletters (External link) Copyright CSC – IT Center for Science Ltd. Service breaks Security & privacy Accessibility Search for: ×",
+      "links": [
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi/",
+          "text": "Docs CSC - User guides (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi/",
+          "text": "MyCSC - User portal (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.csc.fi/",
+          "text": "csc.fi - Company site (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/how-to-start/",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service",
+          "text": "Service catalog",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/",
+          "text": "Resource allocation",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/",
+          "text": "Applying for resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+          "text": "Extremely large resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/quotas/",
+          "text": "Managing service quotas",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/high-performance-computing/",
+          "text": "High-performance computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/",
+          "text": "Research data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/data-management-planning/",
+          "text": "Plan data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/storage/",
+          "text": "Store & share data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/publish-and-discover/",
+          "text": "Publish & discover data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/cloud-computing/",
+          "text": "Cloud services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/",
+          "text": "Services for sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/",
+          "text": "Compare SD Services and ePouta",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/",
+          "text": "Sensitive Data (SD) Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/",
+          "text": "Overview for IT personnel and organizations",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/",
+          "text": "Quick access page",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/definition-of-sensitive-data/",
+          "text": "Definition of sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/managing-sensitive-data/",
+          "text": "Managing sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/",
+          "text": "Services for science & methods",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/ai-and-data-analytics/",
+          "text": "AI and data analytics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/biosciences/",
+          "text": "Biosciences",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/chemistry/",
+          "text": "Chemistry",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/code-optimization/",
+          "text": "Code optimization",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/computational-engineering/",
+          "text": "Computational engineering",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/",
+          "text": "Geoinformatics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/geocomputing/",
+          "text": "Geocomputing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/mathematics-and-statistics/",
+          "text": "Mathematics, statistics and technical computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/physics/",
+          "text": "Physics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/quantum-computing/",
+          "text": "Quantum computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/social-sciences-and-humanities/",
+          "text": "Social sciences and humanities",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/educational-use/",
+          "text": "Services for education",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/",
+          "text": "Services for commercial use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/pricing/",
+          "text": "Purchasing CSC’s services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/use-case",
+          "text": "Use cases",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/blogs",
+          "text": "Blogs",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training",
+          "text": "Training calendar",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training-portfolio/",
+          "text": "Training portfolio",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/free-of-charge-use/",
+          "text": "Free-of-charge use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/dmpol/",
+          "text": "CSC research infrastructure data management policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/pid-policy/",
+          "text": "Persistent identifier (PID) policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/data-protection-levels/",
+          "text": "Protection levels",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/",
+          "text": "Privacy notice for remote identification service",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training/",
+          "text": "Trainings",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/level/advanced/",
+          "text": "Advanced",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/level/beginner/",
+          "text": "Beginner",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/theme-tax/fundamentals/",
+          "text": "Fundamentals",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/level/intermediate/",
+          "text": "Intermediate",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training-type/online/",
+          "text": "Online",
+          "visible": true
+        },
+        {
+          "href": "https://cscfi.zoom.us/j/65059161807",
+          "text": "Zoom (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://siili.rahtiapp.fi/weekly-user-zoom",
+          "text": "HedgeDoc (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.lumi-supercomputer.eu/events/usercoffeebreaks/",
+          "text": "specialized user support sessions for LUMI (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://hackmd.io/1xCtrll9SN2wqGYjgZEqhw?view",
+          "text": "Short talk archive (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/use-case/?level=advanced,beginner,intermediate&theme-tax=fundamentals&",
+          "text": "Related use cases",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/blogs/?level=advanced,beginner,intermediate&theme-tax=fundamentals&",
+          "text": "Related blogs",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training/?level=advanced,beginner,intermediate&theme-tax=fundamentals&training-type=online&",
+          "text": "Related trainings",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/",
+          "text": "Detailed contact information (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#espoo-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#kajaani-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi",
+          "text": "User guides – docs.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi",
+          "text": "User portal – my.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi",
+          "text": "Main website – csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/csc---it-center-for-science/",
+          "text": "LinkedIn (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/CSCfi/",
+          "text": "Instagram (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/CSCfi/",
+          "text": "Facebook (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/c/CSCfi",
+          "text": "YouTube (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/subscribe-to-newsletters/",
+          "text": "Subscribe to newsletters (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/accessibility",
+          "text": "Accessibility",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
-  "children_skipped": [],
-  "crawl_note": "depth 1: 85 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "children_skipped": [
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/ (already fetched at depth 1)"
+  ],
+  "crawl_note": "depth 2: 85 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 3 of 60 used"
 }

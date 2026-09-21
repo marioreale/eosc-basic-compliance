@@ -2,7 +2,7 @@
   "node_id": "egi",
   "node_name": "EGI",
   "requested_url": "https://www.egi.eu/egi-node",
-  "fetched_at": "2026-09-18T14:18:37+00:00",
+  "fetched_at": "2026-09-21T13:07:13+00:00",
   "final_url": "https://www.egi.eu/egi-node",
   "http_status": 200,
   "redirect_chain": [],
@@ -2214,7 +2214,7 @@
   "meta_description": "",
   "error": "",
   "screenshot": "egi.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://www.egi.eu/terms-of-use/",
@@ -2222,6 +2222,8 @@
         "5b"
       ],
       "link_text": "terms of use",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://www.egi.eu/terms-of-use",
       "title": "Terms of Use - EGI",
@@ -2989,6 +2991,8 @@
         "6"
       ],
       "link_text": "Contact Us",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://www.egi.eu/contact-us",
       "title": "Contact us - EGI",
@@ -3756,6 +3760,8 @@
         "2"
       ],
       "link_text": "About",
+      "depth": 1,
+      "parent_url": "",
       "http_status": 200,
       "final_url": "https://www.egi.eu/about",
       "title": "About - EGI",
@@ -4516,8 +4522,799 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://www.egi.eu/egi-federation/",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "Learn about EGI Federation",
+      "depth": 2,
+      "parent_url": "https://www.egi.eu/about",
+      "http_status": 200,
+      "final_url": "https://www.egi.eu/egi-federation",
+      "title": "EGI Federation - EGI",
+      "lang_attr": "en",
+      "main_text": "EGI Federation EGI is a federation of computing and storage resource providers united by a mission to support research and development. The federation is governed by its participants represented in the EGI Council and coordinated by the EGI Foundation. Our services Our history EGI Council EGI Executive Board Map The EGI Council EGI Council The EGI Council is responsible for defining the strategic direction of the EGI federation. The Council acts as the senior decision-making and supervisory authority of the EGI Foundation , with a mandate to define the strategic direction of the entire EGI ecosystem. The EGI Council welcomes applications from like-minded countries and organisations to become part of the EGI vision for a stronger research and innovation sector in Europe. Join the EGI Federation 28 EGI Participants 21 Represented Countries 300+ Total Represented Organisations EGI Council Participants ACOnet ARNES BELSPO CERN CESNET CMCC CNRS CSIC CYFRONET EMSO ERIC FCT Gauss-Allianz GRNET IICT IISAS IFIN-HH INFN JISC MARIS SRCE SURF SZTAKI TUBITAK ULAKBIM UKIM Vilnius University of Lithuania EGI Council Associated Participants EISCAT AB NBIS UA-BITP The EGI Council EGI Council The EGI Council is responsible for defining the strategic direction of the EGI federation. The Council acts as the senior decision-making and supervisory authority of the EGI Foundation , with a mandate to define the strategic direction of the entire EGI ecosystem. The EGI Council welcomes applications from like-minded countries and organisations to become part of the EGI vision for a stronger research and innovation sector in Europe. Join the EGI Federation 28 EGI Participants 21 Represented Countries 300+ Total Represented Organisations EGI Council Participants ACOnet ARNES BELSPO CERN CESNET CMCC CNRS CSIC CYFRONET EMSO ERIC FCT Gauss-Allianz GRNET IICT IISAS IFIN-HH INFN JISC MARIS SRCE SURF SZTAKI TUBITAK ULAKBIM UKIM Vilnius University of Lithuania EGI Council Associated Participants EISCAT AB NBIS UA-BITP The Executive Board The day-to-day running of the EGI Foundation is supervised by the Executive Board. The board’s members work closely with the EGI Director on operational, technical and financial issues. The Executive Board’s members are appointed by the EGI Council for a two-year term. Members Chair: Volker Gülzow (DESY) Elected members: Mehmet Mirat Satoglu (TÜBİTAK ULAKBİM) Pierre- Etienne Macchi (IN2P3) Robert Lovas (HUN-REN SZTAKI) Ludek Matyska (CESNET) Carl Philipp Wieder (GWDG) Paola Nassisi (CMCC) Concezio Bozzi (INFN) Discover our services Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading Services for Federation Our internal services provide tools for coordination of the EGI Federation, improving how we work Services for Business We help companies to exploit services and resources for compute- and data-intensive research and innovation. Our Impact The EGI Federation’s impact is broad and diverse. We support all kinds of data-intensive research. Examples include finding new tools to diagnose and monitor diseases such as Alzheimer’s, developing complex simulations to model climate change, searching for gravitational waves, and pursuing dark matter. Check our Publications Read our Impact Reports 1 1 We help scientists accelerate their research EGI supported over 29.000 publications throughout the last 12 years. 2 2 We boost innovation Our continuously developed services and collaboration with the industry boost data-driven innovations. 3 3 We foster international collaborations During the past 12 years, we have either coordinated or contributed to 55 international projects. 4 4 We offer professional development and know-how We provide training opportunities and professional advice, differentiating us from commercial providers. History Key milestones in the EGI Federation history 1 2002 First large scale experimental facility for distributed computing is successfully demonstrated by the partners of the DataGrid project. 2 2004 The first data processing tasks are formally recorded in a central accounting system. 3 2010 The EGI Foundation is created and the new EGI flagship project EGI-Inspire is launched. 4 2013 The scientific accomplishments of LHC are formally acknowledged with the Nobel Prize in Physics 2013 to François Englert and Peter W. Higgs. LHC conceptualised distributed computing as a new approach to data-intensive science and successfully proved its viability at worldwide scale. 5 2014 The first example of large scale cloud federation – the EGI Federated Cloud – is launched. 6 2015 EGI, EUDAT, GEANT, LIBER and OpenAIRE publish the position paper on a ‘European Open Science Cloud for Research’. 7 2017 LIGO/VIRGO scientists behind the detection of gravitational waves were awarded Nobel Prize in Physics 2017 . The collaboration relied on some of the largest European research data centres that are part of the EGI Federation. 8 2019 The EGI infrastructures break the record of +1 Million core and +1 Exabytes of research data federated worldwide. 9 2022 The EGI infrastructure reaches a new record by delivering more 7B CPU Hours through the EGI High-Throughput Compute platform. 10 2023 EGI celebrates 20 years of operations of the largest Federation of research data centres in the world. 11 2024 The EGI Federated Cloud marks 10 years of operations . 12 Today EGI is proud to support over 150,000 users and to celebrate 23 years of operations. Join the EGI Federation! Become a member EGI welcomes like-minded countries and international organisations who wish to become part of the EGI vision for a stronger research and innovation sector in Europe. Are you interested? Download the brochure Questions about EGI Federation? Get in touch! Science Park 140 1098 XG Amsterdam Netherlands Phone: +31 (0)20 89 32 007 Contact overview page First name* Last Name* Email* Message* Consent* I agree to the privacy policy. CAPTCHA Submit",
+      "full_text": "About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us EGI Federation EGI is a federation of computing and storage resource providers united by a mission to support research and development. The federation is governed by its participants represented in the EGI Council and coordinated by the EGI Foundation. Our services Our history EGI Council EGI Executive Board Map The EGI Council EGI Council The EGI Council is responsible for defining the strategic direction of the EGI federation. The Council acts as the senior decision-making and supervisory authority of the EGI Foundation , with a mandate to define the strategic direction of the entire EGI ecosystem. The EGI Council welcomes applications from like-minded countries and organisations to become part of the EGI vision for a stronger research and innovation sector in Europe. Join the EGI Federation 28 EGI Participants 21 Represented Countries 300+ Total Represented Organisations EGI Council Participants ACOnet ARNES BELSPO CERN CESNET CMCC CNRS CSIC CYFRONET EMSO ERIC FCT Gauss-Allianz GRNET IICT IISAS IFIN-HH INFN JISC MARIS SRCE SURF SZTAKI TUBITAK ULAKBIM UKIM Vilnius University of Lithuania EGI Council Associated Participants EISCAT AB NBIS UA-BITP The EGI Council EGI Council The EGI Council is responsible for defining the strategic direction of the EGI federation. The Council acts as the senior decision-making and supervisory authority of the EGI Foundation , with a mandate to define the strategic direction of the entire EGI ecosystem. The EGI Council welcomes applications from like-minded countries and organisations to become part of the EGI vision for a stronger research and innovation sector in Europe. Join the EGI Federation 28 EGI Participants 21 Represented Countries 300+ Total Represented Organisations EGI Council Participants ACOnet ARNES BELSPO CERN CESNET CMCC CNRS CSIC CYFRONET EMSO ERIC FCT Gauss-Allianz GRNET IICT IISAS IFIN-HH INFN JISC MARIS SRCE SURF SZTAKI TUBITAK ULAKBIM UKIM Vilnius University of Lithuania EGI Council Associated Participants EISCAT AB NBIS UA-BITP The Executive Board The day-to-day running of the EGI Foundation is supervised by the Executive Board. The board’s members work closely with the EGI Director on operational, technical and financial issues. The Executive Board’s members are appointed by the EGI Council for a two-year term. Members Chair: Volker Gülzow (DESY) Elected members: Mehmet Mirat Satoglu (TÜBİTAK ULAKBİM) Pierre- Etienne Macchi (IN2P3) Robert Lovas (HUN-REN SZTAKI) Ludek Matyska (CESNET) Carl Philipp Wieder (GWDG) Paola Nassisi (CMCC) Concezio Bozzi (INFN) Discover our services Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading Services for Federation Our internal services provide tools for coordination of the EGI Federation, improving how we work Services for Business We help companies to exploit services and resources for compute- and data-intensive research and innovation. Our Impact The EGI Federation’s impact is broad and diverse. We support all kinds of data-intensive research. Examples include finding new tools to diagnose and monitor diseases such as Alzheimer’s, developing complex simulations to model climate change, searching for gravitational waves, and pursuing dark matter. Check our Publications Read our Impact Reports 1 1 We help scientists accelerate their research EGI supported over 29.000 publications throughout the last 12 years. 2 2 We boost innovation Our continuously developed services and collaboration with the industry boost data-driven innovations. 3 3 We foster international collaborations During the past 12 years, we have either coordinated or contributed to 55 international projects. 4 4 We offer professional development and know-how We provide training opportunities and professional advice, differentiating us from commercial providers. History Key milestones in the EGI Federation history 1 2002 First large scale experimental facility for distributed computing is successfully demonstrated by the partners of the DataGrid project. 2 2004 The first data processing tasks are formally recorded in a central accounting system. 3 2010 The EGI Foundation is created and the new EGI flagship project EGI-Inspire is launched. 4 2013 The scientific accomplishments of LHC are formally acknowledged with the Nobel Prize in Physics 2013 to François Englert and Peter W. Higgs. LHC conceptualised distributed computing as a new approach to data-intensive science and successfully proved its viability at worldwide scale. 5 2014 The first example of large scale cloud federation – the EGI Federated Cloud – is launched. 6 2015 EGI, EUDAT, GEANT, LIBER and OpenAIRE publish the position paper on a ‘European Open Science Cloud for Research’. 7 2017 LIGO/VIRGO scientists behind the detection of gravitational waves were awarded Nobel Prize in Physics 2017 . The collaboration relied on some of the largest European research data centres that are part of the EGI Federation. 8 2019 The EGI infrastructures break the record of +1 Million core and +1 Exabytes of research data federated worldwide. 9 2022 The EGI infrastructure reaches a new record by delivering more 7B CPU Hours through the EGI High-Throughput Compute platform. 10 2023 EGI celebrates 20 years of operations of the largest Federation of research data centres in the world. 11 2024 The EGI Federated Cloud marks 10 years of operations . 12 Today EGI is proud to support over 150,000 users and to celebrate 23 years of operations. Join the EGI Federation! Become a member EGI welcomes like-minded countries and international organisations who wish to become part of the EGI vision for a stronger research and innovation sector in Europe. Are you interested? Download the brochure Questions about EGI Federation? Get in touch! Science Park 140 1098 XG Amsterdam Netherlands Phone: +31 (0)20 89 32 007 Contact overview page First name* Last Name* Email* Message* Consent* I agree to the privacy policy. CAPTCHA Submit Services Services for Research Services for Business Services for Federation EGI Access Call Solutions Batch computing Interactive computing Federated access Data spaces Data federation Service hosting EGI for AI EGI for Data Spaces EGI for EOSC EGI Node Resources Magazine News Publications Subcribe to our Newsletter Training Materials EGI Conference EGI on Zenodo Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons RI-SCALE SPECTRUM Service Contracts Past projects About EGI Foundation EGI Federation EGI Infrastructure EGI Community EGI Digital Innovation Hub Foundation Team Careers Frequently Asked Questions Contact us terms of use | data protection | certifications",
+      "links": [
+        {
+          "href": "https://www.egi.eu/",
+          "text": "EGI Federation Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/about/",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-foundation/",
+          "text": "EGI Foundation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-federation/",
+          "text": "EGI Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-infrastructure/",
+          "text": "EGI Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-community/",
+          "text": "EGI Community",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-foundation/team/",
+          "text": "Foundation Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+          "text": "Frequently Asked Questions",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/",
+          "text": "Our Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/research/",
+          "text": "Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/business/",
+          "text": "Services for Business",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-dih/",
+          "text": "EGI Digital Innovation Hub",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/federation/",
+          "text": "Services for Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/",
+          "text": "Solutions",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/",
+          "text": "Our Solutions",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/use-cases/",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/success-stories/",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/egi-for-ai/",
+          "text": "EGI for AI",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-ai-innovation/",
+          "text": "EGI & AI Innovation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solution/data-spaces/",
+          "text": "EGI for Data Spaces",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-for-eosc/",
+          "text": "EGI for EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-node/",
+          "text": "EGI Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/envri-hub-next/",
+          "text": "ENVRI-Hub NEXT",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/eosc-beyond/",
+          "text": "EOSC Beyond",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/eosc-data-commons/",
+          "text": "EOSC Data Commons",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/eosc-mesh",
+          "text": "EOSC Mesh",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/ensure",
+          "text": "ENSURE",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/ritrain-digit",
+          "text": "RItrain-DIGIT",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/service-contracts/",
+          "text": "Service Contracts",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/projects/archive/",
+          "text": "Project Archive",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/resources/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/zenodo/",
+          "text": "EGI on Zenodo",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/magazine/",
+          "text": "Magazine",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/newsletter/",
+          "text": "Newsletter",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/publications/",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/training-materials/",
+          "text": "Training Materials",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/media-kit/",
+          "text": "Media Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/news-and-events/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/news/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-conference/",
+          "text": "EGI Conference",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-community-events/",
+          "text": "Community Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/trainings-and-webinars/",
+          "text": "Trainings & Webinars",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/participate/",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/our-users/",
+          "text": "Our Users",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/join-the-egi-federation/",
+          "text": "Join the EGI Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-access-call/",
+          "text": "EGI Access Call",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/careers/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/share-news-events/",
+          "text": "Share Your News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/contact-us/",
+          "text": "Contact Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/search",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/",
+          "text": "EGI Federation Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/search",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/about/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/about/",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-foundation/",
+          "text": "EGI Foundation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-federation/",
+          "text": "EGI Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-infrastructure/",
+          "text": "EGI Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-community/",
+          "text": "EGI Community",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-foundation/team/",
+          "text": "Foundation Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/frequently-asked-questions-faq/",
+          "text": "Frequently Asked Questions",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/",
+          "text": "Our Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/research/",
+          "text": "Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/business/",
+          "text": "Services for Business",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-dih/",
+          "text": "EGI Digital Innovation Hub",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/federation/",
+          "text": "Services for Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/",
+          "text": "Solutions",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/",
+          "text": "Our Solutions",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/use-cases/",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/success-stories/",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solutions/egi-for-ai/",
+          "text": "EGI for AI",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-ai-innovation/",
+          "text": "EGI & AI Innovation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/solution/data-spaces/",
+          "text": "EGI for Data Spaces",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-for-eosc/",
+          "text": "EGI for EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-node/",
+          "text": "EGI Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/projects/",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/envri-hub-next/",
+          "text": "ENVRI-Hub NEXT",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/eosc-beyond/",
+          "text": "EOSC Beyond",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/eosc-data-commons/",
+          "text": "EOSC Data Commons",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/eosc-mesh",
+          "text": "EOSC Mesh",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/ri-scale/",
+          "text": "RI-SCALE",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/ensure",
+          "text": "ENSURE",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/project/ritrain-digit",
+          "text": "RItrain-DIGIT",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/service-contracts/",
+          "text": "Service Contracts",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/projects/archive/",
+          "text": "Project Archive",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/resources/",
+          "text": "Resources",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/zenodo/",
+          "text": "EGI on Zenodo",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/magazine/",
+          "text": "Magazine",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/newsletter/",
+          "text": "Newsletter",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/publications/",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/training-materials/",
+          "text": "Training Materials",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/media-kit/",
+          "text": "Media Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/news-and-events/",
+          "text": "News & Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/news/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-conference/",
+          "text": "EGI Conference",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-community-events/",
+          "text": "Community Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/trainings-and-webinars/",
+          "text": "Trainings & Webinars",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/participate/",
+          "text": "Participate",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/our-users/",
+          "text": "Our Users",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/join-the-egi-federation/",
+          "text": "Join the EGI Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/egi-access-call/",
+          "text": "EGI Access Call",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/careers/",
+          "text": "Careers",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/share-news-events/",
+          "text": "Share Your News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/contact-us/",
+          "text": "Contact Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/services/",
+          "text": "Our services",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/about/egi-foundation/",
+          "text": "EGI Foundation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/join-the-egi-federation/",
+          "text": "Join the EGI Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/aconet/",
+          "text": "ACOnet",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/arnes/",
+          "text": "ARNES",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/belspo/",
+          "text": "BELSPO",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cern/",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cesnet/",
+          "text": "CESNET",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cmcc/",
+          "text": "CMCC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cnrs/",
+          "text": "CNRS",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/csic/",
+          "text": "CSIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cyfronet/",
+          "text": "CYFRONET",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/emso-eric/",
+          "text": "EMSO ERIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/fct/",
+          "text": "FCT",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/gauss-allianz/",
+          "text": "Gauss-Allianz",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/grnet/",
+          "text": "GRNET",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/iict/",
+          "text": "IICT",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/iisas/",
+          "text": "IISAS",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/ifin-hh/",
+          "text": "IFIN-HH",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/infn/",
+          "text": "INFN",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/jisc/",
+          "text": "JISC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/maris/",
+          "text": "MARIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/srce/",
+          "text": "SRCE",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/surf/",
+          "text": "SURF",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/sztaki/",
+          "text": "SZTAKI",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/tubitak-ulakbim/",
+          "text": "TUBITAK ULAKBIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/ukim/",
+          "text": "UKIM",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/vilnius-university-for-lithuania/",
+          "text": "Vilnius University of Lithuania",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/eiscat/",
+          "text": "EISCAT AB",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/nbis/",
+          "text": "NBIS",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/ua-bitp/",
+          "text": "UA-BITP",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/about/egi-foundation/",
+          "text": "EGI Foundation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/join-the-egi-federation/",
+          "text": "Join the EGI Federation",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/aconet/",
+          "text": "ACOnet",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/arnes/",
+          "text": "ARNES",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/belspo/",
+          "text": "BELSPO",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cern/",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cesnet/",
+          "text": "CESNET",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cmcc/",
+          "text": "CMCC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cnrs/",
+          "text": "CNRS",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/csic/",
+          "text": "CSIC",
+          "visible": true
+        },
+        {
+          "href": "https://www.egi.eu/partner/cyfronet/",
+          "text": "CYFRONET",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
-  "children_skipped": [],
-  "crawl_note": "depth 1: 167 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "children_skipped": [
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)",
+    "https://www.egi.eu/about/ (already fetched at depth 1)"
+  ],
+  "crawl_note": "depth 2: 167 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 9 of 60 used"
 }
