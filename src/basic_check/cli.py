@@ -14,7 +14,13 @@ import typer
 import yaml
 
 from . import checks, report
-from .fetch import MAX_CHILDREN, collect_all, load_evidence
+from .fetch import (
+    DEFAULT_FETCH_BUDGET,
+    MAX_CHILDREN,
+    collect_all,
+    load_evidence,
+    without_depth_2,
+)
 
 app = typer.Typer(
     add_completion=False,
@@ -133,21 +139,35 @@ def collect(
         1,
         "--depth",
         min=0,
-        max=1,
+        max=2,
         help="0 = landing page only. 1 = also follow links that can settle a "
-        "checklist point (policies, contact, about), capped per node.",
+        "checklist point (policies, contact, about), capped per node. 2 = one "
+        "further hop from those pages, under a run-wide fetch budget.",
     ),
     max_children: int = typer.Option(
         MAX_CHILDREN, "--max-children", help="Cap on followed pages per node at depth 1"
     ),
+    fetch_budget: int = typer.Option(
+        DEFAULT_FETCH_BUDGET,
+        "--fetch-budget",
+        min=0,
+        help="Depth 2 only: hard ceiling on second-hop requests for the whole run, "
+        "shared across nodes. Raise it deliberately; it exists to keep a check "
+        "from becoming a crawl of other people's sites.",
+    ),
 ):
     """Fetch each landing page and save the evidence. Depth 1 by default."""
     nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
-    _do_collect(nodes, resolved, delay, depth, max_children)
+    _do_collect(nodes, resolved, delay, depth, max_children, fetch_budget)
 
 
 def _do_collect(
-    nodes: list[dict], results_dir: Path, delay: float, depth: int, max_children: int
+    nodes: list[dict],
+    results_dir: Path,
+    delay: float,
+    depth: int,
+    max_children: int,
+    fetch_budget: int = DEFAULT_FETCH_BUDGET,
 ) -> None:
     """The actual work, taking plain values.
 
@@ -159,7 +179,13 @@ def _do_collect(
     breakage is caught.
     """
     evidence_dir = results_dir / "evidence"
-    if depth >= 1:
+    if depth >= 2:
+        typer.echo(
+            f"Fetching {len(nodes)} landing page(s), {delay}s apart, then following up to "
+            f"{max_children} checklist-relevant link(s) per node, then one further hop "
+            f"under a shared budget of {fetch_budget} request(s) (depth 2):"
+        )
+    elif depth >= 1:
         typer.echo(
             f"Fetching {len(nodes)} landing page(s), {delay}s apart, then following up to "
             f"{max_children} checklist-relevant link(s) per node (depth 1):"
@@ -167,9 +193,27 @@ def _do_collect(
     else:
         typer.echo(f"Fetching {len(nodes)} landing page(s), one request each, {delay}s apart:")
     asyncio.run(
-        collect_all(nodes, evidence_dir, delay_s=delay, depth=depth, max_children=max_children)
+        collect_all(
+            nodes,
+            evidence_dir,
+            delay_s=delay,
+            depth=depth,
+            max_children=max_children,
+            fetch_budget=fetch_budget,
+        )
     )
     typer.echo(f"\nEvidence written to {evidence_dir}")
+    if depth == 1:
+        # Discoverability: the deeper option is worth knowing about without
+        # having to read --help. Say what it costs, so the hint is not a nudge
+        # to hammer other people's servers.
+        typer.echo(
+            "\nTip: this was depth 1, the default. Add --depth=2 to follow one further "
+            "hop from the pages already fetched (policy indexes that link on to the "
+            f"actual policy), bounded by --fetch-budget, default {DEFAULT_FETCH_BUDGET} "
+            "request(s) for the whole run. A depth-2 report shows both depths side by "
+            "side so you can see what the extra requests bought."
+        )
 
 
 @app.command()
@@ -229,6 +273,14 @@ def _do_assess(
             continue
         ev = load_evidence(evidence_dir, node["id"])
         results = checks.run_all(ev, names or None, node.get('eosc_page', ''))
+        # When the capture went two hops deep, also assess it as if it had not,
+        # so the report can show what the second hop changed rather than
+        # asserting it was worth it.
+        shallow_results = None
+        if ev.crawl_depth >= 2:
+            shallow_results = checks.run_all(
+                without_depth_2(ev), names or None, node.get('eosc_page', '')
+            )
         run["nodes"].append(
             {
                 "id": node["id"],
@@ -248,6 +300,8 @@ def _do_assess(
                         {
                             "url": c.url,
                             "final_url": c.final_url,
+                            "depth": c.depth,
+                            "parent_url": c.parent_url,
                             "selected_for": c.selected_for,
                             "link_text": c.link_text,
                             "http_status": c.http_status,
@@ -260,6 +314,11 @@ def _do_assess(
                     "children_skipped": ev.children_skipped,
                 },
                 "results": [asdict(r) for r in results],
+                **(
+                    {"results_depth_1": [asdict(r) for r in shallow_results]}
+                    if shallow_results is not None
+                    else {}
+                ),
             }
         )
 
@@ -307,12 +366,26 @@ def run(
     approved_names: Path | None = typer.Option(None, "--approved-names"),
     run_id: str = typer.Option("", "--run"),
     delay: float = typer.Option(2.0, "--delay"),
-    depth: int = typer.Option(1, "--depth", min=0, max=1),
+    depth: int = typer.Option(
+        1,
+        "--depth",
+        min=0,
+        max=2,
+        help="0 = landing page only. 1 (default) = also follow links that can settle "
+        "a checklist point. 2 = one further hop, under --fetch-budget; the report "
+        "then shows both depths side by side.",
+    ),
+    fetch_budget: int = typer.Option(
+        DEFAULT_FETCH_BUDGET,
+        "--fetch-budget",
+        min=0,
+        help="Depth 2 only: hard ceiling on second-hop requests for the whole run.",
+    ),
 ):
     """collect, then assess."""
     # Resolve once so both phases agree on the node list and the directory.
     nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
-    _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN)
+    _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget)
     _do_assess(nodes, resolved, checklist_file, approved_names, run_id)
 
 

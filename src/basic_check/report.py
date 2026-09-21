@@ -142,6 +142,27 @@ def render_html(run: dict, out: Path) -> Path:
         f'<a href="{checklist_href}#p{html.escape(pid)}">{html.escape(pid)}</a></th>'
         for pid in order
     )
+    def _rows_for(key: str) -> list[str]:
+        out = []
+        for node in run["nodes"]:
+            by_id = {r["point_id"]: r for r in node.get(key, node["results"])}
+            cs = []
+            for pid in order:
+                res = by_id.get(pid)
+                if not res:
+                    cs.append('<td class="cell">—</td>')
+                    continue
+                cls, label, _ = VERDICT_STYLE.get(res["verdict"], ("manual", res["verdict"], "?"))
+                tip = html.escape(res["message"][:300])
+                cs.append(
+                    f'<td class="cell"><span class="v {cls}" title="{tip}">{label}</span></td>'
+                )
+            out.append(
+                f'<tr><td class="node"><a href="#{html.escape(node["id"])}">'
+                f'{html.escape(node["name"])}</a></td>{"".join(cs)}</tr>'
+            )
+        return out
+
     rows = []
     for node in run["nodes"]:
         by_id = {r["point_id"]: r for r in node["results"]}
@@ -186,6 +207,89 @@ def render_html(run: dict, out: Path) -> Path:
             f'<span class="url">· {html.escape(str(status_txt))}</span></summary>'
             f'{"".join(findings)}</details>'
         )
+
+    # A depth-2 run is reported twice from one capture: what the default depth
+    # would have concluded, and what the extra hop concluded. Showing only the
+    # deeper result would hide whether the extra requests changed anything.
+    dual = _dual_depth(run)
+    dual_block = dual_after = ""
+    matrix_heading = "<h2>Matrix</h2>"
+    if dual:
+        changes = _depth_changes(run)
+        d1 = _tally(run, "results_depth_1")
+        d2 = _tally(run, "results")
+        pages = _depth_2_pages(run)
+        shallow_rows = "".join(_rows_for("results_depth_1"))
+        chips1 = "".join(
+            f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
+            f"<b>{d1.get(v, 0)}</b></span>"
+            for v in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR")
+            if d1.get(v)
+        )
+        chips2 = "".join(
+            f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
+            f"<b>{d2.get(v, 0)}</b></span>"
+            for v in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR")
+            if d2.get(v)
+        )
+        if changes:
+            rows_ch = "".join(
+                f"<tr><td>{html.escape(n)}</td><td>{html.escape(pid)}</td>"
+                f'<td><span class="v {VERDICT_STYLE.get(w, ("manual", w, ""))[0]}">'
+                f'{VERDICT_STYLE.get(w, ("manual", w, ""))[1]}</span></td>'
+                f'<td><span class="v {VERDICT_STYLE.get(g, ("manual", g, ""))[0]}">'
+                f'{VERDICT_STYLE.get(g, ("manual", g, ""))[1]}</span></td></tr>'
+                for n, pid, w, g in changes
+            )
+            changed_html = (
+                f"<p>{len(changes)} cell(s) differ between the two depths. The deeper "
+                "verdict is the one shown in the per-node detail below.</p>"
+                '<table><thead><tr><th>Node</th><th>Point</th><th>At depth 1</th>'
+                f"<th>At depth 2</th></tr></thead><tbody>{rows_ch}</tbody></table>"
+            )
+        else:
+            changed_html = (
+                f"<p><b>No verdict changed.</b> The second hop fetched {len(pages)} "
+                f"page(s) and left all {sum(d2.values())} cells exactly as depth 1 had "
+                "them. That is a finding rather than a failure of the deeper crawl: the "
+                "points still marked <i>review</i> turn on a judgement, or quantify over "
+                "things no crawl enumerates, so fetching more pages cannot settle them. "
+                "This is why depth 1 remains the default.</p>"
+            )
+        pages_html = ""
+        if pages:
+            prows = "".join(
+                f"<tr><td>{html.escape(n)}</td>"
+                f'<td>{html.escape(", ".join(c.get("selected_for", [])) or "—")}</td>'
+                f'<td><a href="{html.escape(str(c.get("url", "")))}">'
+                f'{html.escape(_ellipsis(str(c.get("url", "")), 78))}</a></td>'
+                f'<td>{html.escape(str(c.get("http_status") or ("error" if c.get("error") else "—")))}</td></tr>'
+                for n, c in pages
+            )
+            pages_html = (
+                "<h3>Pages the second hop fetched</h3><table><thead><tr><th>Node</th>"
+                "<th>Followed for</th><th>Page</th><th>Served</th></tr></thead>"
+                f"<tbody>{prows}</tbody></table>"
+            )
+        dual_block = (
+            '<div class="note"><b>This run was collected at depth 2, and is reported '
+            "twice.</b> Both tables come from the same capture — the shallow view is the "
+            "deep evidence with the second-hop pages set aside, not a separate run — so "
+            "any difference between them is the extra hop and not the passage of time."
+            "</div>"
+            "<h2>Results at depth 1</h2>"
+            "<p>Landing page plus links that can settle a checklist point. This is the "
+            f'default the tool ships with.</p><div class="chips">{chips1}</div>'
+            f'<table class="matrix"><thead><tr><th>Node</th>{head}</tr></thead>'
+            f"<tbody>{shallow_rows}</tbody></table>"
+            "<h2>Results at depth 2</h2>"
+            f"<p>The same evidence plus {len(pages)} page(s) reached one hop further out, "
+            "under a shared run budget.</p>"
+            f'<div class="chips">{chips2}</div>'
+        )
+        dual_after = f"<h3>What the second hop changed</h3>{changed_html}{pages_html}"
+        # The two depth headings replace the single "Matrix" heading.
+        matrix_heading = ""
 
     chips = "".join(
         f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
@@ -236,11 +340,23 @@ def render_html(run: dict, out: Path) -> Path:
             "verdict rests on the landing page alone."
         )
     else:
-        mixed = "" if depths == {1} else " (some nodes were collected at depth 0)"
+        # `kids` counts every followed page, at whatever depth. Reporting all of
+        # them as "one level down" would overstate the shallow crawl, so the two
+        # hops are counted separately.
+        deep_pages = len(_depth_2_pages(run))
+        first_hop = kids - deep_pages
+        mixed = " (some nodes were collected at depth 0)" if 0 in depths else ""
+        second = (
+            f", then {deep_pages} page{'s' if deep_pages != 1 else ''} one hop "
+            "further out"
+            if deep_pages
+            else ""
+        )
         crawl_sentence = (
-            f"{len(run['nodes'])} landing pages were requested, plus {kids} "
-            f"checklist-relevant link{'s' if kids != 1 else ''} one level down "
-            f"({kids / max(len(run['nodes']), 1):.1f} per node on average){mixed}. "
+            f"{len(run['nodes'])} landing pages were requested, plus {first_hop} "
+            f"checklist-relevant link{'s' if first_hop != 1 else ''} one level down "
+            f"({first_hop / max(len(run['nodes']), 1):.1f} per node on average)"
+            f"{second}{mixed}. "
             "Links were followed only where the target could settle a point, so a "
             "policy link is verified rather than taken on the strength of its label."
         )
@@ -282,8 +398,9 @@ refuses to guess at. {crawl_sentence}</div>
 
 <div class="counts">{chips}</div>
 
-<h2>Matrix</h2>
+{matrix_heading}{dual_block}
 <table class="matrix"><thead><tr><th>Node</th>{head}</tr></thead><tbody>{"".join(rows)}</tbody></table>
+{dual_after}
 <div class="legend">{legend_rows}</div>
 
 <div class="cols"><table>
@@ -464,17 +581,81 @@ def render_csv(run: dict, out: Path) -> Path:
     return out
 
 
+def _ellipsis(s: str, n: int) -> str:
+    """Truncate visibly, so a shortened URL is not mistaken for the real one."""
+    return s if len(s) <= n else s[: n - 1] + "…"
+
+
+def _dual_depth(run: dict) -> bool:
+    """True when the run carries both a depth-1 and a depth-2 assessment."""
+    return any("results_depth_1" in n for n in run["nodes"])
+
+
+def _matrix_rows(run: dict, order: list[str], key: str) -> list[str]:
+    rows = []
+    for node in run["nodes"]:
+        by_id = {r["point_id"]: r for r in node.get(key, node["results"])}
+        cells = [VERDICT_MD.get(by_id[p]["verdict"], "?") if p in by_id else "—" for p in order]
+        rows.append(f"| {node['name']} | " + " | ".join(cells) + " |")
+    return rows
+
+
+def _tally(run: dict, key: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for node in run["nodes"]:
+        for r in node.get(key, node["results"]):
+            counts[r["verdict"]] = counts.get(r["verdict"], 0) + 1
+    return counts
+
+
+def _tally_line(counts: dict[str, int]) -> str:
+    total = sum(counts.values())
+    return (
+        f"{total} cells: 🟢 {counts.get('PASS', 0)} PASS · "
+        f"🔴 {counts.get('FAIL', 0)} FAIL · 🟠 {counts.get('MANUAL_REVIEW', 0)} review"
+        + (f" · 🟣 {counts['ERROR']} error" if counts.get("ERROR") else "")
+    )
+
+
+def _depth_changes(run: dict) -> list[tuple[str, str, str, str]]:
+    """Cells whose verdict differs between the depth-1 and depth-2 assessments."""
+    out = []
+    for node in run["nodes"]:
+        shallow = {r["point_id"]: r["verdict"] for r in node.get("results_depth_1", [])}
+        for r in node["results"]:
+            was = shallow.get(r["point_id"])
+            if was is not None and was != r["verdict"]:
+                out.append((node["name"], r["point_id"], was, r["verdict"]))
+    return out
+
+
+def _depth_2_pages(run: dict) -> list[tuple[str, dict]]:
+    out = []
+    for node in run["nodes"]:
+        for c in node.get("fetch", {}).get("children", []):
+            if c.get("depth") == 2:
+                out.append((node["name"], c))
+    return out
+
+
 def render_markdown(run: dict, out: Path) -> Path:
     points = run["checklist"]["points"]
     order = [p["id"] for p in points]
     short = VERDICT_MD
     depths = {n.get("fetch", {}).get("crawl_depth", 0) for n in run["nodes"]}
     followed = sum(len(n.get("fetch", {}).get("children", [])) for n in run["nodes"])
-    scope = (
-        f"one page request per node plus {followed} followed link(s) in total (depth 1)"
-        if max(depths, default=0) >= 1
-        else "one page request per node, no crawling"
-    )
+    dual = _dual_depth(run)
+    deepest = max(depths, default=0)
+    second_hop = len(_depth_2_pages(run))
+    if deepest >= 2:
+        scope = (
+            f"one page request per node plus {followed - second_hop} followed link(s), "
+            f"then {second_hop} second-hop page(s) (depth 2)"
+        )
+    elif deepest >= 1:
+        scope = f"one page request per node plus {followed} followed link(s) in total (depth 1)"
+    else:
+        scope = "one page request per node, no crawling"
 
     ad_hoc = [n for n in run["nodes"] if n.get("ad_hoc")]
     title = "EOSC Node Landing Page compliance"
@@ -502,13 +683,82 @@ def render_markdown(run: dict, out: Path) -> Path:
         "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
         "🟠 review — a human must decide · 🟣 ERROR — could not be assessed",
         "",
-        "| Node | " + " | ".join(order) + " |",
-        "|---|" + "---|" * len(order),
     ]
-    for node in run["nodes"]:
-        by_id = {r["point_id"]: r for r in node["results"]}
-        cells = [short.get(by_id[p]["verdict"], "?") if p in by_id else "—" for p in order]
-        lines.append(f"| {node['name']} | " + " | ".join(cells) + " |")
+
+    header = ["| Node | " + " | ".join(order) + " |", "|---|" + "---|" * len(order)]
+
+    if not dual:
+        lines += header + _matrix_rows(run, order, "results")
+    else:
+        changes = _depth_changes(run)
+        d1, d2 = _tally(run, "results_depth_1"), _tally(run, "results")
+        lines += [
+            "This run was collected at `--depth=2`, so it is reported twice: once using "
+            "only the landing page and its direct links, and once using the second hop as "
+            "well. Both tables come from the **same capture** — the shallow view is the "
+            "deep evidence with the second-hop pages set aside, not a separate run — so "
+            "any difference between them is the hop itself and not the passage of time.",
+            "",
+            "### Results at depth 1",
+            "",
+            "Landing page plus links that can settle a checklist point (policies, contact, "
+            "about). This is the default the tool ships with.",
+            "",
+            f"{_tally_line(d1)}.",
+            "",
+        ]
+        lines += header + _matrix_rows(run, order, "results_depth_1")
+        lines += [
+            "",
+            "### Results at depth 2",
+            "",
+            f"The same evidence plus {second_hop} page(s) reached one further hop out, "
+            "under a shared run budget.",
+            "",
+            f"{_tally_line(d2)}.",
+            "",
+        ]
+        lines += header + _matrix_rows(run, order, "results")
+        lines += ["", "### What the second hop changed", ""]
+        if not changes:
+            lines += [
+                f"**No verdict changed.** The second hop fetched {second_hop} page(s) and "
+                "left all " + str(sum(d2.values())) + " cells exactly as depth 1 had them.",
+                "",
+                "That is a finding, not a failure of the deeper crawl. The points still "
+                "marked 🟠 review are not shallow-crawl artefacts: they turn on a judgement "
+                "(\"clearly state\") or quantify over things no crawl enumerates (\"all "
+                "research resources offered by the Node\"). Fetching more pages cannot "
+                "settle either kind, which is why depth 1 remains the default.",
+                "",
+            ]
+        else:
+            lines += [
+                f"{len(changes)} cell(s) differ. The depth-2 verdict is the one carried in "
+                "the detail section below.",
+                "",
+                "| Node | Point | At depth 1 | At depth 2 |",
+                "|---|---|---|---|",
+            ]
+            for name, pid, was, now in changes:
+                lines.append(
+                    f"| {name} | {pid} | {short.get(was, was)} | {short.get(now, now)} |"
+                )
+            lines.append("")
+        pages = _depth_2_pages(run)
+        if pages:
+            lines += [
+                "#### Pages the second hop fetched",
+                "",
+                "| Node | Point it was followed for | Page | Served |",
+                "|---|---|---|---|",
+            ]
+            for name, c in pages:
+                status = c.get("http_status") or ("error" if c.get("error") else "—")
+                purpose = ", ".join(c.get("selected_for", [])) or "—"
+                url = str(c.get("url", "")).replace("|", "%7C")
+                lines.append(f"| {name} | {purpose} | <{url}> | {status} |")
+            lines.append("")
 
     lines += [
         "",

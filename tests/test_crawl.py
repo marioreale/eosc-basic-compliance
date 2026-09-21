@@ -15,7 +15,18 @@ a 404 policy link fails, and a navigation stub is not a policy.
 from __future__ import annotations
 
 from basic_check import checks
-from basic_check.fetch import ChildPage, Link, PageEvidence, select_children
+from basic_check.fetch import (
+    DEFAULT_FETCH_BUDGET,
+    MAX_CHILDREN,
+    MAX_GRANDCHILDREN_PER_CHILD,
+    ChildPage,
+    FetchBudget,
+    Link,
+    PageEvidence,
+    select_children,
+    select_grandchildren,
+    without_depth_2,
+)
 
 POLICY_BODY = (
     "This Acceptable Use Policy sets out the terms under which you may use the "
@@ -341,3 +352,125 @@ def test_every_link_a_check_can_use_is_a_link_the_crawler_will_follow():
                 f"a link labelled {label!r} satisfies point {point_id} but the crawler "
                 f"followed it only for {[c.selected_for for c in selected]}"
             )
+
+
+# --- depth 2: a second hop, under a hard budget --------------------------------
+
+
+def _child_with(links: list[Link], url="https://node.example/policies") -> ChildPage:
+    return ChildPage(url=url, final_url=url, http_status=200, links=links, selected_for=["5b"])
+
+
+def test_a_budget_hands_out_only_what_it_has():
+    b = FetchBudget(total=3)
+    assert [b.take() for _ in range(5)] == [True, True, True, False, False]
+    assert b.spent == 3
+    assert b.exhausted
+
+
+def test_a_budget_of_zero_permits_nothing():
+    """Guard against a falsy-vs-None bug making 0 mean unlimited."""
+    b = FetchBudget(total=0)
+    assert b.take() is False
+    assert b.exhausted
+
+
+def test_the_budget_records_why_it_stopped():
+    b = FetchBudget(total=1)
+    b.take()
+    b.take()
+    assert "budget" in b.note.lower()
+    assert "1" in b.note
+
+
+def test_grandchildren_are_selected_from_a_child_page():
+    """A policy page linking to the real AUP is the case depth 2 exists for."""
+    links = [
+        Link("https://node.example/legal/aup-full", "Full Acceptable Use Policy"),
+        Link("https://node.example/news/42", "Some news"),
+    ]
+    picked, _ = select_grandchildren(_child_with(links), FetchBudget(total=10))
+    assert [g.url for g in picked] == ["https://node.example/legal/aup-full"]
+    assert all(g.depth == 2 for g in picked)
+
+
+def test_grandchildren_never_leave_the_node_site():
+    links = [Link("https://unrelated-funder.org/aup", "Acceptable Use Policy")]
+    picked, _ = select_grandchildren(_child_with(links), FetchBudget(total=10))
+    assert picked == []
+
+
+def test_grandchildren_do_not_revisit_pages_already_seen():
+    """The AUP page linking back to itself, or to the landing page, must not refetch."""
+    links = [
+        Link("https://node.example/policies", "Acceptable Use Policy"),
+        Link("https://node.example/policies/aup", "Acceptable Use Policy detail"),
+    ]
+    seen = {"https://node.example/policies", "https://node.example/policies/aup"}
+    picked, skipped = select_grandchildren(_child_with(links), FetchBudget(total=10), seen=seen)
+    assert picked == []
+    assert any("already" in s for s in skipped)
+
+
+def test_the_budget_caps_grandchildren_before_the_per_child_cap_does():
+    """Links must span purposes, or the per-purpose cap binds first and the
+    budget is never exercised -- which would make this test prove nothing."""
+    links = [
+        Link("https://node.example/legal/aup", "Acceptable Use Policy"),
+        Link("https://node.example/legal/user-access-policy", "User Access Policy"),
+        Link("https://node.example/contact", "Contact the helpdesk"),
+    ]
+    budget = FetchBudget(total=1)
+    picked, skipped = select_grandchildren(_child_with(links), budget)
+    assert len(picked) == 1, "the budget of 1 must stop the second selection"
+    assert budget.exhausted
+    assert any("budget" in s.lower() for s in skipped)
+
+
+def test_a_child_yields_at_most_the_per_child_cap():
+    links = [Link(f"https://node.example/legal/aup-{i}", "Acceptable Use Policy") for i in range(9)]
+    picked, _ = select_grandchildren(_child_with(links), FetchBudget(total=99))
+    assert len(picked) <= MAX_GRANDCHILDREN_PER_CHILD
+
+
+def test_depth_2_costs_are_bounded_for_a_nine_node_run():
+    """The whole point of the budget: a second hop must not become a crawl.
+
+    Refuse to ship a default that could fan out to hundreds of requests against
+    other people's production sites.
+    """
+    worst_case = 9 * (1 + MAX_CHILDREN + MAX_CHILDREN * MAX_GRANDCHILDREN_PER_CHILD)
+    assert worst_case > DEFAULT_FETCH_BUDGET, "the budget must actually bind"
+    assert DEFAULT_FETCH_BUDGET <= 120
+
+
+# --- a depth-1 view of depth-2 evidence ---------------------------------------
+
+
+def test_stripping_depth_2_leaves_the_depth_1_evidence_intact():
+    """The dual-depth report compares like with like: one evidence set, two lenses.
+
+    Re-fetching at depth 1 to build the comparison would double the load on the
+    nodes and introduce time as a variable, so the shallow view is derived from
+    the same capture instead.
+    """
+    kid = ChildPage(url="https://node.example/policies", depth=1, http_status=200)
+    grandkid = ChildPage(url="https://node.example/policies/aup", depth=2, http_status=200)
+    ev = page([Link("https://node.example/policies", "Policies")])
+    ev.children = [kid, grandkid]
+    ev.crawl_depth = 2
+
+    shallow = without_depth_2(ev)
+    assert [c.url for c in shallow.children] == ["https://node.example/policies"]
+    assert shallow.crawl_depth == 1
+    # The original must not be mutated: the deep view is rendered from it afterwards.
+    assert len(ev.children) == 2
+    assert ev.crawl_depth == 2
+
+
+def test_stripping_depth_2_is_a_no_op_on_a_depth_1_capture():
+    ev = page([])
+    ev.children = [ChildPage(url="https://node.example/a", depth=1)]
+    ev.crawl_depth = 1
+    assert without_depth_2(ev).children == ev.children
+    assert without_depth_2(ev).crawl_depth == 1

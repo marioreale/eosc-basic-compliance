@@ -25,7 +25,7 @@ import asyncio
 import contextlib
 import json
 import urllib.robotparser as robotparser
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 from datetime import UTC, datetime
 from pathlib import Path
 from urllib.parse import urljoin, urlparse
@@ -54,6 +54,17 @@ CHILD_SETTLE_MS = 600
 MAX_CHILDREN = 8
 MAX_PER_PURPOSE = 2
 CHILD_DELAY_S = 1.2
+
+# Depth 2 exists for one shape of page: a policies index that links on to the
+# actual policy. It is deliberately meaner than depth 1 -- one link per purpose
+# per child, and a run-wide ceiling -- because a second hop multiplies rather
+# than adds. Nine nodes at depth 1 is ~22 child requests; the same fan-out
+# unbounded at depth 2 would be several hundred against other people's
+# production servers, which is a crawl, not a check.
+MAX_GRANDCHILDREN_PER_CHILD = 2
+MAX_PER_PURPOSE_D2 = 1
+DEFAULT_FETCH_BUDGET = 60
+GRANDCHILD_DELAY_S = 1.5
 
 # Which links are worth following is defined in patterns.py, shared with the
 # checks so the two cannot disagree about what a policy link looks like.
@@ -93,6 +104,8 @@ class ChildPage:
     url: str
     selected_for: list[str] = field(default_factory=list)
     link_text: str = ""
+    depth: int = 1
+    parent_url: str = ""
     http_status: int | None = None
     final_url: str = ""
     title: str = ""
@@ -295,6 +308,108 @@ BINARY_SUFFIXES = (
 )
 
 
+class FetchBudget:
+    """A hard ceiling on requests made below the landing pages, for a whole run.
+
+    Per-node caps bound each page's fan-out but not the product of them, and it
+    is the product that lands on someone else's server. This is one counter
+    shared across every node so the total is knowable before the run starts, not
+    discovered afterwards from their access logs.
+
+    `take()` is the only way to spend, and it returns False rather than raising
+    so a caller stops collecting instead of losing the evidence gathered so far.
+    """
+
+    def __init__(self, total: int = DEFAULT_FETCH_BUDGET) -> None:
+        self.total = max(0, int(total))
+        self.spent = 0
+        self.refused = 0
+
+    def take(self) -> bool:
+        if self.spent >= self.total:
+            self.refused += 1
+            return False
+        self.spent += 1
+        return True
+
+    @property
+    def exhausted(self) -> bool:
+        return self.spent >= self.total
+
+    @property
+    def note(self) -> str:
+        if not self.refused:
+            return f"fetch budget: {self.spent} of {self.total} used"
+        return (
+            f"fetch budget exhausted: {self.spent} of {self.total} used, "
+            f"{self.refused} further page(s) not fetched"
+        )
+
+
+def select_grandchildren(
+    child: ChildPage,
+    budget: FetchBudget,
+    seen: set[str] | None = None,
+    node_host: str = "",
+) -> tuple[list[ChildPage], list[str]]:
+    """Choose links on an already-fetched child worth one more hop.
+
+    Same relevance rule as depth 1, three extra restraints: one link per purpose
+    instead of two, a small per-child cap, and the shared run budget. `seen`
+    carries every URL already fetched for this node so a policies page that
+    links back to the landing page, or to a sibling already queued, costs
+    nothing.
+
+    Host containment is measured against `node_host` -- the *landing page's*
+    host -- not the child's. Measuring against the child would let each hop
+    redefine "same site" and walk the crawl off the node.
+    """
+    seen = seen or set()
+    base_host = (node_host or urlparse(child.final_url or child.url).netloc).lower()
+    chosen: dict[str, ChildPage] = {}
+    skipped: list[str] = []
+    per_purpose: dict[str, int] = {}
+
+    for point_id, patterns in CRAWL_PURPOSES:
+        for link in child.links:
+            href = link.href
+            parsed = urlparse(href)
+            if parsed.scheme not in ("http", "https"):
+                continue
+            if parsed.path.lower().endswith(BINARY_SUFFIXES):
+                continue
+            host = parsed.netloc.lower()
+            if not (host == base_host or _related_host(host, base_host)):
+                continue
+            haystack = f"{link.text} {parsed.path}".lower()
+            if not _match_any(haystack, patterns):
+                continue
+            key = href.split("#")[0].rstrip("/")
+            if key in seen or key in chosen:
+                if key in seen:
+                    skipped.append(f"{href} (already fetched at depth 1)")
+                continue
+            if per_purpose.get(point_id, 0) >= MAX_PER_PURPOSE_D2:
+                skipped.append(f"{href} (depth 2 cap for point {point_id})")
+                continue
+            if len(chosen) >= MAX_GRANDCHILDREN_PER_CHILD:
+                skipped.append(f"{href} (depth 2 per-page cap)")
+                continue
+            if not budget.take():
+                skipped.append(f"{href} (run fetch budget exhausted)")
+                return list(chosen.values()), skipped
+            per_purpose[point_id] = per_purpose.get(point_id, 0) + 1
+            chosen[key] = ChildPage(
+                url=href,
+                selected_for=[point_id],
+                link_text=link.text,
+                depth=2,
+                parent_url=child.final_url or child.url,
+            )
+
+    return list(chosen.values()), skipped
+
+
 def select_children(
     ev: PageEvidence, max_children: int = MAX_CHILDREN
 ) -> tuple[list[ChildPage], list[str]]:
@@ -403,7 +518,12 @@ async def _fetch_child(context, child: ChildPage) -> ChildPage:
 
 
 async def _fetch_one(
-    browser, node: dict, shots: Path, depth: int = 0, max_children: int = MAX_CHILDREN
+    browser,
+    node: dict,
+    shots: Path,
+    depth: int = 0,
+    max_children: int = MAX_CHILDREN,
+    budget: FetchBudget | None = None,
 ) -> PageEvidence:
     ev = PageEvidence(
         node_id=node["id"],
@@ -449,17 +569,50 @@ async def _fetch_one(
             ev.crawl_depth = 1
             selected, skipped = select_children(ev, max_children)
             ev.children_skipped = skipped[:50]
+            node_host = urlparse(ev.final_url or node["url"]).netloc.lower()
+            # Every URL fetched for this node, so a second hop never pays twice
+            # for a page already on disk.
+            seen = {(ev.final_url or node["url"]).split("#")[0].rstrip("/")}
+            seen |= {c.url.split("#")[0].rstrip("/") for c in selected}
             for i, child in enumerate(selected):
                 await _fetch_child(context, child)
                 ev.children.append(child)
                 if i < len(selected) - 1:
                     await asyncio.sleep(CHILD_DELAY_S)
+
+            grandchildren: list[ChildPage] = []
+            if depth >= 2 and budget is not None:
+                ev.crawl_depth = 2
+                for child in selected:
+                    if not child.ok:
+                        # A child that did not render has no trustworthy links;
+                        # following them would spend budget on guesswork.
+                        continue
+                    picked, gskipped = select_grandchildren(
+                        child, budget, seen=seen, node_host=node_host
+                    )
+                    ev.children_skipped.extend(gskipped[:10])
+                    for g in picked:
+                        seen.add(g.url.split("#")[0].rstrip("/"))
+                        await _fetch_child(context, g)
+                        ev.children.append(g)
+                        grandchildren.append(g)
+                        await asyncio.sleep(GRANDCHILD_DELAY_S)
+                    if budget.exhausted:
+                        break
+
             ev.crawl_note = (
-                f"depth 1: {len(ev.links)} link(s) on the landing page, "
+                f"depth {ev.crawl_depth}: {len(ev.links)} link(s) on the landing page, "
                 f"{len(selected)} followed because they matched a checklist point, "
                 f"{len(skipped)} matched but dropped by a cap, "
                 f"the rest not relevant to any point"
             )
+            if depth >= 2:
+                ev.crawl_note += (
+                    f"; depth 2 added {len(grandchildren)} page(s)"
+                    + (f"; {budget.note}" if budget is not None else "")
+                )
+            ev.children_skipped = ev.children_skipped[:60]
         else:
             ev.crawl_note = "depth 0: the landing page only, no links followed"
     except Exception as exc:
@@ -469,17 +622,41 @@ async def _fetch_one(
     return ev
 
 
+def without_depth_2(ev: PageEvidence) -> PageEvidence:
+    """A shallow copy of `ev` as if the run had stopped at depth 1.
+
+    Used to show, from a single capture, what the second hop actually bought.
+    Re-fetching at depth 1 for the comparison would double the load on the nodes
+    and let the page change between the two runs, so the same evidence is read
+    through two lenses instead. The original is left untouched -- the deep view
+    is rendered from it immediately afterwards.
+    """
+    shallow = replace(
+        ev,
+        children=[c for c in ev.children if c.depth <= 1],
+        crawl_depth=min(ev.crawl_depth, 1),
+    )
+    return shallow
+
+
 async def collect_all(
     nodes: list[dict],
     out_dir: Path,
     delay_s: float = 2.0,
     depth: int = 0,
     max_children: int = MAX_CHILDREN,
+    fetch_budget: int = DEFAULT_FETCH_BUDGET,
 ) -> list[PageEvidence]:
     """Fetch every landing page, sequentially, with a gap between hosts.
 
     At depth 1 a bounded set of child pages is fetched too -- see select_children
     for how few, and why.
+
+    At depth 2 one `FetchBudget` is shared by every node, so the ceiling is on
+    the run and not on each page. Earlier nodes can therefore consume budget that
+    later ones then do not get: that is deliberate, and the note in each
+    evidence file records what was left, so a thin result is visible as a budget
+    effect rather than mistaken for a node with nothing to find.
     """
     from playwright.async_api import async_playwright
 
@@ -487,11 +664,12 @@ async def collect_all(
     shots = out_dir / "screenshots"
     shots.mkdir(exist_ok=True)
     results: list[PageEvidence] = []
+    budget = FetchBudget(fetch_budget) if depth >= 2 else None
     async with async_playwright() as pw:
         browser = await pw.chromium.launch(args=["--disable-dev-shm-usage"])
         try:
             for i, node in enumerate(nodes):
-                ev = await _fetch_one(browser, node, shots, depth, max_children)
+                ev = await _fetch_one(browser, node, shots, depth, max_children, budget)
                 results.append(ev)
                 (out_dir / f"{node['id']}.json").write_text(
                     json.dumps(ev.to_json(), indent=2, ensure_ascii=False)
@@ -501,11 +679,16 @@ async def collect_all(
                 if depth >= 1:
                     ok = sum(1 for c in ev.children if c.ok)
                     extra = f"  +{ok}/{len(ev.children)} child page(s)"
+                    if depth >= 2:
+                        g = sum(1 for c in ev.children if c.depth == 2)
+                        extra += f" ({g} at depth 2)"
                 print(f"  [{i + 1}/{len(nodes)}] {node['id']:12} {status}{extra}")
                 if i < len(nodes) - 1:
                     await asyncio.sleep(delay_s)
         finally:
             await browser.close()
+    if budget is not None:
+        print(f"\n  {budget.note}")
     return results
 
 

@@ -19,24 +19,24 @@ Set `--depth 0` for the strict one-request-per-node behaviour.
 
 ## What it found
 
-Nine landing pages, fetched 18 September 2026, 14:17–14:21 UTC. Eight were
-captured normally; the EUDAT portal was down and could not be assessed.
+Nine landing pages, all fetched 21 September 2026, 12:39–12:44 UTC, at `--depth 2`.
+Every node responded `HTTP 200`. The same tally holds at depth 1 — see
+[How deep to go](#how-deep-to-go---depth).
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-90 cells: 🟢 26 PASS · 🔴 8 FAIL · 🟠 56 review.
+90 cells: 🟢 31 PASS · 🔴 8 FAIL · 🟠 51 review.
 
-⚠️ **EUDAT could not be assessed in this run.** `portal.eudat.eu` returned
-`HTTP 500`, so all ten of its points are `review`. Re-run
-`basic-check run --only eudat` once it recovers.
+`portal.eudat.eu` returned `HTTP 500` on 18 September and was unassessable that
+day; it responded normally on 21 September and is fully assessed here.
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
-from the live index — but only BBMRI-ERIC links to its own. Seven nodes fail
-outright: five link to nothing on `eosc.eu` at all, and PaNOSC and GÉANT link only
-to the federation index page, which the checklist explicitly excludes. Each failure names
+from the live index — but only BBMRI-ERIC and EUDAT link to their own. Seven nodes
+fail outright: five link to nothing on `eosc.eu` at all, and PaNOSC and GÉANT link
+only to the federation index page, which the checklist explicitly excludes. Each failure names
 the exact URL that is missing, so the fix is a one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and
@@ -123,8 +123,28 @@ uv run basic-check collect --max-children 4   # tighter cap (default 8 per node)
 uv run basic-check collect --only egi,geant   # a subset, for a gentle re-run
 uv run basic-check assess            # evidence -> results/{index.html,results.md,.csv,.json}
 uv run basic-check run               # collect + assess
+uv run basic-check run --depth 2     # follow one further hop (see below)
 uv run basic-check show data-terra   # one node's results in the terminal
 ```
+
+### How deep to go: `--depth`
+
+| `--depth` | What is fetched | Requests in the 21 Sep 2026 run |
+|---|---|---|
+| `0` | The landing page only. | 9 |
+| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about pages. At most 8 per node, 2 per point. | 34 (9 + 25) |
+| `2` | The above, plus one further hop from those pages: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, and the whole run shares a single `--fetch-budget` (default 60 requests). | 52 (9 + 25 + 18) |
+
+Depth 2 exists for the case where the answer is one click past where depth 1 stops. It is not the default, for two reasons. The first is other people's servers: every extra hop multiplies requests against production sites that did not ask to be tested, which is why the budget is a hard ceiling for the whole run rather than a per-node limit. The second is that, on this federation, it has not yet changed anything.
+
+```bash
+uv run basic-check run --depth 2                    # bounded by the default budget
+uv run basic-check run --depth 2 --fetch-budget 20  # stricter ceiling
+```
+
+**A depth-2 run reports both depths.** The report renders two summary tables — *Results at depth 1* and *Results at depth 2* — followed by a *What the second hop changed* section listing every cell whose verdict differs, and a table of exactly which pages the second hop fetched and what each was followed for. Both tables are computed from the **same capture**: the shallow view is the deep evidence with the second-hop pages set aside, not a second run. So any difference between the two tables is the extra hop, not the page changing between runs.
+
+On the 21 September 2026 run, the second hop made 18 extra requests and changed **no verdict at all** — all 90 cells landed exactly where depth 1 had them. That is a finding rather than a disappointment: the points still marked review turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all research resources offered by the Node"), and no amount of fetching settles either kind. Run it yourself before assuming the same holds for another federation or a later date.
 
 ### Checking a page that is not in `nodes.yaml`
 
