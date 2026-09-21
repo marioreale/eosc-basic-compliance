@@ -436,3 +436,87 @@ def test_point3_does_not_claim_a_name_is_absent_from_a_page_it_never_read():
     assert "not looked for" in note
     assert "403" in note
     assert "NONE" not in note
+
+
+# --- point 3: the logo match must not be satisfied by the site's own hostname --
+
+
+def test_the_logo_match_ignores_eosc_in_the_sites_own_hostname():
+    """The defect this guards: on the real eosc-dto node, 7 of 8 "EOSC-referencing
+    image asset(s)" matched only because the page is served from
+    eosc-dto.d4science.org. One of them was an EU funding badge named
+    FundedbytheEU.png. The host is a property of the site, not of the image, so
+    it cannot be evidence that an EOSC logo is shown.
+    """
+    images = [
+        Image(src="https://eosc-dto.example.org/documents/FundedbytheEU.png"),
+        Image(src="https://eosc-dto.example.org/image/layout_icon?img_id=1"),
+    ]
+    res = checks.check_3(ev(images=images, final_url="https://eosc-dto.example.org/"))
+    assert "none referencing EOSC" in " ".join(res.evidence), res.evidence
+
+
+def test_an_image_actually_served_from_eosc_eu_still_counts():
+    """The mirror case: a logo loaded cross-host from eosc.eu is a real signal,
+    and at least one node in the set does exactly that.
+    """
+    images = [Image(src="https://eosc.eu/sites/default/files/logo-x.svg")]
+    res = checks.check_3(ev(images=images, final_url="https://node.example/"))
+    assert "image asset(s): 1" in " ".join(res.evidence), res.evidence
+
+
+def test_a_lookalike_domain_does_not_count_as_eosc_eu():
+    images = [Image(src="https://myeosc.example/logo.svg")]
+    res = checks.check_3(ev(images=images, final_url="https://node.example/"))
+    assert "none referencing EOSC" in " ".join(res.evidence), res.evidence
+
+
+def test_eosc_inside_a_longer_word_does_not_count():
+    """"geoscience" contains "eosc". The same class of bug as EGI matching
+    "strategic", which was fixed in the name match but not here.
+    """
+    images = [
+        Image(src="https://node.example/img/geoscience-banner.png", alt="Geoscience data"),
+    ]
+    res = checks.check_3(ev(images=images, final_url="https://node.example/"))
+    assert "none referencing EOSC" in " ".join(res.evidence), res.evidence
+
+
+def test_eosc_in_the_filename_still_counts():
+    images = [Image(src="https://node.example/themes/images/eosc-node-final.webp")]
+    res = checks.check_3(ev(images=images, final_url="https://node.example/"))
+    assert "image asset(s): 1" in " ".join(res.evidence), res.evidence
+
+
+def test_eosc_in_the_alt_text_still_counts():
+    images = [Image(src="https://cdn.example/x.png", alt="EOSC Node Finland")]
+    res = checks.check_3(ev(images=images, final_url="https://node.example/"))
+    assert "image asset(s): 1" in " ".join(res.evidence), res.evidence
+
+
+def test_a_camelcase_eosc_lockup_filename_still_counts():
+    """A defect in the boundary fix above, caught by regenerating the real
+    report: requiring a non-word character after "eosc" rejected
+    EOSCNode_Finland-1-1-scaled.jpg and EOSCNodeBBMRIERIC_ColourPos.png — the
+    actual EOSC Node lockups, which several nodes name with no separator at all.
+    The Finnish node's only EOSC asset disappeared, flipping its point 3 evidence
+    from "asset present" to "none found". An uppercase letter is a word boundary
+    to a human reading CamelCase, so it is treated as one here.
+    """
+    for src in (
+        "https://research.csc.fi/app/uploads/EOSCNode_Finland-1-1-scaled.jpg",
+        "https://i0.wp.com/x/EOSCNodeBBMRIERIC_ColourPos-1-scaled.png",
+        "https://node.example/EOSCNodeDataTerra_ColourPos-scaled.jpg",
+    ):
+        res = checks.check_3(ev(images=[Image(src=src)], final_url="https://node.example/"))
+        assert "image asset(s): 1" in " ".join(res.evidence), src
+
+
+def test_geoscience_is_still_not_a_logo():
+    """The word that motivated the boundary in the first place. Blocked by the
+    *leading* guard — "eosc" there is preceded by a letter — which is why
+    allowing an uppercase letter after it is safe, including for "GEOSCIENCE".
+    """
+    for src in ("/img/geoscience.png", "/img/GEOSCIENCE-BANNER.png", "/img/neoscope.png"):
+        res = checks.check_3(ev(images=[Image(src=src)], final_url="https://node.example/"))
+        assert "none referencing EOSC" in " ".join(res.evidence), src

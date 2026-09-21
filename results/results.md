@@ -1,10 +1,10 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `2026-09-21-1308` · 2026-09-21T17:07:23+00:00 · 9 nodes · one page request per node plus 22 followed link(s), then 14 second-hop page(s) (depth 2).
+Run `2026-09-21-1738` · 2026-09-21T17:38:53+00:00 · 9 nodes · one page request per node plus 22 followed link(s), then 14 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 
-**Node names.** 9 approved node name(s) were used, from the official list committed with the checklist, as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
+**Node names.** 9 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `57bf9093b096…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
 
@@ -200,10 +200,9 @@ Be in English (Any other pages and information are not required to be strictly i
   - no organisation-like names matched by pattern
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
-  - EOSC-referencing image asset(s): 8
-  - img: European-DTO Gateway
-  - img: Page Icon
-  - img: Page Icon
+  - EOSC-referencing image asset(s): 1
+  - img: EOSC Node | European Digital Twin Ocean
+  - NONE of the 9 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 2 times, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 20 link(s) examined, none pointing to eosc.eu

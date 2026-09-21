@@ -63,6 +63,7 @@ jobs:
       # Inputs are passed through the environment rather than interpolated into
       # the script, so a value containing shell metacharacters cannot execute.
       - name: Check the node landing pages
+        id: check
         env:
           ONLY: ${{ inputs.only }}
           DEPTH: ${{ inputs.depth }}
@@ -77,19 +78,65 @@ jobs:
           echo "Running: basic-check run ${args[*]}"
           uv run basic-check run "${args[@]}"
 
-      - name: Publish the matrix to the run summary
+      # The summary is a counts-and-pointer page, not the matrix. The per-node
+      # verdicts are already published in the committed results/results.md, so
+      # repeating them here leaks nothing new — but this run is unreviewed, and
+      # a world-readable page of FAILs against nine named organisations,
+      # produced automatically and carrying the repository's name, reads as a
+      # finding rather than as a draft. The full tables are in the artifact.
+      - name: Publish a summary of the run
         if: always()
         env:
           ACTOR: ${{ github.actor }}
           DEPTH: ${{ inputs.depth }}
           ONLY: ${{ inputs.only }}
+          RUN_NUMBER: ${{ github.run_number }}
+          CHECK_OUTCOME: ${{ steps.check.outcome }}
         run: |
           set -euo pipefail
           {
+            echo "## Compliance run ${RUN_NUMBER}"
+            echo
             echo "Triggered by @${ACTOR} · depth ${DEPTH} · nodes: ${ONLY:-all}"
             echo
-            if [ -f results/results.md ]; then
-              cat results/results.md
+            echo "> **Unreviewed automated output.** These counts come from a run nobody has"
+            echo "> read yet. Most points are deliberately undecidable by this tool and come"
+            echo "> back as review. Nothing here is a compliance statement about any"
+            echo "> organisation. The reviewed report is the committed results/results.md."
+            echo
+            # results/results.json is COMMITTED, so it exists in a fresh
+            # checkout whether or not this run produced anything. Summarising it
+            # after a failed or skipped check step would publish the last
+            # reviewed run's counts under this run's number — the most
+            # misleading thing this workflow could do. So the file is only read
+            # when the step that rewrites it actually succeeded.
+            if [ "${CHECK_OUTCOME}" != "success" ]; then
+              echo "The check step did not complete (outcome: ${CHECK_OUTCOME:-skipped}), so"
+              echo "this run produced no results. The counts are deliberately not shown:"
+              echo "results/results.json in the checkout belongs to an earlier, reviewed run."
+            elif [ -f results/results.json ]; then
+              python3 - <<'PY'
+          import collections, json, pathlib
+          run = json.loads(pathlib.Path("results/results.json").read_text())
+          tally = collections.Counter(
+              r["verdict"] for n in run["nodes"] for r in n["results"]
+          )
+          print(f"{len(run['nodes'])} node(s) assessed against "
+                f"{len(run['checklist']['points'])} checklist point(s).")
+          print()
+          print("| Verdict | Count |")
+          print("|---|---|")
+          for verdict in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR"):
+              if tally.get(verdict):
+                  print(f"| {verdict} | {tally[verdict]} |")
+          print()
+          missing = run.get("missing_evidence") or []
+          if missing:
+              print(f"**Incomplete:** no evidence for {', '.join(missing)}.")
+              print()
+          print("Per-node verdicts and evidence are in the **compliance-results** "
+                "artifact attached to this run.")
+          PY
             else
               echo "No results were produced — see the log of the previous step."
             fi

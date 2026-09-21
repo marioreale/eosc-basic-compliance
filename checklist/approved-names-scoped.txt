@@ -1,0 +1,34 @@
+# Approved node names, tied to the node each belongs to.
+#
+# WHAT THIS IS. The same nine names as approved-names.txt, each prefixed with
+# the node id from nodes.yaml. Use it with:
+#
+#     basic-check assess --approved-names checklist/approved-names-scoped.txt
+#
+# WHY IT EXISTS. approved-names.txt is the official file as circulated, and it
+# is unscoped: every name applies to every node. A match against it proves the
+# string is somewhere on the page, not that it is *that page's own* name — with
+# nine names applying to nine nodes, a page carrying another node's approved
+# name would satisfy its own evidence line. Scoping makes the stronger claim
+# available.
+#
+# WHAT IS NOT OFFICIAL ABOUT IT. The names are official; the name-to-node-id
+# mapping is derived here, by us, from the node list. Node ids are this
+# repository's own identifiers and are not part of the Tripartite file. The
+# mapping is the obvious one and tests/test_checklist.py asserts that every id
+# exists in nodes.yaml and that the set of names is identical to the official
+# file's, so the two cannot drift apart silently. It is still our reading, and
+# the line to challenge if a node disagrees about which name is its own.
+#
+# This file is NOT the default. approved-names.txt is, so that a bare run uses
+# the official file exactly as circulated and makes the weaker, honest claim.
+
+bbmri-eric: EOSC Node | BBMRI-ERIC
+eosc-dto: EOSC Node | European DTO
+data-terra: EOSC Node | Data Terra
+eosc-fi: EOSC Node | Finland
+panosc: EOSC Node | PaNOSC
+eudat: EOSC Node | EUDAT
+egi: EOSC Node | EGI
+geant: EOSC Node | GÉANT
+ebrains: EOSC Node | EBRAINS RI

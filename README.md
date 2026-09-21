@@ -194,6 +194,12 @@ git-ignored for the same reason.
 `--url` cannot be combined with `--only`: `--only` filters ids in the nodes file,
 and an ad hoc URL has no id there.
 
+`--only` narrows which sites are contacted, not what the report covers: a subset
+run still writes all nine rows, reusing evidence on disk for the ones it did not
+re-fetch, and labels itself **Mixed freshness** so the reused rows are not taken
+for fresh ones. Pass an explicit `--results DIR` when a genuinely narrower report
+is what you want.
+
 `collect` and `assess` are separate on purpose: assessment is re-runnable offline
 against saved evidence, so changing a check never means re-requesting the pages.
 `assess` exits non-zero if any configured node has no evidence, so a short table

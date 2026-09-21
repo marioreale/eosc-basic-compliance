@@ -324,8 +324,15 @@ take thirty seconds instead of five minutes.
 **Steps:**
 
 1. For every captured image and inline SVG, build the haystack
-   `"{src} {alt} {aria_label} {title} {css_class}"` and test it against the
-   case-insensitive regex `eosc`.
+   `"{src} {alt} {aria_label} {title} {css_class}"` — but with the **host part of
+   `src` removed**, so a node served from a host containing "eosc" does not match
+   on every locally-hosted image. The path and query survive, so
+   `eosc-node-final.webp` still counts. "eosc" must then appear as a token, not
+   inside a longer word: `geoscience` and `neoscope` do not match, while the
+   official lockups `EOSCNode_Finland.jpg` and `EOSCNodeBBMRIERIC_ColourPos.png`
+   do, because CamelCase is treated as a word break. Separately, an asset genuinely
+   served from `eosc.eu` counts via a host check, so a cross-host node logo —
+   correct behaviour — is still found, while `myeosc.eu` is not.
 2. For each hit, record the kind (`img` or `inline SVG`) and a label, preferring
    `alt`, then `aria_label`, then `title`, then the filename.
 3. Take the names that apply to *this* node — those written as `node-id: Name`,
@@ -334,7 +341,9 @@ take thirty seconds instead of five minutes.
    or `--no-approved-names` suppresses it. Each word of a name is matched
    literally and case-insensitively, and never inside a longer word or
    hyphenated token; the separator *between* words is flexible, so whitespace
-   and the glyphs `|`, `-`, `–`, `—`, `:`, `/`, `·` are interchangeable. Record
+   and the glyphs `|`, `-`, `–`, `—`, `:`, `/`, `·` are interchangeable — unless
+   `--strict-separators` is passed, which restores literal glyph matching (and is
+   recorded in the output, so a reader knows which rule was in force). Record
    the first match, what the page actually wrote, and whether the name was
    scoped to this node. If the body is empty (a 403, say), record that the name
    was not looked for rather than that it is absent. If nothing matched, also
@@ -367,9 +376,13 @@ apart:
   prefix applies to every node, so a match shows the string is on the page but
   not that it is that node's own name. The evidence line says which of the two
   claims it is making. Scoping each name to its node is what makes the stronger
-  claim available.
+  claim available, and `checklist/approved-names-scoped.txt` does exactly that.
+  It is deliberately not the default: the names in it are official, but the
+  mapping from each name to a node id in `nodes.yaml` was derived here and is not
+  part of the Tripartite file, so that mapping is what a reviewer should
+  challenge first.
 
-Branch 1 also over-matches badly — see section 6.
+Branch 1 used to over-match badly; the history is in section 6.
 
 ---
 
@@ -519,25 +532,38 @@ of text that misleads a detector, and it is excluded by construction.
 Listed because a checker whose limitations are undocumented invites more trust
 than it has earned.
 
-**Point 3 over-matches on hostname.** The haystack includes `img.src`, so when a
-node is served from a host that itself contains "eosc" — which is true of at
-least one node in this set — the regex matches the *hostname of every
-locally-hosted image*. In the run of 21 September 2026 that produced 8
-"EOSC-referencing image assets" for that node, of which 7 were a favicon counted
-three times, a parallax background, a gateway logo, a partner logo and an EU
-funding badge. None is an EOSC logo. The evidence line "EOSC-referencing image
-asset(s): 8" is therefore misleading, and the reviewer sees the labels only for
-the first five.
+**Point 3 over-matched on the page's own hostname — fixed, and the first
+diagnosis of it was wrong.** The haystack included `img.src` in full, so for a
+node served from a host containing "eosc" the regex matched the *hostname of
+every locally-hosted image*. The run of 21 September 2026 reported 8
+"EOSC-referencing image assets" for that node; probing the captured evidence
+showed **7 of the 8 matched on the hostname alone** — a favicon counted three
+times, a parallax background, a gateway logo, a partner logo, and an EU funding
+badge named `FundedbytheEU.png`. None is an EOSC logo. Exactly one was real.
 
-This is a defect in the checker, not a finding against the node concerned:
-the page is entitled to host its own images, and the tool is the thing counting
-them wrongly. Because the branch returns `MANUAL_REVIEW` either way, no verdict
-is wrong — but the evidence pushes the reviewer towards the wrong conclusion,
-which is nearly as bad.
+This document previously recorded the cause as cross-host loading and proposed
+restricting the host. That was the wrong fix, and probing the evidence before
+applying it is what showed why: several nodes legitimately serve their EOSC
+lockup from a CDN or their own domain (`i0.wp.com`, `research.csc.fi`,
+`portal.eudat.eu`, `www.panosc.eu`), so a host restriction would have discarded
+genuine logos. The defect was never cross-host loading; it was the node's *own*
+host being part of the text being searched.
 
-The same regex has no host-awareness at all, so `not-eosc.eu` and `myeosc.eu`
-also match. Point 4 uses `_is_host` and does not have this problem; point 3 does
-not use it.
+The fix strips the host from `src` and requires "eosc" to be a token rather than
+a substring, with an explicit allowance for `eosc.eu`-hosted assets. Re-running
+against the same evidence moved that node from 8 assets to 1 and left all eight
+other nodes untouched. **No verdict changed** — the branch returns
+`MANUAL_REVIEW` either way — and the tally is still 28 PASS / 7 FAIL / 55 review;
+what changed is that the evidence line no longer pushes a reviewer towards the
+wrong conclusion.
+
+The boundary rule then had a defect of its own, found by regenerating the report
+rather than by reasoning about it: requiring a non-word character *after* "eosc"
+rejected `EOSCNode_Finland-1-1-scaled.jpg`, which is the official lockup, and
+cost the Finnish node its only EOSC asset — flipping its point 3 evidence from
+"asset present" to "none found". An uppercase letter is now accepted as a word
+break. The leading guard is still strict, which is what keeps `geoscience` and
+`GEOSCIENCE` out.
 
 **The approved-name match over-matched, then under-matched.** Both are recorded
 because both shipped. First, the name was matched as a bare substring of the
@@ -554,14 +580,22 @@ pages disagree about the separator glyph, not the name — BBMRI-ERIC writes a
 hyphen and an en dash, European DTO the pipe, EUDAT nothing at all. Publishing
 that would have been a finding against every node for a typographic difference.
 Separator glyphs are now interchangeable, and the evidence quotes what the page
-wrote so the variant is visible. This is a deliberate loosening, and the place
-to challenge it is the table in the guide.
+wrote so the variant is visible. This is a deliberate loosening, so it is
+reversible rather than baked in: `--strict-separators` restores the literal rule
+and reproduces the 0-of-9 result, and the report states which rule was in force
+either way. The place to challenge the default is the table in the guide.
 
 **The match is still not proof of the right name.** The committed list is
 unscoped, so a match says the string is on the page, not that it is that page's
 own name; and with 9 names applying to all 9 nodes, a page carrying a *different*
 node's approved name would satisfy its own evidence line. The line says which
-claim it is making. Scoping the list is what makes the stronger claim available.
+claim it is making. Scoping the list is what makes the stronger claim available,
+and `checklist/approved-names-scoped.txt` now does. Run against the same
+evidence it returns the same two nodes, BBMRI-ERIC and EUDAT, which retires the
+concern for this dataset: the 2-of-9 headline does not depend on names leaking
+between pages. The residual weakness is no longer the matching but the mapping —
+name to node id — which was derived in this repository rather than taken from
+the Tripartite file.
 
 No verdict changed at any point, because the name never decides point 3 — but
 the evidence line did, twice, and both times it was wrong.
@@ -585,10 +619,32 @@ a binary extension, so an AUP published as a PDF is recorded as a pointer
 (branch 1 of `_policy_check`) and never verified. The checklist's requirement is
 accessibility, and the tool cannot confirm it for these.
 
-**`--only` narrows the run in place.** Assessing a subset writes a report that
-looks complete. The code partly guards this — nodes with no evidence are listed
-under `missing_evidence`, printed in red, and the process exits with code 2 — but
-the HTML report itself does not shout about it.
+**`--only` used to narrow the run in place — fixed, with a cost.** Assessing a
+subset rewrote the shared report, so a one-node table replaced the nine-node one
+and looked complete. `--only` now narrows only which sites are fetched; the
+report written to the default results directory still covers every node, and the
+requested subset is recorded in a top-level `selection` list. An explicit
+`--results DIR` keeps the old narrowing, where nothing shared is at risk.
+
+The cost is that such a report is no longer uniformly fresh: unselected rows come
+from evidence already on disk, under a header stating a single run timestamp.
+That is a freshness claim the report cannot make, so it no longer makes it — a
+**Mixed freshness** banner in both the Markdown and HTML output names what was
+re-fetched, counts what was not, and gives the capture date of the reused
+evidence. Nodes with no evidence at all are still listed under
+`missing_evidence`, printed in red, with exit code 2.
+
+**A public CI summary is not the place for per-node verdicts.** The workflow
+used to copy the whole of `results.md` into `$GITHUB_STEP_SUMMARY`, which on a
+public repository is world-readable. The verdicts are already public — the report
+is committed — so nothing leaked that was not already published; but that page
+is produced automatically from an unreviewed run and carries the repository's
+name, which makes a table of FAILs against nine named organisations read as a
+finding rather than a draft. The summary now publishes counts only, labelled as
+unreviewed, and points at the artifact for the per-node detail. It also refuses
+to summarise at all unless the check step succeeded, because `results.json` is
+committed and would otherwise have been read out of a fresh checkout as though it
+were this run's result.
 
 ---
 
@@ -596,8 +652,10 @@ the HTML report itself does not shout about it.
 
 `results.json` carries `run_id`, `generated_at`, the full `checklist` as loaded,
 `approved_names` (whether a list was used, whether it was the committed default
-(`default_used`), whether it was scoped, how many names, and its path — plus the
-older `approved_names_supplied` flag, kept for readers of earlier result files),
+(`default_used`), whether it was scoped, how many names, its path, the `sha256`
+of the bytes actually read, and `strict_separators` — plus the older
+`approved_names_supplied` flag, kept for readers of earlier result files),
+`selection` (the node ids `--only` restricted the fetch to, empty on a full run),
 and `nodes`. Each node carries `id`, `name`, `url`,
 `ad_hoc`, a `fetch` summary (status, final URL, robots note, screenshot, crawl
 depth, every child with its `selected_for` and outcome, and `children_skipped`),

@@ -21,7 +21,7 @@ import re
 from dataclasses import dataclass, field
 from urllib.parse import urlparse
 
-from .fetch import PageEvidence
+from .fetch import Image, PageEvidence
 from .names import ApprovedNames
 from .patterns import (
     AAI_HINTS,
@@ -454,6 +454,46 @@ def _approved_name_note(
     )
 
 
+# "eosc" as a token, not a fragment of a longer word. "geoscience" contains it;
+# so does "neoscope". The same class of bug as EGI matching "strategic", which
+# was fixed in the name match before it was fixed here.
+#
+# The trailing guard allows an uppercase letter, unlike the leading one. Nodes
+# name the official lockup with no separator at all — EOSCNode_Finland.jpg,
+# EOSCNodeBBMRIERIC_ColourPos.png, EOSCNodeDataTerra.jpg — and a strict
+# trailing guard rejected every one of them, which cost the Finnish node its
+# only EOSC asset. CamelCase reads as a word break to a human, so it is one
+# here. The asymmetry is safe: "geoscience" and "GEOSCIENCE" are both stopped
+# by the *leading* guard, since a letter precedes the "eosc" in each.
+_EOSC_TOKEN = re.compile(r"(?<![A-Za-z0-9])[Ee][Oo][Ss][Cc](?![a-z0-9])")
+
+
+def _references_eosc(img: Image) -> bool:
+    """Whether an image asset genuinely references EOSC.
+
+    The hostname of `src` is deliberately excluded from the text searched. On
+    the real eosc-dto node, 7 of the 8 assets reported as "EOSC-referencing"
+    matched only because the page is served from `eosc-dto.d4science.org` —
+    among them an EU funding badge called `FundedbytheEU.png`. The host is a
+    property of the site, and the site is already known to be an EOSC node;
+    it says nothing about the image, so counting it inflates the evidence for
+    exactly the nodes that need no help.
+
+    A host of `eosc.eu` itself is the opposite case and does count: at least one
+    node in the set loads its logo cross-host from eosc.eu, which is a real
+    signal about that image. A lookalike such as `myeosc.eu` does not, per
+    `_is_host`.
+    """
+    parsed = urlparse(img.src)
+    # The path and query survive, so a file named "eosc-node-final.webp" still
+    # counts however it is hosted.
+    src_without_host = img.src.replace(parsed.netloc, " ", 1) if parsed.netloc else img.src
+    haystack = f"{src_without_host} {img.alt} {img.aria_label} {img.title} {img.css_class}"
+    if _EOSC_TOKEN.search(haystack):
+        return True
+    return _is_host(parsed.netloc, "eosc.eu")
+
+
 def check_3(
     ev: PageEvidence,
     approved_names: ApprovedNames | list[str] | None = None,
@@ -464,8 +504,7 @@ def check_3(
 
     logo_hits = []
     for img in ev.images:
-        haystack = f"{img.src} {img.alt} {img.aria_label} {img.title} {img.css_class}"
-        if re.search(r"(?i)eosc", haystack):
+        if _references_eosc(img):
             kind = "inline SVG" if img.inline_svg else "img"
             label = img.alt or img.aria_label or img.title or img.src.rsplit("/", 1)[-1]
             logo_hits.append(f"{kind}: {label[:120]}")

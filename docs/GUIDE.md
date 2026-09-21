@@ -275,7 +275,52 @@ described here so you can judge the results rather than trust them:
   pipe literally scored **0 of 9** against the real pages — a finding against
   every node for what is a typographic difference. Treating the glyph as
   interchangeable is a deliberate loosening, and it is the reason the evidence
-  line quotes what the page actually writes.
+  line quotes what the page actually writes. Because it is a judgement call and
+  not a fact, it is reversible from the command line: `--strict-separators`
+  restores literal glyph matching, and the report then states that the strict
+  rule was in force rather than the flexible one. Against the evidence of
+  21 September 2026 the strict rule matches **none** of the nine nodes, which is
+  the 0-of-9 result above.
+
+#### A match is not proof of the right name
+
+The default list is **unscoped**: it is nine names, and any of the nine matching
+anywhere in a page's body counts. So a match tells you an approved name appears
+on the page — not that it is *that* page's own name. A node listing its partners
+would match on a partner's name.
+
+`checklist/approved-names-scoped.txt` closes that gap. It writes each name as
+`node-id: EOSC Node | X`, so a name is only ever matched against the node it
+belongs to:
+
+```bash
+uv run basic-check assess --approved-names checklist/approved-names-scoped.txt
+```
+
+Running it against the evidence of 21 September 2026 returns **the same two
+nodes** as the unscoped list — BBMRI-ERIC and EUDAT. That is a useful result
+rather than a null one: it means the headline "2 of 9" is not an artefact of
+names leaking across pages, because tying each name to its own node changes
+nothing.
+
+It is **not** the default, and the reason is worth stating plainly: the *names*
+in it are the official ones, but the *mapping* from each name to a node id in
+`nodes.yaml` was derived in this repository and is not part of the Tripartite
+file. That mapping is the line to challenge before relying on a scoped run. The
+file's header comment says the same thing.
+
+#### Which list was used is recorded
+
+A report that cites a name list is only as trustworthy as your ability to tell
+which bytes it read. Every run records the SHA-256 of the list in
+`results.json` under `approved_names.sha256`, and the report prints the first
+twelve characters of it beside the file name. If the official list is revised
+and a run was made against the old one, the digests differ and you can see it
+without re-running anything.
+
+```bash
+sha256sum checklist/approved-names.txt
+```
 
 #### What the official list actually finds
 
@@ -345,7 +390,7 @@ accept the option.
 
 | Option | Effect |
 |---|---|
-| `--only a,b` | Restrict to some nodes. **Read the warning below.** |
+| `--only a,b` | Restrict which nodes are **fetched**. The report still covers all of them — see below. |
 | `--url https://…` | Check any page without editing `nodes.yaml`. Repeatable. |
 | `--eosc-page URL` | With a single `--url`: that node's own `eosc.eu` page, so a point 4 failure can name the exact URL that is missing. |
 | `--nodes path` | Use a different node list. |
@@ -356,35 +401,48 @@ accept the option.
 |---|---|---|
 | `--approved-names path` | `assess`, `run` | Use this name list **instead of** the committed `checklist/approved-names.txt`. One name per line, ideally as `node-id: Name`. A path that does not exist is an error, not a fall back to the default. See section 3. |
 | `--no-approved-names` | `assess`, `run` | Use no name list at all, not even the committed default. Point 3's name requirement is then not assessed. |
+| `--strict-separators` | `assess`, `run` | Match the separator glyph in each approved name literally. By default a page writing a hyphen satisfies a list writing a pipe; with this flag it does not. See section 3. |
 | `--checklist path` | `assess`, `run`, `points` | Use a different checklist version. |
 | `--run LABEL` | `assess`, `run` | Label stored with the run, for telling one report from another. |
 | `--results path` | all but `points` | Write somewhere other than `results/`. |
 | `--one-off` | `show` only | Read `results/one-off/` instead of the federation run. |
 
-### ⚠️ `--only` rewrites the shared report
+### `--only` narrows the fetch, not the report
 
-This is a real defect, reproduced on a clean clone while writing this guide, and
-it will mislead you if you do not know about it:
+Earlier versions of this tool had a real defect here, and this guide documented
+it as a warning: `assess --only data-terra` replaced the nine-node matrix in
+`results/` with a single row, and the resulting `index.html` looked like a
+federation report that covered one node. A short table is indistinguishable from
+a complete one.
+
+That is fixed. `--only` now narrows **which sites are contacted**, and the
+report written to `results/` still covers every node in `nodes.yaml`:
 
 ```bash
 uv run basic-check assess --only data-terra
-# results/results.json now contains ONE node, not nine.
+# One node re-assessed from fresh evidence; results.json still has all nine.
 ```
 
-`--only` scopes the **report**, not just the fetching. The nine-node matrix in
-`results/` is replaced by a single row, and if you then look at `index.html` you
-will see what appears to be a federation report covering one node.
+The rows you did not select are reused from the evidence already on disk, so the
+report is no longer uniformly fresh. It says so itself: a **Mixed freshness**
+banner names the nodes that were re-fetched, states how many were not, and gives
+the capture date of the reused evidence. `results.json` records the same thing in
+a top-level `selection` list, which is `[]` on a full run.
 
-Your evidence is not lost, so recovery is immediate and cheap:
+An explicit `--results DIR` keeps the narrowing behaviour, because there nothing
+shared is at risk and a one-node scratch table is usually the point:
 
 ```bash
-uv run basic-check assess      # no --only: rebuilds all nine rows from disk
+uv run basic-check assess --results /tmp/scratch --only data-terra
+# A deliberate one-node report, written somewhere of your choosing.
 ```
 
-Verified on a clean clone: nine nodes restored, tally unchanged at 28 PASS /
-7 FAIL / 55 review. **Use `--only` for fetching a subset gently, then always
-finish with a bare `assess` before circulating anything.** Do not commit a
-report produced with `--only`.
+A bare `assess` still rebuilds every row from evidence on disk, so it remains
+the way to produce a report with a single capture date:
+
+```bash
+uv run basic-check assess
+```
 
 ### Checking a page not in `nodes.yaml`
 
@@ -506,7 +564,7 @@ a verdict surprises you.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 111 tests, offline, well under a second
+uv run pytest -q                    # 213 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -515,11 +573,12 @@ uv run ruff check src tests         # lint
 
 | File | Tests | Covers |
 |---|---|---|
-| `test_checklist.py` | 8 | The transcription matches the source document, including its SHA-256. |
-| `test_checks.py` | 34 | The verdict logic, point by point, including the render gate. |
-| `test_cli.py` | 22 | Command wiring, options, ad hoc `--url` isolation. |
+| `test_checklist.py` | 12 | The transcription matches the source document, including its SHA-256, and the scoped name list agrees with the official one. |
+| `test_checks.py` | 50 | The verdict logic, point by point, including the render gate and the EOSC-asset token rule. |
+| `test_cli.py` | 28 | Command wiring, options, ad hoc `--url` isolation, and that `--only` does not shrink the published report. |
 | `test_crawl.py` | 34 | Link selection, host containment, depth-2 budget, the depth-1 view. |
-| `test_report.py` | 13 | Matrix rendering, the dual-depth tables, table-breaking input. |
+| `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
+| `test_report.py` | 25 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, table-breaking input. |
 
 The suite makes no network requests and needs no browser, which is why CI runs
 it without downloading Chromium.
@@ -566,6 +625,17 @@ A scheduled compliance run would mean fetching nine production websites on a
 timer, which is exactly the behaviour that got GÉANT's bot protection to start
 refusing requests.
 
+Its run summary publishes **counts only** — how many nodes, and the tally of
+verdicts — labelled as unreviewed automated output, with the per-node detail
+left to the `compliance-results` artifact. On a public repository the run
+summary is world-readable, and while the committed report is public anyway, a
+table of FAILs against nine named organisations generated automatically under
+the repository's name reads as a finding rather than as a draft. The summary
+also declines to report anything unless the check step succeeded, because
+`results.json` is committed: a failed run would otherwise have read the previous
+reviewed run's counts out of a fresh checkout and published them under a new run
+number.
+
 ---
 
 ## 9. Troubleshooting
@@ -573,7 +643,8 @@ refusing requests.
 | Symptom | Cause and fix |
 |---|---|
 | `Executable doesn't exist … playwright install` | Chromium is not installed. Run `uv run playwright install chromium --with-deps`. Not needed for `assess`, `show`, `points` or `pytest`. |
-| `results.json` has one node after using `--only` | Known defect, section 4. Run a bare `uv run basic-check assess` to rebuild all rows from evidence on disk. |
+| The report has fewer nodes than you expected | You passed `--results DIR` together with `--only`, which narrows both deliberately. Without an explicit `--results`, `--only` narrows the fetch alone and the report keeps every node. Section 4. |
+| The report carries a **Mixed freshness** banner | Expected after `--only`: the nodes you did not select were reused from evidence on disk. Run a bare `uv run basic-check collect` then `assess` for a report with one capture date. Section 4. |
 | A node shows `HTTP 403` and everything moved to review | Bot protection, not an access policy. Check `final_url` in the evidence for a `__cf_chl_rt_tk` parameter. Wait, run less often, or verify that node by hand in a browser. |
 | Everything is review for one node | The capture probably did not render. Look at `evidence/screenshots/<id>.png` — that is exactly what the render gate is protecting you from. |
 | `test_checklist.py` fails on a hash | The checklist PDF changed. That is the test doing its job: transcribe the new version into a new YAML file rather than adjusting the hash. |

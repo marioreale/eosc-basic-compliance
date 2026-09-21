@@ -123,6 +123,37 @@ def _point_titles(points: list[dict]) -> dict[str, str]:
     return {p["id"]: p["title"] for p in points}
 
 
+def _freshness_note(run: dict) -> str:
+    """A sentence when the rows of a report do not share a capture date.
+
+    `--only` narrows which sites a run re-fetches, but the report still covers
+    every node — that is what stops a subset run replacing the published table
+    with a shorter one that looks complete. The cost is mixed freshness under a
+    single run timestamp in the header, which would otherwise imply every row is
+    as fresh as the newest. Returns "" for a full run, so the ordinary report
+    gains no caveat it does not need.
+    """
+    selection = run.get("selection") or []
+    if not selection:
+        return ""
+    reused = [n for n in run["nodes"] if n["id"] not in selection]
+    if not reused:
+        return ""
+    dates = sorted(
+        {(n.get("fetch") or {}).get("fetched_at", "")[:10] for n in reused} - {""}
+    )
+    when = f" (captured {dates[0]})" if len(dates) == 1 else (
+        f" (captured between {dates[0]} and {dates[-1]})" if dates else ""
+    )
+    named = ", ".join(sorted(selection))
+    return (
+        f"**Mixed freshness.** Only {named} {'was' if len(selection) == 1 else 'were'} "
+        f"re-fetched in this run. The other {len(reused)} node(s) were not re-fetched; "
+        f"their rows are reused from evidence already on disk{when}. The run timestamp "
+        "above is this assessment, not their capture."
+    )
+
+
 def _names_sentence(run: dict) -> str:
     """Plain prose about the approved-name list behind point 3.
 
@@ -145,16 +176,27 @@ def _names_sentence(run: dict) -> str:
         if info.get("default_used")
         else "a list supplied for this run"
     )
+    # The bytes actually read. The tool cannot judge whether the list is
+    # current; naming its digest is what lets a reader check that for themselves.
+    digest = info.get("sha256") or ""
+    prov = f" (`{info.get('source', '')}`, sha256 `{digest[:12]}…`)" if digest else ""
+    # Never claim the lax rule when the strict one was in force.
+    rule = (
+        " Separator glyphs were matched literally (`--strict-separators`), so a page "
+        "writing “EOSC Node - X” does NOT satisfy a list writing “EOSC Node | X”."
+        if info.get("strict_separators")
+        else " Separator glyphs are treated as interchangeable, so a page writing "
+        "“EOSC Node - X” satisfies a list writing “EOSC Node | X”."
+    )
     if info.get("scoped"):
         return (
-            f"{n} approved node name(s) were used, from {which}, tied to specific nodes. "
-            "A name is only matched against the node it was written for."
+            f"{n} approved node name(s) were used, from {which}{prov}, tied to specific "
+            f"nodes. A name is only matched against the node it was written for.{rule}"
         )
     return (
-        f"{n} approved node name(s) were used, from {which}, as an unscoped list: a match "
-        "shows the name appears on the page but not that it is that node's own name. "
-        "Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” "
-        "satisfies a list writing “EOSC Node | X”."
+        f"{n} approved node name(s) were used, from {which}{prov}, as an unscoped list: a "
+        "match shows the name appears on the page but not that it is that node's own "
+        f"name.{rule}"
     )
 
 
@@ -326,6 +368,13 @@ def render_html(run: dict, out: Path) -> Path:
         # The two depth headings replace the single "Matrix" heading.
         matrix_heading = ""
 
+    # Rendered as a banner rather than folded into the node-names one: it is a
+    # claim about the whole table's freshness, not about point 3.
+    fresh = _freshness_note(run)
+    freshness_block = (
+        f'\n<div class="banner">{html.escape(fresh)}</div>\n' if fresh else ""
+    )
+
     chips = "".join(
         f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
         f"<b>{tally.get(v, 0)}</b></span>"
@@ -432,7 +481,7 @@ run <code>{html.escape(run["run_id"])}</code> · {html.escape(run["generated_at"
 refuses to guess at. {crawl_sentence}</div>
 
 <div class="banner"><strong>Node names.</strong> {html.escape(_names_sentence(run))}</div>
-
+{freshness_block}
 <div class="counts">{chips}</div>
 
 {matrix_heading}{dual_block}
@@ -719,6 +768,7 @@ def render_markdown(run: dict, out: Path) -> Path:
         "",
         f"**Node names.** {_names_sentence(run)}",
         "",
+        *([f"> {_freshness_note(run)}", ""] if _freshness_note(run) else []),
         "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
         "🟠 review — a human must decide · 🟣 ERROR — could not be assessed",
         "",

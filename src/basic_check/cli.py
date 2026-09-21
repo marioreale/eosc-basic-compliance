@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import asyncio
+import hashlib
 import json
 import re
 from dataclasses import asdict
@@ -89,12 +90,24 @@ def _resolve(
     only: str,
     results_dir: Path | None,
     eosc_page: str = "",
-) -> tuple[list[dict], Path]:
-    """Decide what to check and where to write it.
+) -> tuple[list[dict], list[dict], Path]:
+    """Decide what to fetch, what to report on, and where to write it.
 
-    --url and --only are mutually exclusive rather than silently ignored: --only
-    filters a configured list by id, and an id the user never chose is not
-    something to filter on.
+    Two node lists, because they are not the same question. `--only` says which
+    sites to send requests to; it does not say which nodes the report is about.
+    Conflating them destroyed the published report: `assess --only egi` rewrote
+    results.md, index.html and results.json wholesale with a single row, and a
+    one-node table looks exactly like a complete one.
+
+    So when writing to the published directory, the report always covers every
+    node in the nodes file and `--only` narrows the fetch alone. Writing
+    somewhere else with an explicit `--results` is the deliberate case — nothing
+    published is at risk — and there `--only` narrows both, which is what makes
+    a quick scratch run of one node usable.
+
+    --url and --only remain mutually exclusive rather than silently ignored:
+    --only filters a configured list by id, and an id the user never chose is
+    not something to filter on.
     """
     urls = [u for u in (urls or []) if u.strip()]
     if urls:
@@ -102,12 +115,21 @@ def _resolve(
             raise typer.BadParameter(
                 "--only filters the nodes file; it cannot be combined with --url"
             )
-        return _nodes_from_urls(urls, eosc_page), (results_dir or DEFAULT_ONEOFF)
+        ad_hoc = _nodes_from_urls(urls, eosc_page)
+        return ad_hoc, ad_hoc, (results_dir or DEFAULT_ONEOFF)
     if eosc_page:
         raise typer.BadParameter(
             "--eosc-page is only meaningful with --url; use nodes.yaml otherwise"
         )
-    return _load_nodes(nodes_file, only), (results_dir or DEFAULT_RESULTS)
+    selected = _load_nodes(nodes_file, only)
+    if results_dir is not None:
+        return selected, selected, results_dir
+    return selected, _load_nodes(nodes_file), DEFAULT_RESULTS
+
+
+def _selection(only: str) -> list[str]:
+    """The node ids named by --only, as a list."""
+    return [x.strip() for x in only.split(",") if x.strip()]
 
 
 def _load_nodes(path: Path, only: str = "") -> list[dict]:
@@ -162,7 +184,7 @@ def collect(
     ),
 ):
     """Fetch each landing page and save the evidence. Depth 1 by default."""
-    nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    nodes, _reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
     _do_collect(nodes, resolved, delay, depth, max_children, fetch_budget)
 
 
@@ -248,30 +270,63 @@ def assess(
         help="Do not use any approved-name list, not even the committed default. "
         "Point 3's name requirement is then not assessed at all.",
     ),
+    strict_separators: bool = typer.Option(
+        False,
+        "--strict-separators",
+        help="Match the separator glyphs in an approved name literally. By default "
+        "whitespace and the glyphs pipe, hyphen, en dash, colon, slash and middle dot "
+        "are interchangeable, because matching the official list literally matched "
+        "none of the nine pages. Use this to see the strict result.",
+    ),
     run_id: str = typer.Option("", "--run"),
 ):
     """Apply the checklist to already-collected evidence and write the reports."""
-    nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
-    _do_assess(nodes, resolved, checklist_file, approved_names, run_id, no_approved_names)
+    _fetched, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    _do_assess(
+        reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
+        strict_separators=strict_separators,
+        selection=_selection(only),
+    )
+
+
+def _digest(path: Path) -> str:
+    """SHA-256 of the list actually read, or "" if it could not be read.
+
+    The tool cannot know whether an approved-names file is current — that is a
+    fact about the world, not about the bytes. What it can do is say precisely
+    which bytes it used, so a reader comparing this run against the circulated
+    file, or against an earlier run, has something to compare. Empty rather
+    than the hash of nothing when no list was used: sha256("") is a
+    real-looking hex string and would read as a list that was read and found
+    empty.
+    """
+    try:
+        return hashlib.sha256(path.read_bytes()).hexdigest()
+    except OSError:
+        return ""
 
 
 def _resolve_names(
     approved_names: Path | None,
     no_approved_names: bool,
-) -> tuple[ApprovedNames, str, bool]:
+    strict_separators: bool = False,
+) -> tuple[ApprovedNames, str, bool, str]:
     """Decide which approved-name list a run uses, and record which it was.
 
     Three cases, in precedence order: an explicit opt-out, an operator file, or
     the list committed with the checklist. The report has to be able to say
     which one was in force — a reader must not have to assume that a run they
-    are looking at vetted its own name list.
+    are looking at vetted its own name list. Returns the list, a printable
+    source, whether that source was the committed default, and the SHA-256 of
+    the bytes read.
     """
     if no_approved_names:
-        return ApprovedNames(), "", False
+        return ApprovedNames(), "", False, ""
 
     if approved_names is not None:
         try:
-            return ApprovedNames.load(approved_names), str(approved_names), False
+            loaded = ApprovedNames.load(approved_names, strict_separators=strict_separators)
+            return loaded, str(approved_names), False, _digest(approved_names)
         except FileNotFoundError:
             # Neither a traceback nor a silent fall back to the default: the
             # operator named a specific list, and checking a different one is
@@ -285,7 +340,8 @@ def _resolve_names(
         # Recorded repo-relative: the committed report is published, and the
         # absolute path of whoever ran it is neither useful nor theirs to leak.
         rel = DEFAULT_APPROVED_NAMES.relative_to(ROOT).as_posix()
-        return ApprovedNames.load(DEFAULT_APPROVED_NAMES), rel, True
+        loaded = ApprovedNames.load(DEFAULT_APPROVED_NAMES, strict_separators=strict_separators)
+        return loaded, rel, True, _digest(DEFAULT_APPROVED_NAMES)
     except FileNotFoundError:
         # Only reachable if the repository file was deleted. Say so instead of
         # quietly producing a run whose point 3 checked no name at all.
@@ -295,7 +351,7 @@ def _resolve_names(
             err=True,
             fg=typer.colors.YELLOW,
         )
-        return ApprovedNames(), "", False
+        return ApprovedNames(), "", False, ""
 
 
 def _do_assess(
@@ -305,12 +361,16 @@ def _do_assess(
     approved_names: Path | None = None,
     run_id: str = "",
     no_approved_names: bool = False,
+    strict_separators: bool = False,
+    selection: list[str] | None = None,
 ) -> dict:
     """See _do_collect for why this is not the Typer command itself."""
     checklist = yaml.safe_load(checklist_file.read_text())
     evidence_dir = results_dir / "evidence"
 
-    names, names_source, default_used = _resolve_names(approved_names, no_approved_names)
+    names, names_source, default_used, names_sha256 = _resolve_names(
+        approved_names, no_approved_names, strict_separators
+    )
 
     run = {
         "run_id": run_id or datetime.now(UTC).strftime("%Y-%m-%d-%H%M"),
@@ -322,7 +382,16 @@ def _do_assess(
             "count": len(names.unscoped) + sum(len(v) for v in names.per_node.values()),
             "source": names_source,
             "default_used": default_used,
+            # Which bytes were used. Staleness is not something the tool can
+            # judge, but it can be made checkable.
+            "sha256": names_sha256,
+            "strict_separators": names.strict_separators,
         },
+        # Which nodes this run re-fetched, when that was narrower than the
+        # report. Empty means the whole nodes file. Recorded because the report
+        # now covers every node either way, so the reader would otherwise have
+        # no way to tell how fresh any given row is.
+        "selection": sorted(selection or []),
         # Kept for readers of older result files.
         "approved_names_supplied": names.supplied,
         "nodes": [],
@@ -435,6 +504,14 @@ def run(
     no_approved_names: bool = typer.Option(
         False, "--no-approved-names", help="Use no name list at all."
     ),
+    strict_separators: bool = typer.Option(
+        False,
+        "--strict-separators",
+        help="Match the separator glyphs in an approved name literally. By default "
+        "whitespace and the glyphs pipe, hyphen, en dash, colon, slash and middle dot "
+        "are interchangeable, because matching the official list literally matched "
+        "none of the nine pages. Use this to see the strict result.",
+    ),
     run_id: str = typer.Option("", "--run"),
     delay: float = typer.Option(2.0, "--delay"),
     depth: int = typer.Option(
@@ -455,9 +532,13 @@ def run(
 ):
     """collect, then assess."""
     # Resolve once so both phases agree on the node list and the directory.
-    nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    nodes, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
     _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget)
-    _do_assess(nodes, resolved, checklist_file, approved_names, run_id, no_approved_names)
+    _do_assess(
+        reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
+        strict_separators=strict_separators,
+        selection=_selection(only),
+    )
 
 
 @app.command()

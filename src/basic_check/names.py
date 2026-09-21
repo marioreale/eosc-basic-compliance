@@ -71,6 +71,12 @@ class ApprovedNames:
 
     unscoped: tuple[str, ...] = ()
     per_node: dict[str, tuple[str, ...]] = field(default_factory=dict)
+    # Match separator glyphs literally instead of treating them as
+    # interchangeable. Off by default, because the flexible rule is what makes
+    # the official list match any page at all; on, for anyone who wants the
+    # stricter reading. Carried on the list rather than passed to each call so
+    # the report can state which rule was in force.
+    strict_separators: bool = False
 
     @property
     def supplied(self) -> bool:
@@ -105,7 +111,7 @@ class ApprovedNames:
         told only that something matched.
         """
         for name in self.for_node(node_id):
-            if m := re.search(_pattern(name), text, re.I | re.S):
+            if m := re.search(_pattern(name, self.strict_separators), text, re.I | re.S):
                 return NameMatch(
                     name=name,
                     matched_text=" ".join(m.group(0).split()),
@@ -153,12 +159,12 @@ class ApprovedNames:
         prefix = self.common_prefix(node_id)
         if not prefix:
             return "", 0
-        return prefix, len(re.findall(_pattern(prefix), text, re.I | re.S))
+        return prefix, len(re.findall(_pattern(prefix, self.strict_separators), text, re.I | re.S))
 
     # --- construction --------------------------------------------------------
 
     @classmethod
-    def load(cls, path: Path | None) -> ApprovedNames:
+    def load(cls, path: Path | None, strict_separators: bool = False) -> ApprovedNames:
         """Parse `path`, or return an unsupplied list when `path` is None.
 
         A path that does not exist raises: the caller asked for a list, and
@@ -166,7 +172,9 @@ class ApprovedNames:
         """
         if path is None:
             return cls()
-        return parse_approved_names(Path(path).read_text(encoding="utf-8"))
+        return parse_approved_names(
+            Path(path).read_text(encoding="utf-8"), strict_separators=strict_separators
+        )
 
     @classmethod
     def coerce(cls, value: ApprovedNames | list[str] | None) -> ApprovedNames:
@@ -197,7 +205,7 @@ class NameMatch:
         return " ".join(self.name.split()).casefold() == self.matched_text.casefold()
 
 
-def parse_approved_names(text: str) -> ApprovedNames:
+def parse_approved_names(text: str, strict_separators: bool = False) -> ApprovedNames:
     """Parse the approved-names file format."""
     unscoped: list[str] = []
     per_node: dict[str, list[str]] = {}
@@ -215,13 +223,22 @@ def parse_approved_names(text: str) -> ApprovedNames:
     return ApprovedNames(
         unscoped=tuple(unscoped),
         per_node={k: tuple(v) for k, v in per_node.items()},
+        strict_separators=strict_separators,
     )
 
 
-def _pattern(name: str) -> str:
-    """A boundary-aware pattern: literal tokens, interchangeable separators."""
-    tokens = [t for t in _NAME_GAP.split(name.strip()) if t]
-    body = _PAGE_GAP.join(re.escape(t) for t in tokens)
+def _pattern(name: str, strict_separators: bool = False) -> str:
+    """A boundary-aware pattern: literal tokens, interchangeable separators.
+
+    Under `strict_separators`, every character of the name is literal except the
+    amount of whitespace: a name that wraps across two lines is still the same
+    name, but a page writing a hyphen where the list writes a pipe is not.
+    """
+    if strict_separators:
+        body = r"\s+".join(re.escape(t) for t in name.split())
+    else:
+        tokens = [t for t in _NAME_GAP.split(name.strip()) if t]
+        body = _PAGE_GAP.join(re.escape(t) for t in tokens)
     # Guard only an edge that is itself word-like. "EGI" gets both guards, so
     # "strategic" cannot match. "(Finland)" ends in a paren, which is already a
     # boundary, so demanding another would reject a legitimate page.

@@ -15,6 +15,7 @@ from pathlib import Path
 
 import pytest
 import typer
+from typer.testing import CliRunner
 
 from basic_check import cli
 
@@ -87,19 +88,20 @@ def test_url_runs_are_written_somewhere_else_by_default():
     """The decisive property. assess() rewrites results.md, index.html and
     results.json wholesale, so a one-off check sharing the directory would
     replace the committed nine-node report with a one-row table."""
-    _, out = cli._resolve(["https://a.example/"], cli.DEFAULT_NODES, "", None)
+    _, _, out = cli._resolve(["https://a.example/"], cli.DEFAULT_NODES, "", None)
     assert out == cli.DEFAULT_ONEOFF
     assert out != cli.DEFAULT_RESULTS
 
 
 def test_the_configured_run_still_writes_to_the_normal_place():
-    nodes, out = cli._resolve(None, cli.DEFAULT_NODES, "", None)
+    nodes, reported, out = cli._resolve(None, cli.DEFAULT_NODES, "", None)
     assert out == cli.DEFAULT_RESULTS
     assert len(nodes) > 1
+    assert nodes == reported
 
 
 def test_an_explicit_results_dir_still_wins_for_a_url_run():
-    _, out = cli._resolve(["https://a.example/"], cli.DEFAULT_NODES, "", Path("/tmp/custom"))
+    _, _, out = cli._resolve(["https://a.example/"], cli.DEFAULT_NODES, "", Path("/tmp/custom"))
     assert out == Path("/tmp/custom")
 
 
@@ -116,7 +118,7 @@ def test_eosc_page_without_url_is_rejected():
 
 
 def test_blank_urls_do_not_count_as_a_url_run():
-    nodes, out = cli._resolve(["", "  "], cli.DEFAULT_NODES, "", None)
+    nodes, _reported, out = cli._resolve(["", "  "], cli.DEFAULT_NODES, "", None)
     assert out == cli.DEFAULT_RESULTS
     assert len(nodes) > 1
 
@@ -155,3 +157,89 @@ def test_the_do_helpers_have_no_typer_defaults():
             assert not isinstance(param.default, type(typer.Option(None))), (
                 f"{fn.__name__}({name}=...) carries a Typer default"
             )
+
+
+# --- --only must not overwrite the published report with a subset -------------
+
+
+def _full_results_dir(tmp_path):
+    """A stand-in for the committed results/ dir, with evidence for all nodes."""
+    import shutil
+
+    from basic_check.cli import ROOT
+
+    out = tmp_path / "results"
+    shutil.copytree(ROOT / "results" / "evidence", out / "evidence")
+    return out
+
+
+def test_only_does_not_shrink_the_report_in_the_published_directory(monkeypatch, tmp_path):
+    """The defect: `assess --only egi` rewrote results/results.md, index.html and
+    results.json wholesale with a single row, so the published nine-node report
+    was replaced by a one-node report that looked complete. --only exists to
+    limit which sites get fetched, not to narrow what is reported.
+    """
+    import json
+
+    from basic_check import cli
+
+    out = _full_results_dir(tmp_path)
+    monkeypatch.setattr(cli, "DEFAULT_RESULTS", out)
+    res = CliRunner().invoke(cli.app, ["assess", "--only", "egi"], catch_exceptions=False)
+    assert res.exit_code == 0, res.output
+    data = json.loads((out / "results.json").read_text())
+    assert len(data["nodes"]) == 9, [n["id"] for n in data["nodes"]]
+
+
+def test_only_is_recorded_so_a_reader_knows_what_was_refetched(monkeypatch, tmp_path):
+    import json
+
+    from basic_check import cli
+
+    out = _full_results_dir(tmp_path)
+    monkeypatch.setattr(cli, "DEFAULT_RESULTS", out)
+    CliRunner().invoke(cli.app, ["assess", "--only", "egi"], catch_exceptions=False)
+    assert json.loads((out / "results.json").read_text())["selection"] == ["egi"]
+
+
+def test_an_explicit_results_dir_still_allows_a_deliberate_subset(tmp_path):
+    """Writing somewhere else is the deliberate case: nothing published is at
+    risk, so --only narrows the report as before.
+    """
+    import json
+
+    from basic_check.cli import app
+
+    out = _full_results_dir(tmp_path)
+    res = CliRunner().invoke(
+        app, ["assess", "--only", "egi", "--results", str(out)], catch_exceptions=False
+    )
+    assert res.exit_code == 0, res.output
+    assert len(json.loads((out / "results.json").read_text())["nodes"]) == 1
+
+
+def test_a_full_run_records_no_selection(monkeypatch, tmp_path):
+    import json
+
+    from basic_check import cli
+
+    out = _full_results_dir(tmp_path)
+    monkeypatch.setattr(cli, "DEFAULT_RESULTS", out)
+    CliRunner().invoke(cli.app, ["assess"], catch_exceptions=False)
+    assert json.loads((out / "results.json").read_text())["selection"] == []
+
+
+def test_only_narrows_the_fetch_but_not_the_report_in_the_published_dir():
+    """The two lists _resolve returns are the fetch list and the report list."""
+    fetched, reported, out = cli._resolve(None, cli.DEFAULT_NODES, "egi", None)
+    assert out == cli.DEFAULT_RESULTS
+    assert [n["id"] for n in fetched] == ["egi"]
+    assert len(reported) == 9
+
+
+def test_an_unknown_id_is_still_rejected_rather_than_quietly_widened():
+    """Since --only no longer narrows the report, a typo could now look like it
+    worked: the full nine-node report would be produced and nothing fetched.
+    """
+    with pytest.raises(typer.BadParameter):
+        cli._resolve(None, cli.DEFAULT_NODES, "not-a-node", None)

@@ -399,3 +399,82 @@ def test_the_default_source_is_recorded_repo_relative_not_absolute(tmp_path):
     """The committed report is published; a sandbox path in it is a leak."""
     run = _run_assess(tmp_path)
     assert run["approved_names"]["source"] == "checklist/approved-names.txt"
+
+
+# --- the separator loosening must be reversible from the command line ---------
+
+
+def test_strict_separators_restores_the_literal_match():
+    """The flexible separator rule is a judgement call, not a fact: it was
+    adopted because matching the pipe literally scored 0 of 9 against the real
+    pages. Anyone who disagrees must be able to see the strict result without
+    editing this module, so the reversal is a flag rather than a code change.
+    """
+    lax = parse_approved_names("EOSC Node | EUDAT")
+    strict = parse_approved_names("EOSC Node | EUDAT", strict_separators=True)
+    page = "Welcome to the EOSC Node - EUDAT service catalogue."
+    assert lax.match(page, "eudat") == "EOSC Node | EUDAT"
+    assert strict.match(page, "eudat") is None
+
+
+def test_strict_separators_still_matches_the_exact_form():
+    strict = parse_approved_names("EOSC Node | EUDAT", strict_separators=True)
+    assert strict.match("shown as EOSC Node | EUDAT here", "eudat") == "EOSC Node | EUDAT"
+
+
+def test_strict_separators_still_tolerates_the_amount_of_whitespace():
+    """A page that wraps the name across two lines writes the same name. That is
+    whitespace normalisation, not a different separator, so strict mode keeps it.
+    """
+    strict = parse_approved_names("EOSC Node | EUDAT", strict_separators=True)
+    assert strict.match("EOSC  Node\n|\tEUDAT", "eudat") == "EOSC Node | EUDAT"
+
+
+def test_strict_separators_is_recorded_so_a_report_can_state_it():
+    assert parse_approved_names("X", strict_separators=True).strict_separators is True
+    assert parse_approved_names("X").strict_separators is False
+
+
+# --- provenance: which bytes were used ----------------------------------------
+
+
+def test_the_run_records_the_hash_of_the_list_it_used(tmp_path):
+    """The tool cannot know whether the approved-names file is current. It can
+    say exactly which bytes it used, which is what makes staleness detectable at
+    all: a reader comparing two runs, or a run against the circulated file, has
+    something to compare. Same reasoning as source_sha256 on the checklist.
+    """
+    import hashlib
+
+    from basic_check.cli import DEFAULT_APPROVED_NAMES
+
+    run = _run_assess(tmp_path)
+    expected = hashlib.sha256(DEFAULT_APPROVED_NAMES.read_bytes()).hexdigest()
+    assert run["approved_names"]["sha256"] == expected
+
+
+def test_a_user_supplied_list_is_hashed_too(tmp_path):
+    import hashlib
+
+    mine = tmp_path / "mine.txt"
+    mine.write_text("egi: EOSC Node | EGI\n", encoding="utf-8")
+    run = _run_assess(tmp_path, "--approved-names", str(mine))
+    assert run["approved_names"]["sha256"] == hashlib.sha256(mine.read_bytes()).hexdigest()
+
+
+def test_no_list_means_no_hash_rather_than_the_hash_of_nothing(tmp_path):
+    """sha256("") is a real-looking hex string, and would read as a list that was
+    used. An absent list must be absent, not empty.
+    """
+    run = _run_assess(tmp_path, "--no-approved-names")
+    assert run["approved_names"]["sha256"] == ""
+
+
+def test_the_separator_rule_in_force_is_recorded(tmp_path):
+    """Separate directories: _run_assess copies the evidence tree in, so two
+    calls on one tmp_path fail on the copy rather than on the assertion.
+    """
+    lax = _run_assess(tmp_path / "lax")
+    strict = _run_assess(tmp_path / "strict", "--strict-separators")
+    assert lax["approved_names"]["strict_separators"] is False
+    assert strict["approved_names"]["strict_separators"] is True

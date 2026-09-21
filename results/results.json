@@ -1,6 +1,6 @@
 {
-  "run_id": "2026-09-21-1308",
-  "generated_at": "2026-09-21T17:07:23+00:00",
+  "run_id": "2026-09-21-1738",
+  "generated_at": "2026-09-21T17:38:53+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
@@ -95,8 +95,11 @@
     "scoped": false,
     "count": 9,
     "source": "checklist/approved-names.txt",
-    "default_used": true
+    "default_used": true,
+    "sha256": "57bf9093b096326098d02287819467599d4e1854372b579744d3d23d06f5e6a4",
+    "strict_separators": false
   },
+  "selection": [],
   "approved_names_supplied": true,
   "nodes": [
     {
@@ -554,12 +557,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
-            "EOSC-referencing image asset(s): 8",
-            "img: European-DTO Gateway",
-            "img: Page Icon",
-            "img: Page Icon",
-            "img: Page Icon",
-            "img: Theme",
+            "EOSC-referencing image asset(s): 1",
+            "img: EOSC Node | European Digital Twin Ocean",
             "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur 2 times, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
@@ -677,12 +676,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
-            "EOSC-referencing image asset(s): 8",
-            "img: European-DTO Gateway",
-            "img: Page Icon",
-            "img: Page Icon",
-            "img: Page Icon",
-            "img: Theme",
+            "EOSC-referencing image asset(s): 1",
+            "img: EOSC Node | European Digital Twin Ocean",
             "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur 2 times, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."

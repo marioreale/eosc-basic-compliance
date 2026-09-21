@@ -22,6 +22,7 @@ import yaml
 from test_checks import ev  # the evidence builder these tests reuse
 
 from basic_check import checks
+from basic_check.names import parse_approved_names
 
 ROOT = Path(__file__).parents[1]
 CHECKLIST_DIR = ROOT / "checklist"
@@ -146,3 +147,44 @@ def test_every_checklist_in_the_directory_follows_the_naming_convention():
         assert path.name == f"v{declared}.yaml", (
             f"{path.name} declares checklist_version {declared}"
         )
+
+
+# --- the scoped name list must not drift from the official one ----------------
+
+
+def _names_of(path: Path) -> set[str]:
+    parsed = parse_approved_names(path.read_text(encoding="utf-8"))
+    return set(parsed.unscoped) | {n for names in parsed.per_node.values() for n in names}
+
+
+def test_the_scoped_list_carries_exactly_the_official_names():
+    """The scoped file exists to add node ids, not to edit names. If someone
+    corrects a name in one file and not the other, the two readings of point 3
+    diverge silently — which is the whole failure mode the checklist hash test
+    guards against for the checklist itself.
+    """
+    official = _names_of(ROOT / "checklist" / "approved-names.txt")
+    scoped = _names_of(ROOT / "checklist" / "approved-names-scoped.txt")
+    assert scoped == official, f"only in scoped: {scoped - official}; only in official: {official - scoped}"
+
+
+def test_every_scoped_node_id_exists_in_the_nodes_file():
+    """A typo in a node id would silently scope a name to nothing: the name
+    would apply to no node, and point 3 would report "no approved name was
+    supplied for this node" for a node that has one.
+    """
+    parsed = parse_approved_names((ROOT / "checklist" / "approved-names-scoped.txt").read_text())
+    known = {n["id"] for n in yaml.safe_load((ROOT / "nodes.yaml").read_text())["nodes"]}
+    assert set(parsed.per_node) <= known, f"unknown node id(s): {set(parsed.per_node) - known}"
+
+
+def test_the_scoped_list_covers_every_node():
+    parsed = parse_approved_names((ROOT / "checklist" / "approved-names-scoped.txt").read_text())
+    known = {n["id"] for n in yaml.safe_load((ROOT / "nodes.yaml").read_text())["nodes"]}
+    assert known - set(parsed.per_node) == set(), f"nodes with no scoped name: {known - set(parsed.per_node)}"
+
+
+def test_the_scoped_list_is_fully_scoped():
+    """A stray unscoped line would quietly reintroduce the weaker claim."""
+    parsed = parse_approved_names((ROOT / "checklist" / "approved-names-scoped.txt").read_text())
+    assert parsed.unscoped == (), parsed.unscoped

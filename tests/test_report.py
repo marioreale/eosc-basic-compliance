@@ -359,3 +359,74 @@ def test_the_sentence_distinguishes_an_operator_supplied_list(tmp_path):
     out = render(run, tmp_path)
     assert "a list supplied for this run" in out
     assert "official list committed" not in out
+
+
+# --- a mixed-freshness report must say so -------------------------------------
+
+
+def _mixed_run():
+    """A run where only one node was re-fetched, as --only now produces."""
+    egi = _node("EGI", [("4", "PASS"), ("6", "PASS")])
+    egi["id"] = "egi"
+    egi["fetch"] = {**egi.get("fetch", {}), "fetched_at": "2026-09-21T10:00:00+00:00"}
+    eudat = _node("EUDAT", [("4", "PASS"), ("6", "PASS")])
+    eudat["id"] = "eudat"
+    eudat["fetch"] = {**eudat.get("fetch", {}), "fetched_at": "2026-08-01T10:00:00+00:00"}
+    run = run_dict([egi, eudat])
+    run["selection"] = ["egi"]
+    return run
+
+
+def test_a_partially_refetched_report_names_what_was_refetched(tmp_path):
+    """--only now narrows the fetch without narrowing the report, which is what
+    stops it destroying the nine-node table. The cost is that rows no longer
+    share a capture date, and the header states a single run timestamp. Left
+    unsaid, the report would imply every row is as fresh as the newest.
+    """
+    md = (tmp_path / "r.md")
+    report.render_markdown(_mixed_run(), md)
+    text = md.read_text()
+    assert "egi" in text
+    assert "not re-fetched" in text or "reused" in text, text[:1500]
+
+
+def test_a_full_run_makes_no_such_claim(tmp_path):
+    md = (tmp_path / "r.md")
+    report.render_markdown(run_dict([_node("EGI", [("4", "PASS")])]), md)
+    assert "reused" not in md.read_text()
+
+
+def test_the_html_report_also_states_it(tmp_path):
+    out = (tmp_path / "i.html")
+    report.render_html(_mixed_run(), out)
+    text = out.read_text()
+    assert "reused" in text or "not re-fetched" in text
+
+
+# --- the report must state the provenance of the name list --------------------
+
+
+def test_the_report_states_the_hash_of_the_name_list(tmp_path):
+    run = run_dict([_node("EGI", [("4", "PASS")])])
+    run["approved_names"] = {
+        "supplied": True, "scoped": False, "count": 9,
+        "source": "checklist/approved-names.txt", "default_used": True,
+        "sha256": "abcdef1234567890" + "0" * 48, "strict_separators": False,
+    }
+    md = (tmp_path / "r.md")
+    report.render_markdown(run, md)
+    assert "abcdef123456" in md.read_text()
+
+
+def test_the_report_states_when_separators_were_matched_strictly(tmp_path):
+    run = run_dict([_node("EGI", [("4", "PASS")])])
+    run["approved_names"] = {
+        "supplied": True, "scoped": False, "count": 9,
+        "source": "checklist/approved-names.txt", "default_used": True,
+        "sha256": "a" * 64, "strict_separators": True,
+    }
+    md = (tmp_path / "r.md")
+    report.render_markdown(run, md)
+    text = md.read_text()
+    assert "interchangeable" not in text, "the lax rule must not be claimed when strict was used"
+    assert "literal" in text or "strictly" in text, text[:1200]
