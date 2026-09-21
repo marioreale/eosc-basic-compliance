@@ -6,12 +6,16 @@ Checklist v3.0** (15 September 2026). One result per checklist point, per node.
 **Deliberately light on the nodes' websites.** Each landing page is loaded once in
 a headless browser. The tool then follows **at most one level** of links, and only
 links that can actually settle a checklist point — a policy, a contact page, an
-about page. Everything else is left alone. Across all nine nodes that is **25
-extra requests in total**, roughly three per node, spaced 1.2 s apart, with
-`robots.txt` honoured per host. Evidence is saved to disk and every check reads
-only that saved evidence, so re-running the rules costs nothing.
+about page. Everything else is left alone. Across all nine nodes that was **22
+extra requests** in the 21 September run, spaced 1.2 s apart, with `robots.txt`
+honoured per host. Evidence is saved to disk and every check reads only that
+saved evidence, so re-running the rules costs nothing.
 
-Set `--depth 0` for the strict one-request-per-node behaviour.
+Set `--depth 0` for the strict one-request-per-node behaviour, or `--depth 2` to
+follow one further hop under a fixed budget.
+
+👉 **[Installation, configuration and run guide](docs/GUIDE.md)** — start here if
+you want to install and run it yourself.
 
 👉 **[Latest results](results/results.md)** · [browsable HTML report](results/index.html)
 · [checklist v3.0 explained](results/checklist-v3.0.html)
@@ -204,9 +208,10 @@ uv run basic-check assess --approved-names approved-names.txt
 
 ## Scope and limits
 
-- **One level of links, not a crawl.** The tool never goes two levels deep and
-  never follows a link it cannot use. Point 1R still cannot be settled: it quantifies
-  over *every* resource reachable from the page, which one level does not cover.
+- **A short, bounded walk, not a crawl.** One level by default; `--depth 2` adds a
+  single further hop under a run-wide budget, and the tool never follows a link it
+  cannot use. Point 1R still cannot be settled either way: it quantifies
+  over *every* resource reachable from the page, which no bounded depth covers.
   What one level does buy is that a policy link is checked rather than believed —
   a link labelled "Acceptable Use Policy" that 404s now **fails** point 5b instead
   of passing on the strength of its own label.
@@ -228,9 +233,12 @@ uv run basic-check assess --approved-names approved-names.txt
 ## Tests
 
 ```bash
-uv run pytest -q          # 83 tests, ~0.2s, no network
+uv run pytest -q          # 111 tests, ~0.2s, no network, no browser
 uv run ruff check src tests
 ```
+
+Full instructions, including what needs a browser and what does not, are in the
+**[installation, configuration and run guide](docs/GUIDE.md)**.
 
 The tests are hermetic — they construct page evidence directly, so the suite
 never touches a node's website.
