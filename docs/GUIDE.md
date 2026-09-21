@@ -118,8 +118,9 @@ renderer are all working. No network access is involved.
 
 ## 3. Configuration
 
-Two files control what is checked. Both are plain YAML and both are meant to be
-edited.
+Two files control what is checked, and a third optional one supplies an input
+the repository cannot ship. The two are plain YAML and both are meant to be
+edited; the third is a plain text list you write yourself.
 
 ### `nodes.yaml` — which pages to check
 
@@ -164,6 +165,76 @@ circulated `.docx`, not that `.docx` itself.
 **If the checklist is revised to v3.1,** add a new `checklist/v3.1.yaml` with its
 own source file and hash rather than editing v3.0 in place. Past runs should
 remain reproducible against the rules that produced them.
+
+### The approved-names file — `--approved-names`
+
+Checklist point 3 has two halves: an EOSC logo, and **the official
+Tripartite-approved node name**. The repository ships no list of those names,
+because there is no authoritative machine-readable source for them — they come
+from the Tripartite governance process, not from a file you can fetch. So you
+supply the list yourself, and until you do, the name half of point 3 is not
+assessed at all.
+
+The format is as plain as it looks: a text file, one name per line. Blank lines
+are skipped and surrounding whitespace is stripped.
+
+```text
+EOSC Node - BBMRI-ERIC
+EOSC Node EUDAT
+EGI Node
+```
+
+Note the third line. Nodes do not share a naming convention on their own pages:
+that one writes `EGI Node`, not `EOSC Node EGI`. Take each name from the
+Tripartite-approved list and check it against how the page actually writes it,
+rather than deriving all of them from one pattern.
+
+**Only the body text is searched.** The match runs against `full_text`, which
+excludes the HTML `<title>`. That page's title is `EGI Node - EGI`, and that
+string appears nowhere in the body, so a name taken from the browser tab will
+not match. Take the name from the visible page.
+
+```bash
+uv run basic-check assess --approved-names approved-names.txt
+uv run basic-check run --approved-names approved-names.txt
+```
+
+The file is not committed, and should not be: the list is an input you are
+accountable for, not a project artefact.
+
+**What matters about it, all verified against the committed evidence:**
+
+| Behaviour | Consequence |
+|---|---|
+| Comment lines are **not** supported | A leading `#` line is read as a node name. Do not annotate the file. |
+| Matching is an unanchored, case-insensitive **substring** of the page text | Not a whole-word or whole-phrase match. See the warning below. |
+| The list is matched as a **whole**, not per node | Any name matching anywhere on any node's page satisfies that node's evidence line. The tool does not know which name belongs to which node. |
+| The name never changes the verdict | Point 3 stays `MANUAL_REVIEW` either way. The list adds an evidence line for the reviewer; it cannot produce a `PASS`. |
+| Only the first match is reported | If several names hit, the evidence names one of them. |
+
+**⚠️ Short names match inside longer words.** With `EGI` in the list, the
+BBMRI-ERIC page reports `approved name matched: EGI` — the hit is inside
+"strat**egi**c". The Data Terra page matches the same way, inside
+"Norw**egi**an". Neither page contains the EGI node name at all.
+
+This is a defect in the check, not a finding about those nodes. Two practical
+consequences:
+
+- **Write names in full**, as they appear on the page: `EOSC Node EGI` rather
+  than `EGI`. Longer strings do not collide by accident.
+- **Read the matched name, never just the fact of a match.** The evidence line
+  names which string hit, precisely so the reviewer can catch a match like the
+  one above. A report that only said "matched" would be worse than no list.
+
+Write the name exactly as it appears in the page text, punctuation included:
+`EOSC Node - BBMRI-ERIC` matches that page, while `EOSC Node BBMRI-ERIC`
+without the dash does not. If a name you expect does not match, read
+`full_text` in that node's evidence file before assuming the page is at fault.
+
+Whether you supplied a list is recorded in `results.json` as
+`approved_names_supplied`, so a report cannot quietly imply the name was
+checked when it was not. Note that this flag is in the JSON only — the HTML and
+Markdown reports do not currently display it.
 
 ---
 
@@ -215,7 +286,7 @@ accept the option.
 
 | Option | Where | Effect |
 |---|---|---|
-| `--approved-names path` | `assess`, `run` | Text file, one Tripartite-approved node name per line. **Without it, point 3's name requirement cannot be checked at all.** |
+| `--approved-names path` | `assess`, `run` | Text file, one Tripartite-approved node name per line. **Without it, point 3's name requirement cannot be checked at all.** See section 3 for the format and its pitfalls. |
 | `--checklist path` | `assess`, `run`, `points` | Use a different checklist version. |
 | `--run LABEL` | `assess`, `run` | Label stored with the run, for telling one report from another. |
 | `--results path` | all but `points` | Write somewhere other than `results/`. |
@@ -438,6 +509,8 @@ refusing requests.
 | Everything is review for one node | The capture probably did not render. Look at `evidence/screenshots/<id>.png` — that is exactly what the render gate is protecting you from. |
 | `test_checklist.py` fails on a hash | The checklist PDF changed. That is the test doing its job: transcribe the new version into a new YAML file rather than adjusting the hash. |
 | A run takes far longer than expected | `--delay` defaults to 2.0s between hosts and slow nodes are waited on. This is intentional. |
+| Point 3 reports `NONE of the supplied approved names appear` for a node you know is named correctly | The match is a literal substring of the body text and the `<title>` is not searched. Read `full_text` in that node's evidence file and copy the name as the page writes it, punctuation included. Section 3. |
+| Point 3 reports a matched name that belongs to a different node | A short name matched inside an ordinary word. Write names in full. Section 3. |
 
 ---
 
