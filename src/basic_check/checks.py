@@ -424,17 +424,33 @@ def _approved_name_note(
             f"was captured (HTTP {ev.http_status}), so the name was not looked for"
         )
 
-    found = names.match(ev.full_text, ev.node_id)
+    found = names.find(ev.full_text, ev.node_id)
     if found is None:
+        # Point at where to look. Bare absence is true but gives a reviewer
+        # nothing to check; naming the phrase the approved names share, and how
+        # often the page uses it, is verifiable without guessing at the name.
+        prefix, hits = names.prefix_hits(ev.full_text, ev.node_id)
+        times = "once" if hits == 1 else f"{hits} times"
+        instead = (
+            f' — the phrase "{prefix}" does occur {times}, but never followed by an '
+            "approved name"
+            if hits
+            else ""
+        )
         return (
             f"NONE of the {len(candidates)} approved name(s) for this node appear in the page "
-            "body — note the <title> is not searched"
+            f"body{instead} — note the <title> is not searched"
         )
-    if names.is_scoped_to(ev.node_id, found):
-        return f'approved name matched, scoped to this node: "{found}"'
+
+    # A different separator glyph is not a failure, but it is the one difference
+    # a reviewer would otherwise have to spot by eye, so it is shown.
+    how = "" if found.exact else f' (the page writes it "{found.matched_text}")'
+    if found.scoped:
+        return f'approved name matched, scoped to this node: "{found.name}"{how}'
     return (
-        f'approved name matched from the unscoped list: "{found}" — the list does not say '
-        "which name belongs to which node, so this does not establish it is this node's own name"
+        f'approved name matched from the unscoped list: "{found.name}"{how} — the list does '
+        "not say which name belongs to which node, so this does not establish it is this "
+        "node's own name"
     )
 
 

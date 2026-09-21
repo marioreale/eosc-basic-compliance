@@ -1,10 +1,10 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `2026-09-21-1308` · 2026-09-21T16:40:42+00:00 · 9 nodes · one page request per node plus 22 followed link(s), then 14 second-hop page(s) (depth 2).
+Run `2026-09-21-1308` · 2026-09-21T17:07:23+00:00 · 9 nodes · one page request per node plus 22 followed link(s), then 14 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 
-**Node names.** No approved-name list was supplied, so the name half of point 3 was not assessed at all: a REVIEW there says nothing about the node name.
+**Node names.** 9 approved node name(s) were used, from the official list committed with the checklist, as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
 
@@ -162,6 +162,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
   - EOSC-referencing image asset(s): 1
   - img: eosc node - bbmri-eric logo
+  - approved name matched from the unscoped list: "EOSC Node | BBMRI-ERIC" (the page writes it "EOSC Node - BBMRI-ERIC") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "See the dedicated page on the EOSC website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
@@ -245,6 +246,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
   - EOSC-referencing image asset(s): 1
   - img: eosc node data terra environment
+  - NONE of the 9 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 93 link(s) examined, none pointing to eosc.eu
@@ -288,6 +290,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
   - EOSC-referencing image asset(s): 1
   - img: EOSCNode_Finland-1-1-scaled.jpg
+  - NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 85 link(s) examined, none pointing to eosc.eu
@@ -377,6 +380,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - EOSC-referencing image asset(s): 2
   - img: EOSC Node
   - img: EOSC Node
+  - approved name matched from the unscoped list: "EOSC Node | EUDAT" (the page writes it "EOSC Node EUDAT") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EOSC Node EUDAT" -> https://eosc.eu/building-the-eosc-federation/eosc-node-eudat
@@ -417,6 +421,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 40 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 23
+  - NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 167 link(s) examined, none pointing to eosc.eu
@@ -460,6 +465,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 0 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 0
+  - 9 approved name(s) were supplied for this node, but no page body was captured (HTTP 403), so the name was not looked for
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: no links were captured at all, so the page yielded no link evidence
   - 0 link(s) examined, none pointing to eosc.eu
@@ -502,6 +508,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 51 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 0
+  - NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 127 link(s) examined, none pointing to eosc.eu

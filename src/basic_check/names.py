@@ -11,13 +11,16 @@ previously done inline, badly:
    An unscoped list is still accepted, and still applies everywhere, because
    that is what earlier runs did — but it is reported as unscoped so a reader
    knows the weaker claim is the one being made.
-3. **Matching.** Boundary-aware and literal. `EGI` no longer matches
-   "strat**egi**c" or "Norw**egi**an", which it did on real node pages.
+3. **Matching.** Boundary-aware and literal in the tokens, tolerant only of the
+   separator between them. `EGI` no longer matches "strat**egi**c" or
+   "Norw**egi**an", which it did on real node pages; `EOSC Node | X` still
+   matches a page that writes `EOSC Node - X`, because the glyph between the
+   words is typography, not identity.
 
 File format, one entry per line::
 
     # comments and blank lines are ignored
-    EOSC Node EUDAT                     # applies to any node
+    EOSC Node | EUDAT                   # applies to any node
     bbmri-eric: EOSC Node - BBMRI-ERIC  # applies to that node only
 
 Write `\\#` for a literal hash in a name.
@@ -29,7 +32,7 @@ import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
-__all__ = ["ApprovedNames", "parse_approved_names"]
+__all__ = ["ApprovedNames", "NameMatch", "parse_approved_names"]
 
 # A leading "<id>:" scopes the entry. Node ids are slugs — letters, digits,
 # hyphens, underscores, dots — so a name containing a colon ("EOSC Node:
@@ -43,6 +46,23 @@ _COMMENT = re.compile(r"(?<!\\)#.*$")
 # because "BBMRI" and "BBMRI-ERIC" are different names, so a page showing the
 # second does not show the first.
 _WORDISH = re.compile(r"[\w-]")
+
+# Separator glyphs that node pages use interchangeably in a name lockup. The
+# official list writes "EOSC Node | X"; of the nine nodes, one writes the pipe,
+# one writes a hyphen and an en dash, and one writes nothing at all. Matching
+# the pipe literally scored 0/9 against real pages.
+_SEPS = "|\u2013\u2014\u2012\u2015:/\u00b7\u2022-"
+
+# In a name, a separator glyph that stands alone (whitespace on at least one
+# side) or a plain run of whitespace. A hyphen *inside* a token — BBMRI-ERIC —
+# does not match this, and stays literal.
+_NAME_GAP = re.compile(rf"\s+[{re.escape(_SEPS)}]\s*|\s*[{re.escape(_SEPS)}]\s+|\s+")
+
+# What such a gap may match in the page: any run of whitespace and separators,
+# or nothing at all where the page joins the words with a single space that the
+# name spells as " | ". At least one character is required, so two tokens can
+# never fuse: "EOSC Node" cannot match "EOSCNode".
+_PAGE_GAP = rf"[\s{re.escape(_SEPS)}]+"
 
 
 @dataclass(frozen=True)
@@ -71,18 +91,69 @@ class ApprovedNames:
         """True when `name` was written against this node specifically."""
         return name in self.per_node.get(node_id.lower(), ())
 
-    def match(self, text: str, node_id: str) -> str | None:
+    def find(self, text: str, node_id: str) -> NameMatch | None:
         """The first name, in file order, that appears in `text` for this node.
 
-        Matching is literal, case-insensitive and boundary-aware: internal
-        whitespace in a name matches any run of whitespace in the text, so a
-        name that wraps across a line still matches, but a name must not be a
-        fragment of a longer word.
+        Matching is case-insensitive and boundary-aware. Each token of the name
+        is literal, so a name is never a fragment of a longer word. The gap
+        between tokens is not: whitespace and the separator glyphs pages use in
+        a name lockup are interchangeable, so a list written "EOSC Node | X"
+        matches a page that writes "EOSC Node - X".
+
+        Returns what the page actually shows as well as which approved name it
+        satisfied, so a reviewer can see a variant rendering rather than being
+        told only that something matched.
         """
         for name in self.for_node(node_id):
-            if re.search(_pattern(name), text, re.I | re.S):
-                return name
+            if m := re.search(_pattern(name), text, re.I | re.S):
+                return NameMatch(
+                    name=name,
+                    matched_text=" ".join(m.group(0).split()),
+                    scoped=self.is_scoped_to(node_id, name),
+                )
         return None
+
+    def match(self, text: str, node_id: str) -> str | None:
+        """The approved name that `text` satisfies, or None. See `find`."""
+        m = self.find(text, node_id)
+        return m.name if m else None
+
+    def common_prefix(self, node_id: str) -> str:
+        """The leading tokens every candidate name for this node shares.
+
+        The official list writes all nine names as "EOSC Node | X", so the
+        shared prefix is "EOSC Node". Derived rather than hardcoded, so a list
+        using another convention gets the same treatment and a list with
+        nothing in common gets none.
+        """
+        tokens = [[t for t in _NAME_GAP.split(n.strip()) if t] for n in self.for_node(node_id)]
+        if len(tokens) < 2:
+            return ""
+        shared: list[str] = []
+        for parts in zip(*tokens, strict=False):
+            first = parts[0].casefold()
+            if any(p.casefold() != first for p in parts):
+                break
+            shared.append(parts[0])
+        return " ".join(shared)
+
+    def prefix_hits(self, text: str, node_id: str) -> tuple[str, int]:
+        """The shared prefix of the candidate names, and how often it occurs.
+
+        "None of the approved names appear" is true but gives a reviewer
+        nowhere to look, and seven of the nine node pages do show *a* name.
+        This points at the phrase to search for and says how many times it is
+        there, which is checkable, rather than quoting a guess at the name.
+
+        An earlier version quoted the surrounding text. It produced "EOSC Node
+        f" on one page (truncated at an ellipsis) and, on another, quoted a
+        sentence about a *different* node as if it were that page's name. A
+        confident wrong quote is worse than saying less, so it was removed.
+        """
+        prefix = self.common_prefix(node_id)
+        if not prefix:
+            return "", 0
+        return prefix, len(re.findall(_pattern(prefix), text, re.I | re.S))
 
     # --- construction --------------------------------------------------------
 
@@ -107,6 +178,25 @@ class ApprovedNames:
         return cls(unscoped=tuple(str(v).strip() for v in value if str(v).strip()))
 
 
+@dataclass(frozen=True)
+class NameMatch:
+    """A name that matched, and the text on the page that satisfied it."""
+
+    name: str
+    matched_text: str
+    scoped: bool
+
+    @property
+    def exact(self) -> bool:
+        """True when the page writes the name as the approved list writes it.
+
+        Case and the amount of whitespace are not differences worth reporting;
+        a different separator glyph is, because it is the thing the reviewer
+        would otherwise have to diff by eye.
+        """
+        return " ".join(self.name.split()).casefold() == self.matched_text.casefold()
+
+
 def parse_approved_names(text: str) -> ApprovedNames:
     """Parse the approved-names file format."""
     unscoped: list[str] = []
@@ -129,8 +219,9 @@ def parse_approved_names(text: str) -> ApprovedNames:
 
 
 def _pattern(name: str) -> str:
-    """A literal, boundary-aware, whitespace-tolerant pattern for `name`."""
-    body = r"\s+".join(re.escape(part) for part in name.split())
+    """A boundary-aware pattern: literal tokens, interchangeable separators."""
+    tokens = [t for t in _NAME_GAP.split(name.strip()) if t]
+    body = _PAGE_GAP.join(re.escape(t) for t in tokens)
     # Guard only an edge that is itself word-like. "EGI" gets both guards, so
     # "strategic" cannot match. "(Finland)" ends in a paren, which is already a
     # boundary, so demanding another would reject a legitimate page.

@@ -312,14 +312,14 @@ def test_an_absent_name_list_is_stated_not_left_to_be_inferred(tmp_path):
     """A REVIEW on point 3 must not be read as "the name was checked and is fine"."""
     run = _with_names({"supplied": False, "scoped": False, "count": 0, "source": ""})
     for out in (render(run, tmp_path), _html(run, tmp_path)):
-        assert "No approved-name list was supplied" in out
+        assert "No approved-name list was used" in out
         assert "not assessed at all" in out
 
 
 def test_a_scoped_list_is_described_as_tied_to_nodes(tmp_path):
     run = _with_names({"supplied": True, "scoped": True, "count": 9, "source": "n.txt"})
     for out in (render(run, tmp_path), _html(run, tmp_path)):
-        assert "9 approved node name(s) were supplied, tied to specific nodes" in out
+        assert "9 approved node name(s) were used, from a list supplied for this run, tied to specific nodes" in out
 
 
 def test_an_unscoped_list_is_reported_with_its_weaker_claim(tmp_path):
@@ -336,10 +336,26 @@ def test_an_older_result_file_without_the_detail_still_renders(tmp_path):
     run = _with_names(None)
     run["approved_names_supplied"] = True
     for out in (render(run, tmp_path), _html(run, tmp_path)):
-        assert "approved node name(s) were supplied" in out
+        assert "approved node name(s) were used" in out
 
 
 def test_a_result_file_with_no_name_information_at_all_still_renders(tmp_path):
     run = _with_names(None)
     for out in (render(run, tmp_path), _html(run, tmp_path)):
-        assert "No approved-name list was supplied" in out
+        assert "No approved-name list was used" in out
+
+
+def test_the_sentence_says_when_the_committed_default_was_used(tmp_path):
+    """Which list was in force is part of the finding, not run metadata."""
+    run = _with_names({"supplied": True, "scoped": False, "count": 9, "default_used": True})
+    for out in (render(run, tmp_path), _html(run, tmp_path)):
+        assert "official list committed with the checklist" in out
+
+
+def test_the_sentence_distinguishes_an_operator_supplied_list(tmp_path):
+    run = _with_names(
+        {"supplied": True, "scoped": True, "count": 2, "default_used": False, "source": "m.txt"}
+    )
+    out = render(run, tmp_path)
+    assert "a list supplied for this run" in out
+    assert "official list committed" not in out

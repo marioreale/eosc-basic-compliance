@@ -134,18 +134,27 @@ def _names_sentence(run: dict) -> str:
         info = {"supplied": run.get("approved_names_supplied", False), "scoped": False, "count": 0}
     if not info.get("supplied"):
         return (
-            "No approved-name list was supplied, so the name half of point 3 was not "
+            "No approved-name list was used, so the name half of point 3 was not "
             "assessed at all: a REVIEW there says nothing about the node name."
         )
     n = info.get("count", 0)
+    # Which list was in force is part of the finding. A reader must not have to
+    # assume that the run's operator reviewed the names it was checked against.
+    which = (
+        "the official list committed with the checklist"
+        if info.get("default_used")
+        else "a list supplied for this run"
+    )
     if info.get("scoped"):
         return (
-            f"{n} approved node name(s) were supplied, tied to specific nodes. A name is only "
-            "matched against the node it was written for."
+            f"{n} approved node name(s) were used, from {which}, tied to specific nodes. "
+            "A name is only matched against the node it was written for."
         )
     return (
-        f"{n} approved node name(s) were supplied as an unscoped list, so a match shows the "
-        "name appears on the page but not that it is that node's own name."
+        f"{n} approved node name(s) were used, from {which}, as an unscoped list: a match "
+        "shows the name appears on the page but not that it is that node's own name. "
+        "Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” "
+        "satisfies a list writing “EOSC Node | X”."
     )
 
 

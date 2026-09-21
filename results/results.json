@@ -1,6 +1,6 @@
 {
   "run_id": "2026-09-21-1308",
-  "generated_at": "2026-09-21T16:40:42+00:00",
+  "generated_at": "2026-09-21T17:07:23+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
@@ -91,12 +91,13 @@
     ]
   },
   "approved_names": {
-    "supplied": false,
+    "supplied": true,
     "scoped": false,
-    "count": 0,
-    "source": ""
+    "count": 9,
+    "source": "checklist/approved-names.txt",
+    "default_used": true
   },
-  "approved_names_supplied": false,
+  "approved_names_supplied": true,
   "nodes": [
     {
       "id": "bbmri-eric",
@@ -284,7 +285,8 @@
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
             "EOSC-referencing image asset(s): 1",
-            "img: eosc node - bbmri-eric logo"
+            "img: eosc node - bbmri-eric logo",
+            "approved name matched from the unscoped list: \"EOSC Node | BBMRI-ERIC\" (the page writes it \"EOSC Node - BBMRI-ERIC\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -401,7 +403,8 @@
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
             "EOSC-referencing image asset(s): 1",
-            "img: eosc node - bbmri-eric logo"
+            "img: eosc node - bbmri-eric logo",
+            "approved name matched from the unscoped list: \"EOSC Node | BBMRI-ERIC\" (the page writes it \"EOSC Node - BBMRI-ERIC\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -556,7 +559,8 @@
             "img: Page Icon",
             "img: Page Icon",
             "img: Page Icon",
-            "img: Theme"
+            "img: Theme",
+            "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur 2 times, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -678,7 +682,8 @@
             "img: Page Icon",
             "img: Page Icon",
             "img: Page Icon",
-            "img: Theme"
+            "img: Theme",
+            "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur 2 times, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -839,7 +844,8 @@
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
             "EOSC-referencing image asset(s): 1",
-            "img: eosc node data terra environment"
+            "img: eosc node data terra environment",
+            "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur 3 times, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -960,7 +966,8 @@
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
             "EOSC-referencing image asset(s): 1",
-            "img: eosc node data terra environment"
+            "img: eosc node data terra environment",
+            "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur 3 times, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -1169,7 +1176,8 @@
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
             "EOSC-referencing image asset(s): 1",
-            "img: EOSCNode_Finland-1-1-scaled.jpg"
+            "img: EOSCNode_Finland-1-1-scaled.jpg",
+            "NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -1293,7 +1301,8 @@
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.",
           "evidence": [
             "EOSC-referencing image asset(s): 1",
-            "img: EOSCNode_Finland-1-1-scaled.jpg"
+            "img: EOSCNode_Finland-1-1-scaled.jpg",
+            "NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -1528,7 +1537,8 @@
             "EOSC-referencing image asset(s): 3",
             "img: EOSCNodePaNOSC_ColourPos-scaled.png",
             "img: EOSC-Federation-logo.png",
-            "img: European Open Science Cloud"
+            "img: European Open Science Cloud",
+            "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur once, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -1654,7 +1664,8 @@
             "EOSC-referencing image asset(s): 3",
             "img: EOSCNodePaNOSC_ColourPos-scaled.png",
             "img: EOSC-Federation-logo.png",
-            "img: European Open Science Cloud"
+            "img: European Open Science Cloud",
+            "NONE of the 9 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur once, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -1909,7 +1920,8 @@
           "evidence": [
             "EOSC-referencing image asset(s): 2",
             "img: EOSC Node",
-            "img: EOSC Node"
+            "img: EOSC Node",
+            "approved name matched from the unscoped list: \"EOSC Node | EUDAT\" (the page writes it \"EOSC Node EUDAT\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -2023,7 +2035,8 @@
           "evidence": [
             "EOSC-referencing image asset(s): 2",
             "img: EOSC Node",
-            "img: EOSC Node"
+            "img: EOSC Node",
+            "approved name matched from the unscoped list: \"EOSC Node | EUDAT\" (the page writes it \"EOSC Node EUDAT\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
@@ -2236,7 +2249,8 @@
           "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
             "40 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 23"
+            "mentions of EOSC in page text: 23",
+            "NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
           "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },
@@ -2356,7 +2370,8 @@
           "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
             "40 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 23"
+            "mentions of EOSC in page text: 23",
+            "NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
           "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },
@@ -2487,7 +2502,8 @@
           "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
             "0 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 0"
+            "mentions of EOSC in page text: 0",
+            "9 approved name(s) were supplied for this node, but no page body was captured (HTTP 403), so the name was not looked for"
           ],
           "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },
@@ -2594,7 +2610,8 @@
           "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
             "0 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 0"
+            "mentions of EOSC in page text: 0",
+            "9 approved name(s) were supplied for this node, but no page body was captured (HTTP 403), so the name was not looked for"
           ],
           "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },
@@ -2910,7 +2927,8 @@
           "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
             "51 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 0"
+            "mentions of EOSC in page text: 0",
+            "NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
           "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },
@@ -3025,7 +3043,8 @@
           "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
             "51 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 0"
+            "mentions of EOSC in page text: 0",
+            "NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
           "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },

@@ -328,14 +328,19 @@ take thirty seconds instead of five minutes.
    case-insensitive regex `eosc`.
 2. For each hit, record the kind (`img` or `inline SVG`) and a label, preferring
    `alt`, then `aria_label`, then `title`, then the filename.
-3. If `--approved-names` supplied a list, take the names that apply to *this*
-   node — those written as `node-id: Name`, then any unscoped ones — and test
-   each against `full_text` in file order. Matching is literal, case-insensitive
-   and boundary-aware: internal whitespace matches any run of whitespace, but a
-   name is never matched inside a longer word or hyphenated token. Record the
-   first match, and whether it was scoped to this node. If the body is empty
-   (a 403, say), record that the name was not looked for rather than that it is
-   absent.
+3. Take the names that apply to *this* node — those written as `node-id: Name`,
+   then any unscoped ones — and test each against `full_text` in file order. The
+   list is `checklist/approved-names.txt` unless `--approved-names` replaces it
+   or `--no-approved-names` suppresses it. Each word of a name is matched
+   literally and case-insensitively, and never inside a longer word or
+   hyphenated token; the separator *between* words is flexible, so whitespace
+   and the glyphs `|`, `-`, `–`, `—`, `:`, `/`, `·` are interchangeable. Record
+   the first match, what the page actually wrote, and whether the name was
+   scoped to this node. If the body is empty (a 403, say), record that the name
+   was not looked for rather than that it is absent. If nothing matched, also
+   record how many times the longest leading phrase shared by all the candidate
+   names — `EOSC Node`, for the official list — occurs in the body, so the
+   reviewer knows whether there is anything to look at.
 
 | # | Condition | Verdict |
 |---|---|---|
@@ -349,11 +354,15 @@ apart:
   rendered geometry, and section 3 explains that no geometry was captured. This
   is not a judgement call the tool declines to make; it is data the tool does not
   have.
-- **A missing input.** The tool has no authoritative list of Tripartite-approved
-  node names. Without `--approved-names`, the name half of the point is not
-  assessed at all; `results.json` records the list's status under
-  `approved_names`, and both reports state it in prose, so a `REVIEW` here cannot
-  be misread as a checked-and-clean name.
+- **A name the tool can check, against a list it cannot validate.** The official
+  Tripartite list is now committed at `checklist/approved-names.txt` and used by
+  default, so the name half *is* assessed — but the tool cannot tell whether that
+  file is current, and a non-match may mean the page is wrong, the name is in an
+  image, or the list is stale. `results.json` records which list was in force
+  under `approved_names`, including whether it was the committed default, and
+  both reports state it in prose, so a `REVIEW` here cannot be misread as a
+  checked-and-clean name. `--no-approved-names` skips the half entirely, and the
+  reports say that too.
 - **A weaker claim from an unscoped list.** A name given without a `node-id:`
   prefix applies to every node, so a match shows the string is on the page but
   not that it is that node's own name. The evidence line says which of the two
@@ -530,16 +539,32 @@ The same regex has no host-awareness at all, so `not-eosc.eu` and `myeosc.eu`
 also match. Point 4 uses `_is_host` and does not have this problem; point 3 does
 not use it.
 
-**The approved-name match used to over-match too, and was fixed.** Recorded here
-because the run of 21 September 2026 that produced the results in this document
-was made with the old behaviour. The name was matched as a bare substring of the
+**The approved-name match over-matched, then under-matched.** Both are recorded
+because both shipped. First, the name was matched as a bare substring of the
 page body, so a short name matched inside ordinary words: `EGI` in the list
 reported a match on the BBMRI-ERIC page (inside "strat**egi**c") and on Data
 Terra (inside "Norw**egi**an"), neither of which names the EGI node. The list
 was also matched as a whole, so any name matching any page satisfied that page's
-evidence line. Matching is now boundary-aware, and names can be scoped to a node
-with a `node-id:` prefix. No verdict changed in either version, because the name
-never decides point 3 — but the evidence line did, and it was wrong.
+evidence line. Matching was made boundary-aware and scopable with a `node-id:`
+prefix.
+
+That fix was then too strict. Run against the official Tripartite list, which
+writes every name as `EOSC Node | X`, it matched **none of the nine pages**: the
+pages disagree about the separator glyph, not the name — BBMRI-ERIC writes a
+hyphen and an en dash, European DTO the pipe, EUDAT nothing at all. Publishing
+that would have been a finding against every node for a typographic difference.
+Separator glyphs are now interchangeable, and the evidence quotes what the page
+wrote so the variant is visible. This is a deliberate loosening, and the place
+to challenge it is the table in the guide.
+
+**The match is still not proof of the right name.** The committed list is
+unscoped, so a match says the string is on the page, not that it is that page's
+own name; and with 9 names applying to all 9 nodes, a page carrying a *different*
+node's approved name would satisfy its own evidence line. The line says which
+claim it is making. Scoping the list is what makes the stronger claim available.
+
+No verdict changed at any point, because the name never decides point 3 — but
+the evidence line did, twice, and both times it was wrong.
 
 **Nothing about visibility is captured**, as set out in section 3. Point 3 cannot
 be closed automatically under the current evidence model, regardless of how the
@@ -570,9 +595,10 @@ the HTML report itself does not shout about it.
 ## 7. Reading the output
 
 `results.json` carries `run_id`, `generated_at`, the full `checklist` as loaded,
-`approved_names` (whether a list was supplied, whether it was scoped, how many
-names, and its path — plus the older `approved_names_supplied` flag, kept for
-readers of earlier result files), and `nodes`. Each node carries `id`, `name`, `url`,
+`approved_names` (whether a list was used, whether it was the committed default
+(`default_used`), whether it was scoped, how many names, and its path — plus the
+older `approved_names_supplied` flag, kept for readers of earlier result files),
+and `nodes`. Each node carries `id`, `name`, `url`,
 `ad_hoc`, a `fetch` summary (status, final URL, robots note, screenshot, crawl
 depth, every child with its `selected_for` and outcome, and `children_skipped`),
 `results`, and `results_depth_1` when depth 2 was used.

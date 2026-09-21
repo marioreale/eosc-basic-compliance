@@ -199,25 +199,28 @@ against saved evidence, so changing a check never means re-requesting the pages.
 `assess` exits non-zero if any configured node has no evidence, so a short table
 cannot quietly look complete.
 
-Edit `nodes.yaml` to change the list of nodes. To check the official
-Tripartite-approved node names (point 3), supply a list — one per line, prefixed
-with the node id it belongs to:
+Edit `nodes.yaml` to change the list of nodes.
 
-```text
-bbmri-eric: EOSC Node - BBMRI-ERIC
-egi:        EGI Node
-```
+The official Tripartite-approved node names, used by point 3, are committed at
+[`checklist/approved-names.txt`](checklist/approved-names.txt) and are used
+automatically — no flag needed. To check against a different list, or none:
 
 ```bash
-uv run basic-check assess --approved-names approved-names.txt
+uv run basic-check assess                                  # official list (default)
+uv run basic-check assess --approved-names my-names.txt    # your list instead
+uv run basic-check assess --no-approved-names              # no list at all
 ```
 
-The file is not committed, and `.gitignore` keeps it that way: the list comes
-from the Tripartite governance process, and whoever runs the tool is accountable
-for the list they used. Without it, the name half of point 3 is not assessed at
-all, and both reports say so. See
+Every report states which list the run used. Prefix a name with a node id
+(`bbmri-eric: EOSC Node - BBMRI-ERIC`) to tie it to one node; the official list
+is unscoped, so a match shows the name is on the page but not that it is that
+page's own name, and the report says so.
+
+Run against the evidence of 21 September 2026, the official list matches **2 of
+the 9** nodes. That is a finding to review, not a verdict — point 3 stays
+`MANUAL_REVIEW` either way. See
 [the guide](docs/GUIDE.md#the-approved-names-file----approved-names) for the
-format and how matching works.
+format, how matching works, and what each node shows.
 
 ## Scope and limits
 

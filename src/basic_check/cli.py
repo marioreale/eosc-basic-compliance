@@ -31,6 +31,10 @@ app = typer.Typer(
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_NODES = ROOT / "nodes.yaml"
 DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"
+# The official Tripartite-approved node names, committed alongside the checklist
+# they serve. Used unless --approved-names names another file, so the name half
+# of point 3 is assessed by default instead of silently skipped.
+DEFAULT_APPROVED_NAMES = ROOT / "checklist" / "approved-names.txt"
 DEFAULT_RESULTS = ROOT / "results"
 # One-off --url checks write here by default rather than into results/, so an ad
 # hoc check of one candidate page cannot overwrite the committed nine-node report
@@ -233,16 +237,65 @@ def assess(
     approved_names: Path | None = typer.Option(
         None,
         "--approved-names",
-        help="Optional text file of Tripartite-approved node names, one per line. "
-        "Write 'node-id: Name' to tie a name to one node; a bare name applies to "
-        "every node and cannot establish whose name it is. Without this file, "
-        "point 3's name requirement is not assessed. See docs/GUIDE.md section 3.",
+        help="Text file of Tripartite-approved node names, one per line, replacing "
+        f"the committed default ({DEFAULT_APPROVED_NAMES.name}). Write 'node-id: Name' "
+        "to tie a name to one node; a bare name applies to every node and cannot "
+        "establish whose name it is. See docs/GUIDE.md section 3.",
+    ),
+    no_approved_names: bool = typer.Option(
+        False,
+        "--no-approved-names",
+        help="Do not use any approved-name list, not even the committed default. "
+        "Point 3's name requirement is then not assessed at all.",
     ),
     run_id: str = typer.Option("", "--run"),
 ):
     """Apply the checklist to already-collected evidence and write the reports."""
     nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
-    _do_assess(nodes, resolved, checklist_file, approved_names, run_id)
+    _do_assess(nodes, resolved, checklist_file, approved_names, run_id, no_approved_names)
+
+
+def _resolve_names(
+    approved_names: Path | None,
+    no_approved_names: bool,
+) -> tuple[ApprovedNames, str, bool]:
+    """Decide which approved-name list a run uses, and record which it was.
+
+    Three cases, in precedence order: an explicit opt-out, an operator file, or
+    the list committed with the checklist. The report has to be able to say
+    which one was in force — a reader must not have to assume that a run they
+    are looking at vetted its own name list.
+    """
+    if no_approved_names:
+        return ApprovedNames(), "", False
+
+    if approved_names is not None:
+        try:
+            return ApprovedNames.load(approved_names), str(approved_names), False
+        except FileNotFoundError:
+            # Neither a traceback nor a silent fall back to the default: the
+            # operator named a specific list, and checking a different one is
+            # not a smaller failure than checking none.
+            raise typer.BadParameter(
+                f"approved-names file not found: {approved_names}",
+                param_hint="--approved-names",
+            ) from None
+
+    try:
+        # Recorded repo-relative: the committed report is published, and the
+        # absolute path of whoever ran it is neither useful nor theirs to leak.
+        rel = DEFAULT_APPROVED_NAMES.relative_to(ROOT).as_posix()
+        return ApprovedNames.load(DEFAULT_APPROVED_NAMES), rel, True
+    except FileNotFoundError:
+        # Only reachable if the repository file was deleted. Say so instead of
+        # quietly producing a run whose point 3 checked no name at all.
+        typer.secho(
+            f"warning: the default approved-names list is missing ({DEFAULT_APPROVED_NAMES}); "
+            "point 3's name requirement will not be assessed",
+            err=True,
+            fg=typer.colors.YELLOW,
+        )
+        return ApprovedNames(), "", False
 
 
 def _do_assess(
@@ -251,19 +304,13 @@ def _do_assess(
     checklist_file: Path,
     approved_names: Path | None = None,
     run_id: str = "",
+    no_approved_names: bool = False,
 ) -> dict:
     """See _do_collect for why this is not the Typer command itself."""
     checklist = yaml.safe_load(checklist_file.read_text())
     evidence_dir = results_dir / "evidence"
 
-    try:
-        names = ApprovedNames.load(approved_names)
-    except FileNotFoundError:
-        # Not a crash, and not a silent empty list either: the operator asked
-        # for point 3's name half to be checked, so say why it cannot be.
-        raise typer.BadParameter(
-            f"approved-names file not found: {approved_names}", param_hint="--approved-names"
-        ) from None
+    names, names_source, default_used = _resolve_names(approved_names, no_approved_names)
 
     run = {
         "run_id": run_id or datetime.now(UTC).strftime("%Y-%m-%d-%H%M"),
@@ -273,7 +320,8 @@ def _do_assess(
             "supplied": names.supplied,
             "scoped": names.scoped,
             "count": len(names.unscoped) + sum(len(v) for v in names.per_node.values()),
-            "source": str(approved_names) if approved_names else "",
+            "source": names_source,
+            "default_used": default_used,
         },
         # Kept for readers of older result files.
         "approved_names_supplied": names.supplied,
@@ -378,7 +426,15 @@ def run(
     ),
     eosc_page: str = typer.Option("", "--eosc-page"),
     checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c"),
-    approved_names: Path | None = typer.Option(None, "--approved-names"),
+    approved_names: Path | None = typer.Option(
+        None,
+        "--approved-names",
+        help="Replace the committed default name list "
+        f"({DEFAULT_APPROVED_NAMES.name}) with this file.",
+    ),
+    no_approved_names: bool = typer.Option(
+        False, "--no-approved-names", help="Use no name list at all."
+    ),
     run_id: str = typer.Option("", "--run"),
     delay: float = typer.Option(2.0, "--delay"),
     depth: int = typer.Option(
@@ -401,7 +457,7 @@ def run(
     # Resolve once so both phases agree on the node list and the directory.
     nodes, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
     _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget)
-    _do_assess(nodes, resolved, checklist_file, approved_names, run_id)
+    _do_assess(nodes, resolved, checklist_file, approved_names, run_id, no_approved_names)
 
 
 @app.command()
