@@ -7,6 +7,8 @@ tested here rather than eyeballed once and trusted.
 
 from __future__ import annotations
 
+import re
+
 from basic_check import report
 
 
@@ -430,3 +432,129 @@ def test_the_report_states_when_separators_were_matched_strictly(tmp_path):
     text = md.read_text()
     assert "interchangeable" not in text, "the lax rule must not be claimed when strict was used"
     assert "literal" in text or "strictly" in text, text[:1200]
+
+
+# --- table-breaking and list-breaking input -----------------------------------
+#
+# Every string below reaches the Markdown renderer from a fetched page, a
+# checklist file or a name list, so none of it is under this module's control.
+# A pipe adds a column and silently misaligns every cell after it; a newline
+# ends the row or the list item early. Both corrupt the report without raising,
+# which is the reason these are tested rather than assumed.
+
+
+def _columns(row: str) -> int:
+    """Cells in a Markdown table row, counting only unescaped delimiters.
+
+    A `\\|` inside a cell is literal text, not a column break, so counting raw
+    pipes would call a correctly escaped row misaligned.
+    """
+    return len(re.findall(r"(?<!\\)\|", row)) - 1
+
+
+def _pipe_node(name: str = "Alpha | Beta") -> dict:
+    return _node(name, [("4", "PASS"), ("6", "FAIL")])
+
+
+def test_a_pipe_in_a_node_name_cannot_break_the_matrix(tmp_path):
+    md = render(run_dict([_pipe_node()]), tmp_path)
+    row = next(ln for ln in md.splitlines() if "Alpha" in ln and ln.startswith("|"))
+    assert _columns(row) == 3, f"expected 3 columns, got a misaligned row: {row}"
+
+
+def test_a_pipe_in_a_node_name_survives_as_text(tmp_path):
+    """Escaping must not silently delete the character from the name."""
+    md = render(run_dict([_pipe_node()]), tmp_path)
+    assert "Alpha \\| Beta" in md
+
+
+def test_a_pipe_in_a_node_name_cannot_break_the_depth_change_table(tmp_path):
+    run = run_dict(
+        [
+            _node(
+                "Alpha | Beta",
+                [("4", "PASS"), ("6", "PASS")],
+                shallow=[("4", "FAIL"), ("6", "PASS")],
+            )
+        ]
+    )
+    md = render(run, tmp_path)
+    row = next(ln for ln in md.splitlines() if "Alpha" in ln and " 4 " in ln)
+    assert _columns(row) == 4, f"expected 4 columns, got a misaligned row: {row}"
+
+
+def test_a_pipe_in_a_followed_reason_cannot_break_the_second_hop_table(tmp_path):
+    """`selected_for` is joined into a cell; a pipe in a point id would split it."""
+    child = {
+        "url": "https://alpha.example/x",
+        "depth": 2,
+        "selected_for": ["6|7"],
+        "http_status": 200,
+    }
+    run = run_dict(
+        [
+            _node(
+                "Alpha",
+                [("4", "PASS"), ("6", "PASS")],
+                shallow=[("4", "PASS"), ("6", "PASS")],
+                children=[child],
+            )
+        ]
+    )
+    md = render(run, tmp_path)
+    row = next(ln for ln in md.splitlines() if "alpha.example/x" in ln)
+    assert _columns(row) == 4, f"expected 4 columns, got a misaligned row: {row}"
+
+
+def test_a_pipe_in_a_point_title_cannot_break_the_column_table(tmp_path):
+    """The column table falls back to the point title for an id with no gloss.
+
+    Every id in checklist v3.0 has one, so this is the path a future checklist
+    version would take — which is exactly when nobody would be watching for it.
+    """
+    run = run_dict([_node("Alpha", [("8z", "PASS"), ("6", "PASS")])])
+    run["checklist"]["points"][0] = _point("8z")
+    run["checklist"]["points"][0]["title"] = "Links | to EOSC"
+    md = render(run, tmp_path)
+    row = next(ln for ln in md.splitlines() if "Links" in ln and ln.startswith("|"))
+    assert _columns(row) == 3, f"expected 3 columns, got a misaligned row: {row}"
+    assert "Links \\| to EOSC" in row
+
+
+def test_a_newline_in_a_point_title_stays_on_one_line(tmp_path):
+    run = run_dict([_node("Alpha", [("4", "PASS"), ("6", "PASS")])])
+    run["checklist"]["points"][0]["title"] = "Links\nto EOSC"
+    md = render(run, tmp_path)
+    assert "**4 — Links to EOSC**" in md
+    for ln in md.splitlines():
+        assert ln != "to EOSC", "the title split across two lines"
+
+
+def test_a_newline_in_an_evidence_string_stays_one_list_item(tmp_path):
+    node = _node("Alpha", [("4", "FAIL"), ("6", "PASS")])
+    node["results"][0]["evidence"] = ["first line\nsecond line"]
+    md = render(run_dict([node]), tmp_path)
+    assert "  - first line second line" in md
+    assert "\nsecond line" not in md, "the newline escaped the list item"
+
+
+def test_a_newline_in_a_reviewer_action_stays_one_list_item(tmp_path):
+    node = _node("Alpha", [("4", "MANUAL_REVIEW"), ("6", "PASS")])
+    node["results"][0]["reviewer_action"] = "Open the page.\nCheck the footer."
+    md = render(run_dict([node]), tmp_path)
+    assert "  - *Reviewer action:* Open the page. Check the footer." in md
+
+
+def test_a_newline_in_a_node_name_cannot_break_the_detail_heading(tmp_path):
+    md = render(run_dict([_node("Alpha\nBeta", [("4", "PASS"), ("6", "PASS")])]), tmp_path)
+    assert "### Alpha Beta" in md
+    for ln in md.splitlines():
+        assert ln != "Beta", "the node name split across two lines"
+
+
+def test_collapsing_whitespace_does_not_mangle_ordinary_evidence(tmp_path):
+    """The fix must not reflow text that was already fine."""
+    node = _node("Alpha", [("4", "FAIL"), ("6", "PASS")])
+    node["results"][0]["evidence"] = ["6 link(s) examined, none pointing to eosc.eu"]
+    md = render(run_dict([node]), tmp_path)
+    assert "  - 6 link(s) examined, none pointing to eosc.eu" in md

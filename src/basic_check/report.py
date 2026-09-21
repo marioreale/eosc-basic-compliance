@@ -672,6 +672,31 @@ def _ellipsis(s: str, n: int) -> str:
     return s if len(s) <= n else s[: n - 1] + "…"
 
 
+def _md_text(value: object) -> str:
+    """Flatten a string to one line for inline Markdown.
+
+    Node names, verdict messages, evidence lines and reviewer actions all come
+    from fetched pages or from the checklist transcription, so any of them may
+    contain a newline. In a list item or a heading a newline ends the element
+    early and the remainder is rendered as body text, which corrupts the report
+    without raising. Collapsing runs of whitespace is deliberate: it leaves
+    ordinary single-spaced text untouched.
+    """
+    return " ".join(str(value).split())
+
+
+def _md_cell(value: object) -> str:
+    """Prepare a value for a Markdown table cell.
+
+    A literal `|` opens a new column, so every cell after it in that row shifts
+    left and the table silently misaligns. Escaping keeps the character visible
+    in the rendered output rather than dropping it, because a pipe in a node
+    name is information. Newlines are flattened for the same reason as in
+    `_md_text`: they would end the row.
+    """
+    return _md_text(value).replace("|", "\\|")
+
+
 def _dual_depth(run: dict) -> bool:
     """True when the run carries both a depth-1 and a depth-2 assessment."""
     return any("results_depth_1" in n for n in run["nodes"])
@@ -682,7 +707,7 @@ def _matrix_rows(run: dict, order: list[str], key: str) -> list[str]:
     for node in run["nodes"]:
         by_id = {r["point_id"]: r for r in node.get(key, node["results"])}
         cells = [VERDICT_MD.get(by_id[p]["verdict"], "?") if p in by_id else "—" for p in order]
-        rows.append(f"| {node['name']} | " + " | ".join(cells) + " |")
+        rows.append(f"| {_md_cell(node['name'])} | " + " | ".join(cells) + " |")
     return rows
 
 
@@ -831,7 +856,8 @@ def render_markdown(run: dict, out: Path) -> Path:
             ]
             for name, pid, was, now in changes:
                 lines.append(
-                    f"| {name} | {pid} | {short.get(was, was)} | {short.get(now, now)} |"
+                    f"| {_md_cell(name)} | {_md_cell(pid)} | "
+                    f"{short.get(was, was)} | {short.get(now, now)} |"
                 )
             lines.append("")
         pages = _depth_2_pages(run)
@@ -845,8 +871,13 @@ def render_markdown(run: dict, out: Path) -> Path:
             for name, c in pages:
                 status = c.get("http_status") or ("error" if c.get("error") else "—")
                 purpose = ", ".join(c.get("selected_for", [])) or "—"
+                # A pipe in a URL is percent-encoded rather than backslash-escaped:
+                # inside an autolink a backslash is not an escape and would be
+                # taken as part of the address.
                 url = str(c.get("url", "")).replace("|", "%7C")
-                lines.append(f"| {name} | {purpose} | <{url}> | {status} |")
+                lines.append(
+                    f"| {_md_cell(name)} | {_md_cell(purpose)} | <{url}> | {status} |"
+                )
             lines.append("")
 
     lines += [
@@ -864,7 +895,8 @@ def render_markdown(run: dict, out: Path) -> Path:
     for p in points:
         gloss = COLUMN_GLOSS.get(p["id"], p["title"])
         lines.append(
-            f"| **{p['id']}** | {gloss} | {dec_label.get(p.get('decidable'), '?')} |"
+            f"| **{_md_cell(p['id'])}** | {_md_cell(gloss)} | "
+            f"{dec_label.get(p.get('decidable'), '?')} |"
         )
 
     lines += ["", "## Points in full", ""]
@@ -874,24 +906,27 @@ def render_markdown(run: dict, out: Path) -> Path:
             if p.get("decidable") is True
             else ("partly decidable" if p.get("decidable") == "partial" else "needs a human")
         )
-        lines.append(f"**{p['id']} — {p['title']}** ({dec})  ")
-        lines.append(f"{' '.join(p['requirement'].split())}")
+        lines.append(f"**{_md_text(p['id'])} — {_md_text(p['title'])}** ({dec})  ")
+        lines.append(_md_text(p["requirement"]))
         lines.append("")
         if p.get("decidable_note"):
-            lines.append(f"> {' '.join(p['decidable_note'].split())}")
+            lines.append(f"> {_md_text(p['decidable_note'])}")
             lines.append("")
 
     lines += ["## Detail", ""]
     for node in run["nodes"]:
-        lines.append(f"### {node['name']}")
-        lines.append(f"<{node['url']}>")
+        lines.append(f"### {_md_text(node['name'])}")
+        lines.append(f"<{_md_text(node['url'])}>")
         lines.append("")
         for res in node["results"]:
-            lines.append(f"- **{res['point_id']}** {short.get(res['verdict'], res['verdict'])} — {' '.join(res['message'].split())}")
+            lines.append(
+                f"- **{_md_text(res['point_id'])}** "
+                f"{short.get(res['verdict'], res['verdict'])} — {_md_text(res['message'])}"
+            )
             for item in res.get("evidence", [])[:4]:
-                lines.append(f"  - {item}")
+                lines.append(f"  - {_md_text(item)}")
             if res.get("reviewer_action"):
-                lines.append(f"  - *Reviewer action:* {res['reviewer_action']}")
+                lines.append(f"  - *Reviewer action:* {_md_text(res['reviewer_action'])}")
         lines.append("")
 
     out.write_text("\n".join(lines), encoding="utf-8")

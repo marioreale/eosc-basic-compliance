@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-All 225 tests still pass, while `collect` fails with Playwright's
+All 235 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 225 passed
+uv run pytest -q                  # expect: 235 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -671,7 +671,7 @@ a verdict surprises you.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 225 tests, offline, a few seconds
+uv run pytest -q                    # 235 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -686,7 +686,7 @@ uv run ruff check src tests         # lint
 | `test_crawl.py` | 34 | Link selection, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 12 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
-| `test_report.py` | 25 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, table-breaking input. |
+| `test_report.py` | 35 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
 
 The suite makes no network requests and needs no browser, which is why CI runs
 it without downloading Chromium.
@@ -789,10 +789,24 @@ number.
 - **Add a check:** implement in `src/basic_check/checks.py`, write the failing test first, and prefer returning `MANUAL_REVIEW` with good evidence over a confident guess. Document its branches in [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md) — a check whose decision procedure is not written down cannot be reviewed.
 - **Change the report:** `src/basic_check/report.py` renders HTML, Markdown and CSV from one run dict. `tests/test_report.py` covers the matrix; add to it, because a rendering bug is silent.
 
-Two known latent defects in `report.py`, both unfixed at the time of writing: a
-`|` in a **node name** yields a misaligned Markdown row, and a newline inside an
-evidence string breaks the Markdown list. Neither is triggered by the current
-node list. A pipe in a second-hop *URL* is already handled and tested.
+**Text that reaches the Markdown report is escaped at the boundary.** Two
+helpers in `report.py` do it, and new rendering code should use them rather than
+interpolating a value directly:
+
+| Helper | Use for | What it does |
+|---|---|---|
+| `_md_cell(value)` | Anything placed in a table cell | Escapes the pipe character so it cannot open a column, and flattens newlines |
+| `_md_text(value)` | Inline text — list items, headings, bold runs | Flattens newlines so the element does not end early |
+
+Both collapse runs of whitespace, which leaves ordinary text untouched. A pipe
+in a **URL** is the exception: inside an autolink a backslash is not an escape,
+so pipes there are percent-encoded to `%7C` instead.
+
+The reason this is handled centrally is that a rendering bug of this kind is
+silent — the report is still valid Markdown, just with the columns shifted or a
+sentence promoted out of its list item, and nothing raises. Node names come from
+`nodes.yaml`, evidence strings from fetched pages, and point titles from a
+checklist transcription, so none of it is under this module's control.
 
 ---
 

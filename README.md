@@ -302,7 +302,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 225 tests, a few seconds, no network, no browser
+uv run pytest -q          # 235 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 
