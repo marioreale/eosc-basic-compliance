@@ -7,3 +7,8 @@ results/evidence/*.png
 
 # Ad hoc --url checks are scratch output, not part of the assessed federation run.
 results/one-off/
+
+# The approved-names list is an operator input, not a project artefact:
+# it comes from the Tripartite governance process, and whoever runs the
+# tool is accountable for the list they used.
+approved-names*.txt

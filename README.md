@@ -200,11 +200,24 @@ against saved evidence, so changing a check never means re-requesting the pages.
 cannot quietly look complete.
 
 Edit `nodes.yaml` to change the list of nodes. To check the official
-Tripartite-approved node names (point 3), supply a list:
+Tripartite-approved node names (point 3), supply a list — one per line, prefixed
+with the node id it belongs to:
+
+```text
+bbmri-eric: EOSC Node - BBMRI-ERIC
+egi:        EGI Node
+```
 
 ```bash
 uv run basic-check assess --approved-names approved-names.txt
 ```
+
+The file is not committed, and `.gitignore` keeps it that way: the list comes
+from the Tripartite governance process, and whoever runs the tool is accountable
+for the list they used. Without it, the name half of point 3 is not assessed at
+all, and both reports say so. See
+[the guide](docs/GUIDE.md#the-approved-names-file----approved-names) for the
+format and how matching works.
 
 ## Scope and limits
 

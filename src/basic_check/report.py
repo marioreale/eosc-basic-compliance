@@ -123,6 +123,32 @@ def _point_titles(points: list[dict]) -> dict[str, str]:
     return {p["id"]: p["title"] for p in points}
 
 
+def _names_sentence(run: dict) -> str:
+    """Plain prose about the approved-name list behind point 3.
+
+    Absence is the common case and the one that misleads, so it is stated
+    rather than left to be inferred from a missing evidence line.
+    """
+    info = run.get("approved_names") or {}
+    if not info:  # result files written before the list was recorded in detail
+        info = {"supplied": run.get("approved_names_supplied", False), "scoped": False, "count": 0}
+    if not info.get("supplied"):
+        return (
+            "No approved-name list was supplied, so the name half of point 3 was not "
+            "assessed at all: a REVIEW there says nothing about the node name."
+        )
+    n = info.get("count", 0)
+    if info.get("scoped"):
+        return (
+            f"{n} approved node name(s) were supplied, tied to specific nodes. A name is only "
+            "matched against the node it was written for."
+        )
+    return (
+        f"{n} approved node name(s) were supplied as an unscoped list, so a match shows the "
+        "name appears on the page but not that it is that node's own name."
+    )
+
+
 def render_html(run: dict, out: Path) -> Path:
     points = run["checklist"]["points"]
     titles = _point_titles(points)
@@ -395,6 +421,8 @@ run <code>{html.escape(run["run_id"])}</code> · {html.escape(run["generated_at"
 {len(human)} require a human reading the page ({", ".join(human)}). Every
 <span class="v manual">REVIEW</span> below is a point this tool deliberately
 refuses to guess at. {crawl_sentence}</div>
+
+<div class="banner"><strong>Node names.</strong> {html.escape(_names_sentence(run))}</div>
 
 <div class="counts">{chips}</div>
 
@@ -679,6 +707,8 @@ def render_markdown(run: dict, out: Path) -> Path:
         "> **This is not a compliance statement.** Points marked 🟠 review are ones this tool "
         "refuses to guess at: they either turn on a judgement (\"clearly state\") or quantify "
         "over things this tool does not enumerate (\"all research resources\").",
+        "",
+        f"**Node names.** {_names_sentence(run)}",
         "",
         "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
         "🟠 review — a human must decide · 🟣 ERROR — could not be assessed",

@@ -22,6 +22,7 @@ from dataclasses import dataclass, field
 from urllib.parse import urlparse
 
 from .fetch import PageEvidence
+from .names import ApprovedNames
 from .patterns import (
     AAI_HINTS,
     AUP_PATTERNS,
@@ -393,7 +394,54 @@ def check_2(ev: PageEvidence) -> Result:
 # --- point 3 -----------------------------------------------------------------
 
 
-def check_3(ev: PageEvidence, approved_names: list[str] | None = None) -> Result:
+def _approved_name_note(
+    ev: PageEvidence,
+    approved_names: ApprovedNames | list[str] | None,
+) -> str:
+    """One evidence line about the node name, or "" when no list was supplied.
+
+    The line states which name matched and whether that name was written
+    against this node. An unscoped list cannot establish that the name found is
+    this node's own, so the line says so rather than implying more.
+    """
+    names = ApprovedNames.coerce(approved_names)
+    if not names.supplied:
+        return ""
+
+    candidates = names.for_node(ev.node_id)
+    if not candidates:
+        return (
+            "no approved name was supplied for this node "
+            f"(the list is scoped, and has no entry for {ev.node_id})"
+        )
+
+    # Absence of the name is only meaningful if there was a body to look in. On a
+    # bot-blocked node (GEANT returns HTTP 403 with no body) "none appear" would
+    # be a claim about a page that was never read.
+    if not ev.full_text.strip():
+        return (
+            f"{len(candidates)} approved name(s) were supplied for this node, but no page body "
+            f"was captured (HTTP {ev.http_status}), so the name was not looked for"
+        )
+
+    found = names.match(ev.full_text, ev.node_id)
+    if found is None:
+        return (
+            f"NONE of the {len(candidates)} approved name(s) for this node appear in the page "
+            "body — note the <title> is not searched"
+        )
+    if names.is_scoped_to(ev.node_id, found):
+        return f'approved name matched, scoped to this node: "{found}"'
+    return (
+        f'approved name matched from the unscoped list: "{found}" — the list does not say '
+        "which name belongs to which node, so this does not establish it is this node's own name"
+    )
+
+
+def check_3(
+    ev: PageEvidence,
+    approved_names: ApprovedNames | list[str] | None = None,
+) -> Result:
     """EOSC logo present, and the official Tripartite-approved node name."""
     if ev.error:
         return Result("3", "EOSC logo and official node name visible", ERROR, f"Page not fetched: {ev.error}")
@@ -406,14 +454,7 @@ def check_3(ev: PageEvidence, approved_names: list[str] | None = None) -> Result
             label = img.alt or img.aria_label or img.title or img.src.rsplit("/", 1)[-1]
             logo_hits.append(f"{kind}: {label[:120]}")
 
-    name_note = ""
-    if approved_names:
-        found = [n for n in approved_names if re.search(re.escape(n), ev.full_text, re.I)]
-        name_note = (
-            f"approved name matched: {found[0]}"
-            if found
-            else "NONE of the supplied approved names appear on the page"
-        )
+    name_note = _approved_name_note(ev, approved_names)
 
     if logo_hits:
         lines = [f"EOSC-referencing image asset(s): {len(logo_hits)}"] + logo_hits[:5]
@@ -865,7 +906,7 @@ def check_7(ev: PageEvidence) -> Result:
 
 def run_all(
     ev: PageEvidence,
-    approved_names: list[str] | None = None,
+    approved_names: ApprovedNames | list[str] | None = None,
     expected_eosc_page: str = "",
 ) -> list[Result]:
     """Every checklist point, in checklist order, exactly one result each."""

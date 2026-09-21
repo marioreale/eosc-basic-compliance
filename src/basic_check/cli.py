@@ -21,6 +21,7 @@ from .fetch import (
     load_evidence,
     without_depth_2,
 )
+from .names import ApprovedNames
 
 app = typer.Typer(
     add_completion=False,
@@ -232,8 +233,10 @@ def assess(
     approved_names: Path | None = typer.Option(
         None,
         "--approved-names",
-        help="Optional text file, one Tripartite-approved node name per line. "
-        "Without it, point 3's name requirement cannot be checked.",
+        help="Optional text file of Tripartite-approved node names, one per line. "
+        "Write 'node-id: Name' to tie a name to one node; a bare name applies to "
+        "every node and cannot establish whose name it is. Without this file, "
+        "point 3's name requirement is not assessed. See docs/GUIDE.md section 3.",
     ),
     run_id: str = typer.Option("", "--run"),
 ):
@@ -253,15 +256,27 @@ def _do_assess(
     checklist = yaml.safe_load(checklist_file.read_text())
     evidence_dir = results_dir / "evidence"
 
-    names: list[str] = []
-    if approved_names:
-        names = [ln.strip() for ln in approved_names.read_text().splitlines() if ln.strip()]
+    try:
+        names = ApprovedNames.load(approved_names)
+    except FileNotFoundError:
+        # Not a crash, and not a silent empty list either: the operator asked
+        # for point 3's name half to be checked, so say why it cannot be.
+        raise typer.BadParameter(
+            f"approved-names file not found: {approved_names}", param_hint="--approved-names"
+        ) from None
 
     run = {
         "run_id": run_id or datetime.now(UTC).strftime("%Y-%m-%d-%H%M"),
         "generated_at": datetime.now(UTC).isoformat(timespec="seconds"),
         "checklist": checklist,
-        "approved_names_supplied": bool(names),
+        "approved_names": {
+            "supplied": names.supplied,
+            "scoped": names.scoped,
+            "count": len(names.unscoped) + sum(len(v) for v in names.per_node.values()),
+            "source": str(approved_names) if approved_names else "",
+        },
+        # Kept for readers of older result files.
+        "approved_names_supplied": names.supplied,
         "nodes": [],
     }
 
@@ -272,14 +287,14 @@ def _do_assess(
             missing.append(node["id"])
             continue
         ev = load_evidence(evidence_dir, node["id"])
-        results = checks.run_all(ev, names or None, node.get('eosc_page', ''))
+        results = checks.run_all(ev, names, node.get('eosc_page', ''))
         # When the capture went two hops deep, also assess it as if it had not,
         # so the report can show what the second hop changed rather than
         # asserting it was worth it.
         shallow_results = None
         if ev.crawl_depth >= 2:
             shallow_results = checks.run_all(
-                without_depth_2(ev), names or None, node.get('eosc_page', '')
+                without_depth_2(ev), names, node.get('eosc_page', '')
             )
         run["nodes"].append(
             {

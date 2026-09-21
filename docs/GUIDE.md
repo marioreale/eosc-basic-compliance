@@ -173,16 +173,26 @@ Tripartite-approved node name**. The repository ships no list of those names,
 because there is no authoritative machine-readable source for them — they come
 from the Tripartite governance process, not from a file you can fetch. So you
 supply the list yourself, and until you do, the name half of point 3 is not
-assessed at all.
+assessed at all. Both reports now say so in as many words, so a `REVIEW` on
+point 3 cannot be misread as "the name was checked and was fine".
 
-The format is as plain as it looks: a text file, one name per line. Blank lines
-are skipped and surrounding whitespace is stripped.
+One entry per line. Blank lines and `#` comments are ignored; write `\#` for a
+literal hash in a name.
 
 ```text
-EOSC Node - BBMRI-ERIC
-EOSC Node EUDAT
-EGI Node
+# Tripartite-approved node names, as each page writes them. 21 September 2026.
+bbmri-eric: EOSC Node - BBMRI-ERIC
+eudat:      EOSC Node EUDAT
+egi:        EGI Node
 ```
+
+**Prefix each name with the node id from `nodes.yaml`.** That ties the name to
+the node it belongs to, and it is the difference between the tool reporting
+"this page shows this node's approved name" and the much weaker "some approved
+name appears somewhere on this page". A bare name with no `id:` still works and
+still applies to every node, but the evidence line then says explicitly that it
+does not establish whose name was found. Use the scoped form unless you have a
+reason not to.
 
 Note the third line. Nodes do not share a naming convention on their own pages:
 that one writes `EGI Node`, not `EOSC Node EGI`. Take each name from the
@@ -199,42 +209,36 @@ uv run basic-check assess --approved-names approved-names.txt
 uv run basic-check run --approved-names approved-names.txt
 ```
 
-The file is not committed, and should not be: the list is an input you are
-accountable for, not a project artefact.
+`approved-names*.txt` is in `.gitignore`, deliberately: the list is an input you
+are accountable for, not a project artefact. A path that does not exist is a
+clean error rather than an empty list, because silently checking nothing is the
+one outcome worse than stopping.
 
-**What matters about it, all verified against the committed evidence:**
+**How a name is matched:**
 
 | Behaviour | Consequence |
 |---|---|
-| Comment lines are **not** supported | A leading `#` line is read as a node name. Do not annotate the file. |
-| Matching is an unanchored, case-insensitive **substring** of the page text | Not a whole-word or whole-phrase match. See the warning below. |
-| The list is matched as a **whole**, not per node | Any name matching anywhere on any node's page satisfies that node's evidence line. The tool does not know which name belongs to which node. |
+| Matching is case-insensitive and **literal** | Regular-expression characters in a name are matched as themselves. |
+| A name must not be part of a longer word | `EGI` matches "the EGI Foundation" but not "strat**egi**c". A hyphen counts as part of a word, so `BBMRI` does not match `BBMRI-ERIC`. |
+| Whitespace inside a name matches any run of whitespace | A name that wraps across two lines on the page still matches. |
+| Other punctuation must be present exactly | `EOSC Node - BBMRI-ERIC` matches that page; `EOSC Node BBMRI-ERIC` without the dash does not. |
+| The first match in file order is reported | Put the preferred form first if a node has more than one approved name. |
 | The name never changes the verdict | Point 3 stays `MANUAL_REVIEW` either way. The list adds an evidence line for the reviewer; it cannot produce a `PASS`. |
-| Only the first match is reported | If several names hit, the evidence names one of them. |
+| A page that was never fetched is never reported as missing the name | GÉANT answers HTTP 403 with no body; the evidence says the name was not looked for, not that it is absent. |
 
-**⚠️ Short names match inside longer words.** With `EGI` in the list, the
-BBMRI-ERIC page reports `approved name matched: EGI` — the hit is inside
-"strat**egi**c". The Data Terra page matches the same way, inside
-"Norw**egi**an". Neither page contains the EGI node name at all.
+The word-boundary rule is a fix, not a feature: an earlier version matched a
+bare substring, so `EGI` in the list reported a match on the BBMRI-ERIC page
+(inside "strat**egi**c") and on Data Terra (inside "Norw**egi**an"). Neither
+page names the EGI node. Write names in full anyway — it is the cheaper habit —
+and read *which* string matched rather than the bare fact of a match.
 
-This is a defect in the check, not a finding about those nodes. Two practical
-consequences:
+If a name you expect does not match, read `full_text` in that node's evidence
+file before assuming the page is at fault.
 
-- **Write names in full**, as they appear on the page: `EOSC Node EGI` rather
-  than `EGI`. Longer strings do not collide by accident.
-- **Read the matched name, never just the fact of a match.** The evidence line
-  names which string hit, precisely so the reviewer can catch a match like the
-  one above. A report that only said "matched" would be worse than no list.
-
-Write the name exactly as it appears in the page text, punctuation included:
-`EOSC Node - BBMRI-ERIC` matches that page, while `EOSC Node BBMRI-ERIC`
-without the dash does not. If a name you expect does not match, read
-`full_text` in that node's evidence file before assuming the page is at fault.
-
-Whether you supplied a list is recorded in `results.json` as
-`approved_names_supplied`, so a report cannot quietly imply the name was
-checked when it was not. Note that this flag is in the JSON only — the HTML and
-Markdown reports do not currently display it.
+What you supplied is recorded in `results.json` under `approved_names` —
+whether a list was given, whether it was scoped, how many names, and the path
+it came from — and summarised in one line at the top of both the HTML and
+Markdown reports.
 
 ---
 
@@ -286,7 +290,7 @@ accept the option.
 
 | Option | Where | Effect |
 |---|---|---|
-| `--approved-names path` | `assess`, `run` | Text file, one Tripartite-approved node name per line. **Without it, point 3's name requirement cannot be checked at all.** See section 3 for the format and its pitfalls. |
+| `--approved-names path` | `assess`, `run` | Text file of Tripartite-approved node names, one per line, ideally as `node-id: Name`. **Without it, point 3's name requirement is not assessed at all.** See section 3 for the format. |
 | `--checklist path` | `assess`, `run`, `points` | Use a different checklist version. |
 | `--run LABEL` | `assess`, `run` | Label stored with the run, for telling one report from another. |
 | `--results path` | all but `points` | Write somewhere other than `results/`. |
@@ -509,8 +513,10 @@ refusing requests.
 | Everything is review for one node | The capture probably did not render. Look at `evidence/screenshots/<id>.png` — that is exactly what the render gate is protecting you from. |
 | `test_checklist.py` fails on a hash | The checklist PDF changed. That is the test doing its job: transcribe the new version into a new YAML file rather than adjusting the hash. |
 | A run takes far longer than expected | `--delay` defaults to 2.0s between hosts and slow nodes are waited on. This is intentional. |
-| Point 3 reports `NONE of the supplied approved names appear` for a node you know is named correctly | The match is a literal substring of the body text and the `<title>` is not searched. Read `full_text` in that node's evidence file and copy the name as the page writes it, punctuation included. Section 3. |
-| Point 3 reports a matched name that belongs to a different node | A short name matched inside an ordinary word. Write names in full. Section 3. |
+| Point 3 reports `NONE of the ... approved name(s) ... appear` for a node you know is named correctly | The `<title>` is not searched, and a name is not matched inside a longer word. Read `full_text` in that node's evidence file and copy the name as the page writes it, punctuation included. Section 3. |
+| Point 3 says `no approved name was supplied for this node` | Your list is scoped and has no `node-id:` line for that node. Add one, or use a bare name to cover every node. Section 3. |
+| Point 3 says a name `was not looked for` | The page returned no body (GÉANT answers 403). Fix the collection first; the name says nothing until there is a page to read. |
+| A match is reported `from the unscoped list` and you want a firmer claim | Prefix each name with its node id so it is only matched against that node. Section 3. |
 
 ---
 

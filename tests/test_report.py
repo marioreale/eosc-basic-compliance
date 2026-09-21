@@ -296,3 +296,50 @@ def test_the_html_header_does_not_count_second_hop_pages_as_first_hop(tmp_path):
     assert "plus 1 checklist-relevant link one level down" in out
     assert "then 2 pages one hop further out" in out
     assert "depth 0" not in out, "no node here was collected at depth 0"
+
+
+# --- the approved-name list is reported, including its absence ---------------
+
+
+def _with_names(info) -> dict:
+    run = run_dict([_node("A", [("4", "PASS"), ("6", "PASS")])])
+    if info is not None:
+        run["approved_names"] = info
+    return run
+
+
+def test_an_absent_name_list_is_stated_not_left_to_be_inferred(tmp_path):
+    """A REVIEW on point 3 must not be read as "the name was checked and is fine"."""
+    run = _with_names({"supplied": False, "scoped": False, "count": 0, "source": ""})
+    for out in (render(run, tmp_path), _html(run, tmp_path)):
+        assert "No approved-name list was supplied" in out
+        assert "not assessed at all" in out
+
+
+def test_a_scoped_list_is_described_as_tied_to_nodes(tmp_path):
+    run = _with_names({"supplied": True, "scoped": True, "count": 9, "source": "n.txt"})
+    for out in (render(run, tmp_path), _html(run, tmp_path)):
+        assert "9 approved node name(s) were supplied, tied to specific nodes" in out
+
+
+def test_an_unscoped_list_is_reported_with_its_weaker_claim(tmp_path):
+    run = _with_names({"supplied": True, "scoped": False, "count": 3, "source": "n.txt"})
+    assert "not that it is that node's own name" in render(run, tmp_path)
+    # The HTML renderer escapes the apostrophe, so match the part either shares.
+    for out in (render(run, tmp_path), _html(run, tmp_path)):
+        assert "unscoped list" in out
+        assert "own name" in out
+
+
+def test_an_older_result_file_without_the_detail_still_renders(tmp_path):
+    """Result files written before this field existed must not crash the renderer."""
+    run = _with_names(None)
+    run["approved_names_supplied"] = True
+    for out in (render(run, tmp_path), _html(run, tmp_path)):
+        assert "approved node name(s) were supplied" in out
+
+
+def test_a_result_file_with_no_name_information_at_all_still_renders(tmp_path):
+    run = _with_names(None)
+    for out in (render(run, tmp_path), _html(run, tmp_path)):
+        assert "No approved-name list was supplied" in out

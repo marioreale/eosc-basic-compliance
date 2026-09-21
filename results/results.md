@@ -1,8 +1,10 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `2026-09-21-1308` · 2026-09-21T13:08:13+00:00 · 9 nodes · one page request per node plus 22 followed link(s), then 14 second-hop page(s) (depth 2).
+Run `2026-09-21-1308` · 2026-09-21T16:40:42+00:00 · 9 nodes · one page request per node plus 22 followed link(s), then 14 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
+
+**Node names.** No approved-name list was supplied, so the name half of point 3 was not assessed at all: a REVIEW there says nothing about the node name.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
 

@@ -9,6 +9,7 @@ from __future__ import annotations
 
 from basic_check import checks
 from basic_check.fetch import Control, Image, Link, PageEvidence
+from basic_check.names import parse_approved_names
 
 
 def realistic(links: list[Link], **kw) -> PageEvidence:
@@ -128,12 +129,65 @@ def test_point3_absence_of_logo_markup_is_not_stated_as_proof():
     assert "NOT proof of absence" in r.message
 
 
+def _logo_ev(**kw):
+    return ev(images=[Image(src="https://cdn.example/eosc.svg", alt="EOSC")], **kw)
+
+
 def test_point3_reports_when_no_approved_name_matches():
     r = checks.check_3(
-        ev(images=[Image(src="https://cdn.example/eosc.svg", alt="EOSC")], full_text="Some Node" * 50),
+        _logo_ev(full_text="Some Node" * 50),
         approved_names=["EOSC Node Poland", "EOSC Node Finland"],
     )
-    assert any("NONE of the supplied approved names" in e for e in r.evidence)
+    assert any("NONE of the 2 approved name(s)" in e for e in r.evidence)
+
+
+def test_point3_says_nothing_about_names_when_no_list_is_supplied():
+    r = checks.check_3(_logo_ev(full_text="EOSC Node Finland"))
+    assert not any("approved name" in e for e in r.evidence)
+
+
+def test_point3_does_not_match_a_short_name_inside_a_longer_word():
+    """Regression: "EGI" matched "strategic" on the BBMRI-ERIC page."""
+    r = checks.check_3(
+        _logo_ev(full_text="one of Europe's strategic research priorities"),
+        approved_names=["EGI"],
+    )
+    assert any("NONE of the" in e for e in r.evidence)
+
+
+def test_point3_marks_an_unscoped_match_as_not_establishing_ownership():
+    r = checks.check_3(
+        _logo_ev(full_text="Welcome to the EGI Node"),
+        approved_names=["EGI Node"],
+    )
+    note = next(e for e in r.evidence if "approved name" in e)
+    assert "unscoped" in note
+    assert "does not establish" in note
+
+
+def test_point3_reports_a_scoped_match_plainly():
+    names = parse_approved_names("t: EGI Node\n")  # the test evidence has node_id "t"
+    r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=names)
+    assert any("scoped to this node" in e for e in r.evidence)
+
+
+def test_point3_will_not_borrow_another_nodes_scoped_name():
+    """Regression: any name matching any page satisfied that page."""
+    names = parse_approved_names("somewhere-else: EGI Node\n")
+    r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=names)
+    assert any("no approved name was supplied for this node" in e for e in r.evidence)
+
+
+def test_point3_verdict_is_unchanged_by_the_name_list():
+    """The list adds evidence for a reviewer; it never decides the point."""
+    page = _logo_ev(full_text="Welcome to the EGI Node")
+    assert checks.check_3(page).verdict == checks.check_3(page, ["EGI Node"]).verdict
+    assert checks.check_3(page, ["Nothing Like It"]).verdict == checks.MANUAL_REVIEW
+
+
+def test_point3_names_are_reported_even_when_no_logo_is_found():
+    r = checks.check_3(ev(images=[], full_text="Welcome to the EGI Node"), approved_names=["EGI Node"])
+    assert any("approved name matched" in e for e in r.evidence)
 
 
 # --- point 5b / 5c: AUP and UAP are distinct documents -----------------------
@@ -373,3 +427,12 @@ def test_an_empty_document_with_stray_links_is_still_distrusted():
               main_text="Loading", full_text="Loading")
     assert checks.link_collection_warning(page)
     assert checks.check_4(page).verdict == checks.MANUAL_REVIEW
+
+
+def test_point3_does_not_claim_a_name_is_absent_from_a_page_it_never_read():
+    """GEANT answers 403 with no body: "none appear" would be a claim about nothing."""
+    r = checks.check_3(ev(full_text="", http_status=403), approved_names=["EOSC Node - GEANT"])
+    note = next(e for e in r.evidence if "approved name" in e)
+    assert "not looked for" in note
+    assert "403" in note
+    assert "NONE" not in note

@@ -328,8 +328,14 @@ take thirty seconds instead of five minutes.
    case-insensitive regex `eosc`.
 2. For each hit, record the kind (`img` or `inline SVG`) and a label, preferring
    `alt`, then `aria_label`, then `title`, then the filename.
-3. If `--approved-names` supplied a list, test each name against `full_text` and
-   record either the first match or "NONE of the supplied approved names appear".
+3. If `--approved-names` supplied a list, take the names that apply to *this*
+   node — those written as `node-id: Name`, then any unscoped ones — and test
+   each against `full_text` in file order. Matching is literal, case-insensitive
+   and boundary-aware: internal whitespace matches any run of whitespace, but a
+   name is never matched inside a longer word or hyphenated token. Record the
+   first match, and whether it was scoped to this node. If the body is empty
+   (a 403, say), record that the name was not looked for rather than that it is
+   absent.
 
 | # | Condition | Verdict |
 |---|---|---|
@@ -345,8 +351,14 @@ apart:
   have.
 - **A missing input.** The tool has no authoritative list of Tripartite-approved
   node names. Without `--approved-names`, the name half of the point is not
-  assessed at all, and `results.json` records `approved_names_supplied: false` so
-  the report cannot quietly imply otherwise.
+  assessed at all; `results.json` records the list's status under
+  `approved_names`, and both reports state it in prose, so a `REVIEW` here cannot
+  be misread as a checked-and-clean name.
+- **A weaker claim from an unscoped list.** A name given without a `node-id:`
+  prefix applies to every node, so a match shows the string is on the page but
+  not that it is that node's own name. The evidence line says which of the two
+  claims it is making. Scoping each name to its node is what makes the stronger
+  claim available.
 
 Branch 1 also over-matches badly — see section 6.
 
@@ -518,6 +530,17 @@ The same regex has no host-awareness at all, so `not-eosc.eu` and `myeosc.eu`
 also match. Point 4 uses `_is_host` and does not have this problem; point 3 does
 not use it.
 
+**The approved-name match used to over-match too, and was fixed.** Recorded here
+because the run of 21 September 2026 that produced the results in this document
+was made with the old behaviour. The name was matched as a bare substring of the
+page body, so a short name matched inside ordinary words: `EGI` in the list
+reported a match on the BBMRI-ERIC page (inside "strat**egi**c") and on Data
+Terra (inside "Norw**egi**an"), neither of which names the EGI node. The list
+was also matched as a whole, so any name matching any page satisfied that page's
+evidence line. Matching is now boundary-aware, and names can be scoped to a node
+with a `node-id:` prefix. No verdict changed in either version, because the name
+never decides point 3 — but the evidence line did, and it was wrong.
+
 **Nothing about visibility is captured**, as set out in section 3. Point 3 cannot
 be closed automatically under the current evidence model, regardless of how the
 matching is fixed.
@@ -547,7 +570,9 @@ the HTML report itself does not shout about it.
 ## 7. Reading the output
 
 `results.json` carries `run_id`, `generated_at`, the full `checklist` as loaded,
-`approved_names_supplied`, and `nodes`. Each node carries `id`, `name`, `url`,
+`approved_names` (whether a list was supplied, whether it was scoped, how many
+names, and its path — plus the older `approved_names_supplied` flag, kept for
+readers of earlier result files), and `nodes`. Each node carries `id`, `name`, `url`,
 `ad_hoc`, a `fetch` summary (status, final URL, robots note, screenshot, crawl
 depth, every child with its `selected_for` and outcome, and `children_skipped`),
 `results`, and `results_depth_1` when depth 2 was used.
@@ -567,5 +592,5 @@ PASS or FAIL on every line would look more useful and be worth considerably less
 
 *Source checklist: Node Landing Page Verification Checklist v3.0, 15 September
 2026, transcribed to `checklist/v3.0.yaml` alongside the source document.
-Implementation: `src/basic_check/{fetch,patterns,checks,report,cli}.py`.
+Implementation: `src/basic_check/{fetch,patterns,checks,names,report,cli}.py`.
 Repository: <https://github.com/marioreale/eosc-basic-compliance>.*

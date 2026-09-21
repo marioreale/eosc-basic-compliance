@@ -1,6 +1,6 @@
 {
   "run_id": "2026-09-21-1308",
-  "generated_at": "2026-09-21T13:08:13+00:00",
+  "generated_at": "2026-09-21T16:40:42+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
@@ -89,6 +89,12 @@
         "decidable_note": "Statistical language detection over the page's main text, cross-checked against the declared lang attribute. Both are reported, because a mismatch between what a page declares and what it actually contains is itself worth seeing."
       }
     ]
+  },
+  "approved_names": {
+    "supplied": false,
+    "scoped": false,
+    "count": 0,
+    "source": ""
   },
   "approved_names_supplied": false,
   "nodes": [
