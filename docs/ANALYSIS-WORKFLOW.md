@@ -186,7 +186,7 @@ if ev.error:  ->  ERROR
 ```
 
 So a node whose landing page could not be fetched at all returns ten `ERROR`
-cells, never nine passes and a failure.
+cells, never a mix of passes and a failure.
 
 ### Shared helpers
 
@@ -645,7 +645,7 @@ a binary extension, so an AUP published as a PDF is recorded as a pointer
 accessibility, and the tool cannot confirm it for these.
 
 **`--only` used to narrow the run in place — fixed, with a cost.** Assessing a
-subset rewrote the shared report, so a one-node table replaced the nine-node one
+subset rewrote the shared report, so a one-node table replaced the full one
 and looked complete. `--only` now narrows only which sites are fetched; the
 report written to the default results directory still covers every node, and the
 requested subset is recorded in a top-level `selection` list. An explicit
@@ -664,7 +664,7 @@ used to copy the whole of `results.md` into `$GITHUB_STEP_SUMMARY`, which on a
 public repository is world-readable. The verdicts are already public — the report
 is committed — so nothing leaked that was not already published; but that page
 is produced automatically from an unreviewed run and carries the repository's
-name, which makes a table of FAILs against nine named organisations read as a
+name, which makes a table of FAILs against named organisations read as a
 finding rather than a draft. The summary now publishes counts only, labelled as
 unreviewed, and points at the artifact for the per-node detail. It also refuses
 to summarise at all unless the check step succeeded, because `results.json` is

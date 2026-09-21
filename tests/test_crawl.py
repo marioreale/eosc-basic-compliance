@@ -3,7 +3,7 @@
 Two distinct risks are guarded here.
 
 The first is load. "Follow one level" on a page with 167 links means 167
-requests to someone else's server, and nine nodes would be ~1000. The selection
+requests to someone else's server, and a federation of nodes would be ~1000. The selection
 rules exist to keep that to single digits, so they are pinned.
 
 The second is the opposite of the usual bias: crawling makes it *easier* to say
@@ -13,6 +13,8 @@ a 404 policy link fails, and a navigation stub is not a policy.
 """
 
 from __future__ import annotations
+
+from pathlib import Path
 
 from basic_check import checks
 from basic_check.fetch import (
@@ -433,13 +435,19 @@ def test_a_child_yields_at_most_the_per_child_cap():
     assert len(picked) <= MAX_GRANDCHILDREN_PER_CHILD
 
 
-def test_depth_2_costs_are_bounded_for_a_nine_node_run():
+def test_depth_2_costs_are_bounded_for_the_configured_federation():
     """The whole point of the budget: a second hop must not become a crawl.
 
     Refuse to ship a default that could fan out to hundreds of requests against
-    other people's production sites.
+    other people's production sites. The node count is read from nodes.yaml, so
+    adding nodes re-checks the bound instead of leaving it asserted about a
+    federation size that no longer exists.
     """
-    worst_case = 9 * (1 + MAX_CHILDREN + MAX_CHILDREN * MAX_GRANDCHILDREN_PER_CHILD)
+    import yaml
+
+    root = Path(__file__).resolve().parents[1]
+    n_nodes = len(yaml.safe_load((root / "nodes.yaml").read_text(encoding="utf-8"))["nodes"])
+    worst_case = n_nodes * (1 + MAX_CHILDREN + MAX_CHILDREN * MAX_GRANDCHILDREN_PER_CHILD)
     assert worst_case > DEFAULT_FETCH_BUDGET, "the budget must actually bind"
     assert DEFAULT_FETCH_BUDGET <= 120
 

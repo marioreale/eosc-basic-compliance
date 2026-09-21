@@ -74,7 +74,7 @@ when the point is to reproduce someone else's result. CI uses `--locked` for the
 same reason (section 8).
 
 At this point you can already run the test suite, read the checklist, and
-regenerate the committed nine-node report from the evidence in the repository.
+regenerate the committed report from the evidence in the repository.
 To **fetch pages**, you also need a browser:
 
 ```bash
@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-All 213 tests still pass, while `collect` fails with Playwright's
+All 225 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 213 passed
+uv run pytest -q                  # expect: 225 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -169,7 +169,7 @@ remain reproducible against the rules that produced them.
 ### The approved-names file — `--approved-names`
 
 Checklist point 3 has two halves: an EOSC logo, and **the official
-Tripartite-approved node name**. The official list of those nine names is
+Tripartite-approved node name**. The official list of those names is
 committed to the repository at `checklist/approved-names.txt`, and is used
 automatically. You do not have to supply anything for the name half to be
 assessed.
@@ -220,7 +220,8 @@ EGI Node                             # applies to every node
 the node it belongs to, and it is the difference between the tool reporting
 "this page shows this node's approved name" and the much weaker "some approved
 name appears somewhere on this page". The committed official list is *not*
-scoped — it arrived as nine bare names — so runs using the default make the
+scoped — it arrived as bare names, with nothing tying a name to a node — so
+runs using the default make the
 weaker claim, and say so. If you need the stronger one, copy the file, add the
 `node-id:` prefixes, and pass it with `--approved-names`.
 
@@ -284,8 +285,8 @@ described here so you can judge the results rather than trust them:
 
 #### A match is not proof of the right name
 
-The default list is **unscoped**: it is nine names, and any of the nine matching
-anywhere in a page's body counts. So a match tells you an approved name appears
+The default list is **unscoped**: any name in it, matching anywhere in a page's
+body, counts for any node. So a match tells you an approved name appears
 on the page — not that it is *that* page's own name. A node listing its partners
 would match on a partner's name.
 
@@ -325,8 +326,8 @@ sha256sum checklist/approved-names.txt
 #### What the official list actually finds
 
 Run against the evidence collected on 21 September 2026, the committed list
-matches **two of the nine** nodes, and both write the name with a separator the
-official list does not use:
+matches **two of the nine** nodes assessed that day, and both write the name
+with a separator the official list does not use:
 
 | Node | Outcome |
 |---|---|
@@ -337,8 +338,15 @@ official list does not use:
 | Finland, EGI, EBRAINS RI | no match, and the phrase `EOSC Node` does not occur in the body |
 | GÉANT | not looked for: the page answered HTTP 403 with no body in this run |
 
+CERN and Czechia were added to `nodes.yaml` after that run and are not in the
+table above. Collected on 21 September 2026 at 19:03 UTC, Czechia **matches**,
+writing the name `EOSC Node Czechia` where the list writes `EOSC Node | Czechia`
+— a third node found by the separator-tolerant rule rather than by a literal
+match. CERN does not match: its landing page is a sign-in endpoint carrying 127
+characters of text, so there is almost nothing to match against.
+
 **This is a finding to review, not a verdict.** Point 3 remains
-`MANUAL_REVIEW` for all nine either way. A non-match means the page body does
+`MANUAL_REVIEW` for every node either way. A non-match means the page body does
 not carry the approved string — which may mean the page is wrong, that the name
 is shown in an image or the `<title>` rather than in text, or that the official
 list is out of date. Deciding which is the reviewer's job; the tool's job is to
@@ -349,6 +357,87 @@ does appear, so you know where to look.
 If a name you expect does not match, read `full_text` in that node's evidence
 file before assuming the page is at fault.
 
+### Adding a node
+
+Three files change together, and the test suite refuses to let them disagree.
+Nothing is generated or auto-discovered: every value below is typed in by a
+human, on purpose, so that the report can say where it came from.
+
+**1. `nodes.yaml`** — add the entry. Put the Node Landing Page in `url`, taken
+from the **EOSC EU Node Contributors Dashboard** field "Website address"
+(section 1.2, field 6), not from a search engine and not from the node's
+general homepage. That registered URL is what the checklist defines as the Node
+Landing Page, so if what you were sent differs from what is registered, the
+registered value wins.
+
+Then look up `eosc_page` on the live index at
+[eosc.eu/building-the-eosc-federation/](https://eosc.eu/building-the-eosc-federation/)
+and copy the slug. Do not guess it from the node's name: the slugs are not
+formed consistently — Czechia is `eosc-node-czechia`, but the Digital Twin of
+the Ocean is `eosc-node-digital-twin-of-the-ocean` while its node id here is
+`eosc-dto`. A wrong slug makes point 4 look for a page that does not exist, and
+the node fails a requirement it may well satisfy.
+
+**2. `checklist/approved-names.txt`** — add the node's approved name, exactly as
+the Tripartite list writes it, including the `EOSC Node | ` prefix. This file is
+the official list as circulated; do not edit the wording to match what a page
+happens to say. If the official list has not yet been updated for the new node,
+leave this file alone and say so — a name absent from the official list is a
+real finding, and inventing an entry would hide it.
+
+**3. `checklist/approved-names-scoped.txt`** — add the same name, prefixed with
+the node id you chose in step 1: `cern: EOSC Node | CERN`. The names must match
+the official file character for character; only the id prefix is added here.
+
+Then run the suite **before** running the checker:
+
+```bash
+uv run pytest -q
+```
+
+The guards in `tests/test_nodes.py` and `tests/test_checklist.py` will tell you
+exactly which file you missed — a node with no scoped name, an id that is not a
+usable filename, a URL that is not `https`, an `eosc_page` that is not on
+`eosc.eu` or that points at the federation index rather than the node's own
+entry, two nodes sharing a landing page, or a name present in one list and not
+the other. These fail in milliseconds, before anything touches the network.
+
+Only then collect the new node. Fetch just the node you added, rather than
+re-running the whole federation:
+
+```bash
+uv run basic-check collect --only <new-id> --delay 2.0
+uv run basic-check assess
+```
+
+`assess` reads evidence per node from disk, so a node configured but not yet
+collected is **not** silently skipped: the run prints `N node(s) have no
+evidence and were NOT assessed`, names them, and **exits 2** while still
+writing the report for the rest. That exit code is the signal that the published
+report is incomplete — do not commit a report produced by a run that exited 2
+unless you intend to publish a partial one and say so.
+
+### If you maintain your own copy elsewhere (GitLab, or a fork)
+
+The three files above are the whole of it, and none of them is specific to
+GitHub. `nodes.yaml` and both `checklist/*.txt` files are ordinary
+version-controlled text at the repository root; edit them on whatever host you
+use, in a branch or straight on the default branch, and the checker behaves
+identically. There is no registry, no database, no service to notify, and no
+value cached anywhere else in the repository.
+
+Two host-specific things do **not** carry over:
+
+- `.github/workflows/` is GitHub Actions only. On GitLab you would need a
+  `.gitlab-ci.yml` expressing the same two jobs — install with `uv sync
+  --locked`, run `pytest`, and optionally run the checker on manual trigger
+  only. Keep the manual-trigger restraint: a scheduled compliance job means
+  fetching other organisations' production websites on a timer.
+- The committed `results/` directory is this repository's published output. A
+  separate copy will produce its own, and the two will diverge as the sites
+  change. Decide which copy is authoritative before both are quoted in a
+  meeting.
+
 ---
 
 ## 4. Running it
@@ -357,7 +446,7 @@ file before assuming the page is at fault.
 uv run basic-check run
 ```
 
-That is the whole thing: fetch all nine nodes, apply the checklist, write the
+That is the whole thing: fetch every configured node, apply the checklist, write the
 reports. It takes a few minutes, most of it spent deliberately waiting between
 requests.
 
@@ -410,7 +499,7 @@ accept the option.
 ### `--only` narrows the fetch, not the report
 
 Earlier versions of this tool had a real defect here, and this guide documented
-it as a warning: `assess --only data-terra` replaced the nine-node matrix in
+it as a warning: `assess --only data-terra` replaced the full matrix in
 `results/` with a single row, and the resulting `index.html` looked like a
 federation report that covered one node. A short table is indistinguishable from
 a complete one.
@@ -420,7 +509,7 @@ report written to `results/` still covers every node in `nodes.yaml`:
 
 ```bash
 uv run basic-check assess --only data-terra
-# One node re-assessed from fresh evidence; results.json still has all nine.
+# One node re-assessed from fresh evidence; results.json still has every node.
 ```
 
 The rows you did not select are reused from the evidence already on disk, so the
@@ -582,7 +671,7 @@ a verdict surprises you.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 213 tests, offline, a few seconds
+uv run pytest -q                    # 225 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -596,6 +685,7 @@ uv run ruff check src tests         # lint
 | `test_cli.py` | 28 | Command wiring, options, ad hoc `--url` isolation, and that `--only` does not shrink the published report. |
 | `test_crawl.py` | 34 | Link selection, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
+| `test_nodes.py` | 12 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
 | `test_report.py` | 25 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, table-breaking input. |
 
 The suite makes no network requests and needs no browser, which is why CI runs
@@ -640,11 +730,11 @@ step saying the lockfile needs updating, that is the guard working — run
 `uv lock` and commit the result.
 
 `.github/workflows/compliance.yml` is **manual dispatch only** — deliberately.
-A scheduled compliance run would mean fetching nine production websites on a
+A scheduled compliance run would mean fetching every node's production website on a
 timer, which is exactly the behaviour that got GÉANT's bot protection to start
 refusing requests.
 
-It takes three inputs: `only` (comma-separated node ids, empty for all nine),
+It takes three inputs: `only` (comma-separated node ids, empty for every node),
 `depth` (`1`, `0` or `2`) and `delay` (seconds between nodes). `depth: 2` was
 added after a web run could not reproduce the published depth-2 report — the
 input had offered only `1` and `0`, so the workflow could not produce the report
@@ -662,7 +752,7 @@ Its run summary publishes **counts only** — how many nodes, and the tally of
 verdicts — labelled as unreviewed automated output, with the per-node detail
 left to the `compliance-results` artifact. On a public repository the run
 summary is world-readable, and while the committed report is public anyway, a
-table of FAILs against nine named organisations generated automatically under
+table of FAILs against named organisations generated automatically under
 the repository's name reads as a finding rather than as a draft. The summary
 also declines to report anything unless the check step succeeded, because
 `results.json` is committed: a failed run would otherwise have read the previous
@@ -694,7 +784,7 @@ number.
 
 ## 10. Extending it
 
-- **Add a node:** append to `nodes.yaml` with its `eosc.eu` slug from the live index.
+- **Add a node:** three files together — `nodes.yaml`, `checklist/approved-names.txt` and `checklist/approved-names-scoped.txt` — then `pytest`, then `collect --only <id>`. Full procedure and failure modes in [Adding a node](#adding-a-node) in section 3.
 - **Add a checklist version:** new YAML beside `v3.0.yaml`, with `source_file` and `source_sha256`; do not edit an existing version in place.
 - **Add a check:** implement in `src/basic_check/checks.py`, write the failing test first, and prefer returning `MANUAL_REVIEW` with good evidence over a confident guess. Document its branches in [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md) — a check whose decision procedure is not written down cannot be reviewed.
 - **Change the report:** `src/basic_check/report.py` renders HTML, Markdown and CSV from one run dict. `tests/test_report.py` covers the matrix; add to it, because a rendering bug is silent.

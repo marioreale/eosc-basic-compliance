@@ -87,7 +87,7 @@ def test_eosc_page_with_several_urls_is_rejected():
 def test_url_runs_are_written_somewhere_else_by_default():
     """The decisive property. assess() rewrites results.md, index.html and
     results.json wholesale, so a one-off check sharing the directory would
-    replace the committed nine-node report with a one-row table."""
+    replace the committed multi-node report with a one-row table."""
     _, _, out = cli._resolve(["https://a.example/"], cli.DEFAULT_NODES, "", None)
     assert out == cli.DEFAULT_ONEOFF
     assert out != cli.DEFAULT_RESULTS
@@ -173,9 +173,28 @@ def _full_results_dir(tmp_path):
     return out
 
 
+def _nodes_covering(tmp_path, results_dir):
+    """A nodes.yaml listing exactly the nodes `results_dir` has evidence for.
+
+    Keeps these tests about `--only` rather than about how many nodes are
+    configured: a node added to nodes.yaml before its first `collect` has no
+    evidence, and `assess` then exits 2 by design.
+    """
+    import yaml
+
+    from basic_check.cli import ROOT
+
+    have = {p.stem for p in (results_dir / "evidence").glob("*.json")}
+    all_nodes = yaml.safe_load((ROOT / "nodes.yaml").read_text(encoding="utf-8"))["nodes"]
+    kept = [n for n in all_nodes if n["id"] in have]
+    path = tmp_path / "nodes-covered.yaml"
+    path.write_text(yaml.safe_dump({"nodes": kept}, allow_unicode=True), encoding="utf-8")
+    return path, len(kept)
+
+
 def test_only_does_not_shrink_the_report_in_the_published_directory(monkeypatch, tmp_path):
     """The defect: `assess --only egi` rewrote results/results.md, index.html and
-    results.json wholesale with a single row, so the published nine-node report
+    results.json wholesale with a single row, so the published multi-node report
     was replaced by a one-node report that looked complete. --only exists to
     limit which sites get fetched, not to narrow what is reported.
     """
@@ -184,11 +203,17 @@ def test_only_does_not_shrink_the_report_in_the_published_directory(monkeypatch,
     from basic_check import cli
 
     out = _full_results_dir(tmp_path)
+    nodes_file, expected = _nodes_covering(tmp_path, out)
     monkeypatch.setattr(cli, "DEFAULT_RESULTS", out)
-    res = CliRunner().invoke(cli.app, ["assess", "--only", "egi"], catch_exceptions=False)
+    res = CliRunner().invoke(
+        cli.app,
+        ["assess", "--only", "egi", "--nodes", str(nodes_file)],
+        catch_exceptions=False,
+    )
     assert res.exit_code == 0, res.output
     data = json.loads((out / "results.json").read_text())
-    assert len(data["nodes"]) == 9, [n["id"] for n in data["nodes"]]
+    assert len(data["nodes"]) == expected, [n["id"] for n in data["nodes"]]
+    assert expected > 1, "the test is vacuous unless several nodes could be dropped"
 
 
 def test_only_is_recorded_so_a_reader_knows_what_was_refetched(monkeypatch, tmp_path):
@@ -231,15 +256,21 @@ def test_a_full_run_records_no_selection(monkeypatch, tmp_path):
 
 def test_only_narrows_the_fetch_but_not_the_report_in_the_published_dir():
     """The two lists _resolve returns are the fetch list and the report list."""
+    import yaml
+
+    configured = yaml.safe_load(cli.DEFAULT_NODES.read_text(encoding="utf-8"))["nodes"]
     fetched, reported, out = cli._resolve(None, cli.DEFAULT_NODES, "egi", None)
     assert out == cli.DEFAULT_RESULTS
     assert [n["id"] for n in fetched] == ["egi"]
-    assert len(reported) == 9
+    # Every configured node, not a fixed count: the report must not shrink to
+    # the selection, however many nodes nodes.yaml happens to list.
+    assert len(reported) == len(configured)
+    assert len(reported) > 1
 
 
 def test_an_unknown_id_is_still_rejected_rather_than_quietly_widened():
     """Since --only no longer narrows the report, a typo could now look like it
-    worked: the full nine-node report would be produced and nothing fetched.
+    worked: the full report would be produced and nothing fetched.
     """
     with pytest.raises(typer.BadParameter):
         cli._resolve(None, cli.DEFAULT_NODES, "not-a-node", None)

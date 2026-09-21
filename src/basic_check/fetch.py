@@ -4,7 +4,7 @@ Deliberate constraints:
 
 * Depth is capped at 1 and breadth is capped hard. A landing page here carries
   84-167 links, so "follow one level" taken literally would mean ~1000 requests
-  across nine nodes. Instead only links that can actually settle a checklist
+  across every node. Instead only links that can actually settle a checklist
   point are followed -- an Acceptable Use Policy, a contact page -- up to
   MAX_CHILDREN per node. Everything else is recorded as seen-but-not-followed,
   so the report can distinguish "checked and absent" from "never looked".
@@ -48,7 +48,7 @@ SETTLE_MS = 1_200
 
 # Child pages are read for their text and their policy links, not judged on
 # visual presentation, so they get a lighter load than the landing page: no
-# networkidle wait and no screenshot. This keeps a nine-node run to minutes.
+# networkidle wait and no screenshot. This keeps a federation-wide run to minutes.
 CHILD_NAV_TIMEOUT_MS = 25_000
 CHILD_SETTLE_MS = 600
 MAX_CHILDREN = 8
@@ -505,7 +505,7 @@ async def _fetch_child(context, child: ChildPage) -> ChildPage:
         child.title = parsed["title"]
         child.lang_attr = parsed["lang_attr"]
         # Child text is capped: it is read for keywords and policy pointers, and
-        # nine nodes of full page text would bloat the committed evidence files.
+        # every node's full page text would bloat the committed evidence files.
         child.main_text = parsed["main_text"][:20_000]
         child.full_text = parsed["full_text"][:20_000]
         child.links = parsed["links"][:150]

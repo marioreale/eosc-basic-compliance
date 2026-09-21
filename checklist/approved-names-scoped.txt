@@ -1,6 +1,6 @@
 # Approved node names, tied to the node each belongs to.
 #
-# WHAT THIS IS. The same nine names as approved-names.txt, each prefixed with
+# WHAT THIS IS. The same names as approved-names.txt, each prefixed with
 # the node id from nodes.yaml. Use it with:
 #
 #     basic-check assess --approved-names checklist/approved-names-scoped.txt
@@ -8,7 +8,7 @@
 # WHY IT EXISTS. approved-names.txt is the official file as circulated, and it
 # is unscoped: every name applies to every node. A match against it proves the
 # string is somewhere on the page, not that it is *that page's own* name — with
-# nine names applying to nine nodes, a page carrying another node's approved
+# every name applying to every node, a page carrying another node's approved
 # name would satisfy its own evidence line. Scoping makes the stronger claim
 # available.
 #
@@ -24,6 +24,8 @@
 # the official file exactly as circulated and makes the weaker, honest claim.
 
 bbmri-eric: EOSC Node | BBMRI-ERIC
+cern: EOSC Node | CERN
+eosc-cz: EOSC Node | Czechia
 eosc-dto: EOSC Node | European DTO
 data-terra: EOSC Node | Data Terra
 eosc-fi: EOSC Node | Finland

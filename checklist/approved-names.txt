@@ -1,4 +1,6 @@
 EOSC Node | BBMRI-ERIC
+EOSC Node | CERN
+EOSC Node | Czechia
 EOSC Node | European DTO
 EOSC Node | Data Terra
 EOSC Node | Finland

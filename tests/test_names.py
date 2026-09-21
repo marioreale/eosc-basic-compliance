@@ -280,21 +280,43 @@ def test_find_returns_none_when_nothing_matches():
 
 
 def _run_assess(tmp_path, *extra):
-    """Assess the committed evidence into a scratch dir, and return results.json."""
+    """Assess the committed evidence into a scratch dir, and return results.json.
+
+    The node list is narrowed to the nodes the committed evidence actually
+    covers. `assess` exits 2 when a configured node has no evidence — correctly,
+    since an unassessed node must not pass silently — so without this these
+    name tests would break every time a node is added to nodes.yaml ahead of
+    its first collection, which is exactly the order a node gets added in.
+    """
     import json
     import shutil
 
+    import yaml
     from typer.testing import CliRunner
 
     from basic_check.cli import ROOT, app
 
     out = tmp_path / "results"
     shutil.copytree(ROOT / "results" / "evidence", out / "evidence")
+    nodes_file = _nodes_with_evidence(tmp_path, out / "evidence", ROOT, yaml)
     res = CliRunner().invoke(
-        app, ["assess", "--results", str(out), *extra], catch_exceptions=False
+        app,
+        ["assess", "--results", str(out), "--nodes", str(nodes_file), *extra],
+        catch_exceptions=False,
     )
     assert res.exit_code == 0, res.output
     return json.loads((out / "results.json").read_text())
+
+
+def _nodes_with_evidence(tmp_path, evidence_dir, root, yaml):
+    """A nodes.yaml holding only the nodes with an evidence file on disk."""
+    have = {p.stem for p in evidence_dir.glob("*.json")}
+    all_nodes = yaml.safe_load((root / "nodes.yaml").read_text(encoding="utf-8"))["nodes"]
+    kept = [n for n in all_nodes if n["id"] in have]
+    assert kept, f"no committed evidence matched nodes.yaml (found {sorted(have)})"
+    path = tmp_path / "nodes-with-evidence.yaml"
+    path.write_text(yaml.safe_dump({"nodes": kept}, allow_unicode=True), encoding="utf-8")
+    return path
 
 
 def test_the_official_list_is_committed_and_parses():
@@ -302,14 +324,29 @@ def test_the_official_list_is_committed_and_parses():
 
     assert DEFAULT_APPROVED_NAMES.exists(), "the official list must be in the repository"
     an = ApprovedNames.load(DEFAULT_APPROVED_NAMES)
-    assert len(an.unscoped) + sum(len(v) for v in an.per_node.values()) == 9
+    # Derived from the file rather than pinned to a number, so adding a node to
+    # the Tripartite list does not fail this test. What is being guarded is that
+    # every meaningful line becomes its own name — a parser regression that
+    # collapsed the file into one entry, or dropped the last line, would show
+    # here — not how many nodes the federation currently has.
+    meaningful = [
+        line
+        for line in DEFAULT_APPROVED_NAMES.read_text(encoding="utf-8").splitlines()
+        if line.strip() and not line.lstrip().startswith("#")
+    ]
+    assert len(an.unscoped) + sum(len(v) for v in an.per_node.values()) == len(meaningful)
+    assert len(meaningful) > 1, "a one-entry list would make the matching tests vacuous"
 
 
 def test_with_no_flag_the_committed_default_is_used(tmp_path):
     run = _run_assess(tmp_path)
     assert run["approved_names"]["supplied"]
     assert run["approved_names"]["default_used"]
-    assert run["approved_names"]["count"] == 9
+    from basic_check.cli import DEFAULT_APPROVED_NAMES
+
+    assert run["approved_names"]["count"] == len(
+        ApprovedNames.load(DEFAULT_APPROVED_NAMES).unscoped
+    )
 
 
 def test_a_user_file_overrides_the_default(tmp_path):
@@ -342,7 +379,7 @@ def test_the_default_still_errors_clearly_if_the_user_file_is_missing(tmp_path):
 def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     """Pinned against the committed evidence, so a matching change is visible.
 
-    Two of the nine pages carry their approved name in the body, both with a
+    Two of the pages carry their approved name in the body, both with a
     separator the official list does not use. This asserts the real-world
     outcome, not a synthetic one.
     """

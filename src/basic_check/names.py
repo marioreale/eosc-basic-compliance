@@ -48,7 +48,7 @@ _COMMENT = re.compile(r"(?<!\\)#.*$")
 _WORDISH = re.compile(r"[\w-]")
 
 # Separator glyphs that node pages use interchangeably in a name lockup. The
-# official list writes "EOSC Node | X"; of the nine nodes, one writes the pipe,
+# official list writes "EOSC Node | X"; of the nodes checked, one writes the pipe,
 # one writes a hyphen and an en dash, and one writes nothing at all. Matching
 # the pipe literally scored 0/9 against real pages.
 _SEPS = "|\u2013\u2014\u2012\u2015:/\u00b7\u2022-"
@@ -127,7 +127,7 @@ class ApprovedNames:
     def common_prefix(self, node_id: str) -> str:
         """The leading tokens every candidate name for this node shares.
 
-        The official list writes all nine names as "EOSC Node | X", so the
+        The official list writes every name as "EOSC Node | X", so the
         shared prefix is "EOSC Node". Derived rather than hardcoded, so a list
         using another convention gets the same treatment and a list with
         nothing in common gets none.
@@ -147,7 +147,7 @@ class ApprovedNames:
         """The shared prefix of the candidate names, and how often it occurs.
 
         "None of the approved names appear" is true but gives a reviewer
-        nowhere to look, and seven of the nine node pages do show *a* name.
+        nowhere to look, and most node pages do show *a* name.
         This points at the phrase to search for and says how many times it is
         there, which is checkable, rather than quoting a guess at the name.
 

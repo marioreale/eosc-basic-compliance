@@ -23,6 +23,13 @@ you want to install and run it yourself.
 
 ## What it found
 
+> **The published report covers nine nodes; `nodes.yaml` now configures eleven.**
+> CERN and Czechia were added to the configuration on 21 September 2026 and have
+> not been collected into `results/`, so they do not appear in the report or in
+> any count below. `basic-check assess` names them and exits 2 rather than
+> quietly omitting them. To publish them, run
+> `basic-check collect --only cern,eosc-cz` and then `assess`.
+
 Nine landing pages, all fetched 21 September 2026, 13:04–13:07 UTC, at `--depth 2`.
 Eight responded `HTTP 200`. `geant.org` returned `HTTP 403` to this run's
 anonymous request, redirecting to a Cloudflare bot-protection challenge, so
@@ -159,6 +166,26 @@ uv run basic-check run --depth 2     # follow one further hop (see below)
 uv run basic-check show data-terra   # one node's results in the terminal
 ```
 
+### Adding a node
+
+Three files change together, all at the repository root, all edited by hand:
+
+| File | What to add |
+|---|---|
+| `nodes.yaml` | The entry: `id`, `name`, `url` (the landing page **as registered** in the EOSC EU Node Contributors Dashboard, "Website address", section 1.2 field 6) and `eosc_page` (the node's own entry on `eosc.eu`, copied from the [federation index](https://eosc.eu/building-the-eosc-federation/) — look the slug up, do not guess it). |
+| `checklist/approved-names.txt` | The node's approved name, exactly as the Tripartite list writes it, `EOSC Node \| ` prefix included. |
+| `checklist/approved-names-scoped.txt` | The same name, prefixed with the node id: `cern: EOSC Node \| CERN`. |
+
+Then `uv run pytest -q` before running the checker: `tests/test_nodes.py` and
+`tests/test_checklist.py` fail with the specific problem if the three files
+disagree, in milliseconds and without touching the network. Then
+`basic-check collect --only <new-id>` and `basic-check assess`.
+
+Nothing else in the repository needs changing, and nothing is auto-discovered.
+[docs/GUIDE.md](docs/GUIDE.md) section 3 covers each field, the failure modes,
+and what does and does not carry over if you maintain a copy on another host
+such as GitLab.
+
 ### How deep to go: `--depth`
 
 | `--depth` | What is fetched | Requests in the 21 Sep 2026 run |
@@ -209,7 +236,7 @@ git-ignored for the same reason.
 and an ad hoc URL has no id there.
 
 `--only` narrows which sites are contacted, not what the report covers: a subset
-run still writes all nine rows, reusing evidence on disk for the ones it did not
+run still writes a row for every configured node, reusing evidence on disk for the ones it did not
 re-fetch, and labels itself **Mixed freshness** so the reused rows are not taken
 for fresh ones. Pass an explicit `--results DIR` when a genuinely narrower report
 is what you want.
@@ -275,7 +302,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 213 tests, a few seconds, no network, no browser
+uv run pytest -q          # 225 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

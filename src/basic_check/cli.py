@@ -38,7 +38,7 @@ DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"
 DEFAULT_APPROVED_NAMES = ROOT / "checklist" / "approved-names.txt"
 DEFAULT_RESULTS = ROOT / "results"
 # One-off --url checks write here by default rather than into results/, so an ad
-# hoc check of one candidate page cannot overwrite the committed nine-node report
+# hoc check of one candidate page cannot overwrite the committed federation report
 # with a one-row table. assess() rewrites results.md, index.html and results.json
 # wholesale, so sharing a directory would silently destroy the published run.
 DEFAULT_ONEOFF = ROOT / "results" / "one-off"
@@ -276,7 +276,7 @@ def assess(
         help="Match the separator glyphs in an approved name literally. By default "
         "whitespace and the glyphs pipe, hyphen, en dash, colon, slash and middle dot "
         "are interchangeable, because matching the official list literally matched "
-        "none of the nine pages. Use this to see the strict result.",
+        "none of the pages checked. Use this to see the strict result.",
     ),
     run_id: str = typer.Option("", "--run"),
 ):
@@ -510,7 +510,7 @@ def run(
         help="Match the separator glyphs in an approved name literally. By default "
         "whitespace and the glyphs pipe, hyphen, en dash, colon, slash and middle dot "
         "are interchangeable, because matching the official list literally matched "
-        "none of the nine pages. Use this to see the strict result.",
+        "none of the pages checked. Use this to see the strict result.",
     ),
     run_id: str = typer.Option("", "--run"),
     delay: float = typer.Option(2.0, "--delay"),
