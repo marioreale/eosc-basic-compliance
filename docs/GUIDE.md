@@ -246,7 +246,7 @@ is unaffected.
 | The first match in file order is reported | Put the preferred form first if a node has more than one approved name. |
 | A variant rendering is reported | The evidence quotes what the page actually writes, so you can see that it differs from the official form without diffing by eye. |
 | The name never changes the verdict | Point 3 stays `MANUAL_REVIEW` either way. The list adds an evidence line for the reviewer; it cannot produce a `PASS`. |
-| A page that was never fetched is never reported as missing the name | GÉANT answers HTTP 403 with no body; the evidence says the name was not looked for, not that it is absent. |
+| A page that was never fetched is never reported as missing the name | In the published run GÉANT answered HTTP 403 with no body; the evidence says the name was not looked for, not that it is absent. |
 
 All of these match a list entry written `EOSC Node | BBMRI-ERIC`:
 
@@ -335,7 +335,7 @@ official list does not use:
 | European DTO | no match; the page writes `European Digital Twin Ocean` in full, the list abbreviates it to `European DTO` |
 | Data Terra, PaNOSC | no match; the phrase `EOSC Node` occurs, but never followed by an approved name |
 | Finland, EGI, EBRAINS RI | no match, and the phrase `EOSC Node` does not occur in the body |
-| GÉANT | not looked for: the page answers HTTP 403 with no body |
+| GÉANT | not looked for: the page answered HTTP 403 with no body in this run |
 
 **This is a finding to review, not a verdict.** Point 3 remains
 `MANUAL_REVIEW` for all nine either way. A non-match means the page body does
@@ -512,9 +512,11 @@ on followed links, and a single run-wide budget for second-hop requests rather
 than a per-node one.
 
 This is not theoretical. `geant.org` served `HTTP 200` at 12:43 UTC on
-21 September and `HTTP 403` at 13:07 the same afternoon, after several runs,
-redirecting to a Cloudflare bot-protection challenge. **Repeated automated runs
-are visible to the sites you are checking.** Run the full suite when you need a
+21 September, `HTTP 403` at 13:07 the same afternoon after several runs,
+redirecting to a Cloudflare bot-protection challenge, and `HTTP 200` again at
+18:39 from a GitHub runner — a different address that had made no requests that
+day. **Repeated automated runs are visible to the sites you are checking**, and
+the block tracks request volume from an address rather than the tool's identity. Run the full suite when you need a
 result, not in a loop, and use `assess` — which needs neither browser nor
 network — when you are iterating on the report itself.
 
@@ -551,7 +553,10 @@ returns review rather than FAIL. The point is that "we found no contact link" an
 
 The same restraint applies to being blocked. GÉANT's `HTTP 403` moved four cells
 from decided verdicts to review — the tool does not convert bot protection into
-a compliance failure.
+a compliance failure. A later run from an unthrottled address reached the page
+and settled all four, which is the restraint paying off: had the block been
+recorded as failure, the published report would now contain four wrong verdicts
+instead of four honest abstentions.
 
 ### Reproducing a verdict by hand
 
@@ -639,6 +644,20 @@ A scheduled compliance run would mean fetching nine production websites on a
 timer, which is exactly the behaviour that got GÉANT's bot protection to start
 refusing requests.
 
+It takes three inputs: `only` (comma-separated node ids, empty for all nine),
+`depth` (`1`, `0` or `2`) and `delay` (seconds between nodes). `depth: 2` was
+added after a web run could not reproduce the published depth-2 report — the
+input had offered only `1` and `0`, so the workflow could not produce the report
+the repository publishes. Choose it when you want that like-for-like
+comparison, and note it means roughly fourteen further requests to other
+people's sites.
+
+The workflow has `permissions: contents: read` and does **not** commit its
+output. The reports are uploaded as the `compliance-results` artifact, and
+republishing is a deliberate local step: download the artifact, review it, and
+commit. A workflow that could rewrite the published verdicts unattended would
+remove the review that makes them worth publishing.
+
 Its run summary publishes **counts only** — how many nodes, and the tally of
 verdicts — labelled as unreviewed automated output, with the per-node detail
 left to the `compliance-results` artifact. On a public repository the run
@@ -668,7 +687,7 @@ number.
 | Point 4 says `PASS` but you cannot find the link | Look in the footer. The check reads the DOM, not the visible area, and several nodes put the `eosc.eu` link in a legal/navigation column at the very bottom. The exact URL is quoted in the evidence — search the page for it rather than scanning by eye. Note also that the target is never requested, so the check cannot tell you the page still exists. |
 | Point 3 says `No approved-name list was used` | You passed `--no-approved-names`, or `checklist/approved-names.txt` is missing from your checkout (the run warns on stderr when it is). Section 3. |
 | The report says the name list came from `a list supplied for this run` when you expected the official one | You passed `--approved-names`. Drop the flag to use the committed default. Section 3. |
-| Point 3 says a name `was not looked for` | The page returned no body (GÉANT answers 403). Fix the collection first; the name says nothing until there is a page to read. |
+| Point 3 says a name `was not looked for` | The page returned no body — a 403 or a failed render. Fix the collection first; the name says nothing until there is a page to read. Retrying later, or from a different address, is often enough. |
 | A match is reported `from the unscoped list` and you want a firmer claim | Prefix each name with its node id so it is only matched against that node. Section 3. |
 
 ---

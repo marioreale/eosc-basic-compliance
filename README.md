@@ -47,6 +47,20 @@ knowing before quoting any single run as settled:
   review; the tool does not convert a block into a compliance failure. A human
   opening the page in a browser will very likely see it fine.
 
+A later run confirmed this. On 21 September at 18:39 UTC the same checker,
+running on a GitHub runner from an address that had made no requests that day,
+received `HTTP 200` from `geant.org` and settled all four cells: points 1, 6 and
+7 `PASS`, and point 4 a `FAIL` evidenced by links to the
+`building-the-eosc-federation` index rather than to GÉANT's own entry. The block
+therefore tracks request volume from an address, not the tool itself. That run
+also found EOSC DTO had gained both an `eosc.eu` node link and a helpdesk route,
+moving its points 4 and 6 from `FAIL` to `PASS`.
+
+**Those results are not published here.** The report in `results/` remains the
+reviewed depth-2 run of 13:04–13:07 UTC, and its numbers stand as stated above.
+The later run was depth 1 and unreviewed; it is recorded because it changes what
+a reader should conclude about GÉANT, not because it replaces the run.
+
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
 from the live index — but only BBMRI-ERIC and EUDAT link to their own. Six nodes

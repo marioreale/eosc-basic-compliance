@@ -265,7 +265,10 @@ an access policy — genuine access control almost always redirects to a login.
 This was not hypothetical: a node in this set served HTTP 200 to the tool and
 then 403 once the crawl made a handful more requests. Reporting that as "not
 publicly accessible" would have been the tool blaming a node for its own request
-rate. The evidence records any bot-protection wording found (`cloudflare`,
+rate. The same node returned 200 again hours later to a run from an address that
+had made no requests that day, settling all four of its review cells — so the
+abstention was not merely cautious, it was correct, and a `FAIL` would have
+stood as a wrong verdict about a named organisation. The evidence records any bot-protection wording found (`cloudflare`,
 `just a moment`, `ray id`, `captcha`, …) and the reviewer action is to open the
 URL in an ordinary browser.
 

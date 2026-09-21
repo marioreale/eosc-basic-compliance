@@ -17,11 +17,11 @@ on:
         default: ''
         type: string
       depth:
-        description: 'Link following: 1 = follow one hop, 0 = landing page only'
+        description: 'Link following: 1 = follow one hop, 0 = landing page only, 2 = one further hop (more requests to other people''s sites)'
         required: false
         default: '1'
         type: choice
-        options: ['1', '0']
+        options: ['1', '0', '2']
       delay:
         description: 'Seconds to wait between nodes'
         required: false
