@@ -15,7 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: uv sync
+      # --locked installs exactly what uv.lock pins and fails if the lockfile
+      # has drifted from pyproject.toml. Plain `uv sync` would silently
+      # re-resolve instead, so a dependency change could land with a green tick
+      # and nobody would know CI had tested a different set of versions than
+      # the one committed.
+      - run: uv sync --locked
       - run: uv run ruff check src tests
       - run: uv run pytest -q --junitxml=results/junit.xml
       - name: Publish test report

@@ -45,7 +45,11 @@ jobs:
 
       - uses: astral-sh/setup-uv@v5
 
-      - run: uv sync
+      # Pinned versions matter more here than in `tests`: this workflow's output
+      # is a set of verdicts about named organisations, and a silently
+      # re-resolved playwright, selectolax or lingua can change what the page
+      # looks like to the tool. --locked fails the run instead of resolving.
+      - run: uv sync --locked
 
       # Run the unit tests before touching anyone's website. If the rules are
       # broken, making 30-odd requests to real sites to produce wrong verdicts
