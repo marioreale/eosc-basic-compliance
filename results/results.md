@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `2026-09-18` · 2026-09-18T14:21:47+00:00 · 9 nodes · one page request per node plus 22 followed link(s) in total (depth 1).
+Run `2026-09-21-1209` · 2026-09-21T12:09:44+00:00 · 9 nodes · one page request per node plus 22 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 
@@ -9,7 +9,7 @@ Run `2026-09-18` · 2026-09-18T14:21:47+00:00 · 9 nodes · one page request per
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🟢 PASS |
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
@@ -150,10 +150,10 @@ Be in English (Any other pages and information are not required to be strictly i
   - img: Page Icon
   - img: Page Icon
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
-- **4** 🟠 review — No link to eosc.eu was found, but the page did not fully render, so absence cannot be concluded: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured
+- **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 20 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean/ but is not linked from here
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
+  - note: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured — the DOM was nonetheless complete, so absence stands
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 20 outbound link(s) on the landing page
   - main text length: 530 characters
@@ -166,9 +166,9 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 20 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟠 review — No contact route was found, but the page did not fully render, so absence cannot be concluded: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured
+- **6** 🔴 **FAIL** — No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.
   - 20 link(s) examined
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
+  - note: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured — the DOM was nonetheless complete, so absence stands
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-US"
   - detected language: en (confidence 1.0)
@@ -320,7 +320,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - 0 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 0
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
-- **4** 🟠 review — No link to eosc.eu was found, but the page did not fully render, so absence cannot be concluded: only 0 links captured, low for a landing page; only 61 characters of main text captured
+- **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: no links were captured at all, so the page yielded no link evidence
   - 0 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-eudat/ but is not linked from here
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
@@ -334,7 +334,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 0 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟠 review — No contact route was found, but the page did not fully render, so absence cannot be concluded: only 0 links captured, low for a landing page; only 61 characters of main text captured
+- **6** 🟠 review — No contact route was found, but the page yielded too little to conclude absence: no links were captured at all, so the page yielded no link evidence
   - 0 link(s) examined
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
 - **7** 🟠 review — Only 61 characters of text were available — too little to detect a language.

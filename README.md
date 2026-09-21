@@ -19,29 +19,24 @@ Set `--depth 0` for the strict one-request-per-node behaviour.
 
 ## What it found
 
-Nine landing pages. Eight were fetched on 18 September 2026, 14:17–14:21 UTC;
+Nine landing pages, fetched 18 September 2026, 14:17–14:21 UTC. Eight were
+captured normally; the EUDAT portal was down and could not be assessed.
 
-| Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
-| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
-| EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
-| EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+The per-node results are **not reproduced here**. The full matrix, with the
+evidence behind every verdict, is in the report linked above:
+**[Latest results](results/results.md)**.
 
-90 cells: 🟢 29 PASS · 🔴 6 FAIL · 🟠 55 review.
+90 cells: 🟢 26 PASS · 🔴 8 FAIL · 🟠 56 review.
 
-the EUDAT row is carried over from 17 September.
+⚠️ **EUDAT could not be assessed in this run.** `portal.eudat.eu` returned
+`HTTP 500`, so all ten of its points are `review`. Re-run
+`basic-check run --only eudat` once it recovers.
 
 **The one clear, repeated finding is checklist point 4.** All nine nodes have a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
-from the live index — but only BBMRI-ERIC links to its own. Six nodes fail
-outright: four link to nothing on `eosc.eu`, and PaNOSC and GÉANT link only to the
-federation index page, which the checklist explicitly excludes. Each failure names
+from the live index — but only BBMRI-ERIC links to its own. Seven nodes fail
+outright: five link to nothing on `eosc.eu` at all, and PaNOSC and GÉANT link only
+to the federation index page, which the checklist explicitly excludes. Each failure names
 the exact URL that is missing, so the fix is a one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and

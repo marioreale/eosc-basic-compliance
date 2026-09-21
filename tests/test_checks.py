@@ -8,7 +8,7 @@ assert that a plausible-looking page does NOT pass.
 from __future__ import annotations
 
 from basic_check import checks
-from basic_check.fetch import Image, Link, PageEvidence
+from basic_check.fetch import Control, Image, Link, PageEvidence
 
 
 def realistic(links: list[Link], **kw) -> PageEvidence:
@@ -314,3 +314,62 @@ def test_a_well_rendered_page_still_fails_when_the_link_is_genuinely_absent():
 def test_render_warning_flags_a_thin_shell():
     page = ev(links=[Link("https://n.example/a", "A")], main_text="Loading", full_text="Loading")
     assert "main text" in checks.render_warning(page)
+
+
+# --- the render gate: distrusting absence without excusing it ----------------
+
+
+def _consent_heavy_but_fully_rendered() -> PageEvidence:
+    """The EOSC DTO landing page, as actually measured on 18 September 2026.
+
+    20 links, 14 images, 34 controls, 530 chars of main text, 4328 of full text.
+    A consent banner suppresses the *visible* text; the DOM is complete. Verified
+    against the live page: the raw HTML carries exactly 20 anchors, the rendered
+    DOM carries 21, clicking "Accept All" changes nothing, and none of them
+    points at eosc.eu.
+    """
+    return ev(
+        links=[Link(f"https://eosc-dto.d4science.org/p{i}", f"Item {i}") for i in range(20)],
+        images=[Image(f"/img/{i}.png") for i in range(14)],
+        controls=[Control(f"Button {i}") for i in range(34)],
+        main_text="We value your privacy This website uses cookies Accept All Reject All",
+        full_text="We value your privacy This website uses cookies Accept All Reject All " * 62,
+    )
+
+
+def test_a_consent_banner_does_not_excuse_a_missing_link():
+    """Regression: EOSC DTO point 4 was MANUAL_REVIEW when it should have been FAIL.
+
+    A consent overlay hides text, not anchors. Gating a *link*-absence verdict on
+    a *text*-length signal let a verified absence escape as "cannot conclude".
+    Confirmed against the live page before changing the rule.
+    """
+    page = _consent_heavy_but_fully_rendered()
+    assert checks.link_collection_warning(page) == ""
+    assert checks.check_4(page).verdict == checks.FAIL
+    assert checks.check_6(page).verdict == checks.FAIL
+
+
+def test_a_sparse_page_is_not_treated_as_unrendered():
+    """20 links is the whole document on a compact portal page, not a truncation."""
+    page = _consent_heavy_but_fully_rendered()
+    assert "20 links" not in checks.link_collection_warning(page)
+
+
+def test_absence_is_still_distrusted_when_nothing_was_collected():
+    """EUDAT during its HTTP 500: 0 links, 0 images, 0 controls, 61 chars.
+
+    This is the case the gate exists for, and it must keep working.
+    """
+    page = ev(links=[], images=[], controls=[], main_text="x" * 61, full_text="x" * 61)
+    assert checks.link_collection_warning(page)
+    assert checks.check_4(page).verdict == checks.MANUAL_REVIEW
+    assert checks.check_6(page).verdict == checks.MANUAL_REVIEW
+
+
+def test_an_empty_document_with_stray_links_is_still_distrusted():
+    """A shell that rendered a nav but no document should not ground a FAIL."""
+    page = ev(links=[Link("https://n.example/a", "A")], images=[], controls=[],
+              main_text="Loading", full_text="Loading")
+    assert checks.link_collection_warning(page)
+    assert checks.check_4(page).verdict == checks.MANUAL_REVIEW

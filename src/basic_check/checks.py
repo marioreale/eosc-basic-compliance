@@ -113,6 +113,53 @@ def render_warning(ev: PageEvidence) -> str:
     return "; ".join(reasons)
 
 
+# A landing page that rendered at all yields anchors, images and buttons. When
+# almost none of that survives, collection -- not the node -- is the problem.
+DOM_ELEMENT_FLOOR = 10
+EMPTY_DOCUMENT_CHARS = 500
+
+
+def link_collection_warning(ev: PageEvidence) -> str:
+    """Return a reason to distrust the *absence of a link*, or "".
+
+    This is deliberately not `render_warning`. That function asks "did the page
+    render enough to read?", which is the right question for a text judgement and
+    the wrong one for a link. A consent overlay suppresses visible text while
+    leaving every anchor in the DOM, so gating a link-absence FAIL on a text
+    length let a verified absence escape as "cannot conclude".
+
+    Observed on EOSC DTO: 530 chars of main text behind a cookie banner, but 20
+    anchors -- exactly the 20 in the server's HTML, and 21 in the rendered DOM
+    both before and after accepting consent. The absence of an eosc.eu link there
+    is a fact about the node, not an artefact of collection.
+
+    So the question here is only whether the DOM arrived. Text length is not
+    evidence about that; a small page is not a truncated one.
+    """
+    if not ev.links:
+        return "no links were captured at all, so the page yielded no link evidence"
+    structure = len(ev.links) + len(ev.images) + len(ev.controls)
+    if structure < DOM_ELEMENT_FLOOR:
+        return (
+            f"only {structure} DOM element(s) captured "
+            f"({len(ev.links)} link(s), {len(ev.images)} image(s), {len(ev.controls)} control(s)) "
+            "— too little structure to treat the document as delivered"
+        )
+    if len(ev.full_text) < EMPTY_DOCUMENT_CHARS:
+        return f"the document is essentially empty ({len(ev.full_text)} chars of text in total)"
+    return ""
+
+
+def _render_note(ev: PageEvidence) -> list[str]:
+    """Disclose page-quality caveats alongside a FAIL.
+
+    The gate no longer suppresses the verdict, but the reviewer should still be
+    told a consent banner was in the way, so the finding can be spot-checked.
+    """
+    note = render_warning(ev)
+    return [f"note: {note} — the DOM was nonetheless complete, so absence stands"] if note else []
+
+
 def _is_host(netloc: str, domain: str) -> bool:
     """Exact host match or a true subdomain of it.
 
@@ -457,14 +504,14 @@ def check_4(ev: PageEvidence, expected_page: str = "") -> Result:
             [_fmt(link) for link in other_eosc[:4]] + expected_note,
         )
 
-    warning = render_warning(ev)
+    warning = link_collection_warning(ev)
     if warning:
         return Result(
             "4",
             "Link to the node's page on eosc.eu",
             MANUAL_REVIEW,
-            "No link to eosc.eu was found, but the page did not fully render, so absence "
-            "cannot be concluded: " + warning,
+            "No link to eosc.eu was found, but the page yielded too little to conclude "
+            "absence: " + warning,
             [f"{len(ev.links)} link(s) examined, none pointing to eosc.eu"] + expected_note,
             reviewer_action="Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.",
         )
@@ -473,7 +520,9 @@ def check_4(ev: PageEvidence, expected_page: str = "") -> Result:
         "Link to the node's page on eosc.eu",
         FAIL,
         "No link to eosc.eu was found on the landing page.",
-        [f"{len(ev.links)} link(s) examined, none pointing to eosc.eu"] + expected_note,
+        [f"{len(ev.links)} link(s) examined, none pointing to eosc.eu"]
+        + expected_note
+        + _render_note(ev),
     )
 
 
@@ -719,14 +768,14 @@ def check_6(ev: PageEvidence) -> Result:
             reviewer_action="Confirm this contact route reaches the node's user support, not a general mailbox.",
         )
 
-    warning = render_warning(ev)
+    warning = link_collection_warning(ev)
     if warning:
         return Result(
             "6",
             "Means of contacting the node helpdesk",
             MANUAL_REVIEW,
-            "No contact route was found, but the page did not fully render, so absence cannot "
-            "be concluded: " + warning,
+            "No contact route was found, but the page yielded too little to conclude "
+            "absence: " + warning,
             [f"{len(ev.links)} link(s) examined"],
             reviewer_action="Open the page, dismiss any consent banner, and look for a helpdesk or support contact.",
         )
@@ -736,7 +785,7 @@ def check_6(ev: PageEvidence) -> Result:
         FAIL,
         "No contact route of any kind was found among the landing page's links: "
         "no mailto:, and no link labelled or addressed as contact, support or helpdesk.",
-        [f"{len(ev.links)} link(s) examined"],
+        [f"{len(ev.links)} link(s) examined"] + _render_note(ev),
     )
 
 

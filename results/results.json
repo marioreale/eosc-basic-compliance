@@ -1,6 +1,6 @@
 {
-  "run_id": "2026-09-18",
-  "generated_at": "2026-09-18T14:21:47+00:00",
+  "run_id": "2026-09-21-1209",
+  "generated_at": "2026-09-21T12:09:44+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
@@ -363,13 +363,14 @@
         {
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No link to eosc.eu was found, but the page did not fully render, so absence cannot be concluded: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured",
+          "verdict": "FAIL",
+          "message": "No link to eosc.eu was found on the landing page.",
           "evidence": [
             "20 link(s) examined, none pointing to eosc.eu",
-            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean/ but is not linked from here"
+            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean/ but is not linked from here",
+            "note: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured — the DOM was nonetheless complete, so absence stands"
           ],
-          "reviewer_action": "Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation."
+          "reviewer_action": ""
         },
         {
           "point_id": "5a",
@@ -407,12 +408,13 @@
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No contact route was found, but the page did not fully render, so absence cannot be concluded: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured",
+          "verdict": "FAIL",
+          "message": "No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.",
           "evidence": [
-            "20 link(s) examined"
+            "20 link(s) examined",
+            "note: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured — the DOM was nonetheless complete, so absence stands"
           ],
-          "reviewer_action": "Open the page, dismiss any consent banner, and look for a helpdesk or support contact."
+          "reviewer_action": ""
         },
         {
           "point_id": "7",
@@ -1007,7 +1009,7 @@
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
           "verdict": "MANUAL_REVIEW",
-          "message": "No link to eosc.eu was found, but the page did not fully render, so absence cannot be concluded: only 0 links captured, low for a landing page; only 61 characters of main text captured",
+          "message": "No link to eosc.eu was found, but the page yielded too little to conclude absence: no links were captured at all, so the page yielded no link evidence",
           "evidence": [
             "0 link(s) examined, none pointing to eosc.eu",
             "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-eudat/ but is not linked from here"
@@ -1049,7 +1051,7 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "MANUAL_REVIEW",
-          "message": "No contact route was found, but the page did not fully render, so absence cannot be concluded: only 0 links captured, low for a landing page; only 61 characters of main text captured",
+          "message": "No contact route was found, but the page yielded too little to conclude absence: no links were captured at all, so the page yielded no link evidence",
           "evidence": [
             "0 link(s) examined"
           ],
