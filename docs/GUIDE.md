@@ -7,8 +7,10 @@ every verdict.
 
 This guide covers installing it, configuring it for your own nodes, running it,
 reading what comes out, and running the test suite. Every command below was
-executed against a clean clone of the repository on 21 September 2026; where a
-command's behaviour is surprising, that is noted rather than smoothed over.
+executed against a clean clone of the repository on 21 September 2026, and every
+figure in it — test counts, verdict tallies, request counts, disk sizes — was
+re-measured rather than carried over; where a command's behaviour is surprising,
+that is noted rather than smoothed over.
 
 **What this tool will not do:** it does not produce a compliance statement. Of
 the ten checklist points, three can be settled by inspection, four only partly,
@@ -31,7 +33,7 @@ you want to predict a verdict, argue with one, or change a check.
 | Python | 3.12 or newer (the project is developed on 3.14) |
 | Package manager | [`uv`](https://docs.astral.sh/uv/) |
 | Browser | Chromium, via Playwright — **only needed to collect evidence** |
-| Disk | ~510 MB for the virtualenv, ~660 MB more for Chromium (see the note below) |
+| Disk | ~500 MB for the virtualenv, ~660 MB more for Chromium (see the note below) |
 | Network | Outbound HTTPS to the node websites, for collection only |
 
 Installing `uv`, if you do not have it:
@@ -44,7 +46,8 @@ You do not need to create a virtualenv or run `pip install`. `uv` manages the
 environment from `uv.lock`, so everyone gets identical dependency versions.
 
 **On the disk figures.** Both were measured with `du -sh`, not estimated. The
-510 MB is `.venv` in the project directory. The 660 MB is one Playwright install
+500 MB is `.venv` in the project directory (490 MB in a fresh clone, rising to
+about 510 MB once caches accumulate). The 660 MB is one Playwright install
 — Chromium (393 MB), the headless shell (261 MB) and ffmpeg (5 MB) — and it does
 **not** live in the project: Playwright puts browsers in a shared cache at
 `~/.cache/ms-playwright`, so a second project on the same machine reuses it and
@@ -60,22 +63,28 @@ held two versions and so 1.3 GB in total. Delete the whole directory and re-run
 ```bash
 git clone https://github.com/marioreale/eosc-basic-compliance.git
 cd eosc-basic-compliance
-uv sync
+uv sync --locked
 ```
 
-`uv sync` creates `.venv/` and installs exactly the locked versions. Expect it
-to take under a minute.
+This creates `.venv/` and installs exactly the versions pinned in the committed
+`uv.lock` — 27 packages. Expect it to take under a minute. A plain `uv sync`
+also works, but it will silently re-resolve if the lockfile and
+`pyproject.toml` ever disagree; `--locked` fails instead, which is what you want
+when the point is to reproduce someone else's result. CI uses `--locked` for the
+same reason (section 8).
 
-At this point you can already run the test suite, assess existing evidence, and
-read the checklist. To **fetch pages**, you also need a browser:
+At this point you can already run the test suite, read the checklist, and
+regenerate the committed nine-node report from the evidence in the repository.
+To **fetch pages**, you also need a browser:
 
 ```bash
 uv run playwright install chromium --with-deps
 ```
 
-This downloads roughly 1.3 GB. On Linux, `--with-deps` also installs system
-libraries and will ask for `sudo`. If you only want to re-render reports from
-evidence already in the repository, skip this step.
+This downloads roughly 660 MB (see the note in section 1). On Linux,
+`--with-deps` also installs system libraries and will ask for `sudo`. If you
+only want to re-render reports from evidence already in the repository, skip
+this step.
 
 ### What needs a browser, and what does not
 
@@ -180,17 +189,37 @@ uv run basic-check show eudat        # one node's results in the terminal
 
 ### Useful options
 
+Not every option is accepted by every command, and passing one to the wrong
+command is an error rather than a no-op. Each table below names the commands that
+accept the option.
+
+**Fetching** — `collect` and `run` only, because only these two touch the network:
+
 | Option | Effect |
 |---|---|
 | `--depth N` | How far to follow links. See section 5. |
-| `--fetch-budget N` | Depth 2 only: hard ceiling on second-hop requests for the **whole run** (default 60). |
 | `--delay S` | Seconds between hosts (default 2.0). Raise it to be gentler. |
-| `--max-children N` | Cap on followed pages per node at depth 1 (default 8). |
+| `--fetch-budget N` | Depth 2 only: hard ceiling on second-hop requests for the **whole run** (default 60). |
+| `--max-children N` | Cap on followed pages per node at depth 1 (default 8). **`collect` only — `run` rejects it**, so use `collect` then `assess` if you need it. |
+
+**Choosing what to check** — accepted by `collect`, `assess` and `run`:
+
+| Option | Effect |
+|---|---|
 | `--only a,b` | Restrict to some nodes. **Read the warning below.** |
 | `--url https://…` | Check any page without editing `nodes.yaml`. Repeatable. |
+| `--eosc-page URL` | With a single `--url`: that node's own `eosc.eu` page, so a point 4 failure can name the exact URL that is missing. |
 | `--nodes path` | Use a different node list. |
-| `--checklist path` | Use a different checklist version. |
-| `--results path` | Write somewhere other than `results/`. |
+
+**Assessment and output:**
+
+| Option | Where | Effect |
+|---|---|---|
+| `--approved-names path` | `assess`, `run` | Text file, one Tripartite-approved node name per line. **Without it, point 3's name requirement cannot be checked at all.** |
+| `--checklist path` | `assess`, `run`, `points` | Use a different checklist version. |
+| `--run LABEL` | `assess`, `run` | Label stored with the run, for telling one report from another. |
+| `--results path` | all but `points` | Write somewhere other than `results/`. |
+| `--one-off` | `show` only | Read `results/one-off/` instead of the federation run. |
 
 ### ⚠️ `--only` rewrites the shared report
 
@@ -337,7 +366,7 @@ a verdict surprises you.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 111 tests, offline, about 0.2s
+uv run pytest -q                    # 111 tests, offline, well under a second
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -379,10 +408,18 @@ heading back, each fail exactly one test.
 
 ## 8. Continuous integration
 
-`.github/workflows/tests.yml` runs on every push and pull request: `uv sync`,
-`ruff check`, then `pytest` with a JUnit report published to the run summary and
-uploaded as an artifact. No browser is installed, because the suite does not
-need one.
+`.github/workflows/tests.yml` runs on every push and pull request:
+`uv sync --locked`, `ruff check`, then `pytest` with a JUnit report published to
+the run summary and uploaded as an artifact. No browser is installed, because
+the suite does not need one.
+
+Both workflows use `--locked` rather than a plain `uv sync`. The difference
+matters: plain `uv sync` quietly updates the lockfile when it disagrees with
+`pyproject.toml` and carries on, so a dependency change could go green in CI
+while the versions tested were not the versions committed. `--locked` installs
+exactly what `uv.lock` pins and fails otherwise. If CI ever stops at the install
+step saying the lockfile needs updating, that is the guard working — run
+`uv lock` and commit the result.
 
 `.github/workflows/compliance.yml` is **manual dispatch only** — deliberately.
 A scheduled compliance run would mean fetching nine production websites on a
