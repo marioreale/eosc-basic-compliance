@@ -16,6 +16,12 @@ and three require a human reading the page. The tool returns `MANUAL_REVIEW`
 rather than guessing, and roughly 60% of cells land there by design. A checker
 that returned PASS/FAIL on every line would look more useful and be worth less.
 
+👉 **[Analysis workflow](ANALYSIS-WORKFLOW.md)** — the companion to this guide. This
+one tells you how to run the tool; that one tells you what it does once running:
+the collection sequence, the evidence model, and for each of the ten checklist
+points the exact branch conditions and the verdict each one yields. Read it when
+you want to predict a verdict, argue with one, or change a check.
+
 ---
 
 ## 1. Requirements
@@ -25,7 +31,7 @@ that returned PASS/FAIL on every line would look more useful and be worth less.
 | Python | 3.12 or newer (the project is developed on 3.14) |
 | Package manager | [`uv`](https://docs.astral.sh/uv/) |
 | Browser | Chromium, via Playwright — **only needed to collect evidence** |
-| Disk | ~400 MB for dependencies, ~1.3 GB more if you install Chromium |
+| Disk | ~510 MB for the virtualenv, ~660 MB more for Chromium (see the note below) |
 | Network | Outbound HTTPS to the node websites, for collection only |
 
 Installing `uv`, if you do not have it:
@@ -36,6 +42,16 @@ curl -LsSf https://astral.sh/uv/install.sh | sh    # macOS / Linux
 
 You do not need to create a virtualenv or run `pip install`. `uv` manages the
 environment from `uv.lock`, so everyone gets identical dependency versions.
+
+**On the disk figures.** Both were measured with `du -sh`, not estimated. The
+510 MB is `.venv` in the project directory. The 660 MB is one Playwright install
+— Chromium (393 MB), the headless shell (261 MB) and ffmpeg (5 MB) — and it does
+**not** live in the project: Playwright puts browsers in a shared cache at
+`~/.cache/ms-playwright`, so a second project on the same machine reuses it and
+costs nothing. That cache can nonetheless grow well past 660 MB, because each
+Playwright version keeps its own browser build; the machine this was measured on
+held two versions and so 1.3 GB in total. Delete the whole directory and re-run
+`playwright install` to reclaim it.
 
 ---
 
@@ -309,6 +325,13 @@ python3 -m json.tool results/evidence/geant.json | less   # the raw capture
 `results.json` carries the same evidence strings the report displays, so you can
 check any claim without re-fetching anything.
 
+To work out *why* a particular cell came out the way it did, the decision
+procedure for every point — every branch, in evaluation order, with the verdict
+it yields — is tabulated in section 5 of the
+**[analysis workflow](ANALYSIS-WORKFLOW.md)**. Section 6 of that document lists the
+cases where the tool is known to be wrong, which is the first place to look when
+a verdict surprises you.
+
 ---
 
 ## 7. The test suite
@@ -385,7 +408,7 @@ refusing requests.
 
 - **Add a node:** append to `nodes.yaml` with its `eosc.eu` slug from the live index.
 - **Add a checklist version:** new YAML beside `v3.0.yaml`, with `source_file` and `source_sha256`; do not edit an existing version in place.
-- **Add a check:** implement in `src/basic_check/checks.py`, write the failing test first, and prefer returning `MANUAL_REVIEW` with good evidence over a confident guess.
+- **Add a check:** implement in `src/basic_check/checks.py`, write the failing test first, and prefer returning `MANUAL_REVIEW` with good evidence over a confident guess. Document its branches in [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md) — a check whose decision procedure is not written down cannot be reviewed.
 - **Change the report:** `src/basic_check/report.py` renders HTML, Markdown and CSV from one run dict. `tests/test_report.py` covers the matrix; add to it, because a rendering bug is silent.
 
 Two known latent defects in `report.py`, both unfixed at the time of writing: a
