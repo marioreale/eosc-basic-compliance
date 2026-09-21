@@ -80,7 +80,9 @@ Per node, in order:
    - `title`, `lang_attr` (the `html` element's `lang`), `meta_description`.
 5. **Screenshot** the viewport (not the full page) to
    `results/evidence/screenshots/<node>.png`. Nothing in the assess stage reads
-   the screenshot; it exists for the human reviewer.
+   the screenshot; it exists for the human reviewer. It captures the visible
+   viewport, not the full page, so it cannot be used to confirm the absence of
+   anything — a footer link is real but off-image.
 6. **Depth 1, if requested.** `select_children` (`fetch.py:413`) picks which links
    to follow. A link qualifies only if it is `http(s)`, is not a binary by
    extension, is on the node's own host or a related host, and its combined link
@@ -388,7 +390,9 @@ Branch 1 used to over-match badly; the history is in section 6.
 
 ### Point 4 — link to the node's own page on `eosc.eu`
 
-`check_4`. The one point that produces `FAIL`s in practice.
+`check_4`. The point that produces most of the `FAIL`s in practice — 6 of the 7
+in the run of 21 September 2026, the seventh being point 6 for a node with no
+contact route of any kind on its landing page.
 
 **Steps:** for every link, parse the URL; keep only those whose host is `eosc.eu`
 or a true subdomain (`_is_host`, so `myeosc.eu` does not qualify); strip the
@@ -413,6 +417,24 @@ When `nodes.yaml` records the node's `eosc_page`, that URL is passed in as
 "the node's dedicated page exists at … but is not linked from here". Naming the
 exact page turns "something is absent" into a one-line fix the node operator can
 action.
+
+**What a `PASS` here does not establish.** Three things, all of which a reviewer
+should know before quoting one:
+
+- **The target is never requested.** The check matches the URL's *shape* — host,
+  path prefix, non-empty tail. A link to a node page that has since been deleted
+  would `PASS` identically. Confirming the destination is a manual step.
+- **Placement is not recorded.** A link in the footer and a link in the body are
+  indistinguishable in the evidence. The checklist requires a link and says
+  nothing about prominence, so footer placement is compliant — but the evidence
+  cannot tell you which you are looking at. EUDAT's link, for instance, is the
+  fourth item in a "Navigation & Legal" footer column, 89% of the way down the
+  page.
+- **The screenshot cannot corroborate it.** Captures are viewport-only
+  (`full_page=False` in `fetch.py`), so anything below the fold — which includes
+  every footer link — is absent from the saved image. A reviewer checking a
+  `PASS` against the screenshot may conclude the tool invented the link. This has
+  happened.
 
 ---
 

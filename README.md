@@ -217,10 +217,16 @@ uv run basic-check assess --approved-names my-names.txt    # your list instead
 uv run basic-check assess --no-approved-names              # no list at all
 ```
 
-Every report states which list the run used. Prefix a name with a node id
+Every report states which list the run used, together with its SHA-256, so a
+stale list is detectable without re-running. Prefix a name with a node id
 (`bbmri-eric: EOSC Node - BBMRI-ERIC`) to tie it to one node; the official list
 is unscoped, so a match shows the name is on the page but not that it is that
-page's own name, and the report says so.
+page's own name, and the report says so. A scoped variant is committed at
+[`checklist/approved-names-scoped.txt`](checklist/approved-names-scoped.txt) for
+when you want that stronger claim — it finds the same two nodes, which is
+evidence the headline is not an artefact of names leaking between pages. Word
+separators are matched flexibly by default; `--strict-separators` requires the
+exact glyphs and the report states which rule was in force.
 
 Run against the evidence of 21 September 2026, the official list matches **2 of
 the 9** nodes. That is a finding to review, not a verdict — point 3 stays
@@ -255,7 +261,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 111 tests, ~0.2s, no network, no browser
+uv run pytest -q          # 213 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

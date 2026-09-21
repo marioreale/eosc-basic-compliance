@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-111 tests still pass, while `collect` fails with Playwright's
+All 213 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 111 passed
+uv run pytest -q                  # expect: 213 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -430,11 +430,24 @@ the capture date of the reused evidence. `results.json` records the same thing i
 a top-level `selection` list, which is `[]` on a full run.
 
 An explicit `--results DIR` keeps the narrowing behaviour, because there nothing
-shared is at risk and a one-node scratch table is usually the point:
+shared is at risk and a one-node scratch table is usually the point. Note that
+`--results DIR` relocates the whole workspace, not just the output: evidence is
+read from `DIR/evidence` as well as written there. Point it at an empty
+directory and you get an empty report and exit code 2, not a one-node one. Give
+it evidence first:
 
 ```bash
+mkdir -p /tmp/scratch && cp -r results/evidence /tmp/scratch/evidence
 uv run basic-check assess --results /tmp/scratch --only data-terra
 # A deliberate one-node report, written somewhere of your choosing.
+```
+
+Or collect straight into it, which re-fetches that node rather than reusing
+anything:
+
+```bash
+uv run basic-check collect --results /tmp/scratch --only data-terra
+uv run basic-check assess  --results /tmp/scratch --only data-terra
 ```
 
 A bare `assess` still rebuilds every row from evidence on disk, so it remains
@@ -519,7 +532,7 @@ network — when you are iterating on the report itself.
 | `results.json` | The full structured run, including every piece of evidence. Use this for any further analysis. |
 | `checklist-v3.0.html` | The checklist points in full, with the reasoning behind each verdict. |
 | `evidence/<id>.json` | The raw capture for one node: links, images, controls, text, headers. |
-| `evidence/screenshots/<id>.png` | What the page looked like when it was fetched. |
+| `evidence/screenshots/<id>.png` | What the page looked like when it was fetched — the **visible viewport only**, so footers and anything else below the fold are not in the image. Do not read a missing element here as absent from the page; check `links` and `full_text` in the evidence JSON. |
 
 ### The four verdicts
 
@@ -607,7 +620,8 @@ heading back, each fail exactly one test.
 
 ## 8. Continuous integration
 
-`.github/workflows/tests.yml` runs on every push and pull request:
+`.github/workflows/tests.yml` runs on every push and pull request, and can also
+be started by hand:
 `uv sync --locked`, `ruff check`, then `pytest` with a JUnit report published to
 the run summary and uploaded as an artifact. No browser is installed, because
 the suite does not need one.
@@ -651,6 +665,7 @@ number.
 | A run takes far longer than expected | `--delay` defaults to 2.0s between hosts and slow nodes are waited on. This is intentional. |
 | Point 3 reports `NONE of the ... approved name(s) ... appear` for a node you know is named correctly | Expected for most nodes: the committed list matches 2 of 9. The `<title>` is not searched, and a name is not matched inside a longer word — though the separator between words is flexible. Read `full_text` in that node's evidence file. Section 3. |
 | Point 3 says `no approved name was supplied for this node` | Your list is scoped and has no `node-id:` line for that node. Add one, or use a bare name to cover every node. Section 3. |
+| Point 4 says `PASS` but you cannot find the link | Look in the footer. The check reads the DOM, not the visible area, and several nodes put the `eosc.eu` link in a legal/navigation column at the very bottom. The exact URL is quoted in the evidence — search the page for it rather than scanning by eye. Note also that the target is never requested, so the check cannot tell you the page still exists. |
 | Point 3 says `No approved-name list was used` | You passed `--no-approved-names`, or `checklist/approved-names.txt` is missing from your checkout (the run warns on stderr when it is). Section 3. |
 | The report says the name list came from `a list supplied for this run` when you expected the official one | You passed `--approved-names`. Drop the flag to use the committed default. Section 3. |
 | Point 3 says a name `was not looked for` | The page returned no body (GÉANT answers 403). Fix the collection first; the name says nothing until there is a page to read. |
