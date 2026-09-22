@@ -17,6 +17,10 @@ follow one further hop under a fixed budget.
 👉 **[Installation, configuration and run guide](docs/GUIDE.md)** — start here if
 you want to install and run it yourself.
 
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 235
+tests cover, every configuration option, the defects that earned a regression
+test, and what the published figures do and do not say.
+
 👉 **[Latest results](results/results.md)** · [browsable HTML report](results/index.html)
 · [checklist v3.0 explained](results/checklist-v3.0.html)
 (download and open locally, or use the GitHub Pages link if enabled)

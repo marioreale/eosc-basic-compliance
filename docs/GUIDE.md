@@ -691,6 +691,11 @@ uv run ruff check src tests         # lint
 The suite makes no network requests and needs no browser, which is why CI runs
 it without downloading Chromium.
 
+A fuller treatment — why the suite takes a few seconds rather than a fraction of
+one, the testing criteria behind it, and the defects that each earned a
+regression test — is in the
+**[test suite and configuration overview](TEST-SUITE.md)**.
+
 **Test names are sentences**, because a failing test should tell you what broke
 without opening the file:
 
