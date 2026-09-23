@@ -29,13 +29,13 @@ conditions behind each of the ten checklist points.
 > | `uv.lock` is not committed, so runs are not reproducible | **Committed**; CI installs with `--locked` (section 9) |
 > | The web form cannot reach depth 2 | It can — the `depth` input now offers `2` (section 6) |
 >
-> The node list also grew from nine to **eleven** (CERN and EOSC Node Czechia), while the published report in `results/` still covers the original nine — that distinction is now explicit in sections 5 and 10. The suite's runtime rose from ~0.2 s to ~4.6 s for a reason worth knowing (section 2). Every figure below was re-measured against commit `014682c` rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
+> The node list also grew from nine to **eleven** (CERN and EOSC Node Czechia), while the published report in `results/` still covers the original nine — that distinction is now explicit in sections 5 and 10. The suite's runtime rose from ~0.2 s to ~4.6 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
 
 ---
 
 ## 1. Language and framework
 
-**Python**, requiring 3.12 or newer, developed on 3.14. Packaged with hatchling and managed with `uv`. Roughly **3,564 lines across six modules** (`checks.py` 979, `report.py` 952, `fetch.py` 706, `cli.py` 588, `names.py` 247, `patterns.py` 92), plus **2,668 lines of tests**. Tests are now about three quarters the size of the code they exercise.
+**Python**, requiring 3.12 or newer, developed on 3.14. Packaged with hatchling and managed with `uv`. Roughly **3,638 lines across six modules** (`checks.py` 1053, `report.py` 952, `fetch.py` 706, `cli.py` 588, `names.py` 247, `patterns.py` 92), plus **2,761 lines of tests**. Tests are now about three quarters the size of the code they exercise.
 
 The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does not use `unittest.TestCase` classes at all. Tests are plain functions with bare `assert` statements. There is no `setUp`/`tearDown`; shared setup is a few small helper functions that build page evidence.
 
@@ -688,4 +688,4 @@ The current default list carries **eleven** names, one per configured node, with
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
 - Figures in section 10: `results/results.json` at commit `014682c` — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (eleven names, SHA-256 `9d50d3a3…`) and the node-scoped variant `checklist/approved-names-scoped.txt`
-- Test counts, line counts, runtimes and command options in this document were measured against a clean checkout of commit `014682c` on 22 September 2026, not carried over from the previous edition
+- Test counts, line counts, runtimes and command options in this document were measured on 23 September 2026 against the repository state it is committed with, not carried over from the previous edition
