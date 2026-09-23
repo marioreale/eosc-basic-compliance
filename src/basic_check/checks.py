@@ -394,34 +394,55 @@ def check_2(ev: PageEvidence) -> Result:
 # --- point 3 -----------------------------------------------------------------
 
 
+@dataclass(frozen=True)
+class _NameNote:
+    """What the name list established, as both a state and an evidence line.
+
+    The state exists so that a summary sentence and the evidence line beside it
+    are derived from one decision. They were previously written independently,
+    and drifted: the summary said no list of approved names existed while the
+    evidence line under it recorded a successful match against one.
+    """
+
+    state: str  # absent | unscoped-for-node | no-body | not-found | matched | matched-unscoped
+    line: str = ""
+
+    @property
+    def supplied(self) -> bool:
+        return self.state != "absent"
+
+
 def _approved_name_note(
     ev: PageEvidence,
     approved_names: ApprovedNames | list[str] | None,
-) -> str:
-    """One evidence line about the node name, or "" when no list was supplied.
+) -> _NameNote:
+    """What a supplied list of approved names established for this page.
 
-    The line states which name matched and whether that name was written
-    against this node. An unscoped list cannot establish that the name found is
-    this node's own, so the line says so rather than implying more.
+    `line` is one evidence line, empty when no list was supplied. It states
+    which name matched and whether that name was written against this node. An
+    unscoped list cannot establish that the name found is this node's own, so
+    the line says so rather than implying more.
     """
     names = ApprovedNames.coerce(approved_names)
     if not names.supplied:
-        return ""
+        return _NameNote("absent")
 
     candidates = names.for_node(ev.node_id)
     if not candidates:
-        return (
+        return _NameNote(
+            "unscoped-for-node",
             "no approved name was supplied for this node "
-            f"(the list is scoped, and has no entry for {ev.node_id})"
+            f"(the list is scoped, and has no entry for {ev.node_id})",
         )
 
     # Absence of the name is only meaningful if there was a body to look in. On a
     # bot-blocked node (GEANT returns HTTP 403 with no body) "none appear" would
     # be a claim about a page that was never read.
     if not ev.full_text.strip():
-        return (
+        return _NameNote(
+            "no-body",
             f"{len(candidates)} approved name(s) were supplied for this node, but no page body "
-            f"was captured (HTTP {ev.http_status}), so the name was not looked for"
+            f"was captured (HTTP {ev.http_status}), so the name was not looked for",
         )
 
     found = names.find(ev.full_text, ev.node_id)
@@ -437,21 +458,69 @@ def _approved_name_note(
             if hits
             else ""
         )
-        return (
+        return _NameNote(
+            "not-found",
             f"NONE of the {len(candidates)} approved name(s) for this node appear in the page "
-            f"body{instead} — note the <title> is not searched"
+            f"body{instead} — note the <title> is not searched",
         )
 
     # A different separator glyph is not a failure, but it is the one difference
     # a reviewer would otherwise have to spot by eye, so it is shown.
     how = "" if found.exact else f' (the page writes it "{found.matched_text}")'
     if found.scoped:
-        return f'approved name matched, scoped to this node: "{found.name}"{how}'
-    return (
+        return _NameNote(
+            "matched",
+            f'approved name matched, scoped to this node: "{found.name}"{how}',
+        )
+    return _NameNote(
+        "matched-unscoped",
         f'approved name matched from the unscoped list: "{found.name}"{how} — the list does '
         "not say which name belongs to which node, so this does not establish it is this "
-        "node's own name"
+        "node's own name",
     )
+
+
+# The name half of point 3, as one sentence for the summary. Each clause is
+# written to be true of the state it belongs to and false of the others, so a
+# reader of the summary alone is never told the tool did less than it did.
+_NAME_CLAUSE = {
+    "absent": (
+        "whether the node name on the page is the official Tripartite-approved one — no "
+        "approved-names list was supplied, so the tool did not check it (pass --approved-names "
+        "to have it checked)"
+    ),
+    "unscoped-for-node": (
+        "whether the node name on the page is the official Tripartite-approved one — the list "
+        "supplied holds no approved name for this node, so the tool did not check it"
+    ),
+    "no-body": (
+        "whether the node name on the page is the official Tripartite-approved one — approved "
+        "names were supplied for this node, but the page body was not captured, so the name "
+        "could not be looked for"
+    ),
+    "not-found": (
+        "whether the node name on the page is the official Tripartite-approved one — it was "
+        "looked for and not found in the page body, which is not proof of absence, since the "
+        "<title> is not searched"
+    ),
+    "matched": (
+        "whether the page shows it as the official form — an approved name written against this "
+        "node was found in the page body (see the evidence below)"
+    ),
+    "matched-unscoped": (
+        "whether the name found is this node's own — an approved name was found in the page "
+        "body, but the list supplied is unscoped, so it does not say which node the name "
+        "belongs to"
+    ),
+}
+
+# What a reviewer should actually do, which differs once the tool has already
+# compared the page against a list.
+_NAME_ACTION = {
+    "matched": "The node name matched the approved list, so only how the page renders it needs a look.",
+    "matched-unscoped": "Confirm the matched name is this node's own; the list supplied does not say.",
+}
+_NAME_ACTION_DEFAULT = "check the node name against the Tripartite-approved list"
 
 
 # "eosc" as a token, not a fragment of a longer word. "geoscience" contains it;
@@ -513,18 +582,23 @@ def check_3(
 
     if logo_hits:
         lines = [f"EOSC-referencing image asset(s): {len(logo_hits)}"] + logo_hits[:5]
-        if name_note:
-            lines.append(name_note)
+        if name_note.line:
+            lines.append(name_note.line)
+        extra = _NAME_ACTION.get(name_note.state)
+        action = (
+            f"Confirm the EOSC logo is visible without scrolling. {extra}"
+            if extra
+            else f"Confirm the logo is visible without scrolling, and {_NAME_ACTION_DEFAULT}."
+        )
         return Result(
             "3",
             "EOSC logo and official node name visible",
             MANUAL_REVIEW,
             "An EOSC-referencing image asset is present, so the logo requirement is likely met. "
             'Two things remain human judgements: whether it is "clearly and visibly" shown, and '
-            "whether the node name on the page is the official Tripartite-approved one — the tool "
-            "has no authoritative list of approved names.",
+            f"{_NAME_CLAUSE[name_note.state]}.",
             lines,
-            reviewer_action="Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.",
+            reviewer_action=action,
         )
 
     return Result(
@@ -538,7 +612,7 @@ def check_3(
             f"{len(ev.images)} image/SVG element(s) examined, none referencing EOSC",
             "mentions of EOSC in page text: " + str(len(re.findall(r"(?i)eosc", ev.full_text))),
         ]
-        + ([name_note] if name_note else []),
+        + ([name_note.line] if name_note.line else []),
         reviewer_action="Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.",
     )
 

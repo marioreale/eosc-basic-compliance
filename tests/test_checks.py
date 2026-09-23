@@ -7,6 +7,8 @@ assert that a plausible-looking page does NOT pass.
 
 from __future__ import annotations
 
+import pytest
+
 from basic_check import checks
 from basic_check.fetch import Control, Image, Link, PageEvidence
 from basic_check.names import parse_approved_names
@@ -520,3 +522,94 @@ def test_geoscience_is_still_not_a_logo():
     for src in ("/img/geoscience.png", "/img/GEOSCIENCE-BANNER.png", "/img/neoscope.png"):
         res = checks.check_3(ev(images=[Image(src=src)], final_url="https://node.example/"))
         assert "none referencing EOSC" in " ".join(res.evidence), src
+
+
+# --- point 3: the message must not deny having a list it was given -----------
+
+
+def test_point3_does_not_deny_having_a_name_list_when_one_matched():
+    """Regression: the summary claimed no list existed even after a match.
+
+    The published 2026-09-21 run says so for BBMRI-ERIC and EUDAT while the
+    evidence line beside it records a successful match.
+    """
+    r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=["EGI Node"])
+    assert "no authoritative list" not in r.message
+    assert "no approved-names list was supplied" not in r.message
+
+
+def test_point3_message_reports_the_match_not_only_the_evidence_line():
+    """"approved name" alone would pass against the defective wording too."""
+    r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=["EGI Node"])
+    assert "was found in the page body" in r.message
+
+
+def test_point3_visibility_stays_a_human_judgement_even_after_a_match():
+    """A matched name settles the name half at most; the logo half never."""
+    r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=["EGI Node"])
+    assert "clearly and visibly" in r.message
+
+
+def test_point3_still_records_that_no_list_was_supplied_when_none_was():
+    r = checks.check_3(_logo_ev(full_text="EOSC Node Finland"))
+    assert "no approved-names list was supplied" in r.message
+    assert "Tripartite" in r.message
+
+
+def test_point3_message_says_the_name_was_looked_for_and_not_found():
+    r = checks.check_3(
+        _logo_ev(full_text="Some Node" * 50),
+        approved_names=["EOSC Node Poland", "EOSC Node Finland"],
+    )
+    assert "no authoritative list" not in r.message
+    assert "not found in the page body" in r.message
+
+
+def test_point3_message_says_the_body_was_never_captured():
+    """GEANT: names supplied, HTTP 403, so absence is not a finding."""
+    r = checks.check_3(
+        ev(images=[Image(src="https://cdn.example/eosc.svg", alt="EOSC")], full_text="", http_status=403),
+        approved_names=["EOSC Node - GEANT"],
+    )
+    assert "no authoritative list" not in r.message
+    assert "not captured" in r.message
+
+
+def test_point3_message_says_the_list_has_no_entry_for_this_node():
+    names = parse_approved_names("somewhere-else: EGI Node\n")
+    r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=names)
+    assert "no authoritative list" not in r.message
+    assert "no approved name for this node" in r.message
+
+
+@pytest.mark.parametrize(
+    "full_text,http_status,names",
+    [
+        ("Welcome to the EGI Node", 200, ["EGI Node"]),
+        ("Some Node" * 50, 200, ["EGI Node"]),
+        ("", 403, ["EGI Node"]),
+        ("Welcome to the EGI Node", 200, "somewhere-else: EGI Node\n"),
+    ],
+    ids=["matched", "not-found", "no-body", "not-scoped-for-this-node"],
+)
+def test_point3_never_denies_a_supplied_list_in_any_state(full_text, http_status, names):
+    """The invariant behind the defect, across every branch that can be reached."""
+    supplied = parse_approved_names(names) if isinstance(names, str) else names
+    r = checks.check_3(
+        ev(
+            images=[Image(src="https://cdn.example/eosc.svg", alt="EOSC")],
+            full_text=full_text,
+            http_status=http_status,
+        ),
+        approved_names=supplied,
+    )
+    assert "no authoritative list" not in r.message
+    assert "no approved-names list was supplied" not in r.message
+
+
+def test_point3_reviewer_action_does_not_ask_for_a_check_already_done():
+    """After a scoped match, re-checking the name against the list is busywork."""
+    names = parse_approved_names("t: EGI Node\n")
+    r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=names)
+    assert "against the Tripartite-approved list" not in r.reviewer_action
+    assert "logo" in r.reviewer_action.lower()

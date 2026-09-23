@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-All 235 tests still pass, while `collect` fails with Playwright's
+247 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 235 passed
+uv run pytest -q                  # expect: 247 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -671,7 +671,7 @@ a verdict surprises you.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 235 tests, offline, a few seconds
+uv run pytest -q                    # 247 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -681,7 +681,7 @@ uv run ruff check src tests         # lint
 | File | Tests | Covers |
 |---|---|---|
 | `test_checklist.py` | 12 | The transcription matches the source document, including its SHA-256, and the scoped name list agrees with the official one. |
-| `test_checks.py` | 50 | The verdict logic, point by point, including the render gate and the EOSC-asset token rule. |
+| `test_checks.py` | 62 | The verdict logic, point by point, including the render gate, the EOSC-asset token rule, and that a point 3 summary never denies having a name list it was given. |
 | `test_cli.py` | 28 | Command wiring, options, ad hoc `--url` isolation, and that `--only` does not shrink the published report. |
 | `test_crawl.py` | 34 | Link selection, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
