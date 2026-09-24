@@ -9,4 +9,6 @@ EOSC Node | EUDAT
 EOSC Node | EGI
 EOSC Node | GÉANT
 EOSC Node | EBRAINS RI
+EOSC Node | Italy
+EOSC Node | Slovakia
 

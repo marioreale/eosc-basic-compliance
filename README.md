@@ -17,7 +17,7 @@ follow one further hop under a fixed budget.
 👉 **[Installation, configuration and run guide](docs/GUIDE.md)** — start here if
 you want to install and run it yourself.
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 247
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 248
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 
@@ -27,12 +27,13 @@ test, and what the published figures do and do not say.
 
 ## What it found
 
-> **The published report covers nine nodes; `nodes.yaml` now configures eleven.**
-> CERN and Czechia were added to the configuration on 21 September 2026 and have
-> not been collected into `results/`, so they do not appear in the report or in
-> any count below. `basic-check assess` names them and exits 2 rather than
-> quietly omitting them. To publish them, run
-> `basic-check collect --only cern,eosc-cz` and then `assess`.
+> **The published report covers nine nodes; `nodes.yaml` now configures thirteen.**
+> CERN and Czechia were added to the configuration on 21 September 2026, and Italy
+> and Slovakia on 24 September 2026. None of the four has been collected into
+> `results/`, so they do not appear in the report or in any count below.
+> `basic-check assess` names them and exits 2 rather than quietly omitting them.
+> To publish them, run `basic-check collect --only cern,eosc-cz,eosc-it,eosc-sk`
+> and then `assess`.
 
 Nine landing pages, all fetched 21 September 2026, 13:04–13:07 UTC, at `--depth 2`.
 Eight responded `HTTP 200`. `geant.org` returned `HTTP 403` to this run's
@@ -306,7 +307,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 247 tests, a few seconds, no network, no browser
+uv run pytest -q          # 248 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

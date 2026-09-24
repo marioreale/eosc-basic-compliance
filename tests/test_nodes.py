@@ -85,6 +85,16 @@ def test_landing_page_urls_are_unique(nodes):
     assert not dupes, f"shared landing page URL(s): {dupes}"
 
 
+def test_eosc_pages_are_unique(nodes):
+    """Each node has its own entry on eosc.eu. Two nodes sharing one is a
+    copy-paste slip when adding similar entries, and it is not harmless: point 4
+    would look for the wrong node's page, and a node could fail a requirement it
+    satisfies. Every other guard passes on such a slip, so this one must exist."""
+    pages = [n.get("eosc_page", "").rstrip("/") for n in nodes]
+    dupes = {p for p in pages if pages.count(p) > 1}
+    assert not dupes, f"shared eosc_page URL(s): {dupes}"
+
+
 def test_every_eosc_page_is_on_eosc_eu(nodes):
     """Point 4 is specifically about the node's entry on eosc.eu. Pointing
     `eosc_page` anywhere else would make the check pass on the wrong link."""

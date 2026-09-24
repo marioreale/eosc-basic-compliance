@@ -4,7 +4,7 @@ name: compliance run
 # matrix to the run summary.
 #
 # Manual trigger only, deliberately. Unlike the `tests` workflow, this one sends
-# requests to nine organisations' websites. It is not on a schedule, because a
+# requests to every configured node's website. It is not on a schedule, because a
 # recurring unattended job that visits other people's sites is a different kind
 # of decision from a check someone chose to run.
 
@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       only:
-        description: 'Nodes to check (comma-separated ids, e.g. egi,eudat). Leave empty for all nine.'
+        description: 'Nodes to check (comma-separated ids, e.g. egi,eudat). Leave empty for every node in nodes.yaml.'
         required: false
         default: ''
         type: string
@@ -81,7 +81,7 @@ jobs:
       # The summary is a counts-and-pointer page, not the matrix. The per-node
       # verdicts are already published in the committed results/results.md, so
       # repeating them here leaks nothing new — but this run is unreviewed, and
-      # a world-readable page of FAILs against nine named organisations,
+      # a world-readable page of FAILs against named organisations,
       # produced automatically and carrying the repository's name, reads as a
       # finding rather than as a draft. The full tables are in the artifact.
       - name: Publish a summary of the run

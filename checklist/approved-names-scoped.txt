@@ -34,3 +34,5 @@ eudat: EOSC Node | EUDAT
 egi: EOSC Node | EGI
 geant: EOSC Node | GÉANT
 ebrains: EOSC Node | EBRAINS RI
+eosc-it: EOSC Node | Italy
+eosc-sk: EOSC Node | Slovakia

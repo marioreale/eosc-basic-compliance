@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-247 tests still pass, while `collect` fails with Playwright's
+248 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 247 passed
+uv run pytest -q                  # expect: 248 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -344,6 +344,13 @@ writing the name `EOSC Node Czechia` where the list writes `EOSC Node | Czechia`
 — a third node found by the separator-tolerant rule rather than by a literal
 match. CERN does not match: its landing page is a sign-in endpoint carrying 127
 characters of text, so there is almost nothing to match against.
+
+Italy and Slovakia were added on 24 September 2026 and are not in the
+published run either. A landing-page-only scratch run that day found Slovakia
+**matches**, scoped to its own node: the page writes `EOSC Node Slovakia` where
+the list writes `EOSC Node | Slovakia`. Italy could not be assessed at all:
+`eosc.it` has nameservers but no address record, so every point is `ERROR`
+rather than `FAIL` — an unreachable page is not evidence of non-compliance.
 
 **This is a finding to review, not a verdict.** Point 3 remains
 `MANUAL_REVIEW` for every node either way. A non-match means the page body does
@@ -671,7 +678,7 @@ a verdict surprises you.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 247 tests, offline, a few seconds
+uv run pytest -q                    # 248 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -685,7 +692,7 @@ uv run ruff check src tests         # lint
 | `test_cli.py` | 28 | Command wiring, options, ad hoc `--url` isolation, and that `--only` does not shrink the published report. |
 | `test_crawl.py` | 34 | Link selection, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
-| `test_nodes.py` | 12 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
+| `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
 | `test_report.py` | 35 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
 
 The suite makes no network requests and needs no browser, which is why CI runs

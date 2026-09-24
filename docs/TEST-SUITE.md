@@ -1,8 +1,8 @@
 # Test suite and configuration overview
 
 What the test suite covers, how the tool is configured, and what the published
-figures actually say. Every figure was measured on 22 September 2026 against the
-repository state this document is committed with: **247 test cases, all passing
+figures actually say. Every figure was measured on 24 September 2026 against the
+repository state this document is committed with: **248 test cases, all passing
 in CI**.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -12,7 +12,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 247 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 248 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -20,7 +20,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **247 cases** and gained two files: `tests/test_names.py` (64 cases, the approved-name matcher) and `tests/test_nodes.py` (12 cases, guarding the node configuration). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **248 cases** and gained two files: `tests/test_names.py` (64 cases, the approved-name matcher) and `tests/test_nodes.py` (13 cases, guarding the node configuration). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -29,13 +29,13 @@ conditions behind each of the ten checklist points.
 > | `uv.lock` is not committed, so runs are not reproducible | **Committed**; CI installs with `--locked` (section 9) |
 > | The web form cannot reach depth 2 | It can — the `depth` input now offers `2` (section 6) |
 >
-> The node list also grew from nine to **eleven** (CERN and EOSC Node Czechia), while the published report in `results/` still covers the original nine — that distinction is now explicit in sections 5 and 10. The suite's runtime rose from ~0.2 s to ~4.6 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
+> The node list also grew from nine to **thirteen** (CERN and EOSC Node Czechia on 21 September, Italy and Slovakia on 24 September), while the published report in `results/` still covers the original nine — that distinction is now explicit in sections 5 and 10. The suite's runtime rose from ~0.2 s to ~4.6 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
 
 ---
 
 ## 1. Language and framework
 
-**Python**, requiring 3.12 or newer, developed on 3.14. Packaged with hatchling and managed with `uv`. Roughly **3,638 lines across six modules** (`checks.py` 1053, `report.py` 952, `fetch.py` 706, `cli.py` 588, `names.py` 247, `patterns.py` 92), plus **2,761 lines of tests**. Tests are now about three quarters the size of the code they exercise.
+**Python**, requiring 3.12 or newer, developed on 3.14. Packaged with hatchling and managed with `uv`. Roughly **3,638 lines across six modules** (`checks.py` 1053, `report.py` 952, `fetch.py` 706, `cli.py` 588, `names.py` 247, `patterns.py` 92), plus **2,771 lines of tests**. Tests are now about three quarters the size of the code they exercise.
 
 The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does not use `unittest.TestCase` classes at all. Tests are plain functions with bare `assert` statements. There is no `setUp`/`tearDown`; shared setup is a few small helper functions that build page evidence.
 
@@ -57,9 +57,9 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**230 test functions, expanding to 247 executed cases** (four tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**231 test functions, expanding to 248 executed cases** (four tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
-The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 247 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
+The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 248 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
@@ -69,8 +69,8 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_crawl.py` | 34 | Link selection, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
 | `test_cli.py` | 28 | Argument handling, node-id derivation, output isolation, report scope, command wiring |
 | `test_checklist.py` | 12 | Provenance of the checklist: source document hash, point-to-rule mapping, version/filename convention |
-| `test_nodes.py` | 12 | The node configuration itself: required fields, unique ids, well-formed URLs, every node's name covered by the scoped list |
-| **Total** | **247** | |
+| `test_nodes.py` | 13 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list |
+| **Total** | **248** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -99,7 +99,7 @@ Six principles run through the suite.
 - **Link following must not make PASS cheaper.** A whole block of tests asserts that following a link can only make a verdict better-evidenced, never more generous: a broken policy link fails, a navigation stub is not accepted as a policy document, and an About page cannot flip point 2, which asks the landing page itself to state those things.
 - **The paperwork cannot drift from the code.** Twelve tests assert that the checklist YAML and the rules stay in step: the source document is committed and still hashes to what was transcribed, every point names the function that decides it, every function is claimed by exactly one point, and a revision must arrive as a new file. See section 5.
 - **Regression pins for real defects.** At least ten tests exist because the tool actually got something wrong. Each carries the reason in its docstring rather than only an assertion. Five are described in section 7.
-- **The configuration is part of the software.** Since the node list grew to eleven, twelve tests treat `nodes.yaml` as something that can be broken: a missing field, a duplicate id, a malformed URL or a node whose official name nothing in the scoped list covers all fail the suite rather than surfacing as a strange verdict later.
+- **The configuration is part of the software.** Since the node list grew beyond the original nine, thirteen tests treat `nodes.yaml` as something that can be broken: a missing field, a duplicate id, a malformed URL, two nodes pointing at the same eosc.eu entry, or a node whose official name nothing in the scoped list covers all fail the suite rather than surfacing as a strange verdict later.
 
 > **A guard that cannot fail is worse than no guard.** Both dual-depth guards in `test_report.py` were confirmed by deliberate mutation — rendering the deep results into the shallow table, and forcing a stray heading back — and each failed exactly one test. A test written against the wrong part of the output passes for the wrong reason: one of these initially asserted against the tally line rather than the table row, and would have stayed green through the bug it was written to catch.
 
@@ -168,7 +168,7 @@ Two depth-2 runs on 21 September, of 18 and 14 second-hop requests, each changed
 
 ### The node list — a YAML file
 
-The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **eleven** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `ebrains`.
+The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **thirteen** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `ebrains`, `eosc-it`, `eosc-sk`.
 
 ```yaml
 nodes:
@@ -356,7 +356,7 @@ The test workflow runs four steps: `uv sync --locked`, `ruff check src tests`, `
 
 `--locked` matters more than it looks. It installs exactly what `uv.lock` pins and **fails** if the lockfile has drifted from `pyproject.toml`. Plain `uv sync` would silently re-resolve, so a dependency change could land with a green tick while CI tested a different set of versions than the one committed. The compliance workflow uses `--locked` for the same reason with sharper stakes: a silently re-resolved Playwright, selectolax or lingua can change what a page looks like to the tool, and the output of that workflow is a set of verdicts about named organisations.
 
-> **A habit worth keeping.** A green tick means "nothing objected", not "everything was verified". A suite that collects zero tests also passes. The test count in the CI log is the thing to read — it currently says "247 passed".
+> **A habit worth keeping.** A green tick means "nothing objected", not "everything was verified". A suite that collects zero tests also passes. The test count in the CI log is the thing to read — it currently says "248 passed".
 
 ### Running the compliance scan from the browser, with no Terminal at all
 
@@ -490,7 +490,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 247 cases, ~4.6s, no network, no browser
+uv run pytest -q              # 248 cases, ~4.6s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -575,7 +575,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 247 cases, ~4.6s, no network, no browser
+# 6 - run the suite: 248 cases, ~4.6s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -620,7 +620,7 @@ From `results/results.json`, run `2026-09-21-1738`, checklist v3.0 of 15 Septemb
 
 Two timestamps matter here and they are not the same. The **evidence was collected** on 21 September between 13:04 and 13:07 UTC. The **report was regenerated** from that same evidence at 17:38 UTC, after the name-matching and report-scoping work landed. No node was contacted again in between — which is the point of keeping `collect` and `assess` separate.
 
-> **Nine nodes, not eleven.** `nodes.yaml` configures eleven nodes, but the published report covers the original **nine**. CERN and EOSC Node Czechia have been added to the configuration and have not been collected into the reviewed run. `assess` names both as missing evidence and exits 2 rather than quietly producing a nine-row table that looks complete.
+> **Nine nodes, not thirteen.** `nodes.yaml` configures thirteen nodes, but the published report covers the original **nine**. CERN, EOSC Node Czechia, EOSC Node Italy and EOSC Node Slovakia have been added to the configuration and have not been collected into the reviewed run. `assess` names all four as missing evidence and exits 2 rather than quietly producing a nine-row table that looks complete.
 
 | Verdict | Cells |
 |---|---|
@@ -677,7 +677,7 @@ Three caveats the tool states itself, and which matter more than the count:
 - The `<title>` element is not searched, only the page body. Several of the six "not found" results say so explicitly.
 - Most of those six pages *do* contain the phrase "EOSC Node"; what is absent is the full approved form.
 
-The current default list carries **eleven** names, one per configured node, with a scoped variant that binds each name to its node id. The published run predates that and used the nine-name version.
+The current default list carries **thirteen** names, one per configured node, with a scoped variant that binds each name to its node id. The published run predates that and used the nine-name version.
 
 ---
 
@@ -687,5 +687,5 @@ The current default list carries **eleven** names, one per configured node, with
 - EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
 - Figures in section 10: `results/results.json` at commit `014682c` — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
-- Approved node names: `checklist/approved-names.txt` (eleven names, SHA-256 `9d50d3a3…`) and the node-scoped variant `checklist/approved-names-scoped.txt`
-- Test counts, line counts, runtimes and command options in this document were measured on 23 September 2026 against the repository state it is committed with, not carried over from the previous edition
+- Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `871161a5…`) and the node-scoped variant `checklist/approved-names-scoped.txt`
+- Test counts, line counts, runtimes and command options in this document were measured on 24 September 2026 against the repository state it is committed with, not carried over from the previous edition

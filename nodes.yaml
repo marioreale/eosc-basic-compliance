@@ -65,3 +65,15 @@ nodes:
     name: EBRAINS
     url: https://ebrains.eu/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/
+  - id: eosc-it
+    name: EOSC Node Italy
+    # Supplied for assessment on 24 September 2026. On that date eosc.it had
+    # nameservers (GARR, CNR-ISTI) but no A or AAAA record, and www.eosc.it did
+    # not exist, so the page could not be fetched at all. eosc.eu lists no
+    # separate node website for Italy (the node is operated by ICSC).
+    url: https://eosc.it/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-italy/
+  - id: eosc-sk
+    name: EOSC Node Slovakia
+    url: https://eosc.sk/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-slovakia/
