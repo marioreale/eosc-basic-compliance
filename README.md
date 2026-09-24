@@ -72,6 +72,8 @@ Compared with the previous published run (21 September 2026, nine nodes):
 - **GÉANT** was served this time, where on 21 September it got a Cloudflare
   `HTTP 403`. Points 1, 6 and 7 are now `PASS`, and point 4 is now `FAIL`.
 - **CERN, Czechia and Slovakia** appear for the first time.
+- **The point 6 and 5b/5c fixes** make GÉANT 5b a `PASS` and move EBRAINS 6
+  from `PASS` to review.
 
 No other verdict changed.
 
