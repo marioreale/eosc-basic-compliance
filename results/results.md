@@ -1,76 +1,29 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `2026-09-21-1738` · 2026-09-21T17:38:53+00:00 · 9 nodes · one page request per node plus 22 followed link(s), then 14 second-hop page(s) (depth 2).
+Run `live-2026-09-24-no-italy` · 2026-09-24T18:47:43+00:00 · 12 nodes · one page request per node plus 32 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 
-**Node names.** 9 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `57bf9093b096…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
+**Node names.** 13 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `871161a50fcb…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
+
+> **Skipped by request.** eosc-it was left out of this run with --skip: not fetched, not assessed and not shown below. This table does not cover every configured node.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
 
-This run was collected at `--depth=2`, so it is reported twice: once using only the landing page and its direct links, and once using the second hop as well. Both tables come from the **same capture** — the shallow view is the deep evidence with the second-hop pages set aside, not a separate run — so any difference between them is the hop itself and not the passage of time.
-
-### Results at depth 1
-
-Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
-
-90 cells: 🟢 28 PASS · 🔴 7 FAIL · 🟠 55 review.
-
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🟢 PASS |
+| CERN | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review |
+| GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
-
-### Results at depth 2
-
-The same evidence plus 14 page(s) reached one further hop out, under a shared run budget.
-
-90 cells: 🟢 28 PASS · 🔴 7 FAIL · 🟠 55 review.
-
-| Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🟢 PASS |
-| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review |
-| EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
-
-### What the second hop changed
-
-**No verdict changed.** The second hop fetched 14 page(s) and left all 90 cells exactly as depth 1 had them.
-
-That is a finding, not a failure of the deeper crawl. The points still marked 🟠 review are not shallow-crawl artefacts: they turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all research resources offered by the Node"). Fetching more pages cannot settle either kind, which is why depth 1 remains the default.
-
-#### Pages the second hop fetched
-
-| Node | Point it was followed for | Page | Served |
-|---|---|---|---|
-| BBMRI-ERIC | 2 | <https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/> | 200 |
-| BBMRI-ERIC | 2 | <https://www.bbmri-eric.eu/national-nodes/> | 200 |
-| EOSC Finland | 6 | <https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/> | 200 |
-| PaNOSC | 2 | <https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/> | 200 |
-| EUDAT | 5b | <https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies> | 200 |
-| EUDAT | 6 | <https://www.eudat.eu/catalogue> | error |
-| EUDAT | 6 | <https://eudat.eu/contact-support-request> | 200 |
-| EUDAT | 2 | <https://docs.eudat.eu/b2access/about/> | 200 |
-| EGI | 2 | <https://www.egi.eu/egi-federation/> | 200 |
-| EBRAINS | 6 | <https://ebrains.eu/contact> | 200 |
-| EBRAINS | 2 | <https://ebrains.eu/about/at-a-glance/mission> | 200 |
-| EBRAINS | 2 | <https://ebrains.eu/about/at-a-glance/science-vision> | 200 |
-| EBRAINS | 2 | <https://ebrains.eu/about/at-a-glance/ebrains-20> | 200 |
-| EBRAINS | 2 | <https://ebrains.eu/about/at-a-glance/ethics-society> | 200 |
-
+| EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 
 ## What each column means
 
@@ -159,11 +112,11 @@ Be in English (Any other pages and information are not required to be strictly i
   - organisation-like names found: CSC; EOSC4CANCER EPND EPPerMed ERDERA ERIC; ERIC; European Research Infrastructure Consortium
   - about page one level down: https://www.bbmri-eric.eu/about/ (HTTP 200) opening text: "Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be ..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
   - EOSC-referencing image asset(s): 1
   - img: eosc node - bbmri-eric logo
   - approved name matched from the unscoped list: "EOSC Node | BBMRI-ERIC" (the page writes it "EOSC Node - BBMRI-ERIC") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
-  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
+  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "See the dedicated page on the EOSC website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
@@ -184,45 +137,129 @@ Be in English (Any other pages and information are not required to be strictly i
   - declared lang attribute: "en-GB"
   - detected language: en (confidence 1.0)
 
+### CERN
+<https://eosc-auth.cern.ch/login>
+
+- **1** 🟠 review — HTTP 200 but only 127 characters rendered. The page may require JavaScript the tool did not execute, or may be a shell.
+  - HTTP 200
+  - text length: 127
+  - *Reviewer action:* Open the page in a browser and confirm content is served anonymously.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - 1 distinct external host(s) linked from the landing page
+  - cern.service-now.com (Contact Support, Privacy policy)
+  - EOSC AAI indicators seen: myaccessid
+  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
+- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
+  - opening main text: "Welcome to CERN-EOSC-NODE Sign in with EOSC Local credentials Not a member? Apply for an account Privacy policy Contact Support..."
+  - no organisation-like names matched by pattern
+  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
+- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
+  - 0 image/SVG element(s) examined, none referencing EOSC
+  - mentions of EOSC in page text: 2
+  - NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched
+  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
+- **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: the document is essentially empty (127 chars of text in total)
+  - 6 link(s) examined, none pointing to eosc.eu
+  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-cern/ but is not linked from here
+  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
+- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+  - 6 outbound link(s) on the landing page
+  - main text length: 127 characters
+  - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
+- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
+  - 6 link(s) examined, none matching an Acceptable Use Policy
+  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
+  - 6 link(s) examined, none matching a User Access Policy
+  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
+- **6** 🟢 PASS — A support or helpdesk contact route is present.
+  - "Contact Support" -> https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en_US"
+  - detected language: en (confidence 0.97)
+
+### EOSC Node Czechia
+<https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia>
+
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 3769 characters of text rendered
+  - redirects followed: 2
+- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - 4 distinct external host(s) linked from the landing page
+  - bsky.app
+  - www.linkedin.com (LinkedIn)
+  - www.muni.cz (Masaryk University)
+  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
+- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
+  - meta description: "Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access."
+  - opening main text: "You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. What Is the EOSC Federation? The EOSC Federation enables researchers to access trustworthy and secure data, software, services and other digital resources acros..."
+  - organisation-like names found: Masaryk University
+  - about page one level down: https://www.eosc.cz/en/about-eosc-cz/contact (HTTP 200) opening text: "You are here: Home Contact Contact Contact for media Mgr. Bc. Lucie Skřičková correspondence Address: skrickova@ics.muni.cz phone: +420 725 640 451 General contacts Contact: info@eosc.cz EOSC CZ Training Centre: events@eosc.cz Correspondence address of the EOS..."
+  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
+- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
+  - 4 image/SVG element(s) examined, none referencing EOSC
+  - mentions of EOSC in page text: 31
+  - approved name matched from the unscoped list: "EOSC Node | Czechia" (the page writes it "EOSC Node Czechia") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
+  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "DETAILED DESCRIPTION OF EOSC NODE CZECHIA" -> https://eosc.eu/building-the-eosc-federation/eosc-node-czechia
+- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+  - 73 outbound link(s) on the landing page
+  - main text length: 2115 characters
+  - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
+- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
+  - 73 link(s) examined, none matching an Acceptable Use Policy
+  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
+  - 73 link(s) examined, none matching a User Access Policy
+  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
+- **6** 🟢 PASS — A support or helpdesk contact route is present.
+  - "National Support" -> https://www.eosc.cz/en/projects/national-support
+  - "National Support" -> https://www.eosc.cz/en/projects/national-support
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en"
+  - detected language: en (confidence 1.0)
+
 ### EOSC DTO (D4Science)
 <https://eosc-dto.d4science.org/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 4328 characters of text rendered
+  - HTTP 200 anonymously, 12319 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 5 distinct external host(s) linked from the landing page
-  - eosc-dto.d4science.org:443 (European-DTO Gateway)
-  - open-science-cloud.ec.europa.eu (EOSC)
-  - research-and-innovation.ec.europa.eu (HEU programme)
+  - doi.org (EOSC-Marine project)
+  - ec.europa.eu (EU H2020 programme)
+  - support.d4science.org (Helpdesk, Open a Node helpdesk request)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "EOSC Node | European Digital Twin Ocean This EOSC Thematic Node originated from the Blue-Cloud initiative, which de-facto piloted a marine thematic node to advance high-quality marine science Sign In Register Welcome! Access the rich world of this EOSC thematic node via the user-friendly D4Science platform . If you already have an account, simply sign in using your existing credentials, including ..."
-  - no organisation-like names matched by pattern
+  - opening main text: "A thematic node of the European Open Science Cloud EOSC Node | European Digital Twin Ocean Federating marine data, research environments, analytical services and computing resources for collaborative, FAIR and reproducible ocean science. Sign in with EOSC AAI Explore Resource Catalogue Explore Services Explore Research Environments This Node Landing Page is publicly accessible without login. Prote..."
+  - organisation-like names found: AUP Consortium; CNR; CNR CNR; ERIC; European Research Executive Agency; OGS HCMR EMSO-ERIC ETT University
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
   - EOSC-referencing image asset(s): 1
-  - img: EOSC Node | European Digital Twin Ocean
-  - NONE of the 9 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 2 times, but never followed by an approved name — note the <title> is not searched
+  - img: Official logo of EOSC Node European Digital Twin Ocean
+  - NONE of the 13 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 5 times, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
-- **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
-  - 20 link(s) examined, none pointing to eosc.eu
-  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean/ but is not linked from here
-  - note: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured — the DOM was nonetheless complete, so absence stands
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "View the dedicated Node page on eosc.eu →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
+  - "Open the official Node entry →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
+  - "Node page in EOSC Federation" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
-  - 20 outbound link(s) on the landing page
-  - main text length: 530 characters
+  - 57 outbound link(s) on the landing page
+  - main text length: 12097 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
-  - "Terms of Use" -> https://eosc-dto.d4science.org/terms-of-use
-  - followed: https://eosc-dto.d4science.org/terms-of-use -> HTTP 200, 8785 chars, title: Terms of Use - D4Science Infrastructure Gateway
-  - policy wording found: Terms, comply, conditions, policy
+  - "D4Science Access and Acceptable Use Policy" -> https://www.d4science.org/policies/access-and-acceptable-use
+  - "AUP" -> https://www.d4science.org/policies/access-and-acceptable-use
+  - followed: https://www.d4science.org/policies/access-and-acceptable-use -> HTTP 200, 5461 chars, title: Access and Acceptable Use Policy | D4Science
+  - policy wording found: Policy, Responsib, authorized, comply
   - *Reviewer action:* Confirm it covers all the node's resources and is in English.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 20 link(s) examined, none matching a User Access Policy
-  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🔴 **FAIL** — No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.
-  - 20 link(s) examined
-  - note: a cookie-consent overlay dominates the captured text (main text only 530 chars; markers: Accept All, Reject All, This website uses cookies); only 20 links captured, low for a landing page; only 530 characters of main text captured — the DOM was nonetheless complete, so absence stands
+- **5c** 🟠 review — A user access policy is mentioned in the page text but not as a followable link.
+  - text mentions: Access Polic, UAP, User Access Polic
+  - *Reviewer action:* Find where a User Access Policy is actually published and confirm it is reachable.
+- **6** 🟢 PASS — A support or helpdesk contact route is present.
+  - "Open a Node helpdesk request" -> https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new
+  - "Helpdesk" -> https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-US"
   - detected language: en (confidence 1.0)
@@ -242,10 +279,10 @@ Be in English (Any other pages and information are not required to be strictly i
   - opening main text: "Accueil The EOSC Node f... The EOSC Node for the Earth system and environmental sciences (under construction) The EOSC node’s digital gateway plays a crucial role in connecting research organizations to the broader European ecosystem. It serves as a single-entry point to the European Open Science Cloud (EOSC), facilitating access to open science resources and services across Europe. The DATA TERRA..."
   - no organisation-like names matched by pattern
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
   - EOSC-referencing image asset(s): 1
   - img: eosc node data terra environment
-  - NONE of the 9 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
+  - NONE of the 13 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 93 link(s) examined, none pointing to eosc.eu
@@ -286,10 +323,10 @@ Be in English (Any other pages and information are not required to be strictly i
   - organisation-like names found: Browse CSC; CSC; Copyright CSC; Docs CSC; Espoo Life Science Center; IT Center
   - about page one level down: https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/ (HTTP 200) opening text: "EOSC Finland Pilot Node Dataset-as-a-Service EOSC Finland - Tools for service providers and data managers EOSC Finland for researchers More about the EOSC Federation and the Finnish Pilot Node MyAccessID - a new way to access CSC services More about the EOSC F..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
   - EOSC-referencing image asset(s): 1
   - img: EOSCNode_Finland-1-1-scaled.jpg
-  - NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched
+  - NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 85 link(s) examined, none pointing to eosc.eu
@@ -317,10 +354,10 @@ Be in English (Any other pages and information are not required to be strictly i
 <https://eosc.panosc.eu/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 7714 characters of text rendered
+  - HTTP 200 anonymously, 7846 characters of text rendered
   - redirects followed: 2
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 37 distinct external host(s) linked from the landing page
+  - 40 distinct external host(s) linked from the landing page
   - aiidalab-qe.readthedocs.io (AiiDAlab Quantum ESPRESSO (QE) app)
   - api.whatsapp.com
   - archive.materialscloud.org (Materials Cloud Archive)
@@ -330,24 +367,24 @@ Be in English (Any other pages and information are not required to be strictly i
   - organisation-like names found: EOSC Association; Institut; Lund University; Neutron Competence Centre; Paul Scherrer Institute
   - about page one level down: https://www.panosc.eu/about-panosc/ (HTTP 200) opening text: "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node Ab..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
   - EOSC-referencing image asset(s): 3
   - img: EOSCNodePaNOSC_ColourPos-scaled.png
-  - img: EOSC-Federation-logo.png
+  - img: EOSC Federation User Forum
   - img: European Open Science Cloud
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🔴 **FAIL** — Links only to the building-the-eosc-federation index, which the checklist explicitly excludes. The node's own dedicated entry is required.
   - "Building the EOSC Federation" -> https://eosc.eu/eosc-about/building-the-eosc-federation/
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/ but is not linked from here
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
-  - 118 outbound link(s) on the landing page
-  - main text length: 7714 characters
+  - 123 outbound link(s) on the landing page
+  - main text length: 7846 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 118 link(s) examined, none matching an Acceptable Use Policy
+  - 123 link(s) examined, none matching an Acceptable Use Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 118 link(s) examined, none matching a User Access Policy
+  - 123 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
 - **6** 🟠 review — A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
   - followed: https://www.panosc.eu/contact/ -> HTTP 200
@@ -362,30 +399,30 @@ Be in English (Any other pages and information are not required to be strictly i
 <https://portal.eudat.eu/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 922 characters of text rendered
+  - HTTP 200 anonymously, 1130 characters of text rendered
   - redirects followed: 1
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 2 distinct external host(s) linked from the landing page
-  - docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node for your research.)
+  - 3 distinct external host(s) linked from the landing page
+  - docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node services.)
+  - eudat.eu (Service catalogue Browse the EUDAT Node services you can order, no account needed.)
   - www.eudat.eu (Accessibility Statement, EUDAT AUP, FAQs)
-  - depth 1: 6 of 7 followed page(s) were served anonymously, so those are publicly accessible
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "EOSC Node Marketplace Welcome to the EUDAT Portal Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limitless science. Uncertain where to start? Service catalogue Browse the EUDAT Node services you can order, no account needed. Set up your workspace Read about the first steps in becoming an EUDAT Node user. User Guides ..."
+  - opening main text: "Welcome to the EUDAT Portal Empowering open and collaborative research. The EUDAT Node brings together services, resources, and communities to support FAIR data management, cross-border collaboration, and interoperable scientific workflows within the EOSC ecosystem. Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limi..."
   - organisation-like names found: EUDAT Ltd
   - about page one level down: https://docs.eudat.eu (HTTP 200) opening text: "EUDAT Documentation Documentation Documentation Table of contents Welcome to the EUDAT Documentation service Documentation Feedback Interested in EUDAT services B2ACCESS B2ACCESS Overview Assurance Concepts For Users For Users Enabling MFA Updating Email List ..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — the tool has no authoritative list of approved names.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
   - EOSC-referencing image asset(s): 2
   - img: EOSC Node
   - img: EOSC Node
   - approved name matched from the unscoped list: "EOSC Node | EUDAT" (the page writes it "EOSC Node EUDAT") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
-  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
+  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EOSC Node EUDAT" -> https://eosc.eu/building-the-eosc-federation/eosc-node-eudat
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 11 outbound link(s) on the landing page
-  - main text length: 534 characters
+  - main text length: 742 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "EUDAT AUP" -> https://www.eudat.eu/eudat-cdi-aup
@@ -420,7 +457,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 40 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 23
-  - NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched
+  - NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 167 link(s) examined, none pointing to eosc.eu
@@ -450,48 +487,55 @@ Be in English (Any other pages and information are not required to be strictly i
 ### GÉANT
 <https://geant.org/geant-eosc-node/>
 
-- **1** 🟠 review — HTTP 403 to this tool's anonymous request, with no login affordance found. This is most likely bot protection reacting to an automated client rather than an access policy, so it is not treated as a failure: a browser may well be served normally. It could not be verified either way.
-  - HTTP 403
-  - bot-protection wording seen: Just a moment
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1&__cf_chl_rt_tk=X05Sy.t37nU_vgBcL6YNwTlvx40ar7yO2_gAcJNYc2E-1789996062-1.0.1.1-NKqjBe7R838ToZ356YSM4RSXdHXkZVL3MHUu1WOel.8
-  - *Reviewer action:* Open the URL in a normal browser. If it loads, this point passes and the block was bot protection. If it demands a login, confirm with the EEN that the login is EOSC AAI compliant.
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 9805 characters of text rendered
+  - redirects followed: 1
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 0 distinct external host(s) linked from the landing page
+  - 27 distinct external host(s) linked from the landing page
+  - careers.geant.org (Careers)
+  - clouds.geant.org (About the GÉANT Cloud Frameworks, Above-the-Net Services Incubator, Clouds)
+  - community.geant.org (Community Award, Community Programme, GÉANT Community)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - no organisation-like names matched by pattern
+  - meta description: "The GÉANT EOSC Node provides trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly."
+  - opening main text: "Home . Projects . GÉANT EOSC Node GÉANT EOSC Node The GÉANT EOSC Node is GÉANT's contribution to the EOSC Federation, providing trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly. GÉANT Service Catalogue The catalogue provides an overview of the GÉANT services onboarded into the EOSC Federation. GÉANT Node Acceptable Use ..."
+  - organisation-like names found: Association; Security Operations Centre
+  - about page one level down: https://geant.org/contact (HTTP 200) opening text: "Home . Contact Contact Get in touch, learn more or request support. GDPR For questions related to our Privacy Notice and how GÉANT processes your personal data. Contact us General enquiries Submit a general enquiry, and we will put you in contact with the appr..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
-  - 0 image/SVG element(s) examined, none referencing EOSC
-  - mentions of EOSC in page text: 0
-  - 9 approved name(s) were supplied for this node, but no page body was captured (HTTP 403), so the name was not looked for
-  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
-- **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: no links were captured at all, so the page yielded no link evidence
-  - 0 link(s) examined, none pointing to eosc.eu
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
+  - EOSC-referencing image asset(s): 1
+  - img: EOSCNode-GEANT-300x59.jpg
+  - approved name matched from the unscoped list: "EOSC Node | GÉANT" (the page writes it "EOSC Node GÉANT") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
+  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
+- **4** 🔴 **FAIL** — Links only to the building-the-eosc-federation index, which the checklist explicitly excludes. The node's own dedicated entry is required.
+  - "An evolving European federation enabling researchers to discover, access, share and reuse data and resources." -> https://eosc.eu/building-the-eosc-federation
+  - "A ‘system of systems’ to find and access data and services for research and innovation in Europe." -> https://eosc.eu/building-the-eosc-federation
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-geant/ but is not linked from here
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
-  - 0 outbound link(s) on the landing page
-  - main text length: 0 characters
+  - 124 outbound link(s) on the landing page
+  - main text length: 6097 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
-- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 0 link(s) examined, none matching an Acceptable Use Policy
-  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy.
+- **5b** 🟠 review — An acceptable use policy is mentioned in the page text but not as a followable link.
+  - text mentions: Acceptable Use Polic
+  - *Reviewer action:* Find where an Acceptable Use Policy is actually published and confirm it is reachable.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 0 link(s) examined, none matching a User Access Policy
+  - 124 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟠 review — No contact route was found, but the page yielded too little to conclude absence: no links were captured at all, so the page yielded no link evidence
-  - 0 link(s) examined
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
-- **7** 🟠 review — Only 0 characters of text were available — too little to detect a language.
+- **6** 🟢 PASS — The contact page reached from the landing page identifies a support or helpdesk route.
+  - "Contact" -> https://geant.org/contact
+  - "Contact To find out more about the GÉANT EOSC Node get in touch via the contact form." -> https://geant.org/contact/
+  - followed: https://geant.org/contact -> HTTP 200
+  - helpdesk wording on that page: helpdesk, support
+  - *Reviewer action:* Confirm the route reaches the node's user support.
+- **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-US"
-  - *Reviewer action:* Open the page and confirm its content is in English.
+  - detected language: en (confidence 1.0)
 
 ### EBRAINS
 <https://ebrains.eu/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 6693 characters of text rendered
+  - HTTP 200 anonymously, 6641 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 5 distinct external host(s) linked from the landing page
   - bsky.app (Bluesky)
@@ -507,14 +551,14 @@ Be in English (Any other pages and information are not required to be strictly i
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 51 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 0
-  - NONE of the 9 approved name(s) for this node appear in the page body — note the <title> is not searched
+  - NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 127 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/ but is not linked from here
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 127 outbound link(s) on the landing page
-  - main text length: 4833 characters
+  - main text length: 4781 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 127 link(s) examined, none matching an Acceptable Use Policy
@@ -524,6 +568,47 @@ Be in English (Any other pages and information are not required to be strictly i
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
 - **6** 🟢 PASS — A support or helpdesk contact route is present.
   - "EBRAINS Support for EuroHPC Applications" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en"
+  - detected language: en (confidence 1.0)
+
+### EOSC Node Slovakia
+<https://eosc.sk/>
+
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 8448 characters of text rendered
+- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - 19 distinct external host(s) linked from the landing page
+  - app.crepc.sk (CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only])
+  - app.creuc.sk (CREUČ The Central Registry of Artistic Activity of Universities in the Slovak Republic [Slovak only])
+  - cvtisr.sk (CVTI SR Portal, CVTI SR WEB)
+  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
+- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
+  - meta description: "EOSC Node Slovakia - pilot entry point (MVP) to research resources and services of the Slovak national EOSC node."
+  - opening main text: "Services Resources Use Cases Helpdesk Monitoring About Services Resources Use Cases Helpdesk Monitoring About EN / SK SSO login with EOSC SK AAI The production environment of EOSC SK AAI is deployed and validated. It provides single sign-on for the node based on the EOSC AAI architecture. Login will not be started from this page: it will be offered directly at the selected services as they are con..."
+  - organisation-like names found: Comenius University; Contact Slovak Centre; European Open Science Cloud Association; Matej Bel University; Slovak Centre; Technical University
+  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
+  - EOSC-referencing image asset(s): 6
+  - img: EOSC
+  - img: EOSC
+  - img: Service catalogue sc.eosc.sk
+  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "EOSC Node Slovakia (EOSC-A)" -> https://eosc.eu/building-the-eosc-federation/eosc-node-slovakia
+- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+  - 45 outbound link(s) on the landing page
+  - main text length: 8448 characters
+  - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
+- **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched, so this is a pointer, not a verified document.
+  - "Terms of Use (incl. AUP and UAP)" -> https://eosc.sk/docs/eosc_sk_tou.pdf
+  - *Reviewer action:* Open the link and confirm the target really is an Acceptable Use Policy, in English. Re-run with --depth 1 to have the tool check it.
+- **5c** 🟢 PASS — The landing page links to what appears to be a User Access Policy. The link target was not fetched, so this is a pointer, not a verified document.
+  - "Terms of Use (incl. AUP and UAP)" -> https://eosc.sk/docs/eosc_sk_tou.pdf
+  - *Reviewer action:* Open the link and confirm the target really is a User Access Policy, in English. Re-run with --depth 1 to have the tool check it.
+- **6** 🟢 PASS — A support or helpdesk contact route is present.
+  - "Open helpdesk" -> https://hd.eosc.sk
+  - "HELPDESK" -> https://hd.eosc.sk
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
   - detected language: en (confidence 1.0)

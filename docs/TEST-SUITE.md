@@ -29,7 +29,7 @@ conditions behind each of the ten checklist points.
 > | `uv.lock` is not committed, so runs are not reproducible | **Committed**; CI installs with `--locked` (section 9) |
 > | The web form cannot reach depth 2 | It can — the `depth` input now offers `2` (section 6) |
 >
-> The node list also grew from nine to **thirteen** (CERN and EOSC Node Czechia on 21 September, Italy and Slovakia on 24 September), while the published report in `results/` still covers the original nine — that distinction is now explicit in sections 5 and 10. The suite's runtime rose from ~0.2 s to ~5.9 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
+> The node list also grew from nine to **thirteen** (CERN and EOSC Node Czechia on 21 September, Italy and Slovakia on 24 September), and the published report in `results/` now covers twelve of them. Italy was skipped because its domain did not resolve on 24 September; section 10 has the details. The suite's runtime rose from ~0.2 s to ~5.9 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
 
 ---
 
@@ -625,9 +625,30 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ---
 
-## 10. The current published figures
+## 10. The published figures
 
-From `results/results.json`, run `2026-09-21-1738`, checklist v3.0 of 15 September 2026.
+### Current run: 24 September 2026
+
+From `results/results.json`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200.
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 45 |
+| 🔴 FAIL | 6 |
+| 🟠 MANUAL_REVIEW | 69 |
+| **Total** | **120** (12 nodes × 10 points) |
+
+All six FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, EBRAINS), and two link only to the federation index (PaNOSC, GÉANT). Compared with the run below, EOSC DTO moved from `FAIL` to `PASS` on points 4 and 6. GÉANT was served this time, which settled points 1, 6 and 7 as `PASS` and point 4 as `FAIL`. CERN, Czechia and Slovakia appear for the first time. No other cell changed.
+
+The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations are recorded there as candidates for a later rule change, not fixed. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
+
+`test_names.py::test_the_official_names_match_the_nodes_that_show_them` is pinned to the committed evidence. It now expects five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two.
+
+### Previous run: 21 September 2026
+
+The rest of this section is kept as the record of the earlier published run. It no longer describes `results/`, which the run above replaced; that run's files are in the git history at `47f08af`.
+
+From `results/results.json` as it stood at `47f08af`, run `2026-09-21-1738`, checklist v3.0 of 15 September 2026.
 
 Two timestamps matter here and they are not the same. The **evidence was collected** on 21 September between 13:04 and 13:07 UTC. The **report was regenerated** from that same evidence at 17:38 UTC, after the name-matching and report-scoping work landed. No node was contacted again in between — which is the point of keeping `collect` and `assess` separate.
 
@@ -697,6 +718,7 @@ The current default list carries **thirteen** names, one per configured node, wi
 - Checklist: *Node Landing Page Verification Checklist v3.0*, 15 September 2026, committed as `checklist/20260910_Node_Landing_Page_Verification_Checklist_v3.0.pdf` and transcribed to `checklist/v3.0.yaml` with its SHA-256 pinned
 - EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
-- Figures in section 10: `results/results.json` at commit `014682c` — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
+- Figures in section 10, current run: `results/results.json`, run `live-2026-09-24-no-italy`, collected 24 September 2026, reviewed in `results/REVIEW-2026-09-24.md`
+- Figures in section 10, previous run: `results/results.json` at commit `014682c` — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `871161a5…`) and the node-scoped variant `checklist/approved-names-scoped.txt`
 - Test counts, line counts, runtimes and command options in this document were measured on 24 September 2026 against the repository state it is committed with, not carried over from the previous edition

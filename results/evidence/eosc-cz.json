@@ -1,0 +1,2624 @@
+{
+  "node_id": "eosc-cz",
+  "node_name": "EOSC Node Czechia",
+  "requested_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+  "fetched_at": "2026-09-24T18:43:39+00:00",
+  "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+  "http_status": 200,
+  "redirect_chain": [
+    "https://c.clarity.ms/c.gif",
+    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=6EC2B53809594E64BCCDEA8268C18178&RedC=c.clarity.ms&MXFR=0D2879A01A756F4814566E7E1E75617A"
+  ],
+  "robots_allowed": true,
+  "robots_note": "robots.txt consulted",
+  "title": "EOSC Node Czechia | EOSC - European Open Science Cloud",
+  "lang_attr": "en",
+  "main_text": "You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. What Is the EOSC Federation? The EOSC Federation enables researchers to access trustworthy and secure data, software, services and other digital resources across European countries and research disciplines. It operates as a distributed network of interconnected EOSC Nodes rather than as a single centrally managed system. Individual Nodes bring together services and data sources operated by national, regional, thematic or European organisations. Once it enters production, EOSC Node Czechia will become a fully integrated part of this network. It will give Czech researchers access to resources provided by other European Nodes while making Czech services and data available to users abroad. DETAILED DESCRIPTION OF EOSC NODE CZECHIA EOSC CZ SERVICES AND REPOSITORIES How the EOSC Node Czechia Contributes to the EOSC Federation Sovereign AI and LLMs LLM-as-a-Service with an OpenAI-compatible API, without reliance on commercial providers Galaxy with LLM-Powered Workflows usegalaxy.cz integrated with LLMs for annotation, metadata creation and code generation—without the need for programming SensitiveCloud A trusted environment for working with sensitive data, ISO 27001 certified and supported by Perun-based AAI Service Incubator The planned incubator will help services and repositories under development reach the level of technological maturity required for integration into the EOSC Federation Collaboration with Other European Nodes (Multi-Node Use Cases) Cross-Node LLM: Secure access to LLMs across European Nodes through a unified interface and an OpenAI-compatible API. AI-enhanced Galaxy workflows: Integration of usegalaxy.cz with LLMs directly within scientific workflows, supporting annotation, metadata creation and code generation. SensitiveCloud for MCVAL: Multi-centre validation of an AI model for prostate cancer detection using data from Austria.",
+  "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. What Is the EOSC Federation? The EOSC Federation enables researchers to access trustworthy and secure data, software, services and other digital resources across European countries and research disciplines. It operates as a distributed network of interconnected EOSC Nodes rather than as a single centrally managed system. Individual Nodes bring together services and data sources operated by national, regional, thematic or European organisations. Once it enters production, EOSC Node Czechia will become a fully integrated part of this network. It will give Czech researchers access to resources provided by other European Nodes while making Czech services and data available to users abroad. DETAILED DESCRIPTION OF EOSC NODE CZECHIA EOSC CZ SERVICES AND REPOSITORIES How the EOSC Node Czechia Contributes to the EOSC Federation Sovereign AI and LLMs LLM-as-a-Service with an OpenAI-compatible API, without reliance on commercial providers Galaxy with LLM-Powered Workflows usegalaxy.cz integrated with LLMs for annotation, metadata creation and code generation—without the need for programming SensitiveCloud A trusted environment for working with sensitive data, ISO 27001 certified and supported by Perun-based AAI Service Incubator The planned incubator will help services and repositories under development reach the level of technological maturity required for integration into the EOSC Federation Collaboration with Other European Nodes (Multi-Node Use Cases) Cross-Node LLM: Secure access to LLMs across European Nodes through a unified interface and an OpenAI-compatible API. AI-enhanced Galaxy workflows: Integration of usegalaxy.cz with LLMs directly within scientific workflows, supporting annotation, metadata creation and code generation. SensitiveCloud for MCVAL: Multi-centre validation of an AI model for prostate cancer detection using data from Austria. Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+  "links": [
+    {
+      "href": "https://www.eosc.cz/en",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/o-nas/eosc-node-czechia",
+      "text": "Čeština",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/o-nas/eosc-node-czechia",
+      "text": "CS",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz",
+      "text": "About EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+      "text": "Initiative EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+      "text": "EOSC Node Czechia",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+      "text": "EOSC CZ in data",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+      "text": "Secretariat EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "text": "Templates EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+      "text": "Acknowledgement and Citation",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+      "text": "FAQ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/national-support",
+      "text": "National Support",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+      "text": "Outcomes of the EOSC CZ Initiative",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/eosc-cz",
+      "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+      "text": "Czech Academic and Research Discovery Services (CARDS)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+      "text": "National Repository Platform for Research Data (NRP)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/open-science-ii",
+      "text": "Open Science II (OS II)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/open-science-iii",
+      "text": "Open Science III (OS III)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/open-calls",
+      "text": "Open Calls",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/working-groups",
+      "text": "Working groups",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/working-groups/wg",
+      "text": "Working Groups",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/working-groups/task-forces",
+      "text": "Task Forces",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/services",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/communities",
+      "text": "Communities",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/communities/data-stewards",
+      "text": "Data stewards",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/training",
+      "text": "Training",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events",
+      "text": "News and Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events/news",
+      "text": "News",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+      "text": "Events calendar",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events/networking",
+      "text": "Networking",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz",
+      "text": "About EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+      "text": "Initiative EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+      "text": "EOSC Node Czechia",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+      "text": "EOSC CZ in data",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+      "text": "Secretariat EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "text": "Templates EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+      "text": "Acknowledgement and Citation",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+      "text": "FAQ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects",
+      "text": "Projects",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/national-support",
+      "text": "National Support",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+      "text": "Outcomes of the EOSC CZ Initiative",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/eosc-cz",
+      "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+      "text": "Czech Academic and Research Discovery Services (CARDS)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+      "text": "National Repository Platform for Research Data (NRP)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/open-science-ii",
+      "text": "Open Science II (OS II)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/projects/open-science-iii",
+      "text": "Open Science III (OS III)",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/open-calls",
+      "text": "Open Calls",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/working-groups",
+      "text": "Working groups",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/working-groups/wg",
+      "text": "Working Groups",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/working-groups/task-forces",
+      "text": "Task Forces",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/services",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/communities",
+      "text": "Communities",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/communities/data-stewards",
+      "text": "Data stewards",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/training",
+      "text": "Training",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events",
+      "text": "News and Events",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events/news",
+      "text": "News",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+      "text": "Events calendar",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events/networking",
+      "text": "Networking",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en",
+      "text": "Home",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-czechia",
+      "text": "DETAILED DESCRIPTION OF EOSC NODE CZECHIA",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/services/all",
+      "text": "EOSC CZ SERVICES AND REPOSITORIES",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "text": "Templates EOSC",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "text": "CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+      "text": "Newsletter EOSC CZ",
+      "visible": true
+    },
+    {
+      "href": "https://www.muni.cz/en",
+      "text": "Masaryk University",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc.cz/en/system/web-admin",
+      "text": "Web Admin",
+      "visible": true
+    },
+    {
+      "href": "https://bsky.app/profile/eosccz.bsky.social",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+      "text": "LinkedIn",
+      "visible": true
+    },
+    {
+      "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+      "text": "Youtube",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://cdn.muni.cz/media/4204990/mapa_node_2_1.png?mode=crop&center=0.5,0.5&rnd=134299825320000000&width=1170",
+      "alt": "No description",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://cdn.muni.cz/media/4132331/eu_msmt_eng_nove.svg?mode=crop&center=0.5,0.5&rnd=134202929890000000",
+      "alt": "No description",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    }
+  ],
+  "controls": [
+    {
+      "text": "Search ...",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Close",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Go to main content",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#main",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to main menu",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#menu-main",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to search",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#form-search",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Čeština",
+      "href": "https://www.eosc.cz/o-nas/eosc-node-czechia",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CS",
+      "href": "https://www.eosc.cz/o-nas/eosc-node-czechia",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Initiative EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Node Czechia",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC CZ in data",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Secretariat EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Templates EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Acknowledgement and Citation",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "FAQ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://www.eosc.cz/en/projects",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "National Support",
+      "href": "https://www.eosc.cz/en/projects/national-support",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Outcomes of the EOSC CZ Initiative",
+      "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+      "href": "https://www.eosc.cz/en/projects/eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Czech Academic and Research Discovery Services (CARDS)",
+      "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "National Repository Platform for Research Data (NRP)",
+      "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open Science II (OS II)",
+      "href": "https://www.eosc.cz/en/projects/open-science-ii",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open Science III (OS III)",
+      "href": "https://www.eosc.cz/en/projects/open-science-iii",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open Calls",
+      "href": "https://www.eosc.cz/en/open-calls",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Working groups",
+      "href": "https://www.eosc.cz/en/working-groups",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Working Groups",
+      "href": "https://www.eosc.cz/en/working-groups/wg",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Task Forces",
+      "href": "https://www.eosc.cz/en/working-groups/task-forces",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://www.eosc.cz/en/services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Communities",
+      "href": "https://www.eosc.cz/en/communities",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Data stewards",
+      "href": "https://www.eosc.cz/en/communities/data-stewards",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training",
+      "href": "https://www.eosc.cz/en/training",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News and Events",
+      "href": "https://www.eosc.cz/en/news-and-events",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News",
+      "href": "https://www.eosc.cz/en/news-and-events/news",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Events calendar",
+      "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Networking",
+      "href": "https://www.eosc.cz/en/news-and-events/networking",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Initiative EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Node Czechia",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC CZ in data",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Secretariat EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Templates EOSC CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Acknowledgement and Citation",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "FAQ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects",
+      "href": "https://www.eosc.cz/en/projects",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "National Support",
+      "href": "https://www.eosc.cz/en/projects/national-support",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Outcomes of the EOSC CZ Initiative",
+      "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+      "href": "https://www.eosc.cz/en/projects/eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Czech Academic and Research Discovery Services (CARDS)",
+      "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "National Repository Platform for Research Data (NRP)",
+      "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open Science II (OS II)",
+      "href": "https://www.eosc.cz/en/projects/open-science-ii",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open Science III (OS III)",
+      "href": "https://www.eosc.cz/en/projects/open-science-iii",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open Calls",
+      "href": "https://www.eosc.cz/en/open-calls",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Working groups",
+      "href": "https://www.eosc.cz/en/working-groups",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Working Groups",
+      "href": "https://www.eosc.cz/en/working-groups/wg",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Task Forces",
+      "href": "https://www.eosc.cz/en/working-groups/task-forces",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://www.eosc.cz/en/services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Communities",
+      "href": "https://www.eosc.cz/en/communities",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Data stewards",
+      "href": "https://www.eosc.cz/en/communities/data-stewards",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training",
+      "href": "https://www.eosc.cz/en/training",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News and Events",
+      "href": "https://www.eosc.cz/en/news-and-events",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News",
+      "href": "https://www.eosc.cz/en/news-and-events/news",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Events calendar",
+      "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Networking",
+      "href": "https://www.eosc.cz/en/news-and-events/networking",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Home",
+      "href": "https://www.eosc.cz/en",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "DETAILED DESCRIPTION OF EOSC NODE CZECHIA",
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-czechia",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC CZ SERVICES AND REPOSITORIES",
+      "href": "https://www.eosc.cz/en/services/all",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Templates EOSC",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CZ",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Newsletter EOSC CZ",
+      "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Masaryk University",
+      "href": "https://www.muni.cz/en",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Web Admin",
+      "href": "https://www.eosc.cz/en/system/web-admin",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cookies",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "LinkedIn",
+      "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Youtube",
+      "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cookie Settings",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Necessary Only",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Accept Cookies",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access.",
+  "error": "",
+  "screenshot": "eosc-cz.png",
+  "crawl_depth": 1,
+  "children": [
+    {
+      "url": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "selected_for": [
+        "6",
+        "2"
+      ],
+      "link_text": "Contact",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.eosc.cz/en/about-eosc-cz/contact",
+      "title": "Contact | EOSC - European Open Science Cloud",
+      "lang_attr": "en",
+      "main_text": "You are here: Home Contact Contact Contact for media Mgr. Bc. Lucie Skřičková correspondence Address: skrickova@ics.muni.cz phone: +420 725 640 451 General contacts Contact: info@eosc.cz EOSC CZ Training Centre: events@eosc.cz Correspondence address of the EOSC-CZ project EOSC CZ Secretariat CERIT-SC, Institute of Computer Science Masaryk University Šumavská 525/33 602 00 Brno Correspondence address of the NRP project CESNET Generála Píky 430/26 160 00 Prague Correspondence address of the OS II project Charles University Project Support Office Ovocný trh 560/5 116 36 Prague 1 Correspondence address of the CARDS project National Library of Technology Technická 2710/6 160 80 Prague 6",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home Contact Contact Contact for media Mgr. Bc. Lucie Skřičková correspondence Address: skrickova@ics.muni.cz phone: +420 725 640 451 General contacts Contact: info@eosc.cz EOSC CZ Training Centre: events@eosc.cz Correspondence address of the EOSC-CZ project EOSC CZ Secretariat CERIT-SC, Institute of Computer Science Masaryk University Šumavská 525/33 602 00 Brno Correspondence address of the NRP project CESNET Generála Píky 430/26 160 00 Prague Correspondence address of the OS II project Charles University Project Support Office Ovocný trh 560/5 116 36 Prague 1 Correspondence address of the CARDS project National Library of Technology Technická 2710/6 160 80 Prague 6 Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+      "links": [
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/kontakt",
+          "text": "Čeština",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/kontakt",
+          "text": "CS",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "tel:+420725640451",
+          "text": "+420 725 640 451",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eosc.cz",
+          "text": "info@eosc.cz",
+          "visible": true
+        },
+        {
+          "href": "mailto:events@eosc.cz",
+          "text": "events@eosc.cz",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "EOSC-CZ project",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "NRP project",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "OS II project",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84940-czech-academic-and-research-discovery-services-cards",
+          "text": "CARDS project",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+          "text": "Newsletter EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.muni.cz/en",
+          "text": "Masaryk University",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/system/web-admin",
+          "text": "Web Admin",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/eosccz.bsky.social",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+          "text": "Youtube",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.eosc.cz/en/projects/national-support",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "National Support",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.eosc.cz/en/projects/national-support",
+      "title": "National Support | EOSC - European Open Science Cloud",
+      "lang_attr": "en",
+      "main_text": "You are here: Home National Support National Support for EOSC The national support for developing the EOSC initiative in the Czech Republic is provided by the Ministry of Education, Youth and Sports through the P JAC. The total allocation of the support amounts to approximately CZK 3 billion. The EOSC-CZ project is considered a strategic project of the whole programme. The total allocation is further extended to support Open Science principles (especially Open Access) through other system projects of the National Library of Technology (e.g. CARDS ). This support aims, in addition to a qualitative improvement and facilitation of research data management in the Czech Republic, to react to new requirements of project calls to implement Open Science principles according to international standards. The aim is to ensure that good practice in research data management becomes a regular part of academic research. Moreover, the infrastructure that is being built will facilitate and support data sharing within scientific collaboration (both within and across disciplines). Associated Projects The national support comprises several complementary projects: EOSC-CZ - Research and Development Call I CARDS - Research and Development Call I The joint project of the National Repository Platform (NRP) - Open Science Call I Thematic (discipline) clusters and their connection to NDI – Open Science Call II Upskilling of academic and research institutions that are gradually introducing research data management – Open Science Call III The Research Environment Call focused on institutional facilities/conditions for collaboration with the NDI (in preparation) EOSC-CZ, 2023 – Coordinated by e-INFRA CZ (CERIT-SC) The technological foundation and facilities built within the EOSC-CZ project form the cornerstone of the National Data Infrastructure (NDI) on which subsequent projects will be able to build. The project forms three pillars of support for EOSC implementation in the Czech Republic: 1. Promotion of Cooperation ( EOSC CZ Secretariat , KA2): Administrative and support component of the EOSC initiative implementation and the provision of FAIR research data in the Czech Republic. The EOSC CZ Secretariat manages the Czech EOSC information portal (eosc.cz), promotes and supports engagement in related international activities, provides support to working groups and coordinates collaboration across the Czech Republic. 2. Technological Background (NMD, AAI, PID, KA3): The project will ensure the pilot operation of technical and software components and NDI services. These include the National Metadata Directory (NMD), AAI, technical background for PIDs, advanced data transfers and monitoring. The design, implementation and subsequent pilot operation of the components necessary to ensure the implementation of EOSC CZ as a whole are part of the project as well. 3. Competence Development ( EOSC CZ Training Centre , KA4): The EOSC CZ Training Centre will provide comprehensive support and facilities for training, educational and related activities. This includes the provision of trainers and speakers and the implementation of training. The Training Centre will also organise cooperation with Czech academic institutions while collecting requests for training and education; it will also provide a list of available training courses in the Czech Republic. CARDS, 2023 – Coordinated by the National Library of Technology (NLT) This project is complementary to EOSC-CZ and supports the implementation of the EOSC CZ initiative by covering work with metadata and Persistent identifiers (PIDs). The aim of the project is to further support the implementation of Open Science principles (especially Open Access) into the Czech academic environment. Joint Project of the National Repository Platform (NRP), 2024 – Coordinated by e-INFRA CZ (CESNET) This is a consortium project of Czech academic and research institutions (about 10+ partners) led by the so-called EOSC Mandated Organisation, which in the case of the Czech Republic, is the CESNET Association. The project builds upon the background created by the EOSC-CZ and CARDS projects and is required to cooperate with these projects. The expected outputs of the project are: The architecture of the National Repository Platform (NRP) as a basis for its development. A continuously developed set of services with a roadmap for their gradual implementation and deployment. The National Repository Platform with both basic and advanced services, including adequate distributed storage capacity and a control system for accessing the NRP data. Integration of key stakeholders – data-oriented academic institutions and research teams for FAIR data – into building the core of the National Data Infrastructure (NDI). Long-term operation of the NRP and its services, including systematic support of the scientific community in educating them on best practices of working with research data and using the NRP services for scientific data. Educational materials and training for working with NRP and its services in cooperation with the EOSC-CZ project in the implementation of the training. Creating specific tenants/repositories over NRP, such as institutional repositories where institutions wish to create them; making templates and procedures for creating specific repositories according to the needs of the research groups and institutions. National Data Infrastructure (NDI) The above-stated projects aim to support the implementation of the EOSC initiative in the Czech Republic and create its national node, thus supporting good practice in research data management across scientific communities. As the implementation should result in support for researchers, it is crucial to maintain contact with the scientific community and base the implementation on the real needs of the Czech research environment. Therefore, together with the above-mentioned projects and the background and facilities they will create, a key role in the implementation is also played by the EOSC CZ Working Groups . The Working Groups, the EOSC CZ Secretariat, the EOSC CZ Training Centre, the NRP and other components together form the so-called National Data Infrastructure or national environment for the EOSC initiative implementation in the Czech Republic. European Open Science Cloud Czech Republic National repository platform for research data Czech Academic and Research Discovery Services",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home National Support National Support for EOSC The national support for developing the EOSC initiative in the Czech Republic is provided by the Ministry of Education, Youth and Sports through the P JAC. The total allocation of the support amounts to approximately CZK 3 billion. The EOSC-CZ project is considered a strategic project of the whole programme. The total allocation is further extended to support Open Science principles (especially Open Access) through other system projects of the National Library of Technology (e.g. CARDS ). This support aims, in addition to a qualitative improvement and facilitation of research data management in the Czech Republic, to react to new requirements of project calls to implement Open Science principles according to international standards. The aim is to ensure that good practice in research data management becomes a regular part of academic research. Moreover, the infrastructure that is being built will facilitate and support data sharing within scientific collaboration (both within and across disciplines). Associated Projects The national support comprises several complementary projects: EOSC-CZ - Research and Development Call I CARDS - Research and Development Call I The joint project of the National Repository Platform (NRP) - Open Science Call I Thematic (discipline) clusters and their connection to NDI – Open Science Call II Upskilling of academic and research institutions that are gradually introducing research data management – Open Science Call III The Research Environment Call focused on institutional facilities/conditions for collaboration with the NDI (in preparation) EOSC-CZ, 2023 – Coordinated by e-INFRA CZ (CERIT-SC) The technological foundation and facilities built within the EOSC-CZ project form the cornerstone of the National Data Infrastructure (NDI) on which subsequent projects will be able to build. The project forms three pillars of support for EOSC implementation in the Czech Republic: 1. Promotion of Cooperation ( EOSC CZ Secretariat , KA2): Administrative and support component of the EOSC initiative implementation and the provision of FAIR research data in the Czech Republic. The EOSC CZ Secretariat manages the Czech EOSC information portal (eosc.cz), promotes and supports engagement in related international activities, provides support to working groups and coordinates collaboration across the Czech Republic. 2. Technological Background (NMD, AAI, PID, KA3): The project will ensure the pilot operation of technical and software components and NDI services. These include the National Metadata Directory (NMD), AAI, technical background for PIDs, advanced data transfers and monitoring. The design, implementation and subsequent pilot operation of the components necessary to ensure the implementation of EOSC CZ as a whole are part of the project as well. 3. Competence Development ( EOSC CZ Training Centre , KA4): The EOSC CZ Training Centre will provide comprehensive support and facilities for training, educational and related activities. This includes the provision of trainers and speakers and the implementation of training. The Training Centre will also organise cooperation with Czech academic institutions while collecting requests for training and education; it will also provide a list of available training courses in the Czech Republic. CARDS, 2023 – Coordinated by the National Library of Technology (NLT) This project is complementary to EOSC-CZ and supports the implementation of the EOSC CZ initiative by covering work with metadata and Persistent identifiers (PIDs). The aim of the project is to further support the implementation of Open Science principles (especially Open Access) into the Czech academic environment. Joint Project of the National Repository Platform (NRP), 2024 – Coordinated by e-INFRA CZ (CESNET) This is a consortium project of Czech academic and research institutions (about 10+ partners) led by the so-called EOSC Mandated Organisation, which in the case of the Czech Republic, is the CESNET Association. The project builds upon the background created by the EOSC-CZ and CARDS projects and is required to cooperate with these projects. The expected outputs of the project are: The architecture of the National Repository Platform (NRP) as a basis for its development. A continuously developed set of services with a roadmap for their gradual implementation and deployment. The National Repository Platform with both basic and advanced services, including adequate distributed storage capacity and a control system for accessing the NRP data. Integration of key stakeholders – data-oriented academic institutions and research teams for FAIR data – into building the core of the National Data Infrastructure (NDI). Long-term operation of the NRP and its services, including systematic support of the scientific community in educating them on best practices of working with research data and using the NRP services for scientific data. Educational materials and training for working with NRP and its services in cooperation with the EOSC-CZ project in the implementation of the training. Creating specific tenants/repositories over NRP, such as institutional repositories where institutions wish to create them; making templates and procedures for creating specific repositories according to the needs of the research groups and institutions. National Data Infrastructure (NDI) The above-stated projects aim to support the implementation of the EOSC initiative in the Czech Republic and create its national node, thus supporting good practice in research data management across scientific communities. As the implementation should result in support for researchers, it is crucial to maintain contact with the scientific community and base the implementation on the real needs of the Czech research environment. Therefore, together with the above-mentioned projects and the background and facilities they will create, a key role in the implementation is also played by the EOSC CZ Working Groups . The Working Groups, the EOSC CZ Secretariat, the EOSC CZ Training Centre, the NRP and other components together form the so-called National Data Infrastructure or national environment for the EOSC initiative implementation in the Czech Republic. European Open Science Cloud Czech Republic National repository platform for research data Czech Academic and Research Discovery Services Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+      "links": [
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/projekty/narodni-podpora-pro-eosc",
+          "text": "Čeština",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/projekty/narodni-podpora-pro-eosc",
+          "text": "CS",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "EOSC-CZ project",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84940-czech-academic-and-research-discovery-services-cards",
+          "text": "CARDS",
+          "visible": true
+        },
+        {
+          "href": "https://opjak.cz/vyzvy/vyzva-c-02_23_014-open-science-i/",
+          "text": "Open Science Call I",
+          "visible": true
+        },
+        {
+          "href": "https://cdn.muni.cz/media/3535282/timeline_en_pozadi_.png?mode=crop&center=0.5,0.5&rnd=133299280430000000",
+          "text": "No description",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "EOSC CZ Secretariat",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "EOSC CZ Training Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "EOSC CZ Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp/national-repository-platform",
+          "text": "National repository platform for research data",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84940-czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+          "text": "Newsletter EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.muni.cz/en",
+          "text": "Masaryk University",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/system/web-admin",
+          "text": "Web Admin",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/eosccz.bsky.social",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+          "text": "Youtube",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.eosc.cz/en/about-eosc-cz",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "About EOSC CZ",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+      "title": "Initiative EOSC CZ | EOSC - European Open Science Cloud",
+      "lang_attr": "en",
+      "main_text": "You are here: Home Initiative EOSC CZ Initiative EOSC CZ A key concept of this initiative is so-called “ FAIR data ”, i.e. data, that are searchable, accessible, well described and therefore interoperable, and with clear conditions of their further use. FAIR data are not open in the absolute sense but are prepared to be readily used by an interested party – a scientist that meets the access conditions. Over the last decade, the value of well-described and readily available research data has been embraced on a pan-European level by the European Open Science Cloud (EOSC) initiative; its ambition is to comprehensively address the issue of working with research data. The EOSC Initiative Further Encompasses: Technological, programme and procedural framework that supports systematic work with research data based on the federated principle . Pooling and provision of capacity for long-term storage of the data. Tools and environment for (easy) data management , controlling access to the data, including analyses and linkage to other data. The federated principle allows independent development, advancement and maintenance of the EOSC initiative’s individual components based on a consensus regarding key standards and interfaces. This does not create a single “correct” repository but rather connects the components into an integrated whole. A national node of this European initiative is currently being established in the Czech Republic, which aims to promote good practice in research data management across the scientific community based on the federated principle. To this end, the Architecture of the implementation of the EOSC initiative in the Czech Republic aims to establish the so-called National Data Infrastructure (NDI) – a common platform for sharing, managing and accessing data and computing resources for research purposes. The implementation of the European Open Science Cloud (EOSC) in the Czech Republic through the NDI will therefore support both scientific and multidisciplinary research activities across a wide range of scientific fields and disciplines. Key Elements of the Implementation: EOSC CZ Working Groups (EOSC CZ WG) EOSC CZ Secretariat National Metadata Directory (NMD) EOSC CZ Training Centre National Repository Platform (NRP) Interconnecting the existing thematic/disciplinary data repositories into a common National Data Infrastructure (NDI) Human resources or upskilling of academic and research institutions that are gradually introducing research data management The key mechanism for the support and development of the EOSC initiative in the Czech Republic on the national level are the calls Individual System Projects – Research and development I (so-called IPs calls) and Open Science I to III from the Operational Programme Johannes Amos Comenius (OP JAC) from the Ministry of Education, Youth and Sports (MEYS). Explore the EOSC CZ Vision White Paper on the Implementation of EOSC CZ: Towards the Development of a Czech National Ecosystem for FAIR Research Data The architecture of the Implementation of the EOSC Initiative in the Czech Republic Current State and Capacity for the Implementation FAQ",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home Initiative EOSC CZ Initiative EOSC CZ A key concept of this initiative is so-called “ FAIR data ”, i.e. data, that are searchable, accessible, well described and therefore interoperable, and with clear conditions of their further use. FAIR data are not open in the absolute sense but are prepared to be readily used by an interested party – a scientist that meets the access conditions. Over the last decade, the value of well-described and readily available research data has been embraced on a pan-European level by the European Open Science Cloud (EOSC) initiative; its ambition is to comprehensively address the issue of working with research data. The EOSC Initiative Further Encompasses: Technological, programme and procedural framework that supports systematic work with research data based on the federated principle . Pooling and provision of capacity for long-term storage of the data. Tools and environment for (easy) data management , controlling access to the data, including analyses and linkage to other data. The federated principle allows independent development, advancement and maintenance of the EOSC initiative’s individual components based on a consensus regarding key standards and interfaces. This does not create a single “correct” repository but rather connects the components into an integrated whole. A national node of this European initiative is currently being established in the Czech Republic, which aims to promote good practice in research data management across the scientific community based on the federated principle. To this end, the Architecture of the implementation of the EOSC initiative in the Czech Republic aims to establish the so-called National Data Infrastructure (NDI) – a common platform for sharing, managing and accessing data and computing resources for research purposes. The implementation of the European Open Science Cloud (EOSC) in the Czech Republic through the NDI will therefore support both scientific and multidisciplinary research activities across a wide range of scientific fields and disciplines. Key Elements of the Implementation: EOSC CZ Working Groups (EOSC CZ WG) EOSC CZ Secretariat National Metadata Directory (NMD) EOSC CZ Training Centre National Repository Platform (NRP) Interconnecting the existing thematic/disciplinary data repositories into a common National Data Infrastructure (NDI) Human resources or upskilling of academic and research institutions that are gradually introducing research data management The key mechanism for the support and development of the EOSC initiative in the Czech Republic on the national level are the calls Individual System Projects – Research and development I (so-called IPs calls) and Open Science I to III from the Operational Programme Johannes Amos Comenius (OP JAC) from the Ministry of Education, Youth and Sports (MEYS). Explore the EOSC CZ Vision White Paper on the Implementation of EOSC CZ: Towards the Development of a Czech National Ecosystem for FAIR Research Data The architecture of the Implementation of the EOSC Initiative in the Czech Republic Current State and Capacity for the Implementation FAQ Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+      "links": [
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/iniciativa-eosc-cz",
+          "text": "Čeština",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/iniciativa-eosc-cz",
+          "text": "CS",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAIR data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "EOSC CZ Working Groups (EOSC CZ WG)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "EOSC CZ Secretariat",
+          "visible": true
+        },
+        {
+          "href": "https://nma.eosc.cz/",
+          "text": "National Metadata Directory (NMD)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "EOSC CZ Training Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp/national-repository-platform",
+          "text": "National Repository Platform (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://opjak.cz/vyzvy/02_22_004-individualni-projekty-systemove-vyzkum-a-vyvoj-i/",
+          "text": "Individual System Projects – Research and development I",
+          "visible": true
+        },
+        {
+          "href": "https://opjak.cz/vyzvy/vyzva-c-02_23_014-open-science-i/",
+          "text": "Open Science I",
+          "visible": true
+        },
+        {
+          "href": "https://arxiv.org/abs/2402.13343",
+          "text": "Explore the EOSC CZ Vision",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/media/3517655/eosc_architektura-implementace.pdf",
+          "text": "The architecture of the Implementation of the EOSC Initiative in the Czech Republic",
+          "visible": true
+        },
+        {
+          "href": "https://www.strast.cz/cs/publikace/analyza-aktualniho-stavu-kapacit-pro-implementaci-eosc-v-cr",
+          "text": "Current State and Capacity for the Implementation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+          "text": "Newsletter EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.muni.cz/en",
+          "text": "Masaryk University",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/system/web-admin",
+          "text": "Web Admin",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/eosccz.bsky.social",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+          "text": "Youtube",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "Initiative EOSC CZ",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+      "title": "Initiative EOSC CZ | EOSC - European Open Science Cloud",
+      "lang_attr": "en",
+      "main_text": "You are here: Home Initiative EOSC CZ Initiative EOSC CZ A key concept of this initiative is so-called “ FAIR data ”, i.e. data, that are searchable, accessible, well described and therefore interoperable, and with clear conditions of their further use. FAIR data are not open in the absolute sense but are prepared to be readily used by an interested party – a scientist that meets the access conditions. Over the last decade, the value of well-described and readily available research data has been embraced on a pan-European level by the European Open Science Cloud (EOSC) initiative; its ambition is to comprehensively address the issue of working with research data. The EOSC Initiative Further Encompasses: Technological, programme and procedural framework that supports systematic work with research data based on the federated principle . Pooling and provision of capacity for long-term storage of the data. Tools and environment for (easy) data management , controlling access to the data, including analyses and linkage to other data. The federated principle allows independent development, advancement and maintenance of the EOSC initiative’s individual components based on a consensus regarding key standards and interfaces. This does not create a single “correct” repository but rather connects the components into an integrated whole. A national node of this European initiative is currently being established in the Czech Republic, which aims to promote good practice in research data management across the scientific community based on the federated principle. To this end, the Architecture of the implementation of the EOSC initiative in the Czech Republic aims to establish the so-called National Data Infrastructure (NDI) – a common platform for sharing, managing and accessing data and computing resources for research purposes. The implementation of the European Open Science Cloud (EOSC) in the Czech Republic through the NDI will therefore support both scientific and multidisciplinary research activities across a wide range of scientific fields and disciplines. Key Elements of the Implementation: EOSC CZ Working Groups (EOSC CZ WG) EOSC CZ Secretariat National Metadata Directory (NMD) EOSC CZ Training Centre National Repository Platform (NRP) Interconnecting the existing thematic/disciplinary data repositories into a common National Data Infrastructure (NDI) Human resources or upskilling of academic and research institutions that are gradually introducing research data management The key mechanism for the support and development of the EOSC initiative in the Czech Republic on the national level are the calls Individual System Projects – Research and development I (so-called IPs calls) and Open Science I to III from the Operational Programme Johannes Amos Comenius (OP JAC) from the Ministry of Education, Youth and Sports (MEYS). Explore the EOSC CZ Vision White Paper on the Implementation of EOSC CZ: Towards the Development of a Czech National Ecosystem for FAIR Research Data The architecture of the Implementation of the EOSC Initiative in the Czech Republic Current State and Capacity for the Implementation FAQ",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home Initiative EOSC CZ Initiative EOSC CZ A key concept of this initiative is so-called “ FAIR data ”, i.e. data, that are searchable, accessible, well described and therefore interoperable, and with clear conditions of their further use. FAIR data are not open in the absolute sense but are prepared to be readily used by an interested party – a scientist that meets the access conditions. Over the last decade, the value of well-described and readily available research data has been embraced on a pan-European level by the European Open Science Cloud (EOSC) initiative; its ambition is to comprehensively address the issue of working with research data. The EOSC Initiative Further Encompasses: Technological, programme and procedural framework that supports systematic work with research data based on the federated principle . Pooling and provision of capacity for long-term storage of the data. Tools and environment for (easy) data management , controlling access to the data, including analyses and linkage to other data. The federated principle allows independent development, advancement and maintenance of the EOSC initiative’s individual components based on a consensus regarding key standards and interfaces. This does not create a single “correct” repository but rather connects the components into an integrated whole. A national node of this European initiative is currently being established in the Czech Republic, which aims to promote good practice in research data management across the scientific community based on the federated principle. To this end, the Architecture of the implementation of the EOSC initiative in the Czech Republic aims to establish the so-called National Data Infrastructure (NDI) – a common platform for sharing, managing and accessing data and computing resources for research purposes. The implementation of the European Open Science Cloud (EOSC) in the Czech Republic through the NDI will therefore support both scientific and multidisciplinary research activities across a wide range of scientific fields and disciplines. Key Elements of the Implementation: EOSC CZ Working Groups (EOSC CZ WG) EOSC CZ Secretariat National Metadata Directory (NMD) EOSC CZ Training Centre National Repository Platform (NRP) Interconnecting the existing thematic/disciplinary data repositories into a common National Data Infrastructure (NDI) Human resources or upskilling of academic and research institutions that are gradually introducing research data management The key mechanism for the support and development of the EOSC initiative in the Czech Republic on the national level are the calls Individual System Projects – Research and development I (so-called IPs calls) and Open Science I to III from the Operational Programme Johannes Amos Comenius (OP JAC) from the Ministry of Education, Youth and Sports (MEYS). Explore the EOSC CZ Vision White Paper on the Implementation of EOSC CZ: Towards the Development of a Czech National Ecosystem for FAIR Research Data The architecture of the Implementation of the EOSC Initiative in the Czech Republic Current State and Capacity for the Implementation FAQ Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+      "links": [
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/iniciativa-eosc-cz",
+          "text": "Čeština",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/iniciativa-eosc-cz",
+          "text": "CS",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAIR data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "EOSC CZ Working Groups (EOSC CZ WG)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "EOSC CZ Secretariat",
+          "visible": true
+        },
+        {
+          "href": "https://nma.eosc.cz/",
+          "text": "National Metadata Directory (NMD)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "EOSC CZ Training Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp/national-repository-platform",
+          "text": "National Repository Platform (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://opjak.cz/vyzvy/02_22_004-individualni-projekty-systemove-vyzkum-a-vyvoj-i/",
+          "text": "Individual System Projects – Research and development I",
+          "visible": true
+        },
+        {
+          "href": "https://opjak.cz/vyzvy/vyzva-c-02_23_014-open-science-i/",
+          "text": "Open Science I",
+          "visible": true
+        },
+        {
+          "href": "https://arxiv.org/abs/2402.13343",
+          "text": "Explore the EOSC CZ Vision",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/media/3517655/eosc_architektura-implementace.pdf",
+          "text": "The architecture of the Implementation of the EOSC Initiative in the Czech Republic",
+          "visible": true
+        },
+        {
+          "href": "https://www.strast.cz/cs/publikace/analyza-aktualniho-stavu-kapacit-pro-implementaci-eosc-v-cr",
+          "text": "Current State and Capacity for the Implementation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+          "text": "Newsletter EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.muni.cz/en",
+          "text": "Masaryk University",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/system/web-admin",
+          "text": "Web Admin",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/eosccz.bsky.social",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+          "text": "Youtube",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [
+    "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/faq (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/faq (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz (cap for point 2)",
+    "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz (cap for point 2)"
+  ],
+  "crawl_note": "depth 1: 73 link(s) on the landing page, 4 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point"
+}

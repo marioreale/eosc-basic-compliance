@@ -1,0 +1,875 @@
+{
+  "node_id": "eosc-sk",
+  "node_name": "EOSC Node Slovakia",
+  "requested_url": "https://eosc.sk/",
+  "fetched_at": "2026-09-24T18:47:24+00:00",
+  "final_url": "https://eosc.sk/",
+  "http_status": 200,
+  "redirect_chain": [],
+  "robots_allowed": true,
+  "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
+  "title": "EOSC Node Slovakia",
+  "lang_attr": "en",
+  "main_text": "Services Resources Use Cases Helpdesk Monitoring About Services Resources Use Cases Helpdesk Monitoring About EN / SK SSO login with EOSC SK AAI The production environment of EOSC SK AAI is deployed and validated. It provides single sign-on for the node based on the EOSC AAI architecture. Login will not be started from this page: it will be offered directly at the selected services as they are connected to EOSC SK AAI. Identity provider: https://cvti-sso-prod.eosc.cvtisr.sk/realms/eosc-prod Close × Close Slovak National EOSC Node - Pilot Entry Point Access to selected research resources and services integrated with the European Open Science Cloud. RESEARCH SERVICES Service Catalogue EOSC Node Slovakia service catalogue listing the production services and prototypes of the node. It offers a public API for catalogue exchange, a PID resolver and demonstrates harvesting of service catalogues from other EOSC nodes. Production services in the catalogue Loading services from the catalogue… No production services are exposed in the catalogue yet. The catalogue is temporarily unreachable – please open it directly. Genome of Slovakia by Science Park, Comenius University in Bratislava, Slovakia open access TRL 8 production Genomic variant browser of Slovak population View in the catalogue SK CRIS - Information system for science and research by CVTI SR fully open access TRL 9 production Slovak CRIS - Current Research Information System View in the catalogue Browse the full catalogue Slovak institutions intending to integrate their services (e.g. replicable analysis, workflows, infrastructure ...) into the EOSC ecosystem are kindly invited to contact us. Contact Form RESEARCH RESOURCES SEARCH Resources SVD beta version Research Data Management system SCIDAP beta version Slovak Central Database of Electronic Information Resources for Research and Development CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only] CREUČ The Central Registry of Artistic Activity of Universities in the Slovak Republic [Slovak only] CRZP / ANTIPLAG The Central Registry of Theses and Dissertations / The anti-plagiarism system [Slovak only] ANALYTICAL MODULES in development Analytical Module for Science Assessment PRIMO in development Discovery System for Electronic Information Resources OA PLATFORM in development Open Access Publishing Platform Selected institutional repositories rUMBa Repository of Matej Bel University in Banská Bystrica registered as datasource in OpenAIRE Repository of Comenius University Institutional repository of Comenius University Bratislava in development Slovak institutions intending to integrate their research repositories and catalogues into the EOSC ecosystem are kindly invited to contact us. Contact Form Research infrastructure map R&D infrastructures across the Slovak Republic EU Node Until EOSC Node Slovakia is in full production, you can also access resources and services through the EOSC EU Node, which provides an open and collaborative infrastructure supporting research and innovation across Europe. The EOSC EU Node contains a multi-disciplinary environment where researchers can publish, find and re-use data, tools and services for research, innovation and educational purposes. Visit EOSC EU Node EOSC Federation EOSC Node Slovakia is one of the candidate nodes of the EOSC Federation – the European network of national and thematic nodes that share services, data and common building blocks such as AAI, service catalogues, monitoring and helpdesk. Discover the other nodes and learn how the Federation is being built. Discover the EOSC Federation nodes USE CASE - Federated pathogen analysis (AMR) Leading the use case related to antimicrobial resistance (AMR) research Staged approach: Stage 1 – Technical Feasibility (public datasets, pilot within SK and PL) Stage 2 – Private Data Integration (private repos and value for data owners) Stage 3 – Public Health Adoption (real time pathogen monitoring) Federated approach: Harmonized analysis and interpretation Computation executed on data providers’ servers Preserving local control over sensitive data microreact.org (data altered) SK PL Pilot Workflow Workflow AMR Watch Workflow cgMLST Outbreaks Workflow Respiratory Workflow COVID Lineage Workflow Wastewater Lineage Submodule Reads Processing Submodule Rule Wrappers Key Partners USE CASE - Contribution to MCVAL Participation in multicentric validation of AI-Based evaluation of prostate cancer screening images (MCVAL by BBMRI) The role of EOSC Node Slovakia is to collect and process screening data (WSI) from Slovak sources, aggregate the datasets and build the pipelines for sharing them with RationAI and for distributing the results to medical evaluators. The use case is carried out together with the Faculty of Medicine of Comenius University in Bratislava. USE CASE - RETROCHANGE with TUZVO RETROCHANGE USE CASE with TUZVO Retrospective forest and landscape change analysis from historical satellite imagery, run by the Technical University of Zvolen. The use case will produce an EOSC-ready package of historical satellite imagery for Slovakia, based on declassified high-resolution CORONA/HEXAGON data from roughly 1960–1985. Selected imagery will be processed into analysis-ready geospatial products, published through interoperable access mechanisms and demonstrated in reproducible Jupyter-based workflows. Visit RETROCHANGE portal USE CASE Concept - Federated SDGaaS Can't find a suitable dataset? Generate a synthetic one with EOSC. This use case is in the state of concept (idea formulation) for future use Paper with concept details HELPDESK Helpdesk of EOSC Node Slovakia The single point of contact for users and providers of the node services, running on the open-source Zammad platform. Tickets can be opened through the web portal or by e-mail (helpdesk.eosc@cvtisr.sk) and are tracked through their whole lifecycle. Interconnection with the federated EOSC helpdesk is prepared. Open helpdesk Knowledge base in development A bilingual knowledge base describing the architecture of the node, its services, APIs and how-to guides is being built alongside the helpdesk. Open knowledge base EOSC User Forum Community forum of the EOSC Federation for questions, feedback and discussion that go beyond a single node. Open EOSC User Forum MONITORING Availability monitoring of the node (pilot MVP) The pilot MVP monitoring solution of EOSC Node Slovakia continuously checks the availability of the node components and of the services exposed through the node, and computes ARGO-style availability and reliability metrics. Its public API (v1) publishes the current status, checks, events and a structured federation export prepared for harvesting by the EOSC Federation. Node status: OK | 10 / 10 blocks OK Live status is currently unavailable Open monitoring portal Status API FITSM COMPLIANCE Service management system based on FitSM pilot MVP in operation EOSC Node Slovakia runs its service management system (SMS) according to FitSM, the lightweight standard for IT service management in federated e-infrastructures. The SMS is implemented as a pilot MVP: an internal FitSM tool keeps the service portfolio, agreements, incidents, problems, changes, configuration items, risks, improvements and controlled policy and process documents in one place with role-based access. Its scope grows together with the portfolio of the node. FitSM tool – roles and permissions (click to enlarge) ABOUT EOSC Node Slovakia is in competence of Slovak Centre of Scientific and Technical Information Slovakia's national information centre for science, technology, innovation, and education (since 1938) EOSC-A Mandated organization Subsidiary organization of Ministry of Education Bridge between relevant R&D institutions National Coordinator of Open Science in Slovakia Your browser does not support the video tag. More information To learn more about Slovak activities within the European Open Science Cloud Association (EOSC-A) and the EOSC Steering Board (EOSC-SB), visit: SK ERA Portal EOSC-A Portal EOSC Node Slovakia (EOSC-A) CVTI SR Portal Links HELPDESK MONITORING KNOWLEDGE BASE CVTI SR WEB EOSC-A WEB Login SSO login with EOSC SK AAI Privacy Policy Terms of Use (incl. AUP and UAP) Contact Slovak Centre of Scientific and Technical Information Lamačská cesta 8/A 811 04 Bratislava Email eosc@cvtisr.sk Created 2026 by CVTI SR",
+  "full_text": "Services Resources Use Cases Helpdesk Monitoring About Services Resources Use Cases Helpdesk Monitoring About EN / SK SSO login with EOSC SK AAI The production environment of EOSC SK AAI is deployed and validated. It provides single sign-on for the node based on the EOSC AAI architecture. Login will not be started from this page: it will be offered directly at the selected services as they are connected to EOSC SK AAI. Identity provider: https://cvti-sso-prod.eosc.cvtisr.sk/realms/eosc-prod Close × Close Slovak National EOSC Node - Pilot Entry Point Access to selected research resources and services integrated with the European Open Science Cloud. RESEARCH SERVICES Service Catalogue EOSC Node Slovakia service catalogue listing the production services and prototypes of the node. It offers a public API for catalogue exchange, a PID resolver and demonstrates harvesting of service catalogues from other EOSC nodes. Production services in the catalogue Loading services from the catalogue… No production services are exposed in the catalogue yet. The catalogue is temporarily unreachable – please open it directly. Genome of Slovakia by Science Park, Comenius University in Bratislava, Slovakia open access TRL 8 production Genomic variant browser of Slovak population View in the catalogue SK CRIS - Information system for science and research by CVTI SR fully open access TRL 9 production Slovak CRIS - Current Research Information System View in the catalogue Browse the full catalogue Slovak institutions intending to integrate their services (e.g. replicable analysis, workflows, infrastructure ...) into the EOSC ecosystem are kindly invited to contact us. Contact Form RESEARCH RESOURCES SEARCH Resources SVD beta version Research Data Management system SCIDAP beta version Slovak Central Database of Electronic Information Resources for Research and Development CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only] CREUČ The Central Registry of Artistic Activity of Universities in the Slovak Republic [Slovak only] CRZP / ANTIPLAG The Central Registry of Theses and Dissertations / The anti-plagiarism system [Slovak only] ANALYTICAL MODULES in development Analytical Module for Science Assessment PRIMO in development Discovery System for Electronic Information Resources OA PLATFORM in development Open Access Publishing Platform Selected institutional repositories rUMBa Repository of Matej Bel University in Banská Bystrica registered as datasource in OpenAIRE Repository of Comenius University Institutional repository of Comenius University Bratislava in development Slovak institutions intending to integrate their research repositories and catalogues into the EOSC ecosystem are kindly invited to contact us. Contact Form Research infrastructure map R&D infrastructures across the Slovak Republic EU Node Until EOSC Node Slovakia is in full production, you can also access resources and services through the EOSC EU Node, which provides an open and collaborative infrastructure supporting research and innovation across Europe. The EOSC EU Node contains a multi-disciplinary environment where researchers can publish, find and re-use data, tools and services for research, innovation and educational purposes. Visit EOSC EU Node EOSC Federation EOSC Node Slovakia is one of the candidate nodes of the EOSC Federation – the European network of national and thematic nodes that share services, data and common building blocks such as AAI, service catalogues, monitoring and helpdesk. Discover the other nodes and learn how the Federation is being built. Discover the EOSC Federation nodes USE CASE - Federated pathogen analysis (AMR) Leading the use case related to antimicrobial resistance (AMR) research Staged approach: Stage 1 – Technical Feasibility (public datasets, pilot within SK and PL) Stage 2 – Private Data Integration (private repos and value for data owners) Stage 3 – Public Health Adoption (real time pathogen monitoring) Federated approach: Harmonized analysis and interpretation Computation executed on data providers’ servers Preserving local control over sensitive data microreact.org (data altered) SK PL Pilot Workflow Workflow AMR Watch Workflow cgMLST Outbreaks Workflow Respiratory Workflow COVID Lineage Workflow Wastewater Lineage Submodule Reads Processing Submodule Rule Wrappers Key Partners USE CASE - Contribution to MCVAL Participation in multicentric validation of AI-Based evaluation of prostate cancer screening images (MCVAL by BBMRI) The role of EOSC Node Slovakia is to collect and process screening data (WSI) from Slovak sources, aggregate the datasets and build the pipelines for sharing them with RationAI and for distributing the results to medical evaluators. The use case is carried out together with the Faculty of Medicine of Comenius University in Bratislava. USE CASE - RETROCHANGE with TUZVO RETROCHANGE USE CASE with TUZVO Retrospective forest and landscape change analysis from historical satellite imagery, run by the Technical University of Zvolen. The use case will produce an EOSC-ready package of historical satellite imagery for Slovakia, based on declassified high-resolution CORONA/HEXAGON data from roughly 1960–1985. Selected imagery will be processed into analysis-ready geospatial products, published through interoperable access mechanisms and demonstrated in reproducible Jupyter-based workflows. Visit RETROCHANGE portal USE CASE Concept - Federated SDGaaS Can't find a suitable dataset? Generate a synthetic one with EOSC. This use case is in the state of concept (idea formulation) for future use Paper with concept details HELPDESK Helpdesk of EOSC Node Slovakia The single point of contact for users and providers of the node services, running on the open-source Zammad platform. Tickets can be opened through the web portal or by e-mail (helpdesk.eosc@cvtisr.sk) and are tracked through their whole lifecycle. Interconnection with the federated EOSC helpdesk is prepared. Open helpdesk Knowledge base in development A bilingual knowledge base describing the architecture of the node, its services, APIs and how-to guides is being built alongside the helpdesk. Open knowledge base EOSC User Forum Community forum of the EOSC Federation for questions, feedback and discussion that go beyond a single node. Open EOSC User Forum MONITORING Availability monitoring of the node (pilot MVP) The pilot MVP monitoring solution of EOSC Node Slovakia continuously checks the availability of the node components and of the services exposed through the node, and computes ARGO-style availability and reliability metrics. Its public API (v1) publishes the current status, checks, events and a structured federation export prepared for harvesting by the EOSC Federation. Node status: OK | 10 / 10 blocks OK Live status is currently unavailable Open monitoring portal Status API FITSM COMPLIANCE Service management system based on FitSM pilot MVP in operation EOSC Node Slovakia runs its service management system (SMS) according to FitSM, the lightweight standard for IT service management in federated e-infrastructures. The SMS is implemented as a pilot MVP: an internal FitSM tool keeps the service portfolio, agreements, incidents, problems, changes, configuration items, risks, improvements and controlled policy and process documents in one place with role-based access. Its scope grows together with the portfolio of the node. FitSM tool – roles and permissions (click to enlarge) ABOUT EOSC Node Slovakia is in competence of Slovak Centre of Scientific and Technical Information Slovakia's national information centre for science, technology, innovation, and education (since 1938) EOSC-A Mandated organization Subsidiary organization of Ministry of Education Bridge between relevant R&D institutions National Coordinator of Open Science in Slovakia Your browser does not support the video tag. More information To learn more about Slovak activities within the European Open Science Cloud Association (EOSC-A) and the EOSC Steering Board (EOSC-SB), visit: SK ERA Portal EOSC-A Portal EOSC Node Slovakia (EOSC-A) CVTI SR Portal Links HELPDESK MONITORING KNOWLEDGE BASE CVTI SR WEB EOSC-A WEB Login SSO login with EOSC SK AAI Privacy Policy Terms of Use (incl. AUP and UAP) Contact Slovak Centre of Scientific and Technical Information Lamačská cesta 8/A 811 04 Bratislava Email eosc@cvtisr.sk Created 2026 by CVTI SR",
+  "links": [
+    {
+      "href": "https://mon.eosc.sk",
+      "text": "Monitoring",
+      "visible": true
+    },
+    {
+      "href": "https://mon.eosc.sk",
+      "text": "Monitoring",
+      "visible": true
+    },
+    {
+      "href": "https://sc.eosc.sk",
+      "text": "Service Catalogue EOSC Node Slovakia service catalogue listing the production services and prototypes of the node. It offers a public API for catalogue exchange, a PID resolver and demonstrates harvesting of service catalogues from other EOSC nodes.",
+      "visible": true
+    },
+    {
+      "href": "https://sc.eosc.sk/resolve/urn%3Auuid%3Ad06a5b18-9860-475c-9579-ce3c3eb68de9",
+      "text": "Genome of Slovakia by Science Park, Comenius University in Bratislava, Slovakia open access TRL 8 production Genomic variant browser of Slovak population View in the catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://sc.eosc.sk/resolve/urn%3Auuid%3Aa027264f-8525-4130-9f45-e0729fbaf89f",
+      "text": "SK CRIS - Information system for science and research by CVTI SR fully open access TRL 9 production Slovak CRIS - Current Research Information System View in the catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://sc.eosc.sk",
+      "text": "Browse the full catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLSdUmMFK7nppzFl-udki4XYX_uO7E2K-q-UOJRcJiPDyGR-EdQ/viewform?usp=header",
+      "text": "Contact Form",
+      "visible": true
+    },
+    {
+      "href": "https://komis.cvtisr.sk/en/vyhladavanie",
+      "text": "SEARCH Resources",
+      "visible": true
+    },
+    {
+      "href": "https://svd.cvtisr.sk/en/",
+      "text": "SVD beta version Research Data Management system",
+      "visible": true
+    },
+    {
+      "href": "https://scidap.cvtisr.sk/en/",
+      "text": "SCIDAP beta version Slovak Central Database of Electronic Information Resources for Research and Development",
+      "visible": true
+    },
+    {
+      "href": "https://app.crepc.sk/",
+      "text": "CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only]",
+      "visible": true
+    },
+    {
+      "href": "https://app.creuc.sk/",
+      "text": "CREUČ The Central Registry of Artistic Activity of Universities in the Slovak Republic [Slovak only]",
+      "visible": true
+    },
+    {
+      "href": "https://opac.crzp.sk/",
+      "text": "CRZP / ANTIPLAG The Central Registry of Theses and Dissertations / The anti-plagiarism system [Slovak only]",
+      "visible": true
+    },
+    {
+      "href": "https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::066ca7bf90807fcd8e4f1eaef4e4e8f7",
+      "text": "rUMBa Repository of Matej Bel University in Banská Bystrica registered as datasource in OpenAIRE",
+      "visible": true
+    },
+    {
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLSewQ5QvmB8vToNu31ECBrcj6pTwjXXppFgD4e_QpUihpsmdWQ/viewform?usp=dialog",
+      "text": "Contact Form",
+      "visible": true
+    },
+    {
+      "href": "https://www.skcris.sk/en/manazment-udajov/mapa-vyskumnej-infrastruktury/",
+      "text": "Research infrastructure map R&D infrastructures across the Slovak Republic",
+      "visible": true
+    },
+    {
+      "href": "https://open-science-cloud.ec.europa.eu/",
+      "text": "Visit EOSC EU Node",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "text": "Discover the EOSC Federation nodes",
+      "visible": true
+    },
+    {
+      "href": "https://microreact.org/project/2uGuSKZairbBz8Gf6TcZw9-sk11pl17",
+      "text": "microreact.org (data altered) SK PL Pilot Workflow",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/cuspuk/workflow_amrWatch",
+      "text": "Workflow AMR Watch",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/cuspuk/workflow_cgMLST_outbreaks",
+      "text": "Workflow cgMLST Outbreaks",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/cuspuk/workflow_respiratory",
+      "text": "Workflow Respiratory",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/cuspuk/workflow_covid_patient",
+      "text": "Workflow COVID Lineage",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/cuspuk/workflow_wastewater_covid",
+      "text": "Workflow Wastewater Lineage",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/cuspuk/workflow_reads",
+      "text": "Submodule Reads Processing",
+      "visible": true
+    },
+    {
+      "href": "https://github.com/cuspuk/workflow_wrappers",
+      "text": "Submodule Rule Wrappers",
+      "visible": true
+    },
+    {
+      "href": "https://gis.tuzvo.sk/retrochange/",
+      "text": "Visit RETROCHANGE portal",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.sk/docs/fsdgaas_paper.pdf",
+      "text": "Paper with concept details",
+      "visible": true
+    },
+    {
+      "href": "https://hd.eosc.sk",
+      "text": "Open helpdesk",
+      "visible": true
+    },
+    {
+      "href": "https://d1.eosc.sk",
+      "text": "Open knowledge base",
+      "visible": true
+    },
+    {
+      "href": "https://user-forum.eosc.eu/",
+      "text": "Open EOSC User Forum",
+      "visible": true
+    },
+    {
+      "href": "https://mon.eosc.sk",
+      "text": "Open monitoring portal",
+      "visible": true
+    },
+    {
+      "href": "https://mon.eosc.sk/api/v1/status",
+      "text": "Status API",
+      "visible": true
+    },
+    {
+      "href": "https://eraportal.sk/eraportal/oblasti-nasej-podpory/eosc-europsky-cloud-pre-otvorenu-vedu/",
+      "text": "SK ERA Portal",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/",
+      "text": "EOSC-A Portal",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-slovakia",
+      "text": "EOSC Node Slovakia (EOSC-A)",
+      "visible": true
+    },
+    {
+      "href": "https://cvtisr.sk",
+      "text": "CVTI SR Portal",
+      "visible": true
+    },
+    {
+      "href": "https://hd.eosc.sk",
+      "text": "HELPDESK",
+      "visible": true
+    },
+    {
+      "href": "https://mon.eosc.sk",
+      "text": "MONITORING",
+      "visible": true
+    },
+    {
+      "href": "https://d1.eosc.sk",
+      "text": "KNOWLEDGE BASE",
+      "visible": true
+    },
+    {
+      "href": "https://cvtisr.sk/",
+      "text": "CVTI SR WEB",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/",
+      "text": "EOSC-A WEB",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.sk/docs/eosc_sk_pp.pdf",
+      "text": "Privacy Policy",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.sk/docs/eosc_sk_tou.pdf",
+      "text": "Terms of Use (incl. AUP and UAP)",
+      "visible": true
+    },
+    {
+      "href": "mailto:eosc@cvtisr.sk",
+      "text": "eosc@cvtisr.sk",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://eosc.sk/imgs/eosc3.png",
+      "alt": "EOSC",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 md:h-10",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/cvti.png",
+      "alt": "CVTI",
+      "aria_label": "",
+      "title": "",
+      "css_class": "hidden md:block h-8 md:h-10",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/",
+      "alt": "Enlarged view",
+      "aria_label": "",
+      "title": "",
+      "css_class": "max-w-full max-h-[70vh] rounded-lg",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/eosc2.png",
+      "alt": "EOSC",
+      "aria_label": "",
+      "title": "",
+      "css_class": "mx-auto animate-float",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/servicecat.jpg",
+      "alt": "Service catalogue sc.eosc.sk",
+      "aria_label": "",
+      "title": "",
+      "css_class": "rounded-xl h-24 md:h-28 w-auto object-cover shadow border border-gray-200",
+      "inline_svg": false
+    },
+    {
+      "src": "https://gos.cusp.uniba.sk/browser/assets/genome-of-slovakia-Dy-JNFI9.png",
+      "alt": "Genome of Slovakia logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "max-h-16 w-auto object-contain",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/map.jpg",
+      "alt": "Research Infrastructure Map",
+      "aria_label": "",
+      "title": "",
+      "css_class": "rounded-xl h-20 object-cover",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/eosc.png",
+      "alt": "EOSC",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-10 mx-auto mb-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/eosc-federation.png",
+      "alt": "EOSC Federation",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-14 mx-auto mb-4",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr3-onedata.jpg",
+      "alt": "AMR OneData",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full h-full object-cover",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr2-diagram.jpg",
+      "alt": "AMR Diagram",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full h-full object-cover",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr1-workflow.jpg",
+      "alt": "AMR Workflow",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full h-full object-cover",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr-uk.png",
+      "alt": "AMR UK",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr-pl.png",
+      "alt": "AMR PL",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr-cyfor.png",
+      "alt": "AMR CYFOR",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr-uvz.png",
+      "alt": "AMR UVZ",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr-cvti.png",
+      "alt": "AMR CVTI",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/mcval.jpg",
+      "alt": "MCVAL",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full h-full object-cover",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/bbmri.png",
+      "alt": "BBMRI",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/muni.png",
+      "alt": "MUNI",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/mmci.png",
+      "alt": "MMCI",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/mcval-infn.png",
+      "alt": "INFN",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr-cvti.png",
+      "alt": "AMR CVTI",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/lfuk.png",
+      "alt": "LF UK",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/retrochange.png",
+      "alt": "RETROCHANGE",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full h-full object-cover",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/tuzvo.png?v2",
+      "alt": "TUZVO",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/amr-cvti.png",
+      "alt": "AMR CVTI",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-8 sm:h-10 md:h-12 w-auto invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/sdgaas.png",
+      "alt": "EOSC",
+      "aria_label": "",
+      "title": "",
+      "css_class": "mx-auto mb-2",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.sk/imgs/fitsm.jpg",
+      "alt": "FitSM tool - roles and permissions",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full h-48 object-cover object-top",
+      "inline_svg": false
+    }
+  ],
+  "controls": [
+    {
+      "text": "EN / SK",
+      "href": "https://eosc.sk/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Close",
+      "href": "https://eosc.sk/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "×",
+      "href": "https://eosc.sk/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Close",
+      "href": "https://eosc.sk/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Login",
+      "href": "https://eosc.sk/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://eosc.sk/#services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resources",
+      "href": "https://eosc.sk/#resources",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Use Cases",
+      "href": "https://eosc.sk/#usecases",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Helpdesk",
+      "href": "https://eosc.sk/#helpdesk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Monitoring",
+      "href": "https://mon.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About",
+      "href": "https://eosc.sk/#about",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://eosc.sk/#services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Resources",
+      "href": "https://eosc.sk/#resources",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Use Cases",
+      "href": "https://eosc.sk/#usecases",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Helpdesk",
+      "href": "https://eosc.sk/#helpdesk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Monitoring",
+      "href": "https://mon.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About",
+      "href": "https://eosc.sk/#about",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Service Catalogue EOSC Node Slovakia service catalogue listing the production services and prototypes of the node. It offers a public API for catalogue exchange, a PID resolver and demonstrates harvesting of service catalogues from other EOSC nodes.",
+      "href": "https://sc.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Genome of Slovakia by Science Park, Comenius University in Bratislava, Slovakia open access TRL 8 production Genomic variant browser of Slovak population View in the catalogue",
+      "href": "https://sc.eosc.sk/resolve/urn%3Auuid%3Ad06a5b18-9860-475c-9579-ce3c3eb68de9",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "SK CRIS - Information system for science and research by CVTI SR fully open access TRL 9 production Slovak CRIS - Current Research Information System View in the catalogue",
+      "href": "https://sc.eosc.sk/resolve/urn%3Auuid%3Aa027264f-8525-4130-9f45-e0729fbaf89f",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Browse the full catalogue",
+      "href": "https://sc.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact Form",
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLSdUmMFK7nppzFl-udki4XYX_uO7E2K-q-UOJRcJiPDyGR-EdQ/viewform?usp=header",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "SEARCH Resources",
+      "href": "https://komis.cvtisr.sk/en/vyhladavanie",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "SVD beta version Research Data Management system",
+      "href": "https://svd.cvtisr.sk/en/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "SCIDAP beta version Slovak Central Database of Electronic Information Resources for Research and Development",
+      "href": "https://scidap.cvtisr.sk/en/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only]",
+      "href": "https://app.crepc.sk/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CREUČ The Central Registry of Artistic Activity of Universities in the Slovak Republic [Slovak only]",
+      "href": "https://app.creuc.sk/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CRZP / ANTIPLAG The Central Registry of Theses and Dissertations / The anti-plagiarism system [Slovak only]",
+      "href": "https://opac.crzp.sk/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "rUMBa Repository of Matej Bel University in Banská Bystrica registered as datasource in OpenAIRE",
+      "href": "https://explore.openaire.eu/search/dataprovider?datasourceId=opendoar____::066ca7bf90807fcd8e4f1eaef4e4e8f7",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact Form",
+      "href": "https://docs.google.com/forms/d/e/1FAIpQLSewQ5QvmB8vToNu31ECBrcj6pTwjXXppFgD4e_QpUihpsmdWQ/viewform?usp=dialog",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Research infrastructure map R&D infrastructures across the Slovak Republic",
+      "href": "https://www.skcris.sk/en/manazment-udajov/mapa-vyskumnej-infrastruktury/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit EOSC EU Node",
+      "href": "https://open-science-cloud.ec.europa.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Discover the EOSC Federation nodes",
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "microreact.org (data altered) SK PL Pilot Workflow",
+      "href": "https://microreact.org/project/2uGuSKZairbBz8Gf6TcZw9-sk11pl17",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Workflow AMR Watch",
+      "href": "https://github.com/cuspuk/workflow_amrWatch",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Workflow cgMLST Outbreaks",
+      "href": "https://github.com/cuspuk/workflow_cgMLST_outbreaks",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Workflow Respiratory",
+      "href": "https://github.com/cuspuk/workflow_respiratory",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Workflow COVID Lineage",
+      "href": "https://github.com/cuspuk/workflow_covid_patient",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Workflow Wastewater Lineage",
+      "href": "https://github.com/cuspuk/workflow_wastewater_covid",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Submodule Reads Processing",
+      "href": "https://github.com/cuspuk/workflow_reads",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Submodule Rule Wrappers",
+      "href": "https://github.com/cuspuk/workflow_wrappers",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit RETROCHANGE portal",
+      "href": "https://gis.tuzvo.sk/retrochange/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Paper with concept details",
+      "href": "https://eosc.sk/docs/fsdgaas_paper.pdf",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open helpdesk",
+      "href": "https://hd.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open knowledge base",
+      "href": "https://d1.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open EOSC User Forum",
+      "href": "https://user-forum.eosc.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open monitoring portal",
+      "href": "https://mon.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Status API",
+      "href": "https://mon.eosc.sk/api/v1/status",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "SK ERA Portal",
+      "href": "https://eraportal.sk/eraportal/oblasti-nasej-podpory/eosc-europsky-cloud-pre-otvorenu-vedu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC-A Portal",
+      "href": "https://eosc.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Node Slovakia (EOSC-A)",
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-slovakia",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CVTI SR Portal",
+      "href": "https://cvtisr.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "HELPDESK",
+      "href": "https://hd.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "MONITORING",
+      "href": "https://mon.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "KNOWLEDGE BASE",
+      "href": "https://d1.eosc.sk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CVTI SR WEB",
+      "href": "https://cvtisr.sk/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC-A WEB",
+      "href": "https://eosc.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy Policy",
+      "href": "https://eosc.sk/docs/eosc_sk_pp.pdf",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Terms of Use (incl. AUP and UAP)",
+      "href": "https://eosc.sk/docs/eosc_sk_tou.pdf",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "eosc@cvtisr.sk",
+      "href": "mailto:eosc@cvtisr.sk",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "EOSC Node Slovakia - pilot entry point (MVP) to research resources and services of the Slovak national EOSC node.",
+  "error": "",
+  "screenshot": "eosc-sk.png",
+  "crawl_depth": 1,
+  "children": [
+    {
+      "url": "https://hd.eosc.sk",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Open helpdesk",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://hd.eosc.sk/#login",
+      "title": "EOSC Node Slovakia HELPDESK - Sign in",
+      "lang_attr": "en",
+      "main_text": "Log in to hd.eosc.sk Username / email Password Remember me Sign in Forgot password? You're already registered with your email address if you've been in touch with our Support team. You can request your password here. Register as a new customer Powered by Loading…",
+      "full_text": "Log in to hd.eosc.sk Username / email Password Remember me Sign in Forgot password? You're already registered with your email address if you've been in touch with our Support team. You can request your password here. Register as a new customer Powered by Loading…",
+      "links": [
+        {
+          "href": "https://zammad.org",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://zammad.org",
+          "text": "",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [],
+  "crawl_note": "depth 1: 45 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+}

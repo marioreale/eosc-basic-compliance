@@ -6,9 +6,9 @@ Checklist v3.0** (15 September 2026). One result per checklist point, per node.
 **Deliberately light on the nodes' websites.** Each landing page is loaded once in
 a headless browser. The tool then follows **at most one level** of links, and only
 links that can actually settle a checklist point — a policy, a contact page, an
-about page. Everything else is left alone. Across all nine nodes that was **22
-extra requests** in the 21 September run, spaced 1.2 s apart, with `robots.txt`
-honoured per host. Evidence is saved to disk and every check reads only that
+about page. Everything else is left alone. Across the twelve nodes assessed on
+24 September 2026 that was **32 extra requests** at the default depth of 1,
+spaced 1.2 s apart, with `robots.txt` honoured per host. Evidence is saved to disk and every check reads only that
 saved evidence, so re-running the rules costs nothing.
 
 Set `--depth 0` for the strict one-request-per-node behaviour, or `--depth 2` to
@@ -27,62 +27,62 @@ test, and what the published figures do and do not say.
 
 ## What it found
 
-> **The published report covers nine nodes; `nodes.yaml` now configures thirteen.**
-> CERN and Czechia were added to the configuration on 21 September 2026, and Italy
-> and Slovakia on 24 September 2026. None of the four has been collected into
-> `results/`, so they do not appear in the report or in any count below.
-> `basic-check assess` names them and exits 2 rather than quietly omitting them.
-> To publish them, run `basic-check collect --only cern,eosc-cz,eosc-it,eosc-sk`
-> and then `assess`. To run without them for now, use
-> `--skip cern,eosc-cz,eosc-it,eosc-sk`; the report then states they were skipped.
+> **The published report covers twelve of the thirteen configured nodes.** EOSC
+> Node Italy was skipped by request (`--skip Italy`): on 24 September 2026
+> `eosc.it` had no A or AAAA record and `www.eosc.it` did not resolve. The report
+> says so in a "Skipped by request" banner. Italy is not counted as missing
+> evidence, and it does not appear in any count below.
 
-Nine landing pages, all fetched 21 September 2026, 13:04–13:07 UTC, at `--depth 2`.
-Eight responded `HTTP 200`. `geant.org` returned `HTTP 403` to this run's
-anonymous request, redirecting to a Cloudflare bot-protection challenge, so
-GÉANT is unassessed here rather than assessed as failing — see below. The same
-tally holds at depth 1 — see [How deep to go](#how-deep-to-go---depth).
+Twelve landing pages, all fetched 24 September 2026 at `--depth 1`, all
+`HTTP 200` to an anonymous request. Run `live-2026-09-24-no-italy`, assessed
+against the official unscoped names list.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-90 cells: 🟢 28 PASS · 🔴 7 FAIL · 🟠 55 review.
+120 cells: 🟢 45 PASS · 🔴 6 FAIL · 🟠 69 review.
 
-Two nodes have been intermittently unreachable across runs, which is worth
-knowing before quoting any single run as settled:
+**The automated verdicts were reviewed by hand before publication.** The review
+is published beside them as
+**[results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md)**, and it does not
+alter the tool's output. It records:
 
-- `portal.eudat.eu` returned `HTTP 500` on 18 September and was unassessable that
-  day; it has responded normally since and is fully assessed here.
-- `geant.org` served `HTTP 200` earlier on 21 September and `HTTP 403` later the
-  same afternoon, after several runs. The 403 redirects to a Cloudflare challenge
-  (`__cf_chl_rt_tk`), so this is bot protection reacting to an automated client,
-  not an access policy. GÉANT's four previously-decided cells therefore moved to
-  review; the tool does not convert a block into a compliance failure. A human
-  opening the page in a browser will very likely see it fine.
+- three point 6 PASSes that do not survive a reading of the target page;
+- one AUP link, GÉANT's, that the tool missed;
+- the verification of Slovakia's AUP/UAP PDF;
+- visual logo checks from the screenshots;
+- proposed determinations for points 2 and 3.
 
-A later run confirmed this. On 21 September at 18:39 UTC the same checker,
-running on a GitHub runner from an address that had made no requests that day,
-received `HTTP 200` from `geant.org` and settled all four cells: points 1, 6 and
-7 `PASS`, and point 4 a `FAIL` evidenced by links to the
-`building-the-eosc-federation` index rather than to GÉANT's own entry. The block
-therefore tracks request volume from an address, not the tool itself. That run
-also found EOSC DTO had gained both an `eosc.eu` node link and a helpdesk route,
-moving its points 4 and 6 from `FAIL` to `PASS`.
+Read it before quoting a cell.
 
-**Those results are not published here.** The report in `results/` remains the
-reviewed depth-2 run of 13:04–13:07 UTC, and its numbers stand as stated above.
-The later run was depth 1 and unreviewed; it is recorded because it changes what
-a reader should conclude about GÉANT, not because it replaces the run.
+> **Two rows describe a page, not a node.** CERN's configured URL is an INDIGO
+> IAM sign-in form, and EBRAINS's is the general EBRAINS homepage, which does not
+> mention EOSC. Both rows are published with that caveat, pending each node's
+> registered Website address.
 
-**The one clear, repeated finding is checklist point 4.** All nine nodes have a
-dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were read
-from the live index — but only BBMRI-ERIC and EUDAT link to their own. Six nodes
-fail outright: five (EOSC DTO, Data Terra, EOSC Finland, EGI, EBRAINS) link to
-nothing on `eosc.eu` at all, and PaNOSC links only to the federation index page,
-which the checklist explicitly excludes. GÉANT could not be assessed in this run;
-it failed this point on the same grounds as PaNOSC when it was reachable earlier
-on 21 September. Each failure names the exact URL that is missing, so the fix is a
-one-line edit.
+Compared with the previous published run (21 September 2026, nine nodes):
+
+- **EOSC DTO** now links its own `eosc.eu` entry and a helpdesk. Points 4 and 6
+  moved from `FAIL` to `PASS`.
+- **GÉANT** was served this time, where on 21 September it got a Cloudflare
+  `HTTP 403`. Points 1, 6 and 7 are now `PASS`, and point 4 is now `FAIL`.
+- **CERN, Czechia and Slovakia** appear for the first time.
+
+No other verdict changed.
+
+**The one clear, repeated finding is checklist point 4.** Every node has a
+dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
+read from the live index — but six of the twelve landing pages do not link to
+their own:
+
+- four (Data Terra, EOSC Finland, EGI, EBRAINS) link to nothing on `eosc.eu` at all;
+- two (PaNOSC, GÉANT) link only to the federation index page, which the
+  checklist explicitly excludes.
+
+BBMRI-ERIC, Czechia, EOSC DTO, EUDAT and Slovakia link correctly. CERN's sign-in
+page has no such link, but it is left to review rather than failed. Each failure
+names the exact URL that is missing, so the fix is a one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and
 excludes two specific near-misses, so it can be decided mechanically. Most of the
@@ -335,7 +335,7 @@ reading as documentation of them:
 | `test_a_well_rendered_page_still_fails_when_the_link_is_genuinely_absent` | Reporting "no contact route of any kind was found" from a page that had not rendered. That describes the tool, not the node. Absence-based failures are now gated on the page having actually rendered — and this test stops that gate becoming a blanket excuse. |
 | `test_point1_does_not_fail_on_403_with_no_login_offered` | Asserted `FAIL` originally. Inverted after GÉANT returned 403 purely in response to this tool's own request volume. |
 | `test_run_does_not_pass_typer_descriptors_to_its_helpers` | `basic-check run` was documented here as working and crashed on every invocation: calling a Typer-decorated function from Python passes its option *descriptors*, not their values. Nothing tested the CLI, so the suite was green throughout. |
-| `test_url_runs_are_written_somewhere_else_by_default` | A one-off `--url` check writing into `results/` would replace the committed nine-node report with a one-row table, since `assess` rewrites those files wholesale. |
+| `test_url_runs_are_written_somewhere_else_by_default` | A one-off `--url` check writing into `results/` would replace the committed federation report with a one-row table, since `assess` rewrites those files wholesale. |
 | `test_every_link_a_check_can_use_is_a_link_the_crawler_will_follow` | The crawler looked for "acceptable use" while the check also accepted "terms of use", so links the checks relied on were never fetched. Four PASSes were weaker than they appeared. Nothing failed; the output was just quietly thinner than it claimed. |
 
 Two of them exist because probing found real bugs in this code:

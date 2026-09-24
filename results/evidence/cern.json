@@ -1,0 +1,87 @@
+{
+  "node_id": "cern",
+  "node_name": "CERN",
+  "requested_url": "https://eosc-auth.cern.ch/login",
+  "fetched_at": "2026-09-24T18:43:33+00:00",
+  "final_url": "https://eosc-auth.cern.ch/login",
+  "http_status": 200,
+  "redirect_chain": [],
+  "robots_allowed": true,
+  "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
+  "title": "INDIGO IAM for CERN-EOSC-NODE-Log in",
+  "lang_attr": "en_US",
+  "main_text": "Welcome to CERN-EOSC-NODE Sign in with EOSC Local credentials Not a member? Apply for an account Privacy policy Contact Support",
+  "full_text": "Welcome to CERN-EOSC-NODE Sign in with EOSC Local credentials Not a member? Apply for an account Privacy policy Contact Support",
+  "links": [
+    {
+      "href": "https://eosc-auth.cern.ch/",
+      "text": "",
+      "visible": true
+    },
+    {
+      "href": "https://eosc-auth.cern.ch/openid_connect_login?iss=https://proxy.acc.myaccessid.org",
+      "text": "EOSC",
+      "visible": true
+    },
+    {
+      "href": "https://eosc-auth.cern.ch/login?sll=y",
+      "text": "Local credentials",
+      "visible": true
+    },
+    {
+      "href": "https://eosc-auth.cern.ch/start-registration",
+      "text": "Apply for an account",
+      "visible": true
+    },
+    {
+      "href": "https://cern.service-now.com/service-portal?id=privacy_policy&se=SSO-Service&notice=wlcg-iam",
+      "text": "Privacy policy",
+      "visible": true
+    },
+    {
+      "href": "https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM",
+      "text": "Contact Support",
+      "visible": true
+    }
+  ],
+  "images": [],
+  "controls": [
+    {
+      "text": "EOSC",
+      "href": "https://eosc-auth.cern.ch/openid_connect_login?iss=https://proxy.acc.myaccessid.org",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Local credentials",
+      "href": "https://eosc-auth.cern.ch/login?sll=y",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Apply for an account",
+      "href": "https://eosc-auth.cern.ch/start-registration",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy policy",
+      "href": "https://cern.service-now.com/service-portal?id=privacy_policy&se=SSO-Service&notice=wlcg-iam",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact Support",
+      "href": "https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "",
+  "error": "",
+  "screenshot": "cern.png",
+  "crawl_depth": 1,
+  "children": [],
+  "children_skipped": [],
+  "crawl_note": "depth 1: 6 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+}
