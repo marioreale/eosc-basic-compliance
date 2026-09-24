@@ -629,18 +629,18 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ### Current run: 24 September 2026
 
-From `results/results.json`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200.
+From `results/results.json`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200. The figures below are from the re-assessment at commit `29dead8`, made from the same evidence after the point 6 and 5b/5c fixes. The first assessment gave 45 / 6 / 69.
 
 | Verdict | Cells |
 |---|---|
-| 🟢 PASS | 45 |
+| 🟢 PASS | 44 |
 | 🔴 FAIL | 6 |
-| 🟠 MANUAL_REVIEW | 69 |
+| 🟠 MANUAL_REVIEW | 70 |
 | **Total** | **120** (12 nodes × 10 points) |
 
 All six FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, EBRAINS), and two link only to the federation index (PaNOSC, GÉANT). Compared with the run below, EOSC DTO moved from `FAIL` to `PASS` on points 4 and 6. GÉANT was served this time, which settled points 1, 6 and 7 as `PASS` and point 4 as `FAIL`. CERN, Czechia and Slovakia appear for the first time. No other cell changed.
 
-The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations were recorded there and have since been fixed in the checks; see "Point 6 and 5b/5c after the review" below. The committed `results/` still holds the run as assessed before the fix. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
+The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations were recorded there and have since been fixed in the checks; see "Point 6 and 5b/5c after the review" below. The committed `results/` was then re-assessed with the fixed checks from the same evidence. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
 
 `test_names.py::test_the_official_names_match_the_nodes_that_show_them` is pinned to the committed evidence. It now expects five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two.
 
@@ -652,15 +652,15 @@ The review of the 24 September run found four rule defects, all fixed in the che
 - **5b/5c ignored words spelled with hyphens in the address.** GÉANT links its AUP with a sentence as the label, and the words appear only in `/geant-node-acceptable-use-policy/`. Link matching now also reads the address with its separators turned into spaces. The crawler and the checks share that matcher (`patterns.link_haystack`), so a future collection will fetch the page as well.
 - **The 5b/5c hint said "re-run with --depth 1" in every case.** Now it gives the actual reason the target was not fetched: the run did not follow links, the target is a PDF, a cap was reached, the target is on another site, or it was not selected when the evidence was collected. It suggests a re-run only when one would help.
 
-Re-assessing the committed evidence with the fixed checks gives 44 PASS, 6 FAIL and 70 MANUAL_REVIEW, against 45/6/69 as published. Exactly three cells change:
+Re-assessing the committed evidence with the fixed checks gives 44 PASS, 6 FAIL and 70 MANUAL_REVIEW, against 45/6/69 as first published. Exactly three cells change:
 
-| Node | Point | Published | After the fix | Review determination |
+| Node | Point | First assessment | Re-assessment (published) | Review determination |
 |---|---|---|---|---|
 | EOSC Node Czechia | 6 | PASS | MANUAL_REVIEW | not met |
 | EBRAINS | 6 | PASS | MANUAL_REVIEW | review |
 | GÉANT | 5b | MANUAL_REVIEW | PASS (pointer) | met as a pointer |
 
-BBMRI-ERIC's point 6 stays PASS, now on the helpdesk mailboxes its contact page lists (`it@helpdesk.bbmri-eric.eu`, `elsi-helpdesk@…`, `rd@helpdesk.…`) rather than on the "Services & Support" label. That differs from the review's "review" determination, which considered only `contact@bbmri-eric.eu`.
+BBMRI-ERIC's point 6 stays PASS, now on the helpdesk mailboxes its contact page lists (`it@helpdesk.bbmri-eric.eu`, `elsi-helpdesk@…`, `rd@helpdesk.…`) rather than on the "Services & Support" label. The review first proposed "review", considering only `contact@bbmri-eric.eu`. It was revised to "met" on this evidence.
 
 ### Previous run: 21 September 2026
 

@@ -41,15 +41,19 @@ The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-120 cells: 🟢 45 PASS · 🔴 6 FAIL · 🟠 69 review.
+120 cells: 🟢 44 PASS · 🔴 6 FAIL · 🟠 70 review. These are the tool's verdicts after the
+point 6 and 5b/5c fixes, re-assessed from the same evidence; the first assessment
+of this run gave 45 / 6 / 69.
 
 **The automated verdicts were reviewed by hand before publication.** The review
 is published beside them as
 **[results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md)**, and it does not
 alter the tool's output. It records:
 
-- three point 6 PASSes that do not survive a reading of the target page;
-- one AUP link, GÉANT's, that the tool missed;
+- three point 6 PASSes resting on link text alone: two were false, and
+  BBMRI-ERIC's was upheld on the helpdesk mailboxes of its contact page;
+- one AUP link, GÉANT's, that the tool missed (both have since been fixed in
+  the checks, and the review's addendum shows the effect);
 - the verification of Slovakia's AUP/UAP PDF;
 - visual logo checks from the screenshots;
 - proposed determinations for points 2 and 3.

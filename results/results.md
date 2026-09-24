@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `live-2026-09-24-no-italy` · 2026-09-24T18:47:43+00:00 · 12 nodes · one page request per node plus 32 followed link(s) in total (depth 1).
+Run `live-2026-09-24-no-italy` · 2026-09-24T19:39:15+00:00 · 12 nodes · one page request per node plus 32 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 
@@ -14,15 +14,15 @@ Run `live-2026-09-24-no-italy` · 2026-09-24T18:47:43+00:00 · 12 nodes · one p
 |---|---|---|---|---|---|---|---|---|---|---|
 | BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | CERN | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
-| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
-| EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+| GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 
 ## What each column means
@@ -131,8 +131,12 @@ Be in English (Any other pages and information are not required to be strictly i
   - followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8929 chars, title: Access Policies - BBMRI-ERIC
   - policy wording found: Policy, You may, conditions
   - *Reviewer action:* Confirm it covers all the node's resources and is in English.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+- **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
   - "Services & Support" -> https://www.bbmri-eric.eu/services-support/
+  - "Contact" -> https://www.bbmri-eric.eu/contact/
+  - followed: https://www.bbmri-eric.eu/contact/ -> HTTP 200
+  - helpdesk wording on that page: helpdesk
+  - *Reviewer action:* Confirm the route reaches the node's user support.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-GB"
   - detected language: en (confidence 1.0)
@@ -172,8 +176,9 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 6 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "Contact Support" -> https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en_US"
   - detected language: en (confidence 0.97)
@@ -213,9 +218,12 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 73 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+- **6** 🟠 review — A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. A link labelled "support" was found, but that word alone does not identify a helpdesk: it also labels funding programmes and service catalogues. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
+  - "Contact" -> https://www.eosc.cz/en/about-eosc-cz/contact
   - "National Support" -> https://www.eosc.cz/en/projects/national-support
-  - "National Support" -> https://www.eosc.cz/en/projects/national-support
+  - "Contact" -> https://www.eosc.cz/en/about-eosc-cz/contact
+  - followed: https://www.eosc.cz/en/about-eosc-cz/contact -> HTTP 200
+  - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
   - detected language: en (confidence 1.0)
@@ -257,9 +265,10 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — A user access policy is mentioned in the page text but not as a followable link.
   - text mentions: Access Polic, UAP, User Access Polic
   - *Reviewer action:* Find where a User Access Policy is actually published and confirm it is reachable.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "Open a Node helpdesk request" -> https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new
   - "Helpdesk" -> https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-US"
   - detected language: en (confidence 1.0)
@@ -297,10 +306,11 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 93 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟠 review — A contact route exists, but nothing identifies it as a helpdesk. The checklist asks specifically for the node helpdesk, and a general enquiries or press address does not obviously satisfy that.
+- **6** 🟠 review — The contact or support pages reached from the landing page do not identify a helpdesk. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
   - "Contact & accès" -> https://www.data-terra.org/contact-acces/
   - "Contact & accès" -> https://www.data-terra.org/contact-acces/
-  - *Reviewer action:* Confirm this contact route reaches the node's user support, not a general mailbox.
+  - followed: https://www.data-terra.org/contact-acces/ -> HTTP 200
+  - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.
 - **7** 🟢 PASS — The main content is English. The page declares "fr-FR", which is a metadata inconsistency worth fixing but does not breach point 7.
   - declared lang attribute: "fr-FR"
   - detected language: en (confidence 1.0)
@@ -337,15 +347,17 @@ Be in English (Any other pages and information are not required to be strictly i
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "Terms of use" -> https://research.csc.fi/terms-of-use/
+  - "Prerequisites and responsibilities for a CSC project manager" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/
   - followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16560 chars, title: Terms of use - Services for Research
   - policy wording found: Terms, comply, conditions, permitted
   - *Reviewer action:* Confirm it covers all the node's resources and is in English.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 85 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "Service Desk" -> https://research.csc.fi/support
   - "Service Desk" -> https://research.csc.fi/support
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-US"
   - detected language: en (confidence 1.0)
@@ -387,10 +399,11 @@ Be in English (Any other pages and information are not required to be strictly i
   - 123 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
 - **6** 🟠 review — A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
+  - "Contact" -> https://www.panosc.eu/contact/
+  - "Contact us" -> https://www.panosc.eu/contact/
+  - "Contact" -> https://www.panosc.eu/contact/
   - followed: https://www.panosc.eu/contact/ -> HTTP 200
-  - address given: mailto:contact@panosc.eu
-  - address given: mailto:management@panosc.eu
-  - *Reviewer action:* Confirm this reaches the node's user support, not a general mailbox.
+  - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-GB"
   - detected language: en (confidence 1.0)
@@ -432,8 +445,9 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 11 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "Helpdesk Ask the EUDAT support team a question or report a problem." -> https://portal.eudat.eu/helpdesk
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
   - detected language: en (confidence 1.0)
@@ -474,11 +488,11 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — A user access policy is mentioned in the page text but not as a followable link.
   - text mentions: Access Polic
   - *Reviewer action:* Find where a User Access Policy is actually published and confirm it is reachable.
-- **6** 🟢 PASS — The contact page reached from the landing page identifies a support or helpdesk route.
+- **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
   - "Contact Us" -> https://www.egi.eu/contact-us/
   - "Contact Us" -> https://www.egi.eu/contact-us/
   - followed: https://www.egi.eu/contact-us/ -> HTTP 200
-  - helpdesk wording on that page: Support
+  - helpdesk wording on that page: support[at]egi
   - *Reviewer action:* Confirm the route reaches the node's user support.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
@@ -515,17 +529,17 @@ Be in English (Any other pages and information are not required to be strictly i
   - 124 outbound link(s) on the landing page
   - main text length: 6097 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
-- **5b** 🟠 review — An acceptable use policy is mentioned in the page text but not as a followable link.
-  - text mentions: Acceptable Use Polic
-  - *Reviewer action:* Find where an Acceptable Use Policy is actually published and confirm it is reachable.
+- **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it was not selected when this evidence was collected), so this is a pointer, not a verified document.
+  - "This policy defines the rules that govern your access to and use of the resources and services of the “GÉANT Node”." -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/
+  - *Reviewer action:* Open the link and confirm the target really is an Acceptable Use Policy, in English. Collecting the evidence again would fetch it.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 124 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟢 PASS — The contact page reached from the landing page identifies a support or helpdesk route.
+- **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
   - "Contact" -> https://geant.org/contact
   - "Contact To find out more about the GÉANT EOSC Node get in touch via the contact form." -> https://geant.org/contact/
   - followed: https://geant.org/contact -> HTTP 200
-  - helpdesk wording on that page: helpdesk, support
+  - helpdesk wording on that page: helpdesk
   - *Reviewer action:* Confirm the route reaches the node's user support.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-US"
@@ -566,8 +580,12 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
   - 127 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+- **6** 🟠 review — A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. A link labelled "support" was found, but that word alone does not identify a helpdesk: it also labels funding programmes and service catalogues. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
   - "EBRAINS Support for EuroHPC Applications" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications
+  - "Media Contact" -> https://ebrains.eu/news-events/media/media-contact
+  - "Contact Us" -> https://ebrains.eu/contact
+  - followed: https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications -> HTTP 200
+  - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
   - detected language: en (confidence 1.0)
@@ -600,15 +618,16 @@ Be in English (Any other pages and information are not required to be strictly i
   - 45 outbound link(s) on the landing page
   - main text length: 8448 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
-- **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched, so this is a pointer, not a verified document.
+- **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.
   - "Terms of Use (incl. AUP and UAP)" -> https://eosc.sk/docs/eosc_sk_tou.pdf
-  - *Reviewer action:* Open the link and confirm the target really is an Acceptable Use Policy, in English. Re-run with --depth 1 to have the tool check it.
-- **5c** 🟢 PASS — The landing page links to what appears to be a User Access Policy. The link target was not fetched, so this is a pointer, not a verified document.
+  - *Reviewer action:* Open the PDF and confirm it is an Acceptable Use Policy, in English. No --depth setting will fetch it.
+- **5c** 🟢 PASS — The landing page links to what appears to be a User Access Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.
   - "Terms of Use (incl. AUP and UAP)" -> https://eosc.sk/docs/eosc_sk_tou.pdf
-  - *Reviewer action:* Open the link and confirm the target really is a User Access Policy, in English. Re-run with --depth 1 to have the tool check it.
-- **6** 🟢 PASS — A support or helpdesk contact route is present.
+  - *Reviewer action:* Open the PDF and confirm it is a User Access Policy, in English. No --depth setting will fetch it.
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "Open helpdesk" -> https://hd.eosc.sk
   - "HELPDESK" -> https://hd.eosc.sk
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
   - detected language: en (confidence 1.0)

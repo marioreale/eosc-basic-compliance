@@ -1,6 +1,6 @@
 {
   "run_id": "live-2026-09-24-no-italy",
-  "generated_at": "2026-09-24T18:47:43+00:00",
+  "generated_at": "2026-09-24T19:39:15+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
@@ -279,11 +279,17 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
-            "\"Services & Support\" -> https://www.bbmri-eric.eu/services-support/"
+            "\"Services & Support\" -> https://www.bbmri-eric.eu/services-support/",
+            "\"Contact\" -> https://www.bbmri-eric.eu/contact/",
+            "followed: https://www.bbmri-eric.eu/contact/ -> HTTP 200",
+            "helpdesk wording on that page: helpdesk",
+            "helpdesk address given: mailto:elsi-helpdesk@bbmri-eric.eu",
+            "helpdesk address given: mailto:it@helpdesk.bbmri-eric.eu",
+            "helpdesk address given: mailto:rd@helpdesk.bbmri-eric.eu"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
@@ -408,11 +414,11 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "message": "The landing page links to a route identified as a helpdesk or user support.",
           "evidence": [
             "\"Contact Support\" -> https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
         },
         {
           "point_id": "7",
@@ -611,13 +617,18 @@
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. A link labelled \"support\" was found, but that word alone does not identify a helpdesk: it also labels funding programmes and service catalogues. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
           "evidence": [
+            "\"Contact\" -> https://www.eosc.cz/en/about-eosc-cz/contact",
             "\"National Support\" -> https://www.eosc.cz/en/projects/national-support",
-            "\"National Support\" -> https://www.eosc.cz/en/projects/national-support"
+            "\"Contact\" -> https://www.eosc.cz/en/about-eosc-cz/contact",
+            "followed: https://www.eosc.cz/en/about-eosc-cz/contact -> HTTP 200",
+            "followed: https://www.eosc.cz/en/projects/national-support -> HTTP 200",
+            "address given: mailto:info@eosc.cz",
+            "address given: mailto:events@eosc.cz"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service."
         },
         {
           "point_id": "7",
@@ -793,12 +804,12 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "message": "The landing page links to a route identified as a helpdesk or user support.",
           "evidence": [
             "\"Open a Node helpdesk request\" -> https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
             "\"Helpdesk\" -> https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
         },
         {
           "point_id": "7",
@@ -948,12 +959,13 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "MANUAL_REVIEW",
-          "message": "A contact route exists, but nothing identifies it as a helpdesk. The checklist asks specifically for the node helpdesk, and a general enquiries or press address does not obviously satisfy that.",
+          "message": "The contact or support pages reached from the landing page do not identify a helpdesk. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
           "evidence": [
             "\"Contact & accès\" -> https://www.data-terra.org/contact-acces/",
-            "\"Contact & accès\" -> https://www.data-terra.org/contact-acces/"
+            "\"Contact & accès\" -> https://www.data-terra.org/contact-acces/",
+            "followed: https://www.data-terra.org/contact-acces/ -> HTTP 200"
           ],
-          "reviewer_action": "Confirm this contact route reaches the node's user support, not a general mailbox."
+          "reviewer_action": "Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service."
         },
         {
           "point_id": "7",
@@ -1115,6 +1127,7 @@
           "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
             "\"Terms of use\" -> https://research.csc.fi/terms-of-use/",
+            "\"Prerequisites and responsibilities for a CSC project manager\" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
             "followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16560 chars, title: Terms of use - Services for Research",
             "policy wording found: Terms, comply, conditions, permitted"
           ],
@@ -1134,12 +1147,12 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "message": "The landing page links to a route identified as a helpdesk or user support.",
           "evidence": [
             "\"Service Desk\" -> https://research.csc.fi/support",
             "\"Service Desk\" -> https://research.csc.fi/support"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
         },
         {
           "point_id": "7",
@@ -1326,11 +1339,14 @@
           "verdict": "MANUAL_REVIEW",
           "message": "A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
           "evidence": [
+            "\"Contact\" -> https://www.panosc.eu/contact/",
+            "\"Contact us\" -> https://www.panosc.eu/contact/",
+            "\"Contact\" -> https://www.panosc.eu/contact/",
             "followed: https://www.panosc.eu/contact/ -> HTTP 200",
             "address given: mailto:contact@panosc.eu",
             "address given: mailto:management@panosc.eu"
           ],
-          "reviewer_action": "Confirm this reaches the node's user support, not a general mailbox."
+          "reviewer_action": "Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service."
         },
         {
           "point_id": "7",
@@ -1503,11 +1519,11 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "message": "The landing page links to a route identified as a helpdesk or user support.",
           "evidence": [
             "\"Helpdesk Ask the EUDAT support team a question or report a problem.\" -> https://portal.eudat.eu/helpdesk"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
         },
         {
           "point_id": "7",
@@ -1682,12 +1698,12 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "The contact page reached from the landing page identifies a support or helpdesk route.",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
             "\"Contact Us\" -> https://www.egi.eu/contact-us/",
             "\"Contact Us\" -> https://www.egi.eu/contact-us/",
             "followed: https://www.egi.eu/contact-us/ -> HTTP 200",
-            "helpdesk wording on that page: Support"
+            "helpdesk wording on that page: support[at]egi"
           ],
           "reviewer_action": "Confirm the route reaches the node's user support."
         },
@@ -1860,12 +1876,12 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "An acceptable use policy is mentioned in the page text but not as a followable link.",
+          "verdict": "PASS",
+          "message": "The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it was not selected when this evidence was collected), so this is a pointer, not a verified document.",
           "evidence": [
-            "text mentions: Acceptable Use Polic"
+            "\"This policy defines the rules that govern your access to and use of the resources and services of the “GÉANT Node”.\" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/"
           ],
-          "reviewer_action": "Find where an Acceptable Use Policy is actually published and confirm it is reachable."
+          "reviewer_action": "Open the link and confirm the target really is an Acceptable Use Policy, in English. Collecting the evidence again would fetch it."
         },
         {
           "point_id": "5c",
@@ -1881,12 +1897,12 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "The contact page reached from the landing page identifies a support or helpdesk route.",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
             "\"Contact\" -> https://geant.org/contact",
             "\"Contact To find out more about the GÉANT EOSC Node get in touch via the contact form.\" -> https://geant.org/contact/",
             "followed: https://geant.org/contact -> HTTP 200",
-            "helpdesk wording on that page: helpdesk, support"
+            "helpdesk wording on that page: helpdesk"
           ],
           "reviewer_action": "Confirm the route reaches the node's user support."
         },
@@ -2091,12 +2107,18 @@
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. A link labelled \"support\" was found, but that word alone does not identify a helpdesk: it also labels funding programmes and service catalogues. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
           "evidence": [
-            "\"EBRAINS Support for EuroHPC Applications\" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications"
+            "\"EBRAINS Support for EuroHPC Applications\" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
+            "\"Media Contact\" -> https://ebrains.eu/news-events/media/media-contact",
+            "\"Contact Us\" -> https://ebrains.eu/contact",
+            "followed: https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications -> HTTP 200",
+            "followed: https://ebrains.eu/news-events/media/media-contact -> HTTP 200",
+            "address given: mailto:base-infra-resources@ebrains.eu",
+            "not followed: https://ebrains.eu/contact (cap for point 6)"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service."
         },
         {
           "point_id": "7",
@@ -2231,32 +2253,32 @@
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
           "verdict": "PASS",
-          "message": "The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched, so this is a pointer, not a verified document.",
+          "message": "The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.",
           "evidence": [
             "\"Terms of Use (incl. AUP and UAP)\" -> https://eosc.sk/docs/eosc_sk_tou.pdf"
           ],
-          "reviewer_action": "Open the link and confirm the target really is an Acceptable Use Policy, in English. Re-run with --depth 1 to have the tool check it."
+          "reviewer_action": "Open the PDF and confirm it is an Acceptable Use Policy, in English. No --depth setting will fetch it."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
           "verdict": "PASS",
-          "message": "The landing page links to what appears to be a User Access Policy. The link target was not fetched, so this is a pointer, not a verified document.",
+          "message": "The landing page links to what appears to be a User Access Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.",
           "evidence": [
             "\"Terms of Use (incl. AUP and UAP)\" -> https://eosc.sk/docs/eosc_sk_tou.pdf"
           ],
-          "reviewer_action": "Open the link and confirm the target really is a User Access Policy, in English. Re-run with --depth 1 to have the tool check it."
+          "reviewer_action": "Open the PDF and confirm it is a User Access Policy, in English. No --depth setting will fetch it."
         },
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "A support or helpdesk contact route is present.",
+          "message": "The landing page links to a route identified as a helpdesk or user support.",
           "evidence": [
             "\"Open helpdesk\" -> https://hd.eosc.sk",
             "\"HELPDESK\" -> https://hd.eosc.sk"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
         },
         {
           "point_id": "7",
