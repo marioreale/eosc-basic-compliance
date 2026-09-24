@@ -271,6 +271,7 @@ Only `collect` and `run` need a browser or network access. `points`, `assess`, `
 | `--eosc-page` | collect assess run | — | With a single `--url`: the node's own `eosc.eu` page, for point 4 |
 | `--results` | collect assess run show | `results/` | Output directory (`results/one-off/` for `--url` runs) |
 | `--only` | collect assess run | all | Comma-separated node ids. Narrows which sites are contacted, not what the report covers |
+| `--skip` | collect assess run | none | Node ids or names, comma-separated or repeated. Left out of fetch and report; the report says so |
 | `--depth` | collect run | 1 | 0 = landing page only; 1 = one hop; 2 = two hops, reporting both depths. Range-checked 0–2 |
 | `--fetch-budget` | collect run | 60 | Depth 2 only: run-wide ceiling on second-hop requests |
 | `--max-children` | collect | 8 | Cap on followed pages per node |
