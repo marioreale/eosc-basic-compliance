@@ -90,6 +90,7 @@ def _resolve(
     only: str,
     results_dir: Path | None,
     eosc_page: str = "",
+    skip: list[str] | None = None,
 ) -> tuple[list[dict], list[dict], Path]:
     """Decide what to fetch, what to report on, and where to write it.
 
@@ -108,12 +109,24 @@ def _resolve(
     --url and --only remain mutually exclusive rather than silently ignored:
     --only filters a configured list by id, and an id the user never chose is
     not something to filter on.
+
+    `--skip` is the opposite question and is answered differently: it takes the
+    named nodes out of the run altogether, fetch *and* report, in every
+    directory. Leaving a skipped node in the report would bring back the exit-2
+    "no evidence" outcome the option exists to avoid. What keeps a shorter
+    report from passing for a complete one is that the omission is recorded in
+    results.json and stated in both reports (see _do_assess).
     """
     urls = [u for u in (urls or []) if u.strip()]
+    skip_values = _split_values(skip)
     if urls:
         if only:
             raise typer.BadParameter(
                 "--only filters the nodes file; it cannot be combined with --url"
+            )
+        if skip_values:
+            raise typer.BadParameter(
+                "--skip filters the nodes file; it cannot be combined with --url"
             )
         ad_hoc = _nodes_from_urls(urls, eosc_page)
         return ad_hoc, ad_hoc, (results_dir or DEFAULT_ONEOFF)
@@ -122,9 +135,69 @@ def _resolve(
             "--eosc-page is only meaningful with --url; use nodes.yaml otherwise"
         )
     selected = _load_nodes(nodes_file, only)
-    if results_dir is not None:
-        return selected, selected, results_dir
-    return selected, _load_nodes(nodes_file), DEFAULT_RESULTS
+    reported = selected if results_dir is not None else _load_nodes(nodes_file)
+    if skip_values:
+        skipped = _skip_ids(_load_nodes(nodes_file), skip_values)
+        selected = [n for n in selected if n["id"] not in skipped]
+        reported = [n for n in reported if n["id"] not in skipped]
+        if not selected:
+            raise typer.BadParameter("--skip leaves nothing left to check")
+    return selected, reported, (results_dir if results_dir is not None else DEFAULT_RESULTS)
+
+
+def _split_values(values: list[str] | None) -> list[str]:
+    """Flatten a repeatable option whose values may also be comma-separated,
+    so `--skip a,b` and `--skip a --skip b` mean the same thing."""
+    return [v.strip() for raw in (values or []) for v in raw.split(",") if v.strip()]
+
+
+def _node_keys(node: dict) -> set[str]:
+    """Every spelling that names this node for --skip, casefolded: its id, its
+    name, and its name without an "EOSC Node " / "EOSC " prefix, so that
+    `Italy` names "EOSC Node Italy" and `Finland` names "EOSC Finland"."""
+    name = node.get("name", "")
+    keys = {node["id"], name}
+    for prefix in ("EOSC Node ", "EOSC "):
+        if name.startswith(prefix):
+            keys.add(name[len(prefix):])
+    return {k.strip().casefold() for k in keys if k.strip()}
+
+
+def _skip_ids(nodes: list[dict], values: list[str]) -> set[str]:
+    """Resolve --skip values to node ids.
+
+    Strict on purpose: an unmatched value is an error, not a no-op, because a
+    typo that skipped nothing would fetch the very node the user meant to leave
+    alone. A value naming more than one node is an error for the same reason.
+    """
+    ids: set[str] = set()
+    unknown: list[str] = []
+    for value in values:
+        hits = [n["id"] for n in nodes if value.casefold() in _node_keys(n)]
+        if not hits:
+            unknown.append(value)
+        elif len(hits) > 1:
+            raise typer.BadParameter(
+                f"--skip {value!r} matches more than one node ({', '.join(hits)}); use the id"
+            )
+        else:
+            ids.add(hits[0])
+    if unknown:
+        known = ", ".join(n["id"] for n in nodes)
+        raise typer.BadParameter(
+            f"--skip: no node matches {', '.join(map(repr, unknown))}. "
+            f"Use a node id or name; ids are: {known}"
+        )
+    return ids
+
+
+def _skipped(nodes_file: Path, skip: list[str] | None, urls: list[str] | None) -> list[str]:
+    """The ids --skip removed, for the record. Called after _resolve has
+    validated the values, so it cannot raise for a reason _resolve did not."""
+    values = _split_values(skip)
+    if not values or [u for u in (urls or []) if u.strip()]:
+        return []
+    return sorted(_skip_ids(_load_nodes(nodes_file), values))
 
 
 def _selection(only: str) -> list[str]:
@@ -149,6 +222,13 @@ def collect(
     nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
     results_dir: Path = typer.Option(None, "--results"),
     only: str = typer.Option("", "--only", help="Comma-separated node ids"),
+    skip: list[str] = typer.Option(
+        None,
+        "--skip",
+        help="Leave these nodes out of the run entirely: not fetched, not assessed, "
+        "not in the report, which states that they were skipped. Node id or name "
+        "(e.g. Italy or eosc-it), case-insensitive; comma-separated or repeated.",
+    ),
     url: list[str] = typer.Option(
         None,
         "--url",
@@ -184,7 +264,7 @@ def collect(
     ),
 ):
     """Fetch each landing page and save the evidence. Depth 1 by default."""
-    nodes, _reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    nodes, _reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
     _do_collect(nodes, resolved, delay, depth, max_children, fetch_budget)
 
 
@@ -249,6 +329,13 @@ def assess(
     checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c"),
     results_dir: Path = typer.Option(None, "--results"),
     only: str = typer.Option("", "--only"),
+    skip: list[str] = typer.Option(
+        None,
+        "--skip",
+        help="Leave these nodes out of the run entirely: not fetched, not assessed, "
+        "not in the report, which states that they were skipped. Node id or name "
+        "(e.g. Italy or eosc-it), case-insensitive; comma-separated or repeated.",
+    ),
     url: list[str] = typer.Option(
         None,
         "--url",
@@ -281,11 +368,12 @@ def assess(
     run_id: str = typer.Option("", "--run"),
 ):
     """Apply the checklist to already-collected evidence and write the reports."""
-    _fetched, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    _fetched, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
     _do_assess(
         reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
         strict_separators=strict_separators,
         selection=_selection(only),
+        skipped=_skipped(nodes_file, skip, url),
     )
 
 
@@ -363,6 +451,7 @@ def _do_assess(
     no_approved_names: bool = False,
     strict_separators: bool = False,
     selection: list[str] | None = None,
+    skipped: list[str] | None = None,
 ) -> dict:
     """See _do_collect for why this is not the Typer command itself."""
     checklist = yaml.safe_load(checklist_file.read_text())
@@ -392,6 +481,10 @@ def _do_assess(
         # now covers every node either way, so the reader would otherwise have
         # no way to tell how fresh any given row is.
         "selection": sorted(selection or []),
+        # Which configured nodes --skip left out. They are absent from "nodes"
+        # by request, not for want of evidence, so they are not missing_evidence
+        # — but a report without them must say so.
+        "skipped": sorted(skipped or []),
         # Kept for readers of older result files.
         "approved_names_supplied": names.supplied,
         "nodes": [],
@@ -487,6 +580,13 @@ def run(
     nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
     results_dir: Path = typer.Option(None, "--results"),
     only: str = typer.Option("", "--only"),
+    skip: list[str] = typer.Option(
+        None,
+        "--skip",
+        help="Leave these nodes out of the run entirely: not fetched, not assessed, "
+        "not in the report, which states that they were skipped. Node id or name "
+        "(e.g. Italy or eosc-it), case-insensitive; comma-separated or repeated.",
+    ),
     url: list[str] = typer.Option(
         None,
         "--url",
@@ -532,12 +632,13 @@ def run(
 ):
     """collect, then assess."""
     # Resolve once so both phases agree on the node list and the directory.
-    nodes, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page)
+    nodes, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
     _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget)
     _do_assess(
         reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
         strict_separators=strict_separators,
         selection=_selection(only),
+        skipped=_skipped(nodes_file, skip, url),
     )
 
 

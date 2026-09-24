@@ -274,3 +274,141 @@ def test_an_unknown_id_is_still_rejected_rather_than_quietly_widened():
     """
     with pytest.raises(typer.BadParameter):
         cli._resolve(None, cli.DEFAULT_NODES, "not-a-node", None)
+
+
+# --- --skip: leave named nodes out of a run, and say so ------------------------
+
+
+def _ids(nodes):
+    return [n["id"] for n in nodes]
+
+
+@pytest.mark.parametrize(
+    "skip",
+    [
+        ["eosc-it,eosc-sk"],  # one comma-separated value
+        ["eosc-it", "eosc-sk"],  # the option repeated
+        ["Italy, Slovakia"],  # short names, with a space after the comma
+        ["italy", "SLOVAKIA"],  # case does not matter
+        ["EOSC Node Italy", "eosc-sk"],  # full name and id mixed
+    ],
+    ids=["comma", "repeated", "short-names", "case", "full-name-and-id"],
+)
+def test_skip_removes_nodes_from_both_the_fetch_and_the_report(skip):
+    fetched, reported, _ = cli._resolve(None, cli.DEFAULT_NODES, "", None, skip=skip)
+    for ids in (_ids(fetched), _ids(reported)):
+        assert "eosc-it" not in ids and "eosc-sk" not in ids, ids
+        assert "egi" in ids  # and nothing else went with them
+
+
+def test_an_unknown_skip_value_is_rejected_rather_than_ignored():
+    """A typo that skipped nothing would run the node the user meant to leave
+    out, which is exactly the request --skip exists to prevent."""
+    with pytest.raises(typer.BadParameter, match="Itlay"):
+        cli._resolve(None, cli.DEFAULT_NODES, "", None, skip=["Itlay"])
+
+
+def test_an_ambiguous_skip_value_is_rejected(tmp_path):
+    import yaml
+
+    f = tmp_path / "nodes.yaml"
+    f.write_text(yaml.safe_dump({"nodes": [
+        {"id": "a", "name": "EOSC Node Twin", "url": "https://a.example/", "eosc_page": ""},
+        {"id": "b", "name": "EOSC Twin", "url": "https://b.example/", "eosc_page": ""},
+        {"id": "c", "name": "Other", "url": "https://c.example/", "eosc_page": ""},
+    ]}))
+    with pytest.raises(typer.BadParameter, match="more than one"):
+        cli._resolve(None, f, "", None, skip=["Twin"])
+
+
+def test_skipping_every_node_is_rejected():
+    import yaml
+
+    every = [n["id"] for n in yaml.safe_load(cli.DEFAULT_NODES.read_text())["nodes"]]
+    with pytest.raises(typer.BadParameter, match="nothing left"):
+        cli._resolve(None, cli.DEFAULT_NODES, "", None, skip=[",".join(every)])
+
+
+def test_skip_and_url_together_are_rejected():
+    with pytest.raises(typer.BadParameter):
+        cli._resolve(["https://a.example/"], cli.DEFAULT_NODES, "", None, skip=["egi"])
+
+
+def test_skip_applies_after_only():
+    fetched, _, _ = cli._resolve(None, cli.DEFAULT_NODES, "egi,eudat", None, skip=["egi"])
+    assert _ids(fetched) == ["eudat"]
+
+
+def test_no_skip_changes_nothing():
+    assert cli._resolve(None, cli.DEFAULT_NODES, "", None, skip=[]) == cli._resolve(
+        None, cli.DEFAULT_NODES, "", None
+    )
+
+
+def test_skipped_nodes_do_not_count_as_missing_evidence_and_are_recorded(tmp_path):
+    """The use case: nodes.yaml lists nodes with no evidence yet (Italy's domain
+    does not resolve), and a run over the rest should be able to complete
+    without exit 2 — but the result must still say who was left out."""
+    import json
+
+    out = _full_results_dir(tmp_path)
+    have = {p.stem for p in (out / "evidence").glob("*.json")}
+    configured = _ids(__import__("yaml").safe_load(cli.DEFAULT_NODES.read_text())["nodes"])
+    absent = sorted(set(configured) - have)
+    assert absent, "the test is vacuous unless some configured node lacks evidence"
+    res = CliRunner().invoke(
+        cli.app,
+        ["assess", "--results", str(out), *[a for i in absent for a in ("--skip", i)]],
+        catch_exceptions=False,
+    )
+    assert res.exit_code == 0, res.output
+    data = json.loads((out / "results.json").read_text())
+    assert data["skipped"] == absent
+    assert "missing_evidence" not in data
+    assert not set(_ids(data["nodes"])) & set(absent)
+
+
+def test_the_reports_state_which_nodes_were_skipped(tmp_path):
+    """A shorter table must not look like a complete one: that was the whole
+    reason --only stopped narrowing the published report."""
+    out = _full_results_dir(tmp_path)
+    nodes_file, _ = _nodes_covering(tmp_path, out)
+    CliRunner().invoke(
+        cli.app,
+        ["assess", "--results", str(out), "--nodes", str(nodes_file), "--skip", "egi,eudat"],
+        catch_exceptions=False,
+    )
+    md = (out / "results.md").read_text()
+    html_ = (out / "index.html").read_text()
+    for text in (md, html_):
+        assert "Skipped by request" in text
+        assert "egi" in text.split("Skipped by request", 1)[1][:300]
+        assert "eudat" in text.split("Skipped by request", 1)[1][:300]
+
+
+def test_a_run_without_skip_records_an_empty_list_and_no_banner(tmp_path):
+    import json
+
+    out = _full_results_dir(tmp_path)
+    nodes_file, _ = _nodes_covering(tmp_path, out)
+    CliRunner().invoke(
+        cli.app, ["assess", "--results", str(out), "--nodes", str(nodes_file)],
+        catch_exceptions=False,
+    )
+    assert json.loads((out / "results.json").read_text())["skipped"] == []
+    assert "Skipped by request" not in (out / "results.md").read_text()
+
+
+@pytest.mark.parametrize("command", ["collect", "run"])
+def test_collect_and_run_do_not_fetch_skipped_nodes(monkeypatch, tmp_path, command):
+    """Nothing is sent to a skipped node's website."""
+    seen = {}
+    monkeypatch.setattr(cli, "_do_collect", lambda nodes, *a, **k: seen.setdefault("ids", _ids(nodes)))
+    monkeypatch.setattr(cli, "_do_assess", lambda *a, **k: None)
+    res = CliRunner().invoke(
+        cli.app, [command, "--results", str(tmp_path), "--skip", "Italy", "--skip", "Slovakia"],
+        catch_exceptions=False,
+    )
+    assert res.exit_code == 0, res.output
+    assert "eosc-it" not in seen["ids"] and "eosc-sk" not in seen["ids"]
+    assert "egi" in seen["ids"]

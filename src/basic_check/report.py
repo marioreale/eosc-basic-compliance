@@ -154,6 +154,24 @@ def _freshness_note(run: dict) -> str:
     )
 
 
+def _skipped_note(run: dict) -> str:
+    """A sentence naming the nodes --skip left out of this run, or "".
+
+    A shorter table must not pass for a complete one. That is why --only never
+    narrows the published report; --skip does narrow it, by request, and this
+    sentence is what keeps the omission visible. Plain text (no Markdown), so
+    each report can apply its own emphasis to the lead-in.
+    """
+    skipped = run.get("skipped") or []
+    if not skipped:
+        return ""
+    return (
+        f"{', '.join(skipped)} {'was' if len(skipped) == 1 else 'were'} left out of "
+        "this run with --skip: not fetched, not assessed and not shown below. "
+        "This table does not cover every configured node."
+    )
+
+
 def _names_sentence(run: dict) -> str:
     """Plain prose about the approved-name list behind point 3.
 
@@ -374,6 +392,12 @@ def render_html(run: dict, out: Path) -> Path:
     freshness_block = (
         f'\n<div class="banner">{html.escape(fresh)}</div>\n' if fresh else ""
     )
+    skipped = _skipped_note(run)
+    if skipped:
+        freshness_block += (
+            f'\n<div class="banner"><strong>Skipped by request.</strong> '
+            f"{html.escape(skipped)}</div>\n"
+        )
 
     chips = "".join(
         f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
@@ -794,6 +818,7 @@ def render_markdown(run: dict, out: Path) -> Path:
         f"**Node names.** {_names_sentence(run)}",
         "",
         *([f"> {_freshness_note(run)}", ""] if _freshness_note(run) else []),
+        *([f"> **Skipped by request.** {_skipped_note(run)}", ""] if _skipped_note(run) else []),
         "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
         "🟠 review — a human must decide · 🟣 ERROR — could not be assessed",
         "",

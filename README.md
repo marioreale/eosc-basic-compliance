@@ -17,7 +17,7 @@ follow one further hop under a fixed budget.
 👉 **[Installation, configuration and run guide](docs/GUIDE.md)** — start here if
 you want to install and run it yourself.
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 248
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 264
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 
@@ -33,7 +33,8 @@ test, and what the published figures do and do not say.
 > `results/`, so they do not appear in the report or in any count below.
 > `basic-check assess` names them and exits 2 rather than quietly omitting them.
 > To publish them, run `basic-check collect --only cern,eosc-cz,eosc-it,eosc-sk`
-> and then `assess`.
+> and then `assess`. To run without them for now, use
+> `--skip cern,eosc-cz,eosc-it,eosc-sk`; the report then states they were skipped.
 
 Nine landing pages, all fetched 21 September 2026, 13:04–13:07 UTC, at `--depth 2`.
 Eight responded `HTTP 200`. `geant.org` returned `HTTP 403` to this run's
@@ -165,6 +166,7 @@ uv run basic-check collect           # landing page + <=1 level of links -> resu
 uv run basic-check collect --depth 0 # landing pages only, one request per node
 uv run basic-check collect --max-children 4   # tighter cap (default 8 per node)
 uv run basic-check collect --only egi,geant   # a subset, for a gentle re-run
+uv run basic-check run --skip Italy,Slovakia  # every node except these (ids or names)
 uv run basic-check assess            # evidence -> results/{index.html,results.md,.csv,.json}
 uv run basic-check run               # collect + assess
 uv run basic-check run --depth 2     # follow one further hop (see below)
@@ -246,6 +248,14 @@ re-fetch, and labels itself **Mixed freshness** so the reused rows are not taken
 for fresh ones. Pass an explicit `--results DIR` when a genuinely narrower report
 is what you want.
 
+`--skip` is the opposite: it leaves the named nodes out of the run entirely.
+They are not fetched, not assessed and not in the report. It takes ids or names,
+case-insensitively (`--skip Italy,Slovakia` or `--skip Italy --skip Slovakia`).
+A skipped node does not count as missing evidence, so `assess` does not exit 2
+for it. The report is shorter, so it says so: a **Skipped by request** banner,
+and a `skipped` list in `results.json`. A value that matches no node is an
+error rather than being ignored. See [the guide](docs/GUIDE.md) section 4.
+
 `collect` and `assess` are separate on purpose: assessment is re-runnable offline
 against saved evidence, so changing a check never means re-requesting the pages.
 `assess` exits non-zero if any configured node has no evidence, so a short table
@@ -307,7 +317,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 248 tests, a few seconds, no network, no browser
+uv run pytest -q          # 264 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-248 tests still pass, while `collect` fails with Playwright's
+264 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 248 passed
+uv run pytest -q                  # expect: 264 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -487,6 +487,7 @@ accept the option.
 | Option | Effect |
 |---|---|
 | `--only a,b` | Restrict which nodes are **fetched**. The report still covers all of them — see below. |
+| `--skip a,b` | Leave these nodes out entirely: not fetched, not assessed, not in the report, which says so. Id or name, comma-separated or repeated — see below. |
 | `--url https://…` | Check any page without editing `nodes.yaml`. Repeatable. |
 | `--eosc-page URL` | With a single `--url`: that node's own `eosc.eu` page, so a point 4 failure can name the exact URL that is missing. |
 | `--nodes path` | Use a different node list. |
@@ -552,6 +553,40 @@ the way to produce a report with a single capture date:
 ```bash
 uv run basic-check assess
 ```
+
+### `--skip` leaves nodes out, and says so
+
+`--skip` is for the opposite case: run on every configured node **except**
+some. It takes node ids or names, case-insensitively, either comma-separated or
+by repeating the option. Short names work too, so `Italy` names "EOSC Node
+Italy":
+
+```bash
+uv run basic-check run --skip Italy,Slovakia
+uv run basic-check run --skip Italy --skip Slovakia          # the same
+uv run basic-check assess --skip "CERN, Czechia" --skip eosc-it --skip eosc-sk
+```
+
+A skipped node is left out of the whole run. No request is sent to its site, it
+is not assessed, and it has no row in the report. Because it is left out on
+purpose, it does not count as missing evidence, so `assess` does not exit 2 for
+it. That last command is the way to rebuild the nine-node report while the four
+newer nodes have no evidence yet.
+
+Unlike `--only`, `--skip` does shorten the report, including the one in
+`results/`. A shorter table must never look complete, so every report says
+what was left out: a **Skipped by request** banner in `results.md` and
+`index.html`, and a top-level `skipped` list in `results.json` (`[]` when
+nothing was skipped). Like any `assess` without `--results`, it rewrites
+`results/`, which stays under human review. For a trial run, add
+`--results /tmp/scratch`.
+
+The option rejects values rather than guessing. If a value matches no node, the
+error lists the valid ids, because a typo that skipped nothing would fetch the
+very site you meant to leave alone. A value that names more than one node is an
+error too. So is skipping every node, and so is combining `--skip` with `--url`.
+With `--only`, the skip is applied after the selection:
+`--only egi,eudat --skip egi` fetches EUDAT alone.
 
 ### Checking a page not in `nodes.yaml`
 
@@ -678,7 +713,7 @@ a verdict surprises you.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 248 tests, offline, a few seconds
+uv run pytest -q                    # 264 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -689,7 +724,7 @@ uv run ruff check src tests         # lint
 |---|---|---|
 | `test_checklist.py` | 12 | The transcription matches the source document, including its SHA-256, and the scoped name list agrees with the official one. |
 | `test_checks.py` | 62 | The verdict logic, point by point, including the render gate, the EOSC-asset token rule, and that a point 3 summary never denies having a name list it was given. |
-| `test_cli.py` | 28 | Command wiring, options, ad hoc `--url` isolation, and that `--only` does not shrink the published report. |
+| `test_cli.py` | 44 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, and that `--skip` leaves nodes out and says so. |
 | `test_crawl.py` | 34 | Link selection, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
@@ -779,6 +814,7 @@ number.
 |---|---|
 | `Executable doesn't exist … playwright install` | Chromium is not installed. Run `uv run playwright install chromium --with-deps`. Not needed for `assess`, `show`, `points` or `pytest`. |
 | The report has fewer nodes than you expected | You passed `--results DIR` together with `--only`, which narrows both deliberately. Without an explicit `--results`, `--only` narrows the fetch alone and the report keeps every node. Section 4. |
+| The report carries a **Skipped by request** banner, or has fewer rows than `nodes.yaml` | Expected after `--skip`: those nodes were left out on purpose, and the banner and `results.json` name them. Run without `--skip` for every node. Section 4. |
 | The report carries a **Mixed freshness** banner | Expected after `--only`: the nodes you did not select were reused from evidence on disk. Run a bare `uv run basic-check collect` then `assess` for a report with one capture date. Section 4. |
 | A node shows `HTTP 403` and everything moved to review | Bot protection, not an access policy. Check `final_url` in the evidence for a `__cf_chl_rt_tk` parameter. Wait, run less often, or verify that node by hand in a browser. |
 | Everything is review for one node | The capture probably did not render. Look at `evidence/screenshots/<id>.png` — that is exactly what the render gate is protecting you from. |
