@@ -2,7 +2,7 @@
 
 What the test suite covers, how the tool is configured, and what the published
 figures actually say. Every figure was measured on 24 September 2026 against the
-repository state this document is committed with: **264 test cases, all passing
+repository state this document is committed with: **278 test cases, all passing
 in CI**.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -12,7 +12,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 264 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 278 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -20,7 +20,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **264 cases** and gained two files: `tests/test_names.py` (64 cases, the approved-name matcher) and `tests/test_nodes.py` (13 cases, guarding the node configuration). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **278 cases** and gained two files: `tests/test_names.py` (64 cases, the approved-name matcher) and `tests/test_nodes.py` (13 cases, guarding the node configuration). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -57,20 +57,20 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**242 test functions, expanding to 264 executed cases** (six tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**252 test functions, expanding to 278 executed cases** (seven tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
-The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 264 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
+The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 278 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
 | `test_names.py` | 64 | The approved-name matcher: separator tolerance, scoping to a node, anchoring, the committed default list and its provenance |
-| `test_checks.py` | 62 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — plus cross-point invariants, and that a point 3 summary never contradicts its own evidence |
+| `test_checks.py` | 75 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
 | `test_report.py` | 35 | Matrix rendering, the dual-depth tables, Markdown escaping, table-breaking input |
-| `test_crawl.py` | 34 | Link selection, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
+| `test_crawl.py` | 35 | Link selection, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
 | `test_cli.py` | 44 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring |
 | `test_checklist.py` | 12 | Provenance of the checklist: source document hash, point-to-rule mapping, version/filename convention |
 | `test_nodes.py` | 13 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list |
-| **Total** | **264** | |
+| **Total** | **278** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -367,7 +367,7 @@ The test workflow runs four steps: `uv sync --locked`, `ruff check src tests`, `
 
 `--locked` matters more than it looks. It installs exactly what `uv.lock` pins and **fails** if the lockfile has drifted from `pyproject.toml`. Plain `uv sync` would silently re-resolve, so a dependency change could land with a green tick while CI tested a different set of versions than the one committed. The compliance workflow uses `--locked` for the same reason with sharper stakes: a silently re-resolved Playwright, selectolax or lingua can change what a page looks like to the tool, and the output of that workflow is a set of verdicts about named organisations.
 
-> **A habit worth keeping.** A green tick means "nothing objected", not "everything was verified". A suite that collects zero tests also passes. The test count in the CI log is the thing to read — it currently says "264 passed".
+> **A habit worth keeping.** A green tick means "nothing objected", not "everything was verified". A suite that collects zero tests also passes. The test count in the CI log is the thing to read — it currently says "278 passed".
 
 ### Running the compliance scan from the browser, with no Terminal at all
 
@@ -501,7 +501,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 264 cases, ~5.9s, no network, no browser
+uv run pytest -q              # 278 cases, ~5.9s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -586,7 +586,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 264 cases, ~5.9s, no network, no browser
+# 6 - run the suite: 278 cases, ~5.9s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -640,9 +640,27 @@ From `results/results.json`, run `live-2026-09-24-no-italy`, collected live on 2
 
 All six FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, EBRAINS), and two link only to the federation index (PaNOSC, GÉANT). Compared with the run below, EOSC DTO moved from `FAIL` to `PASS` on points 4 and 6. GÉANT was served this time, which settled points 1, 6 and 7 as `PASS` and point 4 as `FAIL`. CERN, Czechia and Slovakia appear for the first time. No other cell changed.
 
-The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations are recorded there as candidates for a later rule change, not fixed. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
+The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations were recorded there and have since been fixed in the checks; see "Point 6 and 5b/5c after the review" below. The committed `results/` still holds the run as assessed before the fix. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
 
 `test_names.py::test_the_official_names_match_the_nodes_that_show_them` is pinned to the committed evidence. It now expects five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two.
+
+### Point 6 and 5b/5c after the review
+
+The review of the 24 September run found four rule defects, all fixed in the checks. The fixes change the assessment only, so the committed evidence was re-assessed offline and no node was contacted again.
+
+- **Point 6 passed on link text alone.** Any link whose label contained "support" was a PASS. Now a bare "support" link is still followed but settles nothing. A PASS needs one of three things: a label or address that names a helpdesk, service desk, ticket system, support team or request; a helpdesk host (`hd.`, `support.`, `helpdesk.`) or mailbox (`support@`, `it@helpdesk.…`); or a followed page that names a helpdesk, service desk or ticket system, or gives such an address. Page prose about "support" no longer counts, because EBRAINS's EuroHPC proposal page says "Technical Support" and "Application Support team". Every followed page is now read, where before only the first was. BBMRI-ERIC's helpdesk mailboxes are on the second.
+- **5b/5c ignored words spelled with hyphens in the address.** GÉANT links its AUP with a sentence as the label, and the words appear only in `/geant-node-acceptable-use-policy/`. Link matching now also reads the address with its separators turned into spaces. The crawler and the checks share that matcher (`patterns.link_haystack`), so a future collection will fetch the page as well.
+- **The 5b/5c hint said "re-run with --depth 1" in every case.** Now it gives the actual reason the target was not fetched: the run did not follow links, the target is a PDF, a cap was reached, the target is on another site, or it was not selected when the evidence was collected. It suggests a re-run only when one would help.
+
+Re-assessing the committed evidence with the fixed checks gives 44 PASS, 6 FAIL and 70 MANUAL_REVIEW, against 45/6/69 as published. Exactly three cells change:
+
+| Node | Point | Published | After the fix | Review determination |
+|---|---|---|---|---|
+| EOSC Node Czechia | 6 | PASS | MANUAL_REVIEW | not met |
+| EBRAINS | 6 | PASS | MANUAL_REVIEW | review |
+| GÉANT | 5b | MANUAL_REVIEW | PASS (pointer) | met as a pointer |
+
+BBMRI-ERIC's point 6 stays PASS, now on the helpdesk mailboxes its contact page lists (`it@helpdesk.bbmri-eric.eu`, `elsi-helpdesk@…`, `rd@helpdesk.…`) rather than on the "Services & Support" label. That differs from the review's "review" determination, which considered only `contact@bbmri-eric.eu`.
 
 ### Previous run: 21 September 2026
 

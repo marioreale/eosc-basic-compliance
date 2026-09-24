@@ -21,15 +21,19 @@ import re
 from dataclasses import dataclass, field
 from urllib.parse import urlparse
 
-from .fetch import Image, PageEvidence
+from .fetch import BINARY_SUFFIXES, Image, PageEvidence, _related_host
 from .names import ApprovedNames
 from .patterns import (
     AAI_HINTS,
     AUP_PATTERNS,
     CONTACT_PATTERNS,
-    HELPDESK_SPECIFIC,
+    HELPDESK_ON_PAGE,
+    HELPDESK_STRONG,
     LOGIN_PATTERNS,
     UAP_PATTERNS,
+    is_helpdesk_address,
+    is_helpdesk_host,
+    link_haystack,
 )
 
 PASS = "PASS"
@@ -67,7 +71,7 @@ def _match(text: str, patterns: list[str]) -> list[str]:
 def _link_hits(ev: PageEvidence, patterns: list[str]) -> list:
     out = []
     for link in ev.links:
-        haystack = f"{link.text} {link.href}"
+        haystack = link_haystack(link.text, link.href)
         if any(re.search(p, haystack) for p in patterns):
             out.append(link)
     return out
@@ -743,6 +747,39 @@ def _verify_child(ev: PageEvidence, point: str, patterns: list[str]):
     return None
 
 
+def _why_not_fetched(ev: PageEvidence, links: list, what: str) -> tuple[str, str]:
+    """Say why a matching link has no fetched target, and what to do about it.
+
+    The reviewer action used to say "re-run with --depth 1" in every case,
+    including runs that were already at depth 1 and links to a PDF, which no
+    depth will fetch. Advice that cannot work wastes the reviewer's time and
+    tempts a re-run that puts load on the node for nothing.
+    """
+    confirm = f"Open the link and confirm the target really is {what}, in English."
+    if ev.crawl_depth < 1:
+        return ("this run did not follow links",
+                confirm + " Re-run with --depth 1 to have the tool check it.")
+    page_host = urlparse(ev.final_url or ev.requested_url).netloc.lower()
+    for link in links:
+        parsed = urlparse(link.href)
+        if parsed.path.lower().endswith(BINARY_SUFFIXES):
+            kind = parsed.path.rsplit(".", 1)[-1].upper()
+            return (f"it is a {kind} document, which the tool does not download or read",
+                    f"Open the {kind} and confirm it is {what}, in English. "
+                    "No --depth setting will fetch it.")
+    skipped = " ".join(ev.children_skipped)
+    if any(link.href in skipped for link in links):
+        return ("a per-node or per-point cap was reached before it",
+                confirm + " Raising --max-children would let the tool fetch it.")
+    for link in links:
+        host = urlparse(link.href).netloc.lower()
+        if host and host != page_host and not _related_host(host, page_host):
+            return ("it is on another site, which the tool does not follow",
+                    confirm + " No --depth setting will fetch it.")
+    return ("it was not selected when this evidence was collected",
+            confirm + " Collecting the evidence again would fetch it.")
+
+
 def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str], what: str) -> Result:
     if ev.error:
         return Result(point, title, ERROR, f"Page not fetched: {ev.error}")
@@ -758,14 +795,15 @@ def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str],
         # a 404 satisfies the letter of "there is a link" while failing the actual
         # requirement, which is that the policy be *accessible*.
         if child is None:
+            why, action = _why_not_fetched(ev, links, what)
             return Result(
                 point,
                 title,
                 PASS,
                 f"The landing page links to what appears to be {what}. "
-                "The link target was not fetched, so this is a pointer, not a verified document.",
+                f"The link target was not fetched ({why}), so this is a pointer, not a verified document.",
                 [_fmt(link) for link in links[:4]],
-                reviewer_action=f"Open the link and confirm the target really is {what}, in English. Re-run with --depth 1 to have the tool check it.",
+                reviewer_action=action,
             )
 
         if child.http_status in DEAD_STATUSES:
@@ -857,68 +895,119 @@ def check_5c(ev: PageEvidence) -> Result:
 # --- point 6 -----------------------------------------------------------------
 
 
+def _strong_link(link) -> bool:
+    """A landing-page link that by itself identifies a helpdesk."""
+    if is_helpdesk_address(link.href) or is_helpdesk_host(link.href):
+        return True
+    return bool(_match(link_haystack(link.text, link.href), HELPDESK_STRONG))
+
+
 def check_6(ev: PageEvidence) -> Result:
-    """Means of contacting the node helpdesk."""
+    """Means of contacting the node helpdesk.
+
+    A PASS needs something that identifies a helpdesk, not a link that merely
+    says "support". Any of these is enough:
+
+    * a landing-page link labelled or addressed as a helpdesk, service desk,
+      ticket system, support team or request (HELPDESK_STRONG), or to a
+      helpdesk host (hd., support., helpdesk.);
+    * a mailto: whose mailbox or mail host names a helpdesk (support@...,
+      it@helpdesk...);
+    * a followed contact or support page that names a helpdesk, service desk
+      or ticket system, or gives a helpdesk address (HELPDESK_ON_PAGE; page
+      prose about "support" does not count).
+
+    A bare "support" link is followed, but settles nothing by its label.
+    """
+    title = "Means of contacting the node helpdesk"
     if ev.error:
-        return Result("6", "Means of contacting the node helpdesk", ERROR, f"Page not fetched: {ev.error}")
+        return Result("6", title, ERROR, f"Page not fetched: {ev.error}")
 
     mailtos = [link for link in ev.links if link.href.lower().startswith("mailto:")]
     contact_links = _link_hits(ev, CONTACT_PATTERNS)
-    specific = [
-        link
-        for link in contact_links + mailtos
-        if any(re.search(p, f"{link.text} {link.href}") for p in HELPDESK_SPECIFIC)
-    ]
+    strong = [link for link in contact_links + mailtos if _strong_link(link)]
 
-    if specific:
+    if strong:
         return Result(
             "6",
-            "Means of contacting the node helpdesk",
+            title,
             PASS,
-            "A support or helpdesk contact route is present.",
-            [_fmt(link) for link in specific[:4]],
+            "The landing page links to a route identified as a helpdesk or user support.",
+            [_fmt(link) for link in strong[:4]],
+            reviewer_action="Confirm the route reaches the node's user support. A helpdesk "
+            "behind a sign-in form is still a means of contact, but note it.",
         )
 
     if contact_links or mailtos:
-        child = _verify_child(ev, "6", CONTACT_PATTERNS)
-
-        # A "Contact" link is ambiguous on its own. The page behind it usually is
-        # not: it either names a helpdesk and offers a form or address, or it does
-        # not. One request settles what keyword matching cannot.
-        if child is not None and child.ok:
+        followed = ev.children_for("6")
+        live = [c for c in followed if c.ok]
+        # A "Contact" or "Support" link is ambiguous on its own. The page behind
+        # it usually is not: it either names a helpdesk or gives a helpdesk
+        # address, or it does not. Every followed page is read, not just the
+        # first: BBMRI-ERIC's helpdesk addresses are on the second.
+        for child in live:
             text = child.main_text or child.full_text
-            desk = _match(text, HELPDESK_SPECIFIC)
-            child_mailtos = [ln for ln in child.links if ln.href.lower().startswith("mailto:")]
-            if desk:
+            desk = _match(text, HELPDESK_ON_PAGE)
+            desk_mail = [ln.href for ln in child.links if is_helpdesk_address(ln.href)]
+            if desk or desk_mail:
                 return Result(
                     "6",
-                    "Means of contacting the node helpdesk",
+                    title,
                     PASS,
-                    "The contact page reached from the landing page identifies a support or "
-                    "helpdesk route.",
+                    "A page reached from the landing page identifies a helpdesk or user "
+                    "support route.",
                     [_fmt(link) for link in (contact_links + mailtos)[:2]]
-                    + [f"followed: {child.url} -> HTTP {child.http_status}",
-                       f"helpdesk wording on that page: {', '.join(sorted(set(desk))[:4])}"]
-                    + [f"address given: {ln.href}" for ln in child_mailtos[:2]],
+                    + [f"followed: {child.url} -> HTTP {child.http_status}"]
+                    + ([f"helpdesk wording on that page: {', '.join(sorted(set(desk))[:4])}"]
+                       if desk else [])
+                    + [f"helpdesk address given: {h}" for h in desk_mail[:3]],
                     reviewer_action="Confirm the route reaches the node's user support.",
                 )
-            if child_mailtos or _match(text, [r"(?i)contact\s*form", r"(?i)<?\bsubmit\b"]):
-                return Result(
-                    "6",
-                    "Means of contacting the node helpdesk",
-                    MANUAL_REVIEW,
-                    "A contact page exists and offers a way to get in touch, but nothing on it "
-                    "identifies a helpdesk specifically. The checklist asks for the node "
-                    "helpdesk, and general enquiries may not satisfy that.",
-                    [f"followed: {child.url} -> HTTP {child.http_status}"]
-                    + [f"address given: {ln.href}" for ln in child_mailtos[:3]],
-                    reviewer_action="Confirm this reaches the node's user support, not a general mailbox.",
-                )
 
-        if child is not None and child.http_status in DEAD_STATUSES:
+        weak = [link for link in contact_links if re.search(r"(?i)\bsupport\b", link.text)]
+        skipped6 = [s for s in ev.children_skipped if "point 6" in s]
+        evidence = [_fmt(link) for link in (contact_links + mailtos)[:3]]
+        evidence += [f"followed: {c.url} -> HTTP {c.http_status}" for c in followed[:3]]
+        for child in live:
+            evidence += [f"address given: {ln.href}" for ln in child.links
+                         if ln.href.lower().startswith("mailto:")][:2]
+        evidence += [f"not followed: {s}" for s in skipped6[:2]]
+        weak_note = (
+            ' A link labelled "support" was found, but that word alone does not identify '
+            "a helpdesk: it also labels funding programmes and service catalogues."
+            if weak else ""
+        )
+
+        if live:
+            offers = any(
+                any(ln.href.lower().startswith("mailto:") for ln in c.links)
+                or _match(c.main_text or c.full_text, [r"(?i)contact\s*form", r"(?i)<?\bsubmit\b"])
+                for c in live
+            )
+            summary = (
+                "A contact page exists and offers a way to get in touch, but nothing on it "
+                "identifies a helpdesk specifically."
+                if offers else
+                "The contact or support pages reached from the landing page do not identify "
+                "a helpdesk."
+            )
             return Result(
                 "6",
-                "Means of contacting the node helpdesk",
+                title,
+                MANUAL_REVIEW,
+                summary + weak_note + " The checklist asks for the node helpdesk, and general "
+                "enquiries may not satisfy that.",
+                evidence,
+                reviewer_action="Confirm whether any route reaches the node's user support, not a "
+                "general mailbox or an unrelated service.",
+            )
+
+        dead = [c for c in followed if c.http_status in DEAD_STATUSES]
+        if followed and len(dead) == len(followed):
+            child = dead[0]
+            return Result(
+                "6",
+                title,
                 FAIL,
                 f"The landing page's contact link is broken (HTTP {child.http_status}), so no "
                 "working means of contact is offered by that route.",
@@ -929,12 +1018,12 @@ def check_6(ev: PageEvidence) -> Result:
 
         return Result(
             "6",
-            "Means of contacting the node helpdesk",
+            title,
             MANUAL_REVIEW,
-            "A contact route exists, but nothing identifies it as a helpdesk. The checklist asks "
-            "specifically for the node helpdesk, and a general enquiries or press address does "
-            "not obviously satisfy that.",
-            [_fmt(link) for link in (contact_links + mailtos)[:4]],
+            "A contact route exists, but nothing identifies it as a helpdesk." + weak_note
+            + " The checklist asks specifically for the node helpdesk, and a general enquiries "
+            "or press address does not obviously satisfy that.",
+            evidence,
             reviewer_action="Confirm this contact route reaches the node's user support, not a general mailbox.",
         )
 
@@ -942,7 +1031,7 @@ def check_6(ev: PageEvidence) -> Result:
     if warning:
         return Result(
             "6",
-            "Means of contacting the node helpdesk",
+            title,
             MANUAL_REVIEW,
             "No contact route was found, but the page yielded too little to conclude "
             "absence: " + warning,
@@ -951,7 +1040,7 @@ def check_6(ev: PageEvidence) -> Result:
         )
     return Result(
         "6",
-        "Means of contacting the node helpdesk",
+        title,
         FAIL,
         "No contact route of any kind was found among the landing page's links: "
         "no mailto:, and no link labelled or addressed as contact, support or helpdesk.",

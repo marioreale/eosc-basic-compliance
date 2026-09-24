@@ -23,6 +23,15 @@ it is a bias.
 
 from __future__ import annotations
 
+import re
+from urllib.parse import unquote, urlparse
+
+# Candidate wording: worth following a link for, NOT enough to settle point 6.
+# "support" alone is the problem word. On 24 September 2026 it passed three
+# pages that are not helpdesks: "National Support" (a funding programme),
+# "EBRAINS Support for EuroHPC Applications" (a proposal service) and
+# "Services & Support" (a service overview). It stays here so those links are
+# still followed; HELPDESK_STRONG below decides whether a route is a helpdesk.
 HELPDESK_SPECIFIC = [
     r"(?i)\bhelpdesk\b",
     r"(?i)\bhelp\s?desk\b",
@@ -30,6 +39,81 @@ HELPDESK_SPECIFIC = [
     r"(?i)\bsupport\b",
     r"(?i)\bticket",
 ]
+
+# Wording that does identify a helpdesk, in a link label, a link address or the
+# text of a followed page. "support" counts only when it is qualified: a support
+# team, request, portal or address, or support that is user, technical or
+# contactable. Addresses are matched in their "[at]" / "(at)" disguises too,
+# since that is how EGI publishes support[at]egi.eu.
+HELPDESK_STRONG = [
+    r"(?i)\bhelp\s?desk",
+    r"(?i)\bservice\s?desk\b",
+    r"(?i)\bticket(s|ing)?\b",
+    r"(?i)\bsupport\s+(team|request|requests|portal|centre|center|desk|line|ticket|tickets)\b",
+    r"(?i)\b(user|technical|customer|it)\s+support\b",
+    r"(?i)\b(contact|get|ask|request)\s+(our\s+|the\s+)?support\b",
+    r"(?i)\bsupport\s*(@|\[at\]|\(at\))\s*[a-z0-9-]+",
+    r"(?i)\bservice-?now\b",
+]
+
+# The subset that settles point 6 from the body of a followed page. Qualified
+# "support" phrases are left out on purpose: in a landing-page link label they
+# name a route, but in page prose they describe services. EBRAINS's EuroHPC
+# proposal page says "Technical Support" and "Application Support team" and is
+# still not the node helpdesk. A helpdesk, service desk or ticket system, or a
+# support mailbox, is unambiguous wherever it appears.
+HELPDESK_ON_PAGE = [
+    r"(?i)\bhelp\s?desk",
+    r"(?i)\bservice\s?desk\b",
+    r"(?i)\bticket(s|ing)?\b",
+    r"(?i)\bsupport\s*(@|\[at\]|\(at\))\s*[a-z0-9-]+",
+    r"(?i)\bservice-?now\b",
+]
+
+# First host labels that name a helpdesk or ticketing system: hd.eosc.sk,
+# support.d4science.org, helpdesk.bbmri-eric.eu.
+HELPDESK_HOST_LABELS = ("helpdesk", "hd", "support", "servicedesk", "ticket", "tickets")
+
+# Mailbox local parts that name a helpdesk, as against info@ or contact@.
+HELPDESK_MAILBOXES = re.compile(
+    r"(?i)^(support|helpdesk|help|servicedesk|service-desk|user-support|[a-z0-9]+-helpdesk|[a-z0-9]+-support)$"
+)
+
+
+def link_haystack(text: str, href: str) -> str:
+    """What a link is matched against: its label, its raw address, and the
+    address with its separators turned into spaces.
+
+    The last part is the fix. Patterns are written for words ("acceptable\\s+use
+    polic"), and a URL spells them with hyphens: GEANT's AUP is linked with prose
+    as its label and the words only in the address,
+    /geant-node-acceptable-use-policy/, so on 24 September 2026 neither the
+    crawler nor the check saw it. The raw address is kept as well, so every link
+    that matched before still matches.
+    """
+    parsed = urlparse(href)
+    words = re.sub(r"[-_/.+~=&?#:%]+", " ", unquote(f"{parsed.netloc} {parsed.path}"))
+    return f"{text} {href} {words}"
+
+
+def is_helpdesk_address(href: str) -> bool:
+    """A mailto: whose mailbox or mail host names a helpdesk."""
+    if not href.lower().startswith("mailto:"):
+        return False
+    addr = unquote(href[7:]).split("?")[0].strip()
+    local, _, domain = addr.partition("@")
+    if HELPDESK_MAILBOXES.match(local):
+        return True
+    return domain.lower().split(".")[0] in HELPDESK_HOST_LABELS
+
+
+def is_helpdesk_host(href: str) -> bool:
+    """An http(s) link to a host whose first label names a helpdesk."""
+    parsed = urlparse(href)
+    if parsed.scheme not in ("http", "https"):
+        return False
+    return parsed.netloc.lower().split(".")[0] in HELPDESK_HOST_LABELS
+
 
 CONTACT_PATTERNS = [
     *HELPDESK_SPECIFIC,

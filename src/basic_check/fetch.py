@@ -33,7 +33,7 @@ from urllib.parse import urljoin, urlparse
 import httpx
 from selectolax.parser import HTMLParser
 
-from .patterns import CRAWL_PURPOSES
+from .patterns import CRAWL_PURPOSES, link_haystack
 
 UA = (
     "eosc-basic-compliance/0.1 (EOSC Node Landing Page checklist v3.0 verification; "
@@ -381,7 +381,7 @@ def select_grandchildren(
             host = parsed.netloc.lower()
             if not (host == base_host or _related_host(host, base_host)):
                 continue
-            haystack = f"{link.text} {parsed.path}".lower()
+            haystack = link_haystack(link.text, parsed.path)
             if not _match_any(haystack, patterns):
                 continue
             key = href.split("#")[0].rstrip("/")
@@ -446,7 +446,7 @@ def select_children(
             same_site = host == page_host or _related_host(host, page_host)
             if not same_site:
                 continue
-            haystack = f"{link.text} {parsed.path}".lower()
+            haystack = link_haystack(link.text, parsed.path)
             if not _match_any(haystack, patterns):
                 continue
             key = href.split("#")[0].rstrip("/")

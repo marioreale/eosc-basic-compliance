@@ -482,3 +482,11 @@ def test_stripping_depth_2_is_a_no_op_on_a_depth_1_capture():
     ev.crawl_depth = 1
     assert without_depth_2(ev).children == ev.children
     assert without_depth_2(ev).crawl_depth == 1
+
+
+def test_policy_words_only_in_the_address_are_still_followed():
+    """The crawler and the check share one matcher, so GÉANT's AUP is fetched too."""
+    link = Link("https://node.example/projects/node-acceptable-use-policy/",
+                "This policy defines the rules that govern your access.")
+    selected, _ = select_children(page([link]))
+    assert [c.selected_for for c in selected] == [["5b"]]

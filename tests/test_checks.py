@@ -10,7 +10,7 @@ from __future__ import annotations
 import pytest
 
 from basic_check import checks
-from basic_check.fetch import Control, Image, Link, PageEvidence
+from basic_check.fetch import ChildPage, Control, Image, Link, PageEvidence
 from basic_check.names import parse_approved_names
 
 
@@ -613,3 +613,127 @@ def test_point3_reviewer_action_does_not_ask_for_a_check_already_done():
     r = checks.check_3(_logo_ev(full_text="Welcome to the EGI Node"), approved_names=names)
     assert "against the Tripartite-approved list" not in r.reviewer_action
     assert "logo" in r.reviewer_action.lower()
+
+
+# --- point 6: "support" in a label is not a helpdesk --------------------------
+# Each case is a real landing page from the live run of 24 September 2026,
+# reduced to the links and text that decided it.
+
+
+def _followed(url: str, text: str, links: list[Link] | None = None) -> ChildPage:
+    return ChildPage(url=url, final_url=url, selected_for=["6"], http_status=200,
+                     main_text=text, full_text=text, links=links or [])
+
+
+def test_point6_a_funding_page_labelled_support_is_not_a_helpdesk():
+    """Czechia: "National Support" is a funding programme; the contact page gives info@."""
+    page = realistic(
+        [Link("https://www.eosc.cz/en/projects/national-support", "National Support"),
+         Link("https://www.eosc.cz/en/about-eosc-cz/contact", "Contact")],
+        children=[
+            _followed("https://www.eosc.cz/en/about-eosc-cz/contact",
+                      "Correspondence address. Charles University Project Support Office.",
+                      [Link("mailto:info@eosc.cz", "info@eosc.cz")]),
+            _followed("https://www.eosc.cz/en/projects/national-support",
+                      "Support for the national EOSC initiative. The support amounts to ... " * 20),
+        ],
+    )
+    r = checks.check_6(page)
+    assert r.verdict == checks.MANUAL_REVIEW
+    assert "support" in r.message and "does not identify" in r.message
+
+
+def test_point6_a_service_support_team_in_page_prose_is_not_the_node_helpdesk():
+    """EBRAINS: a EuroHPC proposal service says "Technical Support" and "support team"."""
+    page = realistic(
+        [Link("https://ebrains.eu/data-tools-services/ebrains-support-for-eurohpc-applications",
+              "EBRAINS Support for EuroHPC Applications")],
+        children=[_followed(
+            "https://ebrains.eu/data-tools-services/ebrains-support-for-eurohpc-applications",
+            "Technical Support and Benchmarking. To request support, contact the EBRAINS for "
+            "EuroHPC Application Support team by email.",
+            [Link("mailto:base-infra-resources@ebrains.eu", "base-infra-resources@ebrains.eu")],
+        )],
+    )
+    assert checks.check_6(page).verdict == checks.MANUAL_REVIEW
+
+
+def test_point6_a_services_overview_labelled_support_passes_only_on_its_helpdesk_addresses():
+    """BBMRI-ERIC: "Services & Support" settles nothing; the contact page's helpdesk mailboxes do."""
+    label_only = realistic([Link("https://www.bbmri-eric.eu/services-support/", "Services & Support")])
+    assert checks.check_6(label_only).verdict == checks.MANUAL_REVIEW
+
+    with_contact = realistic(
+        [Link("https://www.bbmri-eric.eu/services-support/", "Services & Support"),
+         Link("https://www.bbmri-eric.eu/contact/", "Contact")],
+        children=[
+            _followed("https://www.bbmri-eric.eu/services-support/", "Our services. Support Join. " * 20),
+            _followed("https://www.bbmri-eric.eu/contact/", "E-Mail: contact@bbmri-eric.eu",
+                      [Link("mailto:contact@bbmri-eric.eu", "contact"),
+                       Link("mailto:it@helpdesk.bbmri-eric.eu", "it")]),
+        ],
+    )
+    r = checks.check_6(with_contact)
+    assert r.verdict == checks.PASS
+    assert any("it@helpdesk.bbmri-eric.eu" in e for e in r.evidence)
+
+
+@pytest.mark.parametrize("link", [
+    Link("https://hd.eosc.sk", "Open helpdesk"),                       # Slovakia
+    Link("https://research.csc.fi/support", "Service Desk"),            # Finland
+    Link("https://cern.service-now.com/service-portal", "Contact Support"),  # CERN
+    Link("https://support.d4science.org/projects/x/issues/new", "Open a request"),  # host
+    Link("mailto:support@node.example", "Write to us"),                 # mailbox
+])
+def test_point6_still_passes_routes_that_name_a_helpdesk(link):
+    assert checks.check_6(ev(links=[link])).verdict == checks.PASS
+
+
+def test_point6_an_obfuscated_support_address_on_the_contact_page_passes():
+    """EGI publishes support[at]egi.eu as text on its contact page."""
+    page = realistic(
+        [Link("https://www.egi.eu/contact-us/", "Contact Us")],
+        children=[_followed("https://www.egi.eu/contact-us/", "Support support[at]egi.eu")],
+    )
+    assert checks.check_6(page).verdict == checks.PASS
+
+
+def test_point6_a_press_page_is_not_a_helpdesk():
+    page = realistic(
+        [Link("https://node.example/media-contact", "Media Contact")],
+        children=[_followed("https://node.example/media-contact", "Press Relations press(at)node(dot)eu")],
+    )
+    assert checks.check_6(page).verdict == checks.MANUAL_REVIEW
+
+
+# --- point 5b/5c: the policy words may be only in the address ----------------
+
+
+def test_policy_words_in_a_hyphenated_address_are_found():
+    """GÉANT links its AUP with a sentence as the label; the words are only in the URL."""
+    link = Link("https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+                "This policy defines the rules that govern your access to the GÉANT Node.")
+    r = checks.check_5b(realistic([link], crawl_depth=1))
+    assert r.verdict == checks.PASS
+    assert "geant-node-acceptable-use-policy" in r.evidence[0]
+
+
+def test_policy_hint_does_not_suggest_a_depth_that_is_already_set():
+    """At depth 1, "re-run with --depth 1" is advice that cannot help."""
+    link = Link("https://node.example/policies/aup", "Acceptable Use Policy")
+    r = checks.check_5b(realistic([link], crawl_depth=1))
+    assert r.verdict == checks.PASS
+    assert "--depth 1" not in r.reviewer_action
+
+    r0 = checks.check_5b(realistic([link], crawl_depth=0))
+    assert "--depth 1" in r0.reviewer_action
+
+
+def test_policy_hint_for_a_pdf_says_no_depth_will_fetch_it():
+    """Slovakia's AUP and UAP are one PDF, which the tool never downloads."""
+    link = Link("https://eosc.sk/docs/eosc_sk_tou.pdf", "Terms of Use (incl. AUP and UAP)")
+    page = realistic([link], crawl_depth=1)
+    for r in (checks.check_5b(page), checks.check_5c(page)):
+        assert r.verdict == checks.PASS
+        assert "PDF" in r.message and "PDF" in r.reviewer_action
+        assert "--depth 1" not in r.reviewer_action

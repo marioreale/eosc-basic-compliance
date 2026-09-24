@@ -17,7 +17,7 @@ follow one further hop under a fixed budget.
 👉 **[Installation, configuration and run guide](docs/GUIDE.md)** — start here if
 you want to install and run it yourself.
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 264
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 278
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 
@@ -317,7 +317,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 264 tests, a few seconds, no network, no browser
+uv run pytest -q          # 278 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

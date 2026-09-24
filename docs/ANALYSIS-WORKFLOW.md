@@ -461,13 +461,16 @@ vocabularies. Identical procedure, so it is described once.
 
 **Steps:**
 
-1. `_link_hits` — links whose `"{text} {href}"` matches the policy vocabulary.
+1. `_link_hits` — links whose label or address matches the policy vocabulary.
+   The address is read twice, raw and with its separators turned into spaces
+   (`patterns.link_haystack`), so `/geant-node-acceptable-use-policy/` matches
+   `acceptable\s+use\s+polic`. The crawler selects links with the same function.
 2. `_match` on `full_text` — mentions of the vocabulary in the prose.
 3. If links were found, look for the child page fetched for this point.
 
 | # | Condition | Verdict |
 |---|---|---|
-| 1 | Link found, **no child fetched** (depth 0) | `PASS`, stated as "a pointer, not a verified document" |
+| 1 | Link found, **no child fetched** | `PASS`, stated as "a pointer, not a verified document", with the reason: depth 0, a PDF or other document, a cap reached, another site, or not selected at collection |
 | 2 | Link found, child returned 404/410 | `FAIL` — the policy is not accessible |
 | 3 | Link found, child not `ok` for another reason | `MANUAL_REVIEW` — may be a bot restriction rather than a real problem |
 | 4 | Child fetched, but `main_text` < 400 chars **or** no policy wording | `MANUAL_REVIEW` — reads like a navigation stub, not a policy |
@@ -478,7 +481,9 @@ vocabularies. Identical procedure, so it is described once.
 Branch 1 is weaker than it looks, and the message says so: a link labelled
 "Acceptable Use Policy" pointing at a 404 satisfies "there is a link" while
 failing the actual requirement, which is that the policy be *accessible*. Running
-at `--depth 1` converts branch 1 into one of branches 2–5.
+at `--depth 1` converts branch 1 into one of branches 2–5 for ordinary pages on
+the node's own site. It cannot do so for a PDF or a page on another site, and
+the reviewer action says so rather than suggesting a re-run that would not help.
 
 Branch 4's "policy wording" test is `POLICY_BODY_PATTERNS`: `must not`,
 `you may/must/shall/agree`, `permitted`, `prohibit`, `terms`, `policy`,
@@ -495,22 +500,34 @@ would be the tool enforcing a stricter rule than the one it is checking.
 
 ### Point 6 — means of contacting the node helpdesk
 
-`check_6`. Two tiers: helpdesk-specific vocabulary, then general contact
-vocabulary.
+`check_6`. Two tiers: wording that identifies a helpdesk, then general contact
+vocabulary. The word "support" on its own is only a reason to follow a link. On
+24 September 2026 it labelled a funding programme (Czechia), a EuroHPC proposal
+service (EBRAINS) and a service overview (BBMRI-ERIC), and all three had passed.
 
 **Steps:**
 
 1. Collect `mailto:` links.
 2. `_link_hits` with the full contact vocabulary.
-3. From those two sets, keep the ones that also match the **helpdesk-specific**
-   subset (`helpdesk`, `help desk`, `service desk`, `support`, `ticket`).
+3. From those two sets, keep the ones that **identify a helpdesk**. That means
+   the label or address matches `HELPDESK_STRONG` (helpdesk, service desk,
+   ticket, a support team, request or portal, user/technical support,
+   contact/ask/get support, a `support@` or `support[at]` address, ServiceNow).
+   A host whose first label is `hd`, `support` or `helpdesk` also counts, and so
+   does a mailbox such as `support@`, `helpdesk@`, `x-helpdesk@` or
+   `x@helpdesk.…`.
+4. Otherwise read **every** page followed for point 6, not only the first. A
+   page counts if it matches `HELPDESK_ON_PAGE` (helpdesk, service desk, ticket,
+   a support address, ServiceNow) or gives a helpdesk mailbox. Qualified
+   "support" phrases are strong in a link label, but not in page prose: they
+   describe services there.
 
 | # | Condition | Verdict |
 |---|---|---|
-| 1 | Helpdesk-specific link or mailto found | `PASS` |
-| 2 | Generic contact link, child fetched and `ok`, helpdesk wording on that page | `PASS` — with the mailto addresses found there quoted |
-| 3 | Generic contact link, child `ok`, no helpdesk wording, but a mailto or a contact form is present | `MANUAL_REVIEW` — a route exists, but general enquiries may not be the helpdesk |
-| 4 | Contact link whose target returned 404/410 | `FAIL` — the route offered does not work |
+| 1 | Landing-page link or mailto that identifies a helpdesk | `PASS` |
+| 2 | Contact or bare "support" link, a followed page names a helpdesk or gives a helpdesk mailbox | `PASS` — quoting the wording and the addresses |
+| 3 | Contact or bare "support" link, followed pages `ok`, none identifies a helpdesk | `MANUAL_REVIEW` — says when a "support" label was the only lead, and lists addresses and links not followed |
+| 4 | Every followed page returned 404/410 | `FAIL` — the route offered does not work |
 | 5 | Generic contact link, nothing further established | `MANUAL_REVIEW` |
 | 6 | No contact route, `link_collection_warning` fires | `MANUAL_REVIEW` |
 | 7 | No contact route, DOM complete | `FAIL` — no `mailto:`, no link labelled or addressed as contact, support or helpdesk |
