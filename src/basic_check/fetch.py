@@ -34,6 +34,7 @@ import httpx
 from selectolax.parser import HTMLParser
 
 from .patterns import CRAWL_PURPOSES, link_haystack
+from .privacy import mask_data
 
 UA = (
     "eosc-basic-compliance/0.1 (EOSC Node Landing Page checklist v3.0 verification; "
@@ -671,9 +672,7 @@ async def collect_all(
             for i, node in enumerate(nodes):
                 ev = await _fetch_one(browser, node, shots, depth, max_children, budget)
                 results.append(ev)
-                (out_dir / f"{node['id']}.json").write_text(
-                    json.dumps(ev.to_json(), indent=2, ensure_ascii=False)
-                )
+                write_evidence(out_dir, ev)
                 status = ev.error or f"HTTP {ev.http_status}"
                 extra = ""
                 if depth >= 1:
@@ -690,6 +689,13 @@ async def collect_all(
     if budget is not None:
         print(f"\n  {budget.note}")
     return results
+
+
+def write_evidence(out_dir: Path, ev: PageEvidence) -> Path:
+    """Write one node's evidence file, with personal data masked (see privacy.py)."""
+    path = out_dir / f"{ev.node_id}.json"
+    path.write_text(json.dumps(mask_data(ev.to_json()), indent=2, ensure_ascii=False))
+    return path
 
 
 def load_evidence(out_dir: Path, node_id: str) -> PageEvidence:

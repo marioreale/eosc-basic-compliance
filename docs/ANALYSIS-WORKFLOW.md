@@ -148,6 +148,14 @@ Likewise, a logo delivered as a CSS `background-image`, as an SVG sprite
 reference, or from a file whose name does not contain `eosc`, is invisible to the
 tool. Its absence from the evidence is not evidence of absence.
 
+Every string in the evidence is saved with personal data masked (`privacy.py`,
+through `write_evidence` in `fetch.py`). Personal addresses become
+`XXXXX@domain`, phone numbers become `+CC XXXXXX`, and a name next to a masked
+address becomes `XXXXX`. Role mailboxes are kept. The checks therefore run on
+masked text, which costs nothing: point 6 needs a helpdesk, and no check uses a
+person's address or number. Re-assessing the 24 September evidence after masking
+gave the same verdict in all 120 cells.
+
 ---
 
 ## 4. Stage 2 — the assessment machinery

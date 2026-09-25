@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-278 tests still pass, while `collect` fails with Playwright's
+326 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 278 passed
+uv run pytest -q                  # expect: 326 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -695,7 +695,7 @@ Every verdict is traceable to evidence on disk:
 
 ```bash
 uv run basic-check show geant                      # verdicts and evidence in the terminal
-python3 -m json.tool results/evidence/geant.json | less   # the raw capture
+python3 -m json.tool results/evidence/geant.json | less   # the capture, personal data masked
 ```
 
 `results.json` carries the same evidence strings the report displays, so you can
@@ -708,12 +708,51 @@ it yields — is tabulated in section 5 of the
 cases where the tool is known to be wrong, which is the first place to look when
 a verdict surprises you.
 
+### Personal data is masked
+
+Contact pages sometimes name individuals, such as a media officer with a direct
+line. The checklist needs none of that: point 6 asks for a way to reach the node
+helpdesk, which is a role. So `src/basic_check/privacy.py` masks personal data at
+the two places anything is written to disk. When evidence is collected, the
+evidence file is masked before it is saved. When the reports are written, the
+run is masked again before any of the four formats is rendered, so a report
+rebuilt from evidence captured before masking existed is masked too.
+
+| Found on the page | Written as |
+|---|---|
+| `jane.doe@example.org`, `jane.doe [at] example.org` | `XXXXX@example.org`, `XXXXX [at] example.org` |
+| `support@egi.eu`, `it@helpdesk.bbmri-eric.eu`, `geant@geant.org` | unchanged: role and organisation mailboxes |
+| `+31 20 123 4567`, `tel:0043316349917` | `+31 XXXXXX`, `tel:+43 XXXXXX` |
+| `Tel.: 06 1234 5678` (no prefix, but labelled) | `Tel.: XXXXXX` |
+| `Mgr. Jana Nováková, novakova@…` | `Mgr. XXXXX XXXXX, XXXXX@…` |
+
+An address is kept only when it is recognisably a role, such as `support`, `info`,
+`helpdesk`, `csirt` or any mailbox under a `helpdesk.` host. Every other address
+is masked. A name is masked only near a masked address, and never inside a URL or
+as an all-capitals acronym. Office switchboards are masked like any other number,
+because nothing in a number says who answers it. Masking changes no verdict,
+because every check works from the parts that are kept. Screenshots are not
+masked. Masking applies to what is written from now on, so to mask files already
+committed, re-write them with the same function:
+
+```bash
+uv run python -c "
+import json, pathlib
+from basic_check.privacy import mask_data
+for p in pathlib.Path('results/evidence').glob('*.json'):
+    p.write_text(json.dumps(mask_data(json.loads(p.read_text())), indent=2, ensure_ascii=False))
+"
+uv run basic-check assess --run <run id>    # rebuilds the reports from the masked evidence
+```
+
+git history still holds the earlier versions of those files.
+
 ---
 
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 278 tests, offline, a few seconds
+uv run pytest -q                    # 326 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -728,6 +767,7 @@ uv run ruff check src tests         # lint
 | `test_crawl.py` | 35 | Link selection, including policy words found only in a hyphenated address, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
+| `test_privacy.py` | 48 | Personal-data masking: personal addresses and phone numbers masked, role mailboxes kept, the name beside an address masked but not a title or an acronym, and that both the evidence files and every report format are written masked. |
 | `test_report.py` | 35 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
 
 The suite makes no network requests and needs no browser, which is why CI runs

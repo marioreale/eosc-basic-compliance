@@ -12,6 +12,8 @@ import json
 from datetime import UTC, datetime
 from pathlib import Path
 
+from .privacy import mask_data
+
 VERDICT_STYLE = {
     "PASS": ("pass", "PASS", "✓"),
     "FAIL": ("fail", "FAIL", "✗"),
@@ -959,8 +961,11 @@ def render_markdown(run: dict, out: Path) -> Path:
 
 
 def write_all(run: dict, results_dir: Path) -> dict[str, Path]:
+    """Write every report format. Personal data is masked first (see privacy.py),
+    so nothing below can publish it, whatever the evidence it was built from."""
     results_dir.mkdir(parents=True, exist_ok=True)
     run.setdefault("generated_at", datetime.now(UTC).isoformat(timespec="seconds"))
+    run = mask_data(run)
     paths = {
         "json": results_dir / "results.json",
         "html": results_dir / "index.html",
