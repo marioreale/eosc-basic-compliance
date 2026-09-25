@@ -174,7 +174,7 @@ The landing pages you want checked live in a configuration file, and that is the
 nodes:
   - id: bbmri-eric
     name: BBMRI-ERIC
-    url: https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
+    url: https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
 ```
 

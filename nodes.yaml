@@ -17,7 +17,9 @@
 nodes:
   - id: bbmri-eric
     name: BBMRI-ERIC
-    url: https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
+    # Changed on 25 September 2026 from https://www.bbmri-eric.eu/eosc-node-bbmri-eric/.
+    # The published results/ run of 24 September was collected from the old URL.
+    url: https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
   - id: cern
     name: CERN
