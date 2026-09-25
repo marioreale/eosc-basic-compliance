@@ -6,11 +6,15 @@ a report: a matrix of nodes against checklist points, with the evidence behind
 every verdict.
 
 This guide covers installing it, configuring it for your own nodes, running it,
-reading what comes out, and running the test suite. Every command below was
-executed against a clean clone of the repository on 21 September 2026, and every
-figure in it — test counts, verdict tallies, request counts, disk sizes — was
-re-measured rather than carried over; where a command's behaviour is surprising,
-that is noted rather than smoothed over.
+reading what comes out, and running the test suite. This edition was checked
+against a clean clone of commit `ada1b4a` on 25 September 2026. Every command
+that needs no network — installation, the test suite, `points`, `assess` and
+the rebuild of the published report — was re-run that day, and the test counts,
+disk sizes and verdict tallies were re-measured rather than carried over. No
+node website was contacted to prepare it. Request counts and HTTP behaviour come
+from the published run of 24 September and from a trial run on 25 September,
+and each figure says which. Where a command's behaviour is surprising, that is
+noted rather than smoothed over.
 
 **What this tool will not do:** it does not produce a compliance statement. Of
 the ten checklist points, three can be settled by inspection, four only partly,
@@ -46,8 +50,8 @@ You do not need to create a virtualenv or run `pip install`. `uv` manages the
 environment from `uv.lock`, so everyone gets identical dependency versions.
 
 **On the disk figures.** Both were measured with `du -sh`, not estimated. The
-500 MB is `.venv` in the project directory (490 MB in a fresh clone, rising to
-about 510 MB once caches accumulate). The 660 MB is one Playwright install
+500 MB is `.venv` in the project directory (484 MB in a fresh clone on
+25 September 2026, rising to about 510 MB once caches accumulate). The 660 MB is one Playwright install
 — Chromium (393 MB), the headless shell (261 MB) and ffmpeg (5 MB) — and it does
 **not** live in the project: Playwright puts browsers in a shared cache at
 `~/.cache/ms-playwright`, so a second project on the same machine reuses it and
@@ -67,7 +71,9 @@ uv sync --locked
 ```
 
 This creates `.venv/` and installs exactly the versions pinned in the committed
-`uv.lock` — 27 packages. Expect it to take under a minute. A plain `uv sync`
+`uv.lock`: it resolves 27 packages and installs 26, the 27th being the project
+itself. Expect it to take under a minute; from a warm `uv` cache it took two
+seconds. A plain `uv sync`
 also works, but it will silently re-resolve if the lockfile and
 `pyproject.toml` ever disagree; `--locked` fails instead, which is what you want
 when the point is to reproduce someone else's result. CI uses `--locked` for the
@@ -144,6 +150,51 @@ rather than reporting a bare absence. The slugs in the committed file were read
 from the live index at
 [eosc.eu/building-the-eosc-federation/](https://eosc.eu/building-the-eosc-federation/).
 If you add a node, look its slug up there rather than guessing it from the name.
+
+**BBMRI-ERIC's URL changed on 25 September 2026**, from
+`https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to the `dev3.` address shown
+above, and `nodes.yaml` carries a comment saying so. The published run in
+`results/` was collected on 24 September from the old address. Read the next
+subsection before rebuilding it.
+
+### Changing a node's URL
+
+Edit `url` in `nodes.yaml` and run `uv run pytest -q`. Nothing else in the
+repository stores the URL. Then collect that node again, into a scratch
+directory first, so you can see what the new page gives before anything
+published changes:
+
+```bash
+uv run basic-check collect --only bbmri-eric --results /tmp/trial
+uv run basic-check assess  --only bbmri-eric --results /tmp/trial
+```
+
+**`assess` takes each node's URL from `nodes.yaml`, not from the evidence.** So
+after a URL change, a bare `uv run basic-check assess` pairs the new URL with
+evidence collected from the old page, and the report shows the new address above
+verdicts it never produced. The address really fetched survives only as
+`final_url`, in the evidence file and in the `fetch` summary in `results.json`.
+The Markdown and HTML reports show just the configured URL, so their row
+heading is wrong. Until the published run is replaced by a new reviewed one,
+rebuild it with the node list it was collected with:
+
+```bash
+git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
+uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy \
+    --nodes /tmp/nodes-2026-09-24.yaml
+```
+
+Verified on 25 September 2026: this reproduces the committed `results/`
+exactly, apart from the generation time, with 44 PASS, 6 FAIL and 70
+MANUAL_REVIEW.
+
+A new URL can behave differently from the old one in ways that have nothing to
+do with the checklist. On the 25 September trial, `dev3.bbmri-eric.eu` served a
+`robots.txt` of `User-agent: *` / `Disallow: /`. The tool honours it, so no page
+was requested and all ten points for BBMRI-ERIC are `ERROR` (section 6). That is
+typical of a staging host and says nothing about compliance. Ask the node for
+the public address, or for the development host to allow the checker, before
+the next published run.
 
 ### `checklist/v3.0.yaml` — the rules
 
@@ -247,7 +298,7 @@ is unaffected.
 | The first match in file order is reported | Put the preferred form first if a node has more than one approved name. |
 | A variant rendering is reported | The evidence quotes what the page actually writes, so you can see that it differs from the official form without diffing by eye. |
 | The name never changes the verdict | Point 3 stays `MANUAL_REVIEW` either way. The list adds an evidence line for the reviewer; it cannot produce a `PASS`. |
-| A page that was never fetched is never reported as missing the name | In the published run GÉANT answered HTTP 403 with no body; the evidence says the name was not looked for, not that it is absent. |
+| A page that was never fetched is never reported as missing the name | In the 21 September run GÉANT answered HTTP 403 with no body; the evidence said the name was not looked for, not that it is absent. |
 
 All of these match a list entry written `EOSC Node | BBMRI-ERIC`:
 
@@ -281,7 +332,8 @@ described here so you can judge the results rather than trust them:
   restores literal glyph matching, and the report then states that the strict
   rule was in force rather than the flexible one. Against the evidence of
   21 September 2026 the strict rule matches **none** of the nine nodes, which is
-  the 0-of-9 result above.
+  the 0-of-9 result above. Against the published evidence of 24 September it
+  matches none of the twelve.
 
 #### A match is not proof of the right name
 
@@ -298,11 +350,12 @@ belongs to:
 uv run basic-check assess --approved-names checklist/approved-names-scoped.txt
 ```
 
-Running it against the evidence of 21 September 2026 returns **the same two
-nodes** as the unscoped list — BBMRI-ERIC and EUDAT. That is a useful result
-rather than a null one: it means the headline "2 of 9" is not an artefact of
-names leaking across pages, because tying each name to its own node changes
-nothing.
+Running it against the published evidence of 24 September 2026 returns **the
+same five nodes** as the unscoped list: BBMRI-ERIC, Czechia, EUDAT, GÉANT and
+Slovakia. On the evidence of 21 September it returned the same two, BBMRI-ERIC
+and EUDAT. That is a useful result rather than a null one: the headline is not
+an artefact of names leaking across pages, because tying each name to its own
+node changes nothing.
 
 It is **not** the default, and the reason is worth stating plainly: the *names*
 in it are the official ones, but the *mapping* from each name to a node id in
@@ -325,32 +378,28 @@ sha256sum checklist/approved-names.txt
 
 #### What the official list actually finds
 
-Run against the evidence collected on 21 September 2026, the committed list
-matches **two of the nine** nodes assessed that day, and both write the name
-with a separator the official list does not use:
+In the published run of 24 September 2026, the committed list of thirteen names
+matches **five of the twelve** nodes assessed. Every one of the five writes the
+name with a different separator from the list, so none of them would match
+literally:
 
 | Node | Outcome |
 |---|---|
 | BBMRI-ERIC | matched; the page writes `EOSC Node - BBMRI-ERIC` |
+| EOSC Node Czechia | matched; the page writes `EOSC Node Czechia` |
 | EUDAT | matched; the page writes `EOSC Node EUDAT` |
-| European DTO | no match; the page writes `European Digital Twin Ocean` in full, the list abbreviates it to `European DTO` |
-| Data Terra, PaNOSC | no match; the phrase `EOSC Node` occurs, but never followed by an approved name |
-| Finland, EGI, EBRAINS RI | no match, and the phrase `EOSC Node` does not occur in the body |
-| GÉANT | not looked for: the page answered HTTP 403 with no body in this run |
+| GÉANT | matched; the page writes `EOSC Node GÉANT` |
+| EOSC Node Slovakia | matched; the page writes `EOSC Node Slovakia` |
+| European DTO, Data Terra, PaNOSC | no match; the phrase `EOSC Node` occurs (5, 3 and 1 times), but never followed by an approved name |
+| CERN, EOSC Finland, EGI, EBRAINS | no match, and the phrase `EOSC Node` does not occur in the body |
 
-CERN and Czechia were added to `nodes.yaml` after that run and are not in the
-table above. Collected on 21 September 2026 at 19:03 UTC, Czechia **matches**,
-writing the name `EOSC Node Czechia` where the list writes `EOSC Node | Czechia`
-— a third node found by the separator-tolerant rule rather than by a literal
-match. CERN does not match: its landing page is a sign-in endpoint carrying 127
-characters of text, so there is almost nothing to match against.
+CERN's configured page is a sign-in endpoint with very little text, so there is
+almost nothing to match against. Italy was skipped: `eosc.it` had nameservers but
+no address record, and an unreachable page is `ERROR`, not `FAIL`.
 
-Italy and Slovakia were added on 24 September 2026 and are not in the
-published run either. A landing-page-only scratch run that day found Slovakia
-**matches**, scoped to its own node: the page writes `EOSC Node Slovakia` where
-the list writes `EOSC Node | Slovakia`. Italy could not be assessed at all:
-`eosc.it` has nameservers but no address record, so every point is `ERROR`
-rather than `FAIL` — an unreachable page is not evidence of non-compliance.
+The earlier run of 21 September matched two of nine (BBMRI-ERIC and EUDAT).
+GÉANT was not looked for then, because it answered HTTP 403 with no body, and
+CERN, Czechia and Slovakia were not yet configured.
 
 **This is a finding to review, not a verdict.** Point 3 remains
 `MANUAL_REVIEW` for every node either way. A non-match means the page body does
@@ -570,8 +619,8 @@ uv run basic-check assess --skip "CERN, Czechia" --skip eosc-it --skip eosc-sk
 A skipped node is left out of the whole run. No request is sent to its site, it
 is not assessed, and it has no row in the report. Because it is left out on
 purpose, it does not count as missing evidence, so `assess` does not exit 2 for
-it. That last command is the way to rebuild the nine-node report while the four
-newer nodes have no evidence yet.
+it. The published report was built this way, with `--skip Italy`, because
+`eosc.it` had no address record on 24 September.
 
 Unlike `--only`, `--skip` does shorten the report, including the one in
 `results/`. A shorter table must never look complete, so every report says
@@ -603,11 +652,14 @@ stray single-page file that looks official is a genuine hazard.
 
 ## 5. How deep to go: `--depth`
 
-| `--depth` | What is fetched | Requests, 9 nodes, 21 Sep 2026 |
-|---|---|---|
-| `0` | The landing page only. | 9 |
-| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about. At most 8 per node, 2 per point. | 31 (9 + 22) |
-| `2` | The above, plus one further hop: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, under a run-wide budget. | 45 (9 + 22 + 14) |
+| `--depth` | What is fetched | Requests, 9 nodes, 21 Sep 2026 | Requests, 12 nodes, 24 Sep 2026 |
+|---|---|---|---|
+| `0` | The landing page only. | 9 | 12 |
+| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about. At most 8 per node, 2 per point. | 31 (9 + 22) | 44 (12 + 32), the published run |
+| `2` | The above, plus one further hop: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, under a run-wide budget. | 45 (9 + 22 + 14) | not run |
+
+`robots.txt` requests are not counted in these figures. The tool fetches one per
+host before touching it.
 
 Links are followed only where the target could settle a point, so a policy link
 is verified rather than taken on the strength of its label.
@@ -646,10 +698,13 @@ This is not theoretical. `geant.org` served `HTTP 200` at 12:43 UTC on
 21 September, `HTTP 403` at 13:07 the same afternoon after several runs,
 redirecting to a Cloudflare bot-protection challenge, and `HTTP 200` again at
 18:39 from a GitHub runner — a different address that had made no requests that
-day. **Repeated automated runs are visible to the sites you are checking**, and
-the block tracks request volume from an address rather than the tool's identity. Run the full suite when you need a
-result, not in a loop, and use `assess` — which needs neither browser nor
-network — when you are iterating on the report itself.
+day. It happened again on the 25 September trial, at 04:42 UTC: GÉANT answered
+HTTP 403 with the same challenge, and five of its cells that were decided on
+24 September moved to review. **Repeated automated runs are visible to the sites you are
+checking**, and the block tracks the requesting address rather than the tool's
+identity. Run the full suite when you need a result, not in a loop, and use
+`assess`, which needs neither browser nor network, when you are iterating on the
+report itself.
 
 ---
 
@@ -675,6 +730,16 @@ network — when you are iterating on the report itself.
 | 🔴 **FAIL** | Violated, and the tool can show why. |
 | 🟠 **review** | A human must decide. The tool has gathered the evidence and refuses to guess. |
 | 🟣 **ERROR** | Could not be assessed at all. |
+
+**ERROR is not a finding against the node.** It means the tool has no page to
+judge: the host did not resolve, the request failed, or `robots.txt` asked
+crawlers to stay away and the tool complied. The reason is in each cell's
+message, for example `The page could not be fetched: not fetched: robots.txt
+disallows it`, and `robots_note` in the evidence file records what `robots.txt`
+said. In the published run only Italy would have been `ERROR`, and
+it was skipped instead. On the 25 September trial, BBMRI-ERIC's new `dev3.`
+address was `ERROR` on all ten points because its `robots.txt` disallows every
+path.
 
 **A FAIL is an accusation, so the tool is careful about making one.** Absence is
 never concluded from a page that did not render: if a capture yields no links at
@@ -723,7 +788,8 @@ rebuilt from evidence captured before masking existed is masked too.
 | `jane.doe@example.org`, `jane.doe [at] example.org` | `XXXXX@example.org`, `XXXXX [at] example.org` |
 | `support@egi.eu`, `it@helpdesk.bbmri-eric.eu`, `geant@geant.org` | unchanged: role and organisation mailboxes |
 | `+31 20 123 4567`, `tel:0043316349917` | `+31 XXXXXX`, `tel:+43 XXXXXX` |
-| `Tel.: 06 1234 5678` (no prefix, but labelled) | `Tel.: XXXXXX` |
+| `tel:+31(0)20%20123456` (a space written `%20` inside a link) | `tel:+31 XXXXXX` |
+| `Tel.: 06 1234 5678`, `tel. (09) 123 4567` (no prefix, but labelled) | `Tel.: XXXXXX`, `tel. XXXXXX` |
 | `Mgr. Jana Nováková, novakova@…` | `Mgr. XXXXX XXXXX, XXXXX@…` |
 
 An address is kept only when it is recognisably a role, such as `support`, `info`,
@@ -732,23 +798,37 @@ is masked. A name is masked only near a masked address, and never inside a URL o
 as an all-capitals acronym. Office switchboards are masked like any other number,
 because nothing in a number says who answers it. Masking changes no verdict,
 because every check works from the parts that are kept. Screenshots are not
-masked. Masking applies to what is written from now on, so to mask files already
-committed, re-write them with the same function:
+masked; they show the visible part of the landing page only, not the contact
+pages where these details appeared.
+
+**The published run is masked.** Commit `ada1b4a` (25 September 2026) masked
+`results/evidence/` and rebuilt the reports offline. All 120 verdicts and the
+44 / 6 / 70 tally are unchanged. A few character counts in the report dropped
+slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to
+7094 characters). The first masking pass had let two phone formats through,
+the `%20` and the bracketed area code in the table above. Both were found by
+searching every published file for phone-shaped text, fixed, and added to the
+tests. `tests/test_privacy.py` now also checks the committed evidence itself,
+and fails if any file in `results/evidence/` contains a personal address or a
+phone number. The earlier, unmasked versions remain in the git history. Removing
+them would mean rewriting the history of `main`, which has not been done.
+
+To mask evidence collected before masking existed, for instance a trial run in
+a scratch directory, re-write it with the same function and rebuild:
 
 ```bash
 uv run python -c "
 import json, pathlib
 from basic_check.privacy import mask_data
-for p in pathlib.Path('results/evidence').glob('*.json'):
+for p in pathlib.Path('/tmp/trial/evidence').glob('*.json'):
     p.write_text(json.dumps(mask_data(json.loads(p.read_text())), indent=2, ensure_ascii=False))
 "
-uv run basic-check assess --run <run id>    # rebuilds the reports from the masked evidence
+uv run basic-check assess --results /tmp/trial --run <run id>
 ```
 
 Rebuild with the `nodes.yaml` the run was collected with (`--nodes`), or a URL
-changed since then will be shown against evidence taken from the old one.
-
-git history still holds the earlier versions of those files.
+changed since then is shown against evidence taken from the old one (section 3,
+"Changing a node's URL").
 
 ---
 
@@ -822,7 +902,9 @@ step saying the lockfile needs updating, that is the guard working — run
 `.github/workflows/compliance.yml` is **manual dispatch only** — deliberately.
 A scheduled compliance run would mean fetching every node's production website on a
 timer, which is exactly the behaviour that got GÉANT's bot protection to start
-refusing requests.
+refusing requests. The workflow reads `nodes.yaml` from the branch it runs on,
+so on `main` today it would fetch BBMRI-ERIC's `dev3.` address and, given that
+host's `robots.txt`, report `ERROR` for it.
 
 It takes three inputs: `only` (comma-separated node ids, empty for every node),
 `depth` (`1`, `0` or `2`) and `delay` (seconds between nodes). `depth: 2` was
@@ -859,11 +941,14 @@ number.
 | The report has fewer nodes than you expected | You passed `--results DIR` together with `--only`, which narrows both deliberately. Without an explicit `--results`, `--only` narrows the fetch alone and the report keeps every node. Section 4. |
 | The report carries a **Skipped by request** banner, or has fewer rows than `nodes.yaml` | Expected after `--skip`: those nodes were left out on purpose, and the banner and `results.json` name them. Run without `--skip` for every node. Section 4. |
 | The report carries a **Mixed freshness** banner | Expected after `--only`: the nodes you did not select were reused from evidence on disk. Run a bare `uv run basic-check collect` then `assess` for a report with one capture date. Section 4. |
+| Every point for a node is `ERROR`, with the message `not fetched: robots.txt disallows it` | The site's `robots.txt` excludes the tool, and it complied. Common on staging hosts: BBMRI-ERIC's `dev3.` address does it. Ask the node for the public address or an exception; do not work around it. Section 6. |
+| After changing a URL in `nodes.yaml`, the rebuilt report shows the new address but the old page's verdicts | `assess` takes the URL from `nodes.yaml` and the verdicts from the evidence on disk. Collect the node again, or rebuild with the old node list via `--nodes`. Section 3, "Changing a node's URL". |
+| `test_the_committed_evidence_publishes_no_personal_address_or_phone` fails | Evidence that is not masked has reached `results/evidence/`, usually copied in from a run made before masking existed. Mask it with `mask_data` and rebuild (section 6). Do not commit until the test passes. |
 | A node shows `HTTP 403` and everything moved to review | Bot protection, not an access policy. Check `final_url` in the evidence for a `__cf_chl_rt_tk` parameter. Wait, run less often, or verify that node by hand in a browser. |
 | Everything is review for one node | The capture probably did not render. Look at `evidence/screenshots/<id>.png` — that is exactly what the render gate is protecting you from. |
 | `test_checklist.py` fails on a hash | The checklist PDF changed. That is the test doing its job: transcribe the new version into a new YAML file rather than adjusting the hash. |
 | A run takes far longer than expected | `--delay` defaults to 2.0s between hosts and slow nodes are waited on. This is intentional. |
-| Point 3 reports `NONE of the ... approved name(s) ... appear` for a node you know is named correctly | Expected for most nodes: the committed list matches 2 of 9. The `<title>` is not searched, and a name is not matched inside a longer word — though the separator between words is flexible. Read `full_text` in that node's evidence file. Section 3. |
+| Point 3 reports `NONE of the ... approved name(s) ... appear` for a node you know is named correctly | Expected for many nodes: in the published run the committed list matches 5 of 12. The `<title>` is not searched, and a name is not matched inside a longer word — though the separator between words is flexible. Read `full_text` in that node's evidence file. Section 3. |
 | Point 3 says `no approved name was supplied for this node` | Your list is scoped and has no `node-id:` line for that node. Add one, or use a bare name to cover every node. Section 3. |
 | Point 4 says `PASS` but you cannot find the link | Look in the footer. The check reads the DOM, not the visible area, and several nodes put the `eosc.eu` link in a legal/navigation column at the very bottom. The exact URL is quoted in the evidence — search the page for it rather than scanning by eye. Note also that the target is never requested, so the check cannot tell you the page still exists. |
 | Point 3 says `No approved-name list was used` | You passed `--no-approved-names`, or `checklist/approved-names.txt` is missing from your checkout (the run warns on stderr when it is). Section 3. |

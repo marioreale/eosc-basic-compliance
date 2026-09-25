@@ -285,13 +285,13 @@ stale list is detectable without re-running. Prefix a name with a node id
 is unscoped, so a match shows the name is on the page but not that it is that
 page's own name, and the report says so. A scoped variant is committed at
 [`checklist/approved-names-scoped.txt`](checklist/approved-names-scoped.txt) for
-when you want that stronger claim — it finds the same two nodes, which is
+when you want that stronger claim — it finds the same five nodes, which is
 evidence the headline is not an artefact of names leaking between pages. Word
 separators are matched flexibly by default; `--strict-separators` requires the
 exact glyphs and the report states which rule was in force.
 
-Run against the evidence of 21 September 2026, the official list matches **2 of
-the 9** nodes. That is a finding to review, not a verdict — point 3 stays
+In the published run of 24 September 2026, the official list matches **5 of
+the 12** nodes assessed (2 of 9 on 21 September). That is a finding to review, not a verdict — point 3 stays
 `MANUAL_REVIEW` either way. See
 [the guide](docs/GUIDE.md#the-approved-names-file----approved-names) for the
 format, how matching works, and what each node shows.

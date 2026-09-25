@@ -1,9 +1,10 @@
 # Test suite and configuration overview
 
 What the test suite covers, how the tool is configured, and what the published
-figures actually say. Every figure was measured on 24 September 2026 against the
-repository state this document is committed with: **329 test cases, all passing
-in CI**.
+figures actually say. Every figure was measured on 25 September 2026 against
+a clean clone of the repository state this document is committed with (from
+commit `ada1b4a`): **329 test cases, all passing in CI**. No node website was
+contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
 run the tool. Section 7 of that guide is the short version of this document.
@@ -29,13 +30,15 @@ conditions behind each of the ten checklist points.
 > | `uv.lock` is not committed, so runs are not reproducible | **Committed**; CI installs with `--locked` (section 9) |
 > | The web form cannot reach depth 2 | It can — the `depth` input now offers `2` (section 6) |
 >
+> **Since the 24 September edition.** Personal data is now masked in the evidence and in every report (section 5), and the published run was masked at commit `ada1b4a` with every verdict unchanged (section 10). BBMRI-ERIC's configured URL changed to a `dev3.` address on 25 September, and the published run was collected from the old one, so rebuilding it needs the old node list (section 5). The suite grew from 326 to 329 cases for these changes.
+>
 > The node list also grew from nine to **thirteen** (CERN and EOSC Node Czechia on 21 September, Italy and Slovakia on 24 September), and the published report in `results/` now covers twelve of them. Italy was skipped because its domain did not resolve on 24 September; section 10 has the details. The suite's runtime rose from ~0.2 s to ~5.9 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
 
 ---
 
 ## 1. Language and framework
 
-**Python**, requiring 3.12 or newer, developed on 3.14. Packaged with hatchling and managed with `uv`. Roughly **3,764 lines across six modules** (`checks.py` 1053, `report.py` 977, `fetch.py` 706, `cli.py` 689, `names.py` 247, `patterns.py` 92), plus **2,909 lines of tests**. Tests are now about three quarters the size of the code they exercise.
+**Python**, requiring 3.12 or newer, developed on 3.14. Packaged with hatchling and managed with `uv`. Roughly **4,331 lines across seven modules** (`checks.py` 1142, `report.py` 982, `fetch.py` 712, `cli.py` 689, `privacy.py` 383, `names.py` 247, `patterns.py` 176), plus **3,298 lines of tests**. Tests are now about three quarters the size of the code they exercise.
 
 The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does not use `unittest.TestCase` classes at all. Tests are plain functions with bare `assert` statements. There is no `setUp`/`tearDown`; shared setup is a few small helper functions that build page evidence.
 
@@ -70,14 +73,14 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_cli.py` | 44 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring |
 | `test_checklist.py` | 12 | Provenance of the checklist: source document hash, point-to-rule mapping, version/filename convention |
 | `test_nodes.py` | 13 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list |
-| `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, and that evidence files and every report format are written masked |
+| `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
 | **Total** | **329** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
-### Why the suite takes ~5.9 seconds rather than ~0.2
+### Why the suite takes ~5–6 seconds rather than ~0.2
 
-The previous edition reported ~0.2 s. It is now **5.9 s** (5.64–5.96 s across three consecutive runs), and the cause is not a slow test but a change in what some tests do. A dozen or so tests in `test_names.py` and `test_cli.py` copy the **committed evidence** into a temporary directory and run a full `assess` through it, then read the resulting `results.json`:
+The previous edition reported ~0.2 s. It is now **5–6 s** (5.2–5.9 s across four consecutive runs on 25 September 2026; 5.64–5.96 s across three on 24 September), and the cause is not a slow test but a change in what some tests do. A dozen or so tests in `test_names.py` and `test_cli.py` copy the **committed evidence** into a temporary directory and run a full `assess` through it, then read the resulting `results.json`:
 
 | Slowest cases | Time |
 |---|---|
@@ -184,6 +187,15 @@ nodes:
 - `eosc_page` — the node's dedicated entry on `eosc.eu`, which point 4 requires the landing page to link to. Supplying it means a point 4 failure names the exact URL that is missing, so the fix is a one-line edit rather than an investigation.
 
 You can also point at an entirely different file without editing the default: `--nodes /path/to/my-nodes.yaml`, available on `collect`, `assess` and `run`. That is the clean way to keep a separate candidate-node list alongside the production one.
+
+**Changing a URL.** BBMRI-ERIC's `url` changed on 25 September 2026, from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, and the entry carries a comment saying so. `assess` takes each node's URL from `nodes.yaml` and its verdicts from the evidence on disk. So a bare `assess` now would head BBMRI-ERIC's row with the new address above verdicts taken from the old page. Until the published run is replaced by a new reviewed one, rebuild it with the node list it was collected with. This reproduces the committed `results/` exactly, apart from the generation time:
+
+```bash
+git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
+uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy --nodes /tmp/nodes-2026-09-24.yaml
+```
+
+The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean.
 
 ### Adding a node
 
@@ -350,13 +362,19 @@ Step 4 is the one the tooling cannot do for you. The tests confirm that the chec
 Evidence files and all four report formats are written with personal data
 masked by `src/basic_check/privacy.py`. A personal email address keeps only its
 domain (`XXXXX@example.org`), and a phone number keeps only its international
-prefix (`+31 XXXXXX`). A name is masked when it appears next to a masked address.
+prefix (`+31 XXXXXX`). A labelled national number such as `tel. (09) 123 4567`
+becomes `tel. XXXXXX`, and a number whose spaces are written `%20` inside a
+`tel:` link is masked too. A name is masked when it appears next to a masked
+address.
 Role mailboxes such as `support@`, `info@` and `it@helpdesk.…` are kept, because
 point 6 depends on them. Nothing about this is configurable: a flag to turn it off
 would be a way to publish personal data by mistake. The rules and their limits are
 in section 6 of the [run guide](GUIDE.md) ("Personal data is masked"), and
 `tests/test_privacy.py` fixes both sides: what must be masked, and what must not
-be.
+be. One test reads the committed `results/evidence/` itself and fails if any file
+contains a personal address or a phone number, so unmasked evidence cannot be
+committed unnoticed. It was confirmed to bite: restoring one unmasked evidence
+file makes it fail.
 
 ### Constants that are not yet flags
 
@@ -515,7 +533,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 329 cases, ~5.9s, no network, no browser
+uv run pytest -q              # 329 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -600,7 +618,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 329 cases, ~5.9s, no network, no browser
+# 6 - run the suite: 329 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -645,6 +663,8 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 From `results/results.json`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200. The figures below are from the re-assessment at commit `29dead8`, made from the same evidence after the point 6 and 5b/5c fixes. The first assessment gave 45 / 6 / 69.
 
+> **Masked on 25 September 2026.** Commit `ada1b4a` masked the personal data in `results/evidence/` and rebuilt the reports offline, with the node list the run was collected with (from commit `53081f6`), so BBMRI-ERIC is still shown against the `www.` address its evidence came from. All 120 verdicts and the tally below are unchanged. The only other differences are the generation time and a few character counts, which drop by the length of the masked text. The unmasked versions remain in the git history.
+
 | Verdict | Cells |
 |---|---|
 | 🟢 PASS | 44 |
@@ -656,7 +676,14 @@ All six FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Dat
 
 The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. BBMRI-ERIC's PASS was later upheld, because its contact page lists helpdesk mailboxes. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations were recorded there and have since been fixed in the checks; see "Point 6 and 5b/5c after the review" below. The committed `results/` was then re-assessed with the fixed checks from the same evidence. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
 
-`test_names.py::test_the_official_names_match_the_nodes_that_show_them` is pinned to the committed evidence. It now expects five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two.
+`test_names.py::test_the_official_names_match_the_nodes_that_show_them` is pinned to the committed evidence. It now expects five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two. Re-measured on 25 September against the masked evidence: the node-scoped list finds the same five, and `--strict-separators` finds none of the twelve, because every one of the five writes the name with a different separator from the official list.
+
+### Since the published run
+
+A trial run on 25 September 2026, with BBMRI-ERIC's new URL, is **not published** and has not been reviewed. Two things it showed concern the tool rather than the nodes, and are recorded here for whoever runs the next collection:
+
+- BBMRI-ERIC's `dev3.` address disallows every path in `robots.txt`, so all ten of its points were `ERROR`. The next published run needs either the public address or an exception for the checker.
+- GÉANT answered HTTP 403 with the Cloudflare challenge again, and its decided cells moved to review, as on 21 September.
 
 ### Point 6 and 5b/5c after the review
 
@@ -723,7 +750,7 @@ The run was collected at `--depth 2`, and **the depth-1 and depth-2 tallies are 
 | GÉANT | **403** | 0 | 0 |
 | EBRAINS | 200 | 9 | 5 |
 
-### Point 3, and a correction to the previous edition
+### Point 3 in the 21 September run, and a correction to the previous edition
 
 The previous edition stated that point 3 was review for every node "because `--approved-names` was not supplied". That is **not** what the published run records. A name list *was* used — the committed default, whose SHA-256 the report pins — and the run metadata says so: `default_used: true`, nine names.
 
@@ -741,7 +768,7 @@ Three caveats the tool states itself, and which matter more than the count:
 - The `<title>` element is not searched, only the page body. Several of the six "not found" results say so explicitly.
 - Most of those six pages *do* contain the phrase "EOSC Node"; what is absent is the full approved form.
 
-The current default list carries **thirteen** names, one per configured node, with a scoped variant that binds each name to its node id. The published run predates that and used the nine-name version.
+The current default list carries **thirteen** names, one per configured node, with a scoped variant that binds each name to its node id. The 21 September run predates that and used the nine-name version. The published run of 24 September used the thirteen-name list, and point 3 is `MANUAL_REVIEW` for all twelve of its nodes, for the same reason.
 
 ---
 
@@ -751,6 +778,6 @@ The current default list carries **thirteen** names, one per configured node, wi
 - EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
 - Figures in section 10, current run: `results/results.json`, run `live-2026-09-24-no-italy`, collected 24 September 2026, reviewed in `results/REVIEW-2026-09-24.md`
-- Figures in section 10, previous run: `results/results.json` at commit `014682c` — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
+- Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `871161a5…`) and the node-scoped variant `checklist/approved-names-scoped.txt`
-- Test counts, line counts, runtimes and command options in this document were measured on 24 September 2026 against the repository state it is committed with, not carried over from the previous edition
+- Test counts, line counts, runtimes, name-list results and command options in this document were measured on 25 September 2026 against a clean clone of the repository state it is committed with, not carried over from the previous edition

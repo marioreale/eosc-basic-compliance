@@ -7,7 +7,9 @@ This document is written against the code in `src/basic_check/` as it stands, no
 against the design intent. Where the implementation is weaker than the checklist
 wording, that is stated rather than smoothed over — the point of this document is
 that a reviewer can predict the verdict before running the tool, and can tell
-which verdicts are worth trusting.
+which verdicts are worth trusting. It was last checked against commit `ada1b4a`
+on 25 September 2026: every `file.py:line` reference below points at the current
+source, and the figures quoted from runs say which run they come from.
 
 Reading order: sections 1–4 describe the machinery shared by every point;
 section 5 gives the decision procedure for each of the ten points individually;
@@ -23,9 +25,9 @@ derived from that file.
 
 | Stage | Command | Reads | Writes | Network |
 |---|---|---|---|---|
-| 1. Collect | `collect` | `nodes.yaml` | `results/evidence/<node>.json`, `results/evidence/screenshots/<node>.png` | yes |
+| 1. Collect | `collect` | `nodes.yaml` | `results/evidence/<node>.json` (personal data masked), `results/evidence/screenshots/<node>.png` | yes |
 | 2. Assess | `assess` | evidence JSON + `checklist/v3.0.yaml` | `results/results.json` | **no** |
-| 3. Report | (part of `assess`) | the run dict in memory | `index.html`, `results.md`, `results.csv`, `checklist-v3.0.html` | no |
+| 3. Report | (part of `assess`) | the run dict in memory, masked again before rendering | `index.html`, `results.md`, `results.csv`, `checklist-v3.0.html` | no |
 
 `run` is stages 1–3 in one invocation. `points` and `show` are inspection
 commands and assess nothing.
@@ -45,10 +47,14 @@ Two consequences of the split matter in practice:
 
 Per node, in order:
 
-1. **`robots.txt` for the landing page host** (`_robots`, `fetch.py:193`).
-   Fetched over plain HTTP with the tool's own User-Agent string. Three outcomes:
+1. **`robots.txt` for the landing page host** (`_robots`, `fetch.py:194`).
+   Fetched with a plain HTTP client (`httpx`, not the browser), with the tool's
+   own User-Agent string. Three outcomes:
    - disallowed → `error = "not fetched: robots.txt disallows it"`, evidence
-     record returned immediately, **every point becomes `ERROR`**;
+     record returned immediately, **every point becomes `ERROR`**. This is not
+     hypothetical: on a trial run on 25 September 2026, BBMRI-ERIC's new
+     `dev3.` address served `User-agent: *` / `Disallow: /`, and all ten of its
+     points were `ERROR`;
    - HTTP ≠ 200 → treated as "nothing disallowed", proceed;
    - unreachable → proceed with one request, and the reason is recorded in
      `robots_note`. A network failure is not read as permission, but it is also
@@ -63,7 +69,7 @@ Per node, in order:
    node as having no content — a false accusation produced by the tool.
 3. **Record status, final URL and redirect chain.** Redirects are captured from
    response events (first 10 kept).
-4. **Extract the evidence** from the rendered DOM (`_extract`, `fetch.py:210`).
+4. **Extract the evidence** from the rendered DOM (`_extract`, `fetch.py:211`).
    `script`, `style`, `noscript` and `template` are removed first. Then:
    - `full_text` — all body text, whitespace-collapsed;
    - `main_text` — text of the first of `main`, `[role=main]`, `article`,
@@ -83,7 +89,7 @@ Per node, in order:
    the screenshot; it exists for the human reviewer. It captures the visible
    viewport, not the full page, so it cannot be used to confirm the absence of
    anything — a footer link is real but off-image.
-6. **Depth 1, if requested.** `select_children` (`fetch.py:413`) picks which links
+6. **Depth 1, if requested.** `select_children` (`fetch.py:414`) picks which links
    to follow. A link qualifies only if it is `http(s)`, is not a binary by
    extension, is on the node's own host or a related host, and its combined link
    text and URL path matches the vocabulary of a point that a second page can
@@ -128,11 +134,11 @@ Per node, in order:
 
 ## 3. What the evidence contains — and what it does not
 
-`PageEvidence` (`fetch.py:125`) holds: `node_id`, `node_name`, `requested_url`,
+`PageEvidence` (`fetch.py:126`) holds: `node_id`, `node_name`, `requested_url`,
 `fetched_at`, `final_url`, `http_status`, `redirect_chain`, `robots_allowed`,
 `robots_note`, `title`, `lang_attr`, `main_text`, `full_text`, `links`, `images`,
 `controls`, `meta_description`, `error`, `screenshot`, `crawl_depth`, `children`,
-`children_skipped`.
+`children_skipped`, `crawl_note`.
 
 `Image` holds only `src`, `alt`, `aria_label`, `title`, `css_class`, `inline_svg`.
 `Link` holds `href`, `text`, `visible`. `Control` holds `text`, `href`, `tag`.
@@ -154,7 +160,10 @@ through `write_evidence` in `fetch.py`). Personal addresses become
 address becomes `XXXXX`. Role mailboxes are kept. The checks therefore run on
 masked text, which costs nothing: point 6 needs a helpdesk, and no check uses a
 person's address or number. Re-assessing the 24 September evidence after masking
-gave the same verdict in all 120 cells.
+gave the same verdict in all 120 cells, and the published run has been masked
+this way since commit `ada1b4a`. The reports are masked a second time as they
+are written (`write_all` in `report.py`), so a report rebuilt from evidence
+captured before masking existed is masked too. Screenshots are not masked.
 
 ---
 
@@ -401,9 +410,10 @@ Branch 1 used to over-match badly; the history is in section 6.
 
 ### Point 4 — link to the node's own page on `eosc.eu`
 
-`check_4`. The point that produces most of the `FAIL`s in practice — 6 of the 7
-in the run of 21 September 2026, the seventh being point 6 for a node with no
-contact route of any kind on its landing page.
+`check_4`. The point that produces most of the `FAIL`s in practice: all 6 in the
+published run of 24 September 2026, and 6 of the 7 in the run of 21 September,
+the seventh being point 6 for a node with no contact route of any kind on its
+landing page.
 
 **Steps:** for every link, parse the URL; keep only those whose host is `eosc.eu`
 or a true subdomain (`_is_host`, so `myeosc.eu` does not qualify); strip the
@@ -643,7 +653,9 @@ claim it is making. Scoping the list is what makes the stronger claim available,
 and `checklist/approved-names-scoped.txt` now does. Run against the same
 evidence it returns the same two nodes, BBMRI-ERIC and EUDAT, which retires the
 concern for this dataset: the 2-of-9 headline does not depend on names leaking
-between pages. The residual weakness is no longer the matching but the mapping —
+between pages. The published run of 24 September confirms it on twelve nodes:
+both lists match the same five (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia), and
+`--strict-separators` matches none. The residual weakness is no longer the matching but the mapping —
 name to node id — which was derived in this repository rather than taken from
 the Tripartite file.
 
@@ -684,6 +696,15 @@ re-fetched, counts what was not, and gives the capture date of the reused
 evidence. Nodes with no evidence at all are still listed under
 `missing_evidence`, printed in red, with exit code 2.
 
+**The row heading comes from `nodes.yaml`, not from the evidence.** `assess`
+labels each node with the `url` configured now, while every verdict comes from
+the evidence captured then. After BBMRI-ERIC's URL changed on 25 September, a
+bare `assess` headed its row with the new `dev3.` address above verdicts taken
+from the old `www.` page. The address really fetched is kept only as
+`final_url`, in the evidence and in the `fetch` summary of `results.json`.
+Until the tool compares the two, rebuild an old run with the node list it was
+collected with (`--nodes`); the run guide gives the exact command.
+
 **A public CI summary is not the place for per-node verdicts.** The workflow
 used to copy the whole of `results.md` into `$GITHUB_STEP_SUMMARY`, which on a
 public repository is world-readable. The verdicts are already public — the report
@@ -706,6 +727,7 @@ were this run's result.
 of the bytes actually read, and `strict_separators` — plus the older
 `approved_names_supplied` flag, kept for readers of earlier result files),
 `selection` (the node ids `--only` restricted the fetch to, empty on a full run),
+`skipped` (the node ids `--skip` left out, empty when nothing was skipped),
 and `nodes`. Each node carries `id`, `name`, `url`,
 `ad_hoc`, a `fetch` summary (status, final URL, robots note, screenshot, crawl
 depth, every child with its `selected_for` and outcome, and `children_skipped`),
@@ -726,5 +748,5 @@ PASS or FAIL on every line would look more useful and be worth considerably less
 
 *Source checklist: Node Landing Page Verification Checklist v3.0, 15 September
 2026, transcribed to `checklist/v3.0.yaml` alongside the source document.
-Implementation: `src/basic_check/{fetch,patterns,checks,names,report,cli}.py`.
+Implementation: `src/basic_check/{fetch,patterns,checks,names,privacy,report,cli}.py`.
 Repository: <https://github.com/marioreale/eosc-basic-compliance>.*
