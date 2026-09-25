@@ -100,13 +100,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-326 tests still pass, while `collect` fails with Playwright's
+329 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 326 passed
+uv run pytest -q                  # expect: 329 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -745,6 +745,9 @@ for p in pathlib.Path('results/evidence').glob('*.json'):
 uv run basic-check assess --run <run id>    # rebuilds the reports from the masked evidence
 ```
 
+Rebuild with the `nodes.yaml` the run was collected with (`--nodes`), or a URL
+changed since then will be shown against evidence taken from the old one.
+
 git history still holds the earlier versions of those files.
 
 ---
@@ -752,7 +755,7 @@ git history still holds the earlier versions of those files.
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 326 tests, offline, a few seconds
+uv run pytest -q                    # 329 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -767,7 +770,7 @@ uv run ruff check src tests         # lint
 | `test_crawl.py` | 35 | Link selection, including policy words found only in a hyphenated address, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
-| `test_privacy.py` | 48 | Personal-data masking: personal addresses and phone numbers masked, role mailboxes kept, the name beside an address masked but not a title or an acronym, and that both the evidence files and every report format are written masked. |
+| `test_privacy.py` | 51 | Personal-data masking: personal addresses and phone numbers masked, role mailboxes kept, the name beside an address masked but not a title or an acronym, that both the evidence files and every report format are written masked, and that the committed evidence stays masked. |
 | `test_report.py` | 35 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
 
 The suite makes no network requests and needs no browser, which is why CI runs

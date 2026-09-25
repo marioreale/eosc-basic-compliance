@@ -229,12 +229,14 @@ _TWO_DIGIT_CODES = frozenset(
 )
 
 # "+", then digits with the separators people actually use: spaces, dots,
-# hyphens, slashes and a "(0)" trunk prefix. At least 8 digits in all, so
-# "+1000 users" and "+30%" stay as they are.
-_INTL_RE = re.compile(r"(?<![\w+])\+\s?(?P<num>\d(?:[\d\s./-]|\(\d{1,4}\)){6,}\d)")
+# hyphens, slashes, "%20" (a space inside a tel: link) and a bracketed trunk or
+# area code such as "(0)" or "(09)". At least 8 digits in all, so "+1000 users"
+# and "+30%" stay as they are.
+_SEP = r"(?:[\d\s./-]|%20|\(\d{1,4}\))"
+_INTL_RE = re.compile(rf"(?<![\w+])\+\s?(?P<num>\d{_SEP}{{6,}}\d)")
 _LABEL_RE = re.compile(
     r"(?P<label>\b(?:phone|telephone|tel|mobile|mob|cell|fax|gsm|call)\b\.?\s*:?\s*)"
-    r"(?P<num>\(?\d(?:[\d\s./-]|\(\d{1,4}\)){5,}\d)",
+    rf"(?P<num>(?:\(\d{{1,4}}\)\s?|\d){_SEP}{{5,}}\d)",
     re.IGNORECASE,
 )
 _MIN_DIGITS_INTL = 8

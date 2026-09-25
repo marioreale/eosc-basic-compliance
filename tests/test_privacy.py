@@ -10,6 +10,9 @@ fictional ones.
 
 from __future__ import annotations
 
+import json
+import re
+
 import pytest
 
 from basic_check import report
@@ -88,6 +91,8 @@ def test_masking_is_idempotent():
         ("tel:0043316349900", "tel:+43 XXXXXX"),  # dialled with 00
         ("Tel.: 06 1234 5678", "Tel.: XXXXXX"),  # no prefix, but labelled
         ("phone: +44 20 7946 0000", "phone: +44 XXXXXX"),
+        ("tel:+31(0)20%205300000", "tel:+31 XXXXXX"),  # %20 inside a tel: link
+        ("tel. (09) 457 0000 (switchboard)", "tel. XXXXXX (switchboard)"),  # bracketed area code
     ],
 )
 def test_a_phone_number_keeps_only_its_international_prefix(text, expected):
@@ -224,3 +229,26 @@ def test_mask_data_leaves_keys_and_non_strings_alone():
         "ok": True,
         "xs": ["+31 XXXXXX", None],
     }
+
+
+# --- the committed evidence --------------------------------------------------
+
+_EMAIL = re.compile(r"([A-Za-z0-9._%+-]+)(?:@|\[at\]|\(at\))((?:[A-Za-z0-9-]+\.)+[A-Za-z]{2,})")
+_PHONE = re.compile(
+    r"(?:\+|\b00)\s?\d(?:[\d\s./-]|%20|\(\d{1,4}\)){6,}\d|\(\d{2,4}\)\s?\d{2,4}[\s-]\d{3,4}"
+)
+
+
+def test_the_committed_evidence_publishes_no_personal_address_or_phone():
+    """The published run must stay masked: this fails if unmasked evidence is committed."""
+    from basic_check.cli import ROOT
+
+    files = sorted((ROOT / "results" / "evidence").glob("*.json"))
+    assert files
+    for path in files:
+        text = json.dumps(json.loads(path.read_text()), ensure_ascii=False)
+        for m in _EMAIL.finditer(text):
+            local, domain = m.groups()
+            assert local == "XXXXX" or is_role_address(local, domain), f"{path.name}: {m.group(0)}"
+        for m in _PHONE.finditer(text):
+            assert len(re.sub(r"\D", "", m.group(0))) < 8, f"{path.name}: {m.group(0)}"

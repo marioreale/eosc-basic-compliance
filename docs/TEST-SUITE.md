@@ -2,7 +2,7 @@
 
 What the test suite covers, how the tool is configured, and what the published
 figures actually say. Every figure was measured on 24 September 2026 against the
-repository state this document is committed with: **326 test cases, all passing
+repository state this document is committed with: **329 test cases, all passing
 in CI**.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -12,7 +12,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 326 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 329 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -20,7 +20,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **326 cases** and gained three files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (13 cases, guarding the node configuration) and `tests/test_privacy.py` (48 cases, personal-data masking). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **329 cases** and gained three files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (13 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -57,9 +57,9 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**266 test functions, expanding to 326 executed cases** (twelve tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**267 test functions, expanding to 329 executed cases** (twelve tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
-The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 326 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
+The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 329 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
@@ -70,8 +70,8 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_cli.py` | 44 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring |
 | `test_checklist.py` | 12 | Provenance of the checklist: source document hash, point-to-rule mapping, version/filename convention |
 | `test_nodes.py` | 13 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list |
-| `test_privacy.py` | 48 | Personal-data masking: what is masked, what is kept, and that evidence files and every report format are written masked |
-| **Total** | **326** | |
+| `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, and that evidence files and every report format are written masked |
+| **Total** | **329** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -381,7 +381,7 @@ The test workflow runs four steps: `uv sync --locked`, `ruff check src tests`, `
 
 `--locked` matters more than it looks. It installs exactly what `uv.lock` pins and **fails** if the lockfile has drifted from `pyproject.toml`. Plain `uv sync` would silently re-resolve, so a dependency change could land with a green tick while CI tested a different set of versions than the one committed. The compliance workflow uses `--locked` for the same reason with sharper stakes: a silently re-resolved Playwright, selectolax or lingua can change what a page looks like to the tool, and the output of that workflow is a set of verdicts about named organisations.
 
-> **A habit worth keeping.** A green tick means "nothing objected", not "everything was verified". A suite that collects zero tests also passes. The test count in the CI log is the thing to read — it currently says "326 passed".
+> **A habit worth keeping.** A green tick means "nothing objected", not "everything was verified". A suite that collects zero tests also passes. The test count in the CI log is the thing to read — it currently says "329 passed".
 
 ### Running the compliance scan from the browser, with no Terminal at all
 
@@ -515,7 +515,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 326 cases, ~5.9s, no network, no browser
+uv run pytest -q              # 329 cases, ~5.9s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -600,7 +600,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 326 cases, ~5.9s, no network, no browser
+# 6 - run the suite: 329 cases, ~5.9s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```

@@ -1,6 +1,6 @@
 {
   "run_id": "live-2026-09-24-no-italy",
-  "generated_at": "2026-09-24T19:39:15+00:00",
+  "generated_at": "2026-09-25T12:22:06+00:00",
   "checklist": {
     "checklist_version": "3.0",
     "checklist_date": "2026-09-15",
@@ -131,7 +131,7 @@
             "link_text": "Access Policies",
             "http_status": 200,
             "title": "Access Policies - BBMRI-ERIC",
-            "chars": 8929,
+            "chars": 8923,
             "error": ""
           },
           {
@@ -145,7 +145,7 @@
             "link_text": "Services & Support",
             "http_status": 200,
             "title": "Services and Support - BBMRI-ERIC",
-            "chars": 6485,
+            "chars": 6479,
             "error": ""
           },
           {
@@ -159,7 +159,7 @@
             "link_text": "Contact",
             "http_status": 200,
             "title": "Contact - BBMRI-ERIC",
-            "chars": 5323,
+            "chars": 5311,
             "error": ""
           },
           {
@@ -173,7 +173,7 @@
             "link_text": "About",
             "http_status": 200,
             "title": "About us - BBMRI-ERIC",
-            "chars": 6820,
+            "chars": 6814,
             "error": ""
           }
         ],
@@ -186,7 +186,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 7100 characters of text rendered"
+            "HTTP 200 anonymously, 7094 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -249,7 +249,7 @@
           "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "84 outbound link(s) on the landing page",
-            "main text length: 7100 characters"
+            "main text length: 7094 characters"
           ],
           "reviewer_action": "List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry."
         },
@@ -270,7 +270,7 @@
           "message": "The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
             "\"Access Policies\" -> https://www.bbmri-eric.eu/services/access-policies/",
-            "followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8929 chars, title: Access Policies - BBMRI-ERIC",
+            "followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8923 chars, title: Access Policies - BBMRI-ERIC",
             "policy wording found: Policy, You may, conditions"
           ],
           "reviewer_action": "Confirm it covers all the node's resources and is in English."
@@ -460,7 +460,7 @@
             "link_text": "Contact",
             "http_status": 200,
             "title": "Contact | EOSC - European Open Science Cloud",
-            "chars": 690,
+            "chars": 677,
             "error": ""
           },
           {
@@ -557,7 +557,7 @@
             "meta description: \"Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access.\"",
             "opening main text: \"You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. What Is the EOSC Federation? The EOSC Federation enables researchers to access trustworthy and secure data, software, services and other digital resources acros...\"",
             "organisation-like names found: Masaryk University",
-            "about page one level down: https://www.eosc.cz/en/about-eosc-cz/contact (HTTP 200) opening text: \"You are here: Home Contact Contact Contact for media Mgr. Bc. Lucie Skřičková correspondence Address: skrickova@ics.muni.cz phone: +420 725 640 451 General contacts Contact: info@eosc.cz EOSC CZ Training Centre: events@eosc.cz Correspondence address of the EOS...\""
+            "about page one level down: https://www.eosc.cz/en/about-eosc-cz/contact (HTTP 200) opening text: \"You are here: Home Contact Contact Contact for media Mgr. Bc. XXXXX XXXXX correspondence Address: XXXXX@ics.muni.cz phone: +420 XXXXXX General contacts Contact: info@eosc.cz EOSC CZ Training Centre: events@eosc.cz Correspondence address of the EOSC-CZ project ...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -1006,7 +1006,7 @@
             "link_text": "Terms of use",
             "http_status": 200,
             "title": "Terms of use - Services for Research",
-            "chars": 16560,
+            "chars": 16556,
             "error": ""
           },
           {
@@ -1020,7 +1020,7 @@
             "link_text": "Service Desk",
             "http_status": 200,
             "title": "CSC Service Desk - Services for Research",
-            "chars": 632,
+            "chars": 628,
             "error": ""
           },
           {
@@ -1047,7 +1047,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 3329 characters of text rendered",
+            "HTTP 200 anonymously, 3315 characters of text rendered",
             "redirects followed: 1"
           ],
           "reviewer_action": ""
@@ -1128,7 +1128,7 @@
           "evidence": [
             "\"Terms of use\" -> https://research.csc.fi/terms-of-use/",
             "\"Prerequisites and responsibilities for a CSC project manager\" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
-            "followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16560 chars, title: Terms of use - Services for Research",
+            "followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16556 chars, title: Terms of use - Services for Research",
             "policy wording found: Terms, comply, conditions, permitted"
           ],
           "reviewer_action": "Confirm it covers all the node's resources and is in English."
@@ -1578,7 +1578,7 @@
             "link_text": "Contact Us",
             "http_status": 200,
             "title": "Contact us - EGI",
-            "chars": 1418,
+            "chars": 1409,
             "error": ""
           },
           {
@@ -1592,7 +1592,7 @@
             "link_text": "About",
             "http_status": 200,
             "title": "About - EGI",
-            "chars": 5705,
+            "chars": 5696,
             "error": ""
           }
         ],
@@ -1747,7 +1747,7 @@
             "link_text": "Contact",
             "http_status": 200,
             "title": "Contact - GÉANT",
-            "chars": 3159,
+            "chars": 3135,
             "error": ""
           },
           {

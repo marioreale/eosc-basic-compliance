@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.0
 
-Run `live-2026-09-24-no-italy` · 2026-09-24T19:39:15+00:00 · 12 nodes · one page request per node plus 32 followed link(s) in total (depth 1).
+Run `live-2026-09-24-no-italy` · 2026-09-25T12:22:06+00:00 · 12 nodes · one page request per node plus 32 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
 
@@ -100,7 +100,7 @@ Be in English (Any other pages and information are not required to be strictly i
 <https://www.bbmri-eric.eu/eosc-node-bbmri-eric/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 7100 characters of text rendered
+  - HTTP 200 anonymously, 7094 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 6 distinct external host(s) linked from the landing page
   - directory.bbmri-eric.eu (Directory)
@@ -121,14 +121,14 @@ Be in English (Any other pages and information are not required to be strictly i
   - "See the dedicated page on the EOSC website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
 - **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 84 outbound link(s) on the landing page
-  - main text length: 7100 characters
+  - main text length: 7094 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟠 review — An acceptable use policy is mentioned in the page text but not as a followable link.
   - text mentions: AUP
   - *Reviewer action:* Find where an Acceptable Use Policy is actually published and confirm it is reachable.
 - **5c** 🟢 PASS — The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.
   - "Access Policies" -> https://www.bbmri-eric.eu/services/access-policies/
-  - followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8929 chars, title: Access Policies - BBMRI-ERIC
+  - followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8923 chars, title: Access Policies - BBMRI-ERIC
   - policy wording found: Policy, You may, conditions
   - *Reviewer action:* Confirm it covers all the node's resources and is in English.
 - **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
@@ -199,7 +199,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - meta description: "Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access."
   - opening main text: "You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. What Is the EOSC Federation? The EOSC Federation enables researchers to access trustworthy and secure data, software, services and other digital resources acros..."
   - organisation-like names found: Masaryk University
-  - about page one level down: https://www.eosc.cz/en/about-eosc-cz/contact (HTTP 200) opening text: "You are here: Home Contact Contact Contact for media Mgr. Bc. xxxxx correspondence Address: xxxxxx@ics.muni.cz phone: +420xxxxxxx General contacts Contact: info@eosc.cz EOSC CZ Training Centre: events@eosc.cz Correspondence address of the EOS..."
+  - about page one level down: https://www.eosc.cz/en/about-eosc-cz/contact (HTTP 200) opening text: "You are here: Home Contact Contact Contact for media Mgr. Bc. XXXXX XXXXX correspondence Address: XXXXX@ics.muni.cz phone: +420 XXXXXX General contacts Contact: info@eosc.cz EOSC CZ Training Centre: events@eosc.cz Correspondence address of the EOSC-CZ project ..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 4 image/SVG element(s) examined, none referencing EOSC
@@ -320,7 +320,7 @@ Be in English (Any other pages and information are not required to be strictly i
 <https://eosc.fi/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 3329 characters of text rendered
+  - HTTP 200 anonymously, 3315 characters of text rendered
   - redirects followed: 1
 - **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 10 distinct external host(s) linked from the landing page
@@ -348,7 +348,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "Terms of use" -> https://research.csc.fi/terms-of-use/
   - "Prerequisites and responsibilities for a CSC project manager" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/
-  - followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16560 chars, title: Terms of use - Services for Research
+  - followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16556 chars, title: Terms of use - Services for Research
   - policy wording found: Terms, comply, conditions, permitted
   - *Reviewer action:* Confirm it covers all the node's resources and is in English.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
