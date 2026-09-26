@@ -67,7 +67,7 @@ def test_point1_does_not_fail_on_403_with_no_login_offered():
 
 
 def test_point1_is_manual_when_403_but_a_login_exists():
-    """Branch (b) may apply, but only the EEN can confirm it is EOSC AAI."""
+    """Branch (b) may apply, but only the [P.2] verification can confirm it is EOSC AAI."""
     r = checks.check_1(ev(http_status=403, full_text="Please log in to continue" * 20))
     assert r.verdict == checks.MANUAL_REVIEW
     assert "EOSC AAI" in r.message

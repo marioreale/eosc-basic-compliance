@@ -1,33 +1,33 @@
 {
   "run_id": "web-4",
-  "generated_at": "2026-09-26T10:18:01+00:00",
+  "generated_at": "2026-09-26T10:41:22+00:00",
   "checklist": {
-    "checklist_version": "3.0",
-    "checklist_date": "2026-09-15",
-    "source_document": "20260910_Node_Landing_Page_Verification_Checklist_v3.0.docx",
-    "source_file": "20260910_Node_Landing_Page_Verification_Checklist_v3.0.pdf",
-    "source_sha256": "31e0acbc0c40eee271213ac6f2dcc1ef634c7b067119f515ddb06ddbc0145b59",
+    "checklist_version": "3.1",
+    "checklist_date": "2026-09-24",
+    "source_document": "20260910_Node_Landing_Page_Verification_Checklist_v3.1.docx",
+    "source_file": "20260910_Node_Landing_Page_Verification_Checklist_v3.1.pdf",
+    "source_sha256": "65ca61a12a38f61a65e0b419b48d817be0792f6886beaecdbf8592bfab58709e",
     "points": [
       {
         "id": "1",
         "title": "NLP is publicly accessible, or reachable via EOSC AAI login",
-        "requirement": "The Node Landing Page must either be (a) publicly accessible (anonymously, i.e. without the need for users to login) or (b) accessible via login through EOSC AAI.",
+        "requirement": "The NLP [...] must be either publicly accessible without login, or accessible via login through the EOSC AAI. \"Accessible via login through the EOSC AAI\" means the page presents a login button or link pointing to the Node's EOSC AAI-compliant access mechanism, integrated and verified under requirement [P.2] of the Production 1.0 Checklist for EOSC Nodes, v1.4.",
         "implemented_by": "check_1",
         "decidable": true,
         "decidable_note": "Anonymous reachability is directly observable: fetch the URL without credentials and see whether the content is served. Branch (b) only matters when (a) fails."
       },
       {
         "id": "1R",
-        "title": "Resources pointed to by the NLP are public or behind EOSC AAI",
-        "requirement": "All resources pointed by the Node Landing Page, thus exposed to EOSC users, either directly or through links through intermediate pages, must either be publicly accessible or accessible via login through EOSC AAI.",
+        "title": "Node Exchange resources linked from the NLP are public or behind EOSC AAI",
+        "requirement": "[The NLP, and] every Node Exchange resource it links to, directly or via intermediate pages, must be either publicly accessible without login, or accessible via login through the EOSC AAI.",
         "implemented_by": "check_1R",
         "decidable": false,
-        "decidable_note": "Not decidable by inspection, and one level of link following does not close the gap. The requirement quantifies over every resource reachable from the page \"either directly or through links through intermediate pages\", which is unbounded; this tool follows at most one level, and only links that can settle a specific point. Even with full traversal it would still require confirming that each login encountered is genuinely EOSC AAI rather than a local or institutional IdP, and whether a given login is EOSC AAI compliant is settled during node enrolment with the EEN, not by reading HTML. The tool reports how many followed pages were served anonymously and lists the outbound resource links it found, so a reviewer has a work list."
+        "decidable_note": "Not decidable by inspection, and one level of link following does not close the gap. The requirement quantifies over every resource reachable from the page \"directly or via intermediate pages\", which is unbounded; this tool follows at most one level, and only links that can settle a specific point. Even with full traversal it would still require confirming that each login encountered is genuinely EOSC AAI rather than a local or institutional IdP, and whether a given login is EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist, not by reading HTML. Nor can a script tell which linked resources are Node Exchange resources. The tool reports how many followed pages were served anonymously and lists the outbound resource links it found, so a reviewer has a work list."
       },
       {
         "id": "2",
-        "title": "Scope, intended users and responsible organization are stated",
-        "requirement": "Clearly state the Node's scope, intended users and responsible organization. (It is up to the Node to feature all the organisations involved).",
+        "title": "Scope, intended users and responsible organisation are stated",
+        "requirement": "Clearly state the Node's scope, intended users and responsible organisation. (It is up to the Node to feature all the organisations involved).",
         "implemented_by": "check_2",
         "decidable": false,
         "decidable_note": "\"Clearly state\" is a judgement about whether prose communicates three things to a researcher. A keyword match would produce confident nonsense in both directions. The tool extracts the candidate passages and names the reviewer must read."
@@ -43,31 +43,31 @@
       {
         "id": "4",
         "title": "Link to the node's own dedicated page on eosc.eu",
-        "requirement": "Provide a link to the Node's own dedicated page on the eosc.eu website — the Node's entry under eosc.eu/building-the-eosc-federation, not the eosc.eu homepage or the index page itself.",
+        "requirement": "Include a link to the Node's own dedicated page on the eosc.eu website — the Node's entry under eosc.eu/building-the-eosc-federation, not the eosc.eu homepage or the index page itself.",
         "implemented_by": "check_4",
         "decidable": true,
         "decidable_note": "Fully decidable and the sharpest point in the checklist: an href under eosc.eu/building-the-eosc-federation/ with a path segment beyond the index. The checklist explicitly excludes both the homepage and the index, so those are matched and rejected rather than ignored."
       },
       {
         "id": "5a",
-        "title": "Purpose description accessible in English for research resources",
-        "requirement": "For all research resources offered by the Node to EOSC users, a purpose description must be accessible in English either directly or via the link to the resource's entry in the EOSC Catalogue.",
+        "title": "Purpose description accessible in English for Node Exchange research resources",
+        "requirement": "For all Node Exchange research resources offered by the Node to EOSC users, a purpose description must be accessible in English either directly or via the link to the resource's entry in the EOSC Catalogue.",
         "implemented_by": "check_5a",
         "decidable": false,
-        "decidable_note": "Requires enumerating \"all research resources offered by the Node\", which is not derivable from the landing page alone and is not what this tool's single level of link following collects. Judging whether each description states a purpose is then a reading task, not a pattern match."
+        "decidable_note": "Requires enumerating \"all Node Exchange research resources offered by the Node\", which is not derivable from the landing page alone and is not what this tool's single level of link following collects. Judging whether each description states a purpose is then a reading task, not a pattern match."
       },
       {
         "id": "5b",
-        "title": "Acceptable Use Policy (AUP) accessible for research resources",
-        "requirement": "For all research resources offered by the Node, the Acceptable Use Policy (AUP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.",
+        "title": "Acceptable Use Policy (AUP) accessible for Node Exchange research resources",
+        "requirement": "For all Node Exchange research resources offered by the Node to EOSC users, the Acceptable Use Policy (AUP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.",
         "implemented_by": "check_5b",
         "decidable": "partial",
-        "decidable_note": "A pointer to an AUP on the landing page is checkable. \"For all research resources\" is not, without enumerating the resources. Absence of a pointer on the landing page is therefore reported as MANUAL_REVIEW, never FAIL: the policy may legitimately live on each resource's catalogue entry, which is exactly what the checklist permits."
+        "decidable_note": "A pointer to an AUP on the landing page is checkable. \"For all Node Exchange research resources\" is not, without enumerating the resources. Absence of a pointer on the landing page is therefore reported as MANUAL_REVIEW, never FAIL: the policy may legitimately live on each resource's catalogue entry, which is exactly what the checklist permits."
       },
       {
         "id": "5c",
-        "title": "User Access Policy (UAP) accessible for research resources",
-        "requirement": "For all research resources offered by the Node, the User Access Policy (UAP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.",
+        "title": "User Access Policy (UAP) accessible for Node Exchange research resources",
+        "requirement": "For all Node Exchange research resources offered by the Node to EOSC users, the User Access Policy (UAP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.",
         "implemented_by": "check_5c",
         "decidable": "partial",
         "decidable_note": "Same reasoning as 5b. Note that AUP and UAP are distinct documents in this checklist and must not be conflated: an \"Access Policy\" satisfies 5c, an \"Acceptable Use Policy\" satisfies 5b, and many nodes publish only one."
@@ -82,11 +82,11 @@
       },
       {
         "id": "7",
-        "title": "The page is in English",
-        "requirement": "Be in English (Any other pages and information are not required to be strictly in English).",
+        "title": "The NLP itself is in English",
+        "requirement": "The NLP itself is in English. Other pages need not be, except for the information required by item 5.",
         "implemented_by": "check_7",
         "decidable": true,
-        "decidable_note": "Statistical language detection over the page's main text, cross-checked against the declared lang attribute. Both are reported, because a mismatch between what a page declares and what it actually contains is itself worth seeing."
+        "decidable_note": "Statistical language detection over the page's main text, cross-checked against the declared lang attribute. Both are reported, because a mismatch between what a page declares and what it actually contains is itself worth seeing. The exception for item 5 information is assessed under 5a-5c, whose requirements already demand English."
       }
     ]
   },
@@ -192,7 +192,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "6 distinct external host(s) linked from the landing page",
             "directory.bbmri-eric.eu (Directory)",
@@ -208,7 +208,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -244,7 +244,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "84 outbound link(s) on the landing page",
             "main text length: 7094 characters"
@@ -335,7 +335,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "1 distinct external host(s) linked from the landing page",
             "cern.service-now.com (Contact Support, Privacy policy)",
@@ -345,7 +345,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -381,7 +381,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "6 outbound link(s) on the landing page",
             "main text length: 127 characters"
@@ -535,7 +535,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "7 distinct external host(s) linked from the landing page",
             "bsky.app",
@@ -552,7 +552,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -590,7 +590,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "78 outbound link(s) on the landing page",
             "main text length: 4021 characters"
@@ -716,7 +716,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "5 distinct external host(s) linked from the landing page",
             "doi.org (EOSC-Marine project)",
@@ -731,7 +731,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -768,7 +768,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "57 outbound link(s) on the landing page",
             "main text length: 12097 characters"
@@ -869,7 +869,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "38 distinct external host(s) linked from the landing page",
             "cnes.fr",
@@ -890,7 +890,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -926,7 +926,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "93 outbound link(s) on the landing page",
             "main text length: 5739 characters"
@@ -1071,7 +1071,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "10 distinct external host(s) linked from the landing page",
             "csc.fi (Detailed contact information (External link), Directions (External link), Main website – csc.fi (External link))",
@@ -1091,7 +1091,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -1128,7 +1128,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "85 outbound link(s) on the landing page",
             "main text length: 823 characters"
@@ -1261,7 +1261,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "40 distinct external host(s) linked from the landing page",
             "aiidalab-qe.readthedocs.io (AiiDAlab Quantum ESPRESSO (QE) app)",
@@ -1282,7 +1282,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -1321,7 +1321,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "123 outbound link(s) on the landing page",
             "main text length: 7846 characters"
@@ -1452,7 +1452,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "3 distinct external host(s) linked from the landing page",
             "docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node services.)",
@@ -1464,7 +1464,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -1501,7 +1501,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "11 outbound link(s) on the landing page",
             "main text length: 742 characters"
@@ -1628,7 +1628,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "5 distinct external host(s) linked from the landing page",
             "bsky.app",
@@ -1643,7 +1643,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -1680,7 +1680,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "167 outbound link(s) on the landing page",
             "main text length: 4451 characters"
@@ -1763,13 +1763,13 @@
             "bot-protection wording seen: Cloudflare, Just a moment, Ray ID",
             "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1"
           ],
-          "reviewer_action": "Open the URL in a normal browser. If it loads, this point passes and the block was bot protection. If it demands a login, confirm with the EEN that the login is EOSC AAI compliant."
+          "reviewer_action": "Open the URL in a normal browser. If it loads, this point passes and the block was bot protection. If it demands a login, confirm that the login is EOSC AAI compliant, as verified under requirement [P.2] of the Production 1.0 Checklist."
         },
         {
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "1 distinct external host(s) linked from the landing page",
             "www.cloudflare.com (Cloudflare, Privacy)"
@@ -1778,7 +1778,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -1814,7 +1814,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "2 outbound link(s) on the landing page",
             "main text length: 241 characters"
@@ -1970,7 +1970,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "5 distinct external host(s) linked from the landing page",
             "bsky.app (Bluesky)",
@@ -1984,7 +1984,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -2022,7 +2022,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "128 outbound link(s) on the landing page",
             "main text length: 4706 characters"
@@ -2125,7 +2125,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "7 distinct external host(s) linked from the landing page",
             "eoscnode-it.d4science.org:443 (EOSC-IT-Node Gateway)",
@@ -2141,7 +2141,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -2178,7 +2178,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "15 outbound link(s) on the landing page",
             "main text length: 191 characters"
@@ -2278,7 +2278,7 @@
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
           "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
             "19 distinct external host(s) linked from the landing page",
             "app.crepc.sk (CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only])",
@@ -2300,7 +2300,7 @@
         },
         {
           "point_id": "2",
-          "title": "Scope, users and responsible organization stated",
+          "title": "Scope, users and responsible organisation stated",
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
@@ -2340,7 +2340,7 @@
           "point_id": "5a",
           "title": "Purpose description for research resources",
           "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
             "45 outbound link(s) on the landing page",
             "main text length: 8448 characters"

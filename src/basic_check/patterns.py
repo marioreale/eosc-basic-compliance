@@ -153,7 +153,8 @@ LOGIN_PATTERNS = [
 ]
 
 # Markers that a login is EOSC AAI specifically, not a local IdP. Presence is
-# suggestive only; the checklist says this is verified during EEN enrolment.
+# suggestive only; the checklist says this is verified under requirement [P.2]
+# of the Production 1.0 Checklist for EOSC Nodes.
 AAI_HINTS = [
     r"(?i)eosc[\s\-]?aai",
     r"(?i)aai\.eosc",

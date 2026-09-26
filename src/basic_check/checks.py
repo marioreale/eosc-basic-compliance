@@ -8,7 +8,8 @@ Verdict vocabulary, and why it is not just pass/fail:
     ERROR          the tool could not assess (page unreachable, etc.)
 
 MANUAL_REVIEW is the important one. Several checklist points turn on words like
-"clearly state" or quantify over "all research resources offered by the Node" —
+"clearly state" or quantify over "all Node Exchange research resources offered by
+the Node" —
 neither is settleable by inspecting one page. Emitting PASS or FAIL on those
 would be a guess dressed as a verdict, and a wrong FAIL against a node is
 expensive to retract. Where the tool cannot know, it says so and hands over the
@@ -215,7 +216,8 @@ def check_1(ev: PageEvidence) -> Result:
                 "Branch (b) may apply, but whether that login is EOSC AAI cannot be "
                 "confirmed from the page.",
                 [f"HTTP {status}", f"login indicators: {', '.join(logins[:4])}"],
-                reviewer_action="Confirm with the EEN that the node's login is EOSC AAI compliant.",
+                reviewer_action=
+                "Confirm that the node's login is EOSC AAI compliant, as verified under requirement [P.2] of the Production 1.0 Checklist.",
             )
         # A 403 with no login in sight is weak evidence about public accessibility.
         # Genuine access control almost always redirects to a login page; a bare
@@ -241,8 +243,8 @@ def check_1(ev: PageEvidence) -> Result:
             "normally. It could not be verified either way.",
             [f"HTTP {status}", detail, f"final URL: {ev.final_url}"],
             reviewer_action="Open the URL in a normal browser. If it loads, this point passes and "
-            "the block was bot protection. If it demands a login, confirm with the EEN that the "
-            "login is EOSC AAI compliant.",
+            "the block was bot protection. If it demands a login, confirm that the login is EOSC "
+            "AAI compliant, as verified under requirement [P.2] of the Production 1.0 Checklist.",
         )
 
     if status in DEAD_STATUSES:
@@ -333,10 +335,11 @@ def check_1R(ev: PageEvidence) -> Result:
         "1R",
         "Linked resources public or via EOSC AAI",
         MANUAL_REVIEW,
-        "Not assessable in full: it quantifies over every resource reachable through the "
-        "landing page, including through intermediate pages, and whether a given login is "
-        "genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading "
-        "HTML. One level of crawling narrows this but cannot close it.",
+        "Not assessable in full: it quantifies over every Node Exchange resource reachable "
+        "through the landing page, including through intermediate pages, and whether a given "
+        "login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the "
+        "Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows "
+        "this but cannot close it.",
         lines,
         reviewer_action="Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.",
     )
@@ -346,9 +349,9 @@ def check_1R(ev: PageEvidence) -> Result:
 
 
 def check_2(ev: PageEvidence) -> Result:
-    """Scope, intended users, responsible organization. A judgement, not a match."""
+    """Scope, intended users, responsible organisation. A judgement, not a match."""
     if ev.error:
-        return Result("2", "Scope, users and responsible organization stated", ERROR, f"Page not fetched: {ev.error}")
+        return Result("2", "Scope, users and responsible organisation stated", ERROR, f"Page not fetched: {ev.error}")
 
     snippet = ev.main_text[:600] or ev.full_text[:600]
     lines = []
@@ -385,7 +388,7 @@ def check_2(ev: PageEvidence) -> Result:
 
     return Result(
         "2",
-        "Scope, users and responsible organization stated",
+        "Scope, users and responsible organisation stated",
         MANUAL_REVIEW,
         'Requires reading the page: "clearly state" is a judgement about whether the prose '
         "conveys scope, intended users, and the responsible organisation to a researcher. "
@@ -710,7 +713,7 @@ def check_5a(ev: PageEvidence) -> Result:
         "5a",
         "Purpose description for research resources",
         MANUAL_REVIEW,
-        'Quantifies over "all research resources offered by the Node", which cannot be '
+        'Quantifies over "all Node Exchange research resources offered by the Node", which cannot be '
         "enumerated from the landing page alone. The checklist also allows the description "
         "to live in the resource's EOSC Catalogue entry rather than on this page.",
         [

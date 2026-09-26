@@ -1,8 +1,8 @@
-# EOSC Node Landing Page compliance — checklist v3.0
+# EOSC Node Landing Page compliance — checklist v3.1
 
-Run `web-4` · 2026-09-26T10:18:01+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
+Run `web-4` · 2026-09-26T10:41:22+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
 
-> **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all research resources").
+> **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
 **Node names.** 13 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `871161a50fcb…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
 
@@ -26,7 +26,7 @@ Run `web-4` · 2026-09-26T10:18:01+00:00 · 13 nodes · one page request per nod
 
 ## What each column means
 
-Full requirement text and the reasoning behind each verdict: [checklist v3.0 explained](checklist-v3.0.html).
+Full requirement text and the reasoning behind each verdict: [checklist v3.1 explained](checklist-v3.1.html).
 
 | Column | Question it answers | Can a tool decide it? |
 |---|---|---|
@@ -44,17 +44,17 @@ Full requirement text and the reasoning behind each verdict: [checklist v3.0 exp
 ## Points in full
 
 **1 — NLP is publicly accessible, or reachable via EOSC AAI login** (decidable by inspection)  
-The Node Landing Page must either be (a) publicly accessible (anonymously, i.e. without the need for users to login) or (b) accessible via login through EOSC AAI.
+The NLP [...] must be either publicly accessible without login, or accessible via login through the EOSC AAI. "Accessible via login through the EOSC AAI" means the page presents a login button or link pointing to the Node's EOSC AAI-compliant access mechanism, integrated and verified under requirement [P.2] of the Production 1.0 Checklist for EOSC Nodes, v1.4.
 
 > Anonymous reachability is directly observable: fetch the URL without credentials and see whether the content is served. Branch (b) only matters when (a) fails.
 
-**1R — Resources pointed to by the NLP are public or behind EOSC AAI** (needs a human)  
-All resources pointed by the Node Landing Page, thus exposed to EOSC users, either directly or through links through intermediate pages, must either be publicly accessible or accessible via login through EOSC AAI.
+**1R — Node Exchange resources linked from the NLP are public or behind EOSC AAI** (needs a human)  
+[The NLP, and] every Node Exchange resource it links to, directly or via intermediate pages, must be either publicly accessible without login, or accessible via login through the EOSC AAI.
 
-> Not decidable by inspection, and one level of link following does not close the gap. The requirement quantifies over every resource reachable from the page "either directly or through links through intermediate pages", which is unbounded; this tool follows at most one level, and only links that can settle a specific point. Even with full traversal it would still require confirming that each login encountered is genuinely EOSC AAI rather than a local or institutional IdP, and whether a given login is EOSC AAI compliant is settled during node enrolment with the EEN, not by reading HTML. The tool reports how many followed pages were served anonymously and lists the outbound resource links it found, so a reviewer has a work list.
+> Not decidable by inspection, and one level of link following does not close the gap. The requirement quantifies over every resource reachable from the page "directly or via intermediate pages", which is unbounded; this tool follows at most one level, and only links that can settle a specific point. Even with full traversal it would still require confirming that each login encountered is genuinely EOSC AAI rather than a local or institutional IdP, and whether a given login is EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist, not by reading HTML. Nor can a script tell which linked resources are Node Exchange resources. The tool reports how many followed pages were served anonymously and lists the outbound resource links it found, so a reviewer has a work list.
 
-**2 — Scope, intended users and responsible organization are stated** (needs a human)  
-Clearly state the Node's scope, intended users and responsible organization. (It is up to the Node to feature all the organisations involved).
+**2 — Scope, intended users and responsible organisation are stated** (needs a human)  
+Clearly state the Node's scope, intended users and responsible organisation. (It is up to the Node to feature all the organisations involved).
 
 > "Clearly state" is a judgement about whether prose communicates three things to a researcher. A keyword match would produce confident nonsense in both directions. The tool extracts the candidate passages and names the reviewer must read.
 
@@ -64,22 +64,22 @@ Clearly and visibly show the EOSC logo and the official Tripartite-approved name
 > Presence of an EOSC logo image is checkable, with caveats: a logo rendered as a CSS background or inlined SVG sprite can be missed, and "clearly and visibly" is a judgement. The Tripartite-approved name is NOT checkable without the authoritative list of approved node names, which the tool does not have; supply it via --approved-names to turn this into a real check.
 
 **4 — Link to the node's own dedicated page on eosc.eu** (decidable by inspection)  
-Provide a link to the Node's own dedicated page on the eosc.eu website — the Node's entry under eosc.eu/building-the-eosc-federation, not the eosc.eu homepage or the index page itself.
+Include a link to the Node's own dedicated page on the eosc.eu website — the Node's entry under eosc.eu/building-the-eosc-federation, not the eosc.eu homepage or the index page itself.
 
 > Fully decidable and the sharpest point in the checklist: an href under eosc.eu/building-the-eosc-federation/ with a path segment beyond the index. The checklist explicitly excludes both the homepage and the index, so those are matched and rejected rather than ignored.
 
-**5a — Purpose description accessible in English for research resources** (needs a human)  
-For all research resources offered by the Node to EOSC users, a purpose description must be accessible in English either directly or via the link to the resource's entry in the EOSC Catalogue.
+**5a — Purpose description accessible in English for Node Exchange research resources** (needs a human)  
+For all Node Exchange research resources offered by the Node to EOSC users, a purpose description must be accessible in English either directly or via the link to the resource's entry in the EOSC Catalogue.
 
-> Requires enumerating "all research resources offered by the Node", which is not derivable from the landing page alone and is not what this tool's single level of link following collects. Judging whether each description states a purpose is then a reading task, not a pattern match.
+> Requires enumerating "all Node Exchange research resources offered by the Node", which is not derivable from the landing page alone and is not what this tool's single level of link following collects. Judging whether each description states a purpose is then a reading task, not a pattern match.
 
-**5b — Acceptable Use Policy (AUP) accessible for research resources** (partly decidable)  
-For all research resources offered by the Node, the Acceptable Use Policy (AUP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.
+**5b — Acceptable Use Policy (AUP) accessible for Node Exchange research resources** (partly decidable)  
+For all Node Exchange research resources offered by the Node to EOSC users, the Acceptable Use Policy (AUP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.
 
-> A pointer to an AUP on the landing page is checkable. "For all research resources" is not, without enumerating the resources. Absence of a pointer on the landing page is therefore reported as MANUAL_REVIEW, never FAIL: the policy may legitimately live on each resource's catalogue entry, which is exactly what the checklist permits.
+> A pointer to an AUP on the landing page is checkable. "For all Node Exchange research resources" is not, without enumerating the resources. Absence of a pointer on the landing page is therefore reported as MANUAL_REVIEW, never FAIL: the policy may legitimately live on each resource's catalogue entry, which is exactly what the checklist permits.
 
-**5c — User Access Policy (UAP) accessible for research resources** (partly decidable)  
-For all research resources offered by the Node, the User Access Policy (UAP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.
+**5c — User Access Policy (UAP) accessible for Node Exchange research resources** (partly decidable)  
+For all Node Exchange research resources offered by the Node to EOSC users, the User Access Policy (UAP) must be accessible in English either directly or via the resource's entry in the EOSC Catalogue.
 
 > Same reasoning as 5b. Note that AUP and UAP are distinct documents in this checklist and must not be conflated: an "Access Policy" satisfies 5c, an "Acceptable Use Policy" satisfies 5b, and many nodes publish only one.
 
@@ -88,10 +88,10 @@ Provide means of contacting the Node helpdesk.
 
 > A contact route (mailto:, contact/support/helpdesk page, contact form) is checkable. Whether it reaches a *helpdesk* rather than a generic press or info address is a judgement, so a generic-looking contact is flagged rather than passed silently.
 
-**7 — The page is in English** (decidable by inspection)  
-Be in English (Any other pages and information are not required to be strictly in English).
+**7 — The NLP itself is in English** (decidable by inspection)  
+The NLP itself is in English. Other pages need not be, except for the information required by item 5.
 
-> Statistical language detection over the page's main text, cross-checked against the declared lang attribute. Both are reported, because a mismatch between what a page declares and what it actually contains is itself worth seeing.
+> Statistical language detection over the page's main text, cross-checked against the declared lang attribute. Both are reported, because a mismatch between what a page declares and what it actually contains is itself worth seeing. The exception for item 5 information is assessed under 5a-5c, whose requirements already demand English.
 
 ## Detail
 
@@ -100,7 +100,7 @@ Be in English (Any other pages and information are not required to be strictly i
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 7094 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 6 distinct external host(s) linked from the landing page
   - directory.bbmri-eric.eu (Directory)
   - negotiator.bbmri-eric.eu (Negotiator)
@@ -118,7 +118,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "See the dedicated page on the EOSC website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 84 outbound link(s) on the landing page
   - main text length: 7094 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -147,7 +147,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - HTTP 200
   - text length: 127
   - *Reviewer action:* Open the page in a browser and confirm content is served anonymously.
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 1 distinct external host(s) linked from the landing page
   - cern.service-now.com (Contact Support, Privacy policy)
   - EOSC AAI indicators seen: myaccessid
@@ -165,7 +165,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - 6 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-cern/ but is not linked from here
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 6 outbound link(s) on the landing page
   - main text length: 127 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -188,7 +188,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 5675 characters of text rendered
   - redirects followed: 2
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 7 distinct external host(s) linked from the landing page
   - bsky.app
   - nma.eosc.cz (National Metadata Directory)
@@ -208,7 +208,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **4** 🔴 **FAIL** — Links only to the building-the-eosc-federation index, which the checklist explicitly excludes. The node's own dedicated entry is required.
   - "EOSC Federation" -> https://eosc.eu/building-the-eosc-federation
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-czechia/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 78 outbound link(s) on the landing page
   - main text length: 4021 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -231,7 +231,7 @@ Be in English (Any other pages and information are not required to be strictly i
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 12319 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 5 distinct external host(s) linked from the landing page
   - doi.org (EOSC-Marine project)
   - ec.europa.eu (EU H2020 programme)
@@ -250,7 +250,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - "View the dedicated Node page on eosc.eu →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
   - "Open the official Node entry →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
   - "Node page in EOSC Federation" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 57 outbound link(s) on the landing page
   - main text length: 12097 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -276,7 +276,7 @@ Be in English (Any other pages and information are not required to be strictly i
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 19620 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 38 distinct external host(s) linked from the landing page
   - cnes.fr
   - fr.linkedin.com
@@ -294,7 +294,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 93 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 93 outbound link(s) on the landing page
   - main text length: 5739 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -320,7 +320,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 3315 characters of text rendered
   - redirects followed: 1
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 10 distinct external host(s) linked from the landing page
   - csc.fi (Detailed contact information (External link), Directions (External link), Main website – csc.fi (External link))
   - docs.csc.fi (Applications catalogue (External link), Docs CSC - User guides (External link), User guides (External link))
@@ -339,7 +339,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 85 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-finland/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 85 outbound link(s) on the landing page
   - main text length: 823 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -366,7 +366,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 7846 characters of text rendered
   - redirects followed: 2
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 40 distinct external host(s) linked from the landing page
   - aiidalab-qe.readthedocs.io (AiiDAlab Quantum ESPRESSO (QE) app)
   - api.whatsapp.com
@@ -386,7 +386,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **4** 🔴 **FAIL** — Links only to the building-the-eosc-federation index, which the checklist explicitly excludes. The node's own dedicated entry is required.
   - "Building the EOSC Federation" -> https://eosc.eu/eosc-about/building-the-eosc-federation/
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 123 outbound link(s) on the landing page
   - main text length: 7846 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -412,7 +412,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 1130 characters of text rendered
   - redirects followed: 1
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 3 distinct external host(s) linked from the landing page
   - docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node services.)
   - eudat.eu (Service catalogue Browse the EUDAT Node services you can order, no account needed.)
@@ -431,7 +431,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EOSC Node EUDAT" -> https://eosc.eu/building-the-eosc-federation/eosc-node-eudat
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 11 outbound link(s) on the landing page
   - main text length: 742 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -455,7 +455,7 @@ Be in English (Any other pages and information are not required to be strictly i
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 6638 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 5 distinct external host(s) linked from the landing page
   - bsky.app
   - github.com
@@ -474,7 +474,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 167 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-egi/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 167 outbound link(s) on the landing page
   - main text length: 4451 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -503,8 +503,8 @@ Be in English (Any other pages and information are not required to be strictly i
   - HTTP 403
   - bot-protection wording seen: Cloudflare, Just a moment, Ray ID
   - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser. If it loads, this point passes and the block was bot protection. If it demands a login, confirm with the EEN that the login is EOSC AAI compliant.
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - *Reviewer action:* Open the URL in a normal browser. If it loads, this point passes and the block was bot protection. If it demands a login, confirm that the login is EOSC AAI compliant, as verified under requirement [P.2] of the Production 1.0 Checklist.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 1 distinct external host(s) linked from the landing page
   - www.cloudflare.com (Cloudflare, Privacy)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
@@ -521,7 +521,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - 2 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-geant/ but is not linked from here
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 2 outbound link(s) on the landing page
   - main text length: 241 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -543,7 +543,7 @@ Be in English (Any other pages and information are not required to be strictly i
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 6566 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 5 distinct external host(s) linked from the landing page
   - bsky.app (Bluesky)
   - mastodon.social (Mastodon)
@@ -563,7 +563,7 @@ Be in English (Any other pages and information are not required to be strictly i
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 128 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 128 outbound link(s) on the landing page
   - main text length: 4706 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -588,7 +588,7 @@ Be in English (Any other pages and information are not required to be strictly i
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 3254 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 7 distinct external host(s) linked from the landing page
   - eoscnode-it.d4science.org:443 (EOSC-IT-Node Gateway)
   - www.cnr.it (cnr)
@@ -607,7 +607,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - 15 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-italy/ but is not linked from here
   - note: a cookie-consent overlay dominates the captured text (main text only 191 chars; markers: Accept All, Reject All, We value your privacy); only 15 links captured, low for a landing page; only 191 characters of main text captured — the DOM was nonetheless complete, so absence stands
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 15 outbound link(s) on the landing page
   - main text length: 191 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
@@ -631,7 +631,7 @@ Be in English (Any other pages and information are not required to be strictly i
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
   - HTTP 200 anonymously, 8448 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled during EEN enrolment rather than by reading HTML. One level of crawling narrows this but cannot close it.
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 19 distinct external host(s) linked from the landing page
   - app.crepc.sk (CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only])
   - app.creuc.sk (CREUČ The Central Registry of Artistic Activity of Universities in the Slovak Republic [Slovak only])
@@ -650,7 +650,7 @@ Be in English (Any other pages and information are not required to be strictly i
   - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EOSC Node Slovakia (EOSC-A)" -> https://eosc.eu/building-the-eosc-federation/eosc-node-slovakia
-- **5a** 🟠 review — Quantifies over "all research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 45 outbound link(s) on the landing page
   - main text length: 8448 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.

@@ -1,7 +1,7 @@
 # eosc-basic-compliance
 
 Checks EOSC Node Landing Pages against the **Node Landing Page Verification
-Checklist v3.0** (15 September 2026). One result per checklist point, per node.
+Checklist v3.1** (24 September 2026). One result per checklist point, per node.
 
 **Deliberately light on the nodes' websites.** Each landing page is loaded once in
 a headless browser. The tool then follows **at most one level** of links, and only
@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 425
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 426
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -32,7 +32,7 @@ The Word and PDF copies are built from the Markdown guides at commit `3769a3e`.
 The Markdown is the source, so if the two differ, the Markdown is current.
 
 👉 **[Latest results](results/results.md)** · [browsable HTML report](results/index.html)
-· [checklist v3.0 explained](results/checklist-v3.0.html)
+· [checklist v3.1 explained](results/checklist-v3.1.html)
 (download and open locally, or use the GitHub Pages link if enabled)
 
 ## What it found
@@ -44,6 +44,11 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > The hand review of that earlier run is kept as history in
 > [results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md). Its findings
 > still apply wherever a page has not changed, but it does not cover this run.
+>
+> The same evidence was re-scored on 26 September 2026 against **checklist v3.1**
+> (24 September 2026), which replaced v3.0. No node was contacted, and no verdict
+> changed: v3.1 rewords the points and narrows 1R and 5a–5c to *Node Exchange*
+> resources, which the tool already treats as review items.
 
 All thirteen configured nodes were fetched on 26 September 2026 at `--depth 1`
 and assessed against the official unscoped names list. None was skipped. This
@@ -100,28 +105,28 @@ rest cannot be.
 
 | Column | The question it answers | Can a tool decide it? |
 |---|---|---|
-| [`1`](results/checklist-v3.0.html#p1) | Is the landing page served to an anonymous visitor, or behind an EOSC AAI login? | yes, by inspection |
-| [`1R`](results/checklist-v3.0.html#p1R) | Are the resources the page points to also public or behind EOSC AAI? | no, human judgement |
-| [`2`](results/checklist-v3.0.html#p2) | Does the page itself say what the node is and what it offers? | no, human judgement |
-| [`3`](results/checklist-v3.0.html#p3) | Does the page use the official Tripartite-approved node name? | partly |
-| [`4`](results/checklist-v3.0.html#p4) | Does the page link to this node's own page on eosc.eu? | yes, by inspection |
-| [`5a`](results/checklist-v3.0.html#p5a) | Does the page point to the policies governing its resources? | no, human judgement |
-| [`5b`](results/checklist-v3.0.html#p5b) | Is there an Acceptable Use Policy, and does it actually load? | partly |
-| [`5c`](results/checklist-v3.0.html#p5c) | Is there a User Access Policy, and does it actually load? | partly |
-| [`6`](results/checklist-v3.0.html#p6) | Can a user find a support or helpdesk route? | partly |
-| [`7`](results/checklist-v3.0.html#p7) | Is the page available in English? | yes, by inspection |
+| [`1`](results/checklist-v3.1.html#p1) | Is the landing page served to an anonymous visitor, or behind an EOSC AAI login? | yes, by inspection |
+| [`1R`](results/checklist-v3.1.html#p1R) | Are the Node Exchange resources the page links to also public or behind EOSC AAI? | no, human judgement |
+| [`2`](results/checklist-v3.1.html#p2) | Does the page itself say what the node is and what it offers? | no, human judgement |
+| [`3`](results/checklist-v3.1.html#p3) | Does the page use the official Tripartite-approved node name? | partly |
+| [`4`](results/checklist-v3.1.html#p4) | Does the page link to this node's own page on eosc.eu? | yes, by inspection |
+| [`5a`](results/checklist-v3.1.html#p5a) | Does the page point to the policies governing its resources? | no, human judgement |
+| [`5b`](results/checklist-v3.1.html#p5b) | Is there an Acceptable Use Policy, and does it actually load? | partly |
+| [`5c`](results/checklist-v3.1.html#p5c) | Is there a User Access Policy, and does it actually load? | partly |
+| [`6`](results/checklist-v3.1.html#p6) | Can a user find a support or helpdesk route? | partly |
+| [`7`](results/checklist-v3.1.html#p7) | Is the landing page itself in English? | yes, by inspection |
 
 Full requirement text for every point, quoted from the source document, is in
-**[checklist v3.0 explained](results/checklist-v3.0.html)** — generated from the same
-`checklist/v3.0.yaml` the checks read, so the explanation cannot drift from the rules.
+**[checklist v3.1 explained](results/checklist-v3.1.html)** — generated from the same
+`checklist/v3.1.yaml` the checks read, so the explanation cannot drift from the rules.
 
-`1R` is not a numbered point in the source checklist. Point 1 has two sentences: the
-landing page must be public or behind EOSC AAI, and so must *"all resources pointed by
-the Node Landing Page, either directly or through links through intermediate pages"*.
+`1R` is not a numbered point in the source checklist. Point 1 covers two things: the
+landing page must be public or behind EOSC AAI, and so must *"every Node Exchange
+resource it links to, directly or via intermediate pages"*.
 Those are different questions with different answers, so they are scored as separate
 columns. `1R` is always *review*: it quantifies over every resource reachable from the
-page, and whether a login is genuinely EOSC AAI compliant is settled during EEN
-enrolment, not by reading HTML. Splitting it out stops a node appearing to satisfy the
+page, and whether a login is genuinely EOSC AAI compliant is settled under
+requirement [P.2] of the Production 1.0 Checklist for EOSC Nodes, not by reading HTML. Splitting it out stops a node appearing to satisfy the
 whole of point 1 when only the page itself was checked.
 
 ## Why so much "review"
@@ -234,7 +239,7 @@ nodes; `assess`, `points` and `show` work offline.
 
 | Option | What it's for |
 |---|---|
-| `--checklist`, `-c <path>` | A rules file to use instead of `checklist/v3.0.yaml`, for example a future v3.1. `points` takes it too. |
+| `--checklist`, `-c <path>` | A rules file to use instead of `checklist/v3.1.yaml`, for example `checklist/v3.0.yaml` to rebuild a run made before 26 September 2026. `points` takes it too. |
 | `--approved-names <path>` | A list of approved node names for point 3, replacing `checklist/approved-names.txt`. `node-id: Name` ties a name to one node; a bare name counts for every node. |
 | `--no-approved-names` | Use no name list at all; point 3's name requirement is then not assessed. |
 | `--strict-separators` | Match the separators in approved names exactly. By default spaces, `\|`, `-`, `–`, `:`, `/` and `·` count as equivalent. |
@@ -556,7 +561,8 @@ format, how matching works, and what each node shows.
 - **Logos** are detected from image markup. A logo delivered as a CSS background
   or an SVG sprite will be missed, so absence of logo markup is reported as *not
   proof of absence*.
-- **AAI** compliance is verified during EEN enrolment, not by reading a page. The
+- **AAI** compliance is verified under requirement [P.2] of the Production 1.0
+  Checklist for EOSC Nodes (v1.4), not by reading a page. The
   tool only reports whether a login affordance is visible.
 - **AUP and UAP are kept distinct** (5b, 5c). They are different documents and
   are not treated as interchangeable.
@@ -566,7 +572,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 425 tests, a few seconds, no network, no browser
+uv run pytest -q          # 426 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -598,5 +604,5 @@ Two of them exist because probing found real bugs in this code:
 
 ## Source
 
-Checklist: *Node Landing Page Verification Checklist v3.0*, 15 September 2026.
+Checklist: *Node Landing Page Verification Checklist v3.1*, 24 September 2026.
 EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>

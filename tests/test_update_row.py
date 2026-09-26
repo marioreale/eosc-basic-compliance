@@ -208,8 +208,9 @@ def test_refuses_without_stored_results(tmp_path):
 def test_refuses_a_different_checklist(stored, tmp_path):
     other = tmp_path / "v9.yaml"
     text = cli.DEFAULT_CHECKLIST.read_text(encoding="utf-8")
-    assert 'checklist_version: "3.0"' in text
-    other.write_text(text.replace('checklist_version: "3.0"', 'checklist_version: "9.9"'), encoding="utf-8")
+    version_line = re.search(r'^checklist_version: "[^"]+"$', text, re.M)
+    assert version_line, "the default checklist must declare checklist_version"
+    other.write_text(text.replace(version_line.group(0), 'checklist_version: "9.9"'), encoding="utf-8")
     digest = _tree_digest(stored)
     with pytest.raises(typer.BadParameter, match="not the checklist"):
         cli._update_results_for_node(

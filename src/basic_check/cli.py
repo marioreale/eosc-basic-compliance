@@ -36,7 +36,7 @@ DEFAULT_NODES_SNAPSHOT = Path(__file__).resolve().parent / "defaults" / "nodes.y
 # when a new revision is adopted: add checklist/vX.Y.yaml beside the old one (see
 # checklist/README.md), then point this at it. Help texts, tests and reports all
 # follow from here.
-DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"
 DEFAULT_CHECKLIST_LABEL = f"checklist/{DEFAULT_CHECKLIST.name}"
 # The official Tripartite-approved node names, committed alongside the checklist
 # they serve. Used unless --approved-names names another file, so the name half

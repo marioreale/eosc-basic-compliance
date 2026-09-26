@@ -704,7 +704,7 @@ def _provenance(checklist: dict) -> str:
 
 
 def render_checklist_html(checklist: dict, out: Path) -> Path:
-    """A standalone, readable page explaining checklist v3.0 and each column.
+    """A standalone, readable page explaining the checklist and each column.
 
     Generated from the same YAML the checks read, so the explanation cannot drift
     away from the rules actually applied. A hand-written description of a
@@ -922,7 +922,7 @@ def render_markdown(run: dict, out: Path) -> Path:
         "",
         "> **This is not a compliance statement.** Points marked 🟠 review are ones this tool "
         "refuses to guess at: they either turn on a judgement (\"clearly state\") or quantify "
-        "over things this tool does not enumerate (\"all research resources\").",
+        "over things this tool does not enumerate (\"all Node Exchange research resources\").",
         "",
         f"**Node names.** {_names_sentence(run)}",
         "",
@@ -981,8 +981,8 @@ def render_markdown(run: dict, out: Path) -> Path:
                 "",
                 "That is a finding, not a failure of the deeper crawl. The points still "
                 "marked 🟠 review are not shallow-crawl artefacts: they turn on a judgement "
-                "(\"clearly state\") or quantify over things no crawl enumerates (\"all "
-                "research resources offered by the Node\"). Fetching more pages cannot "
+                "(\"clearly state\") or quantify over things no crawl enumerates (\"all Node "
+                "Exchange research resources offered by the Node\"). Fetching more pages cannot "
                 "settle either kind, which is why depth 1 remains the default.",
                 "",
             ]

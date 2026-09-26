@@ -1,0 +1,206 @@
+# Node Landing Page Verification Checklist v3.1 (24 September 2026)
+# transcribed as data, one entry per checklist point.
+#
+# The wording in `requirement` is quoted from the checklist so that a reader can
+# audit the rule against the source document without a diff. `decidable` records
+# whether a script can settle the point by inspection alone; where it cannot, the
+# tool gathers evidence and returns MANUAL_REVIEW rather than inventing a verdict.
+#
+# This distinction is the whole point of the design. A checker that returns
+# PASS/FAIL on every line looks more useful and is worth less: a confident wrong
+# answer about a node costs more to undo than an honest "a human must look".
+
+checklist_version: "3.1"
+checklist_date: "2026-09-24"
+
+# Provenance. `source_document` names the authoritative file as circulated;
+# `source_file` is the copy committed beside this YAML, and `source_sha256` is
+# its hash, asserted by tests/test_checklist.py. The point is that the
+# transcription below can be audited against the document it came from, without
+# relying on anyone's memory of what that document said.
+#
+# Note honestly what the hash does and does not prove: the committed file is a
+# PDF rendering of the .docx named in `source_document`, not that .docx itself.
+# It pins the exact bytes this transcription was made from, which is what catches
+# silent drift when a checklist is revised. It is not a signature over the
+# authoritative original. Swapping in the real .docx is a two-line change here
+# plus a re-hash.
+source_document: 20260910_Node_Landing_Page_Verification_Checklist_v3.1.docx
+source_file: 20260910_Node_Landing_Page_Verification_Checklist_v3.1.pdf
+source_sha256: 65ca61a12a38f61a65e0b419b48d817be0792f6886beaecdbf8592bfab58709e
+
+# What changed from v3.0 (15 September 2026), read point by point against the
+# document. The file name keeps the 20260910 prefix of the circulated .docx; the
+# version date inside the document is 24 September 2026.
+#
+# - 1 / 1R: the two sentences of point 1 are merged into one, and the resources
+#   in scope are now "every Node Exchange resource it links to". "Accessible via
+#   login through the EOSC AAI" is now defined by requirement [P.2] of the
+#   Production 1.0 Checklist for EOSC Nodes, v1.4, rather than by verification
+#   during enrolment with the EEN. The tool keeps the split into 1 (the page)
+#   and 1R (what it links to): the rules are unchanged, the 1R message now cites
+#   [P.2].
+# - 2: "organization" becomes "organisation". Wording only.
+# - 4: "Provide a link ... must be included" becomes "Include a link". Wording only.
+# - 5a/5b/5c: "all research resources" becomes "all Node Exchange research
+#   resources". Still not enumerable from the landing page, so still review.
+# - 6: a full stop added. Wording only.
+# - 7: now "The NLP itself is in English. Other pages need not be, except for
+#   the information required by item 5." check_7 already tested the landing page
+#   only; the English requirement for item 5 information is part of 5a-5c.
+
+# Each point declares, in `implemented_by`, the function in basic_check.checks
+# that decides it. tests/test_checklist.py asserts the mapping is total in both
+# directions: every point resolves to a real callable, and every check function
+# is claimed by exactly one point. Without this the YAML and the rules could
+# disagree in silence -- a reworded requirement paired with unchanged logic would
+# still produce reports quoting the new wording while applying the old rule.
+points:
+  - id: "1"
+    title: NLP is publicly accessible, or reachable via EOSC AAI login
+    requirement: >-
+      The NLP [...] must be either publicly accessible without login, or
+      accessible via login through the EOSC AAI. "Accessible via login through
+      the EOSC AAI" means the page presents a login button or link pointing to
+      the Node's EOSC AAI-compliant access mechanism, integrated and verified
+      under requirement [P.2] of the Production 1.0 Checklist for EOSC Nodes,
+      v1.4.
+    implemented_by: check_1
+    decidable: true
+    decidable_note: >-
+      Anonymous reachability is directly observable: fetch the URL without
+      credentials and see whether the content is served. Branch (b) only matters
+      when (a) fails.
+
+  - id: "1R"
+    title: Node Exchange resources linked from the NLP are public or behind EOSC AAI
+    requirement: >-
+      [The NLP, and] every Node Exchange resource it links to, directly or via
+      intermediate pages, must be either publicly accessible without login, or
+      accessible via login through the EOSC AAI.
+    implemented_by: check_1R
+    decidable: false
+    decidable_note: >-
+      Not decidable by inspection, and one level of link following does not close
+      the gap. The requirement quantifies over every resource reachable from the
+      page "directly or via intermediate pages", which is unbounded; this tool follows at most one level, and only links that can
+      settle a specific point. Even with full traversal it would still require
+      confirming that each login encountered is genuinely EOSC AAI rather than a
+      local or institutional IdP, and whether a given login is EOSC AAI compliant
+      is settled under requirement [P.2] of the Production 1.0 Checklist, not by
+      reading HTML. Nor can a script tell which linked resources are Node
+      Exchange resources. The tool
+      reports how many followed pages were served anonymously and lists the
+      outbound resource links it found, so a reviewer has a work list.
+
+  - id: "2"
+    title: Scope, intended users and responsible organisation are stated
+    requirement: >-
+      Clearly state the Node's scope, intended users and responsible organisation.
+      (It is up to the Node to feature all the organisations involved).
+    implemented_by: check_2
+    decidable: false
+    decidable_note: >-
+      "Clearly state" is a judgement about whether prose communicates three
+      things to a researcher. A keyword match would produce confident nonsense in
+      both directions. The tool extracts the candidate passages and names the
+      reviewer must read.
+
+  - id: "3"
+    title: EOSC logo and official Tripartite-approved node name are visible
+    requirement: >-
+      Clearly and visibly show the EOSC logo and the official Tripartite-approved
+      name of the Node.
+    implemented_by: check_3
+    decidable: partial
+    decidable_note: >-
+      Presence of an EOSC logo image is checkable, with caveats: a logo rendered
+      as a CSS background or inlined SVG sprite can be missed, and "clearly and
+      visibly" is a judgement. The Tripartite-approved name is NOT checkable
+      without the authoritative list of approved node names, which the tool does
+      not have; supply it via --approved-names to turn this into a real check.
+
+  - id: "4"
+    title: Link to the node's own dedicated page on eosc.eu
+    requirement: >-
+      Include a link to the Node's own dedicated page on the eosc.eu website —
+      the Node's entry under eosc.eu/building-the-eosc-federation, not the
+      eosc.eu homepage or the index page itself.
+    implemented_by: check_4
+    decidable: true
+    decidable_note: >-
+      Fully decidable and the sharpest point in the checklist: an href under
+      eosc.eu/building-the-eosc-federation/ with a path segment beyond the index.
+      The checklist explicitly excludes both the homepage and the index, so those
+      are matched and rejected rather than ignored.
+
+  - id: "5a"
+    title: Purpose description accessible in English for Node Exchange research resources
+    requirement: >-
+      For all Node Exchange research resources offered by the Node to EOSC users,
+      a purpose
+      description must be accessible in English either directly or via the link
+      to the resource's entry in the EOSC Catalogue.
+    implemented_by: check_5a
+    decidable: false
+    decidable_note: >-
+      Requires enumerating "all Node Exchange research resources offered by the
+      Node", which is
+      not derivable from the landing page alone and is not what this tool's single
+      level of link following collects. Judging whether each description states a
+      purpose is then a reading task, not a pattern match.
+
+  - id: "5b"
+    title: Acceptable Use Policy (AUP) accessible for Node Exchange research resources
+    requirement: >-
+      For all Node Exchange research resources offered by the Node to EOSC
+      users, the Acceptable Use Policy
+      (AUP) must be accessible in English either directly or via the resource's
+      entry in the EOSC Catalogue.
+    implemented_by: check_5b
+    decidable: partial
+    decidable_note: >-
+      A pointer to an AUP on the landing page is checkable. "For all Node
+      Exchange research resources" is not, without enumerating the resources. Absence of a pointer
+      on the landing page is therefore reported as MANUAL_REVIEW, never FAIL: the
+      policy may legitimately live on each resource's catalogue entry, which is
+      exactly what the checklist permits.
+
+  - id: "5c"
+    title: User Access Policy (UAP) accessible for Node Exchange research resources
+    requirement: >-
+      For all Node Exchange research resources offered by the Node to EOSC
+      users, the User Access Policy
+      (UAP) must be accessible in English either directly or via the resource's
+      entry in the EOSC Catalogue.
+    implemented_by: check_5c
+    decidable: partial
+    decidable_note: >-
+      Same reasoning as 5b. Note that AUP and UAP are distinct documents in this
+      checklist and must not be conflated: an "Access Policy" satisfies 5c, an
+      "Acceptable Use Policy" satisfies 5b, and many nodes publish only one.
+
+  - id: "6"
+    title: Means of contacting the node helpdesk
+    requirement: Provide means of contacting the Node helpdesk.
+    implemented_by: check_6
+    decidable: partial
+    decidable_note: >-
+      A contact route (mailto:, contact/support/helpdesk page, contact form) is
+      checkable. Whether it reaches a *helpdesk* rather than a generic press or
+      info address is a judgement, so a generic-looking contact is flagged rather
+      than passed silently.
+
+  - id: "7"
+    title: The NLP itself is in English
+    requirement: >-
+      The NLP itself is in English. Other pages need not be, except for the
+      information required by item 5.
+    implemented_by: check_7
+    decidable: true
+    decidable_note: >-
+      Statistical language detection over the page's main text, cross-checked
+      against the declared lang attribute. Both are reported, because a mismatch
+      between what a page declares and what it actually contains is itself worth
+      seeing. The exception for item 5 information is assessed under 5a-5c,
+      whose requirements already demand English.
