@@ -947,8 +947,8 @@ node has no evidence, so the table is incomplete.
 
 > **If `assess` warns "Evidence from a different URL".** It means a node's URL
 > in `nodes.yaml` is not the page its evidence was collected from. That is the
-> case for BBMRI-ERIC as of 25 September 2026: `nodes.yaml` has the `dev3.`
-> address, but the published evidence is from the old one. The warning also
+> case for BBMRI-ERIC from 25 to 26 September 2026, when `nodes.yaml` had the
+> `dev3.` address but the published evidence was from the `www.` one. The warning also
 > appears as a banner in both reports. Either collect that node again first
 > (example 2), or assess with the node list the evidence was collected with,
 > plus the new entry:
@@ -997,7 +997,9 @@ git push
 
 The example is the change actually made on 25 September 2026: BBMRI-ERIC moved
 from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to
-`https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`.
+`https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`. It was set back on 26
+September, because the `dev3.` host's `robots.txt` excludes the checker, so
+`nodes.yaml` has the `www.` address again.
 
 **Which files change.** One line in one file: `url` for that node in
 `nodes.yaml`. Nothing else in the repository stores a node's URL. Add a comment

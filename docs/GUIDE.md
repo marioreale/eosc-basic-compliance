@@ -135,7 +135,7 @@ edited; the third is a plain text list you write yourself.
 nodes:
   - id: bbmri-eric
     name: BBMRI-ERIC
-    url: https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
+    url: https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
 ```
 
@@ -152,11 +152,12 @@ from the live index at
 [eosc.eu/building-the-eosc-federation/](https://eosc.eu/building-the-eosc-federation/).
 If you add a node, look its slug up there rather than guessing it from the name.
 
-**BBMRI-ERIC's URL changed on 25 September 2026**, from
-`https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to the `dev3.` address shown
-above, and `nodes.yaml` carries a comment saying so. The published run in
-`results/` was collected on 24 September from the old address. Read the next
-subsection before rebuilding it.
+**BBMRI-ERIC's URL was changed and then set back.** On 25 September 2026 it
+was changed to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`; on 26
+September it was set back to the `www.` address shown above, because the `dev3.`
+host's `robots.txt` excludes every path. `nodes.yaml` carries a comment saying
+so. The published run in `results/` was collected on 24 September from this
+`www.` address, so the configuration and the published evidence agree again.
 
 ### Changing a node's URL
 
@@ -212,8 +213,11 @@ exit code does not change, because the table is complete; it is just not about
 the configured page. The address finally reached, after redirects, is kept as
 `final_url` in the evidence file.
 
-Until the published run is replaced by a new reviewed one, rebuild it with the
-node list it was collected with. That gives no warning:
+To rebuild the published run, assess it with the node list it was collected
+with. Since 26 September that is again the committed `nodes.yaml`, so a bare
+`uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy` gives no
+warning. The command below names that list explicitly, and stays right if
+`nodes.yaml` changes again:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
@@ -592,7 +596,7 @@ aligned columns (shortened here):
 
 | Node id | Node Landing Page URL | Approved name |
 |---|---|---|
-| `bbmri-eric` | `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/` | EOSC Node \| BBMRI-ERIC |
+| `bbmri-eric` | `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` | EOSC Node \| BBMRI-ERIC |
 | `cern` | `https://eosc-auth.cern.ch/login` | EOSC Node \| CERN |
 | … | … | … |
 | `eosc-sk` | `https://eosc.sk/` | EOSC Node \| Slovakia |
@@ -608,7 +612,7 @@ table under the same header:
 
 | Node id | Node Landing Page URL | Approved name |
 |---|---|---|
-| `bbmri-eric` | `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/` | EOSC Node \| BBMRI-ERIC |
+| `bbmri-eric` | `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` | EOSC Node \| BBMRI-ERIC |
 
 A value that matches no node, or more than one, is an error that lists the ids.
 `--list-nodes-ids` is another name for `--list-nodes`, with the same output.
@@ -1087,8 +1091,8 @@ step saying the lockfile needs updating, that is the guard working — run
 A scheduled compliance run would mean fetching every node's production website on a
 timer, which is exactly the behaviour that got GÉANT's bot protection to start
 refusing requests. The workflow reads `nodes.yaml` from the branch it runs on,
-so on `main` today it would fetch BBMRI-ERIC's `dev3.` address and, given that
-host's `robots.txt`, report `ERROR` for it.
+so on `main` today it fetches BBMRI-ERIC's public `www.` address, the one the
+published run was collected from.
 
 It takes three inputs: `only` (comma-separated node ids, empty for every node),
 `depth` (`1`, `0` or `2`) and `delay` (seconds between nodes). `depth: 2` was
@@ -1291,8 +1295,8 @@ node has no evidence, so the table is incomplete.
 
 > **If `assess` warns "Evidence from a different URL".** It means a node's URL
 > in `nodes.yaml` is not the page its evidence was collected from. That is the
-> case for BBMRI-ERIC as of 25 September 2026: `nodes.yaml` has the `dev3.`
-> address, but the published evidence is from the old one. The warning also
+> case for BBMRI-ERIC from 25 to 26 September 2026, when `nodes.yaml` had the
+> `dev3.` address but the published evidence was from the `www.` one. The warning also
 > appears as a banner in both reports. Either collect that node again first
 > (example 2), or assess with the node list the evidence was collected with,
 > plus the new entry:
@@ -1341,7 +1345,9 @@ git push
 
 The example is the change actually made on 25 September 2026: BBMRI-ERIC moved
 from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to
-`https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`.
+`https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`. It was set back on 26
+September, because the `dev3.` host's `robots.txt` excludes the checker, so
+`nodes.yaml` has the `www.` address again.
 
 **Which files change.** One line in one file: `url` for that node in
 `nodes.yaml`. Nothing else in the repository stores a node's URL. Add a comment

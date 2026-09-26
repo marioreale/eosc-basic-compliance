@@ -181,7 +181,7 @@ The landing pages you want checked live in a configuration file, and that is the
 nodes:
   - id: bbmri-eric
     name: BBMRI-ERIC
-    url: https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
+    url: https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
 ```
 
@@ -191,7 +191,7 @@ nodes:
 
 You can also point at an entirely different file without editing the default: `--nodes /path/to/my-nodes.yaml`, available on `collect`, `assess` and `run`. That is the clean way to keep a separate candidate-node list alongside the production one.
 
-**Changing a URL.** BBMRI-ERIC's `url` changed on 25 September 2026, from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, and the entry carries a comment saying so. `assess` takes each node's URL from `nodes.yaml` and its verdicts from the evidence on disk. So a bare `assess` now heads BBMRI-ERIC's row with the new address above verdicts taken from the old page. It says so: it compares the configured URL with the `requested_url` in the evidence, prints a warning, puts an **Evidence from a different URL** banner in `results.md` and `index.html`, and records the pair under `url_mismatch` in `results.json`. Until the published run is replaced by a new reviewed one, rebuild it with the node list it was collected with. That gives no warning, and reproduces the committed `results/` exactly, apart from the generation time:
+**Changing a URL.** BBMRI-ERIC's `url` changed on 25 September 2026, from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, and was set back to the `www.` address on 26 September; the entry carries a comment saying so. `assess` takes each node's URL from `nodes.yaml` and its verdicts from the evidence on disk. So while the `dev3.` address was configured, a bare `assess` headed BBMRI-ERIC's row with it, above verdicts taken from the old page. It says so: it compares the configured URL with the `requested_url` in the evidence, prints a warning, puts an **Evidence from a different URL** banner in `results.md` and `index.html`, and records the pair under `url_mismatch` in `results.json`. To rebuild the published run, assess it with the node list it was collected with; since 26 September that is again the committed `nodes.yaml`. The command below names that list explicitly and stays right if `nodes.yaml` changes again. It gives no warning, and reproduces the committed `results/` exactly, apart from the generation time:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
@@ -796,7 +796,7 @@ The run was reviewed by hand before publication. The review is in `results/REVIE
 
 A trial run on 25 September 2026, with BBMRI-ERIC's new URL, is **not published** and has not been reviewed. Two things it showed concern the tool rather than the nodes, and are recorded here for whoever runs the next collection:
 
-- BBMRI-ERIC's `dev3.` address disallows every path in `robots.txt`, so all ten of its points were `ERROR`. The next published run needs either the public address or an exception for the checker.
+- BBMRI-ERIC's `dev3.` address disallows every path in `robots.txt`, so all ten of its points were `ERROR`. The next published run needs either the public address or an exception for the checker. On 26 September `nodes.yaml` was set back to the public `www.` address.
 - GÉANT answered HTTP 403 with the Cloudflare challenge again, and its decided cells moved to review, as on 21 September.
 
 ### Point 6 and 5b/5c after the review
@@ -1007,8 +1007,8 @@ node has no evidence, so the table is incomplete.
 
 > **If `assess` warns "Evidence from a different URL".** It means a node's URL
 > in `nodes.yaml` is not the page its evidence was collected from. That is the
-> case for BBMRI-ERIC as of 25 September 2026: `nodes.yaml` has the `dev3.`
-> address, but the published evidence is from the old one. The warning also
+> case for BBMRI-ERIC from 25 to 26 September 2026, when `nodes.yaml` had the
+> `dev3.` address but the published evidence was from the `www.` one. The warning also
 > appears as a banner in both reports. Either collect that node again first
 > (example 2), or assess with the node list the evidence was collected with,
 > plus the new entry:
@@ -1057,7 +1057,9 @@ git push
 
 The example is the change actually made on 25 September 2026: BBMRI-ERIC moved
 from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to
-`https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`.
+`https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`. It was set back on 26
+September, because the `dev3.` host's `robots.txt` excludes the checker, so
+`nodes.yaml` has the `www.` address again.
 
 **Which files change.** One line in one file: `url` for that node in
 `nodes.yaml`. Nothing else in the repository stores a node's URL. Add a comment

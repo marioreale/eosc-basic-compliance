@@ -132,9 +132,11 @@ def test_every_node_has_a_scoped_approved_name(nodes):
 def test_shipped_default_is_the_committed_nodes_yaml():
     """--restore-default-config puts back src/basic_check/defaults/nodes.yaml.
     It must be exactly the nodes.yaml committed in this revision, so a restore
-    gives what was downloaded from GitHub. Compared with the committed file
-    (git HEAD), not the working copy, so a local --update-nlp does not fail
-    the suite; skipped outside a git checkout (a zip download)."""
+    gives what was downloaded from GitHub. It passes when the copy equals the
+    committed file (git HEAD), so a local --update-nlp does not fail the suite,
+    or equals the working nodes.yaml, so the two can be edited together before
+    committing. A commit that changes only one of them fails in CI, where the
+    working copy is the commit. Skipped outside a git checkout (a zip download)."""
     import shutil
     import subprocess
 
@@ -144,7 +146,8 @@ def test_shipped_default_is_the_committed_nodes_yaml():
         ["git", "show", "HEAD:nodes.yaml"], cwd=ROOT, capture_output=True, check=True
     ).stdout
     shipped = (ROOT / "src" / "basic_check" / "defaults" / "nodes.yaml").read_bytes()
-    assert shipped == committed, (
+    working = (ROOT / "nodes.yaml").read_bytes()
+    assert shipped in (committed, working), (
         "src/basic_check/defaults/nodes.yaml differs from the committed nodes.yaml; "
         "copy nodes.yaml over it in the same commit"
     )

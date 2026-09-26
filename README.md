@@ -326,7 +326,7 @@ uv run basic-check --show-node bbmri-eric   # one node's row of that table
 ```text
 Node id     Node Landing Page URL                                   Approved name
 ----------  ------------------------------------------------------  ------------------------
-bbmri-eric  https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/        EOSC Node | BBMRI-ERIC
+bbmri-eric  https://www.bbmri-eric.eu/eosc-node-bbmri-eric/         EOSC Node | BBMRI-ERIC
 cern        https://eosc-auth.cern.ch/login                         EOSC Node | CERN
 …
 eosc-sk     https://eosc.sk/                                        EOSC Node | Slovakia
@@ -340,9 +340,9 @@ assess and run use checklist/approved-names.txt by default: the same names, unsc
 table under the same header:
 
 ```text
-Node id     Node Landing Page URL                             Approved name
-----------  ------------------------------------------------  ----------------------
-bbmri-eric  https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/  EOSC Node | BBMRI-ERIC
+Node id     Node Landing Page URL                            Approved name
+----------  -----------------------------------------------  ----------------------
+bbmri-eric  https://www.bbmri-eric.eu/eosc-node-bbmri-eric/  EOSC Node | BBMRI-ERIC
 ```
 
 A value that matches no node, or more than one, is an error that lists the ids.
