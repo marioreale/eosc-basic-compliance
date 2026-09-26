@@ -106,13 +106,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-329 tests still pass, while `collect` fails with Playwright's
+333 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 329 passed
+uv run pytest -q                  # expect: 333 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -835,7 +835,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 329 tests, offline, a few seconds
+uv run pytest -q                    # 333 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -846,7 +846,7 @@ uv run ruff check src tests         # lint
 |---|---|---|
 | `test_checklist.py` | 12 | The transcription matches the source document, including its SHA-256, and the scoped name list agrees with the official one. |
 | `test_checks.py` | 75 | The verdict logic, point by point, including the render gate, the EOSC-asset token rule, that a point 3 summary never denies having a name list it was given, and that a link merely labelled "support" does not settle point 6. |
-| `test_cli.py` | 44 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, and that `--skip` leaves nodes out and says so. |
+| `test_cli.py` | 48 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, and that `--help` stays complete. |
 | `test_crawl.py` | 35 | Link selection, including policy words found only in a hyphenated address, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |

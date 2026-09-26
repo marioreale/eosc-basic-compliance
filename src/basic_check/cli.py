@@ -24,11 +24,6 @@ from .fetch import (
 )
 from .names import ApprovedNames
 
-app = typer.Typer(
-    add_completion=False,
-    help="Check EOSC Node Landing Pages against checklist v3.0.",
-)
-
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_NODES = ROOT / "nodes.yaml"
 DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"
@@ -42,6 +37,106 @@ DEFAULT_RESULTS = ROOT / "results"
 # with a one-row table. assess() rewrites results.md, index.html and results.json
 # wholesale, so sharing a directory would silently destroy the published run.
 DEFAULT_ONEOFF = ROOT / "results" / "one-off"
+
+
+def _node_ids(path: Path = DEFAULT_NODES) -> str:
+    """The configured node ids, for the help text. Never fails: help must print
+    even when nodes.yaml is missing or broken."""
+    try:
+        return ", ".join(n["id"] for n in yaml.safe_load(path.read_text())["nodes"])
+    except Exception:  # noqa: BLE001 - help text only
+        return "see the id: fields in nodes.yaml"
+
+
+# One help text per option, shared by every command that takes it, so that
+# collect, assess and run cannot describe the same option differently. The
+# README's "Command-line options" section mirrors these; keep them in step.
+H_NODES = (
+    "Node list to use instead of nodes.yaml. Use it to keep a separate list of "
+    "candidate nodes, or to rebuild an old run with the list it was collected with."
+)
+H_RESULTS = (
+    "Folder to write to (or read from) instead of results/, e.g. /tmp/trial for "
+    "a scratch run. With an explicit --results, --only also narrows the report."
+)
+H_ONLY = (
+    "Comma-separated node ids to fetch, e.g. egi,eudat. Ids only, not names. "
+    "Writing to results/, the report still covers every node and marks which "
+    "were re-fetched; with --results DIR it covers only these."
+)
+H_SKIP = (
+    "Leave these nodes out of the run entirely: not fetched, not assessed, "
+    "not in the report, which states that they were skipped. Node id or name "
+    "(e.g. eosc-it, Italy or 'EOSC Node Italy'), case-insensitive; "
+    "comma-separated or repeated. An unknown or ambiguous value is an error."
+)
+H_URL = (
+    "Check this URL directly, without adding it to nodes.yaml. Repeatable. "
+    "Writes to results/one-off/ so a published run is never overwritten. "
+    "Cannot be combined with --only or --skip."
+)
+H_EOSC_PAGE = (
+    "With a single --url: the node's own eosc.eu page, so a point 4 failure "
+    "can name the exact URL that is missing."
+)
+H_DELAY = "Seconds to wait between hosts, to go easy on the servers."
+H_DEPTH = (
+    "0 = landing page only. 1 = also follow links that can settle a checklist "
+    "point (policies, contact, about), capped per node. 2 = one further hop "
+    "from those pages, under --fetch-budget; the report then shows both depths "
+    "side by side."
+)
+H_MAX_CHILDREN = "Most linked pages followed per node at depth 1 (run always uses 8)."
+H_FETCH_BUDGET = (
+    "Depth 2 only: hard ceiling on second-hop requests for the whole run, "
+    "shared across nodes. Raise it deliberately; it exists to keep a check "
+    "from becoming a crawl of other people's sites."
+)
+H_CHECKLIST = (
+    "Checklist rules file to use instead of checklist/v3.0.yaml, e.g. a future v3.1."
+)
+H_APPROVED_NAMES = (
+    "Text file of Tripartite-approved node names for point 3, one per line, "
+    f"replacing the committed default ({DEFAULT_APPROVED_NAMES.name}). Write "
+    "'node-id: Name' to tie a name to one node; a bare name applies to every "
+    "node and cannot establish whose name it is. See docs/GUIDE.md section 3."
+)
+H_NO_APPROVED_NAMES = (
+    "Use no approved-name list at all, not even the committed default. Point "
+    "3's name requirement is then not assessed."
+)
+H_STRICT_SEPARATORS = (
+    "Match the separator characters in an approved name literally. By default "
+    "whitespace, pipe, hyphen, en dash, colon, slash and middle dot are "
+    "interchangeable, because matching the official list literally matched "
+    "none of the pages checked. Use this to see the strict result."
+)
+H_RUN = (
+    "Label for this run, recorded in the report, e.g. trial-1. "
+    "Default: the current UTC time as YYYY-MM-DD-HHMM."
+)
+
+EPILOG = (
+    f"Node ids (from nodes.yaml): {_node_ids()}.\n\n"
+    "Examples:\n\n"
+    "basic-check run --only egi,eudat --results /tmp/trial\n\n"
+    "basic-check run --skip Italy --results /tmp/trial\n\n"
+    "basic-check run --skip eosc-it,bbmri-eric --depth 0 --results /tmp/trial\n\n"
+    "basic-check assess --only eosc-cz --results /tmp/trial   (offline)\n\n"
+    "basic-check run --url https://example.org/eosc-node/\n\n"
+    "basic-check show geant\n\n"
+    "Only collect and run contact the nodes; assess, points and show never do. "
+    "Full reference: README.md, section Command-line options."
+)
+
+app = typer.Typer(
+    add_completion=False,
+    help="Check EOSC Node Landing Pages against checklist v3.0.\n\n"
+    "collect fetches the pages and saves the evidence (the only step that "
+    "contacts the nodes); assess judges the saved evidence offline and writes "
+    "the reports; run does both. Every command has its own --help.",
+    epilog=EPILOG,
+)
 
 
 def _slug(url: str) -> str:
@@ -219,51 +314,45 @@ def _load_nodes(path: Path, only: str = "") -> list[dict]:
 
 @app.command()
 def collect(
-    nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
-    results_dir: Path = typer.Option(None, "--results"),
-    only: str = typer.Option("", "--only", help="Comma-separated node ids"),
+    nodes_file: Path = typer.Option(
+        DEFAULT_NODES, "--nodes", "-n", help=H_NODES, show_default="nodes.yaml"
+    ),
+    results_dir: Path = typer.Option(None, "--results", help=H_RESULTS, show_default="results/"),
+    only: str = typer.Option("", "--only", help=H_ONLY),
     skip: list[str] = typer.Option(
         None,
         "--skip",
-        help="Leave these nodes out of the run entirely: not fetched, not assessed, "
-        "not in the report, which states that they were skipped. Node id or name "
-        "(e.g. Italy or eosc-it), case-insensitive; comma-separated or repeated.",
+        help=H_SKIP,
     ),
     url: list[str] = typer.Option(
         None,
         "--url",
-        help="Check this URL directly, without adding it to nodes.yaml. Repeatable. "
-        "Writes to results/one-off/ so a published run is never overwritten.",
+        help=H_URL,
     ),
-    eosc_page: str = typer.Option(
-        "",
-        "--eosc-page",
-        help="With a single --url: the node's own eosc.eu page, so a point 4 failure "
-        "can name the exact URL that is missing.",
-    ),
-    delay: float = typer.Option(2.0, "--delay", help="Seconds between hosts"),
+    eosc_page: str = typer.Option("", "--eosc-page", help=H_EOSC_PAGE),
+    delay: float = typer.Option(2.0, "--delay", help=H_DELAY),
     depth: int = typer.Option(
         1,
         "--depth",
         min=0,
         max=2,
-        help="0 = landing page only. 1 = also follow links that can settle a "
-        "checklist point (policies, contact, about), capped per node. 2 = one "
-        "further hop from those pages, under a run-wide fetch budget.",
+        help=H_DEPTH,
     ),
     max_children: int = typer.Option(
-        MAX_CHILDREN, "--max-children", help="Cap on followed pages per node at depth 1"
+        MAX_CHILDREN, "--max-children", help=H_MAX_CHILDREN
     ),
     fetch_budget: int = typer.Option(
         DEFAULT_FETCH_BUDGET,
         "--fetch-budget",
         min=0,
-        help="Depth 2 only: hard ceiling on second-hop requests for the whole run, "
-        "shared across nodes. Raise it deliberately; it exists to keep a check "
-        "from becoming a crawl of other people's sites.",
+        help=H_FETCH_BUDGET,
     ),
 ):
-    """Fetch each landing page and save the evidence. Depth 1 by default."""
+    """Fetch each landing page and save the evidence. Contacts the nodes.
+
+    Depth 1 by default. Evidence goes to results/evidence/ (or --results DIR),
+    with personal data masked. Nothing is judged here; run assess afterwards.
+    """
     nodes, _reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
     _do_collect(nodes, resolved, delay, depth, max_children, fetch_budget)
 
@@ -325,49 +414,49 @@ def _do_collect(
 
 @app.command()
 def assess(
-    nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
-    checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c"),
-    results_dir: Path = typer.Option(None, "--results"),
-    only: str = typer.Option("", "--only"),
+    nodes_file: Path = typer.Option(
+        DEFAULT_NODES, "--nodes", "-n", help=H_NODES, show_default="nodes.yaml"
+    ),
+    checklist_file: Path = typer.Option(
+        DEFAULT_CHECKLIST, "--checklist", "-c", help=H_CHECKLIST,
+        show_default="checklist/v3.0.yaml",
+    ),
+    results_dir: Path = typer.Option(None, "--results", help=H_RESULTS, show_default="results/"),
+    only: str = typer.Option("", "--only", help=H_ONLY),
     skip: list[str] = typer.Option(
         None,
         "--skip",
-        help="Leave these nodes out of the run entirely: not fetched, not assessed, "
-        "not in the report, which states that they were skipped. Node id or name "
-        "(e.g. Italy or eosc-it), case-insensitive; comma-separated or repeated.",
+        help=H_SKIP,
     ),
     url: list[str] = typer.Option(
         None,
         "--url",
-        help="Check this URL directly, without adding it to nodes.yaml. Repeatable. "
-        "Writes to results/one-off/ so a published run is never overwritten.",
+        help=H_URL,
     ),
-    eosc_page: str = typer.Option("", "--eosc-page"),
+    eosc_page: str = typer.Option("", "--eosc-page", help=H_EOSC_PAGE),
     approved_names: Path | None = typer.Option(
         None,
         "--approved-names",
-        help="Text file of Tripartite-approved node names, one per line, replacing "
-        f"the committed default ({DEFAULT_APPROVED_NAMES.name}). Write 'node-id: Name' "
-        "to tie a name to one node; a bare name applies to every node and cannot "
-        "establish whose name it is. See docs/GUIDE.md section 3.",
+        help=H_APPROVED_NAMES,
     ),
     no_approved_names: bool = typer.Option(
         False,
         "--no-approved-names",
-        help="Do not use any approved-name list, not even the committed default. "
-        "Point 3's name requirement is then not assessed at all.",
+        help=H_NO_APPROVED_NAMES,
     ),
     strict_separators: bool = typer.Option(
         False,
         "--strict-separators",
-        help="Match the separator glyphs in an approved name literally. By default "
-        "whitespace and the glyphs pipe, hyphen, en dash, colon, slash and middle dot "
-        "are interchangeable, because matching the official list literally matched "
-        "none of the pages checked. Use this to see the strict result.",
+        help=H_STRICT_SEPARATORS,
     ),
-    run_id: str = typer.Option("", "--run"),
+    run_id: str = typer.Option("", "--run", help=H_RUN),
 ):
-    """Apply the checklist to already-collected evidence and write the reports."""
+    """Apply the checklist to already-collected evidence and write the reports.
+
+    Offline: no node is contacted. Writes results.json, results.md, results.csv
+    and index.html. Row headings come from the node list, so after changing a
+    node's URL, rebuild an old run with --nodes pointing at the old list.
+    """
     _fetched, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
     _do_assess(
         reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
@@ -577,60 +666,59 @@ def _do_assess(
 
 @app.command()
 def run(
-    nodes_file: Path = typer.Option(DEFAULT_NODES, "--nodes", "-n"),
-    results_dir: Path = typer.Option(None, "--results"),
-    only: str = typer.Option("", "--only"),
+    nodes_file: Path = typer.Option(
+        DEFAULT_NODES, "--nodes", "-n", help=H_NODES, show_default="nodes.yaml"
+    ),
+    results_dir: Path = typer.Option(None, "--results", help=H_RESULTS, show_default="results/"),
+    only: str = typer.Option("", "--only", help=H_ONLY),
     skip: list[str] = typer.Option(
         None,
         "--skip",
-        help="Leave these nodes out of the run entirely: not fetched, not assessed, "
-        "not in the report, which states that they were skipped. Node id or name "
-        "(e.g. Italy or eosc-it), case-insensitive; comma-separated or repeated.",
+        help=H_SKIP,
     ),
     url: list[str] = typer.Option(
         None,
         "--url",
-        help="Check this URL directly, without adding it to nodes.yaml. Repeatable. "
-        "Writes to results/one-off/ so a published run is never overwritten.",
+        help=H_URL,
     ),
-    eosc_page: str = typer.Option("", "--eosc-page"),
-    checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c"),
+    eosc_page: str = typer.Option("", "--eosc-page", help=H_EOSC_PAGE),
+    checklist_file: Path = typer.Option(
+        DEFAULT_CHECKLIST, "--checklist", "-c", help=H_CHECKLIST,
+        show_default="checklist/v3.0.yaml",
+    ),
     approved_names: Path | None = typer.Option(
         None,
         "--approved-names",
-        help="Replace the committed default name list "
-        f"({DEFAULT_APPROVED_NAMES.name}) with this file.",
+        help=H_APPROVED_NAMES,
     ),
     no_approved_names: bool = typer.Option(
-        False, "--no-approved-names", help="Use no name list at all."
+        False, "--no-approved-names", help=H_NO_APPROVED_NAMES
     ),
     strict_separators: bool = typer.Option(
         False,
         "--strict-separators",
-        help="Match the separator glyphs in an approved name literally. By default "
-        "whitespace and the glyphs pipe, hyphen, en dash, colon, slash and middle dot "
-        "are interchangeable, because matching the official list literally matched "
-        "none of the pages checked. Use this to see the strict result.",
+        help=H_STRICT_SEPARATORS,
     ),
-    run_id: str = typer.Option("", "--run"),
-    delay: float = typer.Option(2.0, "--delay"),
+    run_id: str = typer.Option("", "--run", help=H_RUN),
+    delay: float = typer.Option(2.0, "--delay", help=H_DELAY),
     depth: int = typer.Option(
         1,
         "--depth",
         min=0,
         max=2,
-        help="0 = landing page only. 1 (default) = also follow links that can settle "
-        "a checklist point. 2 = one further hop, under --fetch-budget; the report "
-        "then shows both depths side by side.",
+        help=H_DEPTH,
     ),
     fetch_budget: int = typer.Option(
         DEFAULT_FETCH_BUDGET,
         "--fetch-budget",
         min=0,
-        help="Depth 2 only: hard ceiling on second-hop requests for the whole run.",
+        help=H_FETCH_BUDGET,
     ),
 ):
-    """collect, then assess."""
+    """collect, then assess, in one go. Contacts the nodes.
+
+    Takes the options of both, except --max-children (always 8 here).
+    """
     # Resolve once so both phases agree on the node list and the directory.
     nodes, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
     _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget)
@@ -643,8 +731,11 @@ def run(
 
 
 @app.command()
-def points(checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist", "-c")):
-    """Print the checklist points and whether each is machine-decidable."""
+def points(checklist_file: Path = typer.Option(
+        DEFAULT_CHECKLIST, "--checklist", "-c", help=H_CHECKLIST,
+        show_default="checklist/v3.0.yaml",
+    )):
+    """Print the checklist points and whether each is machine-decidable. Offline."""
     checklist = yaml.safe_load(checklist_file.read_text())
     typer.echo(
         f"Checklist v{checklist.get('checklist_version', '?')} "
@@ -665,11 +756,15 @@ def points(checklist_file: Path = typer.Option(DEFAULT_CHECKLIST, "--checklist",
 
 @app.command()
 def show(
-    node_id: str = typer.Argument(...),
-    results_dir: Path = typer.Option(DEFAULT_RESULTS, "--results"),
-    one_off: bool = typer.Option(False, "--one-off", help="Read results/one-off/ instead"),
+    node_id: str = typer.Argument(..., help="Node id, e.g. geant (see basic-check --help)."),
+    results_dir: Path = typer.Option(
+        DEFAULT_RESULTS, "--results", help="Results folder to read.", show_default="results/"
+    ),
+    one_off: bool = typer.Option(
+        False, "--one-off", help="Read the --url results in results/one-off/ instead."
+    ),
 ):
-    """Print one node's results."""
+    """Print one node's results from an existing run. Offline."""
     if one_off:
         results_dir = DEFAULT_ONEOFF
     data = json.loads((results_dir / "results.json").read_text())

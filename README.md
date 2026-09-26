@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 329
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 333
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -189,6 +189,89 @@ uv run basic-check run --depth 2     # follow one further hop (see below)
 uv run basic-check show data-terra   # one node's results in the terminal
 ```
 
+### Command-line options
+
+`uv run basic-check --help` lists the commands, the node ids and some examples,
+and `uv run basic-check <command> --help` lists that command's options. The
+tables below give the same information. Only `collect` and `run` contact the
+nodes; `assess`, `points` and `show` work offline.
+
+| Command | What it does |
+|---|---|
+| `collect` | Fetches each landing page and saves the evidence, with personal data masked. The only step that sends requests to the nodes, together with `run`. |
+| `assess` | Applies the checklist to the evidence already saved and writes `results.json`, `results.md`, `results.csv` and `index.html`. |
+| `run` | `collect`, then `assess`, in one go. |
+| `points` | Prints the ten checklist points and whether each can be decided by a script. |
+| `show <node_id>` | Prints one node's results from an existing run. |
+
+**Which nodes to check** (`collect`, `assess`, `run`)
+
+| Option | What it's for |
+|---|---|
+| `--nodes`, `-n <path>` | A node list to use instead of `nodes.yaml`: a separate list of candidate nodes, or the list an old run was collected with, to rebuild it. |
+| `--only <ids>` | Fetch only these nodes, as comma-separated ids (`egi,eudat`). Ids only, not names. Writing to `results/`, the report still covers every node and marks which were fetched again; with `--results DIR` it covers only these. |
+| `--skip <ids or names>` | Leave these nodes out entirely: not fetched, not assessed, not in the report, which says they were skipped. An id or a name (`eosc-it`, `Italy`, `EOSC Node Italy`), in any case; comma-separated or repeated. A value that matches no node, or more than one, is an error. |
+| `--url <url>` | Check a page that is not in `nodes.yaml`. Repeatable. Writes to `results/one-off/`, so the published run is never overwritten. Cannot be combined with `--only` or `--skip`. |
+| `--eosc-page <url>` | With a single `--url`: the node's own `eosc.eu` page, so a point 4 failure names the exact missing link. |
+
+**How much to fetch** (`collect`, `run`)
+
+| Option | Default | What it's for |
+|---|---|---|
+| `--depth 0\|1\|2` | `1` | `0` fetches the landing page only. `1` also follows links that can settle a checklist point (policies, contact, about). `2` follows one more hop from those pages, and the report shows both depths side by side. |
+| `--max-children <n>` | `8` | The most linked pages followed per node at depth 1. `collect` only; `run` always uses 8. |
+| `--fetch-budget <n>` | `60` | Depth 2 only: a hard limit on second-hop requests for the whole run, shared across all nodes. |
+| `--delay <seconds>` | `2.0` | The pause between hosts, to go easy on the servers. |
+
+**How to assess** (`assess`, `run`)
+
+| Option | What it's for |
+|---|---|
+| `--checklist`, `-c <path>` | A rules file to use instead of `checklist/v3.0.yaml`, for example a future v3.1. `points` takes it too. |
+| `--approved-names <path>` | A list of approved node names for point 3, replacing `checklist/approved-names.txt`. `node-id: Name` ties a name to one node; a bare name counts for every node. |
+| `--no-approved-names` | Use no name list at all; point 3's name requirement is then not assessed. |
+| `--strict-separators` | Match the separators in approved names exactly. By default spaces, `\|`, `-`, `–`, `:`, `/` and `·` count as equivalent. |
+| `--run <label>` | A label for the run, recorded in the report, such as `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
+
+**Where results go**
+
+| Option | Commands | What it's for |
+|---|---|---|
+| `--results <path>` | `collect`, `assess`, `run`, `show` | A folder to write to or read from instead of `results/`, for example `/tmp/trial` for a scratch run. |
+| `--one-off` | `show` | Read the `--url` results in `results/one-off/`. |
+
+**Node ids.** Each node's id is the `id:` field in `nodes.yaml`, and
+`basic-check --help` prints the current list:
+
+| Id | Node | Id | Node |
+|---|---|---|---|
+| `bbmri-eric` | BBMRI-ERIC | `eudat` | EUDAT |
+| `cern` | CERN | `egi` | EGI |
+| `eosc-cz` | EOSC Node Czechia | `geant` | GÉANT |
+| `eosc-dto` | EOSC DTO (D4Science) | `ebrains` | EBRAINS |
+| `data-terra` | Data Terra | `eosc-it` | EOSC Node Italy |
+| `eosc-fi` | EOSC Finland | `eosc-sk` | EOSC Node Slovakia |
+| `panosc` | PaNOSC | | |
+
+**Examples**
+
+```bash
+# Check only EGI and EUDAT, in a scratch folder, leaving results/ untouched
+uv run basic-check run --only egi,eudat --results /tmp/trial
+
+# Every node except Italy; --skip takes an id or a name
+uv run basic-check run --skip Italy --results /tmp/trial
+
+# Leave out two nodes, and fetch the landing pages only
+uv run basic-check run --skip eosc-it,bbmri-eric --depth 0 --results /tmp/trial
+
+# Re-assess Czechia from the evidence already in /tmp/trial, offline
+uv run basic-check assess --only eosc-cz --results /tmp/trial
+
+# One node's results from the published run
+uv run basic-check show geant
+```
+
 ### Adding a node
 
 Three files change together, all at the repository root, all edited by hand:
@@ -333,7 +416,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 329 tests, a few seconds, no network, no browser
+uv run pytest -q          # 333 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

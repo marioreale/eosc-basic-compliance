@@ -412,3 +412,49 @@ def test_collect_and_run_do_not_fetch_skipped_nodes(monkeypatch, tmp_path, comma
     assert res.exit_code == 0, res.output
     assert "eosc-it" not in seen["ids"] and "eosc-sk" not in seen["ids"]
     assert "egi" in seen["ids"]
+
+
+# --- help text ----------------------------------------------------------------
+
+
+def _options(command) -> list:
+    return [p for p in command.params if p.param_type_name == "option"]
+
+
+def test_every_option_of_every_command_has_help_text():
+    """The README's option reference mirrors --help, so an option added
+    without a help string would be undocumented in both places."""
+    group = typer.main.get_command(cli.app)
+    missing = [
+        f"{name} {opt.opts[0]}"
+        for name, command in group.commands.items()
+        for opt in _options(command)
+        if not (opt.help or "").strip()
+    ]
+    assert not missing, missing
+
+
+def test_a_shared_option_is_described_the_same_way_by_every_command():
+    """collect, assess and run once described --skip and --depth each in their
+    own words; one shared text per option keeps them from drifting apart."""
+    group = typer.main.get_command(cli.app)
+    texts: dict[str, set[str]] = {}
+    for name in ("collect", "assess", "run"):
+        for opt in _options(group.commands[name]):
+            texts.setdefault(opt.opts[0], set()).add(opt.help)
+    differing = {o: t for o, t in texts.items() if len(t) > 1}
+    assert not differing, differing
+
+
+def test_top_level_help_lists_the_configured_node_ids():
+    import yaml
+
+    ids = [n["id"] for n in yaml.safe_load(cli.DEFAULT_NODES.read_text())["nodes"]]
+    res = CliRunner().invoke(cli.app, ["--help"], env={"COLUMNS": "400"})
+    assert res.exit_code == 0
+    for node_id in ids:
+        assert node_id in res.output, node_id
+
+
+def test_help_still_prints_when_the_node_list_is_unreadable(tmp_path):
+    assert "nodes.yaml" in cli._node_ids(tmp_path / "missing.yaml")
