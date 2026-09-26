@@ -37,7 +37,7 @@ from .patterns import CRAWL_PURPOSES, link_haystack
 from .privacy import mask_data
 
 UA = (
-    "eosc-basic-compliance/0.1 (EOSC Node Landing Page checklist v3.0 verification; "
+    "eosc-basic-compliance/0.1 (EOSC Node Landing Page checklist verification; "
     "+https://github.com/marioreale/eosc-basic-compliance)"
 )
 NAV_TIMEOUT_MS = 45_000

@@ -174,6 +174,32 @@ def _skipped_note(run: dict) -> str:
     )
 
 
+def _url_mismatch_note(run: dict) -> str:
+    """A sentence naming nodes whose evidence came from another URL, or "".
+
+    `assess` labels each row with the URL in the nodes file, but judges the
+    evidence on disk. After a URL change the two can describe different pages;
+    this sentence keeps the row heading from passing for what was fetched.
+    Plain text, like _skipped_note.
+    """
+    mismatches = run.get("url_mismatch") or []
+    if not mismatches:
+        return ""
+    parts = [
+        f"{m['id']} is configured as {m['configured_url']}, but its evidence was "
+        f"collected from {m['evidence_url']} ({(m.get('fetched_at') or '')[:10] or 'date unknown'})"
+        for m in mismatches
+    ]
+    one = len(mismatches) == 1
+    return (
+        "; ".join(parts)
+        + (". That row shows" if one else ". Those rows show")
+        + " the verdicts for the page the evidence came from, not for the configured "
+        + ("URL. Collect it again before treating the row as current." if one else
+           "URLs. Collect them again before treating the rows as current.")
+    )
+
+
 def _names_sentence(run: dict) -> str:
     """Plain prose about the approved-name list behind point 3.
 
@@ -399,6 +425,12 @@ def render_html(run: dict, out: Path) -> Path:
         freshness_block += (
             f'\n<div class="banner"><strong>Skipped by request.</strong> '
             f"{html.escape(skipped)}</div>\n"
+        )
+    mismatch = _url_mismatch_note(run)
+    if mismatch:
+        freshness_block += (
+            f'\n<div class="banner"><strong>Evidence from a different URL.</strong> '
+            f"{html.escape(mismatch)}</div>\n"
         )
 
     chips = "".join(
@@ -821,6 +853,11 @@ def render_markdown(run: dict, out: Path) -> Path:
         "",
         *([f"> {_freshness_note(run)}", ""] if _freshness_note(run) else []),
         *([f"> **Skipped by request.** {_skipped_note(run)}", ""] if _skipped_note(run) else []),
+        *(
+            [f"> **Evidence from a different URL.** {_url_mismatch_note(run)}", ""]
+            if _url_mismatch_note(run)
+            else []
+        ),
         "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
         "🟠 review — a human must decide · 🟣 ERROR — could not be assessed",
         "",

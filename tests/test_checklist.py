@@ -22,11 +22,14 @@ import yaml
 from test_checks import ev  # the evidence builder these tests reuse
 
 from basic_check import checks
+from basic_check.cli import DEFAULT_CHECKLIST
 from basic_check.names import parse_approved_names
 
 ROOT = Path(__file__).parents[1]
 CHECKLIST_DIR = ROOT / "checklist"
-CHECKLIST_PATH = CHECKLIST_DIR / "v3.0.yaml"
+# Whatever revision the tool applies by default. Moving to a new revision is a
+# one-line change in cli.py, and every test here follows it.
+CHECKLIST_PATH = DEFAULT_CHECKLIST
 
 
 @pytest.fixture(scope="module")
@@ -188,3 +191,39 @@ def test_the_scoped_list_is_fully_scoped():
     """A stray unscoped line would quietly reintroduce the weaker claim."""
     parsed = parse_approved_names((ROOT / "checklist" / "approved-names-scoped.txt").read_text())
     assert parsed.unscoped == (), parsed.unscoped
+
+
+# --- the default revision is one line, and everything follows it -------------
+
+
+def test_the_default_checklist_is_committed_in_the_checklist_directory():
+    """cli.DEFAULT_CHECKLIST is the single switch between revisions. It must name
+    a committed file in checklist/, so every test above is about that file."""
+    assert DEFAULT_CHECKLIST.parent == CHECKLIST_DIR
+    assert DEFAULT_CHECKLIST.is_file(), f"{DEFAULT_CHECKLIST.name} is not committed"
+
+
+def test_the_help_names_the_default_checklist_rather_than_a_fixed_version():
+    """Switching DEFAULT_CHECKLIST must not leave --help advertising the old file."""
+    from typer.testing import CliRunner
+
+    from basic_check.cli import app
+
+    top = CliRunner().invoke(app, ["--help"], env={"COLUMNS": "400"}).output
+    assert f"checklist {DEFAULT_CHECKLIST.stem}" in top
+    assess = CliRunner().invoke(app, ["assess", "--help"], env={"COLUMNS": "400"}).output
+    assert f"checklist/{DEFAULT_CHECKLIST.name}" in assess
+
+
+@pytest.mark.parametrize(
+    "path", sorted(CHECKLIST_DIR.glob("v*.yaml")), ids=lambda p: p.name
+)
+def test_every_committed_revision_keeps_its_source_document_and_hash(path):
+    """Older revisions stay in checklist/ so earlier runs can be rebuilt. Their
+    source documents must stay intact too, not only the default one's."""
+    data = yaml.safe_load(path.read_text())
+    source = CHECKLIST_DIR / data["source_file"]
+    assert source.is_file(), f"{path.name}: {data['source_file']} is not committed"
+    assert hashlib.sha256(source.read_bytes()).hexdigest() == data["source_sha256"], (
+        f"{path.name}: {source.name} no longer has the bytes it was transcribed from"
+    )

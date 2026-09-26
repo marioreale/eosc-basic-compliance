@@ -107,13 +107,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-333 tests still pass, while `collect` fails with Playwright's
+339 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 333 passed
+uv run pytest -q                  # expect: 339 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -172,12 +172,17 @@ uv run basic-check assess  --only bbmri-eric --results /tmp/trial
 
 **`assess` takes each node's URL from `nodes.yaml`, not from the evidence.** So
 after a URL change, a bare `uv run basic-check assess` pairs the new URL with
-evidence collected from the old page, and the report shows the new address above
-verdicts it never produced. The address really fetched survives only as
-`final_url`, in the evidence file and in the `fetch` summary in `results.json`.
-The Markdown and HTML reports show just the configured URL, so their row
-heading is wrong. Until the published run is replaced by a new reviewed one,
-rebuild it with the node list it was collected with:
+evidence collected from the old page. It no longer does so silently. `assess`
+compares each node's configured URL with the `requested_url` stored in its
+evidence. When they differ, it prints a warning naming the node and both
+addresses, adds an **Evidence from a different URL** banner to `results.md` and
+`index.html`, and lists the pairs under `url_mismatch` in `results.json`. The
+exit code does not change, because the table is complete; it is just not about
+the configured page. The address finally reached, after redirects, is kept as
+`final_url` in the evidence file.
+
+Until the published run is replaced by a new reviewed one, rebuild it with the
+node list it was collected with. That gives no warning:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
@@ -185,9 +190,11 @@ uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy \
     --nodes /tmp/nodes-2026-09-24.yaml
 ```
 
-Verified on 25 September 2026: this reproduces the committed `results/`
+Verified on 26 September 2026: this reproduces the committed `results/`
 exactly, apart from the generation time, with 44 PASS, 6 FAIL and 70
-MANUAL_REVIEW.
+MANUAL_REVIEW. The full procedure, including how to publish the new node's
+results, is [example 2](#example-2--changing-a-nodes-landing-page-url) in
+section 11.
 
 A new URL can behave differently from the old one in ways that have nothing to
 do with the checklist. On the 25 September trial, `dev3.bbmri-eric.eu` served a
@@ -214,9 +221,23 @@ bytes the transcription came from, which catches silent drift when a checklist
 is revised. It is not a signature, and the committed PDF is a rendering of the
 circulated `.docx`, not that `.docx` itself.
 
+**The checklist is not downloaded from anywhere.** No file in the repository
+holds a URL for it. The document is committed in `checklist/`, and one line in
+`src/basic_check/cli.py` selects the revision used by default:
+
+```python
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"
+```
+
+`--checklist` / `-c` overrides it for a single run. The help texts, the report
+file name (`checklist-v3.0.html`) and the tests all follow that line.
+
 **If the checklist is revised to v3.1,** add a new `checklist/v3.1.yaml` with its
-own source file and hash rather than editing v3.0 in place. Past runs should
-remain reproducible against the rules that produced them.
+own source file and hash rather than editing v3.0 in place, then change that
+line. Past runs should remain reproducible against the rules that produced
+them. The full procedure is
+[example 3](#example-3--moving-to-a-new-revision-of-the-checklist) in
+section 11.
 
 ### The approved-names file — `--approved-names`
 
@@ -460,12 +481,16 @@ entry, two nodes sharing a landing page, or a name present in one list and not
 the other. These fail in milliseconds, before anything touches the network.
 
 Only then collect the new node. Fetch just the node you added, rather than
-re-running the whole federation:
+re-running the whole federation, and into a scratch directory first:
 
 ```bash
-uv run basic-check collect --only <new-id> --delay 2.0
-uv run basic-check assess
+uv run basic-check collect --only <new-id> --results /tmp/trial
+uv run basic-check assess  --only <new-id> --results /tmp/trial
 ```
+
+How to move that evidence into the published run without fetching the page a
+second time is [example 1](#example-1--adding-a-node-and-publishing-it) in
+section 11.
 
 `assess` reads evidence per node from disk, so a node configured but not yet
 collected is **not** silently skipped: the run prints `N node(s) have no
@@ -836,7 +861,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 333 tests, offline, a few seconds
+uv run pytest -q                    # 339 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -845,14 +870,14 @@ uv run ruff check src tests         # lint
 
 | File | Tests | Covers |
 |---|---|---|
-| `test_checklist.py` | 12 | The transcription matches the source document, including its SHA-256, and the scoped name list agrees with the official one. |
+| `test_checklist.py` | 15 | The transcription matches the source document, including its SHA-256 for every committed revision, the scoped name list agrees with the official one, and switching `DEFAULT_CHECKLIST` carries the help texts with it. |
 | `test_checks.py` | 75 | The verdict logic, point by point, including the render gate, the EOSC-asset token rule, that a point 3 summary never denies having a name list it was given, and that a link merely labelled "support" does not settle point 6. |
-| `test_cli.py` | 48 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, and that `--help` stays complete. |
+| `test_cli.py` | 50 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, that `--help` stays complete, and that evidence from another URL than the configured one is flagged. |
 | `test_crawl.py` | 35 | Link selection, including policy words found only in a hyphenated address, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
 | `test_privacy.py` | 51 | Personal-data masking: personal addresses and phone numbers masked, role mailboxes kept, the name beside an address masked but not a title or an acronym, that both the evidence files and every report format are written masked, and that the committed evidence stays masked. |
-| `test_report.py` | 35 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
+| `test_report.py` | 36 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
 
 The suite makes no network requests and needs no browser, which is why CI runs
 it without downloading Chromium.
@@ -961,8 +986,9 @@ number.
 
 ## 10. Extending it
 
-- **Add a node:** three files together — `nodes.yaml`, `checklist/approved-names.txt` and `checklist/approved-names-scoped.txt` — then `pytest`, then `collect --only <id>`. Full procedure and failure modes in [Adding a node](#adding-a-node) in section 3.
-- **Add a checklist version:** new YAML beside `v3.0.yaml`, with `source_file` and `source_sha256`; do not edit an existing version in place.
+- **Add a node:** three files together — `nodes.yaml`, `checklist/approved-names.txt` and `checklist/approved-names-scoped.txt` — then `pytest`, then `collect --only <id>`. Full procedure and failure modes in [Adding a node](#adding-a-node) in section 3; the commands through to publication in example 1, section 11.
+- **Change a node's URL:** the `url` line in `nodes.yaml` only. Example 2, section 11.
+- **Add a checklist version:** new YAML beside `v3.0.yaml`, with `source_file` and `source_sha256`; do not edit an existing version in place. Then change `DEFAULT_CHECKLIST` in `src/basic_check/cli.py`. Example 3, section 11.
 - **Add a check:** implement in `src/basic_check/checks.py`, write the failing test first, and prefer returning `MANUAL_REVIEW` with good evidence over a confident guess. Document its branches in [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md) — a check whose decision procedure is not written down cannot be reviewed.
 - **Change the report:** `src/basic_check/report.py` renders HTML, Markdown and CSV from one run dict. `tests/test_report.py` covers the matrix; add to it, because a rendering bug is silent.
 
@@ -984,6 +1010,382 @@ silent — the report is still valid Markdown, just with the columns shifted or 
 sentence promoted out of its list item, and nothing raises. Node names come from
 `nodes.yaml`, evidence strings from fetched pages, and point titles from a
 checklist transcription, so none of it is under this module's control.
+
+
+## 11. Worked examples
+
+Three step-by-step procedures, one for each change that comes up most often:
+adding a node, changing a node's URL, and adopting a new revision of the
+checklist. Each lists which files to edit, the exact commands, and how to put
+the result into the published `results/` directory.
+
+Four rules apply to all three:
+
+- **Try it in a scratch folder first.** `--results /tmp/trial` writes nowhere
+  near `results/`, so nothing published changes until you decide it should.
+- **Run `uv run pytest -q` after every edit.** It needs no network, takes a few
+  seconds, and names the file you got wrong.
+- **Contact as few sites as possible.** Only `collect` and `run` send requests.
+  `assess` works on saved evidence, so it can be repeated as often as you like.
+- **A new published run needs a human review before it is committed.** The
+  tool's verdicts are not a compliance statement (section 6). Write the review down, as
+  `results/REVIEW-2026-09-24.md` does for the current run, and commit only then.
+
+The run labels below (`live-2026-10-01-…`) are examples. Use the date of your
+own run.
+
+### Example 1 — adding a node and publishing it
+
+The example adds a node with the placeholder id `eosc-example`. Replace every
+value with the real ones.
+
+**Step 1: edit three files.** All three are at the repository root or in
+`checklist/`, and all are edited by hand.
+
+`nodes.yaml`: add the entry. `url` is the landing page as registered in the
+EOSC EU Node Contributors Dashboard ("Website address", section 1.2, field 6).
+Copy `eosc_page` from the
+[federation index](https://eosc.eu/building-the-eosc-federation/); do not guess it.
+
+```yaml
+  - id: eosc-example
+    name: EOSC Node Example
+    url: https://eosc-node.example.org/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-example/
+```
+
+`checklist/approved-names.txt`: add the approved name exactly as the Tripartite
+list writes it:
+
+```text
+EOSC Node | Example
+```
+
+`checklist/approved-names-scoped.txt`: add the same name, with the node id in
+front:
+
+```text
+eosc-example: EOSC Node | Example
+```
+
+If the Tripartite list does not include the node yet, do not make a name up.
+Leave both name files alone. `test_nodes.py::test_every_node_has_a_scoped_approved_name`
+then fails and names the node, which is intended: the node is not ready to be
+published. In the meantime, check it in a scratch folder with
+`--url https://eosc-node.example.org/` (see [Checking a page not in `nodes.yaml`](#checking-a-page-not-in-nodesyaml), section 4), which needs no configuration.
+
+**Step 2: check the configuration, offline.**
+
+```bash
+uv run pytest -q
+```
+
+A missing scoped name, an id that is not a valid filename, a URL that is not
+`https`, an `eosc_page` outside `eosc.eu`, or a landing page already used by
+another node each fail with a message naming the problem.
+
+**Step 3: trial run for the new node only.** This contacts one site.
+
+```bash
+uv run basic-check collect --only eosc-example --results /tmp/trial
+uv run basic-check assess  --only eosc-example --results /tmp/trial
+uv run basic-check show eosc-example --results /tmp/trial
+```
+
+Open `/tmp/trial/index.html` or `/tmp/trial/results.md` and read the new row.
+If the page returned `ERROR` (robots.txt, a 403, a DNS failure), stop there. An
+`ERROR` row is not a result worth publishing.
+
+**Step 4: put the node into the published run.** There are two ways.
+
+*A — add the one node to the current run (one site contacted, and already
+done).* Reuse the evidence from step 3 rather than fetching the page again:
+
+```bash
+cp /tmp/trial/evidence/eosc-example.json results/evidence/
+cp /tmp/trial/evidence/screenshots/eosc-example.png results/evidence/screenshots/
+uv run basic-check assess --only eosc-example --skip Italy \
+    --run live-2026-10-01-plus-eosc-example
+```
+
+The report covers every node. A **Mixed freshness** banner says that only
+`eosc-example` is new and that the other rows are reused from the earlier
+capture, with its date. `--skip Italy` keeps the same scope as the published
+run; drop it once Italy's page can be collected.
+
+*B — a complete new run (every node contacted once).* Use this when the
+existing evidence is old enough that a single timestamp is worth more than
+leaving the other sites alone:
+
+```bash
+uv run basic-check run --skip Italy --results /tmp/new-run --run live-2026-10-01
+# review /tmp/new-run/results.md and index.html, then:
+rm -rf results/evidence
+cp -r /tmp/new-run/evidence results/evidence
+uv run basic-check assess --skip Italy --run live-2026-10-01
+```
+
+The last command re-renders the reports in `results/` from the evidence you
+reviewed. It makes no requests.
+
+Either way, `assess` must end with **exit code 0**. Exit 2 means a configured
+node has no evidence, so the table is incomplete.
+
+> **If `assess` warns "Evidence from a different URL".** It means a node's URL
+> in `nodes.yaml` is not the page its evidence was collected from. That is the
+> case for BBMRI-ERIC as of 25 September 2026: `nodes.yaml` has the `dev3.`
+> address, but the published evidence is from the old one. The warning also
+> appears as a banner in both reports. Either collect that node again first
+> (example 2), or assess with the node list the evidence was collected with,
+> plus the new entry:
+>
+> ```bash
+> git show 53081f6:nodes.yaml > /tmp/nodes-published.yaml
+> # append the eosc-example entry from step 1 to /tmp/nodes-published.yaml
+> uv run basic-check assess --nodes /tmp/nodes-published.yaml --only eosc-example \
+>     --skip Italy --run live-2026-10-01-plus-eosc-example
+> ```
+
+**Step 5: re-run the tests against the new published run.**
+
+```bash
+uv run pytest -q
+```
+
+Two tests read the committed evidence. Each exists to make a change visible,
+not to be satisfied mechanically:
+
+- `test_privacy.py::test_the_committed_evidence_publishes_no_personal_address_or_phone`
+  must pass as it stands. If it fails, personal data is about to be published.
+  Stop and find out why; never change the test to let it through.
+- `test_names.py::test_the_official_names_match_the_nodes_that_show_them` pins
+  which nodes display their approved name (five, for the 24 September run). If
+  the new page shows its name, add its id to the expected set and update the
+  docstring to say why.
+
+**Step 6: update what quotes the published figures, then commit.**
+`results/` is regenerated, but these are written by hand:
+
+- a review document for the new run, like `results/REVIEW-2026-09-24.md`;
+- the headline tally in `README.md` ("120 cells: 44 PASS · 6 FAIL · 70 review");
+- "The published figures" in `docs/TEST-SUITE.md`, and the node list in
+  "The node list — a YAML file" in the same file.
+
+```bash
+git status
+git add nodes.yaml checklist/approved-names.txt checklist/approved-names-scoped.txt \
+        results README.md docs tests
+git commit -m "Add eosc-example; publish run live-2026-10-01-plus-eosc-example"
+git push
+```
+
+### Example 2 — changing a node's landing page URL
+
+The example is the change actually made on 25 September 2026: BBMRI-ERIC moved
+from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to
+`https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`.
+
+**Which files change.** One line in one file: `url` for that node in
+`nodes.yaml`. Nothing else in the repository stores a node's URL. Add a comment
+recording the old address and the date, so the published evidence can still be
+traced:
+
+```yaml
+  - id: bbmri-eric
+    name: BBMRI-ERIC
+    # URL changed on 25 September 2026, from
+    # https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
+    url: https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
+    eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
+```
+
+Change `eosc_page` as well only if the node's own entry on `eosc.eu` moved; a
+new landing page does not usually mean a new `eosc.eu` entry. The name files
+change only if the node's approved name changed. Keep the `id`: it names the
+evidence file, and changing it would make the node look new.
+
+**Step 1: check the configuration.**
+
+```bash
+uv run pytest -q
+```
+
+**Step 2: trial run for that node only.** This contacts one site.
+
+```bash
+uv run basic-check collect --only bbmri-eric --results /tmp/trial
+uv run basic-check assess  --only bbmri-eric --results /tmp/trial
+uv run basic-check show bbmri-eric --results /tmp/trial
+```
+
+Check that the page actually loaded before going further. On 25 September the
+`dev3.` host's `robots.txt` disallowed every path, the tool honoured it, and all
+ten points were `ERROR`. A result like that is not worth publishing: ask the
+node for its public address, or for the checker to be allowed, and stop there.
+
+**Step 3: replace that node's evidence in the published run.** Reuse the trial
+evidence rather than fetching the page again:
+
+```bash
+cp /tmp/trial/evidence/bbmri-eric.json results/evidence/
+cp /tmp/trial/evidence/screenshots/bbmri-eric.png results/evidence/screenshots/
+uv run basic-check assess --only bbmri-eric --skip Italy \
+    --run live-2026-10-01-new-bbmri-url
+```
+
+If the new capture has no screenshot, because the page could not be rendered,
+delete `results/evidence/screenshots/bbmri-eric.png` rather than keep the old
+page's image. The report covers every node, with a **Mixed freshness** banner
+naming `bbmri-eric` as the only row fetched again. For a completely fresh table
+instead, follow path B of example 1 step 4.
+
+**Why the order matters.** `assess` labels each row with the URL in
+`nodes.yaml`, but takes the verdicts from the evidence on disk. Between step 1
+and step 3, the two describe different pages. `assess` now detects this. It
+prints a warning naming the node and both URLs, puts an **Evidence from a
+different URL** banner in `results.md` and `index.html`, and records the pair
+under `url_mismatch` in `results.json`. Step 3 clears it, because the evidence
+now comes from the configured URL.
+
+To rebuild the old published run instead, without the warning, use the node
+list it was collected with. This reproduces the committed `results/` exactly,
+apart from the generation time:
+
+```bash
+git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
+uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy \
+    --nodes /tmp/nodes-2026-09-24.yaml
+```
+
+**Step 4: tests, review, commit.** As in example 1, steps 5 and 6: run
+`uv run pytest -q`, check the two tests that read the committed evidence, write
+the review, update the quoted figures, and commit `nodes.yaml`, `results/` and
+the documents together.
+
+### Example 3 — moving to a new revision of the checklist
+
+**There is no URL to change.** The tool never downloads the checklist document.
+A copy of it is committed in `checklist/`, and three things connect the tool to
+it:
+
+| Where | What it says |
+|---|---|
+| `src/basic_check/cli.py`, the line `DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"` | Which checklist revision is used when `--checklist` is not given. **This is the one line to change** to make a new revision the default. The help texts, the tests and the reports all follow it. |
+| `checklist/vX.Y.yaml`: `checklist_version`, `checklist_date`, `source_document`, `source_file`, `source_sha256` | Which document that revision was transcribed from, and its SHA-256 hash. |
+| `--checklist` / `-c <file>` on `assess`, `run` and `points` | A different revision for a single run, without changing the default. |
+
+When the originating document changes, you therefore add a new file for the new
+revision and point the default at it. `v3.0.yaml` is never edited: the
+published reports name the file they were produced from.
+
+The example assumes a v3.1 dated 15 October 2026. Use the real version, date
+and filenames.
+
+**Step 1: commit the new document next to the old one.**
+
+```bash
+cp ~/Downloads/20261015_Node_Landing_Page_Verification_Checklist_v3.1.pdf checklist/
+sha256sum checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.1.pdf
+# on macOS: shasum -a 256 checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.1.pdf
+```
+
+The committed v3.0 file is a PDF rendering of the circulated `.docx`. Commit
+the `.docx` itself if you prefer: `source_file` may name either.
+
+**Step 2: create the new revision's file from the old one.**
+
+```bash
+cp checklist/v3.0.yaml checklist/v3.1.yaml
+```
+
+In `checklist/v3.1.yaml`, change the header:
+
+```yaml
+checklist_version: "3.1"
+checklist_date: "2026-10-15"
+source_document: 20261015_Node_Landing_Page_Verification_Checklist_v3.1.docx
+source_file: 20261015_Node_Landing_Page_Verification_Checklist_v3.1.pdf
+source_sha256: <the hash printed in step 1>
+```
+
+The version must match the filename (`v3.1.yaml` declares `"3.1"`); a test
+enforces this.
+
+**Step 3: compare every point with the new document.** No tool can do this step
+for you. For each point in `v3.1.yaml`:
+
+- If the wording changed, update `title` and `requirement`, which are quoted
+  word for word. Then read the `check_*` function named in `implemented_by`, in
+  `src/basic_check/checks.py`, and change it if it no longer applies the new
+  wording.
+- If what a script can decide changed, update `decidable` and `decidable_note`.
+- If a point was **added**, write a new `check_<id>` function in `checks.py`,
+  call it from `run_all()` in checklist order, name it in the point's
+  `implemented_by`, and add tests for it to `tests/test_checks.py`.
+- If a point was **removed**, delete its entry, its function and its tests.
+
+**Step 4: try the new revision offline, before switching.** `-c` applies it to
+one run only. Re-scoring saved evidence contacts no one:
+
+```bash
+uv run basic-check points -c checklist/v3.1.yaml
+mkdir -p /tmp/v31 && cp -r results/evidence /tmp/v31/
+git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
+uv run basic-check assess -c checklist/v3.1.yaml --results /tmp/v31 \
+    --nodes /tmp/nodes-2026-09-24.yaml --skip Italy --run trial-v3.1
+```
+
+Compare `/tmp/v31/results.md` with `results/results.md`. Any difference comes
+from the new rules alone, since the evidence is the same.
+
+**Step 5: make it the default, and run the tests.** In `src/basic_check/cli.py`:
+
+```python
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"
+```
+
+```bash
+uv run pytest -q
+uv run basic-check --help     # now says "against checklist v3.1"
+```
+
+The tests check the new file's hash, that its version matches its filename,
+and that every point maps to exactly one `check_*` function and every function
+to one point. They also check that `v3.0.yaml` and its document are still
+intact, so older runs can still be rebuilt with `-c checklist/v3.0.yaml`. What
+they cannot check is whether a rule is right: that is step 3.
+
+**Step 6: produce and publish the results.** The default revision is now
+v3.1, so no `-c` is needed. Choose between the same two paths as in example 1:
+
+```bash
+# fresh evidence from every node:
+uv run basic-check run --skip Italy --results /tmp/new-run --run live-2026-10-20-v3.1
+# review, then:
+rm -rf results/evidence && cp -r /tmp/new-run/evidence results/evidence
+uv run basic-check assess --skip Italy --run live-2026-10-20-v3.1
+```
+
+Alternatively, re-score the published evidence against v3.1 without contacting
+anyone, as in step 4 but writing to `results/`. The report then says v3.1,
+while the capture date is still that of the evidence.
+
+The reports now link to `results/checklist-v3.1.html`. The old
+`results/checklist-v3.0.html` stays behind; remove it, and update the places
+that name v3.0 in prose or links:
+
+```bash
+git rm results/checklist-v3.0.html
+rg -n "v3\.0" README.md docs checklist/README.md .github
+```
+
+In `README.md`, the table of checklist points links each point to
+`results/checklist-v3.0.html#p…`. Those links break once the file is removed,
+so change them to `v3.1`.
+
+**Step 7: tests, review, commit.** As in example 1, steps 5 and 6. Commit the
+new document, `checklist/v3.1.yaml`, `cli.py`, any changed checks and tests,
+`results/` and the documents together, so the commit shows the whole change.
 
 ---
 

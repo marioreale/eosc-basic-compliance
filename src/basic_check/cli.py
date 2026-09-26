@@ -26,7 +26,12 @@ from .names import ApprovedNames
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_NODES = ROOT / "nodes.yaml"
+# The checklist revision applied by default. This line is the one place to change
+# when a new revision is adopted: add checklist/vX.Y.yaml beside the old one (see
+# checklist/README.md), then point this at it. Help texts, tests and reports all
+# follow from here.
 DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.0.yaml"
+DEFAULT_CHECKLIST_LABEL = f"checklist/{DEFAULT_CHECKLIST.name}"
 # The official Tripartite-approved node names, committed alongside the checklist
 # they serve. Used unless --approved-names names another file, so the name half
 # of point 3 is assessed by default instead of silently skipped.
@@ -93,7 +98,8 @@ H_FETCH_BUDGET = (
     "from becoming a crawl of other people's sites."
 )
 H_CHECKLIST = (
-    "Checklist rules file to use instead of checklist/v3.0.yaml, e.g. a future v3.1."
+    f"Checklist rules file to use instead of {DEFAULT_CHECKLIST_LABEL}, e.g. a "
+    "newer revision committed beside it as checklist/vX.Y.yaml."
 )
 H_APPROVED_NAMES = (
     "Text file of Tripartite-approved node names for point 3, one per line, "
@@ -131,7 +137,7 @@ EPILOG = (
 
 app = typer.Typer(
     add_completion=False,
-    help="Check EOSC Node Landing Pages against checklist v3.0.\n\n"
+    help=f"Check EOSC Node Landing Pages against checklist {DEFAULT_CHECKLIST.stem}.\n\n"
     "collect fetches the pages and saves the evidence (the only step that "
     "contacts the nodes); assess judges the saved evidence offline and writes "
     "the reports; run does both. Every command has its own --help.",
@@ -419,7 +425,7 @@ def assess(
     ),
     checklist_file: Path = typer.Option(
         DEFAULT_CHECKLIST, "--checklist", "-c", help=H_CHECKLIST,
-        show_default="checklist/v3.0.yaml",
+        show_default=DEFAULT_CHECKLIST_LABEL,
     ),
     results_dir: Path = typer.Option(None, "--results", help=H_RESULTS, show_default="results/"),
     only: str = typer.Option("", "--only", help=H_ONLY),
@@ -580,12 +586,27 @@ def _do_assess(
     }
 
     missing: list[str] = []
+    url_mismatch: list[dict] = []
     for node in nodes:
         path = evidence_dir / f"{node['id']}.json"
         if not path.exists():
             missing.append(node["id"])
             continue
         ev = load_evidence(evidence_dir, node["id"])
+        # The row is labelled with the URL from the nodes file, but its verdicts
+        # come from the evidence. After a URL change, and before the node is
+        # collected again, the two describe different pages. Said out loud,
+        # because otherwise the report shows the new address above verdicts it
+        # never produced.
+        if ev.requested_url and ev.requested_url != node["url"]:
+            url_mismatch.append(
+                {
+                    "id": node["id"],
+                    "configured_url": node["url"],
+                    "evidence_url": ev.requested_url,
+                    "fetched_at": ev.fetched_at,
+                }
+            )
         results = checks.run_all(ev, names, node.get('eosc_page', ''))
         # When the capture went two hops deep, also assess it as if it had not,
         # so the report can show what the second hop changed rather than
@@ -636,6 +657,20 @@ def _do_assess(
             }
         )
 
+    if url_mismatch:
+        run["url_mismatch"] = url_mismatch
+        lines = "\n".join(
+            f"    {m['id']}: nodes file says {m['configured_url']}\n"
+            f"    {' ' * len(m['id'])}  evidence is from {m['evidence_url']}"
+            for m in url_mismatch
+        )
+        typer.secho(
+            f"\n  {len(url_mismatch)} node(s) were assessed from evidence collected at a "
+            f"different URL than the nodes file gives:\n{lines}\n  Collect them again, "
+            "or assess with the node list the evidence was collected with (--nodes).",
+            fg=typer.colors.YELLOW,
+        )
+
     if missing:
         # Assessing a subset while presenting it as the whole run is the failure
         # mode that matters most here: a short table looks complete.
@@ -684,7 +719,7 @@ def run(
     eosc_page: str = typer.Option("", "--eosc-page", help=H_EOSC_PAGE),
     checklist_file: Path = typer.Option(
         DEFAULT_CHECKLIST, "--checklist", "-c", help=H_CHECKLIST,
-        show_default="checklist/v3.0.yaml",
+        show_default=DEFAULT_CHECKLIST_LABEL,
     ),
     approved_names: Path | None = typer.Option(
         None,
@@ -733,7 +768,7 @@ def run(
 @app.command()
 def points(checklist_file: Path = typer.Option(
         DEFAULT_CHECKLIST, "--checklist", "-c", help=H_CHECKLIST,
-        show_default="checklist/v3.0.yaml",
+        show_default=DEFAULT_CHECKLIST_LABEL,
     )):
     """Print the checklist points and whether each is machine-decidable. Offline."""
     checklist = yaml.safe_load(checklist_file.read_text())

@@ -1,6 +1,7 @@
 name: compliance run
 
-# Checks the real Node Landing Pages against checklist v3.0 and publishes the
+# Checks the real Node Landing Pages against the default checklist revision
+# (DEFAULT_CHECKLIST in src/basic_check/cli.py) and publishes the
 # matrix to the run summary.
 #
 # Manual trigger only, deliberately. Unlike the `tests` workflow, this one sends

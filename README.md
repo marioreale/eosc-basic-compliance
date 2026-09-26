@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 333
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 339
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -292,6 +292,22 @@ Nothing else in the repository needs changing, and nothing is auto-discovered.
 and what does and does not carry over if you maintain a copy on another host
 such as GitLab.
 
+### Worked examples
+
+Section 11 of both [docs/GUIDE.md](docs/GUIDE.md) and
+[docs/TEST-SUITE.md](docs/TEST-SUITE.md) gives every file and command for the
+three changes that come up most:
+
+1. **Adding a node** and publishing a run that includes it, contacting only the
+   new node's site.
+2. **Changing a node's URL.** Only the `url` line in `nodes.yaml` changes.
+   Until that node is collected again, `assess` warns, and both reports carry an
+   "Evidence from a different URL" banner.
+3. **Moving to a new revision of the checklist.** There is no URL to change: the
+   tool never downloads the checklist. Commit the new document, add a
+   `checklist/vX.Y.yaml` for it, and change the one line `DEFAULT_CHECKLIST` in
+   `src/basic_check/cli.py`.
+
 ### How deep to go: `--depth`
 
 | `--depth` | What is fetched | Requests in the 21 Sep 2026 run |
@@ -416,7 +432,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 333 tests, a few seconds, no network, no browser
+uv run pytest -q          # 339 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

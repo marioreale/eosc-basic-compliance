@@ -728,13 +728,17 @@ of the bytes actually read, and `strict_separators` — plus the older
 `approved_names_supplied` flag, kept for readers of earlier result files),
 `selection` (the node ids `--only` restricted the fetch to, empty on a full run),
 `skipped` (the node ids `--skip` left out, empty when nothing was skipped),
-and `nodes`. Each node carries `id`, `name`, `url`,
+`url_mismatch` (present only when some node's evidence was collected from a URL
+other than the one now configured: `id`, `configured_url`, `evidence_url`,
+`fetched_at`; the reports then carry an "Evidence from a different URL"
+banner), and `nodes`. Each node carries `id`, `name`, `url`,
 `ad_hoc`, a `fetch` summary (status, final URL, robots note, screenshot, crawl
 depth, every child with its `selected_for` and outcome, and `children_skipped`),
 `results`, and `results_depth_1` when depth 2 was used.
 
 The same run is rendered to `index.html` (the matrix, with evidence expandable
-per cell), `results.md`, `results.csv`, and `checklist-v3.0.html` (the checklist
+per cell), `results.md`, `results.csv`, and `checklist-v3.0.html` (named after the
+revision applied, so `checklist-v3.1.html` after a switch; the checklist
 itself, so a reader can see the rule a verdict was derived from without opening
 the source document).
 

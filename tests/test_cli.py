@@ -458,3 +458,66 @@ def test_top_level_help_lists_the_configured_node_ids():
 
 def test_help_still_prints_when_the_node_list_is_unreadable(tmp_path):
     assert "nodes.yaml" in cli._node_ids(tmp_path / "missing.yaml")
+
+
+# --- a URL change must not relabel old evidence silently ----------------------
+
+
+def _nodes_from_evidence(tmp_path, results_dir, **url_overrides):
+    """A nodes file whose URLs are the ones the evidence was collected from,
+    with optional per-id replacements standing in for a URL change."""
+    import json
+
+    import yaml
+
+    have = {}
+    for p in (results_dir / "evidence").glob("*.json"):
+        have[p.stem] = json.loads(p.read_text())["requested_url"]
+    all_nodes = yaml.safe_load(cli.DEFAULT_NODES.read_text(encoding="utf-8"))["nodes"]
+    kept = [
+        {**n, "url": url_overrides.get(n["id"], have[n["id"]])}
+        for n in all_nodes
+        if n["id"] in have
+    ]
+    path = tmp_path / "nodes-from-evidence.yaml"
+    path.write_text(yaml.safe_dump({"nodes": kept}, allow_unicode=True), encoding="utf-8")
+    return path
+
+
+def test_evidence_from_another_url_is_flagged_in_every_report(tmp_path):
+    """The defect: after editing a node's url in nodes.yaml, a bare `assess`
+    labelled the old page's verdicts with the new address, and nothing said so."""
+    import json
+
+    out = _full_results_dir(tmp_path)
+    new_url = "https://www.egi.eu/a-new-landing-page/"
+    nodes = _nodes_from_evidence(tmp_path, out, egi=new_url)
+    res = CliRunner().invoke(
+        cli.app, ["assess", "--results", str(out), "--nodes", str(nodes)], catch_exceptions=False
+    )
+    assert res.exit_code == 0, res.output
+    assert "different URL" in res.output and new_url in res.output
+    data = json.loads((out / "results.json").read_text())
+    assert [m["id"] for m in data["url_mismatch"]] == ["egi"]
+    assert data["url_mismatch"][0]["configured_url"] == new_url
+    assert data["url_mismatch"][0]["evidence_url"] == "https://www.egi.eu/egi-node"
+    for name in ("results.md", "index.html"):
+        text = (out / name).read_text()
+        assert "Evidence from a different URL." in text, name
+        assert "https://www.egi.eu/egi-node" in text, name
+
+
+def test_evidence_from_the_configured_url_adds_no_warning(tmp_path):
+    """The rebuild of a published run with the node list it was collected with
+    must stay identical: no mismatch, no banner, no new key in results.json."""
+    import json
+
+    out = _full_results_dir(tmp_path)
+    nodes = _nodes_from_evidence(tmp_path, out)
+    res = CliRunner().invoke(
+        cli.app, ["assess", "--results", str(out), "--nodes", str(nodes)], catch_exceptions=False
+    )
+    assert res.exit_code == 0, res.output
+    assert "different URL" not in res.output
+    assert "url_mismatch" not in json.loads((out / "results.json").read_text())
+    assert "Evidence from a different URL" not in (out / "results.md").read_text()

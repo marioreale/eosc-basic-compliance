@@ -558,3 +558,17 @@ def test_collapsing_whitespace_does_not_mangle_ordinary_evidence(tmp_path):
     node["results"][0]["evidence"] = ["6 link(s) examined, none pointing to eosc.eu"]
     md = render(run_dict([node]), tmp_path)
     assert "  - 6 link(s) examined, none pointing to eosc.eu" in md
+
+
+def test_the_url_mismatch_note_is_empty_without_a_mismatch_and_agrees_in_number():
+    from basic_check.report import _url_mismatch_note
+
+    assert _url_mismatch_note({}) == ""
+    assert _url_mismatch_note({"url_mismatch": []}) == ""
+    one = {"id": "a", "configured_url": "https://new.example/", "evidence_url":
+           "https://old.example/", "fetched_at": "2026-09-24T18:43:00+00:00"}
+    two = {**one, "id": "b"}
+    single = _url_mismatch_note({"url_mismatch": [one]})
+    assert "https://new.example/" in single and "https://old.example/" in single
+    assert "That row shows" in single and "rows" not in single
+    assert "Those rows show" in _url_mismatch_note({"url_mismatch": [one, two]})

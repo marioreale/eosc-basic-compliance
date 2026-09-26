@@ -43,7 +43,20 @@ every past run. `tests/test_checklist.py` enforces this: the declared
 4. Run `uv run pytest -q`. The hash and mapping tests will tell you if the
    paperwork and the code disagree; they will not tell you whether a rule is
    *correct*.
-5. Run with `-c checklist/v3.1.yaml`.
+5. Try it on the saved evidence first, which contacts no one:
+   `uv run basic-check assess -c checklist/v3.1.yaml --results /tmp/v31`, after
+   copying `results/evidence` into `/tmp/v31`.
+6. Make it the default. This is one line in `src/basic_check/cli.py`:
+   `DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"`. The help texts, the
+   generated `checklist-v3.1.html` and the tests follow it. Run
+   `uv run pytest -q` again.
+7. Produce a new run, review it, and publish it. Remove the stale
+   `results/checklist-v3.0.html` and update the links to it in the top-level
+   `README.md`.
+
+There is no URL to change: the tool never downloads the checklist, it reads the
+committed copy. Every command for steps 1–7 is in "Worked examples", example 3,
+in [`docs/GUIDE.md`](../docs/GUIDE.md) and [`docs/TEST-SUITE.md`](../docs/TEST-SUITE.md).
 
 ## On the hash
 

@@ -289,11 +289,11 @@ def test_judgement_points_are_never_auto_passed():
 
 
 def test_run_all_returns_exactly_one_result_per_checklist_point():
-    from pathlib import Path
-
     import yaml
 
-    checklist = yaml.safe_load((Path(__file__).parents[1] / "checklist" / "v3.0.yaml").read_text())
+    from basic_check.cli import DEFAULT_CHECKLIST
+
+    checklist = yaml.safe_load(DEFAULT_CHECKLIST.read_text())
     expected = [p["id"] for p in checklist["points"]]
     got = [r.point_id for r in checks.run_all(ev())]
     assert got == expected, "results must be one per point, in checklist order"
