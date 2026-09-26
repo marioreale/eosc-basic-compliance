@@ -43,6 +43,72 @@ Two consequences of the split matter in practice:
 - **The checks cannot see anything the collector did not record.** If a fact is
   not in `PageEvidence`, no check can use it — see section 3.
 
+### The phases in time, their options, and what to re-run
+
+![Figure 1. The three phases in execution order: collect contacts the nodes, assess and report work offline, and run performs all three.](img/phases.png)
+
+The phases run strictly in this order, and each one reads only what the one
+before it wrote to disk. **Collect** is the only phase that contacts the nodes.
+It reads `nodes.yaml` and writes `evidence/<node>.json` and a screenshot per
+node. **Assess** reads that evidence, the checklist and the approved-name list,
+and sends no request. **Report** is the last step of `assess`: it writes
+`results.json`, `results.md`, `index.html`, `results.csv` and
+`checklist-v3.0.html`. `run` performs the three in one invocation. With
+`--update-results-for-node`, `run` does the same for one node only, and
+`results.json` supplies every other row unchanged. `points` and `show` only
+read, so they never need re-running.
+
+**Options of each phase.** ✓ means the command accepts the option. Every
+command also takes `--help`.
+
+| Option | `collect` | `assess` | `run` | What it does |
+|----------------------|:------:|:------:|:------:|----------------------------------------|
+| `--nodes`, `-n <file>` | ✓ | ✓ | ✓ | Node list to use instead of `nodes.yaml` |
+| `--results <dir>` | ✓ | ✓ | ✓ | Folder to write to or read from instead of `results/` |
+| `--only <ids>` | ✓ | ✓ | ✓ | Fetch only these node ids |
+| `--skip <ids or names>` | ✓ | ✓ | ✓ | Leave these nodes out entirely; the report says so |
+| `--url <url>` | ✓ | ✓ | ✓ | Check a page not in `nodes.yaml` (writes to `results/one-off/`) |
+| `--eosc-page <url>` | ✓ | ✓ | ✓ | With one `--url`: that node's own `eosc.eu` page, for point 4 |
+| `--node <id or name>` | ✓ | ✓ | ✓ | One configured node at the alternative page given with `--url` |
+| `--delay <s>` | ✓ | — | ✓ | Seconds between hosts (default 2.0) |
+| `--depth 0/1/2` | ✓ | — | ✓ | How far to follow links (default 1) |
+| `--max-children <n>` | ✓ | — | — | Linked pages followed per node at depth 1 (default 8; `run` always uses 8) |
+| `--fetch-budget <n>` | ✓ | — | ✓ | Depth 2 only: ceiling on second-hop requests (default 60) |
+| `--checklist`, `-c <file>` | — | ✓ | ✓ | Checklist revision to apply (default `checklist/v3.0.yaml`) |
+| `--approved-names <file>` | — | ✓ | ✓ | Approved-name list for point 3 (default `checklist/approved-names.txt`) |
+| `--no-approved-names` | — | ✓ | ✓ | Use no name list at all |
+| `--strict-separators` | — | ✓ | ✓ | Match separators in approved names literally |
+| `--run <label>` | — | ✓ | ✓ | Label recorded in every report (default: UTC time) |
+| `--update-results-for-node <node>` | — | ✓ | ✓ | Update only that node's row in the stored results; `assess` re-judges its saved evidence, `run` fetches it again |
+| `--accept-error` | — | — | ✓ | With `--update-results-for-node`: merge the row even if the fetch failed |
+
+**What to launch again after a change.** Which phase has to be repeated depends
+on which input changed. A change to `nodes.yaml` needs a new collection for the
+nodes concerned. A change to the checklist or to the name list needs only a new
+assessment, which is offline. `--update-results-for-node` refuses when the
+checklist or the approved-name list differs from the stored results', because
+a row judged by other rules would not be comparable with the others. In those
+cases, every row is assessed again from its stored evidence.
+
+| You change | Launch again | Sites contacted | The other nodes' rows |
+|----------------------------|----------------------------|--------------|----------------------------|
+| **Add a node**: an entry in `nodes.yaml` and its approved name in `checklist/approved-names.txt` (and `-scoped.txt`) | `collect --only <new id>`, then `assess` without `--only` | the new node only | Re-judged, offline, from their stored evidence, because the approved-name list used for point 3 changed |
+| **Add a node** whose approved name is already in `checklist/approved-names.txt` | `run --update-results-for-node <new id>` | the new node only | Kept unchanged; the new row is inserted in `nodes.yaml` order |
+| **Change a node's landing page URL** (`basic-check --update-nlp <id> <URL>`, or by hand) | `run --update-results-for-node <id>` | that node only | Kept unchanged |
+| **Change the reference checklist** (a new `checklist/vX.Y.yaml`, made the default in `DEFAULT_CHECKLIST` or passed with `-c`) | `assess` | none | All re-judged, offline, from the stored evidence |
+
+`assess` alone is not enough after a URL change. The node's evidence still
+comes from the old page, so `assess` warns and both reports carry an **Evidence
+from a different URL** banner. After a checklist change, a new `collect` (or a
+full `run`) is needed only if the new revision asks for something the collector
+does not record (section 3), or if you want a fresh
+capture date. For the full procedure of each case, with every file and
+command, see the worked examples in section 8. Each command writes to
+`results/`, the reviewed run, by default. Add `--results /tmp/copy` to work on
+a copy first, and keep `--skip Italy` for the same scope as the published run.
+With an explicit `--results`, `--only` also narrows the report to those nodes,
+which is why the table runs `assess` without it.
+
 ---
 
 ## 2. Stage 1 — collection
