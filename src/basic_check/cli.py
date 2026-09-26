@@ -165,11 +165,18 @@ app = typer.Typer(
 # tests/test_checklist.py keeps the two identical.
 SCOPED_APPROVED_NAMES = ROOT / "checklist" / "approved-names-scoped.txt"
 
-H_LIST_NODES = "List the node ids in nodes.yaml, one per line, and exit."
+H_LIST_NODES = (
+    "List the node ids in nodes.yaml, one per line, and exit. --list-nodes-ids "
+    "is the same option."
+)
 H_LIST_NLPS = "List each node id with its Node Landing Page URL from nodes.yaml, and exit."
 H_LIST_APPROVED_NAMES = (
     "List each node id with its approved name, from "
     "checklist/approved-names-scoped.txt, and exit."
+)
+H_SHOW_NODE = (
+    "Print one node's configuration and exit: its id, Node Landing Page URL and "
+    "approved name, as one --print-config row. Node id or name, as for --skip."
 )
 H_PRINT_CONFIG = (
     "Print a table with one row per node: id, Node Landing Page URL and "
@@ -226,8 +233,32 @@ def _approved_cell(row: dict) -> str:
     return "; ".join(row["approved"]) if row["approved"] else "(none)"
 
 
+CONFIG_HEADER = ["Node id", "Node Landing Page URL", "Approved name"]
+
+
+def _config_row(rows: list[dict], value: str) -> dict:
+    """The row --show-node names: an id or a name, in any case, as for --skip.
+    Unknown or ambiguous values are errors that list the valid ids."""
+    known = ", ".join(r["id"] for r in rows)
+    hits = [r for r in rows if value.strip().casefold() in _node_keys(r)]
+    if not hits:
+        raise typer.BadParameter(
+            f"--show-node: no node matches {value!r}. Use a node id or name; ids are: {known}"
+        )
+    if len(hits) > 1:
+        raise typer.BadParameter(
+            f"--show-node {value!r} matches more than one node "
+            f"({', '.join(r['id'] for r in hits)}); use the node id"
+        )
+    return hits[0]
+
+
 def _print_listings(
-    list_nodes: bool, list_nlps: bool, list_names: bool, print_config: bool
+    list_nodes: bool,
+    list_nlps: bool,
+    list_names: bool,
+    print_config: bool,
+    show_node: str = "",
 ) -> None:
     rows, unscoped = _config_rows()
     blocks: list[str] = []
@@ -240,7 +271,7 @@ def _print_listings(
     if print_config:
         table = _columns(
             [[r["id"], r["url"], _approved_cell(r)] for r in rows],
-            header=["Node id", "Node Landing Page URL", "Approved name"],
+            header=CONFIG_HEADER,
         )
         notes = [
             f"{len(rows)} node(s). Ids and URLs from {_rel(DEFAULT_NODES)}; approved "
@@ -253,22 +284,28 @@ def _print_listings(
                 "Also tied to no node, so valid for every node: " + "; ".join(unscoped) + "."
             )
         blocks.append(table + "\n\n" + "\n".join(notes))
+    if show_node.strip():
+        row = _config_row(rows, show_node)
+        blocks.append(
+            _columns([[row["id"], row["url"], _approved_cell(row)]], header=CONFIG_HEADER)
+        )
     typer.echo("\n\n".join(blocks))
 
 
 @app.callback(invoke_without_command=True)
 def main(
     ctx: typer.Context,
-    list_nodes: bool = typer.Option(False, "--list-nodes", help=H_LIST_NODES),
+    list_nodes: bool = typer.Option(False, "--list-nodes", "--list-nodes-ids", help=H_LIST_NODES),
     list_nlps: bool = typer.Option(False, "--list-nlps", help=H_LIST_NLPS),
     list_approved_names: bool = typer.Option(
         False, "--list-approved-names", help=H_LIST_APPROVED_NAMES
     ),
     print_config: bool = typer.Option(False, "--print-config", help=H_PRINT_CONFIG),
+    show_node: str = typer.Option("", "--show-node", metavar="NODE", help=H_SHOW_NODE),
 ) -> None:
     """Top-level listing flags. They read local files only and contact no node."""
-    wanted = (list_nodes, list_nlps, list_approved_names, print_config)
-    if not any(wanted):
+    wanted = (list_nodes, list_nlps, list_approved_names, print_config, show_node)
+    if not any(v.strip() if isinstance(v, str) else v for v in wanted):
         if ctx.invoked_subcommand is None:
             # What Typer prints for a bare `basic-check` when no callback exists.
             typer.echo(
@@ -279,8 +316,8 @@ def main(
         return
     if ctx.invoked_subcommand is not None:
         raise typer.BadParameter(
-            "--list-nodes, --list-nlps, --list-approved-names and --print-config "
-            "are used on their own, without a command."
+            "--list-nodes, --list-nodes-ids, --list-nlps, --list-approved-names, "
+            "--print-config and --show-node are used on their own, without a command."
         )
     _print_listings(*wanted)
     raise typer.Exit(0)

@@ -107,13 +107,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-369 tests still pass, while `collect` fails with Playwright's
+379 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 369 passed
+uv run pytest -q                  # expect: 379 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -544,14 +544,16 @@ uv run basic-check show eudat        # one node's results in the terminal
 
 ### Listing the configuration
 
-Four flags on `basic-check` itself, used without a command, show what is
+Six flags on `basic-check` itself, used without a command, show what is
 configured:
 
 ```bash
 uv run basic-check --list-nodes             # node ids, one per line
+uv run basic-check --list-nodes-ids         # the same, under a second name
 uv run basic-check --list-nlps              # id and Node Landing Page URL
 uv run basic-check --list-approved-names    # id and approved name
 uv run basic-check --print-config           # all three in one table
+uv run basic-check --show-node bbmri-eric   # one node's row of that table
 ```
 
 `--print-config` prints one row per node, in `nodes.yaml` order, as plain
@@ -568,6 +570,17 @@ followed by two lines naming the files: *13 node(s). Ids and URLs from
 nodes.yaml; approved names from checklist/approved-names-scoped.txt." and
 "assess and run use checklist/approved-names.txt by default: the same names,
 unscoped, so each counts for every node."
+
+`--show-node` takes one node, by id or by name in any case as `--skip` does
+(`eosc-it`, `Italy`, `EOSC Node Italy`), and prints that node's row of the
+table under the same header:
+
+| Node id | Node Landing Page URL | Approved name |
+|---|---|---|
+| `bbmri-eric` | `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/` | EOSC Node \| BBMRI-ERIC |
+
+A value that matches no node, or more than one, is an error that lists the ids.
+`--list-nodes-ids` is another name for `--list-nodes`, with the same output.
 
 The approved name next to each id comes from
 `checklist/approved-names-scoped.txt`, the copy of the official list that ties
@@ -933,7 +946,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 369 tests, offline, a few seconds
+uv run pytest -q                    # 379 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth

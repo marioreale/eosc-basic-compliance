@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 369
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 379
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -208,10 +208,11 @@ nodes; `assess`, `points` and `show` work offline.
 
 | Option | What it's for |
 |---|---|
-| `--list-nodes` | The node ids in `nodes.yaml`, one per line. |
+| `--list-nodes`, `--list-nodes-ids` | The node ids in `nodes.yaml`, one per line. The two names are the same option. |
 | `--list-nlps` | Each node id with its Node Landing Page URL from `nodes.yaml`. |
 | `--list-approved-names` | Each node id with its approved name, from `checklist/approved-names-scoped.txt`. |
 | `--print-config` | A table with one row per node: id, Node Landing Page URL and approved name, with the files they come from. |
+| `--show-node <id or name>` | One node's configuration: its id, Node Landing Page URL and approved name, as its `--print-config` row. An id or a name, in any case, as for `--skip`. |
 
 **Which nodes to check** (`collect`, `assess`, `run`)
 
@@ -284,6 +285,9 @@ uv run basic-check show geant
 # What is configured: ids, landing page URLs and approved names, one row per node
 uv run basic-check --print-config
 
+# The same for one node
+uv run basic-check --show-node bbmri-eric
+
 # BBMRI-ERIC at an alternative landing page, nodes.yaml unchanged
 uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node-bbmri-eric/
 ```
@@ -292,9 +296,11 @@ uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node
 
 ```bash
 uv run basic-check --list-nodes             # node ids, one per line
+uv run basic-check --list-nodes-ids         # the same, under a second name
 uv run basic-check --list-nlps              # id and Node Landing Page URL
 uv run basic-check --list-approved-names    # id and approved name
 uv run basic-check --print-config           # all three in one table
+uv run basic-check --show-node bbmri-eric   # one node's row of that table
 ```
 
 `--print-config` prints:
@@ -310,6 +316,19 @@ eosc-sk     https://eosc.sk/                                        EOSC Node | 
 13 node(s). Ids and URLs from nodes.yaml; approved names from checklist/approved-names-scoped.txt.
 assess and run use checklist/approved-names.txt by default: the same names, unscoped, so each counts for every node.
 ```
+
+`--show-node` takes one node, by id or by name in any case as `--skip` does
+(`eosc-it`, `Italy`, `EOSC Node Italy`), and prints that node's row of the
+table under the same header:
+
+```text
+Node id     Node Landing Page URL                             Approved name
+----------  ------------------------------------------------  ----------------------
+bbmri-eric  https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/  EOSC Node | BBMRI-ERIC
+```
+
+A value that matches no node, or more than one, is an error that lists the ids.
+`--list-nodes-ids` is another name for `--list-nodes`, with the same output.
 
 The approved name next to each id comes from
 `checklist/approved-names-scoped.txt`, the copy of the official list that ties
@@ -505,7 +524,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 369 tests, a few seconds, no network, no browser
+uv run pytest -q          # 379 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

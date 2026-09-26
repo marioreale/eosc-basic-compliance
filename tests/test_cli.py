@@ -796,8 +796,11 @@ def test_the_listings_contact_no_node(monkeypatch):
         raise AssertionError("a listing tried to fetch")
 
     monkeypatch.setattr(cli, "collect_all", boom)
-    for flag in ("--list-nodes", "--list-nlps", "--list-approved-names", "--print-config"):
-        assert _invoke(flag).exit_code == 0, flag
+    for args in (
+        ["--list-nodes"], ["--list-nodes-ids"], ["--list-nlps"], ["--list-approved-names"],
+        ["--print-config"], ["--show-node", "egi"],
+    ):
+        assert _invoke(*args).exit_code == 0, args
 
 
 def test_the_top_level_options_have_help_text_and_are_in_help():
@@ -808,5 +811,59 @@ def test_the_top_level_options_have_help_text_and_are_in_help():
     # CI forces colour, and Rich styles "--" and the option name separately, so
     # compare against the text without its ANSI escapes.
     text = re.sub(r"\x1b\[[0-9;]*m", "", res.output)
-    for flag in ("--list-nodes", "--list-nlps", "--list-approved-names", "--print-config"):
+    for flag in (
+        "--list-nodes", "--list-nodes-ids", "--list-nlps", "--list-approved-names",
+        "--print-config", "--show-node",
+    ):
         assert flag in text, flag
+
+
+def test_list_nodes_ids_is_the_same_listing_as_list_nodes():
+    nodes, _ = _configured()
+    res = _invoke("--list-nodes-ids")
+    assert res.exit_code == 0, res.output
+    assert res.output == _invoke("--list-nodes").output
+    assert res.output.split() == [n["id"] for n in nodes]
+
+
+def test_show_node_prints_that_nodes_print_config_row():
+    """Same columns and values as the node's --print-config row, and nothing else."""
+    nodes, names = _configured()
+    for n in nodes:
+        res = _invoke("--show-node", n["id"])
+        assert res.exit_code == 0, res.output
+        header, rule, row, *rest = res.output.strip().splitlines()
+        assert header.split("  ")[0] == "Node id" and "Approved name" in header
+        assert set(rule) <= {"-", " "}
+        assert row.split()[:2] == [n["id"], n["url"]]
+        assert row.endswith("; ".join(names.per_node[n["id"]]))
+        assert rest == []
+
+
+@pytest.mark.parametrize("value", ["eosc-it", "EOSC-IT", "Italy", "EOSC Node Italy", " italy "])
+def test_show_node_takes_an_id_or_a_name_in_any_case(value):
+    res = _invoke("--show-node", value)
+    assert res.exit_code == 0, res.output
+    assert res.output.splitlines()[2].startswith("eosc-it ")
+
+
+def test_show_node_rejects_an_unknown_node_and_lists_the_ids():
+    res = _invoke("--show-node", "no-such-node")
+    assert res.exit_code == 2
+    text = " ".join(re.sub(r"\x1b\[[0-9;]*m|[│╭╮╰╯─]", " ", res.output).split())
+    assert "no node matches" in text and "bbmri-eric" in text
+
+
+def test_show_node_rejects_an_ambiguous_value():
+    rows = [
+        {"id": "a", "name": "EOSC Node Twin", "url": "https://a.example/", "approved": []},
+        {"id": "b", "name": "Twin", "url": "https://b.example/", "approved": []},
+    ]
+    with pytest.raises(typer.BadParameter, match="more than one node"):
+        cli._config_row(rows, "Twin")
+
+
+def test_show_node_is_refused_with_a_command():
+    res = _invoke("--show-node", "egi", "points")
+    assert res.exit_code == 2
+    assert "without a command" in " ".join(re.sub(r"[│╭╮╰╯─]", " ", res.output).split())
