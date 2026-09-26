@@ -34,7 +34,7 @@ conditions behind each of the ten checklist points.
 >
 > **Since 26 September 2026: a new published run.** `results/` held run `web-4`, collected by the GitHub workflow from all thirteen nodes, Italy included at its new address: 45 PASS, 8 FAIL, 77 MANUAL_REVIEW. It replaced the reviewed run of 24 September by decision of the maintainer and has **not** been reviewed by hand; section 10 has the figures. Four tests pinned to the old run were updated to the new one (section 10), and the count stayed 425.
 >
-> **Since 26 September 2026: checklist v3.1.** The reference document is now *Node Landing Page Verification Checklist v3.1* (24 September 2026), transcribed to `checklist/v3.1.yaml` and made the default; `v3.0.yaml` is kept so older runs can be rebuilt. The rules did not change: v3.1 rewords points 1, 2, 4, 6 and 7, narrows 1R and 5a–5c to *Node Exchange* resources, and defines EOSC AAI login by requirement [P.2] of the Production 1.0 Checklist v1.4, so only titles, quoted text and review messages were updated. The evidence of run `web-4` was first re-scored against v3.1 without contacting any node, and every one of the 130 verdicts was unchanged; run `web-5`, collected under v3.1 by the workflow, then replaced it with the same verdicts. The suite now has 426 cases: the per-revision provenance test also runs on v3.1, and the stored-results update test no longer assumes version 3.0.
+> **Since 26 September 2026: checklist v3.1.** The reference document is now *Node Landing Page Verification Checklist v3.1* (24 September 2026), transcribed to `checklist/v3.1.yaml` and made the default; `v3.0.yaml` is kept so older runs can be rebuilt. The rules did not change: v3.1 rewords points 1, 2, 4, 6 and 7, narrows 1R and 5a–5c to *Node Exchange* resources, and defines EOSC AAI login by requirement [P.2] of the Production 1.0 Checklist v1.4, so only titles, quoted text and review messages were updated. The evidence of run `web-4` was first re-scored against v3.1 without contacting any node, and every one of the 130 verdicts was unchanged; runs `web-5` and `web-6`, collected under v3.1 by the workflow, then replaced it with the same verdicts; `web-6` is the published one. The suite now has 426 cases: the per-revision provenance test also runs on v3.1, and the stored-results update test no longer assumes version 3.0.
 >
 > **Since the 24 September edition.** Personal data is now masked in the evidence and in every report (section 5), and the published run was masked at commit `ada1b4a` with every verdict unchanged (section 10). BBMRI-ERIC's configured URL changed to a `dev3.` address on 25 September, and the published run was collected from the old one, so rebuilding it needs the old node list (section 5). The suite grew from 326 to 329 cases for these changes, to 333 with four tests that keep the command-line help complete, and to 339 with the tests for the URL-mismatch warning and for switching the default checklist revision (section 11). It is 357 with eighteen cases for `--node`, 369 with twelve for the configuration listings, 379 with ten for `--list-nodes-ids` and `--show-node`, and 390 with eleven for `--update-nlp` (section 5).
 >
@@ -202,7 +202,7 @@ git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
 uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy --nodes /tmp/nodes-2026-09-24.yaml
 ```
 
-That command applies to the 24 September run, which is now in the git history at `800d632`. The published run `web-5` was collected from the committed `nodes.yaml`, so `uv run basic-check assess --run web-5` rebuilds it exactly, apart from the generation time, with no URL warning (verified 26 September 2026).
+That command applies to the 24 September run, which is now in the git history at `800d632`. The published run `web-6` was collected from the committed `nodes.yaml`, so `uv run basic-check assess --run web-6` rebuilds it exactly, apart from the generation time, with no URL warning (verified 26 September 2026).
 
 The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean. The step-by-step procedure for a URL change, through to new published results, is example 2 in section 11.
 
@@ -784,7 +784,7 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ### Current run: 26 September 2026 (unreviewed)
 
-From `results/results.json`, run `web-5`, collected on 26 September 2026 by the GitHub workflow ([run 36236603533](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36236603533), commit `6e54e9f`, unit tests passing first) against checklist v3.1 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). All thirteen nodes were assessed and none was skipped. The run made 44 requests (13 landing pages and 31 child pages). Twelve landing pages returned HTTP 200. GÉANT returned HTTP 403 with the Cloudflare challenge. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number. Offline, `uv run basic-check assess --run web-5` reproduces it exactly, apart from the generation time. Every verdict is the same as in run `web-4` ([run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476), commit `800d632`), collected under v3.0 earlier the same day.
+From `results/results.json`, run `web-6`, collected on 26 September 2026 by the GitHub workflow ([run 36241719419](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36241719419), commit `08f38b0`, unit tests passing first) against checklist v3.1 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). All thirteen nodes were assessed and none was skipped. The run made 44 requests (13 landing pages and 31 child pages). Twelve landing pages returned HTTP 200. GÉANT returned HTTP 403 with the Cloudflare challenge. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number. Offline, `uv run basic-check assess --run web-6` reproduces it exactly, apart from the generation time. Every verdict is the same as in run `web-5` ([run 36236603533](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36236603533), commit `6e54e9f`) and in run `web-4` ([run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476), commit `800d632`), collected under v3.0 earlier the same day.
 
 | Verdict | Cells |
 |---|---|
@@ -815,7 +815,7 @@ No other cell changed. BBMRI-ERIC was collected again from its `www.` address wi
 
 ### Previous run: 24 September 2026 (reviewed)
 
-This subsection is kept as the record of the reviewed run that `web-4` (and then `web-5`) replaced. Its files are in the git history at `800d632`.
+This subsection is kept as the record of the reviewed run that `web-4` (and then `web-5` and `web-6`) replaced. Its files are in the git history at `800d632`.
 
 From `results/results.json` as it stood at `800d632`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200. The figures below are from the re-assessment at commit `29dead8`, made from the same evidence after the point 6 and 5b/5c fixes. The first assessment gave 45 / 6 / 69.
 
@@ -1082,7 +1082,7 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-5`). Update it to the new run's shape.
+  run `web-6`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
@@ -1327,7 +1327,7 @@ the documents together, so the commit shows the whole change.
 - Checklist: *Node Landing Page Verification Checklist v3.1*, 24 September 2026, committed as `checklist/20260910_Node_Landing_Page_Verification_Checklist_v3.1.pdf` and transcribed to `checklist/v3.1.yaml` with its SHA-256 pinned
 - EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
-- Figures in section 10, current run: `results/results.json`, run `web-5`, collected 26 September 2026 by [workflow run 36236603533](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36236603533) under checklist v3.1, not reviewed
+- Figures in section 10, current run: `results/results.json`, run `web-6`, collected 26 September 2026 by [workflow run 36241719419](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36241719419) under checklist v3.1, not reviewed
 - Figures in section 10, 24 September run: `results/results.json` at commit `800d632`, run `live-2026-09-24-no-italy`, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `871161a5…`) and the node-scoped variant `checklist/approved-names-scoped.txt`

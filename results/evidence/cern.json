@@ -2,7 +2,7 @@
   "node_id": "cern",
   "node_name": "CERN",
   "requested_url": "https://eosc-auth.cern.ch/login",
-  "fetched_at": "2026-09-26T10:43:38+00:00",
+  "fetched_at": "2026-09-26T12:23:56+00:00",
   "final_url": "https://eosc-auth.cern.ch/login",
   "http_status": 200,
   "redirect_chain": [],
