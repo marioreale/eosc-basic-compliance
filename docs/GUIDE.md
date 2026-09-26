@@ -1383,9 +1383,12 @@ In `README.md`, the table of checklist points links each point to
 `results/checklist-v3.0.html#p…`. Those links break once the file is removed,
 so change them to `v3.1`.
 
-**Step 7: tests, review, commit.** As in example 1, steps 5 and 6. Commit the
-new document, `checklist/v3.1.yaml`, `cli.py`, any changed checks and tests,
-`results/` and the documents together, so the commit shows the whole change.
+**Step 7: tests, review, commit.** As in example 1, steps 5 and 6. If any
+`check_*` function changed in step 3, also update its decision procedure in
+section 5 of [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md), which describes
+each point's rule branch by branch. Commit the new document,
+`checklist/v3.1.yaml`, `cli.py`, any changed checks and tests, `results/` and
+the documents together, so the commit shows the whole change.
 
 ---
 

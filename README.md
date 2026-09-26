@@ -294,9 +294,10 @@ such as GitLab.
 
 ### Worked examples
 
-Section 11 of both [docs/GUIDE.md](docs/GUIDE.md) and
-[docs/TEST-SUITE.md](docs/TEST-SUITE.md) gives every file and command for the
-three changes that come up most:
+Section 11 of [docs/GUIDE.md](docs/GUIDE.md) and of
+[docs/TEST-SUITE.md](docs/TEST-SUITE.md), and section 8 of
+[docs/ANALYSIS-WORKFLOW.md](docs/ANALYSIS-WORKFLOW.md), give every file and
+command for the three changes that come up most:
 
 1. **Adding a node** and publishing a run that includes it, contacting only the
    new node's site.
