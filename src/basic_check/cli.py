@@ -141,6 +141,7 @@ EPILOG = (
     "basic-check run --url https://example.org/eosc-node/\n\n"
     "basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node/\n\n"
     "basic-check show geant\n\n"
+    "basic-check --print-config   (ids, landing page URLs, approved names)\n\n"
     "Only collect and run contact the nodes; assess, points and show never do. "
     "Full reference: README.md, section Command-line options."
 )
@@ -153,6 +154,136 @@ app = typer.Typer(
     "the reports; run does both. Every command has its own --help.",
     epilog=EPILOG,
 )
+
+
+
+# --- listing the configuration: basic-check --list-nodes and friends --------
+
+# The name-to-node mapping. The default list (approved-names.txt) is the
+# official file as circulated and is unscoped, so it cannot say which name is
+# whose; the scoped copy carries the same names, each tied to a node id, and
+# tests/test_checklist.py keeps the two identical.
+SCOPED_APPROVED_NAMES = ROOT / "checklist" / "approved-names-scoped.txt"
+
+H_LIST_NODES = "List the node ids in nodes.yaml, one per line, and exit."
+H_LIST_NLPS = "List each node id with its Node Landing Page URL from nodes.yaml, and exit."
+H_LIST_APPROVED_NAMES = (
+    "List each node id with its approved name, from "
+    "checklist/approved-names-scoped.txt, and exit."
+)
+H_PRINT_CONFIG = (
+    "Print a table with one row per node: id, Node Landing Page URL and "
+    "approved name, with the files they come from, and exit."
+)
+
+
+def _rel(path: Path) -> str:
+    try:
+        return path.resolve().relative_to(ROOT).as_posix()
+    except ValueError:
+        return str(path)
+
+
+def _config_rows(
+    nodes_file: Path = DEFAULT_NODES, scoped_file: Path = SCOPED_APPROVED_NAMES
+) -> tuple[list[dict], list[str]]:
+    """One row per configured node, in nodes.yaml order: id, name, url and the
+    approved names tied to it; plus the names tied to no node (which count for
+    every node). Read only, from local files: nothing is fetched."""
+    try:
+        nodes = yaml.safe_load(nodes_file.read_text(encoding="utf-8"))["nodes"]
+    except (OSError, yaml.YAMLError, KeyError, TypeError) as exc:
+        raise typer.BadParameter(f"cannot read the node list {_rel(nodes_file)}: {exc}") from exc
+    try:
+        names = ApprovedNames.load(scoped_file)
+    except OSError as exc:
+        raise typer.BadParameter(f"cannot read {_rel(scoped_file)}: {exc}") from exc
+    rows = [
+        {
+            "id": n["id"],
+            "name": n.get("name", ""),
+            "url": n.get("url", ""),
+            "approved": list(names.per_node.get(n["id"].lower(), ())),
+        }
+        for n in nodes
+    ]
+    return rows, list(names.unscoped)
+
+
+def _columns(rows: list[list[str]], header: list[str] | None = None) -> str:
+    """Plain, left-aligned columns: no box drawing and no wrapping, so a long
+    URL stays on one line and the output can be piped to grep or cut."""
+    table = ([header] if header else []) + rows
+    widths = [max(len(r[i]) for r in table) for i in range(len(table[0]))]
+    fmt = lambda r: "  ".join(c.ljust(w) for c, w in zip(r, widths, strict=True)).rstrip()  # noqa: E731
+    out = [fmt(r) for r in table]
+    if header:
+        out.insert(1, "  ".join("-" * w for w in widths))
+    return "\n".join(out)
+
+
+def _approved_cell(row: dict) -> str:
+    return "; ".join(row["approved"]) if row["approved"] else "(none)"
+
+
+def _print_listings(
+    list_nodes: bool, list_nlps: bool, list_names: bool, print_config: bool
+) -> None:
+    rows, unscoped = _config_rows()
+    blocks: list[str] = []
+    if list_nodes:
+        blocks.append("\n".join(r["id"] for r in rows))
+    if list_nlps:
+        blocks.append(_columns([[r["id"], r["url"]] for r in rows]))
+    if list_names:
+        blocks.append(_columns([[r["id"], _approved_cell(r)] for r in rows]))
+    if print_config:
+        table = _columns(
+            [[r["id"], r["url"], _approved_cell(r)] for r in rows],
+            header=["Node id", "Node Landing Page URL", "Approved name"],
+        )
+        notes = [
+            f"{len(rows)} node(s). Ids and URLs from {_rel(DEFAULT_NODES)}; approved "
+            f"names from {_rel(SCOPED_APPROVED_NAMES)}.",
+            f"assess and run use {_rel(DEFAULT_APPROVED_NAMES)} by default: the same "
+            "names, unscoped, so each counts for every node.",
+        ]
+        if unscoped:
+            notes.append(
+                "Also tied to no node, so valid for every node: " + "; ".join(unscoped) + "."
+            )
+        blocks.append(table + "\n\n" + "\n".join(notes))
+    typer.echo("\n\n".join(blocks))
+
+
+@app.callback(invoke_without_command=True)
+def main(
+    ctx: typer.Context,
+    list_nodes: bool = typer.Option(False, "--list-nodes", help=H_LIST_NODES),
+    list_nlps: bool = typer.Option(False, "--list-nlps", help=H_LIST_NLPS),
+    list_approved_names: bool = typer.Option(
+        False, "--list-approved-names", help=H_LIST_APPROVED_NAMES
+    ),
+    print_config: bool = typer.Option(False, "--print-config", help=H_PRINT_CONFIG),
+) -> None:
+    """Top-level listing flags. They read local files only and contact no node."""
+    wanted = (list_nodes, list_nlps, list_approved_names, print_config)
+    if not any(wanted):
+        if ctx.invoked_subcommand is None:
+            # What Typer prints for a bare `basic-check` when no callback exists.
+            typer.echo(
+                f"{ctx.get_usage()}\nTry 'basic-check --help' for help.\n\nError: Missing command.",
+                err=True,
+            )
+            raise typer.Exit(2)
+        return
+    if ctx.invoked_subcommand is not None:
+        raise typer.BadParameter(
+            "--list-nodes, --list-nlps, --list-approved-names and --print-config "
+            "are used on their own, without a command."
+        )
+    _print_listings(*wanted)
+    raise typer.Exit(0)
 
 
 def _slug(url: str) -> str:

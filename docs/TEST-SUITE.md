@@ -4,8 +4,8 @@ What the test suite covers, how the tool is configured, and what the published
 figures actually say. Every figure was measured on 25 September 2026 against
 a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
-clean clone of commit `5701f9e`, which added the `--node` option:
-**357 test cases, all passing in CI**. No node website was contacted to prepare
+clean clone of commit `5701f9e`, which added the configuration listings:
+**369 test cases, all passing in CI**. No node website was contacted to prepare
 this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -15,7 +15,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 357 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 369 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -23,7 +23,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **357 cases** and gained three files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (13 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **369 cases** and gained three files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (13 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -32,7 +32,7 @@ conditions behind each of the ten checklist points.
 > | `uv.lock` is not committed, so runs are not reproducible | **Committed**; CI installs with `--locked` (section 9) |
 > | The web form cannot reach depth 2 | It can — the `depth` input now offers `2` (section 6) |
 >
-> **Since the 24 September edition.** Personal data is now masked in the evidence and in every report (section 5), and the published run was masked at commit `ada1b4a` with every verdict unchanged (section 10). BBMRI-ERIC's configured URL changed to a `dev3.` address on 25 September, and the published run was collected from the old one, so rebuilding it needs the old node list (section 5). The suite grew from 326 to 329 cases for these changes, to 333 with four tests that keep the command-line help complete, and to 339 with the tests for the URL-mismatch warning and for switching the default checklist revision (section 11). It is now 357, with eighteen cases for `--node` (section 5).
+> **Since the 24 September edition.** Personal data is now masked in the evidence and in every report (section 5), and the published run was masked at commit `ada1b4a` with every verdict unchanged (section 10). BBMRI-ERIC's configured URL changed to a `dev3.` address on 25 September, and the published run was collected from the old one, so rebuilding it needs the old node list (section 5). The suite grew from 326 to 329 cases for these changes, to 333 with four tests that keep the command-line help complete, and to 339 with the tests for the URL-mismatch warning and for switching the default checklist revision (section 11). It is 357 with eighteen cases for `--node`, and 369 with twelve for the configuration listings (section 5).
 >
 > The node list also grew from nine to **thirteen** (CERN and EOSC Node Czechia on 21 September, Italy and Slovakia on 24 September), and the published report in `results/` now covers twelve of them. Italy was skipped because its domain did not resolve on 24 September; section 10 has the details. The suite's runtime rose from ~0.2 s to ~5.9 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
 
@@ -62,9 +62,9 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**288 test functions, expanding to 357 executed cases** (sixteen tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**300 test functions, expanding to 369 executed cases** (sixteen tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
-The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 357 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
+The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 369 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
@@ -72,11 +72,11 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_checks.py` | 75 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
 | `test_report.py` | 36 | Matrix rendering, the dual-depth tables, Markdown escaping, table-breaking input |
 | `test_crawl.py` | 35 | Link selection, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
-| `test_cli.py` | 68 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring, and that every option has help text, shared options are described alike, and `--help` lists the node ids; that evidence from a URL other than the configured one is flagged in every report; `--node` with an alternative `--url` |
+| `test_cli.py` | 80 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring, and that every option has help text, shared options are described alike, and `--help` lists the node ids; that evidence from a URL other than the configured one is flagged in every report; `--node` with an alternative `--url`; the configuration listings (`--list-nodes`, `--list-nlps`, `--list-approved-names`, `--print-config`) |
 | `test_checklist.py` | 15 | Provenance of the checklist: source document hash for every committed revision, point-to-rule mapping, version/filename convention, and that the default revision is one line that `--help` follows |
 | `test_nodes.py` | 13 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list |
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
-| **Total** | **357** | |
+| **Total** | **369** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -306,8 +306,14 @@ Only `collect` and `run` need a browser or network access. `points`, `assess`, `
 | `--strict-separators` | assess run | false | Match the separator glyphs in an approved name literally |
 | `--run` | assess run | timestamp | Label for the run, recorded in every report |
 | `--one-off` | show | false | Read `results/one-off/` instead of `results/` |
+| `--list-nodes` | `basic-check` alone | — | Node ids in `nodes.yaml`, one per line |
+| `--list-nlps` | `basic-check` alone | — | Each node id with its Node Landing Page URL |
+| `--list-approved-names` | `basic-check` alone | — | Each node id with its approved name, from `approved-names-scoped.txt` |
+| `--print-config` | `basic-check` alone | — | Table of id, Node Landing Page URL and approved name, one row per node, with the source files |
 
 Note that `--max-children` is on `collect` but not on `run`, so a combined run uses the default cap of 8. Use the two commands separately if you need to change it.
+
+**Listing the configuration.** `basic-check --list-nodes`, `--list-nlps`, `--list-approved-names` and `--print-config` print what is configured and exit, without contacting any node: the ids, each id with its landing page URL, each id with its approved name, or all three in one table. Approved names come from `checklist/approved-names-scoped.txt`, the copy that ties each name to a node; the table notes that `assess` uses the unscoped `approved-names.txt` by default. Output is plain columns, never wrapped. Twelve cases in `test_cli.py` check each listing against `nodes.yaml` and the scoped file row by row, that flags combine, that a long URL stays on one line at 40 columns, that a node with no name shows `(none)`, that an unreadable node list is a clear error, that the flags are refused with a command, that a bare `basic-check` still asks for one, and that no listing fetches anything.
 
 ### Exit codes
 
@@ -560,7 +566,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 357 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 369 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -645,7 +651,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 357 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 369 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```

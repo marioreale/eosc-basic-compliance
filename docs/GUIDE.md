@@ -107,13 +107,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-357 tests still pass, while `collect` fails with Playwright's
+369 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 357 passed
+uv run pytest -q                  # expect: 369 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -542,6 +542,44 @@ uv run basic-check run               # collect, then assess
 uv run basic-check show eudat        # one node's results in the terminal
 ```
 
+### Listing the configuration
+
+Four flags on `basic-check` itself, used without a command, show what is
+configured:
+
+```bash
+uv run basic-check --list-nodes             # node ids, one per line
+uv run basic-check --list-nlps              # id and Node Landing Page URL
+uv run basic-check --list-approved-names    # id and approved name
+uv run basic-check --print-config           # all three in one table
+```
+
+`--print-config` prints:
+
+```text
+Node id     Node Landing Page URL                                   Approved name
+----------  ------------------------------------------------------  ------------------------
+bbmri-eric  https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/        EOSC Node | BBMRI-ERIC
+cern        https://eosc-auth.cern.ch/login                         EOSC Node | CERN
+…
+eosc-sk     https://eosc.sk/                                        EOSC Node | Slovakia
+
+13 node(s). Ids and URLs from nodes.yaml; approved names from checklist/approved-names-scoped.txt.
+assess and run use checklist/approved-names.txt by default: the same names, unscoped, so each counts for every node.
+```
+
+The approved name next to each id comes from
+`checklist/approved-names-scoped.txt`, the copy of the official list that ties
+each name to a node. `assess` and `run` use `checklist/approved-names.txt` by
+default, the same names unscoped, so there each name counts for every node; the
+table says so under the rows. A node with no name in the scoped file shows
+`(none)`. The flags can be combined (`--list-nodes --list-nlps`), print plain
+columns that are never wrapped, so they can be piped to `grep` or `cut`, and are
+refused together with a command. They read local files only and contact no node.
+
+Use it before and after editing `nodes.yaml` or the name lists, to see what
+the next run will check.
+
 ### Useful options
 
 Not every option is accepted by every command, and passing one to the wrong
@@ -894,7 +932,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 357 tests, offline, a few seconds
+uv run pytest -q                    # 369 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth

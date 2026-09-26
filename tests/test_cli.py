@@ -677,3 +677,132 @@ def test_assessing_node_evidence_at_the_configured_url_still_flags_the_mismatch(
     assert res.exit_code == 0, res.output
     assert "different URL" in res.output
     assert "alternative_url" not in json.loads((out / "results.json").read_text())
+
+
+# --- listing the configuration: --list-nodes, --list-nlps, --list-approved-names, --print-config
+
+
+def _configured():
+    import yaml
+
+    from basic_check.names import ApprovedNames
+
+    nodes = yaml.safe_load(cli.DEFAULT_NODES.read_text(encoding="utf-8"))["nodes"]
+    names = ApprovedNames.load(cli.SCOPED_APPROVED_NAMES)
+    return nodes, names
+
+
+def _invoke(*args):
+    return CliRunner().invoke(cli.app, list(args), env={"COLUMNS": "200"})
+
+
+def test_list_nodes_prints_every_configured_id_in_file_order():
+    nodes, _ = _configured()
+    res = _invoke("--list-nodes")
+    assert res.exit_code == 0, res.output
+    assert res.output.split() == [n["id"] for n in nodes]
+
+
+def test_list_nlps_pairs_each_id_with_its_configured_url():
+    nodes, _ = _configured()
+    res = _invoke("--list-nlps")
+    assert res.exit_code == 0, res.output
+    assert [line.split() for line in res.output.strip().splitlines()] == [
+        [n["id"], n["url"]] for n in nodes
+    ]
+
+
+def test_list_approved_names_pairs_each_id_with_its_scoped_name():
+    nodes, names = _configured()
+    res = _invoke("--list-approved-names")
+    assert res.exit_code == 0, res.output
+    lines = res.output.strip().splitlines()
+    assert len(lines) == len(nodes)
+    for line, n in zip(lines, nodes, strict=True):
+        node_id, name = line.split(maxsplit=1)
+        assert node_id == n["id"]
+        assert name == "; ".join(names.per_node[n["id"]])
+
+
+def test_print_config_has_one_row_per_node_with_id_url_and_name():
+    nodes, names = _configured()
+    res = _invoke("--print-config")
+    assert res.exit_code == 0, res.output
+    lines = res.output.splitlines()
+    assert lines[0].split("  ")[0] == "Node id"
+    assert "Node Landing Page URL" in lines[0] and "Approved name" in lines[0]
+    rows = lines[2 : 2 + len(nodes)]
+    for row, n in zip(rows, nodes, strict=True):
+        assert row.startswith(n["id"] + " ")
+        assert f" {n['url']} " in row
+        assert row.endswith(names.per_node[n["id"]][0])
+    assert "nodes.yaml" in res.output and "approved-names-scoped.txt" in res.output
+    assert "approved-names.txt by default" in res.output
+
+
+def test_listing_flags_can_be_combined():
+    nodes, _ = _configured()
+    res = _invoke("--list-nodes", "--list-nlps")
+    assert res.exit_code == 0, res.output
+    first, second = res.output.strip().split("\n\n")
+    assert first.split() == [n["id"] for n in nodes]
+    assert second.splitlines()[0].split() == [nodes[0]["id"], nodes[0]["url"]]
+
+
+def test_a_long_url_is_never_wrapped():
+    """Plain columns, one row per line, so the output can be piped to grep/cut
+    even on a narrow terminal."""
+    nodes, _ = _configured()
+    res = CliRunner().invoke(cli.app, ["--print-config"], env={"COLUMNS": "40"})
+    assert res.exit_code == 0
+    for n in nodes:
+        assert any(n["url"] in line and line.startswith(n["id"]) for line in res.output.splitlines())
+
+
+def test_a_node_without_an_approved_name_is_shown_as_none(tmp_path):
+    nodes_file = tmp_path / "nodes.yaml"
+    nodes_file.write_text(
+        "nodes:\n"
+        "  - {id: a, name: A, url: 'https://a.example/', eosc_page: ''}\n"
+        "  - {id: b, name: B, url: 'https://b.example/', eosc_page: ''}\n"
+    )
+    names_file = tmp_path / "names.txt"
+    names_file.write_text("a: EOSC Node | A\nEOSC Node | Shared\n")
+    rows, unscoped = cli._config_rows(nodes_file, names_file)
+    assert [cli._approved_cell(r) for r in rows] == ["EOSC Node | A", "(none)"]
+    assert unscoped == ["EOSC Node | Shared"]
+
+
+def test_an_unreadable_node_list_is_a_clear_error(tmp_path):
+    with pytest.raises(typer.BadParameter, match="cannot read the node list"):
+        cli._config_rows(tmp_path / "missing.yaml")
+
+
+def test_listing_flags_are_refused_with_a_command():
+    res = _invoke("--list-nodes", "points")
+    assert res.exit_code == 2
+    assert "without a command" in res.output
+
+
+def test_a_bare_invocation_still_asks_for_a_command():
+    res = _invoke()
+    assert res.exit_code == 2
+    assert "Missing command" in res.output
+
+
+def test_the_listings_contact_no_node(monkeypatch):
+    def boom(*a, **k):
+        raise AssertionError("a listing tried to fetch")
+
+    monkeypatch.setattr(cli, "collect_all", boom)
+    for flag in ("--list-nodes", "--list-nlps", "--list-approved-names", "--print-config"):
+        assert _invoke(flag).exit_code == 0, flag
+
+
+def test_the_top_level_options_have_help_text_and_are_in_help():
+    group = typer.main.get_command(cli.app)
+    missing = [o.opts[0] for o in _options(group) if not (o.help or "").strip()]
+    assert not missing, missing
+    res = _invoke("--help")
+    for flag in ("--list-nodes", "--list-nlps", "--list-approved-names", "--print-config"):
+        assert flag in res.output, flag

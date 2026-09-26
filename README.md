@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 357
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 369
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -204,6 +204,15 @@ nodes; `assess`, `points` and `show` work offline.
 | `points` | Prints the ten checklist points and whether each can be decided by a script. |
 | `show <node_id>` | Prints one node's results from an existing run. |
 
+**Listing the configuration** (on `basic-check` itself, without a command; offline)
+
+| Option | What it's for |
+|---|---|
+| `--list-nodes` | The node ids in `nodes.yaml`, one per line. |
+| `--list-nlps` | Each node id with its Node Landing Page URL from `nodes.yaml`. |
+| `--list-approved-names` | Each node id with its approved name, from `checklist/approved-names-scoped.txt`. |
+| `--print-config` | A table with one row per node: id, Node Landing Page URL and approved name, with the files they come from. |
+
 **Which nodes to check** (`collect`, `assess`, `run`)
 
 | Option | What it's for |
@@ -272,9 +281,44 @@ uv run basic-check assess --only eosc-cz --results /tmp/trial
 # One node's results from the published run
 uv run basic-check show geant
 
+# What is configured: ids, landing page URLs and approved names, one row per node
+uv run basic-check --print-config
+
 # BBMRI-ERIC at an alternative landing page, nodes.yaml unchanged
 uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node-bbmri-eric/
 ```
+
+### Listing the configuration
+
+```bash
+uv run basic-check --list-nodes             # node ids, one per line
+uv run basic-check --list-nlps              # id and Node Landing Page URL
+uv run basic-check --list-approved-names    # id and approved name
+uv run basic-check --print-config           # all three in one table
+```
+
+`--print-config` prints:
+
+```text
+Node id     Node Landing Page URL                                   Approved name
+----------  ------------------------------------------------------  ------------------------
+bbmri-eric  https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/        EOSC Node | BBMRI-ERIC
+cern        https://eosc-auth.cern.ch/login                         EOSC Node | CERN
+…
+eosc-sk     https://eosc.sk/                                        EOSC Node | Slovakia
+
+13 node(s). Ids and URLs from nodes.yaml; approved names from checklist/approved-names-scoped.txt.
+assess and run use checklist/approved-names.txt by default: the same names, unscoped, so each counts for every node.
+```
+
+The approved name next to each id comes from
+`checklist/approved-names-scoped.txt`, the copy of the official list that ties
+each name to a node. `assess` and `run` use `checklist/approved-names.txt` by
+default, the same names unscoped, so there each name counts for every node; the
+table says so under the rows. A node with no name in the scoped file shows
+`(none)`. The flags can be combined (`--list-nodes --list-nlps`), print plain
+columns that are never wrapped, so they can be piped to `grep` or `cut`, and are
+refused together with a command. They read local files only and contact no node.
 
 ### Adding a node
 
@@ -461,7 +505,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 357 tests, a few seconds, no network, no browser
+uv run pytest -q          # 369 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 
