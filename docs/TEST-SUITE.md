@@ -4,7 +4,7 @@ What the test suite covers, how the tool is configured, and what the published
 figures actually say. Every figure was measured on 25 September 2026 against
 a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
-clean clone of commit `44261dd`, which added `--show-node`:
+clean clone of commit `4c5dea7`, which added `--update-nlp`:
 **390 test cases, all passing in CI**. No node website was contacted to prepare
 this edition.
 
@@ -1199,4 +1199,4 @@ the documents together, so the commit shows the whole change.
 - Figures in section 10, current run: `results/results.json`, run `live-2026-09-24-no-italy`, collected 24 September 2026, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `871161a5…`) and the node-scoped variant `checklist/approved-names-scoped.txt`
-- Test counts, line counts, runtimes, name-list results and command options in this document were measured on 25 September 2026 against a clean clone of the repository state it is committed with (the test count re-checked on 26 September at `44261dd`), not carried over from the previous edition
+- Test counts, line counts, runtimes, name-list results and command options in this document were measured on 25 September 2026 against a clean clone of the repository state it is committed with (the test count re-checked on 26 September at `4c5dea7`), not carried over from the previous edition
