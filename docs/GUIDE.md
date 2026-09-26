@@ -7,7 +7,8 @@ every verdict.
 
 This guide covers installing it, configuring it for your own nodes, running it,
 reading what comes out, and running the test suite. This edition was checked
-against a clean clone of commit `ada1b4a` on 25 September 2026. Every command
+against a clean clone of commit `ada1b4a` on 25 September 2026, and the test
+count again at commit `0cc33c2` on 26 September 2026. Every command
 that needs no network — installation, the test suite, `points`, `assess` and
 the rebuild of the published report — was re-run that day, and the test counts,
 disk sizes and verdict tallies were re-measured rather than carried over. No
