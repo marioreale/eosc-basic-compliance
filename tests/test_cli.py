@@ -11,6 +11,7 @@ without any network access.
 
 from __future__ import annotations
 
+import re
 from pathlib import Path
 
 import pytest
@@ -804,5 +805,8 @@ def test_the_top_level_options_have_help_text_and_are_in_help():
     missing = [o.opts[0] for o in _options(group) if not (o.help or "").strip()]
     assert not missing, missing
     res = _invoke("--help")
+    # CI forces colour, and Rich styles "--" and the option name separately, so
+    # compare against the text without its ANSI escapes.
+    text = re.sub(r"\x1b\[[0-9;]*m", "", res.output)
     for flag in ("--list-nodes", "--list-nlps", "--list-approved-names", "--print-config"):
-        assert flag in res.output, flag
+        assert flag in text, flag
