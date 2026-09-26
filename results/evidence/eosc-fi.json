@@ -2,7 +2,7 @@
   "node_id": "eosc-fi",
   "node_name": "EOSC Finland",
   "requested_url": "https://eosc.fi/",
-  "fetched_at": "2026-09-24T18:44:23+00:00",
+  "fetched_at": "2026-09-26T10:16:19+00:00",
   "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -778,7 +778,7 @@
     },
     {
       "text": "Services",
-      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/#",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
       "tag": "a",
       "visible": true
     },
@@ -1000,7 +1000,7 @@
     },
     {
       "text": "Training",
-      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/#",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
       "tag": "a",
       "visible": true
     },
@@ -1018,7 +1018,7 @@
     },
     {
       "text": "Terms & policies",
-      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/#",
+      "href": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
       "tag": "a",
       "visible": true
     },
@@ -1761,6 +1761,445 @@
         {
           "href": "mailto:servicedesk@csc.fi",
           "text": "servicedesk@csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/",
+          "text": "Detailed contact information (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#espoo-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#kajaani-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi",
+          "text": "User guides – docs.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi",
+          "text": "User portal – my.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi",
+          "text": "Main website – csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/csc---it-center-for-science/",
+          "text": "LinkedIn (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/CSCfi/",
+          "text": "Instagram (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/CSCfi/",
+          "text": "Facebook (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/c/CSCfi",
+          "text": "YouTube (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/subscribe-to-newsletters/",
+          "text": "Subscribe to newsletters (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/accessibility",
+          "text": "Accessibility",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+      "selected_for": [
+        "5b"
+      ],
+      "link_text": "Prerequisites and responsibilities for a CSC project manager",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+      "title": "Prerequisites and responsibilities for a CSC project manager - Services for Research",
+      "lang_attr": "en-US",
+      "main_text": "Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Prerequisites and responsibilities for a CSC project manager suomeksi / in Finnish | Download PDF version Effective as of June 24 2025, replaces the previous version of Prerequisites and Responsibilities for a Project Manager. Prerequisites for a CSC Project Manager As a Project Manager of a CSC Project you should meet the following prerequisites unless otherwise agreed: The CSC Project Manager must be affiliated with a organisation in the scope of CSC’s free-of-charge policy . The right to act as a CSC Project Manager is demonstrated by Haka-attributes or a Virtu-identity. If the organization does not have a Haka- or Virtu-identity in use, the users’ right to act as a CSC Project Manager is agreed separately between CSC and the home organization. Further information on the effects of Haka attributes on the right to create CSC projects (External link) . For research purposes: Project Manager should be an experienced researcher involved in the project. The Project Manager can also be the project’s technical or administrative support person. For educational purposes: Project Manager should be the responsible instructor of the course when it comes to course usage. Project Manager can also be a student when it comes to personal or small group usage related to studies (for example thesis). Key responsibilities of a CSC Project Manager Project Manager is responsible for adding and removing project members, or transferring Project Manager duties to another project member. Project Manager is also a member of the project. Project Manager is responsible for monitoring that the resources granted for the Project are used responsibly, according to the Terms of Use. Project Manager acts as the primary contact person in communications with CSC. Project Manager’s responsibilities are described in detail in the General Terms of Use for CSC’s Services for Research . Please note that some services might include service specific responsibilities for the Project Manager in their terms of use. If you have any questions, please contact the CSC Service Desk .",
+      "full_text": "Skip to content Services for research Docs CSC - User guides (External link) MyCSC - User portal (External link) csc.fi - Company site (External link) Services for research Search for: Service Desk Service Desk Home How to start Services Services (External link) General Service catalog Service breaks Resource allocation Applying for resources Extremely large resources Managing service quotas Service categories High-performance computing Research data management Plan data management Store & share data Publish & discover data Cloud services Services for sensitive data Compare SD Services and ePouta Sensitive Data (SD) Services for Research Overview for IT personnel and organizations Quick access page Definition of sensitive data Managing sensitive data User groups Services for science & methods AI and data analytics Biosciences Chemistry Code optimization Computational engineering Geoinformatics Geocomputing Mathematics, statistics and technical computing Physics Quantum computing Social sciences and humanities Services for education Services for commercial use Purchasing CSC’s services Use cases Blogs Training Training (External link) Training calendar Training portfolio Terms & policies Terms & policies (External link) Free-of-charge use Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Policies CSC research infrastructure data management policy Persistent identifier (PID) policy Security & privacy Protection levels Privacy notice for remote identification service Home › Terms of use › Prerequisites and responsibilities for a CSC project manager Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Prerequisites and responsibilities for a CSC project manager suomeksi / in Finnish | Download PDF version Effective as of June 24 2025, replaces the previous version of Prerequisites and Responsibilities for a Project Manager. Prerequisites for a CSC Project Manager As a Project Manager of a CSC Project you should meet the following prerequisites unless otherwise agreed: The CSC Project Manager must be affiliated with a organisation in the scope of CSC’s free-of-charge policy . The right to act as a CSC Project Manager is demonstrated by Haka-attributes or a Virtu-identity. If the organization does not have a Haka- or Virtu-identity in use, the users’ right to act as a CSC Project Manager is agreed separately between CSC and the home organization. Further information on the effects of Haka attributes on the right to create CSC projects (External link) . For research purposes: Project Manager should be an experienced researcher involved in the project. The Project Manager can also be the project’s technical or administrative support person. For educational purposes: Project Manager should be the responsible instructor of the course when it comes to course usage. Project Manager can also be a student when it comes to personal or small group usage related to studies (for example thesis). Key responsibilities of a CSC Project Manager Project Manager is responsible for adding and removing project members, or transferring Project Manager duties to another project member. Project Manager is also a member of the project. Project Manager is responsible for monitoring that the resources granted for the Project are used responsibly, according to the Terms of Use. Project Manager acts as the primary contact person in communications with CSC. Project Manager’s responsibilities are described in detail in the General Terms of Use for CSC’s Services for Research . Please note that some services might include service specific responsibilities for the Project Manager in their terms of use. If you have any questions, please contact the CSC Service Desk . CSC - IT Center for Science Ltd. Contact information P.O. Box 405, 02101 Espoo tel. XXXXXX (switchboard) Service desk Open weekdays from 8:30 to 16:00 tel. XXXXXX servicedesk@csc.fi Detailed contact information (External link) Visiting addresses Espoo Life Science Center Keilaniemi Keilaranta 14, 02150 Espoo Directions (External link) Datacenter Kajaani Renforsin Ranta business area Tehdaskatu 15, 87100 Kajaani Directions (External link) Visit other CSC sites User guides – docs.csc.fi (External link) User portal – my.csc.fi (External link) Main website – csc.fi (External link) Follow us LinkedIn (External link) Instagram (External link) Facebook (External link) YouTube (External link) Subscribe to newsletters (External link) Copyright CSC – IT Center for Science Ltd. Service breaks Security & privacy Accessibility Search for: ×",
+      "links": [
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi/",
+          "text": "Docs CSC - User guides (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi/",
+          "text": "MyCSC - User portal (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.csc.fi/",
+          "text": "csc.fi - Company site (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/how-to-start/",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service",
+          "text": "Service catalog",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/",
+          "text": "Resource allocation",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/",
+          "text": "Applying for resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+          "text": "Extremely large resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/quotas/",
+          "text": "Managing service quotas",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/high-performance-computing/",
+          "text": "High-performance computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/",
+          "text": "Research data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/data-management-planning/",
+          "text": "Plan data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/storage/",
+          "text": "Store & share data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/publish-and-discover/",
+          "text": "Publish & discover data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/cloud-computing/",
+          "text": "Cloud services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/",
+          "text": "Services for sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/",
+          "text": "Compare SD Services and ePouta",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/",
+          "text": "Sensitive Data (SD) Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/",
+          "text": "Overview for IT personnel and organizations",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/",
+          "text": "Quick access page",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/definition-of-sensitive-data/",
+          "text": "Definition of sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/managing-sensitive-data/",
+          "text": "Managing sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/",
+          "text": "Services for science & methods",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/ai-and-data-analytics/",
+          "text": "AI and data analytics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/biosciences/",
+          "text": "Biosciences",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/chemistry/",
+          "text": "Chemistry",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/code-optimization/",
+          "text": "Code optimization",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/computational-engineering/",
+          "text": "Computational engineering",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/",
+          "text": "Geoinformatics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/geocomputing/",
+          "text": "Geocomputing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/mathematics-and-statistics/",
+          "text": "Mathematics, statistics and technical computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/physics/",
+          "text": "Physics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/quantum-computing/",
+          "text": "Quantum computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/social-sciences-and-humanities/",
+          "text": "Social sciences and humanities",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/educational-use/",
+          "text": "Services for education",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/",
+          "text": "Services for commercial use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/pricing/",
+          "text": "Purchasing CSC’s services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/use-case",
+          "text": "Use cases",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/blogs",
+          "text": "Blogs",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training",
+          "text": "Training calendar",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training-portfolio/",
+          "text": "Training portfolio",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/free-of-charge-use/",
+          "text": "Free-of-charge use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/dmpol/",
+          "text": "CSC research infrastructure data management policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/pid-policy/",
+          "text": "Persistent identifier (PID) policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/data-protection-levels/",
+          "text": "Protection levels",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/",
+          "text": "Privacy notice for remote identification service",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/yleiset-kayttoehdot/vastuuhenkilona-toimimisen-edellytykset/",
+          "text": "suomeksi / in Finnish",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/app/uploads/2025/09/2025-06-24-Prerequisites-and-responsibilities-for-a-CSC-project-manager.pdf",
+          "text": "Download PDF version",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/free-of-charge-use/",
+          "text": "organisation in the scope of CSC’s free-of-charge policy",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi/accounts/how-to-create-new-project/#right-to-create-csc-projects-based-on-haka-affiliation",
+          "text": "Further information on the effects of Haka attributes on the right to create CSC projects (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "General Terms of Use for CSC’s Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support/",
+          "text": "CSC Service Desk",
           "visible": true
         },
         {
@@ -2686,6 +3125,9 @@
       "error": ""
     }
   ],
-  "children_skipped": [],
-  "crawl_note": "depth 1: 85 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "children_skipped": [
+    "https://research.csc.fi/terms-of-use/data-processing-agreement/ (cap for point 5b)",
+    "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (cap for point 5b)"
+  ],
+  "crawl_note": "depth 1: 85 link(s) on the landing page, 4 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point"
 }

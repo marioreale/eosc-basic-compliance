@@ -6,8 +6,8 @@ Checklist v3.0** (15 September 2026). One result per checklist point, per node.
 **Deliberately light on the nodes' websites.** Each landing page is loaded once in
 a headless browser. The tool then follows **at most one level** of links, and only
 links that can actually settle a checklist point — a policy, a contact page, an
-about page. Everything else is left alone. Across the twelve nodes assessed on
-24 September 2026 that was **32 extra requests** at the default depth of 1,
+about page. Everything else is left alone. Across the thirteen nodes assessed on
+26 September 2026 that was **31 extra requests** at the default depth of 1,
 spaced 1.2 s apart, with `robots.txt` honoured per host. Evidence is saved to disk and every check reads only that
 saved evidence, so re-running the rules costs nothing.
 
@@ -37,70 +37,60 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report covers twelve of the thirteen configured nodes.** EOSC
-> Node Italy was skipped by request (`--skip Italy`): on 24 September 2026
-> `eosc.it` had no A or AAAA record and `www.eosc.it` did not resolve. The report
-> says so in a "Skipped by request" banner. Italy is not counted as missing
-> evidence, and it does not appear in any count below. On 26 September its URL in
-> `nodes.yaml` was changed to `https://eoscnode-it.d4science.org/`; it will be
-> assessed from the next collection.
+> **The published report is run `web-4`, and it has not been reviewed yet.** It
+> was collected on 26 September 2026 by the GitHub workflow
+> ([run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476))
+> and replaced the reviewed run of 24 September, by decision of the maintainer.
+> The hand review of that earlier run is kept as history in
+> [results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md). Its findings
+> still apply wherever a page has not changed, but it does not cover this run.
 
-Twelve landing pages, all fetched 24 September 2026 at `--depth 1`, all
-`HTTP 200` to an anonymous request. Run `live-2026-09-24-no-italy`, assessed
-against the official unscoped names list.
+All thirteen configured nodes were fetched on 26 September 2026 at `--depth 1`
+and assessed against the official unscoped names list. None was skipped. This
+is the first published run to include EOSC Node Italy, at its new address
+`https://eoscnode-it.d4science.org/`.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-120 cells: 🟢 44 PASS · 🔴 6 FAIL · 🟠 70 review. These are the tool's verdicts after the
-point 6 and 5b/5c fixes, re-assessed from the same evidence; the first assessment
-of this run gave 45 / 6 / 69.
-
-**The automated verdicts were reviewed by hand before publication.** The review
-is published beside them as
-**[results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md)**, and it does not
-alter the tool's output. It records:
-
-- three point 6 PASSes resting on link text alone: two were false, and
-  BBMRI-ERIC's was upheld on the helpdesk mailboxes of its contact page;
-- one AUP link, GÉANT's, that the tool missed (both have since been fixed in
-  the checks, and the review's addendum shows the effect);
-- the verification of Slovakia's AUP/UAP PDF;
-- visual logo checks from the screenshots;
-- proposed determinations for points 2 and 3.
-
-Read it before quoting a cell.
+130 cells: 🟢 45 PASS · 🔴 8 FAIL · 🟠 77 review · 0 ERROR.
 
 > **Two rows describe a page, not a node.** CERN's configured URL is an INDIGO
 > IAM sign-in form, and EBRAINS's is the general EBRAINS homepage, which does not
 > mention EOSC. Both rows are published with that caveat, pending each node's
 > registered Website address.
 
-Compared with the previous published run (21 September 2026, nine nodes):
+Compared with the reviewed run of 24 September 2026 (twelve nodes, 44 / 6 / 70):
 
-- **EOSC DTO** now links its own `eosc.eu` entry and a helpdesk. Points 4 and 6
-  moved from `FAIL` to `PASS`.
-- **GÉANT** was served this time, where on 21 September it got a Cloudflare
-  `HTTP 403`. Points 1, 6 and 7 are now `PASS`, and point 4 is now `FAIL`.
-- **CERN, Czechia and Slovakia** appear for the first time.
-- **The point 6 and 5b/5c fixes** make GÉANT 5b a `PASS` and move EBRAINS 6
-  from `PASS` to review.
+- **EOSC Node Italy** appears for the first time. It has 3 PASS, 2 FAIL and 5
+  review. Point 4 fails because the page has no link to `eosc.eu`. Point 6 fails
+  because none of its links is a contact route. The page did render, with 15
+  links, but its main text is short (191 characters), so both FAILs deserve a
+  human look before they are quoted.
+- **Czechia** now links only to the federation index, not to its own `eosc.eu`
+  entry, so point 4 moved from `PASS` to `FAIL`. Points 5b and 6 moved from
+  review to `PASS`.
+- **GÉANT** got a Cloudflare `HTTP 403` again, as on 21 September. Points 1, 4, 5b
+  and 6 moved to review: the tool does not turn bot protection into a verdict.
+- **BBMRI-ERIC** was collected again from its public `www.` page, with the same
+  verdicts.
 
 No other verdict changed.
 
 **The one clear, repeated finding is checklist point 4.** Every node has a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
-read from the live index — but six of the twelve landing pages do not link to
+read from the live index — but seven of the thirteen landing pages do not link to
 their own:
 
-- four (Data Terra, EOSC Finland, EGI, EBRAINS) link to nothing on `eosc.eu` at all;
-- two (PaNOSC, GÉANT) link only to the federation index page, which the
+- five (Data Terra, EOSC Finland, EGI, EBRAINS, Italy) link to nothing on `eosc.eu` at all;
+- two (PaNOSC, Czechia) link only to the federation index page, which the
   checklist explicitly excludes.
 
-BBMRI-ERIC, Czechia, EOSC DTO, EUDAT and Slovakia link correctly. CERN's sign-in
-page has no such link, but it is left to review rather than failed. Each failure
-names the exact URL that is missing, so the fix is a one-line edit.
+BBMRI-ERIC, EOSC DTO, EUDAT and Slovakia link correctly. CERN's sign-in page has
+no such link, but it is left to review rather than failed, and GÉANT's page could
+not be read. Each failure names the exact URL that is missing, so the fix is a
+one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and
 excludes two specific near-misses, so it can be decided mechanically. Most of the
@@ -248,7 +238,7 @@ nodes; `assess`, `points` and `show` work offline.
 | `--approved-names <path>` | A list of approved node names for point 3, replacing `checklist/approved-names.txt`. `node-id: Name` ties a name to one node; a bare name counts for every node. |
 | `--no-approved-names` | Use no name list at all; point 3's name requirement is then not assessed. |
 | `--strict-separators` | Match the separators in approved names exactly. By default spaces, `\|`, `-`, `–`, `:`, `/` and `·` count as equivalent. |
-| `--run <label>` | A label for the run, recorded in the report, such as `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
+| `--run <label>` | A label for the run, recorded in the report, such as `web-4` or `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
 
 **Where results go**
 
@@ -468,7 +458,7 @@ rules would not be comparable with the rest), and together with `--only`,
 the original `run_id` and time, gains `updated_at`, and lists every update under
 `row_updates` with the node's previous URL, capture time and verdicts. Both
 reports carry an **Updated rows** banner. The default directory is `results/`,
-the reviewed run, so pass `--results /tmp/copy` on a copy first.
+the published run, so pass `--results /tmp/copy` on a copy first.
 
 ```bash
 cp -r results /tmp/copy
@@ -542,8 +532,9 @@ evidence the headline is not an artefact of names leaking between pages. Word
 separators are matched flexibly by default; `--strict-separators` requires the
 exact glyphs and the report states which rule was in force.
 
-In the published run of 24 September 2026, the official list matches **5 of
-the 12** nodes assessed (2 of 9 on 21 September). That is a finding to review, not a verdict — point 3 stays
+In the published run of 26 September 2026, the official list matches **4 of
+the 13** nodes assessed (5 of 12 on 24 September, when GÉANT's page was served;
+2 of 9 on 21 September). That is a finding to review, not a verdict — point 3 stays
 `MANUAL_REVIEW` either way. See
 [the guide](docs/GUIDE.md#the-approved-names-file----approved-names) for the
 format, how matching works, and what each node shows.

@@ -32,9 +32,11 @@ conditions behind each of the ten checklist points.
 > | `uv.lock` is not committed, so runs are not reproducible | **Committed**; CI installs with `--locked` (section 9) |
 > | The web form cannot reach depth 2 | It can — the `depth` input now offers `2` (section 6) |
 >
+> **Since 26 September 2026: a new published run.** `results/` now holds run `web-4`, collected by the GitHub workflow from all thirteen nodes, Italy included at its new address: 45 PASS, 8 FAIL, 77 MANUAL_REVIEW. It replaced the reviewed run of 24 September by decision of the maintainer and has **not** been reviewed by hand; section 10 has the figures. Four tests pinned to the old run were updated to the new one (section 10), and the count stays 425.
+>
 > **Since the 24 September edition.** Personal data is now masked in the evidence and in every report (section 5), and the published run was masked at commit `ada1b4a` with every verdict unchanged (section 10). BBMRI-ERIC's configured URL changed to a `dev3.` address on 25 September, and the published run was collected from the old one, so rebuilding it needs the old node list (section 5). The suite grew from 326 to 329 cases for these changes, to 333 with four tests that keep the command-line help complete, and to 339 with the tests for the URL-mismatch warning and for switching the default checklist revision (section 11). It is 357 with eighteen cases for `--node`, 369 with twelve for the configuration listings, 379 with ten for `--list-nodes-ids` and `--show-node`, and 390 with eleven for `--update-nlp` (section 5).
 >
-> The node list also grew from nine to **thirteen** (CERN and EOSC Node Czechia on 21 September, Italy and Slovakia on 24 September), and the published report in `results/` now covers twelve of them. Italy was skipped because its domain did not resolve on 24 September; section 10 has the details. The suite's runtime rose from ~0.2 s to ~5.9 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
+> The node list also grew from nine to **thirteen** (CERN and EOSC Node Czechia on 21 September, Italy and Slovakia on 24 September), and the reviewed report of 24 September covered twelve of them. Italy was skipped because its domain did not resolve that day; section 10 has the details. The suite's runtime rose from ~0.2 s to ~5.9 s for a reason worth knowing (section 2). Every figure below was re-measured rather than carried over, and section 7 records a further defect found while preparing this edition, since fixed.
 
 ---
 
@@ -198,6 +200,8 @@ git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
 uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy --nodes /tmp/nodes-2026-09-24.yaml
 ```
 
+That command applies to the 24 September run, which is now in the git history at `800d632`. The published run `web-4` was collected from the committed `nodes.yaml`, so `uv run basic-check assess --run web-4` rebuilds it exactly, apart from the generation time, with no URL warning (verified 26 September 2026).
+
 The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean. The step-by-step procedure for a URL change, through to new published results, is example 2 in section 11.
 
 EOSC Node Italy's `url` changed on 26 September 2026, from `https://eosc.it/` to `https://eoscnode-it.d4science.org/`, and the entry carries a comment saying so. The published run skipped Italy, because `eosc.it` had no address record on 24 September, so it holds no evidence for Italy and no published row depends on the old address.
@@ -338,8 +342,9 @@ full `run`) is needed only if the new revision asks for something the collector
 does not record (section 3 of [the analysis workflow](ANALYSIS-WORKFLOW.md)), or if you want a fresh
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 11. Each command writes to
-`results/`, the reviewed run, by default. Add `--results /tmp/copy` to work on
-a copy first, and keep `--skip Italy` for the same scope as the published run.
+`results/`, the published run, by default. Add `--results /tmp/copy` to work on
+a copy first. The published run covers all thirteen nodes, so no `--skip` is
+needed for the same scope.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
 
@@ -690,7 +695,7 @@ uv run basic-check run -n ~/Documents/candidate-nodes.yaml \
 
 Outputs land in `results/`: `results.md` (renders with colour directly on GitHub), `index.html`, `checklist-v3.0.html`, `results.csv`, `results.json`, and per-node evidence under `results/evidence/`.
 
-> **Use a scratch output directory for anything exploratory.** `uv run basic-check assess` rewrites `results/` wholesale, and `results/` holds the reviewed run that the published report is built from. Pass `--results /tmp/scratch` for trial runs, and check `git status --short results/` before committing.
+> **Use a scratch output directory for anything exploratory.** `uv run basic-check assess` rewrites `results/` wholesale, and `results/` holds the run that the published report is built from. Pass `--results /tmp/scratch` for trial runs, and check `git status --short results/` before committing.
 
 A fuller treatment — installation, configuration, reading the output, troubleshooting — is in the **[installation, configuration and run guide](GUIDE.md)**.
 
@@ -775,9 +780,42 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: 24 September 2026
+### Current run: 26 September 2026 (unreviewed)
 
-From `results/results.json`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200. The figures below are from the re-assessment at commit `29dead8`, made from the same evidence after the point 6 and 5b/5c fixes. The first assessment gave 45 / 6 / 69.
+From `results/results.json`, run `web-4`, collected on 26 September 2026 by the GitHub workflow ([run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476), commit `800d632`, unit tests passing first) at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). All thirteen nodes were assessed and none was skipped. The run made 44 requests (13 landing pages and 31 child pages). Twelve landing pages returned HTTP 200. GÉANT returned HTTP 403 with the Cloudflare challenge. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number. Offline, `uv run basic-check assess --run web-4` reproduces it exactly, apart from the generation time.
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 45 |
+| 🔴 FAIL | 8 |
+| 🟠 MANUAL_REVIEW | 77 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+Seven FAILs are point 4. Five landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, EBRAINS, Italy), and two link only to the federation index (PaNOSC, Czechia). The eighth is Italy's point 6: none of its links is a contact route. Italy's page rendered with 15 links, but its main text is short, so both of its FAILs should be looked at by hand.
+
+Compared with the run below:
+
+| Node | Point | 24 September | 26 September | Why |
+|---|---|---|---|---|
+| EOSC Node Czechia | 4 | PASS | FAIL | links only to the federation index now |
+| EOSC Node Czechia | 5b | MANUAL_REVIEW | PASS | |
+| EOSC Node Czechia | 6 | MANUAL_REVIEW | PASS | |
+| GÉANT | 1, 5b, 6 | PASS | MANUAL_REVIEW | HTTP 403, Cloudflare challenge |
+| GÉANT | 4 | FAIL | MANUAL_REVIEW | HTTP 403, Cloudflare challenge |
+| EOSC Node Italy | all | skipped | 3 PASS, 2 FAIL, 5 review | first assessment |
+
+No other cell changed. BBMRI-ERIC was collected again from its `www.` address with the same verdicts.
+
+**Not reviewed.** Unlike the run below, this one was published without a hand review, by decision of the maintainer. `results/REVIEW-2026-09-24.md` is kept as history: its determinations apply where a page has not changed, but not to Italy, to Czechia's changed cells or to GÉANT.
+
+**Tests pinned to the published run.** Four tests were updated in the same commit. `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects four matching nodes (BBMRI-ERIC, Czechia, EUDAT, Slovakia): GÉANT's page was not served, so there was no body to match. The node-scoped list finds the same four, and `--strict-separators` finds none. `test_update_row.py::test_published_results_are_the_run_these_tests_copy` expects 13 nodes and no skip. Two tests that need a node without evidence, one in `test_cli.py` and one in `test_update_row.py`, now remove Italy from their copy of the run instead of relying on the published run to lack it.
+
+### Previous run: 24 September 2026 (reviewed)
+
+This subsection is kept as the record of the reviewed run that `web-4` replaced. Its files are in the git history at `800d632`.
+
+From `results/results.json` as it stood at `800d632`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200. The figures below are from the re-assessment at commit `29dead8`, made from the same evidence after the point 6 and 5b/5c fixes. The first assessment gave 45 / 6 / 69.
 
 > **Masked on 25 September 2026.** Commit `ada1b4a` masked the personal data in `results/evidence/` and rebuilt the reports offline, with the node list the run was collected with (from commit `53081f6`), so BBMRI-ERIC is still shown against the `www.` address its evidence came from. All 120 verdicts and the tally below are unchanged. The only other differences are the generation time and a few character counts, which drop by the length of the masked text. The unmasked versions remain in the git history.
 
@@ -792,7 +830,7 @@ All six FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Dat
 
 The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. BBMRI-ERIC's PASS was later upheld, because its contact page lists helpdesk mailboxes. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations were recorded there and have since been fixed in the checks; see "Point 6 and 5b/5c after the review" below. The committed `results/` was then re-assessed with the fixed checks from the same evidence. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
 
-`test_names.py::test_the_official_names_match_the_nodes_that_show_them` is pinned to the committed evidence. It now expects five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two. Re-measured on 25 September against the masked evidence: the node-scoped list finds the same five, and `--strict-separators` finds none of the twelve, because every one of the five writes the name with a different separator from the official list.
+`test_names.py::test_the_official_names_match_the_nodes_that_show_them` was pinned to that evidence. It then expected five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two. Re-measured on 25 September against the masked evidence: the node-scoped list finds the same five, and `--strict-separators` finds none of the twelve, because every one of the five writes the name with a different separator from the official list.
 
 ### Since the published run
 
@@ -821,7 +859,7 @@ BBMRI-ERIC's point 6 stays PASS, now on the helpdesk mailboxes its contact page 
 
 ### Previous run: 21 September 2026
 
-The rest of this section is kept as the record of the earlier published run. It no longer describes `results/`, which the run above replaced; that run's files are in the git history at `47f08af`.
+The rest of this section is kept as the record of the earlier published run. It no longer describes `results/`, which the runs above replaced; that run's files are in the git history at `47f08af`.
 
 From `results/results.json` as it stood at `47f08af`, run `2026-09-21-1738`, checklist v3.0 of 15 September 2026.
 
@@ -905,7 +943,7 @@ Four rules apply to all three:
 - **A new published run needs a human review before it is committed.** The
   tool's verdicts are not a compliance statement (see "Reading the output" in
   the [run guide](GUIDE.md)). Write the review down, as
-  `results/REVIEW-2026-09-24.md` does for the current run, and commit only then.
+  `results/REVIEW-2026-09-24.md` does for the 24 September run, and commit only then.
 
 The run labels below (`live-2026-10-01-…`) are examples. Use the date of your
 own run.
@@ -1037,15 +1075,18 @@ not to be satisfied mechanically:
   must pass as it stands. If it fails, personal data is about to be published.
   Stop and find out why; never change the test to let it through.
 - `test_names.py::test_the_official_names_match_the_nodes_that_show_them` pins
-  which nodes display their approved name (five, for the 24 September run). If
-  the new page shows its name, add its id to the expected set and update the
-  docstring to say why.
+  which nodes display their approved name (four for the 26 September run; five
+  on 24 September, when GÉANT's page was served). If the new page shows its
+  name, add its id to the expected set and update the docstring to say why.
+- `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
+  pins how many nodes the run has and which were skipped (13 and none, for
+  run `web-4`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("120 cells: 44 PASS · 6 FAIL · 70 review");
+- the headline tally in `README.md` ("130 cells: 45 PASS · 8 FAIL · 77 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 
@@ -1120,7 +1161,7 @@ naming the node, the date and the previous URL. The run id and time in the
 header stay those of the original run. To reuse the evidence from step 2
 instead of fetching again, copy it into `results/evidence/` and run
 `uv run basic-check assess --update-results-for-node bbmri-eric`, which is
-offline. To see the outcome before touching the reviewed run, try it on a copy
+offline. To see the outcome before touching the published run, try it on a copy
 first: `cp -r results /tmp/copy` and add `--results /tmp/copy`. For a completely
 fresh table instead, follow path B of example 1 step 4.
 
@@ -1132,9 +1173,9 @@ different URL** banner in `results.md` and `index.html`, and records the pair
 under `url_mismatch` in `results.json`. Step 3 clears it, because the evidence
 now comes from the configured URL.
 
-To rebuild the old published run instead, without the warning, use the node
-list it was collected with. This reproduces the committed `results/` exactly,
-apart from the generation time:
+To rebuild a run collected with an older node list, without the warning, use
+that list. For the reviewed run of 24 September (in the git history at
+`800d632`), assessed in a scratch copy of its `results/`:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
@@ -1282,7 +1323,8 @@ the documents together, so the commit shows the whole change.
 - Checklist: *Node Landing Page Verification Checklist v3.0*, 15 September 2026, committed as `checklist/20260910_Node_Landing_Page_Verification_Checklist_v3.0.pdf` and transcribed to `checklist/v3.0.yaml` with its SHA-256 pinned
 - EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
-- Figures in section 10, current run: `results/results.json`, run `live-2026-09-24-no-italy`, collected 24 September 2026, reviewed in `results/REVIEW-2026-09-24.md`
+- Figures in section 10, current run: `results/results.json`, run `web-4`, collected 26 September 2026 by [workflow run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476), not reviewed
+- Figures in section 10, 24 September run: `results/results.json` at commit `800d632`, run `live-2026-09-24-no-italy`, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `871161a5…`) and the node-scoped variant `checklist/approved-names-scoped.txt`
 - Test counts, line counts, runtimes, name-list results and command options in this document were measured on 25 September 2026 against a clean clone of the repository state it is committed with (the test count re-checked on 26 September at `4c5dea7`), not carried over from the previous edition

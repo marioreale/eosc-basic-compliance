@@ -379,12 +379,15 @@ def test_the_default_still_errors_clearly_if_the_user_file_is_missing(tmp_path):
 def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     """Pinned against the committed evidence, so a matching change is visible.
 
-    Five of the pages carry their approved name in the body, all with a
+    Four of the pages carry their approved name in the body, all with a
     separator the official list does not use ("EOSC Node - BBMRI-ERIC",
-    "EOSC Node Czechia", "EOSC Node EUDAT", "EOSC Node GÉANT", "EOSC Node
-    Slovakia"). This asserts the real-world outcome, not a synthetic one.
-    Evidence of 24 September 2026; on 21 September only BBMRI-ERIC and EUDAT
-    matched, as Czechia and Slovakia were not collected and GÉANT was blocked.
+    "EOSC Node Czechia", "EOSC Node EUDAT", "EOSC Node Slovakia"). This asserts
+    the real-world outcome, not a synthetic one. Evidence of run web-4, 26
+    September 2026. GÉANT's page also carries its name ("EOSC Node GÉANT", as
+    matched on 24 September), but on 26 September it answered with the
+    Cloudflare challenge, so there was no body to match; on 21 September only
+    BBMRI-ERIC and EUDAT matched, for the same reason and because Czechia and
+    Slovakia were not collected.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -395,7 +398,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "geant", "eosc-sk"}
+    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk"}
 
 
 # --- what the page calls itself, when nothing matched ------------------------

@@ -2,7 +2,7 @@
   "node_id": "panosc",
   "node_name": "PaNOSC",
   "requested_url": "https://eosc.panosc.eu/",
-  "fetched_at": "2026-09-24T18:44:37+00:00",
+  "fetched_at": "2026-09-26T10:16:36+00:00",
   "final_url": "https://www.panosc.eu/panosc-eosc-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -779,7 +779,7 @@
     },
     {
       "text": "About",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -821,7 +821,7 @@
     },
     {
       "text": "Science Cluster",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -863,7 +863,7 @@
     },
     {
       "text": "PaNOSC Node",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -887,7 +887,7 @@
     },
     {
       "text": "Project (2018-2022)",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -953,7 +953,7 @@
     },
     {
       "text": "News & Events",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1025,7 +1025,7 @@
     },
     {
       "text": "Search PaNOSC",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1121,325 +1121,325 @@
     },
     {
       "text": "ESRF – European Synchrotron Radiation Facility 4",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Deutsches Elektronen-Synchrotron (DESY) 3",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Helmholtz-Zentrum Dresden-Rossendorf (HZDR) 3",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Paul Scherrer Institute (PSI) 3",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "ESS – European Spallation Source 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "MAX IV 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "ALBA 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Elettra 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Institut Laue-Langevin (ILL) 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "PaNOSC 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "SOLEIL 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "More...",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "PaNOSC 19",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "PaN 18",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "discovery 14",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "data management 12",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Photon and Neutron 11",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Data 8",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "SciCat 6",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "login required 5",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Photon science 4",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "X-rays 4",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Synchrotron 3",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "VISA 3",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "catalogue 3",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Computing 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Data Management 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Materials Science 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Simulations 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Virtual Research Environment 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "compute hardware 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "data analysis 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "health 2",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "ExPaNDS 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Open Science 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Open data 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "PaNET 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "User access 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "User space 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Workflows 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "data catalogue 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "data discovery 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "doi 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "human 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "metadata 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "open data 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "organs 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "persistent identifiers 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "portal 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "prototype 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "remote analysis 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "training 1",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "More...",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "×",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1547,13 +1547,13 @@
     },
     {
       "text": "Next",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Last",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1625,7 +1625,7 @@
     },
     {
       "text": "About",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1667,7 +1667,7 @@
     },
     {
       "text": "Science Cluster",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1709,7 +1709,7 @@
     },
     {
       "text": "PaNOSC Node",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1733,7 +1733,7 @@
     },
     {
       "text": "Project (2018-2022)",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1799,7 +1799,7 @@
     },
     {
       "text": "News & Events",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },
@@ -1895,7 +1895,7 @@
     },
     {
       "text": "Close",
-      "href": "https://www.panosc.eu/panosc-eosc-node/#",
+      "href": "https://www.panosc.eu/panosc-eosc-node/",
       "tag": "a",
       "visible": true
     },

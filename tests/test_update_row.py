@@ -72,9 +72,9 @@ def _egi_evidence(stored: Path, **changes) -> dict:
 
 
 def test_published_results_are_the_run_these_tests_copy():
-    """The fixture relies on the committed run: rows and evidence for 12 nodes."""
+    """The fixture relies on the committed run: rows and evidence for all 13 nodes."""
     run = _load(PUBLISHED)
-    assert len(run["nodes"]) == 12 and run["skipped"] == ["eosc-it"]
+    assert len(run["nodes"]) == 13 and run["skipped"] == []
     assert "row_updates" not in run
 
 
@@ -157,6 +157,12 @@ def test_a_failed_fetch_changes_nothing_unless_accepted(stored, monkeypatch):
 
 
 def test_a_node_the_run_skipped_is_inserted_in_nodes_yaml_order(stored, monkeypatch):
+    # Make the copy a run that skipped Italy, as the 24 September one did.
+    run = _load(stored)
+    run["nodes"] = [n for n in run["nodes"] if n["id"] != "eosc-it"]
+    run["skipped"] = ["eosc-it"]
+    (stored / "results.json").write_text(json.dumps(run), encoding="utf-8")
+    (stored / "evidence" / "eosc-it.json").unlink()
     url = "https://eoscnode-it.d4science.org/"
     italy = _egi_evidence(stored, requested_url=url, final_url=url)
     italy["screenshot"] = "eosc-it.png"

@@ -347,12 +347,14 @@ def test_no_skip_changes_nothing():
 
 
 def test_skipped_nodes_do_not_count_as_missing_evidence_and_are_recorded(tmp_path):
-    """The use case: nodes.yaml lists nodes with no evidence yet (Italy's domain
-    does not resolve), and a run over the rest should be able to complete
-    without exit 2 — but the result must still say who was left out."""
+    """The use case: nodes.yaml lists nodes with no evidence yet (as Italy was
+    until 26 September, when eosc.it did not resolve), and a run over the rest
+    should be able to complete without exit 2 — but the result must still say
+    who was left out."""
     import json
 
     out = _full_results_dir(tmp_path)
+    (out / "evidence" / "eosc-it.json").unlink()  # the published run has all nodes
     have = {p.stem for p in (out / "evidence").glob("*.json")}
     configured = _ids(__import__("yaml").safe_load(cli.DEFAULT_NODES.read_text())["nodes"])
     absent = sorted(set(configured) - have)

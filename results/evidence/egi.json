@@ -2,7 +2,7 @@
   "node_id": "egi",
   "node_name": "EGI",
   "requested_url": "https://www.egi.eu/egi-node",
-  "fetched_at": "2026-09-24T18:45:54+00:00",
+  "fetched_at": "2026-09-26T10:17:08+00:00",
   "final_url": "https://www.egi.eu/egi-node",
   "http_status": 200,
   "redirect_chain": [],

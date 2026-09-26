@@ -13,9 +13,17 @@ that needs no network — installation, the test suite, `points`, `assess` and
 the rebuild of the published report — was re-run that day, and the test counts,
 disk sizes and verdict tallies were re-measured rather than carried over. No
 node website was contacted to prepare it. Request counts and HTTP behaviour come
-from the published run of 24 September and from a trial run on 25 September,
+from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
+
+> **The published run changed on 26 September 2026.** `results/` now holds run
+> `web-4`, collected by the GitHub workflow on 26 September from all thirteen
+> nodes (45 PASS, 8 FAIL, 77 MANUAL_REVIEW). It has **not** been reviewed by
+> hand; the review of the run it replaced stays in
+> `results/REVIEW-2026-09-24.md` as history. Passages below that describe "the
+> published run of 24 September" are about that earlier, reviewed run, whose
+> files are in the git history at commit `800d632`.
 
 **What this tool will not do:** it does not produce a compliance statement. Of
 the ten checklist points, three can be settled by inspection, four only partly,
@@ -156,14 +164,15 @@ If you add a node, look its slug up there rather than guessing it from the name.
 was changed to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`; on 26
 September it was set back to the `www.` address shown above, because the `dev3.`
 host's `robots.txt` excludes every path. `nodes.yaml` carries a comment saying
-so. The published run in `results/` was collected on 24 September from this
-`www.` address, so the configuration and the published evidence agree again.
+so. The published run in `results/` (26 September) was collected from this
+`www.` address, as was the reviewed run of 24 September, so the configuration
+and the published evidence agree.
 
 **EOSC Node Italy's URL changed on 26 September 2026**, from `https://eosc.it/`
 to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
-saying so. `eosc.it` had no address record on 24 September, so the published run
-skipped Italy and holds no evidence for it; nothing published depends on the old
-address. Italy's first result will come from the next collection.
+saying so. `eosc.it` had no address record on 24 September, so that run skipped
+Italy; nothing published depends on the old address. Italy was assessed for the
+first time in run `web-4` on 26 September, from the new address.
 
 ### Changing a node's URL
 
@@ -219,22 +228,20 @@ exit code does not change, because the table is complete; it is just not about
 the configured page. The address finally reached, after redirects, is kept as
 `final_url` in the evidence file.
 
-To rebuild the published run, assess it with the node list it was collected
-with. Since 26 September the committed `nodes.yaml` differs from it only in
-Italy's URL, and Italy is skipped, so a bare
-`uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy` gives no
-warning. The command below names that list explicitly, and stays right if
-`nodes.yaml` changes again:
+To rebuild the published run, assess it under its own label. It was collected
+from the committed `nodes.yaml`, so no other option is needed and there is no
+URL warning:
 
 ```bash
-git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
-uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy \
-    --nodes /tmp/nodes-2026-09-24.yaml
+uv run basic-check assess --run web-4
 ```
 
 Verified on 26 September 2026: this reproduces the committed `results/`
-exactly, apart from the generation time, with 44 PASS, 6 FAIL and 70
-MANUAL_REVIEW. The full procedure, including how to publish the new node's
+exactly, apart from the generation time, with 45 PASS, 8 FAIL and 77
+MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
+history at commit `800d632`; to rebuild that one, restore its `results/` into a
+scratch directory and assess it with `--skip Italy` and the node list from
+commit `53081f6`. The full procedure, including how to publish the new node's
 results, is [example 2](#example-2--changing-a-nodes-landing-page-url) in
 section 11.
 
@@ -442,8 +449,8 @@ sha256sum checklist/approved-names.txt
 
 #### What the official list actually finds
 
-In the published run of 24 September 2026, the committed list of thirteen names
-matches **five of the twelve** nodes assessed. Every one of the five writes the
+In the published run of 26 September 2026, the committed list of thirteen names
+matches **four of the thirteen** nodes assessed. Every one of the four writes the
 name with a different separator from the list, so none of them would match
 literally:
 
@@ -452,14 +459,15 @@ literally:
 | BBMRI-ERIC | matched; the page writes `EOSC Node - BBMRI-ERIC` |
 | EOSC Node Czechia | matched; the page writes `EOSC Node Czechia` |
 | EUDAT | matched; the page writes `EOSC Node EUDAT` |
-| GÉANT | matched; the page writes `EOSC Node GÉANT` |
 | EOSC Node Slovakia | matched; the page writes `EOSC Node Slovakia` |
-| European DTO, Data Terra, PaNOSC | no match; the phrase `EOSC Node` occurs (5, 3 and 1 times), but never followed by an approved name |
-| CERN, EOSC Finland, EGI, EBRAINS | no match, and the phrase `EOSC Node` does not occur in the body |
+| European DTO, Data Terra, PaNOSC | no match; the phrase `EOSC Node` occurs (5, 2 and 2 times), but never followed by an approved name |
+| CERN, EOSC Finland, EGI, EBRAINS, Italy | no match, and the phrase `EOSC Node` does not occur in the body text |
+| GÉANT | not looked for: the page answered HTTP 403 with the Cloudflare challenge |
 
 CERN's configured page is a sign-in endpoint with very little text, so there is
-almost nothing to match against. Italy was skipped: `eosc.it` had nameservers but
-no address record, and an unreachable page is `ERROR`, not `FAIL`.
+almost nothing to match against. Italy's page shows "EOSC Node | Italy" in its
+logo image, which is not text. GÉANT's page, when served on 24 September, wrote
+`EOSC Node GÉANT` and matched, which made five of twelve that day.
 
 The earlier run of 21 September matched two of nine (BBMRI-ERIC and EUDAT).
 GÉANT was not looked for then, because it answered HTTP 403 with no body, and
@@ -740,8 +748,8 @@ uv run basic-check assess --skip "CERN, Czechia" --skip eosc-it --skip eosc-sk
 A skipped node is left out of the whole run. No request is sent to its site, it
 is not assessed, and it has no row in the report. Because it is left out on
 purpose, it does not count as missing evidence, so `assess` does not exit 2 for
-it. The published report was built this way, with `--skip Italy`, because
-`eosc.it` had no address record on 24 September.
+it. The reviewed report of 24 September was built this way, with `--skip Italy`,
+because `eosc.it` had no address record that day.
 
 Unlike `--only`, `--skip` does shorten the report, including the one in
 `results/`. A shorter table must never look complete, so every report says
@@ -802,7 +810,7 @@ It refuses, and changes nothing, when:
 - it is combined with `--only`, `--skip`, `--url`, `--node`, `--eosc-page` or
   `--run`.
 
-The default directory is `results/`, the reviewed run. Try it on a copy first:
+The default directory is `results/`, the published run. Try it on a copy first:
 
 ```bash
 cp -r results /tmp/copy
@@ -846,11 +854,11 @@ This is the way to try a node's new address before changing `nodes.yaml`
 
 ## 5. How deep to go: `--depth`
 
-| `--depth` | What is fetched | Requests, 9 nodes, 21 Sep 2026 | Requests, 12 nodes, 24 Sep 2026 |
-|---|---|---|---|
-| `0` | The landing page only. | 9 | 12 |
-| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about. At most 8 per node, 2 per point. | 31 (9 + 22) | 44 (12 + 32), the published run |
-| `2` | The above, plus one further hop: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, under a run-wide budget. | 45 (9 + 22 + 14) | not run |
+| `--depth` | What is fetched | Requests, 9 nodes, 21 Sep 2026 | Requests, 12 nodes, 24 Sep 2026 | Requests, 13 nodes, 26 Sep 2026 |
+|---|---|---|---|---|
+| `0` | The landing page only. | 9 | 12 | 13 |
+| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about. At most 8 per node, 2 per point. | 31 (9 + 22) | 44 (12 + 32) | 44 (13 + 31), the published run |
+| `2` | The above, plus one further hop: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, under a run-wide budget. | 45 (9 + 22 + 14) | not run | not run |
 
 `robots.txt` requests are not counted in these figures. The tool fetches one per
 host before touching it.
@@ -930,8 +938,8 @@ judge: the host did not resolve, the request failed, or `robots.txt` asked
 crawlers to stay away and the tool complied. The reason is in each cell's
 message, for example `The page could not be fetched: not fetched: robots.txt
 disallows it`, and `robots_note` in the evidence file records what `robots.txt`
-said. In the published run only Italy would have been `ERROR`, and
-it was skipped instead. On the 25 September trial, BBMRI-ERIC's new `dev3.`
+said. In the 24 September run only Italy would have been `ERROR`, and
+it was skipped instead; the published run of 26 September has no `ERROR`. On the 25 September trial, BBMRI-ERIC's new `dev3.`
 address was `ERROR` on all ten points because its `robots.txt` disallows every
 path.
 
@@ -945,8 +953,9 @@ The same restraint applies to being blocked. GÉANT's `HTTP 403` moved four cell
 from decided verdicts to review — the tool does not convert bot protection into
 a compliance failure. A later run from an unthrottled address reached the page
 and settled all four, which is the restraint paying off: had the block been
-recorded as failure, the published report would now contain four wrong verdicts
-instead of four honest abstentions.
+recorded as failure, that report would have contained four wrong verdicts
+instead of four honest abstentions. The block came back in the published run of
+26 September, and the same four cells are review there.
 
 ### Reproducing a verdict by hand
 
@@ -995,9 +1004,11 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Commit `ada1b4a` (25 September 2026) masked
-`results/evidence/` and rebuilt the reports offline. All 120 verdicts and the
-44 / 6 / 70 tally are unchanged. A few character counts in the report dropped
+**The published run is masked.** Run `web-4` (26 September 2026) was collected
+with masking in place, and a search of all its evidence and reports found no
+personal address or phone number. Before it, commit `ada1b4a` (25 September
+2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
+offline. All 120 verdicts and the 44 / 6 / 70 tally were unchanged. A few character counts in the report dropped
 slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to
 7094 characters). The first masking pass had let two phone formats through,
 the `%20` and the bracketed area code in the table above. Both were found by
@@ -1143,7 +1154,7 @@ number.
 | Everything is review for one node | The capture probably did not render. Look at `evidence/screenshots/<id>.png` — that is exactly what the render gate is protecting you from. |
 | `test_checklist.py` fails on a hash | The checklist PDF changed. That is the test doing its job: transcribe the new version into a new YAML file rather than adjusting the hash. |
 | A run takes far longer than expected | `--delay` defaults to 2.0s between hosts and slow nodes are waited on. This is intentional. |
-| Point 3 reports `NONE of the ... approved name(s) ... appear` for a node you know is named correctly | Expected for many nodes: in the published run the committed list matches 5 of 12. The `<title>` is not searched, and a name is not matched inside a longer word — though the separator between words is flexible. Read `full_text` in that node's evidence file. Section 3. |
+| Point 3 reports `NONE of the ... approved name(s) ... appear` for a node you know is named correctly | Expected for many nodes: in the published run the committed list matches 4 of 13. The `<title>` is not searched, and a name is not matched inside a longer word — though the separator between words is flexible. Read `full_text` in that node's evidence file. Section 3. |
 | Point 3 says `no approved name was supplied for this node` | Your list is scoped and has no `node-id:` line for that node. Add one, or use a bare name to cover every node. Section 3. |
 | Point 4 says `PASS` but you cannot find the link | Look in the footer. The check reads the DOM, not the visible area, and several nodes put the `eosc.eu` link in a legal/navigation column at the very bottom. The exact URL is quoted in the evidence — search the page for it rather than scanning by eye. Note also that the target is never requested, so the check cannot tell you the page still exists. |
 | Point 3 says `No approved-name list was used` | You passed `--no-approved-names`, or `checklist/approved-names.txt` is missing from your checkout (the run warns on stderr when it is). Section 3. |
@@ -1198,7 +1209,7 @@ Four rules apply to all three:
   `assess` works on saved evidence, so it can be repeated as often as you like.
 - **A new published run needs a human review before it is committed.** The
   tool's verdicts are not a compliance statement (section 6). Write the review down, as
-  `results/REVIEW-2026-09-24.md` does for the current run, and commit only then.
+  `results/REVIEW-2026-09-24.md` does for the 24 September run, and commit only then.
 
 The run labels below (`live-2026-10-01-…`) are examples. Use the date of your
 own run.
@@ -1330,15 +1341,18 @@ not to be satisfied mechanically:
   must pass as it stands. If it fails, personal data is about to be published.
   Stop and find out why; never change the test to let it through.
 - `test_names.py::test_the_official_names_match_the_nodes_that_show_them` pins
-  which nodes display their approved name (five, for the 24 September run). If
-  the new page shows its name, add its id to the expected set and update the
-  docstring to say why.
+  which nodes display their approved name (four for the 26 September run; five
+  on 24 September, when GÉANT's page was served). If the new page shows its
+  name, add its id to the expected set and update the docstring to say why.
+- `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
+  pins how many nodes the run has and which were skipped (13 and none, for
+  run `web-4`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("120 cells: 44 PASS · 6 FAIL · 70 review");
+- the headline tally in `README.md` ("130 cells: 45 PASS · 8 FAIL · 77 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 
@@ -1413,7 +1427,7 @@ naming the node, the date and the previous URL. The run id and time in the
 header stay those of the original run. To reuse the evidence from step 2
 instead of fetching again, copy it into `results/evidence/` and run
 `uv run basic-check assess --update-results-for-node bbmri-eric`, which is
-offline. To see the outcome before touching the reviewed run, try it on a copy
+offline. To see the outcome before touching the published run, try it on a copy
 first: `cp -r results /tmp/copy` and add `--results /tmp/copy`. For a completely
 fresh table instead, follow path B of example 1 step 4.
 
@@ -1425,9 +1439,9 @@ different URL** banner in `results.md` and `index.html`, and records the pair
 under `url_mismatch` in `results.json`. Step 3 clears it, because the evidence
 now comes from the configured URL.
 
-To rebuild the old published run instead, without the warning, use the node
-list it was collected with. This reproduces the committed `results/` exactly,
-apart from the generation time:
+To rebuild a run collected with an older node list, without the warning, use
+that list. For the reviewed run of 24 September (in the git history at
+`800d632`), assessed in a scratch copy of its `results/`:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml

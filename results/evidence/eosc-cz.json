@@ -2,19 +2,19 @@
   "node_id": "eosc-cz",
   "node_name": "EOSC Node Czechia",
   "requested_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-  "fetched_at": "2026-09-24T18:43:39+00:00",
+  "fetched_at": "2026-09-26T10:15:33+00:00",
   "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
   "http_status": 200,
   "redirect_chain": [
     "https://c.clarity.ms/c.gif",
-    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=6EC2B53809594E64BCCDEA8268C18178&RedC=c.clarity.ms&MXFR=0D2879A01A756F4814566E7E1E75617A"
+    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=7C101B10B295400B869CDAE6FD5CA38E&RedC=c.clarity.ms&MXFR=114349E022A7663735775E0026A76873"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
   "title": "EOSC Node Czechia | EOSC - European Open Science Cloud",
   "lang_attr": "en",
-  "main_text": "You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. What Is the EOSC Federation? The EOSC Federation enables researchers to access trustworthy and secure data, software, services and other digital resources across European countries and research disciplines. It operates as a distributed network of interconnected EOSC Nodes rather than as a single centrally managed system. Individual Nodes bring together services and data sources operated by national, regional, thematic or European organisations. Once it enters production, EOSC Node Czechia will become a fully integrated part of this network. It will give Czech researchers access to resources provided by other European Nodes while making Czech services and data available to users abroad. DETAILED DESCRIPTION OF EOSC NODE CZECHIA EOSC CZ SERVICES AND REPOSITORIES How the EOSC Node Czechia Contributes to the EOSC Federation Sovereign AI and LLMs LLM-as-a-Service with an OpenAI-compatible API, without reliance on commercial providers Galaxy with LLM-Powered Workflows usegalaxy.cz integrated with LLMs for annotation, metadata creation and code generation—without the need for programming SensitiveCloud A trusted environment for working with sensitive data, ISO 27001 certified and supported by Perun-based AAI Service Incubator The planned incubator will help services and repositories under development reach the level of technological maturity required for integration into the EOSC Federation Collaboration with Other European Nodes (Multi-Node Use Cases) Cross-Node LLM: Secure access to LLMs across European Nodes through a unified interface and an OpenAI-compatible API. AI-enhanced Galaxy workflows: Integration of usegalaxy.cz with LLMs directly within scientific workflows, supporting annotation, metadata creation and code generation. SensitiveCloud for MCVAL: Multi-centre validation of an AI model for prostate cancer detection using data from Austria.",
-  "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. What Is the EOSC Federation? The EOSC Federation enables researchers to access trustworthy and secure data, software, services and other digital resources across European countries and research disciplines. It operates as a distributed network of interconnected EOSC Nodes rather than as a single centrally managed system. Individual Nodes bring together services and data sources operated by national, regional, thematic or European organisations. Once it enters production, EOSC Node Czechia will become a fully integrated part of this network. It will give Czech researchers access to resources provided by other European Nodes while making Czech services and data available to users abroad. DETAILED DESCRIPTION OF EOSC NODE CZECHIA EOSC CZ SERVICES AND REPOSITORIES How the EOSC Node Czechia Contributes to the EOSC Federation Sovereign AI and LLMs LLM-as-a-Service with an OpenAI-compatible API, without reliance on commercial providers Galaxy with LLM-Powered Workflows usegalaxy.cz integrated with LLMs for annotation, metadata creation and code generation—without the need for programming SensitiveCloud A trusted environment for working with sensitive data, ISO 27001 certified and supported by Perun-based AAI Service Incubator The planned incubator will help services and repositories under development reach the level of technological maturity required for integration into the EOSC Federation Collaboration with Other European Nodes (Multi-Node Use Cases) Cross-Node LLM: Secure access to LLMs across European Nodes through a unified interface and an OpenAI-compatible API. AI-enhanced Galaxy workflows: Integration of usegalaxy.cz with LLMs directly within scientific workflows, supporting annotation, metadata creation and code generation. SensitiveCloud for MCVAL: Multi-centre validation of an AI model for prostate cancer detection using data from Austria. Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+  "main_text": "You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. Scope EOSC Node Czechia provides a national entry point to selected Czech research data, repositories, computing resources and digital services integrated into the EOSC Federation. The Node supports the discovery, access, processing and reuse of research data and other digital research resources across scientific disciplines. Intended Users EOSC Node Czechia is intended for researchers, research teams and other research professionals in Czechia and across the EOSC Federation. Access conditions may differ between individual resources and services and are specified for each service below. Responsible Organisation EOSC Node Czechia is operated by the e-INFRA CZ consortium, consisting of: CESNET, CERIT-SC at Masaryk University and IT4Innovations at VSB – Technical University of Ostrava. Resources Available through EOSC Node Czechia National Metadata Directory (NMA) The National Metadata Directory is a central discovery service aggregating metadata about research datasets from Czech repositories and directing users to the repositories where the datasets are stored. Access: Publicly accessible discovery service National Metadata Directory Other Available Services Sovereign LLM-as-a-Service Workflow Platform Galaxy OpenStack Jupyter Notebooks These services are primarily intended for users from the Czech research and academic community, including their international collaborators, as well as for use within the EOSC Federation. For services requiring authentication, access is provided through CESiD AAI, which is integrated into the EOSC AAI Federation and supports interoperable access across EOSC Nodes. EOSC Node Czechia provides the technical and operational capabilities needed to operate within the EOSC Federation and interoperate with other EOSC Nodes. These include Authentication and Authorisation Infrastructure (AAI), Resource Catalogue and Registry Services, Helpdesk, Service Monitoring and Service Management. Services Planned for EOSC Node Onboarding Research Data Repositories EOSC Node Czechia supports the gradual onboarding of suitable national and domain-specific research data repositories, expanding a trusted environment for FAIR research data across disciplines. Repositories will be progressively integrated as they meet the technical, operational and policy requirements for participation in EOSC Node Czechia and the wider EOSC Federation. Service Incubator The Service Incubator is a planned supported environment for emerging services and research data repositories that are not yet ready for full EOSC onboarding. It will provide technical, operational and organisational support to help services mature towards production readiness and future integration into EOSC Node Czechia and the EOSC Federation. The Incubator is intended to lower the barrier for early engagement with EOSC while maintaining clear requirements for service quality, interoperability, transparency and trust. Collaboration with Other European Nodes (Multi-Node Use Cases) Cross-Node LLM: Secure access to LLMs across European Nodes through a unified interface and an OpenAI-compatible API. AI-enhanced Galaxy workflows: Integration of usegalaxy.cz with LLMs directly within scientific workflows, supporting annotation, metadata creation and code generation. SensitiveCloud for MCVAL: Multi-centre validation of an AI model for prostate cancer detection using data from Austria. Support and Security For assistance with accessing or using EOSC Node Czechia services, contact support@eosc.cz For cybersecurity-related issues, contact the CESNET-CERTS security team at XXXXX@cesnet.cz support@eosc.cz XXXXX@cesnet.cz Policy statement Acceptable Use Policy Terms and Conditions Privacy Notice Would You Like to Learn More About the EOSC Federation? EOSC Federation",
+  "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home EOSC Node Czechia EOSC Node Czechia Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access. Scope EOSC Node Czechia provides a national entry point to selected Czech research data, repositories, computing resources and digital services integrated into the EOSC Federation. The Node supports the discovery, access, processing and reuse of research data and other digital research resources across scientific disciplines. Intended Users EOSC Node Czechia is intended for researchers, research teams and other research professionals in Czechia and across the EOSC Federation. Access conditions may differ between individual resources and services and are specified for each service below. Responsible Organisation EOSC Node Czechia is operated by the e-INFRA CZ consortium, consisting of: CESNET, CERIT-SC at Masaryk University and IT4Innovations at VSB – Technical University of Ostrava. Resources Available through EOSC Node Czechia National Metadata Directory (NMA) The National Metadata Directory is a central discovery service aggregating metadata about research datasets from Czech repositories and directing users to the repositories where the datasets are stored. Access: Publicly accessible discovery service National Metadata Directory Other Available Services Sovereign LLM-as-a-Service Workflow Platform Galaxy OpenStack Jupyter Notebooks These services are primarily intended for users from the Czech research and academic community, including their international collaborators, as well as for use within the EOSC Federation. For services requiring authentication, access is provided through CESiD AAI, which is integrated into the EOSC AAI Federation and supports interoperable access across EOSC Nodes. EOSC Node Czechia provides the technical and operational capabilities needed to operate within the EOSC Federation and interoperate with other EOSC Nodes. These include Authentication and Authorisation Infrastructure (AAI), Resource Catalogue and Registry Services, Helpdesk, Service Monitoring and Service Management. Services Planned for EOSC Node Onboarding Research Data Repositories EOSC Node Czechia supports the gradual onboarding of suitable national and domain-specific research data repositories, expanding a trusted environment for FAIR research data across disciplines. Repositories will be progressively integrated as they meet the technical, operational and policy requirements for participation in EOSC Node Czechia and the wider EOSC Federation. Service Incubator The Service Incubator is a planned supported environment for emerging services and research data repositories that are not yet ready for full EOSC onboarding. It will provide technical, operational and organisational support to help services mature towards production readiness and future integration into EOSC Node Czechia and the EOSC Federation. The Incubator is intended to lower the barrier for early engagement with EOSC while maintaining clear requirements for service quality, interoperability, transparency and trust. Collaboration with Other European Nodes (Multi-Node Use Cases) Cross-Node LLM: Secure access to LLMs across European Nodes through a unified interface and an OpenAI-compatible API. AI-enhanced Galaxy workflows: Integration of usegalaxy.cz with LLMs directly within scientific workflows, supporting annotation, metadata creation and code generation. SensitiveCloud for MCVAL: Multi-centre validation of an AI model for prostate cancer detection using data from Austria. Support and Security For assistance with accessing or using EOSC Node Czechia services, contact support@eosc.cz For cybersecurity-related issues, contact the CESNET-CERTS security team at XXXXX@cesnet.cz support@eosc.cz XXXXX@cesnet.cz Policy statement Acceptable Use Policy Terms and Conditions Privacy Notice Would You Like to Learn More About the EOSC Federation? EOSC Federation Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
   "links": [
     {
       "href": "https://www.eosc.cz/en",
@@ -327,13 +327,38 @@
       "visible": true
     },
     {
-      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-czechia",
-      "text": "DETAILED DESCRIPTION OF EOSC NODE CZECHIA",
+      "href": "https://nma.eosc.cz",
+      "text": "National Metadata Directory",
       "visible": true
     },
     {
-      "href": "https://www.eosc.cz/en/services/all",
-      "text": "EOSC CZ SERVICES AND REPOSITORIES",
+      "href": "mailto:support@eosc.cz",
+      "text": "support@eosc.cz",
+      "visible": true
+    },
+    {
+      "href": "mailto:XXXXX@cesnet.cz",
+      "text": "XXXXX@cesnet.cz",
+      "visible": true
+    },
+    {
+      "href": "https://www.cesnet.cz/en/cesid-aup",
+      "text": "Acceptable Use Policy",
+      "visible": true
+    },
+    {
+      "href": "https://www.e-infra.cz/en/aai-conditions/",
+      "text": "Terms and Conditions",
+      "visible": true
+    },
+    {
+      "href": "https://www.cesnet.cz/en/cesid-pn",
+      "text": "Privacy Notice",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "text": "EOSC Federation",
       "visible": true
     },
     {
@@ -384,7 +409,7 @@
   ],
   "images": [
     {
-      "src": "https://cdn.muni.cz/media/4204990/mapa_node_2_1.png?mode=crop&center=0.5,0.5&rnd=134299825320000000&width=1170",
+      "src": "https://cdn.muni.cz/media/4237097/node_web.png?mode=crop&center=0.5,0.5&rnd=134347369290000000&width=467",
       "alt": "No description",
       "aria_label": "",
       "title": "",
@@ -814,14 +839,44 @@
       "visible": true
     },
     {
-      "text": "DETAILED DESCRIPTION OF EOSC NODE CZECHIA",
-      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-czechia",
+      "text": "National Metadata Directory",
+      "href": "https://nma.eosc.cz",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "EOSC CZ SERVICES AND REPOSITORIES",
-      "href": "https://www.eosc.cz/en/services/all",
+      "text": "support@eosc.cz",
+      "href": "mailto:support@eosc.cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "XXXXX@cesnet.cz",
+      "href": "mailto:XXXXX@cesnet.cz",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Acceptable Use Policy",
+      "href": "https://www.cesnet.cz/en/cesid-aup",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Terms and Conditions",
+      "href": "https://www.e-infra.cz/en/aai-conditions/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy Notice",
+      "href": "https://www.cesnet.cz/en/cesid-pn",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Federation",
+      "href": "https://eosc.eu/building-the-eosc-federation",
       "tag": "a",
       "visible": true
     },
@@ -863,7 +918,7 @@
     },
     {
       "text": "Cookies",
-      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
       "tag": "a",
       "visible": true
     },
@@ -881,19 +936,19 @@
     },
     {
       "text": "Cookie Settings",
-      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Necessary Only",
-      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
       "tag": "a",
       "visible": true
     },
     {
       "text": "Accept Cookies",
-      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia#",
+      "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
       "tag": "a",
       "visible": true
     }
@@ -2620,5 +2675,5 @@
     "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz (cap for point 2)",
     "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz (cap for point 2)"
   ],
-  "crawl_note": "depth 1: 73 link(s) on the landing page, 4 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point"
+  "crawl_note": "depth 1: 78 link(s) on the landing page, 4 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point"
 }

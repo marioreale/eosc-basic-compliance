@@ -105,8 +105,9 @@ full `run`) is needed only if the new revision asks for something the collector
 does not record (section 3), or if you want a fresh
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 8. Each command writes to
-`results/`, the reviewed run, by default. Add `--results /tmp/copy` to work on
-a copy first, and keep `--skip Italy` for the same scope as the published run.
+`results/`, the published run, by default. Add `--results /tmp/copy` to work on
+a copy first. The published run covers all thirteen nodes, so no `--skip` is
+needed for the same scope.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
 
@@ -229,8 +230,9 @@ through `write_evidence` in `fetch.py`). Personal addresses become
 address becomes `XXXXX`. Role mailboxes are kept. The checks therefore run on
 masked text, which costs nothing: point 6 needs a helpdesk, and no check uses a
 person's address or number. Re-assessing the 24 September evidence after masking
-gave the same verdict in all 120 cells, and the published run has been masked
-this way since commit `ada1b4a`. The reports are masked a second time as they
+gave the same verdict in all 120 cells, and that run was masked this way at
+commit `ada1b4a`. Run `web-4`, which replaced it as the published run on 26
+September, was masked as it was collected. The reports are masked a second time as they
 are written (`write_all` in `report.py`), so a report rebuilt from evidence
 captured before masking existed is masked too. Screenshots are not masked.
 
@@ -724,7 +726,9 @@ evidence it returns the same two nodes, BBMRI-ERIC and EUDAT, which retires the
 concern for this dataset: the 2-of-9 headline does not depend on names leaking
 between pages. The published run of 24 September confirms it on twelve nodes:
 both lists match the same five (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia), and
-`--strict-separators` matches none. The residual weakness is no longer the matching but the mapping —
+`--strict-separators` matches none. The published run of 26 September gives
+the same agreement on thirteen: both lists match four (GÉANT's page was blocked
+that day), and `--strict-separators` matches none. The residual weakness is no longer the matching but the mapping —
 name to node id — which was derived in this repository rather than taken from
 the Tripartite file.
 
@@ -836,7 +840,7 @@ Four rules apply to all three:
 - **A new published run needs a human review before it is committed.** The
   tool's verdicts are not a compliance statement (see "Reading the output" in
   the [run guide](GUIDE.md)). Write the review down, as
-  `results/REVIEW-2026-09-24.md` does for the current run, and commit only then.
+  `results/REVIEW-2026-09-24.md` does for the 24 September run, and commit only then.
 
 In terms of the three stages in section 1: examples 1 and 2 need **stage 1**
 (collection) again, but only for the one node concerned. Example 3 changes
@@ -975,15 +979,18 @@ not to be satisfied mechanically:
   must pass as it stands. If it fails, personal data is about to be published.
   Stop and find out why; never change the test to let it through.
 - `test_names.py::test_the_official_names_match_the_nodes_that_show_them` pins
-  which nodes display their approved name (five, for the 24 September run). If
-  the new page shows its name, add its id to the expected set and update the
-  docstring to say why.
+  which nodes display their approved name (four for the 26 September run; five
+  on 24 September, when GÉANT's page was served). If the new page shows its
+  name, add its id to the expected set and update the docstring to say why.
+- `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
+  pins how many nodes the run has and which were skipped (13 and none, for
+  run `web-4`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("120 cells: 44 PASS · 6 FAIL · 70 review");
+- the headline tally in `README.md` ("130 cells: 45 PASS · 8 FAIL · 77 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 
@@ -1069,7 +1076,7 @@ naming the node, the date and the previous URL. The run id and time in the
 header stay those of the original run. To reuse the evidence from step 2
 instead of fetching again, copy it into `results/evidence/` and run
 `uv run basic-check assess --update-results-for-node bbmri-eric`, which is
-offline. To see the outcome before touching the reviewed run, try it on a copy
+offline. To see the outcome before touching the published run, try it on a copy
 first: `cp -r results /tmp/copy` and add `--results /tmp/copy`. For a completely
 fresh table instead, follow path B of example 1 step 4.
 
@@ -1081,9 +1088,9 @@ different URL** banner in `results.md` and `index.html`, and records the pair
 under `url_mismatch` in `results.json`. Step 3 clears it, because the evidence
 now comes from the configured URL.
 
-To rebuild the old published run instead, without the warning, use the node
-list it was collected with. This reproduces the committed `results/` exactly,
-apart from the generation time:
+To rebuild a run collected with an older node list, without the warning, use
+that list. For the reviewed run of 24 September (in the git history at
+`800d632`), assessed in a scratch copy of its `results/`:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
