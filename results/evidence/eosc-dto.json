@@ -2,7 +2,7 @@
   "node_id": "eosc-dto",
   "node_name": "EOSC DTO (D4Science)",
   "requested_url": "https://eosc-dto.d4science.org/",
-  "fetched_at": "2026-09-26T14:30:21+00:00",
+  "fetched_at": "2026-09-26T22:16:59+00:00",
   "final_url": "https://eosc-dto.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -301,7 +301,7 @@
   ],
   "images": [
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1789413277991",
+      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1790247644713",
       "alt": "European-DTO Gateway",
       "aria_label": "",
       "title": "",
@@ -309,7 +309,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1790387967261",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1790447538215",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -317,7 +317,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1790387967265",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1790447538219",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -747,18 +747,8 @@
       "title": "Access and Acceptable Use Policy | D4Science",
       "lang_attr": "en",
       "main_text": "Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. This is the final version 1.1 of the Access and Acceptable Use Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure is a shared digital environment designed to support scientific research and innovation through collaborative access to data, computational resources, and services. As a common infrastructure operated for the benefit of multiple research communities, it is essential that access to its services is governed by clear rules ensuring secure and controlled use of infrastructure resources, protection of users and research activities, fair access to shared capabilities, and compliance with applicable legal and institutional requirements. This policy establishes the conditions under which users may access and use D4Science services. It applies to all interactions with the infrastructure, including access through Gateway portals, Virtual Research Environments (VREs), APIs, and programmatic interfaces. Relationship with the Policy Framework This policy is part of the D4Science Policy Framework and should be read together with the other policies governing the infrastructure. Together, these policies define the rules for access, usage, security, and data management, ensuring that the infrastructure operates as a secure, reliable, and sustainable environment supporting scientific research. Access to the Infrastructure Access to D4Science is provided through Gateway portals , which serve as the main entry point to infrastructure services. Through these portals, users can authenticate, discover available services, and participate in collaborative environments tailored to specific research communities. Access is governed by participation in Virtual Research Environments (VREs) , which define the scope of services and resources available to each user. User Roles The infrastructure supports a role-based access model that reflects the collaborative nature of research activities: Gateway Member: A registered user who can access the infrastructure and request participation in VREs. VRE Member: A user granted access to a specific VRE to use its services and resources. VRE Manager: Responsible for managing participation, approving requests, and defining community-specific access rules. Infrastructure Administrators: Responsible for operating and maintaining the core services. Authentication and Identity Management The D4Science infrastructure uses a robust Identity and Access Management (IAM) system. Authentication mechanisms include federated identities through eduGAIN , local accounts where permitted, and optional multi-factor authentication. Security Responsibility: Users are responsible for protecting their credentials and must not share access to their accounts. Virtual Research Environment Access Policies D4Science supports flexible access models to meet different community needs: • Open Access VRE: Allows any registered user to join without approval. • Moderated Access VRE: Requires a request reviewed by a VRE Manager. • Private Access VRE: Access is strictly by invitation only. These models enable the infrastructure to support both open and controlled scientific collaborations. Each VRE acts as a logical security context , ensuring that access to services and data is restricted to authorized users. Programmatic Access and APIs D4Science provides APIs to enable integration with external applications and automation of workflows. API access is based on OpenID Connect (OIDC) authentication and secure token-based authorization. To ensure fair use and system stability, the infrastructure may apply limits such as rate limits, quotas, and concurrency restrictions. Acceptable Use D4Science is a shared infrastructure supporting public research activities. Acceptable use includes scientific research, education, collaboration, and dissemination of results. Users must comply with applicable laws, respect intellectual property rights, and adhere to ethical standards. Prohibited Activities Certain activities are not permitted as they may compromise the infrastructure. Users must NOT : Bypass security mechanisms or access unauthorized data. Deploy malicious code or misuse APIs. Impersonate other users or perform illegal activities. These restrictions are necessary to protect the integrity of the infrastructure. Responsible Use of Resources D4Science is a shared resource and must be used responsibly. Users must avoid excessive consumption of storage, computational power, and API usage. Operational limits (quotas, constraints) may be enforced to ensure fair and sustainable use for all users. Reporting and Enforcement Users are encouraged to report any suspected security issues, including unauthorized access or abnormal behaviour, through the support portal. Failure to comply with this policy may result in suspension or termination of access, or removal from VREs. Policy Updates This policy may be updated to reflect changes in services, operational practices, or regulatory requirements. Updated versions will be published through official D4Science channels. Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies Access and Acceptable Use Poli... Access and Acceptable Use Policy Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. This is the final version 1.1 of the Access and Acceptable Use Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure is a shared digital environment designed to support scientific research and innovation through collaborative access to data, computational resources, and services. As a common infrastructure operated for the benefit of multiple research communities, it is essential that access to its services is governed by clear rules ensuring secure and controlled use of infrastructure resources, protection of users and research activities, fair access to shared capabilities, and compliance with applicable legal and institutional requirements. This policy establishes the conditions under which users may access and use D4Science services. It applies to all interactions with the infrastructure, including access through Gateway portals, Virtual Research Environments (VREs), APIs, and programmatic interfaces. Relationship with the Policy Framework This policy is part of the D4Science Policy Framework and should be read together with the other policies governing the infrastructure. Together, these policies define the rules for access, usage, security, and data management, ensuring that the infrastructure operates as a secure, reliable, and sustainable environment supporting scientific research. Access to the Infrastructure Access to D4Science is provided through Gateway portals , which serve as the main entry point to infrastructure services. Through these portals, users can authenticate, discover available services, and participate in collaborative environments tailored to specific research communities. Access is governed by participation in Virtual Research Environments (VREs) , which define the scope of services and resources available to each user. User Roles The infrastructure supports a role-based access model that reflects the collaborative nature of research activities: Gateway Member: A registered user who can access the infrastructure and request participation in VREs. VRE Member: A user granted access to a specific VRE to use its services and resources. VRE Manager: Responsible for managing participation, approving requests, and defining community-specific access rules. Infrastructure Administrators: Responsible for operating and maintaining the core services. Authentication and Identity Management The D4Science infrastructure uses a robust Identity and Access Management (IAM) system. Authentication mechanisms include federated identities through eduGAIN , local accounts where permitted, and optional multi-factor authentication. Security Responsibility: Users are responsible for protecting their credentials and must not share access to their accounts. Virtual Research Environment Access Policies D4Science supports flexible access models to meet different community needs: • Open Access VRE: Allows any registered user to join without approval. • Moderated Access VRE: Requires a request reviewed by a VRE Manager. • Private Access VRE: Access is strictly by invitation only. These models enable the infrastructure to support both open and controlled scientific collaborations. Each VRE acts as a logical security context , ensuring that access to services and data is restricted to authorized users. Programmatic Access and APIs D4Science provides APIs to enable integration with external applications and automation of workflows. API access is based on OpenID Connect (OIDC) authentication and secure token-based authorization. To ensure fair use and system stability, the infrastructure may apply limits such as rate limits, quotas, and concurrency restrictions. Acceptable Use D4Science is a shared infrastructure supporting public research activities. Acceptable use includes scientific research, education, collaboration, and dissemination of results. Users must comply with applicable laws, respect intellectual property rights, and adhere to ethical standards. Prohibited Activities Certain activities are not permitted as they may compromise the infrastructure. Users must NOT : Bypass security mechanisms or access unauthorized data. Deploy malicious code or misuse APIs. Impersonate other users or perform illegal activities. These restrictions are necessary to protect the integrity of the infrastructure. Responsible Use of Resources D4Science is a shared resource and must be used responsibly. Users must avoid excessive consumption of storage, computational power, and API usage. Operational limits (quotas, constraints) may be enforced to ensure fair and sustainable use for all users. Reporting and Enforcement Users are encouraged to report any suspected security issues, including unauthorized access or abnormal behaviour, through the support portal. Failure to comply with this policy may result in suspension or termination of access, or removal from VREs. Policy Updates This policy may be updated to reflect changes in services, operational practices, or regulatory requirements. Updated versions will be published through official D4Science channels. Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
+      "full_text": "Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies Access and Acceptable Use Poli... Access and Acceptable Use Policy Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. This is the final version 1.1 of the Access and Acceptable Use Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure is a shared digital environment designed to support scientific research and innovation through collaborative access to data, computational resources, and services. As a common infrastructure operated for the benefit of multiple research communities, it is essential that access to its services is governed by clear rules ensuring secure and controlled use of infrastructure resources, protection of users and research activities, fair access to shared capabilities, and compliance with applicable legal and institutional requirements. This policy establishes the conditions under which users may access and use D4Science services. It applies to all interactions with the infrastructure, including access through Gateway portals, Virtual Research Environments (VREs), APIs, and programmatic interfaces. Relationship with the Policy Framework This policy is part of the D4Science Policy Framework and should be read together with the other policies governing the infrastructure. Together, these policies define the rules for access, usage, security, and data management, ensuring that the infrastructure operates as a secure, reliable, and sustainable environment supporting scientific research. Access to the Infrastructure Access to D4Science is provided through Gateway portals , which serve as the main entry point to infrastructure services. Through these portals, users can authenticate, discover available services, and participate in collaborative environments tailored to specific research communities. Access is governed by participation in Virtual Research Environments (VREs) , which define the scope of services and resources available to each user. User Roles The infrastructure supports a role-based access model that reflects the collaborative nature of research activities: Gateway Member: A registered user who can access the infrastructure and request participation in VREs. VRE Member: A user granted access to a specific VRE to use its services and resources. VRE Manager: Responsible for managing participation, approving requests, and defining community-specific access rules. Infrastructure Administrators: Responsible for operating and maintaining the core services. Authentication and Identity Management The D4Science infrastructure uses a robust Identity and Access Management (IAM) system. Authentication mechanisms include federated identities through eduGAIN , local accounts where permitted, and optional multi-factor authentication. Security Responsibility: Users are responsible for protecting their credentials and must not share access to their accounts. Virtual Research Environment Access Policies D4Science supports flexible access models to meet different community needs: • Open Access VRE: Allows any registered user to join without approval. • Moderated Access VRE: Requires a request reviewed by a VRE Manager. • Private Access VRE: Access is strictly by invitation only. These models enable the infrastructure to support both open and controlled scientific collaborations. Each VRE acts as a logical security context , ensuring that access to services and data is restricted to authorized users. Programmatic Access and APIs D4Science provides APIs to enable integration with external applications and automation of workflows. API access is based on OpenID Connect (OIDC) authentication and secure token-based authorization. To ensure fair use and system stability, the infrastructure may apply limits such as rate limits, quotas, and concurrency restrictions. Acceptable Use D4Science is a shared infrastructure supporting public research activities. Acceptable use includes scientific research, education, collaboration, and dissemination of results. Users must comply with applicable laws, respect intellectual property rights, and adhere to ethical standards. Prohibited Activities Certain activities are not permitted as they may compromise the infrastructure. Users must NOT : Bypass security mechanisms or access unauthorized data. Deploy malicious code or misuse APIs. Impersonate other users or perform illegal activities. These restrictions are necessary to protect the integrity of the infrastructure. Responsible Use of Resources D4Science is a shared resource and must be used responsibly. Users must avoid excessive consumption of storage, computational power, and API usage. Operational limits (quotas, constraints) may be enforced to ensure fair and sustainable use for all users. Reporting and Enforcement Users are encouraged to report any suspected security issues, including unauthorized access or abnormal behaviour, through the support portal. Failure to comply with this policy may result in suspension or termination of access, or removal from VREs. Policy Updates This policy may be updated to reflect changes in services, operational practices, or regulatory requirements. Updated versions will be published through official D4Science channels. Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
       "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
         {
           "href": "https://www.d4science.org/",
           "text": "Home",
@@ -1091,7 +1081,7 @@
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUjdpGyVWUilqhVSpINQCBy6Vay%2FUwrGD1%2Bbn7UlStRQJuHpnvp3ddYm80S2rgz%2BYDbwGQB%2FViOC8smZhDYYG3BbcmxJwv1lX5OB9i4xSDG1rnR%2FJKQoFRsDIumfKOw7tkVRwrfdcvJBo2TGV4T3w286FsMF4%2FM3vgOsG6blCW2e9FVYPZBKtlhXZ8SxJZMqLOM3yWTwVxT4upkUeZ3yfF6nMJeSzTooYYGXQc%2BMrko7TLB73lrtkyiZjNikeSfQADods6WhMoo9GG2R9o4oEZ5jlqJAZ3gAyL9i2vl6zTsj4aUmXlvZ%2Fz2kOMi97NRvSubkD2SgDu64sg%2BiZu%2FPsJb1Ulsdr3XTk1fLWaiU%2Bo1pr%2B77oduahIt4FINGVdQ33f2dJRsnwomT8NEgZNFzpWkoHiITOj11%2Ffov5Fw%3D%3D",
+      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefEidpaRuriRS1QqpUEGqBA5fKdTbUwrGD1%2Bbn7UlStRQJuHpnvp3d9Rx5o1pWenfQG3j1gC4oEcE6afTCaPQN2C3YNyngYbPOycG5Fhml6NvWWBdVYxQStIDI2GfKOw7tkVRwpfZcvJBg2TGl5j3w286FMF47%2FM1vgasG6blCW2ucEUYNZBKsljnZ1SITdZ2NQoCsCscw5eE%2BmyZhNquu9slsFNf1pJMielhpdFy7nKRxOgnjLEwn92nKkilLsicSPILFIVsaxST4aJRG1jfKibeaGY4SmeYNIHOCbcubNeuEjJ%2BWdGlp%2F%2Fec5iDFvFezIZ0tLFSN1LDrypUXPXN3nn1OL5Xz47VuO%2FJqeWeUFJ9BqZR5X3Q7c5ATZz2Q4NrYhru%2FsyRRMrzIKqwHKYOGS1VWlQVEQotj15%2FfovgC",
       "title": "Sign in to D4Science Accounts prod",
       "lang_attr": "en",
       "main_text": "D4science Support English Deutsch Norsk Русский Svenska pt-BR Lietuvių English Italiano Français 中文简体 Español 日本語 Slovenčina Polski Català Nederlands Türkçe Sign in to your account Username or email Password Remember me Forgot Password? Or sign in with Academic / other Google LinkedIn Twitter GitHub CNR-ISTI ORCID New user? Register Terms of Use | Cookies Policy | Privacy Policy",
@@ -1108,132 +1098,132 @@
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
           "text": "Deutsch",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
           "text": "Norsk",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
           "text": "Русский",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
           "text": "Svenska",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
           "text": "pt-BR",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
           "text": "Lietuvių",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
           "text": "English",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
           "text": "Italiano",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
           "text": "Français",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
           "text": "中文简体",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
           "text": "Español",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
           "text": "日本語",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
           "text": "Slovenčina",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
           "text": "Polski",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
           "text": "Català",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
           "text": "Nederlands",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
           "text": "Türkçe",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0",
           "text": "Forgot Password?",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&session_code=tlgVoKcB-RXxtcGQAdOygH8yfnRUxcimqCEZ_pAsY0Y",
           "text": "Academic / other",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&session_code=tlgVoKcB-RXxtcGQAdOygH8yfnRUxcimqCEZ_pAsY0Y",
           "text": "Google",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&session_code=tlgVoKcB-RXxtcGQAdOygH8yfnRUxcimqCEZ_pAsY0Y",
           "text": "LinkedIn",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&session_code=tlgVoKcB-RXxtcGQAdOygH8yfnRUxcimqCEZ_pAsY0Y",
           "text": "Twitter",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&session_code=tlgVoKcB-RXxtcGQAdOygH8yfnRUxcimqCEZ_pAsY0Y",
           "text": "GitHub",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&session_code=tlgVoKcB-RXxtcGQAdOygH8yfnRUxcimqCEZ_pAsY0Y",
           "text": "CNR-ISTI",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0&session_code=tlgVoKcB-RXxtcGQAdOygH8yfnRUxcimqCEZ_pAsY0Y",
           "text": "ORCID",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=ePpZ9emuEd0",
           "text": "Register",
           "visible": true
         },
