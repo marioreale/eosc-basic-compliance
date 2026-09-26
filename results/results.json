@@ -1,6 +1,6 @@
 {
-  "run_id": "web-6",
-  "generated_at": "2026-09-26T12:26:22+00:00",
+  "run_id": "web-8",
+  "generated_at": "2026-09-26T14:32:44+00:00",
   "checklist": {
     "checklist_version": "3.1",
     "checklist_date": "2026-09-24",
@@ -111,7 +111,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-09-26T12:23:34+00:00",
+        "fetched_at": "2026-09-26T14:29:35+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -310,7 +310,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-auth.cern.ch/login",
-        "fetched_at": "2026-09-26T12:23:56+00:00",
+        "fetched_at": "2026-09-26T14:29:56+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
@@ -439,7 +439,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-09-26T12:24:02+00:00",
+        "fetched_at": "2026-09-26T14:30:03+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -649,7 +649,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-09-26T12:24:17+00:00",
+        "fetched_at": "2026-09-26T14:30:21+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -686,7 +686,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPT8MwDMW%2FSm85denaMbFonVRtQpo0ENqAA5fJSzwWkSYlTvjz7WmLNoYEXOP3fn62MyWoTSOqGA52jS8RKSQVEfqgnZ07S7FGv0H%2FqiXer1clO4TQkOCcYtM4HwZqRFKjlThw%2FolDy%2BEdkkswZgfymSWLlqktdMBvO0jpog30m98jmJr4qcIb74KTzvRkliwXJdsOC7woQI3SIgdIR9l%2Bl05wp1LYgdqrywwL2LdSoohLSwFsKFme5eM0m6T5%2BG6Yi3wkivyRJQ%2Foqc%2BWDzKWvNfGkugalSx6KxyQJmGhRhJBik11vRKtUMBxSeeW5n%2FPcQ42m3Zq0afzM4%2Bq1ha3bVlF2TG3p9mn%2FFw5%2FbrWTUteLm6d0fIjqYxxb%2FN2ZwFLFnxEllw5X0P4O8twMOxftEr3vVRgDdpUSnkkYnz21fXnt5h9Ag%3D%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUjdpGyVWUilqhVSpINQCBy6Vay%2FUwrGD1%2Bbn7UlStRQJuHpnvp3ddYm80S2rgz%2BYDbwGQB%2FViOC8smZhDYYG3BbcmxJwv1lX5OB9i4xSDG1rnR%2FJKQoFRsDIumfKOw7tkVRwrfdcvJBo2TGV4T3w286FsMF4%2FM3vgOsG6blCW2e9FVYPZBKtlhXZ8SxJZMqLOM3yWTwVxT4upkUeZ3yfF6nMJeSzTooYYGXQc%2BMrko7TLB73lrtkyiZjNikeSfQADods6WhMoo9GG2R9o4oEZ5jlqJAZ3gAyL9i2vl6zTsj4aUmXlvZ%2Fz2kOMi97NRvSubkD2SgDu64sg%2BiZu%2FPsJb1Ulsdr3XTk1fLWaiU%2Bo1pr%2B77oduahIt4FINGVdQ33f2dJRsnwomT8NEgZNFzpWkoHiITOj11%2Ffov5Fw%3D%3D",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -830,7 +830,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.data-terra.org/eosc/",
-        "fetched_at": "2026-09-26T12:24:36+00:00",
+        "fetched_at": "2026-09-26T14:30:43+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
@@ -986,7 +986,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-09-26T12:24:45+00:00",
+        "fetched_at": "2026-09-26T14:30:54+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
@@ -1190,7 +1190,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-09-26T12:25:00+00:00",
+        "fetched_at": "2026-09-26T14:31:11+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "panosc.png",
@@ -1384,7 +1384,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-09-26T12:25:20+00:00",
+        "fetched_at": "2026-09-26T14:31:31+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -1561,7 +1561,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-09-26T12:25:33+00:00",
+        "fetched_at": "2026-09-26T14:31:47+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
@@ -1743,7 +1743,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-09-26T12:25:44+00:00",
+        "fetched_at": "2026-09-26T14:31:59+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
@@ -1872,7 +1872,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://ebrains.eu/",
-        "fetched_at": "2026-09-26T12:25:50+00:00",
+        "fetched_at": "2026-09-26T14:32:05+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "ebrains.png",
@@ -2086,7 +2086,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eoscnode-it.d4science.org/",
-        "fetched_at": "2026-09-26T12:26:05+00:00",
+        "fetched_at": "2026-09-26T14:32:21+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
@@ -2239,7 +2239,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-09-26T12:26:14+00:00",
+        "fetched_at": "2026-09-26T14:32:33+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-sk.png",

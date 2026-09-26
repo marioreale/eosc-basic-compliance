@@ -231,7 +231,7 @@ address becomes `XXXXX`. Role mailboxes are kept. The checks therefore run on
 masked text, which costs nothing: point 6 needs a helpdesk, and no check uses a
 person's address or number. Re-assessing the 24 September evidence after masking
 gave the same verdict in all 120 cells, and that run was masked this way at
-commit `ada1b4a`. Runs `web-4`, `web-5` and `web-6`, which replaced it as the published run on 26
+commit `ada1b4a`. Runs `web-4`, `web-5`, `web-6` and `web-8`, which replaced it as the published run on 26
 September, were masked as they were collected. The reports are masked a second time as they
 are written (`write_all` in `report.py`), so a report rebuilt from evidence
 captured before masking existed is masked too. Screenshots are not masked.
@@ -986,7 +986,7 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-6`). Update it to the new run's shape.
+  run `web-8`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:

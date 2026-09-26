@@ -2,7 +2,7 @@
   "node_id": "eosc-dto",
   "node_name": "EOSC DTO (D4Science)",
   "requested_url": "https://eosc-dto.d4science.org/",
-  "fetched_at": "2026-09-26T12:24:17+00:00",
+  "fetched_at": "2026-09-26T14:30:21+00:00",
   "final_url": "https://eosc-dto.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -301,7 +301,7 @@
   ],
   "images": [
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1790247644713",
+      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1789413277991",
       "alt": "European-DTO Gateway",
       "aria_label": "",
       "title": "",
@@ -309,7 +309,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1790328509091",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1790387967261",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -317,7 +317,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1790328509095",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1790387967265",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -1091,7 +1091,7 @@
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPT8MwDMW%2FSm85denaMbFonVRtQpo0ENqAA5fJSzwWkSYlTvjz7WmLNoYEXOP3fn62MyWoTSOqGA52jS8RKSQVEfqgnZ07S7FGv0H%2FqiXer1clO4TQkOCcYtM4HwZqRFKjlThw%2FolDy%2BEdkkswZgfymSWLlqktdMBvO0jpog30m98jmJr4qcIb74KTzvRkliwXJdsOC7woQI3SIgdIR9l%2Bl05wp1LYgdqrywwL2LdSoohLSwFsKFme5eM0m6T5%2BG6Yi3wkivyRJQ%2Foqc%2BWDzKWvNfGkugalSx6KxyQJmGhRhJBik11vRKtUMBxSeeW5n%2FPcQ42m3Zq0afzM4%2Bq1ha3bVlF2TG3p9mn%2FFw5%2FbrWTUteLm6d0fIjqYxxb%2FN2ZwFLFnxEllw5X0P4O8twMOxftEr3vVRgDdpUSnkkYnz21fXnt5h9Ag%3D%3D",
+      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUjdpGyVWUilqhVSpINQCBy6Vay%2FUwrGD1%2Bbn7UlStRQJuHpnvp3ddYm80S2rgz%2BYDbwGQB%2FViOC8smZhDYYG3BbcmxJwv1lX5OB9i4xSDG1rnR%2FJKQoFRsDIumfKOw7tkVRwrfdcvJBo2TGV4T3w286FsMF4%2FM3vgOsG6blCW2e9FVYPZBKtlhXZ8SxJZMqLOM3yWTwVxT4upkUeZ3yfF6nMJeSzTooYYGXQc%2BMrko7TLB73lrtkyiZjNikeSfQADods6WhMoo9GG2R9o4oEZ5jlqJAZ3gAyL9i2vl6zTsj4aUmXlvZ%2Fz2kOMi97NRvSubkD2SgDu64sg%2BiZu%2FPsJb1Ulsdr3XTk1fLWaiU%2Bo1pr%2B77oduahIt4FINGVdQ33f2dJRsnwomT8NEgZNFzpWkoHiITOj11%2Ffov5Fw%3D%3D",
       "title": "Sign in to D4Science Accounts prod",
       "lang_attr": "en",
       "main_text": "D4science Support English Deutsch Norsk Русский Svenska pt-BR Lietuvių English Italiano Français 中文简体 Español 日本語 Slovenčina Polski Català Nederlands Türkçe Sign in to your account Username or email Password Remember me Forgot Password? Or sign in with Academic / other Google LinkedIn Twitter GitHub CNR-ISTI ORCID New user? Register Terms of Use | Cookies Policy | Privacy Policy",
@@ -1108,132 +1108,132 @@
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
           "text": "Deutsch",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
           "text": "Norsk",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
           "text": "Русский",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
           "text": "Svenska",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
           "text": "pt-BR",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
           "text": "Lietuvių",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
           "text": "English",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
           "text": "Italiano",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
           "text": "Français",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
           "text": "中文简体",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
           "text": "Español",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
           "text": "日本語",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
           "text": "Slovenčina",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
           "text": "Polski",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
           "text": "Català",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
           "text": "Nederlands",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
           "text": "Türkçe",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg",
           "text": "Forgot Password?",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&session_code=nzBEiVZYsp3s9l6_iSYnme7ZfexHlwbjtP6MsqJgz_0",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
           "text": "Academic / other",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&session_code=nzBEiVZYsp3s9l6_iSYnme7ZfexHlwbjtP6MsqJgz_0",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
           "text": "Google",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&session_code=nzBEiVZYsp3s9l6_iSYnme7ZfexHlwbjtP6MsqJgz_0",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
           "text": "LinkedIn",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&session_code=nzBEiVZYsp3s9l6_iSYnme7ZfexHlwbjtP6MsqJgz_0",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
           "text": "Twitter",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&session_code=nzBEiVZYsp3s9l6_iSYnme7ZfexHlwbjtP6MsqJgz_0",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
           "text": "GitHub",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&session_code=nzBEiVZYsp3s9l6_iSYnme7ZfexHlwbjtP6MsqJgz_0",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
           "text": "CNR-ISTI",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ&session_code=nzBEiVZYsp3s9l6_iSYnme7ZfexHlwbjtP6MsqJgz_0",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg&session_code=rMjEJ_iDEMcFVzah3rAFd_UhqTjt3VP0DY5Slg4FDA8",
           "text": "ORCID",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=wZ2g3e5helQ",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=hKIg02sj1Cg",
           "text": "Register",
           "visible": true
         },
