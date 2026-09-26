@@ -37,18 +37,21 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-4`, and it has not been reviewed yet.** It
+> **The published report is run `web-5`, and it has not been reviewed yet.** It
 > was collected on 26 September 2026 by the GitHub workflow
-> ([run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476))
-> and replaced the reviewed run of 24 September, by decision of the maintainer.
+> ([run 36236603533](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36236603533))
+> against **checklist v3.1** (24 September 2026), which replaced v3.0. It follows
+> run `web-4` of the same morning
+> ([run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476)),
+> which had replaced the reviewed run of 24 September by decision of the maintainer.
 > The hand review of that earlier run is kept as history in
 > [results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md). Its findings
 > still apply wherever a page has not changed, but it does not cover this run.
 >
-> The same evidence was re-scored on 26 September 2026 against **checklist v3.1**
-> (24 September 2026), which replaced v3.0. No node was contacted, and no verdict
-> changed: v3.1 rewords the points and narrows 1R and 5a–5c to *Node Exchange*
-> resources, which the tool already treats as review items.
+> All 130 verdicts of `web-5` are the same as those of `web-4`, both under v3.1
+> and as first published under v3.0: v3.1 rewords the points and narrows 1R and
+> 5a–5c to *Node Exchange* resources, which the tool already treats as review
+> items.
 
 All thirteen configured nodes were fetched on 26 September 2026 at `--depth 1`
 and assessed against the official unscoped names list. None was skipped. This
@@ -243,7 +246,7 @@ nodes; `assess`, `points` and `show` work offline.
 | `--approved-names <path>` | A list of approved node names for point 3, replacing `checklist/approved-names.txt`. `node-id: Name` ties a name to one node; a bare name counts for every node. |
 | `--no-approved-names` | Use no name list at all; point 3's name requirement is then not assessed. |
 | `--strict-separators` | Match the separators in approved names exactly. By default spaces, `\|`, `-`, `–`, `:`, `/` and `·` count as equivalent. |
-| `--run <label>` | A label for the run, recorded in the report, such as `web-4` or `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
+| `--run <label>` | A label for the run, recorded in the report, such as `web-5` or `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
 
 **Where results go**
 

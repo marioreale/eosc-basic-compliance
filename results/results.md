@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.1
 
-Run `web-4` · 2026-09-26T10:41:22+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
+Run `web-5` · 2026-09-26T10:46:02+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 

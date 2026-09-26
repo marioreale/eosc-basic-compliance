@@ -382,7 +382,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     Four of the pages carry their approved name in the body, all with a
     separator the official list does not use ("EOSC Node - BBMRI-ERIC",
     "EOSC Node Czechia", "EOSC Node EUDAT", "EOSC Node Slovakia"). This asserts
-    the real-world outcome, not a synthetic one. Evidence of run web-4, 26
+    the real-world outcome, not a synthetic one. Evidence of runs web-4 and web-5, 26
     September 2026. GÉANT's page also carries its name ("EOSC Node GÉANT", as
     matched on 24 September), but on 26 September it answered with the
     Cloudflare challenge, so there was no body to match; on 21 September only
