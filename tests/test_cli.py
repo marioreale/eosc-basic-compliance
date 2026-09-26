@@ -867,3 +867,98 @@ def test_show_node_is_refused_with_a_command():
     res = _invoke("--show-node", "egi", "points")
     assert res.exit_code == 2
     assert "without a command" in " ".join(re.sub(r"[│╭╮╰╯─]", " ", res.output).split())
+
+
+# --- --update-nlp ------------------------------------------------------------
+# Every test edits a copy in tmp_path; the repository's nodes.yaml is never written.
+
+
+@pytest.fixture
+def nodes_copy(monkeypatch, tmp_path):
+    path = tmp_path / "nodes.yaml"
+    path.write_text(cli.DEFAULT_NODES.read_text(encoding="utf-8"), encoding="utf-8")
+    monkeypatch.setattr(cli, "DEFAULT_NODES", path)
+    return path
+
+
+def _nodes(path):
+    import yaml
+
+    return yaml.safe_load(path.read_text(encoding="utf-8"))["nodes"]
+
+
+def test_update_nlp_changes_only_that_nodes_url_line(nodes_copy):
+    before_text = nodes_copy.read_text(encoding="utf-8")
+    before = _nodes(nodes_copy)
+    res = _invoke("--update-nlp", "egi", "https://www.egi.eu/new-landing-page/")
+    assert res.exit_code == 0, res.output
+    assert "https://www.egi.eu/egi-node" in res.output and "results/ is unchanged" in res.output
+    after = _nodes(nodes_copy)
+    assert after == [
+        dict(n, url="https://www.egi.eu/new-landing-page/") if n["id"] == "egi" else n
+        for n in before
+    ]
+    # A text edit, not a re-dump: comments and every other line survive; the
+    # url: line is replaced and one dated comment with the old URL is added.
+    old_lines = before_text.splitlines()
+    new_lines = nodes_copy.read_text(encoding="utf-8").splitlines()
+    removed = [line for line in old_lines if line not in new_lines]
+    added = [line for line in new_lines if line not in old_lines]
+    assert removed == ["    url: https://www.egi.eu/egi-node"]
+    assert added[1] == "    url: https://www.egi.eu/new-landing-page/"
+    assert added[0].startswith("    # Changed on ") and "from https://www.egi.eu/egi-node " in added[0]
+    assert len(added) == 2
+
+
+def test_update_nlp_result_is_what_the_listings_show(nodes_copy):
+    assert _invoke("--update-nlp", "cern", "https://cern.example/eosc/").exit_code == 0
+    assert "https://cern.example/eosc/" in _invoke("--show-node", "cern").output
+
+
+def test_update_nlp_to_the_current_url_changes_nothing(nodes_copy):
+    text = nodes_copy.read_text(encoding="utf-8")
+    res = _invoke("--update-nlp", "eosc-it", "https://eosc.it/")
+    assert res.exit_code == 0 and "not changed" in res.output
+    assert nodes_copy.read_text(encoding="utf-8") == text
+
+
+@pytest.mark.parametrize(
+    "args, message",
+    [
+        (["Italy", "https://x.example/"], "no node has the id"),
+        (["EOSC-IT", "https://x.example/"], "no node has the id"),
+        (["egi", "http://x.example/"], "absolute https URL"),
+        (["egi", "x.example/page"], "absolute https URL"),
+        (["egi", "https://x.example/a b"], "absolute https URL"),
+        (["egi", "https://eosc.it"], "already the landing page of eosc-it"),
+    ],
+)
+def test_update_nlp_refuses_bad_input_and_leaves_the_file_alone(nodes_copy, args, message):
+    text = nodes_copy.read_text(encoding="utf-8")
+    with pytest.raises(typer.BadParameter, match=message):
+        cli._update_nlp(*args)
+    assert nodes_copy.read_text(encoding="utf-8") == text
+
+
+def test_update_nlp_needs_both_values_and_no_command(nodes_copy):
+    text = nodes_copy.read_text(encoding="utf-8")
+    assert _invoke("--update-nlp", "egi").exit_code == 2
+    res = _invoke("--update-nlp", "egi", "https://x.example/", "points")
+    assert res.exit_code == 2
+    assert "without a command" in " ".join(re.sub(r"[│╭╮╰╯─]", " ", res.output).split())
+    assert nodes_copy.read_text(encoding="utf-8") == text
+
+
+def test_update_nlp_refuses_a_url_it_cannot_edit_as_one_line(nodes_copy):
+    """A url: value folded onto the next line is valid YAML but not the one-line
+    shape the text edit handles; it is an error and the file is left alone."""
+    nodes_copy.write_text(
+        nodes_copy.read_text(encoding="utf-8").replace(
+            "    url: https://www.egi.eu/egi-node\n", "    url:\n      https://www.egi.eu/egi-node\n"
+        ),
+        encoding="utf-8",
+    )
+    before = nodes_copy.read_text(encoding="utf-8")
+    with pytest.raises(typer.BadParameter, match="edit the file by hand"):
+        cli._update_nlp("egi", "https://x.example/")
+    assert nodes_copy.read_text(encoding="utf-8") == before

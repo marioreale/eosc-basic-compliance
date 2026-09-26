@@ -935,7 +935,14 @@ from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to
 **Which files change.** One line in one file: `url` for that node in
 `nodes.yaml`. Nothing else in the repository stores a node's URL. Add a comment
 recording the old address and the date, so the published evidence can still be
-traced:
+traced. `--update-nlp` makes both edits and changes nothing else (it contacts no
+site and commits nothing):
+
+```bash
+uv run basic-check --update-nlp bbmri-eric https://new.example.org/eosc-node/
+```
+
+Done by hand, the entry looks like this:
 
 ```yaml
   - id: bbmri-eric

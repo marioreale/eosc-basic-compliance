@@ -178,6 +178,12 @@ H_SHOW_NODE = (
     "Print one node's configuration and exit: its id, Node Landing Page URL and "
     "approved name, as one --print-config row. Node id or name, as for --skip."
 )
+H_UPDATE_NLP = (
+    "Change a node's Node Landing Page URL in nodes.yaml, then exit. Takes the "
+    "node id and the new absolute https URL. Only that node's url: line changes, "
+    "with a dated comment recording the old URL; nothing is fetched, committed, "
+    "or changed in results/."
+)
 H_PRINT_CONFIG = (
     "Print a table with one row per node: id, Node Landing Page URL and "
     "approved name, with the files they come from, and exit."
@@ -192,11 +198,13 @@ def _rel(path: Path) -> str:
 
 
 def _config_rows(
-    nodes_file: Path = DEFAULT_NODES, scoped_file: Path = SCOPED_APPROVED_NAMES
+    nodes_file: Path | None = None, scoped_file: Path | None = None
 ) -> tuple[list[dict], list[str]]:
     """One row per configured node, in nodes.yaml order: id, name, url and the
     approved names tied to it; plus the names tied to no node (which count for
     every node). Read only, from local files: nothing is fetched."""
+    nodes_file = nodes_file or DEFAULT_NODES  # looked up per call, not at import
+    scoped_file = scoped_file or SCOPED_APPROVED_NAMES
     try:
         nodes = yaml.safe_load(nodes_file.read_text(encoding="utf-8"))["nodes"]
     except (OSError, yaml.YAMLError, KeyError, TypeError) as exc:
@@ -292,6 +300,94 @@ def _print_listings(
     typer.echo("\n\n".join(blocks))
 
 
+_ID_LINE = re.compile(r"^(\s*)-\s+id:\s*(\S+?)\s*$")
+_URL_LINE = re.compile(r"^(\s+)url:\s*(\S.*?)\s*$")
+
+
+def _check_new_nlp(url: str) -> str:
+    """The new URL, stripped, or BadParameter: the same rules tests/test_nodes.py
+    applies to nodes.yaml (absolute, https, a host), plus no whitespace inside."""
+    url = url.strip()
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or not parsed.netloc or re.search(r"\s", url):
+        raise typer.BadParameter(
+            f"--update-nlp: the new URL must be an absolute https URL, got {url!r}"
+        )
+    return url
+
+
+def _update_nlp(node_id: str, new_url: str, nodes_file: Path | None = None) -> str:
+    """Set one node's `url:` in nodes.yaml and return what was done.
+
+    The file is edited as text, not re-dumped, so its comments and layout stay as
+    they are: only the node's url: line changes, preceded by a dated comment with
+    the old URL. The result is parsed back and checked (that node's url is the
+    new one, every other field of every node is as before) before it replaces
+    the file; if the check fails the file is left untouched.
+    """
+    path = nodes_file or DEFAULT_NODES
+    text = path.read_text(encoding="utf-8")
+    before = yaml.safe_load(text)["nodes"]
+    ids = [n["id"] for n in before]
+    node_id = node_id.strip()
+    if node_id not in ids:
+        raise typer.BadParameter(
+            f"--update-nlp: no node has the id {node_id!r}. Ids are: {', '.join(ids)}"
+        )
+    new_url = _check_new_nlp(new_url)
+    old_url = next(n["url"] for n in before if n["id"] == node_id)
+    if new_url == old_url:
+        return f"{node_id}: already {new_url}; {_rel(path)} not changed."
+    taken = [
+        n["id"] for n in before
+        if n["id"] != node_id and n["url"].rstrip("/") == new_url.rstrip("/")
+    ]
+    if taken:
+        raise typer.BadParameter(
+            f"--update-nlp: {new_url} is already the landing page of {taken[0]}"
+        )
+
+    lines = text.splitlines(keepends=True)
+    start = next(
+        i for i, line in enumerate(lines)
+        if (m := _ID_LINE.match(line)) and m.group(2).strip("'\"") == node_id
+    )
+    end = next((i for i in range(start + 1, len(lines)) if _ID_LINE.match(lines[i])), len(lines))
+    hits = [i for i in range(start, end) if _URL_LINE.match(lines[i])]
+    if len(hits) != 1:
+        raise typer.BadParameter(
+            f"--update-nlp: expected one url: line for {node_id} in {_rel(path)}, "
+            f"found {len(hits)}; edit the file by hand"
+        )
+    i = hits[0]
+    indent = _URL_LINE.match(lines[i]).group(1)
+    eol = "\r\n" if lines[i].endswith("\r\n") else "\n"
+    today = datetime.now(UTC).strftime("%d %B %Y").lstrip("0")
+    lines[i:i + 1] = [
+        f"{indent}# Changed on {today} from {old_url} (basic-check --update-nlp).{eol}",
+        f"{indent}url: {new_url}{eol}",
+    ]
+    new_text = "".join(lines)
+
+    after = yaml.safe_load(new_text)["nodes"]
+    expected = [dict(n, url=new_url) if n["id"] == node_id else n for n in before]
+    if after != expected:
+        raise typer.BadParameter(
+            f"--update-nlp: the edited {_rel(path)} did not read back as intended; "
+            "the file was not changed"
+        )
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(new_text, encoding="utf-8")
+    tmp.replace(path)
+    return (
+        f"{node_id}: Node Landing Page URL changed in {_rel(path)}\n"
+        f"  from  {old_url}\n"
+        f"  to    {new_url}\n"
+        "Nothing was fetched or committed, and results/ is unchanged: it still "
+        "reflects the URL it was collected from."
+    )
+
+
 @app.callback(invoke_without_command=True)
 def main(
     ctx: typer.Context,
@@ -302,10 +398,14 @@ def main(
     ),
     print_config: bool = typer.Option(False, "--print-config", help=H_PRINT_CONFIG),
     show_node: str = typer.Option("", "--show-node", metavar="NODE", help=H_SHOW_NODE),
+    update_nlp: tuple[str, str] | None = typer.Option(
+        None, "--update-nlp", metavar="NODE_ID URL", help=H_UPDATE_NLP
+    ),
 ) -> None:
-    """Top-level listing flags. They read local files only and contact no node."""
+    """Top-level configuration flags. They use local files only and contact no node."""
     wanted = (list_nodes, list_nlps, list_approved_names, print_config, show_node)
-    if not any(v.strip() if isinstance(v, str) else v for v in wanted):
+    listing = any(v.strip() if isinstance(v, str) else v for v in wanted)
+    if not listing and not update_nlp:
         if ctx.invoked_subcommand is None:
             # What Typer prints for a bare `basic-check` when no callback exists.
             typer.echo(
@@ -317,9 +417,15 @@ def main(
     if ctx.invoked_subcommand is not None:
         raise typer.BadParameter(
             "--list-nodes, --list-nodes-ids, --list-nlps, --list-approved-names, "
-            "--print-config and --show-node are used on their own, without a command."
+            "--print-config, --show-node and --update-nlp are used on their own, "
+            "without a command."
         )
-    _print_listings(*wanted)
+    if update_nlp:
+        typer.echo(_update_nlp(*update_nlp))
+        if listing:
+            typer.echo("")
+    if listing:
+        _print_listings(*wanted)
     raise typer.Exit(0)
 
 

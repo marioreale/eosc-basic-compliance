@@ -107,13 +107,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-379 tests still pass, while `collect` fails with Playwright's
+390 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 379 passed
+uv run pytest -q                  # expect: 390 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -160,8 +160,21 @@ subsection before rebuilding it.
 
 ### Changing a node's URL
 
-Edit `url` in `nodes.yaml` and run `uv run pytest -q`. Nothing else in the
-repository stores the URL. Then collect that node again, into a scratch
+Change `url` in `nodes.yaml` and run `uv run pytest -q`. Nothing else in the
+repository stores the URL. You can edit the file by hand, or let the tool do it:
+
+```bash
+uv run basic-check --update-nlp bbmri-eric https://new.example.org/eosc-node/
+```
+
+`--update-nlp` takes the node id (the id exactly, not the name) and the new URL.
+It changes only that node's `url:` line, adds a comment above it with the date
+and the old URL, and keeps every other line and comment as it was. It refuses a
+URL that is not absolute https, one that is already another node's landing
+page, and an unknown id, and it prints the old and new URL. It contacts no site,
+commits nothing and leaves `results/` alone; check the change with
+`git diff nodes.yaml` and commit it yourself.
+ Then collect that node again, into a scratch
 directory first, so you can see what the new page gives before anything
 published changes:
 
@@ -946,7 +959,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 379 tests, offline, a few seconds
+uv run pytest -q                    # 390 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth

@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 379
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 390
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -212,6 +212,7 @@ nodes; `assess`, `points` and `show` work offline.
 | `--list-nlps` | Each node id with its Node Landing Page URL from `nodes.yaml`. |
 | `--list-approved-names` | Each node id with its approved name, from `checklist/approved-names-scoped.txt`. |
 | `--print-config` | A table with one row per node: id, Node Landing Page URL and approved name, with the files they come from. |
+| `--update-nlp <node id> <URL>` | Changes that node's Node Landing Page URL in `nodes.yaml`: only its `url:` line, preceded by a dated comment with the old URL. The new URL must be absolute https and not another node's. Nothing is fetched or committed, and `results/` is not touched. |
 | `--show-node <id or name>` | One node's configuration: its id, Node Landing Page URL and approved name, as its `--print-config` row. An id or a name, in any case, as for `--skip`. |
 
 **Which nodes to check** (`collect`, `assess`, `run`)
@@ -287,6 +288,9 @@ uv run basic-check --print-config
 
 # The same for one node
 uv run basic-check --show-node bbmri-eric
+
+# Change a node's landing page URL in nodes.yaml (a local edit; commit it yourself)
+uv run basic-check --update-nlp bbmri-eric https://new.example.org/eosc-node/
 
 # BBMRI-ERIC at an alternative landing page, nodes.yaml unchanged
 uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node-bbmri-eric/
@@ -368,7 +372,8 @@ command for the three changes that come up most:
 
 1. **Adding a node** and publishing a run that includes it, contacting only the
    new node's site.
-2. **Changing a node's URL.** Only the `url` line in `nodes.yaml` changes.
+2. **Changing a node's URL.** Only the `url` line in `nodes.yaml` changes;
+   `basic-check --update-nlp <node id> <URL>` makes that edit for you.
    Until that node is collected again, `assess` warns, and both reports carry an
    "Evidence from a different URL" banner.
 3. **Moving to a new revision of the checklist.** There is no URL to change: the
@@ -524,7 +529,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 379 tests, a few seconds, no network, no browser
+uv run pytest -q          # 390 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 
