@@ -107,13 +107,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-412 tests still pass, while `collect` fails with Playwright's
+425 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 412 passed
+uv run pytest -q                  # expect: 425 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -174,6 +174,22 @@ URL that is not absolute https, one that is already another node's landing
 page, and an unknown id, and it prints the old and new URL. It contacts no site,
 commits nothing and leaves `results/` alone; check the change with
 `git diff nodes.yaml` and commit it yourself.
+
+To undo it, and any other edit to `nodes.yaml`, put the file back as it was
+downloaded from GitHub:
+
+```bash
+uv run basic-check --restore-default-config
+```
+
+The replaced file is kept beside it as `nodes.yaml.<date-time>.bak` (ignored by
+git), and the output lists every node whose URL was restored, added back or
+removed. If the file is already the default, nothing changes. The default is a
+copy shipped inside the package (`src/basic_check/defaults/nodes.yaml`), so this
+works without git, from a zip download too. Only `nodes.yaml` is restored: the
+approved-name lists in `checklist/` are not touched. Like `--update-nlp`, it
+contacts no site, commits nothing and leaves `results/` alone; for a node whose
+URL it restored, `run --update-results-for-node <id>` re-checks that node.
 To re-check only that node and update only its row in the results, keeping the
 others, use `run --update-results-for-node` (section 4). To look first without
 changing anything published, collect it into a scratch
@@ -1002,7 +1018,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 412 tests, offline, a few seconds
+uv run pytest -q                    # 425 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -1013,10 +1029,10 @@ uv run ruff check src tests         # lint
 |---|---|---|
 | `test_checklist.py` | 15 | The transcription matches the source document, including its SHA-256 for every committed revision, the scoped name list agrees with the official one, and switching `DEFAULT_CHECKLIST` carries the help texts with it. |
 | `test_checks.py` | 75 | The verdict logic, point by point, including the render gate, the EOSC-asset token rule, that a point 3 summary never denies having a name list it was given, and that a link merely labelled "support" does not settle point 6. |
-| `test_cli.py` | 101 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, that `--help` stays complete, and that evidence from another URL than the configured one is flagged. |
+| `test_cli.py` | 113 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, that `--help` stays complete, and that evidence from another URL than the configured one is flagged. |
 | `test_crawl.py` | 35 | Link selection, including policy words found only in a hyphenated address, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
-| `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
+| `test_nodes.py` | 14 | `nodes.yaml` itself, and that the default copy shipped for `--restore-default-config` is the committed file: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
 | `test_privacy.py` | 51 | Personal-data masking: personal addresses and phone numbers masked, role mailboxes kept, the name beside an address masked but not a title or an acronym, that both the evidence files and every report format are written masked, and that the committed evidence stays masked. |
 | `test_report.py` | 36 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
 | `test_update_row.py` | 22 | `--update-results-for-node`, on a copy of the committed `results/`: only the named row changes, the reports gain one **Updated rows** line, `run` collects exactly one node, a failed fetch changes nothing unless `--accept-error`, a skipped node is inserted in `nodes.yaml` order, and every refusal. |

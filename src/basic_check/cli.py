@@ -28,6 +28,10 @@ from .names import ApprovedNames
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_NODES = ROOT / "nodes.yaml"
+# The nodes.yaml of this release, as downloaded from GitHub, shipped inside the
+# package so --restore-default-config works without git (a zip download, say).
+# tests/test_nodes.py keeps it byte-identical to the committed nodes.yaml.
+DEFAULT_NODES_SNAPSHOT = Path(__file__).resolve().parent / "defaults" / "nodes.yaml"
 # The checklist revision applied by default. This line is the one place to change
 # when a new revision is adopted: add checklist/vX.Y.yaml beside the old one (see
 # checklist/README.md), then point this at it. Help texts, tests and reports all
@@ -185,6 +189,12 @@ H_UPDATE_NLP = (
     "node id and the new absolute https URL. Only that node's url: line changes, "
     "with a dated comment recording the old URL; nothing is fetched, committed, "
     "or changed in results/."
+)
+H_RESTORE_DEFAULT_CONFIG = (
+    "Put back nodes.yaml, the node list with each node's Node Landing Page URL, "
+    "as it was downloaded from GitHub, then exit. Undoes --update-nlp and any hand "
+    "edit. The file being replaced is kept as nodes.yaml.<date-time>.bak; nothing "
+    "is fetched, committed, or changed in results/."
 )
 H_UPDATE_ROW = (
     "Update one node's row in the stored results and leave every other row as it "
@@ -404,6 +414,64 @@ def _update_nlp(node_id: str, new_url: str, nodes_file: Path | None = None) -> s
     )
 
 
+def _restore_default_config(
+    nodes_file: Path | None = None, snapshot: Path | None = None
+) -> str:
+    """Replace nodes.yaml with the shipped default and return what was done.
+
+    The current file, if it differs, is first copied to nodes.yaml.<UTC
+    date-time>.bak beside it, so a restore never loses an edit. The message
+    names every node that the restore adds, removes, or points at another URL.
+    """
+    path = nodes_file or DEFAULT_NODES
+    default_text = (snapshot or DEFAULT_NODES_SNAPSHOT).read_text(encoding="utf-8")
+    default = yaml.safe_load(default_text)["nodes"]
+    if path.exists():
+        current_text = path.read_text(encoding="utf-8")
+        if current_text == default_text:
+            return f"{_rel(path)} is already the default configuration; not changed."
+        try:
+            current = yaml.safe_load(current_text)["nodes"]
+            current = {n["id"]: n for n in current}
+        except Exception:  # unreadable: restore it all the same, and say so
+            current = None
+        stamp = datetime.now(UTC).strftime("%Y%m%d-%H%M%S")
+        backup = path.with_name(f"{path.name}.{stamp}.bak")
+        shutil.copy2(path, backup)
+    else:
+        current, backup = {}, None
+    tmp = path.with_name(path.name + ".tmp")
+    tmp.write_text(default_text, encoding="utf-8")
+    tmp.replace(path)
+
+    lines = [f"{_rel(path)} restored to the default configuration ({len(default)} nodes)."]
+    if backup:
+        lines.append(f"The previous file is kept as {_rel(backup)}.")
+    if current is None:
+        lines.append("The previous file could not be read as a node list.")
+    else:
+        header = len(lines)
+        default_ids = [n["id"] for n in default]
+        for n in default:
+            old = current.get(n["id"])
+            if old is None:
+                lines.append(f"  added back   {n['id']}  {n['url']}")
+            elif old.get("url") != n["url"]:
+                lines.append(f"  URL restored {n['id']}  {old.get('url')}  ->  {n['url']}")
+            elif old != n:
+                lines.append(f"  restored     {n['id']}  (fields other than the URL)")
+        for node_id, old in current.items():
+            if node_id not in default_ids:
+                lines.append(f"  removed      {node_id}  {old.get('url')}")
+        if len(lines) == header:
+            lines.append("  No node or URL changed; only comments or layout differed.")
+    lines.append(
+        "Nothing was fetched or committed, and results/ is unchanged. If a URL was "
+        "restored, run --update-results-for-node <id> re-checks that node."
+    )
+    return "\n".join(lines)
+
+
 @app.callback(invoke_without_command=True)
 def main(
     ctx: typer.Context,
@@ -417,11 +485,14 @@ def main(
     update_nlp: tuple[str, str] | None = typer.Option(
         None, "--update-nlp", metavar="NODE_ID URL", help=H_UPDATE_NLP
     ),
+    restore_default_config: bool = typer.Option(
+        False, "--restore-default-config", help=H_RESTORE_DEFAULT_CONFIG
+    ),
 ) -> None:
     """Top-level configuration flags. They use local files only and contact no node."""
     wanted = (list_nodes, list_nlps, list_approved_names, print_config, show_node)
     listing = any(v.strip() if isinstance(v, str) else v for v in wanted)
-    if not listing and not update_nlp:
+    if not listing and not update_nlp and not restore_default_config:
         if ctx.invoked_subcommand is None:
             # What Typer prints for a bare `basic-check` when no callback exists.
             typer.echo(
@@ -433,9 +504,18 @@ def main(
     if ctx.invoked_subcommand is not None:
         raise typer.BadParameter(
             "--list-nodes, --list-nodes-ids, --list-nlps, --list-approved-names, "
-            "--print-config, --show-node and --update-nlp are used on their own, "
-            "without a command."
+            "--print-config, --show-node, --update-nlp and --restore-default-config "
+            "are used on their own, without a command."
         )
+    if update_nlp and restore_default_config:
+        raise typer.BadParameter(
+            "--restore-default-config and --update-nlp contradict each other; "
+            "use one at a time"
+        )
+    if restore_default_config:
+        typer.echo(_restore_default_config())
+        if listing:
+            typer.echo("")
     if update_nlp:
         typer.echo(_update_nlp(*update_nlp))
         if listing:

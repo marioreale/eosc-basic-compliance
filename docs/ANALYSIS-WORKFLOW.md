@@ -95,6 +95,7 @@ cases, every row is assessed again from its stored evidence.
 | **Add a node**: an entry in `nodes.yaml` and its approved name in `checklist/approved-names.txt` (and `-scoped.txt`) | `collect --only <new id>`, then `assess` without `--only` | the new node only | Re-judged, offline, from their stored evidence, because the approved-name list used for point 3 changed |
 | **Add a node** whose approved name is already in `checklist/approved-names.txt` | `run --update-results-for-node <new id>` | the new node only | Kept unchanged; the new row is inserted in `nodes.yaml` order |
 | **Change a node's landing page URL** (`basic-check --update-nlp <id> <URL>`, or by hand) | `run --update-results-for-node <id>` | that node only | Kept unchanged |
+| **Go back to the node list as downloaded** (`basic-check --restore-default-config`) | For each node it lists as `URL restored`: `run --update-results-for-node <id>`. If it lists nodes added back or removed: `assess` | the restored nodes only | Kept unchanged; re-judged offline if nodes were added back or removed |
 | **Change the reference checklist** (a new `checklist/vX.Y.yaml`, made the default in `DEFAULT_CHECKLIST` or passed with `-c`) | `assess` | none | All re-judged, offline, from the stored evidence |
 
 `assess` alone is not enough after a URL change. The node's evidence still
@@ -1007,6 +1008,10 @@ site and commits nothing):
 ```bash
 uv run basic-check --update-nlp bbmri-eric https://new.example.org/eosc-node/
 ```
+
+To go back, `uv run basic-check --restore-default-config` puts `nodes.yaml` back
+as it was downloaded from GitHub and keeps the replaced file as
+`nodes.yaml.<date-time>.bak`.
 
 Done by hand, the entry looks like this:
 

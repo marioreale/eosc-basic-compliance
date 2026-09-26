@@ -127,3 +127,24 @@ def test_every_node_has_a_scoped_approved_name(nodes):
     assert not missing, (
         f"node(s) with no name in checklist/approved-names-scoped.txt: {missing}"
     )
+
+
+def test_shipped_default_is_the_committed_nodes_yaml():
+    """--restore-default-config puts back src/basic_check/defaults/nodes.yaml.
+    It must be exactly the nodes.yaml committed in this revision, so a restore
+    gives what was downloaded from GitHub. Compared with the committed file
+    (git HEAD), not the working copy, so a local --update-nlp does not fail
+    the suite; skipped outside a git checkout (a zip download)."""
+    import shutil
+    import subprocess
+
+    if shutil.which("git") is None or not (ROOT / ".git").exists():
+        pytest.skip("not a git checkout")
+    committed = subprocess.run(
+        ["git", "show", "HEAD:nodes.yaml"], cwd=ROOT, capture_output=True, check=True
+    ).stdout
+    shipped = (ROOT / "src" / "basic_check" / "defaults" / "nodes.yaml").read_bytes()
+    assert shipped == committed, (
+        "src/basic_check/defaults/nodes.yaml differs from the committed nodes.yaml; "
+        "copy nodes.yaml over it in the same commit"
+    )

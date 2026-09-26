@@ -14,3 +14,6 @@ results/one-off/
 # with, and an unreviewed local edit must not reach the repository by accident.
 # Anchored to the root so it cannot swallow the committed default.
 /approved-names*.txt
+
+# Backups written by basic-check --restore-default-config.
+/nodes.yaml.*.bak

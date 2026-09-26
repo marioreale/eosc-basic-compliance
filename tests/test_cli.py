@@ -962,3 +962,113 @@ def test_update_nlp_refuses_a_url_it_cannot_edit_as_one_line(nodes_copy):
     with pytest.raises(typer.BadParameter, match="edit the file by hand"):
         cli._update_nlp("egi", "https://x.example/")
     assert nodes_copy.read_text(encoding="utf-8") == before
+
+
+# --- --restore-default-config -------------------------------------------------
+# On the nodes_copy in tmp_path: the repository's nodes.yaml is never written,
+# and the backups land in tmp_path beside the copy.
+
+
+def _backups(path):
+    return sorted(path.parent.glob("nodes.yaml.*.bak"))
+
+
+def test_restore_when_already_default_changes_nothing(nodes_copy):
+    res = _invoke("--restore-default-config")
+    assert res.exit_code == 0 and "already the default configuration" in res.output
+    assert nodes_copy.read_bytes() == cli.DEFAULT_NODES_SNAPSHOT.read_bytes()
+    assert _backups(nodes_copy) == []
+
+
+def test_restore_undoes_update_nlp_and_keeps_a_backup(nodes_copy):
+    assert _invoke("--update-nlp", "egi", "https://www.egi.eu/new/").exit_code == 0
+    edited = nodes_copy.read_text(encoding="utf-8")
+    res = _invoke("--restore-default-config")
+    assert res.exit_code == 0, res.output
+    assert nodes_copy.read_bytes() == cli.DEFAULT_NODES_SNAPSHOT.read_bytes()
+    (backup,) = _backups(nodes_copy)
+    assert backup.read_text(encoding="utf-8") == edited
+    out = " ".join(res.output.split())
+    assert "URL restored egi https://www.egi.eu/new/ -> https://www.egi.eu/egi-node" in out
+    assert backup.name in out and "results/ is unchanged" in out
+    assert "added back" not in out and "removed " not in out
+
+
+def test_restore_reports_nodes_added_back_and_removed(nodes_copy):
+    import yaml
+
+    data = yaml.safe_load(nodes_copy.read_text(encoding="utf-8"))
+    data["nodes"] = [n for n in data["nodes"] if n["id"] != "cern"] + [
+        dict(id="extra", name="Extra", url="https://extra.example/", eosc_page="")
+    ]
+    nodes_copy.write_text(yaml.safe_dump(data), encoding="utf-8")
+    out = " ".join(_invoke("--restore-default-config").output.split())
+    assert "added back cern" in out and "removed extra https://extra.example/" in out
+    assert nodes_copy.read_bytes() == cli.DEFAULT_NODES_SNAPSHOT.read_bytes()
+
+
+def test_restore_notes_when_only_comments_differed(nodes_copy):
+    nodes_copy.write_text(
+        "# a local note\n" + nodes_copy.read_text(encoding="utf-8"), encoding="utf-8"
+    )
+    res = _invoke("--restore-default-config")
+    assert "only comments or layout differed" in res.output
+    assert nodes_copy.read_bytes() == cli.DEFAULT_NODES_SNAPSHOT.read_bytes()
+
+
+@pytest.mark.parametrize("broken", [None, "nodes: [unclosed\n", "just text\n"])
+def test_restore_works_on_a_missing_or_unreadable_file(nodes_copy, broken):
+    if broken is None:
+        nodes_copy.unlink()
+    else:
+        nodes_copy.write_text(broken, encoding="utf-8")
+    res = _invoke("--restore-default-config")
+    assert res.exit_code == 0, res.output
+    assert nodes_copy.read_bytes() == cli.DEFAULT_NODES_SNAPSHOT.read_bytes()
+    assert len(_backups(nodes_copy)) == (0 if broken is None else 1)
+    if broken is not None:
+        assert "could not be read as a node list" in res.output
+
+
+def test_restore_twice_leaves_one_backup(nodes_copy):
+    _invoke("--update-nlp", "egi", "https://www.egi.eu/new/")
+    _invoke("--restore-default-config")
+    res = _invoke("--restore-default-config")
+    assert "already the default" in res.output and len(_backups(nodes_copy)) == 1
+
+
+def test_restore_then_listing_shows_the_default_urls(nodes_copy):
+    _invoke("--update-nlp", "cern", "https://cern.example/eosc/")
+    res = _invoke("--restore-default-config", "--list-nlps")
+    assert res.exit_code == 0
+    listing = res.output.split("re-checks that node.", 1)[1]
+    assert "https://cern.example/eosc/" not in listing and "cern" in listing
+    assert _nodes(nodes_copy) == _nodes(cli.DEFAULT_NODES_SNAPSHOT)
+
+
+@pytest.mark.parametrize(
+    "args, message",
+    [
+        (["--restore-default-config", "points"], "without a command"),
+        (
+            ["--restore-default-config", "--update-nlp", "egi", "https://x.example/"],
+            "contradict each other",
+        ),
+    ],
+)
+def test_restore_refuses_a_command_or_update_nlp(nodes_copy, args, message):
+    _invoke("--update-nlp", "egi", "https://www.egi.eu/new/")
+    text = nodes_copy.read_text(encoding="utf-8")
+    res = _invoke(*args)
+    assert res.exit_code == 2
+    assert message in " ".join(re.sub(r"[│╭╮╰╯─]", " ", res.output).split())
+    assert nodes_copy.read_text(encoding="utf-8") == text and _backups(nodes_copy) == []
+
+
+def test_restore_contacts_no_site(nodes_copy, monkeypatch):
+    def boom(*a, **k):
+        raise AssertionError("the network was used")
+
+    monkeypatch.setattr(cli, "collect_all", boom)
+    _invoke("--update-nlp", "egi", "https://www.egi.eu/new/")
+    assert _invoke("--restore-default-config").exit_code == 0
