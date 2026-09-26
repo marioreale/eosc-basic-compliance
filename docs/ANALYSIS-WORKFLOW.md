@@ -977,21 +977,26 @@ Check that the page actually loaded before going further. On 25 September the
 ten points were `ERROR`. A result like that is not worth publishing: ask the
 node for its public address, or for the checker to be allowed, and stop there.
 
-**Step 3: replace that node's evidence in the published run.** Reuse the trial
-evidence rather than fetching the page again:
+**Step 3: update that node's row in the published run.** Only BBMRI-ERIC is
+fetched again; the other rows are copied from `results/results.json` as they
+are, neither re-fetched nor re-judged:
 
 ```bash
-cp /tmp/trial/evidence/bbmri-eric.json results/evidence/
-cp /tmp/trial/evidence/screenshots/bbmri-eric.png results/evidence/screenshots/
-uv run basic-check assess --only bbmri-eric --skip Italy \
-    --run live-2026-10-01-new-bbmri-url
+uv run basic-check run --update-results-for-node bbmri-eric
 ```
 
-If the new capture has no screenshot, because the page could not be rendered,
-delete `results/evidence/screenshots/bbmri-eric.png` rather than keep the old
-page's image. The report covers every node, with a **Mixed freshness** banner
-naming `bbmri-eric` as the only row fetched again. For a completely fresh table
-instead, follow path B of example 1 step 4.
+That fetches the one page into a scratch directory, and only if the page loaded
+does it replace `bbmri-eric`'s evidence, screenshot and row, then rebuild
+`results.md`, `index.html` and `results.csv` from the stored rows. A failed
+fetch changes nothing (add `--accept-error` to record it anyway). It prints each
+point's old and new verdict, and both reports gain an **Updated rows** banner
+naming the node, the date and the previous URL. The run id and time in the
+header stay those of the original run. To reuse the evidence from step 2
+instead of fetching again, copy it into `results/evidence/` and run
+`uv run basic-check assess --update-results-for-node bbmri-eric`, which is
+offline. To see the outcome before touching the reviewed run, try it on a copy
+first: `cp -r results /tmp/copy` and add `--results /tmp/copy`. For a completely
+fresh table instead, follow path B of example 1 step 4.
 
 **Why the order matters.** `assess` labels each row with the URL in
 `nodes.yaml`, but takes the verdicts from the evidence on disk. Between step 1

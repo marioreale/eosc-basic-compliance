@@ -156,6 +156,40 @@ def _freshness_note(run: dict) -> str:
     )
 
 
+def _row_updates_note(run: dict) -> str:
+    """A sentence naming rows replaced with --update-results-for-node, or "".
+
+    Those rows are newer than the run timestamp in the header, and the other rows
+    were not re-judged, so the table no longer comes from a single pass. Plain
+    text, like _skipped_note. One clause per node, for its latest update.
+    """
+    updates = run.get("row_updates") or []
+    if not updates:
+        return ""
+    latest: dict[str, dict] = {}
+    for u in updates:
+        latest[u["id"]] = u
+    parts = []
+    for u in latest.values():
+        prev = u.get("previous") or {}
+        was = ""
+        if prev.get("url") and prev["url"] != u.get("url"):
+            was = f", previously {prev['url']}"
+        parts.append(
+            f"{u['id']} on {u.get('updated_at', '')[:10]} from {u.get('url', '')}"
+            f"{was} (captured {(u.get('fetched_at') or '')[:10] or 'date unknown'}; "
+            f"{u.get('how', 'updated')})"
+        )
+    one = len(latest) == 1
+    return (
+        ("This row was" if one else "These rows were")
+        + " updated after the run with --update-results-for-node: "
+        + "; ".join(parts)
+        + f". Every other row is as stored from run {run.get('run_id', '')} and was "
+        "neither re-fetched nor re-judged, so it reflects the tool as it was then."
+    )
+
+
 def _skipped_note(run: dict) -> str:
     """A sentence naming the nodes --skip left out of this run, or "".
 
@@ -444,6 +478,12 @@ def render_html(run: dict, out: Path) -> Path:
     freshness_block = (
         f'\n<div class="banner">{html.escape(fresh)}</div>\n' if fresh else ""
     )
+    updated = _row_updates_note(run)
+    if updated:
+        freshness_block += (
+            f'\n<div class="banner"><strong>Updated rows.</strong> '
+            f"{html.escape(updated)}</div>\n"
+        )
     skipped = _skipped_note(run)
     if skipped:
         freshness_block += (
@@ -887,6 +927,7 @@ def render_markdown(run: dict, out: Path) -> Path:
         f"**Node names.** {_names_sentence(run)}",
         "",
         *([f"> {_freshness_note(run)}", ""] if _freshness_note(run) else []),
+        *([f"> **Updated rows.** {_row_updates_note(run)}", ""] if _row_updates_note(run) else []),
         *([f"> **Skipped by request.** {_skipped_note(run)}", ""] if _skipped_note(run) else []),
         *(
             [f"> **Evidence from a different URL.** {_url_mismatch_note(run)}", ""]

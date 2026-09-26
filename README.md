@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 390
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 412
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -224,6 +224,8 @@ nodes; `assess`, `points` and `show` work offline.
 | `--skip <ids or names>` | Leave these nodes out entirely: not fetched, not assessed, not in the report, which says they were skipped. An id or a name (`eosc-it`, `Italy`, `EOSC Node Italy`), in any case; comma-separated or repeated. A value that matches no node, or more than one, is an error. |
 | `--url <url>` | Check a page that is not in `nodes.yaml`. Repeatable. Writes to `results/one-off/`, so the published run is never overwritten. Cannot be combined with `--only` or `--skip`. With `--node`, the alternative landing page to check for that node. |
 | `--node <id or name>` | Check one configured node at an alternative landing page given with `--url`: every point, with the node's own id, name, `eosc_page` and approved name, but the page fetched from `--url`. `nodes.yaml` is not changed. Writes to `results/one-off/` (or a `--results` folder other than `results/`), and the report says the URL is not the configured one. Cannot be combined with `--only` or `--skip`. |
+| `--update-results-for-node <id or name>` | `run` and `assess` only. Re-check one node and update only its row in the stored results, keeping every other row as it is: `run` fetches that one page again, `assess` re-judges its saved evidence offline. Refuses if the checklist or approved-name options differ from the stored run's. See [Updating one node's row](#updating-one-nodes-row---update-results-for-node). |
+| `--accept-error` | With `--update-results-for-node` on `run`: merge the row even if the page could not be fetched. Without it a failed fetch changes nothing. |
 | `--eosc-page <url>` | With a single `--url`: the node's own `eosc.eu` page, so a point 4 failure names the exact missing link. With `--node` it replaces that node's configured `eosc_page`. |
 
 **How much to fetch** (`collect`, `run`)
@@ -291,6 +293,14 @@ uv run basic-check --show-node bbmri-eric
 
 # Change a node's landing page URL in nodes.yaml (a local edit; commit it yourself)
 uv run basic-check --update-nlp bbmri-eric https://new.example.org/eosc-node/
+
+# Re-check one node and update only its row in the stored results (fetches one site);
+# the other rows are kept as they are. Try it on a copy of results/ first.
+cp -r results /tmp/copy
+uv run basic-check run --update-results-for-node bbmri-eric --results /tmp/copy
+
+# The same from the evidence already saved, offline
+uv run basic-check assess --update-results-for-node bbmri-eric --results /tmp/copy
 
 # BBMRI-ERIC at an alternative landing page, nodes.yaml unchanged
 uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node-bbmri-eric/
@@ -376,6 +386,8 @@ command for the three changes that come up most:
    `basic-check --update-nlp <node id> <URL>` makes that edit for you.
    Until that node is collected again, `assess` warns, and both reports carry an
    "Evidence from a different URL" banner.
+   `basic-check run --update-results-for-node <node>` then re-checks that node
+   alone and updates only its row in the results.
 3. **Moving to a new revision of the checklist.** There is no URL to change: the
    tool never downloads the checklist. Commit the new document, add a
    `checklist/vX.Y.yaml` for it, and change the one line `DEFAULT_CHECKLIST` in
@@ -429,6 +441,32 @@ git-ignored for the same reason.
 
 `--url` cannot be combined with `--only`: `--only` filters ids in the nodes file,
 and an ad hoc URL has no id there.
+
+### Updating one node's row: `--update-results-for-node`
+
+`--update-results-for-node NODE`, on `run` and `assess`, updates one node's row
+in stored results and keeps every other row. The stored `results.json` is the
+memory: its rows are copied as they are, the named node alone is checked again,
+its row is replaced in place (or inserted in `nodes.yaml` order, if the stored
+run skipped it), and `results.md`, `index.html` and `results.csv` are rebuilt.
+With `run`, the node's page is fetched again into a scratch directory, and its
+evidence and screenshot in the results directory are replaced only if the page
+loaded; `--accept-error` records a failed fetch anyway. With `assess`, the
+evidence already in `results/evidence/` is judged again, offline. It refuses
+when there are no stored results, when the checklist or the approved-name
+options differ from the ones the stored results record (a row judged by other
+rules would not be comparable with the rest), and together with `--only`,
+`--skip`, `--url`, `--node`, `--eosc-page` or `--run`. `results.json` keeps
+the original `run_id` and time, gains `updated_at`, and lists every update under
+`row_updates` with the node's previous URL, capture time and verdicts. Both
+reports carry an **Updated rows** banner. The default directory is `results/`,
+the reviewed run, so pass `--results /tmp/copy` on a copy first.
+
+```bash
+cp -r results /tmp/copy
+uv run basic-check run --update-results-for-node bbmri-eric --results /tmp/copy
+uv run basic-check show bbmri-eric --results /tmp/copy
+```
 
 ### Checking a node at an alternative URL: `--node`
 
@@ -529,7 +567,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 390 tests, a few seconds, no network, no browser
+uv run pytest -q          # 412 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

@@ -4,8 +4,8 @@ What the test suite covers, how the tool is configured, and what the published
 figures actually say. Every figure was measured on 25 September 2026 against
 a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
-clean clone of commit `4c5dea7`, which added `--update-nlp`:
-**390 test cases, all passing in CI**. No node website was contacted to prepare
+clean clone of commit `4c5dea7`, which added `--update-results-for-node`:
+**412 test cases, all passing in CI**. No node website was contacted to prepare
 this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -15,7 +15,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 390 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.0*, with a pytest suite of 412 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -23,7 +23,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **390 cases** and gained three files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (13 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **412 cases** and gained four files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (13 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking) and `tests/test_update_row.py` (22 cases, updating one node's row). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -62,9 +62,9 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**312 test functions, expanding to 390 executed cases** (eighteen tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**328 test functions, expanding to 412 executed cases** (twenty tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
-The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 390 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
+The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 412 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
@@ -76,7 +76,8 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_checklist.py` | 15 | Provenance of the checklist: source document hash for every committed revision, point-to-rule mapping, version/filename convention, and that the default revision is one line that `--help` follows |
 | `test_nodes.py` | 13 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list |
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
-| **Total** | **390** | |
+| `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
+| **Total** | **412** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -305,6 +306,8 @@ Only `collect` and `run` need a browser or network access. `points`, `assess`, `
 | `--no-approved-names` | assess run | false | Use no name list at all, not even the committed default |
 | `--strict-separators` | assess run | false | Match the separator glyphs in an approved name literally |
 | `--run` | assess run | timestamp | Label for the run, recorded in every report |
+| `--update-results-for-node` | assess run | — | One node (id or name): re-check it and replace only its row in the stored `results.json`, keeping every other row; `run` fetches that page again, `assess` re-judges saved evidence offline |
+| `--accept-error` | run | false | With `--update-results-for-node`: merge the row even if the page could not be fetched |
 | `--one-off` | show | false | Read `results/one-off/` instead of `results/` |
 | `--list-nodes`, `--list-nodes-ids` | `basic-check` alone | — | Node ids in `nodes.yaml`, one per line; two names for one option |
 | `--list-nlps` | `basic-check` alone | — | Each node id with its Node Landing Page URL |
@@ -320,6 +323,8 @@ Note that `--max-children` is on `collect` but not on `run`, so a combined run u
 `--list-nodes-ids` is a second name for `--list-nodes`. `--show-node NODE` prints one node's `--print-config` row under the same header, taking an id or a name in any case, as `--skip` does. Ten more cases cover them: that the two listing names print identical output; that `--show-node` prints exactly each configured node's row, and nothing else; five spellings of one node (`eosc-it`, `EOSC-IT`, `Italy`, `EOSC Node Italy`, ` italy `); that an unknown value is an error listing the ids and an ambiguous one an error; and that `--show-node` is refused together with a command.
 
 `--update-nlp NODE_ID URL` is the one option that writes: it changes a node's `url:` line in `nodes.yaml`. Its eleven cases each work on a copy of `nodes.yaml` in a temporary directory, so the suite never edits the real file. They check that only that node's `url` changes, with every other field and comment kept and one dated comment added; that `--show-node` then shows the new URL; that giving the current URL changes nothing; that a name instead of an id, a non-https, relative or space-containing URL, and another node's URL are all refused with the file unchanged; that both values are required and a command is refused; and that a `url:` value split over two lines is refused rather than edited.
+
+`--update-results-for-node NODE` is covered by the twenty-two cases of `tests/test_update_row.py`, all on a copy of the committed `results/` in a temporary directory, with the collector replaced by a stand-in, so no site is contacted and `results/` is never written. They check that only the named row changes and every other row stays identical, that the reports gain one **Updated rows** line and nothing else, that `run` collects exactly one node into a scratch directory and replaces its evidence and screenshot, that a failed fetch leaves the directory byte-identical unless `--accept-error` is given, that a node the stored run skipped is inserted in `nodes.yaml` order, that stale evidence from another URL is still flagged, and the refusals: no stored results, a different checklist, three different approved-name settings, an unknown node, an alternative-URL trial, and five conflicting options on both commands.
 
 ### Exit codes
 
@@ -572,7 +577,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 390 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 412 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -657,7 +662,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 390 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 412 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -1022,21 +1027,26 @@ Check that the page actually loaded before going further. On 25 September the
 ten points were `ERROR`. A result like that is not worth publishing: ask the
 node for its public address, or for the checker to be allowed, and stop there.
 
-**Step 3: replace that node's evidence in the published run.** Reuse the trial
-evidence rather than fetching the page again:
+**Step 3: update that node's row in the published run.** Only BBMRI-ERIC is
+fetched again; the other rows are copied from `results/results.json` as they
+are, neither re-fetched nor re-judged:
 
 ```bash
-cp /tmp/trial/evidence/bbmri-eric.json results/evidence/
-cp /tmp/trial/evidence/screenshots/bbmri-eric.png results/evidence/screenshots/
-uv run basic-check assess --only bbmri-eric --skip Italy \
-    --run live-2026-10-01-new-bbmri-url
+uv run basic-check run --update-results-for-node bbmri-eric
 ```
 
-If the new capture has no screenshot, because the page could not be rendered,
-delete `results/evidence/screenshots/bbmri-eric.png` rather than keep the old
-page's image. The report covers every node, with a **Mixed freshness** banner
-naming `bbmri-eric` as the only row fetched again. For a completely fresh table
-instead, follow path B of example 1 step 4.
+That fetches the one page into a scratch directory, and only if the page loaded
+does it replace `bbmri-eric`'s evidence, screenshot and row, then rebuild
+`results.md`, `index.html` and `results.csv` from the stored rows. A failed
+fetch changes nothing (add `--accept-error` to record it anyway). It prints each
+point's old and new verdict, and both reports gain an **Updated rows** banner
+naming the node, the date and the previous URL. The run id and time in the
+header stay those of the original run. To reuse the evidence from step 2
+instead of fetching again, copy it into `results/evidence/` and run
+`uv run basic-check assess --update-results-for-node bbmri-eric`, which is
+offline. To see the outcome before touching the reviewed run, try it on a copy
+first: `cp -r results /tmp/copy` and add `--results /tmp/copy`. For a completely
+fresh table instead, follow path B of example 1 step 4.
 
 **Why the order matters.** `assess` labels each row with the URL in
 `nodes.yaml`, but takes the verdicts from the evidence on disk. Between step 1

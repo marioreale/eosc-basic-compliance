@@ -107,13 +107,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-390 tests still pass, while `collect` fails with Playwright's
+412 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 390 passed
+uv run pytest -q                  # expect: 412 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -174,7 +174,9 @@ URL that is not absolute https, one that is already another node's landing
 page, and an unknown id, and it prints the old and new URL. It contacts no site,
 commits nothing and leaves `results/` alone; check the change with
 `git diff nodes.yaml` and commit it yourself.
- Then collect that node again, into a scratch
+To re-check only that node and update only its row in the results, keeping the
+others, use `run --update-results-for-node` (section 4). To look first without
+changing anything published, collect it into a scratch
 directory first, so you can see what the new page gives before anything
 published changes:
 
@@ -740,6 +742,47 @@ overwritten, and the report carries a banner saying it is not a federation run.
 That banner matters: these reports circulate before a production decision, and a
 stray single-page file that looks official is a genuine hazard.
 
+### Updating one node's row: `--update-results-for-node`
+
+After a node's URL changes, or when one node's page has been fixed, there is no
+need to re-check the whole federation. `--update-results-for-node NODE`, on
+`run` and `assess`, re-checks that node alone and replaces only its row. The
+stored `results.json` in the results directory is the memory: every other row
+is copied from it as it is, neither re-fetched nor re-judged.
+
+| Command | What it does |
+|---|---|
+| `run --update-results-for-node NODE` | Fetches that one page again, into a scratch directory. Only if the page loaded does it replace the node's evidence and screenshot, and its row. `--accept-error` merges a failed fetch too. |
+| `assess --update-results-for-node NODE` | Judges the node's evidence already in `evidence/` again. Offline. |
+
+Either way, `results.md`, `index.html` and `results.csv` are rebuilt from the
+stored rows, and the command prints each point's old and new verdict. `NODE` is
+an id or a name, in any case. A node the stored run skipped is inserted where
+`nodes.yaml` puts it and removed from the skipped list. The run id and time in
+the header stay those of the original run; `results.json` gains `updated_at`
+and a `row_updates` list with the node's previous URL, capture time and
+verdicts, and both reports carry an **Updated rows** banner saying which row is
+newer and that the others were not re-judged.
+
+It refuses, and changes nothing, when:
+
+- the results directory holds no `results.json`, or holds an alternative-URL
+  trial (`--node`);
+- the checklist is not the one the stored results were assessed with, or the
+  approved-name options (`--approved-names`, `--no-approved-names`,
+  `--strict-separators`) differ from theirs. One row judged by other rules would
+  not be comparable with the rest; run the whole federation again instead;
+- it is combined with `--only`, `--skip`, `--url`, `--node`, `--eosc-page` or
+  `--run`.
+
+The default directory is `results/`, the reviewed run. Try it on a copy first:
+
+```bash
+cp -r results /tmp/copy
+uv run basic-check run --update-results-for-node bbmri-eric --results /tmp/copy
+uv run basic-check show bbmri-eric --results /tmp/copy
+```
+
 ### Checking a node at an alternative URL
 
 To run every test against one configured node at a landing page other than the
@@ -959,7 +1002,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 390 tests, offline, a few seconds
+uv run pytest -q                    # 412 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -970,12 +1013,13 @@ uv run ruff check src tests         # lint
 |---|---|---|
 | `test_checklist.py` | 15 | The transcription matches the source document, including its SHA-256 for every committed revision, the scoped name list agrees with the official one, and switching `DEFAULT_CHECKLIST` carries the help texts with it. |
 | `test_checks.py` | 75 | The verdict logic, point by point, including the render gate, the EOSC-asset token rule, that a point 3 summary never denies having a name list it was given, and that a link merely labelled "support" does not settle point 6. |
-| `test_cli.py` | 50 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, that `--help` stays complete, and that evidence from another URL than the configured one is flagged. |
+| `test_cli.py` | 101 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, that `--help` stays complete, and that evidence from another URL than the configured one is flagged. |
 | `test_crawl.py` | 35 | Link selection, including policy words found only in a hyphenated address, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 13 | `nodes.yaml` itself: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
 | `test_privacy.py` | 51 | Personal-data masking: personal addresses and phone numbers masked, role mailboxes kept, the name beside an address masked but not a title or an acronym, that both the evidence files and every report format are written masked, and that the committed evidence stays masked. |
 | `test_report.py` | 36 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
+| `test_update_row.py` | 22 | `--update-results-for-node`, on a copy of the committed `results/`: only the named row changes, the reports gain one **Updated rows** line, `run` collects exactly one node, a failed fetch changes nothing unless `--accept-error`, a skipped node is inserted in `nodes.yaml` order, and every refusal. |
 
 The suite makes no network requests and needs no browser, which is why CI runs
 it without downloading Chromium.
@@ -1321,21 +1365,26 @@ Check that the page actually loaded before going further. On 25 September the
 ten points were `ERROR`. A result like that is not worth publishing: ask the
 node for its public address, or for the checker to be allowed, and stop there.
 
-**Step 3: replace that node's evidence in the published run.** Reuse the trial
-evidence rather than fetching the page again:
+**Step 3: update that node's row in the published run.** Only BBMRI-ERIC is
+fetched again; the other rows are copied from `results/results.json` as they
+are, neither re-fetched nor re-judged:
 
 ```bash
-cp /tmp/trial/evidence/bbmri-eric.json results/evidence/
-cp /tmp/trial/evidence/screenshots/bbmri-eric.png results/evidence/screenshots/
-uv run basic-check assess --only bbmri-eric --skip Italy \
-    --run live-2026-10-01-new-bbmri-url
+uv run basic-check run --update-results-for-node bbmri-eric
 ```
 
-If the new capture has no screenshot, because the page could not be rendered,
-delete `results/evidence/screenshots/bbmri-eric.png` rather than keep the old
-page's image. The report covers every node, with a **Mixed freshness** banner
-naming `bbmri-eric` as the only row fetched again. For a completely fresh table
-instead, follow path B of example 1 step 4.
+That fetches the one page into a scratch directory, and only if the page loaded
+does it replace `bbmri-eric`'s evidence, screenshot and row, then rebuild
+`results.md`, `index.html` and `results.csv` from the stored rows. A failed
+fetch changes nothing (add `--accept-error` to record it anyway). It prints each
+point's old and new verdict, and both reports gain an **Updated rows** banner
+naming the node, the date and the previous URL. The run id and time in the
+header stay those of the original run. To reuse the evidence from step 2
+instead of fetching again, copy it into `results/evidence/` and run
+`uv run basic-check assess --update-results-for-node bbmri-eric`, which is
+offline. To see the outcome before touching the reviewed run, try it on a copy
+first: `cp -r results /tmp/copy` and add `--results /tmp/copy`. For a completely
+fresh table instead, follow path B of example 1 step 4.
 
 **Why the order matters.** `assess` labels each row with the URL in
 `nodes.yaml`, but takes the verdicts from the evidence on disk. Between step 1

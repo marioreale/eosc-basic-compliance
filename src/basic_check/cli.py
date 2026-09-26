@@ -6,6 +6,8 @@ import asyncio
 import hashlib
 import json
 import re
+import shutil
+import tempfile
 from dataclasses import asdict
 from datetime import UTC, datetime
 from pathlib import Path
@@ -183,6 +185,20 @@ H_UPDATE_NLP = (
     "node id and the new absolute https URL. Only that node's url: line changes, "
     "with a dated comment recording the old URL; nothing is fetched, committed, "
     "or changed in results/."
+)
+H_UPDATE_ROW = (
+    "Update one node's row in the stored results and leave every other row as it "
+    "is. The stored results.json in --results is the memory: that node is checked "
+    "again, its row replaced, and results.md, index.html and results.csv rebuilt "
+    "from the stored rows. With run, the node's page is fetched again (one site); "
+    "with assess, its evidence already on disk is re-judged, offline. Node id or "
+    "name. The checklist and approved-name list must be the ones the stored "
+    "results used."
+)
+H_ACCEPT_ERROR = (
+    "With --update-results-for-node on run: merge the new row even when the page "
+    "could not be fetched. Without it, a failed fetch changes nothing: the stored "
+    "row and evidence stay, and the failed capture is kept for inspection."
 )
 H_PRINT_CONFIG = (
     "Print a table with one row per node: id, Node Landing Page URL and "
@@ -680,6 +696,18 @@ def _load_nodes(path: Path, only: str = "") -> list[dict]:
     return nodes
 
 
+def _refuse_with_update(value: str, **given: object) -> None:
+    """--update-results-for-node names its one node itself and writes into the
+    stored results; options that select other nodes or another run conflict."""
+    if not value.strip():
+        return
+    clash = [name for name, v in given.items() if v]
+    if clash:
+        raise typer.BadParameter(
+            f"--update-results-for-node cannot be combined with {', '.join(clash)}"
+        )
+
+
 @app.command()
 def collect(
     nodes_file: Path = typer.Option(
@@ -822,6 +850,9 @@ def assess(
         help=H_STRICT_SEPARATORS,
     ),
     run_id: str = typer.Option("", "--run", help=H_RUN),
+    update_row: str = typer.Option(
+        "", "--update-results-for-node", metavar="NODE", help=H_UPDATE_ROW
+    ),
 ):
     """Apply the checklist to already-collected evidence and write the reports.
 
@@ -829,6 +860,16 @@ def assess(
     and index.html. Row headings come from the node list, so after changing a
     node's URL, rebuild an old run with --nodes pointing at the old list.
     """
+    _refuse_with_update(
+        update_row, **{"--only": only, "--skip": skip, "--url": url, "--node": node,
+                       "--eosc-page": eosc_page, "--run": run_id},
+    )
+    if update_row.strip():
+        _update_results_for_node(
+            update_row, results_dir, nodes_file, checklist_file, approved_names,
+            no_approved_names, strict_separators, fetch=False,
+        )
+        return
     _fetched, reported, resolved = _resolve(
         url, nodes_file, only, results_dir, eosc_page, skip, node
     )
@@ -905,6 +946,81 @@ def _resolve_names(
         return ApprovedNames(), "", False, ""
 
 
+def _node_entry(node: dict, evidence_dir: Path, names: ApprovedNames) -> tuple[dict, dict | None]:
+    """One node's row of results.json, assessed from its evidence file, and its
+    url_mismatch record (or None). Shared by a full assess and by
+    --update-results-for-node, so a replaced row is built exactly like the rest."""
+    ev = load_evidence(evidence_dir, node["id"])
+    # The row is labelled with the URL from the nodes file, but its verdicts
+    # come from the evidence. After a URL change, and before the node is
+    # collected again, the two describe different pages. Said out loud,
+    # because otherwise the report shows the new address above verdicts it
+    # never produced.
+    mismatch = None
+    if ev.requested_url and ev.requested_url != node["url"]:
+        mismatch = {
+            "id": node["id"],
+            "configured_url": node["url"],
+            "evidence_url": ev.requested_url,
+            "fetched_at": ev.fetched_at,
+        }
+    results = checks.run_all(ev, names, node.get('eosc_page', ''))
+    # When the capture went two hops deep, also assess it as if it had not,
+    # so the report can show what the second hop changed rather than
+    # asserting it was worth it.
+    shallow_results = None
+    if ev.crawl_depth >= 2:
+        shallow_results = checks.run_all(
+            without_depth_2(ev), names, node.get('eosc_page', '')
+        )
+    entry = (
+        {
+            "id": node["id"],
+            "name": node["name"],
+            "url": node["url"],
+            "ad_hoc": node.get("ad_hoc", False),
+            **(
+                {"configured_url": node["configured_url"]}
+                if node.get("configured_url")
+                else {}
+            ),
+            "fetch": {
+                "http_status": ev.http_status,
+                "final_url": ev.final_url,
+                "fetched_at": ev.fetched_at,
+                "error": ev.error,
+                "robots_note": ev.robots_note,
+                "screenshot": ev.screenshot,
+                "crawl_depth": ev.crawl_depth,
+                "crawl_note": ev.crawl_note,
+                "children": [
+                    {
+                        "url": c.url,
+                        "final_url": c.final_url,
+                        "depth": c.depth,
+                        "parent_url": c.parent_url,
+                        "selected_for": c.selected_for,
+                        "link_text": c.link_text,
+                        "http_status": c.http_status,
+                        "title": c.title,
+                        "chars": len(c.main_text),
+                        "error": c.error,
+                    }
+                    for c in ev.children
+                ],
+                "children_skipped": ev.children_skipped,
+            },
+            "results": [asdict(r) for r in results],
+            **(
+                {"results_depth_1": [asdict(r) for r in shallow_results]}
+                if shallow_results is not None
+                else {}
+            ),
+        }
+    )
+    return entry, mismatch
+
+
 def _do_assess(
     nodes: list[dict],
     results_dir: Path,
@@ -969,75 +1085,10 @@ def _do_assess(
         if not path.exists():
             missing.append(node["id"])
             continue
-        ev = load_evidence(evidence_dir, node["id"])
-        # The row is labelled with the URL from the nodes file, but its verdicts
-        # come from the evidence. After a URL change, and before the node is
-        # collected again, the two describe different pages. Said out loud,
-        # because otherwise the report shows the new address above verdicts it
-        # never produced.
-        if ev.requested_url and ev.requested_url != node["url"]:
-            url_mismatch.append(
-                {
-                    "id": node["id"],
-                    "configured_url": node["url"],
-                    "evidence_url": ev.requested_url,
-                    "fetched_at": ev.fetched_at,
-                }
-            )
-        results = checks.run_all(ev, names, node.get('eosc_page', ''))
-        # When the capture went two hops deep, also assess it as if it had not,
-        # so the report can show what the second hop changed rather than
-        # asserting it was worth it.
-        shallow_results = None
-        if ev.crawl_depth >= 2:
-            shallow_results = checks.run_all(
-                without_depth_2(ev), names, node.get('eosc_page', '')
-            )
-        run["nodes"].append(
-            {
-                "id": node["id"],
-                "name": node["name"],
-                "url": node["url"],
-                "ad_hoc": node.get("ad_hoc", False),
-                **(
-                    {"configured_url": node["configured_url"]}
-                    if node.get("configured_url")
-                    else {}
-                ),
-                "fetch": {
-                    "http_status": ev.http_status,
-                    "final_url": ev.final_url,
-                    "fetched_at": ev.fetched_at,
-                    "error": ev.error,
-                    "robots_note": ev.robots_note,
-                    "screenshot": ev.screenshot,
-                    "crawl_depth": ev.crawl_depth,
-                    "crawl_note": ev.crawl_note,
-                    "children": [
-                        {
-                            "url": c.url,
-                            "final_url": c.final_url,
-                            "depth": c.depth,
-                            "parent_url": c.parent_url,
-                            "selected_for": c.selected_for,
-                            "link_text": c.link_text,
-                            "http_status": c.http_status,
-                            "title": c.title,
-                            "chars": len(c.main_text),
-                            "error": c.error,
-                        }
-                        for c in ev.children
-                    ],
-                    "children_skipped": ev.children_skipped,
-                },
-                "results": [asdict(r) for r in results],
-                **(
-                    {"results_depth_1": [asdict(r) for r in shallow_results]}
-                    if shallow_results is not None
-                    else {}
-                ),
-            }
-        )
+        entry, mismatch = _node_entry(node, evidence_dir, names)
+        if mismatch:
+            url_mismatch.append(mismatch)
+        run["nodes"].append(entry)
 
     for a in alternative:
         typer.secho(
@@ -1087,6 +1138,185 @@ def _do_assess(
     if missing:
         raise typer.Exit(2)
     return run
+
+
+def _verdicts(entry: dict | None) -> dict[str, str]:
+    return {r["point_id"]: r["verdict"] for r in (entry or {}).get("results", [])}
+
+
+def _fetch_failed(ev) -> bool:
+    """True when the capture did not load a page: an error, or no 2xx/3xx status."""
+    status = ev.http_status or 0
+    return bool(ev.error) or not 200 <= status < 400
+
+
+def _update_results_for_node(
+    value: str,
+    results_dir: Path | None,
+    nodes_file: Path,
+    checklist_file: Path,
+    approved_names: Path | None,
+    no_approved_names: bool,
+    strict_separators: bool,
+    fetch: bool,
+    delay: float = 2.0,
+    depth: int = 1,
+    fetch_budget: int = DEFAULT_FETCH_BUDGET,
+    accept_error: bool = False,
+) -> dict:
+    """Replace one node's row in the stored results.json and rebuild the reports.
+
+    Every other row is copied from the stored file as it is: not re-fetched and
+    not re-judged. That is only sound when the replaced row is judged by the same
+    rules, so the checklist and the approved-name list must match the ones the
+    stored results record; otherwise this refuses and a full run is needed.
+    With fetch=True (run) the page is collected into a scratch directory first,
+    and the evidence in the results directory changes only if the merge goes ahead.
+    """
+    results_dir = results_dir if results_dir is not None else DEFAULT_RESULTS
+    opt = "--update-results-for-node"
+    stored_path = results_dir / "results.json"
+    try:
+        stored = json.loads(stored_path.read_text(encoding="utf-8"))
+        stored["nodes"]
+    except (OSError, ValueError, KeyError, TypeError):
+        raise typer.BadParameter(
+            f"{opt}: no stored results to update in {_rel(stored_path)}. Run a full "
+            "run into that directory first; this option updates one row of it."
+        ) from None
+    if stored.get("alternative_url"):
+        raise typer.BadParameter(
+            f"{opt}: {_rel(stored_path)} is an alternative-URL trial (--node), not "
+            "a federation run, so it has no rows to keep"
+        )
+
+    configured = _load_nodes(nodes_file)
+    hits = [n for n in configured if value.strip().casefold() in _node_keys(n)]
+    if len(hits) != 1:
+        known = ", ".join(n["id"] for n in configured)
+        what = "no node matches" if not hits else "more than one node matches"
+        raise typer.BadParameter(f"{opt}: {what} {value!r}. Ids are: {known}")
+    node = hits[0]
+    node_id = node["id"]
+
+    checklist = yaml.safe_load(checklist_file.read_text())
+    if checklist != stored.get("checklist"):
+        raise typer.BadParameter(
+            f"{opt}: {_rel(checklist_file)} is not the checklist the stored results "
+            f"were assessed with ({stored.get('checklist', {}).get('checklist_version', '?')}"
+            "). One row judged by other rules would not be comparable with the rest; "
+            "run the whole federation again instead."
+        )
+    names, names_source, default_used, names_sha256 = _resolve_names(
+        approved_names, no_approved_names, strict_separators
+    )
+    was = stored.get("approved_names") or {}
+    same_names = (
+        names.supplied == was.get("supplied", False)
+        and names_sha256 == was.get("sha256", "")
+        and names.scoped == was.get("scoped", False)
+        and names.strict_separators == was.get("strict_separators", False)
+    )
+    if not same_names:
+        raise typer.BadParameter(
+            f"{opt}: the approved-name list differs from the one the stored results "
+            f"used ({was.get('source') or 'none'}"
+            f"{', strict separators' if was.get('strict_separators') else ''}). Pass "
+            "the same --approved-names / --no-approved-names / --strict-separators "
+            "as that run, or run the whole federation again."
+        )
+
+    evidence_dir = results_dir / "evidence"
+    if fetch:
+        staging = Path(tempfile.mkdtemp(prefix=f"basic-check-{node_id}-"))
+        _do_collect([node], staging, delay, depth, MAX_CHILDREN, fetch_budget)
+        staged = staging / "evidence"
+        ev = load_evidence(staged, node_id)
+        if _fetch_failed(ev) and not accept_error:
+            typer.secho(
+                f"\n  {node_id}: the page could not be fetched "
+                f"(status {ev.http_status or 'none'}{'; ' + ev.error if ev.error else ''}).\n"
+                f"  Nothing was changed in {_rel(results_dir)}. The failed capture is in "
+                f"{staged}.\n  Add --accept-error to record the failure as the node's row.",
+                fg=typer.colors.RED,
+            )
+            raise typer.Exit(1)
+        (evidence_dir / "screenshots").mkdir(parents=True, exist_ok=True)
+        shutil.copy2(staged / f"{node_id}.json", evidence_dir / f"{node_id}.json")
+        old_shot = evidence_dir / "screenshots" / f"{node_id}.png"
+        new_shot = staged / "screenshots" / f"{node_id}.png"
+        if ev.screenshot and new_shot.exists():
+            shutil.copy2(new_shot, old_shot)
+        elif old_shot.exists():
+            # A screenshot of the previous page must not stand beside the new row.
+            old_shot.unlink()
+        shutil.rmtree(staging, ignore_errors=True)
+    elif not (evidence_dir / f"{node_id}.json").exists():
+        raise typer.BadParameter(
+            f"{opt}: no evidence for {node_id} in {_rel(evidence_dir)}; use run "
+            "instead of assess to fetch it"
+        )
+
+    entry, mismatch = _node_entry(node, evidence_dir, names)
+    rows = stored["nodes"]
+    ids = [r["id"] for r in rows]
+    previous = rows[ids.index(node_id)] if node_id in ids else None
+    if previous is not None:
+        rows[ids.index(node_id)] = entry
+    else:
+        # A node the stored run skipped or had no evidence for: insert it where
+        # nodes.yaml puts it, relative to the rows already there.
+        order = [n["id"] for n in configured]
+        later = order[order.index(node_id) + 1:]
+        at = next((i for i, r in enumerate(rows) if r["id"] in later), len(rows))
+        rows.insert(at, entry)
+
+    for key in ("skipped", "missing_evidence"):
+        if node_id in (stored.get(key) or []):
+            stored[key] = [i for i in stored[key] if i != node_id]
+            if key == "missing_evidence" and not stored[key]:
+                del stored[key]
+    mismatches = [m for m in stored.get("url_mismatch", []) if m["id"] != node_id]
+    mismatches += [mismatch] if mismatch else []
+    if mismatches:
+        stored["url_mismatch"] = mismatches
+    else:
+        stored.pop("url_mismatch", None)
+
+    now = datetime.now(UTC).isoformat(timespec="seconds")
+    stored["updated_at"] = now
+    stored.setdefault("row_updates", []).append(
+        {
+            "id": node_id,
+            "updated_at": now,
+            "how": "run (re-fetched)" if fetch else "assess (stored evidence re-judged)",
+            "url": node["url"],
+            "fetched_at": entry["fetch"]["fetched_at"],
+            "previous": (
+                {
+                    "url": previous.get("url", ""),
+                    "fetched_at": (previous.get("fetch") or {}).get("fetched_at", ""),
+                    "verdicts": _verdicts(previous),
+                }
+                if previous is not None
+                else None
+            ),
+        }
+    )
+
+    paths = report.write_all(stored, results_dir)
+    before, after = _verdicts(previous), _verdicts(entry)
+    typer.echo(
+        f"\nUpdated the {node_id} row in {_rel(stored_path)}; the other "
+        f"{len(rows) - 1} row(s) are as stored (run {stored.get('run_id', '?')})."
+    )
+    for pid, verdict in after.items():
+        old = before.get(pid, "-")
+        mark = "" if old == verdict else "   <- changed"
+        typer.echo(f"  {pid:4} {old:14} -> {verdict}{mark}")
+    for kind, path in paths.items():
+        typer.echo(f"  {kind:5} {path}")
+    return stored
 
 
 @app.command()
@@ -1140,11 +1370,28 @@ def run(
         min=0,
         help=H_FETCH_BUDGET,
     ),
+    update_row: str = typer.Option(
+        "", "--update-results-for-node", metavar="NODE", help=H_UPDATE_ROW
+    ),
+    accept_error: bool = typer.Option(False, "--accept-error", help=H_ACCEPT_ERROR),
 ):
     """collect, then assess, in one go. Contacts the nodes.
 
     Takes the options of both, except --max-children (always 8 here).
     """
+    _refuse_with_update(
+        update_row, **{"--only": only, "--skip": skip, "--url": url, "--node": node,
+                       "--eosc-page": eosc_page, "--run": run_id},
+    )
+    if accept_error and not update_row.strip():
+        raise typer.BadParameter("--accept-error is only used with --update-results-for-node")
+    if update_row.strip():
+        _update_results_for_node(
+            update_row, results_dir, nodes_file, checklist_file, approved_names,
+            no_approved_names, strict_separators, fetch=True, delay=delay, depth=depth,
+            fetch_budget=fetch_budget, accept_error=accept_error,
+        )
+        return
     # Resolve once so both phases agree on the node list and the directory.
     nodes, reported, resolved = _resolve(
         url, nodes_file, only, results_dir, eosc_page, skip, node
