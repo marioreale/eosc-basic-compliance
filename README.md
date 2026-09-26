@@ -28,7 +28,7 @@ running, step by step: the collection sequence, the evidence model, and the exac
 conditions behind each of the ten checklist points.
 ([Word](docs/eosc-basic-compliance-analysis-workflow.docx) · [PDF](docs/eosc-basic-compliance-analysis-workflow.pdf))
 
-The Word and PDF copies are built from the Markdown guides at commit `ee12687`.
+The Word and PDF copies are built from the Markdown guides at commit `678b75e`.
 The Markdown is the source, so if the two differ, the Markdown is current.
 
 👉 **[Latest results](results/results.md)** · [browsable HTML report](results/index.html)

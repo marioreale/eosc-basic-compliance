@@ -4,7 +4,7 @@ What the test suite covers, how the tool is configured, and what the published
 figures actually say. Every figure was measured on 25 September 2026 against
 a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
-clean clone of commit `ee12687` (checklist v3.1, run `web-5` published):
+clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
 **426 test cases, all passing in CI**. No node website was contacted to prepare
 this edition.
 
