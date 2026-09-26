@@ -925,7 +925,9 @@ uv run basic-check assess --only eosc-example --skip Italy \
 The report covers every node. A **Mixed freshness** banner says that only
 `eosc-example` is new and that the other rows are reused from the earlier
 capture, with its date. `--skip Italy` keeps the same scope as the published
-run; drop it once Italy's page can be collected.
+run. Italy's URL changed on 26 September to
+`https://eoscnode-it.d4science.org/`; drop `--skip Italy` once a trial
+collection (`collect --only eosc-it --results /tmp/trial`) shows the page loads.
 
 *B — a complete new run (every node contacted once).* Use this when the
 existing evidence is old enough that a single timestamp is worth more than

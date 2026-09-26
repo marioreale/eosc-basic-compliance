@@ -157,7 +157,8 @@ def test_a_failed_fetch_changes_nothing_unless_accepted(stored, monkeypatch):
 
 
 def test_a_node_the_run_skipped_is_inserted_in_nodes_yaml_order(stored, monkeypatch):
-    italy = _egi_evidence(stored, requested_url="https://eosc.it/", final_url="https://eosc.it/")
+    url = "https://eoscnode-it.d4science.org/"
+    italy = _egi_evidence(stored, requested_url=url, final_url=url)
     italy["screenshot"] = "eosc-it.png"
     _fake_collect(italy, monkeypatch)
     res = _invoke("run", "--update-results-for-node", "Italy", "--results", str(stored))

@@ -159,6 +159,12 @@ host's `robots.txt` excludes every path. `nodes.yaml` carries a comment saying
 so. The published run in `results/` was collected on 24 September from this
 `www.` address, so the configuration and the published evidence agree again.
 
+**EOSC Node Italy's URL changed on 26 September 2026**, from `https://eosc.it/`
+to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
+saying so. `eosc.it` had no address record on 24 September, so the published run
+skipped Italy and holds no evidence for it; nothing published depends on the old
+address. Italy's first result will come from the next collection.
+
 ### Changing a node's URL
 
 Change `url` in `nodes.yaml` and run `uv run pytest -q`. Nothing else in the
@@ -214,7 +220,8 @@ the configured page. The address finally reached, after redirects, is kept as
 `final_url` in the evidence file.
 
 To rebuild the published run, assess it with the node list it was collected
-with. Since 26 September that is again the committed `nodes.yaml`, so a bare
+with. Since 26 September the committed `nodes.yaml` differs from it only in
+Italy's URL, and Italy is skipped, so a bare
 `uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy` gives no
 warning. The command below names that list explicitly, and stays right if
 `nodes.yaml` changes again:
@@ -1273,7 +1280,9 @@ uv run basic-check assess --only eosc-example --skip Italy \
 The report covers every node. A **Mixed freshness** banner says that only
 `eosc-example` is new and that the other rows are reused from the earlier
 capture, with its date. `--skip Italy` keeps the same scope as the published
-run; drop it once Italy's page can be collected.
+run. Italy's URL changed on 26 September to
+`https://eoscnode-it.d4science.org/`; drop `--skip Italy` once a trial
+collection (`collect --only eosc-it --results /tmp/trial`) shows the page loads.
 
 *B — a complete new run (every node contacted once).* Use this when the
 existing evidence is old enough that a single timestamp is worth more than

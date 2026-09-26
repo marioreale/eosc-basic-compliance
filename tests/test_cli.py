@@ -917,7 +917,7 @@ def test_update_nlp_result_is_what_the_listings_show(nodes_copy):
 
 def test_update_nlp_to_the_current_url_changes_nothing(nodes_copy):
     text = nodes_copy.read_text(encoding="utf-8")
-    res = _invoke("--update-nlp", "eosc-it", "https://eosc.it/")
+    res = _invoke("--update-nlp", "eosc-it", "https://eoscnode-it.d4science.org/")
     assert res.exit_code == 0 and "not changed" in res.output
     assert nodes_copy.read_text(encoding="utf-8") == text
 
@@ -930,7 +930,7 @@ def test_update_nlp_to_the_current_url_changes_nothing(nodes_copy):
         (["egi", "http://x.example/"], "absolute https URL"),
         (["egi", "x.example/page"], "absolute https URL"),
         (["egi", "https://x.example/a b"], "absolute https URL"),
-        (["egi", "https://eosc.it"], "already the landing page of eosc-it"),
+        (["egi", "https://eoscnode-it.d4science.org"], "already the landing page of eosc-it"),
     ],
 )
 def test_update_nlp_refuses_bad_input_and_leaves_the_file_alone(nodes_copy, args, message):

@@ -191,7 +191,7 @@ nodes:
 
 You can also point at an entirely different file without editing the default: `--nodes /path/to/my-nodes.yaml`, available on `collect`, `assess` and `run`. That is the clean way to keep a separate candidate-node list alongside the production one.
 
-**Changing a URL.** BBMRI-ERIC's `url` changed on 25 September 2026, from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, and was set back to the `www.` address on 26 September; the entry carries a comment saying so. `assess` takes each node's URL from `nodes.yaml` and its verdicts from the evidence on disk. So while the `dev3.` address was configured, a bare `assess` headed BBMRI-ERIC's row with it, above verdicts taken from the old page. It says so: it compares the configured URL with the `requested_url` in the evidence, prints a warning, puts an **Evidence from a different URL** banner in `results.md` and `index.html`, and records the pair under `url_mismatch` in `results.json`. To rebuild the published run, assess it with the node list it was collected with; since 26 September that is again the committed `nodes.yaml`. The command below names that list explicitly and stays right if `nodes.yaml` changes again. It gives no warning, and reproduces the committed `results/` exactly, apart from the generation time:
+**Changing a URL.** BBMRI-ERIC's `url` changed on 25 September 2026, from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, and was set back to the `www.` address on 26 September; the entry carries a comment saying so. `assess` takes each node's URL from `nodes.yaml` and its verdicts from the evidence on disk. So while the `dev3.` address was configured, a bare `assess` headed BBMRI-ERIC's row with it, above verdicts taken from the old page. It says so: it compares the configured URL with the `requested_url` in the evidence, prints a warning, puts an **Evidence from a different URL** banner in `results.md` and `index.html`, and records the pair under `url_mismatch` in `results.json`. To rebuild the published run, assess it with the node list it was collected with; since 26 September the committed `nodes.yaml` differs from it only in Italy's URL, which the skipped Italy row never uses. The command below names that list explicitly and stays right if `nodes.yaml` changes again. It gives no warning, and reproduces the committed `results/` exactly, apart from the generation time:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
@@ -199,6 +199,8 @@ uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy --nodes /t
 ```
 
 The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean. The step-by-step procedure for a URL change, through to new published results, is example 2 in section 11.
+
+EOSC Node Italy's `url` changed on 26 September 2026, from `https://eosc.it/` to `https://eoscnode-it.d4science.org/`, and the entry carries a comment saying so. The published run skipped Italy, because `eosc.it` had no address record on 24 September, so it holds no evidence for Italy and no published row depends on the old address.
 
 ### Adding a node
 
@@ -985,7 +987,9 @@ uv run basic-check assess --only eosc-example --skip Italy \
 The report covers every node. A **Mixed freshness** banner says that only
 `eosc-example` is new and that the other rows are reused from the earlier
 capture, with its date. `--skip Italy` keeps the same scope as the published
-run; drop it once Italy's page can be collected.
+run. Italy's URL changed on 26 September to
+`https://eoscnode-it.d4science.org/`; drop `--skip Italy` once a trial
+collection (`collect --only eosc-it --results /tmp/trial`) shows the page loads.
 
 *B — a complete new run (every node contacted once).* Use this when the
 existing evidence is old enough that a single timestamp is worth more than

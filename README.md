@@ -41,7 +41,9 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > Node Italy was skipped by request (`--skip Italy`): on 24 September 2026
 > `eosc.it` had no A or AAAA record and `www.eosc.it` did not resolve. The report
 > says so in a "Skipped by request" banner. Italy is not counted as missing
-> evidence, and it does not appear in any count below.
+> evidence, and it does not appear in any count below. On 26 September its URL in
+> `nodes.yaml` was changed to `https://eoscnode-it.d4science.org/`; it will be
+> assessed from the next collection.
 
 Twelve landing pages, all fetched 24 September 2026 at `--depth 1`, all
 `HTTP 200` to an anonymous request. Run `live-2026-09-24-no-italy`, assessed
