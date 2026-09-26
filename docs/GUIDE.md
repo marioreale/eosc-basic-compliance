@@ -8,7 +8,7 @@ every verdict.
 This guide covers installing it, configuring it for your own nodes, running it,
 reading what comes out, and running the test suite. This edition was checked
 against a clean clone of commit `ada1b4a` on 25 September 2026, and the test
-count again at commit `5701f9e` on 26 September 2026. Every command
+count again at commit `51a5332` on 26 September 2026. Every command
 that needs no network — installation, the test suite, `points`, `assess` and
 the rebuild of the published report — was re-run that day, and the test counts,
 disk sizes and verdict tallies were re-measured rather than carried over. No
@@ -554,19 +554,20 @@ uv run basic-check --list-approved-names    # id and approved name
 uv run basic-check --print-config           # all three in one table
 ```
 
-`--print-config` prints:
+`--print-config` prints one row per node, in `nodes.yaml` order, as plain
+aligned columns (shortened here):
 
-```text
-Node id     Node Landing Page URL                                   Approved name
-----------  ------------------------------------------------------  ------------------------
-bbmri-eric  https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/        EOSC Node | BBMRI-ERIC
-cern        https://eosc-auth.cern.ch/login                         EOSC Node | CERN
-…
-eosc-sk     https://eosc.sk/                                        EOSC Node | Slovakia
+| Node id | Node Landing Page URL | Approved name |
+|---|---|---|
+| `bbmri-eric` | `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/` | EOSC Node \| BBMRI-ERIC |
+| `cern` | `https://eosc-auth.cern.ch/login` | EOSC Node \| CERN |
+| … | … | … |
+| `eosc-sk` | `https://eosc.sk/` | EOSC Node \| Slovakia |
 
-13 node(s). Ids and URLs from nodes.yaml; approved names from checklist/approved-names-scoped.txt.
-assess and run use checklist/approved-names.txt by default: the same names, unscoped, so each counts for every node.
-```
+followed by two lines naming the files: *13 node(s). Ids and URLs from
+nodes.yaml; approved names from checklist/approved-names-scoped.txt." and
+"assess and run use checklist/approved-names.txt by default: the same names,
+unscoped, so each counts for every node."
 
 The approved name next to each id comes from
 `checklist/approved-names-scoped.txt`, the copy of the official list that ties
