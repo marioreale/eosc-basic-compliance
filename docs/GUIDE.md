@@ -107,13 +107,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-339 tests still pass, while `collect` fails with Playwright's
+357 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 339 passed
+uv run pytest -q                  # expect: 357 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -563,8 +563,9 @@ accept the option.
 |---|---|
 | `--only a,b` | Restrict which nodes are **fetched**. The report still covers all of them — see below. |
 | `--skip a,b` | Leave these nodes out entirely: not fetched, not assessed, not in the report, which says so. Id or name, comma-separated or repeated — see below. |
-| `--url https://…` | Check any page without editing `nodes.yaml`. Repeatable. |
-| `--eosc-page URL` | With a single `--url`: that node's own `eosc.eu` page, so a point 4 failure can name the exact URL that is missing. |
+| `--url https://…` | Check any page without editing `nodes.yaml`. Repeatable. With `--node`, the alternative page for that node. |
+| `--node id` | Check one configured node at the alternative landing page given with `--url`, keeping its id, name and `eosc_page`. See below. |
+| `--eosc-page URL` | With a single `--url`: that node's own `eosc.eu` page, so a point 4 failure can name the exact URL that is missing. With `--node`, replaces that node's configured one. |
 | `--nodes path` | Use a different node list. |
 
 **Assessment and output:**
@@ -673,6 +674,38 @@ Ad hoc checks write to `results/one-off/` so a published run is never
 overwritten, and the report carries a banner saying it is not a federation run.
 That banner matters: these reports circulate before a production decision, and a
 stray single-page file that looks official is a genuine hazard.
+
+### Checking a node at an alternative URL
+
+To run every test against one configured node at a landing page other than the
+one in `nodes.yaml`, give the node with `--node` and the page with `--url`:
+
+```bash
+uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node-bbmri-eric/
+uv run basic-check show bbmri-eric --one-off
+```
+
+The node keeps its id, name and `eosc_page`, so its scoped approved name
+applies to point 3 and point 4 looks for its own `eosc.eu` page; only the page
+fetched changes, and `nodes.yaml` is not edited. `--node` takes an id or a name
+in any case, as `--skip` does.
+
+| Rule | Why |
+|---|---|
+| Exactly one `--url` | It is the alternative page for that one node. Without `--url`, use `--only` to check the node at its configured page. |
+| Not with `--only` or `--skip` | The run is already one node; either would be ignored or contradict it. |
+| Writes to `results/one-off/`, or another `--results` folder | `--results results/` is refused: the evidence file is named after the node id and would replace the reviewed evidence. |
+| `--eosc-page` replaces the node's `eosc.eu` page | For a trial of a changed registration as well as a changed page. |
+
+The reports are titled **Alternative URL check (not a federation run)** and
+carry an **Alternative URL, not a federation run** banner naming both
+addresses; `results.json` records the pair under `alternative_url`, each node
+record keeps `configured_url`, and `show` prints both. If the same evidence is
+later assessed without `--node`, the usual **Evidence from a different URL**
+warning appears, so it cannot pass as the configured page.
+
+This is the way to try a node's new address before changing `nodes.yaml`
+([example 2](#example-2--changing-a-nodes-landing-page-url) in section 11).
 
 ---
 
@@ -861,7 +894,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 339 tests, offline, a few seconds
+uv run pytest -q                    # 357 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth

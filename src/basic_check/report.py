@@ -174,6 +174,30 @@ def _skipped_note(run: dict) -> str:
     )
 
 
+def _alternative_url_note(run: dict) -> str:
+    """A sentence naming nodes checked with --node at a page other than their
+    configured one, or "".
+
+    Such a row keeps the node's id and name, so without this it would read as
+    the node's assessment. Plain text, like _skipped_note.
+    """
+    alternative = run.get("alternative_url") or []
+    if not alternative:
+        return ""
+    parts = [
+        f"{a['id']} was checked at {a['url']}, not at its configured landing page "
+        f"{a['configured_url']}"
+        for a in alternative
+    ]
+    one = len(alternative) == 1
+    return (
+        "; ".join(parts)
+        + ". This is a trial of an alternative URL requested with --node, not "
+        + ("the node's" if one else "those nodes'")
+        + " assessment at the registered page, and it should not be quoted as one."
+    )
+
+
 def _url_mismatch_note(run: dict) -> str:
     """A sentence naming nodes whose evidence came from another URL, or "".
 
@@ -425,6 +449,12 @@ def render_html(run: dict, out: Path) -> Path:
         freshness_block += (
             f'\n<div class="banner"><strong>Skipped by request.</strong> '
             f"{html.escape(skipped)}</div>\n"
+        )
+    alternative = _alternative_url_note(run)
+    if alternative:
+        freshness_block += (
+            f'\n<div class="adhoc"><strong>Alternative URL, not a federation run.</strong> '
+            f"{html.escape(alternative)}</div>\n"
         )
     mismatch = _url_mismatch_note(run)
     if mismatch:
@@ -830,11 +860,16 @@ def render_markdown(run: dict, out: Path) -> Path:
     title = "EOSC Node Landing Page compliance"
     if ad_hoc and len(ad_hoc) == len(run["nodes"]):
         title = "Ad hoc page check (not a federation run)"
+    alternative = run.get("alternative_url") or []
+    if alternative and len(alternative) == len(run["nodes"]):
+        title = "Alternative URL check (not a federation run)"
 
     lines = [
         f"# {title} — checklist v{run['checklist']['checklist_version']}",
         "",
     ]
+    if alternative:
+        lines += [f"> **Alternative URL, not a federation run.** {_alternative_url_note(run)}", ""]
     if ad_hoc:
         lines += [
             "> **Ad hoc check, not a federation run.** "

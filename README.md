@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 339
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 357
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -211,8 +211,9 @@ nodes; `assess`, `points` and `show` work offline.
 | `--nodes`, `-n <path>` | A node list to use instead of `nodes.yaml`: a separate list of candidate nodes, or the list an old run was collected with, to rebuild it. |
 | `--only <ids>` | Fetch only these nodes, as comma-separated ids (`egi,eudat`). Ids only, not names. Writing to `results/`, the report still covers every node and marks which were fetched again; with `--results DIR` it covers only these. |
 | `--skip <ids or names>` | Leave these nodes out entirely: not fetched, not assessed, not in the report, which says they were skipped. An id or a name (`eosc-it`, `Italy`, `EOSC Node Italy`), in any case; comma-separated or repeated. A value that matches no node, or more than one, is an error. |
-| `--url <url>` | Check a page that is not in `nodes.yaml`. Repeatable. Writes to `results/one-off/`, so the published run is never overwritten. Cannot be combined with `--only` or `--skip`. |
-| `--eosc-page <url>` | With a single `--url`: the node's own `eosc.eu` page, so a point 4 failure names the exact missing link. |
+| `--url <url>` | Check a page that is not in `nodes.yaml`. Repeatable. Writes to `results/one-off/`, so the published run is never overwritten. Cannot be combined with `--only` or `--skip`. With `--node`, the alternative landing page to check for that node. |
+| `--node <id or name>` | Check one configured node at an alternative landing page given with `--url`: every point, with the node's own id, name, `eosc_page` and approved name, but the page fetched from `--url`. `nodes.yaml` is not changed. Writes to `results/one-off/` (or a `--results` folder other than `results/`), and the report says the URL is not the configured one. Cannot be combined with `--only` or `--skip`. |
+| `--eosc-page <url>` | With a single `--url`: the node's own `eosc.eu` page, so a point 4 failure names the exact missing link. With `--node` it replaces that node's configured `eosc_page`. |
 
 **How much to fetch** (`collect`, `run`)
 
@@ -238,7 +239,7 @@ nodes; `assess`, `points` and `show` work offline.
 | Option | Commands | What it's for |
 |---|---|---|
 | `--results <path>` | `collect`, `assess`, `run`, `show` | A folder to write to or read from instead of `results/`, for example `/tmp/trial` for a scratch run. |
-| `--one-off` | `show` | Read the `--url` results in `results/one-off/`. |
+| `--one-off` | `show` | Read the `--url` and `--node` results in `results/one-off/`. |
 
 **Node ids.** Each node's id is the `id:` field in `nodes.yaml`, and
 `basic-check --help` prints the current list:
@@ -270,6 +271,9 @@ uv run basic-check assess --only eosc-cz --results /tmp/trial
 
 # One node's results from the published run
 uv run basic-check show geant
+
+# BBMRI-ERIC at an alternative landing page, nodes.yaml unchanged
+uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node-bbmri-eric/
 ```
 
 ### Adding a node
@@ -358,6 +362,30 @@ git-ignored for the same reason.
 `--url` cannot be combined with `--only`: `--only` filters ids in the nodes file,
 and an ad hoc URL has no id there.
 
+### Checking a node at an alternative URL: `--node`
+
+To run every test against one configured node, but at a landing page other than
+the one in `nodes.yaml`, name the node with `--node` and the page with `--url`:
+
+```bash
+uv run basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node-bbmri-eric/
+uv run basic-check show bbmri-eric --one-off
+```
+
+Unlike a bare `--url`, the node keeps its own id, name and `eosc_page`, so its
+scoped approved name applies to point 3 and point 4 looks for its own `eosc.eu`
+page. Only the page fetched changes; `nodes.yaml` is not touched. `--node`
+takes an id or a name in any case (`bbmri-eric`, `BBMRI-ERIC`), needs exactly
+one `--url`, and cannot be combined with `--only` or `--skip`. Add
+`--eosc-page` to replace the node's `eosc.eu` page as well.
+
+Results go to `results/one-off/`, or to another folder named with `--results`;
+`--results results/` is refused, because the evidence file is named after the
+node and would replace the reviewed evidence. The reports are titled
+**"Alternative URL check (not a federation run)"**, carry an **Alternative URL,
+not a federation run** banner naming both addresses, and `results.json` lists
+the pair under `alternative_url`.
+
 `--only` narrows which sites are contacted, not what the report covers: a subset
 run still writes a row for every configured node, reusing evidence on disk for the ones it did not
 re-fetch, and labels itself **Mixed freshness** so the reused rows are not taken
@@ -433,7 +461,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 339 tests, a few seconds, no network, no browser
+uv run pytest -q          # 357 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

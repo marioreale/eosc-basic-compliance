@@ -521,3 +521,159 @@ def test_evidence_from_the_configured_url_adds_no_warning(tmp_path):
     assert "different URL" not in res.output
     assert "url_mismatch" not in json.loads((out / "results.json").read_text())
     assert "Evidence from a different URL" not in (out / "results.md").read_text()
+
+
+# --- --node: one configured node at an alternative landing page URL -----------
+
+ALT = "https://alt.example.org/eosc-node-bbmri-eric/"
+
+
+def test_node_keeps_the_configured_identity_but_fetches_the_alternative_url():
+    """The point of --node over a bare --url: the id, name and eosc_page stay the
+    node's own, so its scoped approved name applies and the row is comparable
+    with the federation run. Only the page fetched changes."""
+    import yaml
+
+    configured = {
+        n["id"]: n for n in yaml.safe_load(cli.DEFAULT_NODES.read_text())["nodes"]
+    }["bbmri-eric"]
+    fetched, reported, out = cli._resolve([ALT], cli.DEFAULT_NODES, "", None, node="bbmri-eric")
+    assert fetched == reported
+    (n,) = fetched
+    assert n["id"] == "bbmri-eric" and n["name"] == configured["name"]
+    assert n["url"] == ALT
+    assert n["configured_url"] == configured["url"]
+    assert n["eosc_page"] == configured["eosc_page"]
+    assert not n.get("ad_hoc")
+    assert out == cli.DEFAULT_ONEOFF
+
+
+@pytest.mark.parametrize("value", ["bbmri-eric", "BBMRI-ERIC", "bbmri-ERIC"])
+def test_node_accepts_an_id_or_name_in_any_case(value):
+    (n,), _, _ = cli._resolve([ALT], cli.DEFAULT_NODES, "", None, node=value)
+    assert n["id"] == "bbmri-eric"
+
+
+def test_node_with_eosc_page_replaces_the_configured_one():
+    page = "https://eosc.eu/building-the-eosc-federation/eosc-node-x/"
+    (n,), _, _ = cli._resolve([ALT], cli.DEFAULT_NODES, "", None, page, node="bbmri-eric")
+    assert n["eosc_page"] == page
+    assert n["configured_eosc_page"].endswith("/eosc-node-bbmri-eric/")
+
+
+def test_node_never_writes_into_the_published_results_dir():
+    """The evidence file is named after the node id: writing into results/ would
+    replace the reviewed evidence for that node with a page that is not its
+    registered one. Refused, not silently redirected."""
+    with pytest.raises(typer.BadParameter, match="published run"):
+        cli._resolve([ALT], cli.DEFAULT_NODES, "", cli.DEFAULT_RESULTS, node="bbmri-eric")
+
+
+def test_node_honours_another_explicit_results_dir(tmp_path):
+    _, _, out = cli._resolve([ALT], cli.DEFAULT_NODES, "", tmp_path, node="bbmri-eric")
+    assert out == tmp_path
+
+
+@pytest.mark.parametrize(
+    ("urls", "only", "skip", "match"),
+    [
+        ([], "", None, "exactly one --url"),
+        ([ALT, "https://b.example/"], "", None, "exactly one --url"),
+        ([ALT], "egi", None, "drop --only"),
+        ([ALT], "", ["Italy"], "--skip"),
+        (["alt.example.org/x"], "", None, "absolute http"),
+    ],
+    ids=["no-url", "two-urls", "with-only", "with-skip", "not-a-url"],
+)
+def test_node_rejects_combinations_it_cannot_honour(urls, only, skip, match):
+    with pytest.raises(typer.BadParameter, match=match):
+        cli._resolve(urls, cli.DEFAULT_NODES, only, None, skip=skip, node="bbmri-eric")
+
+
+def test_an_unknown_node_is_rejected_and_the_ids_are_listed():
+    with pytest.raises(typer.BadParameter, match="ids are: .*bbmri-eric"):
+        cli._resolve([ALT], cli.DEFAULT_NODES, "", None, node="no-such-node")
+
+
+def test_an_ambiguous_node_is_rejected(tmp_path):
+    nodes = tmp_path / "nodes.yaml"
+    nodes.write_text(
+        "nodes:\n"
+        "  - {id: a, name: EOSC Node Twin, url: 'https://a.example/', eosc_page: ''}\n"
+        "  - {id: b, name: Twin, url: 'https://b.example/', eosc_page: ''}\n"
+    )
+    with pytest.raises(typer.BadParameter, match="more than one node"):
+        cli._resolve([ALT], nodes, "", None, node="Twin")
+
+
+@pytest.mark.parametrize("command", ["collect", "run"])
+def test_collect_and_run_with_node_fetch_only_the_alternative_page(monkeypatch, tmp_path, command):
+    """Nothing is sent to the configured URL or to any other node."""
+    seen = {}
+    monkeypatch.setattr(cli, "_do_collect", lambda nodes, out, *a, **k: seen.update(nodes=nodes, out=out))
+    monkeypatch.setattr(cli, "_do_assess", lambda *a, **k: None)
+    res = CliRunner().invoke(
+        cli.app,
+        [command, "--node", "bbmri-eric", "--url", ALT, "--results", str(tmp_path)],
+        catch_exceptions=False,
+    )
+    assert res.exit_code == 0, res.output
+    assert [(n["id"], n["url"]) for n in seen["nodes"]] == [("bbmri-eric", ALT)]
+    assert seen["out"] == tmp_path
+
+
+def test_a_node_run_says_in_every_report_that_the_url_is_not_the_configured_one(tmp_path):
+    """The row keeps the node's id and name, so without a banner it would read as
+    the node's assessment at its registered page."""
+    import json
+
+    import yaml
+
+    configured = {
+        n["id"]: n for n in yaml.safe_load(cli.DEFAULT_NODES.read_text())["nodes"]
+    }["egi"]["url"]
+    alt = "https://alt.example.org/egi-node/"
+    out = tmp_path / "trial"
+    (out / "evidence").mkdir(parents=True)
+    ev = json.loads((cli.ROOT / "results" / "evidence" / "egi.json").read_text())
+    ev["requested_url"] = alt
+    (out / "evidence" / "egi.json").write_text(json.dumps(ev))
+
+    res = CliRunner().invoke(
+        cli.app,
+        ["assess", "--node", "egi", "--url", alt, "--results", str(out)],
+        catch_exceptions=False,
+    )
+    assert res.exit_code == 0, res.output
+    assert "alternative URL" in res.output and "different URL" not in res.output
+    data = json.loads((out / "results.json").read_text())
+    assert data["alternative_url"] == [{"id": "egi", "configured_url": configured, "url": alt}]
+    (node,) = data["nodes"]
+    assert (node["id"], node["url"], node["configured_url"]) == ("egi", alt, configured)
+    assert "url_mismatch" not in data
+    for name in ("results.md", "index.html"):
+        text = (out / name).read_text()
+        assert "Alternative URL, not a federation run." in text, name
+        assert alt in text and configured in text, name
+    assert (out / "results.md").read_text().startswith("# Alternative URL check (not a federation run)")
+
+    shown = CliRunner().invoke(cli.app, ["show", "egi", "--results", str(out)])
+    assert shown.exit_code == 0 and f"configured: {configured}" in shown.output
+
+
+def test_assessing_node_evidence_at_the_configured_url_still_flags_the_mismatch(tmp_path):
+    """Evidence collected with --node, then assessed without it, must not be
+    labelled as the configured page: the existing URL-mismatch warning covers it."""
+    import json
+
+    out = tmp_path / "trial"
+    (out / "evidence").mkdir(parents=True)
+    ev = json.loads((cli.ROOT / "results" / "evidence" / "egi.json").read_text())
+    ev["requested_url"] = "https://alt.example.org/egi-node/"
+    (out / "evidence" / "egi.json").write_text(json.dumps(ev))
+    res = CliRunner().invoke(
+        cli.app, ["assess", "--only", "egi", "--results", str(out)], catch_exceptions=False
+    )
+    assert res.exit_code == 0, res.output
+    assert "different URL" in res.output
+    assert "alternative_url" not in json.loads((out / "results.json").read_text())

@@ -78,11 +78,20 @@ H_SKIP = (
 H_URL = (
     "Check this URL directly, without adding it to nodes.yaml. Repeatable. "
     "Writes to results/one-off/ so a published run is never overwritten. "
-    "Cannot be combined with --only or --skip."
+    "Cannot be combined with --only or --skip. With --node, the alternative "
+    "landing page to check for that node."
 )
 H_EOSC_PAGE = (
     "With a single --url: the node's own eosc.eu page, so a point 4 failure "
-    "can name the exact URL that is missing."
+    "can name the exact URL that is missing. With --node it replaces that "
+    "node's configured eosc_page."
+)
+H_NODE = (
+    "Check one configured node at an alternative landing page URL, given with "
+    "--url: every point, with the node's id, name, eosc_page and approved name, "
+    "but the page fetched from --url. nodes.yaml is not changed. Node id or name, "
+    "as for --skip. Writes to results/one-off/ (or a --results DIR other than "
+    "results/) and the report says the URL is not the configured one."
 )
 H_DELAY = "Seconds to wait between hosts, to go easy on the servers."
 H_DEPTH = (
@@ -130,6 +139,7 @@ EPILOG = (
     "basic-check run --skip eosc-it,bbmri-eric --depth 0 --results /tmp/trial\n\n"
     "basic-check assess --only eosc-cz --results /tmp/trial   (offline)\n\n"
     "basic-check run --url https://example.org/eosc-node/\n\n"
+    "basic-check run --node bbmri-eric --url https://alt.example.org/eosc-node/\n\n"
     "basic-check show geant\n\n"
     "Only collect and run contact the nodes; assess, points and show never do. "
     "Full reference: README.md, section Command-line options."
@@ -192,6 +202,7 @@ def _resolve(
     results_dir: Path | None,
     eosc_page: str = "",
     skip: list[str] | None = None,
+    node: str = "",
 ) -> tuple[list[dict], list[dict], Path]:
     """Decide what to fetch, what to report on, and where to write it.
 
@@ -220,6 +231,9 @@ def _resolve(
     """
     urls = [u for u in (urls or []) if u.strip()]
     skip_values = _split_values(skip)
+    if node.strip():
+        alt = _node_at_url(nodes_file, node.strip(), urls, only, skip_values, eosc_page)
+        return [alt], [alt], _alternative_results_dir(results_dir)
     if urls:
         if only:
             raise typer.BadParameter(
@@ -244,6 +258,80 @@ def _resolve(
         if not selected:
             raise typer.BadParameter("--skip leaves nothing left to check")
     return selected, reported, (results_dir if results_dir is not None else DEFAULT_RESULTS)
+
+
+def _node_at_url(
+    nodes_file: Path,
+    node: str,
+    urls: list[str],
+    only: str,
+    skip_values: list[str],
+    eosc_page: str,
+) -> dict:
+    """The configured record of one node, with its landing page URL replaced.
+
+    For checking a node at a page other than the registered one — a candidate
+    new address, a staging copy, a mirror — without editing nodes.yaml. Unlike a
+    bare --url, the node keeps its id, so its scoped approved name, its eosc_page
+    and its evidence file name all still apply, and the result is comparable
+    with the node's row in the federation run.
+
+    The configured URL is kept on the record, so the report can say that this
+    is not the registered page. Every ambiguity is an error rather than a
+    guess, because a wrong guess would fetch a page the user did not ask for.
+    """
+    if only:
+        raise typer.BadParameter("--node already selects the node; drop --only")
+    if skip_values:
+        raise typer.BadParameter("--node checks a single node; it cannot be combined with --skip")
+    if len(urls) != 1:
+        raise typer.BadParameter(
+            "--node needs exactly one --url, the alternative landing page to check"
+            + (f" (got {len(urls)})" if urls else "")
+            + ". To check the node at its configured URL, use --only instead."
+        )
+    (url,) = urls
+    url = url.strip()
+    parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https") or not parsed.netloc:
+        raise typer.BadParameter(f"--url must be an absolute http(s) URL, got {url!r}")
+    nodes = _load_nodes(nodes_file)
+    hits = [n for n in nodes if node.casefold() in _node_keys(n)]
+    if not hits:
+        known = ", ".join(n["id"] for n in nodes)
+        raise typer.BadParameter(
+            f"--node: no node matches {node!r}. Use a node id or name; ids are: {known}"
+        )
+    if len(hits) > 1:
+        raise typer.BadParameter(
+            f"--node {node!r} matches more than one node "
+            f"({', '.join(n['id'] for n in hits)}); use the id"
+        )
+    record = dict(hits[0])
+    record["configured_url"] = record["url"]
+    record["url"] = url
+    if eosc_page:
+        record["configured_eosc_page"] = record.get("eosc_page", "")
+        record["eosc_page"] = eosc_page
+    return record
+
+
+def _alternative_results_dir(results_dir: Path | None) -> Path:
+    """Where a --node run writes. Never the published results/.
+
+    The evidence file is named after the node id, so writing a --node run into
+    results/ would overwrite the reviewed evidence for that node with a page
+    that is not its registered one. Refused outright, not merely defaulted away.
+    """
+    if results_dir is None:
+        return DEFAULT_ONEOFF
+    if results_dir.resolve() == DEFAULT_RESULTS.resolve():
+        raise typer.BadParameter(
+            "--node would overwrite the published run in results/ with a page that is "
+            "not the node's configured one. Drop --results (results/one-off/ is used) "
+            "or name another folder."
+        )
+    return results_dir
 
 
 def _split_values(values: list[str] | None) -> list[str]:
@@ -336,6 +424,7 @@ def collect(
         help=H_URL,
     ),
     eosc_page: str = typer.Option("", "--eosc-page", help=H_EOSC_PAGE),
+    node: str = typer.Option("", "--node", help=H_NODE),
     delay: float = typer.Option(2.0, "--delay", help=H_DELAY),
     depth: int = typer.Option(
         1,
@@ -359,7 +448,9 @@ def collect(
     Depth 1 by default. Evidence goes to results/evidence/ (or --results DIR),
     with personal data masked. Nothing is judged here; run assess afterwards.
     """
-    nodes, _reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
+    nodes, _reported, resolved = _resolve(
+        url, nodes_file, only, results_dir, eosc_page, skip, node
+    )
     _do_collect(nodes, resolved, delay, depth, max_children, fetch_budget)
 
 
@@ -440,6 +531,7 @@ def assess(
         help=H_URL,
     ),
     eosc_page: str = typer.Option("", "--eosc-page", help=H_EOSC_PAGE),
+    node: str = typer.Option("", "--node", help=H_NODE),
     approved_names: Path | None = typer.Option(
         None,
         "--approved-names",
@@ -463,7 +555,9 @@ def assess(
     and index.html. Row headings come from the node list, so after changing a
     node's URL, rebuild an old run with --nodes pointing at the old list.
     """
-    _fetched, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
+    _fetched, reported, resolved = _resolve(
+        url, nodes_file, only, results_dir, eosc_page, skip, node
+    )
     _do_assess(
         reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
         strict_separators=strict_separators,
@@ -587,6 +681,15 @@ def _do_assess(
 
     missing: list[str] = []
     url_mismatch: list[dict] = []
+    # --node runs: the node was checked at a page other than its configured one,
+    # on purpose. Recorded so no report of it can pass for the node's assessment.
+    alternative = [
+        {"id": n["id"], "configured_url": n["configured_url"], "url": n["url"]}
+        for n in nodes
+        if n.get("configured_url")
+    ]
+    if alternative:
+        run["alternative_url"] = alternative
     for node in nodes:
         path = evidence_dir / f"{node['id']}.json"
         if not path.exists():
@@ -622,6 +725,11 @@ def _do_assess(
                 "name": node["name"],
                 "url": node["url"],
                 "ad_hoc": node.get("ad_hoc", False),
+                **(
+                    {"configured_url": node["configured_url"]}
+                    if node.get("configured_url")
+                    else {}
+                ),
                 "fetch": {
                     "http_status": ev.http_status,
                     "final_url": ev.final_url,
@@ -655,6 +763,14 @@ def _do_assess(
                     else {}
                 ),
             }
+        )
+
+    for a in alternative:
+        typer.secho(
+            f"\n  {a['id']} was checked at an alternative URL, not its configured one:\n"
+            f"    checked:    {a['url']}\n    configured: {a['configured_url']}\n"
+            "  The report says so; it is not the node's assessment at its registered page.",
+            fg=typer.colors.CYAN,
         )
 
     if url_mismatch:
@@ -717,6 +833,7 @@ def run(
         help=H_URL,
     ),
     eosc_page: str = typer.Option("", "--eosc-page", help=H_EOSC_PAGE),
+    node: str = typer.Option("", "--node", help=H_NODE),
     checklist_file: Path = typer.Option(
         DEFAULT_CHECKLIST, "--checklist", "-c", help=H_CHECKLIST,
         show_default=DEFAULT_CHECKLIST_LABEL,
@@ -755,7 +872,9 @@ def run(
     Takes the options of both, except --max-children (always 8 here).
     """
     # Resolve once so both phases agree on the node list and the directory.
-    nodes, reported, resolved = _resolve(url, nodes_file, only, results_dir, eosc_page, skip)
+    nodes, reported, resolved = _resolve(
+        url, nodes_file, only, results_dir, eosc_page, skip, node
+    )
     _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget)
     _do_assess(
         reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
@@ -796,7 +915,7 @@ def show(
         DEFAULT_RESULTS, "--results", help="Results folder to read.", show_default="results/"
     ),
     one_off: bool = typer.Option(
-        False, "--one-off", help="Read the --url results in results/one-off/ instead."
+        False, "--one-off", help="Read the --url or --node results in results/one-off/ instead."
     ),
 ):
     """Print one node's results from an existing run. Offline."""
@@ -806,6 +925,8 @@ def show(
     for node in data["nodes"]:
         if node["id"] == node_id:
             typer.echo(f"{node['name']} — {node['url']}")
+            if node.get("configured_url"):
+                typer.echo(f"  (alternative URL; configured: {node['configured_url']})")
             for res in node["results"]:
                 typer.echo(f"\n  [{res['verdict']}] {res['point_id']} {res['title']}")
                 typer.echo(f"      {' '.join(res['message'].split())}")
