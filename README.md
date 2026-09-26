@@ -16,10 +16,20 @@ follow one further hop under a fixed budget.
 
 👉 **[Installation, configuration and run guide](docs/GUIDE.md)** — start here if
 you want to install and run it yourself.
+([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
 👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 329
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
+([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
+
+👉 **[Analysis workflow](docs/ANALYSIS-WORKFLOW.md)** — what the tool does once
+running, step by step: the collection sequence, the evidence model, and the exact
+conditions behind each of the ten checklist points.
+([Word](docs/eosc-basic-compliance-analysis-workflow.docx) · [PDF](docs/eosc-basic-compliance-analysis-workflow.pdf))
+
+The Word and PDF copies are built from the Markdown guides at commit `fc841cc`.
+The Markdown is the source, so if the two differ, the Markdown is current.
 
 👉 **[Latest results](results/results.md)** · [browsable HTML report](results/index.html)
 · [checklist v3.0 explained](results/checklist-v3.0.html)
