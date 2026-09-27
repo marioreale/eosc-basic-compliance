@@ -479,8 +479,8 @@ Example 3 in section 11 gives every command, including publication and the remov
 Evidence files and all four report formats are written with personal data
 masked by `src/basic_check/privacy.py`. A personal email address keeps only its
 domain (`XXXXX@example.org`), and a phone number keeps only its international
-prefix (`+31 XXXXXX`). A labelled national number such as `tel. (09) 123 4567`
-becomes `tel. XXXXXX`, and a number whose spaces are written `%20` inside a
+prefix (`+CC XXXXXX`, where `CC` is the country code). A labelled national number
+of the form `tel. (NN) NNN NNNN` becomes `tel. XXXXXX`, and a number whose spaces are written `%20` inside a
 `tel:` link is masked too. A name is masked when it appears next to a masked
 address.
 Role mailboxes such as `support@`, `info@` and `it@helpdesk.…` are kept, because

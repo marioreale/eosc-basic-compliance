@@ -994,14 +994,18 @@ evidence file is masked before it is saved. When the reports are written, the
 run is masked again before any of the four formats is rendered, so a report
 rebuilt from evidence captured before masking existed is masked too.
 
+The table shows the shapes that are recognised, not real entries. `firstname`,
+`lastname` and `CC` (a country code) stand for whatever is on the page, and
+`N` for any digit.
+
 | Found on the page | Written as |
 |---|---|
-| `jane.doe@example.org`, `jane.doe [at] example.org` | `XXXXX@example.org`, `XXXXX [at] example.org` |
+| `firstname.lastname@example.org`, `firstname.lastname [at] example.org` | `XXXXX@example.org`, `XXXXX [at] example.org` |
 | `support@egi.eu`, `it@helpdesk.bbmri-eric.eu`, `geant@geant.org` | unchanged: role and organisation mailboxes |
-| `+31 20 123 4567`, `tel:0043316349917` | `+31 XXXXXX`, `tel:+43 XXXXXX` |
-| `tel:+31(0)20%20123456` (a space written `%20` inside a link) | `tel:+31 XXXXXX` |
-| `Tel.: 06 1234 5678`, `tel. (09) 123 4567` (no prefix, but labelled) | `Tel.: XXXXXX`, `tel. XXXXXX` |
-| `Mgr. Jana Nováková, novakova@…` | `Mgr. XXXXX XXXXX, XXXXX@…` |
+| `+CC NN NNN NNNN`, `tel:00CCNNNNNNNNN` (dialled with 00) | `+CC XXXXXX`, `tel:+CC XXXXXX` |
+| `tel:+CC(0)NN%20NNNNNN` (a space written `%20` inside a link) | `tel:+CC XXXXXX` |
+| `Tel.: NN NNNN NNNN`, `tel. (NN) NNN NNNN` (no prefix, but labelled) | `Tel.: XXXXXX`, `tel. XXXXXX` |
+| `Dr. Firstname Lastname, lastname@…` (a name next to the address) | `Dr. XXXXX XXXXX, XXXXX@…` |
 
 An address is kept only when it is recognisably a role, such as `support`, `info`,
 `helpdesk`, `csirt` or any mailbox under a `helpdesk.` host. Every other address

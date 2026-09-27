@@ -25,10 +25,10 @@ from basic_check.privacy import country_code, is_role_address, mask_data, mask_t
 @pytest.mark.parametrize(
     "text, expected",
     [
-        ("jane.doe@example.org", "XXXXX@example.org"),
-        ("mailto:jdoe@uni.example.cz", "mailto:XXXXX@uni.example.cz"),
-        ("write to jane.doe [at] example.org", "write to XXXXX [at] example.org"),
-        ("write to jane.doe(at)example.org", "write to XXXXX(at)example.org"),
+        ("firstname.lastname@example.org", "XXXXX@example.org"),
+        ("mailto:lastname@uni.example.cz", "mailto:XXXXX@uni.example.cz"),
+        ("write to firstname.lastname [at] example.org", "write to XXXXX [at] example.org"),
+        ("write to firstname.lastname(at)example.org", "write to XXXXX(at)example.org"),
     ],
 )
 def test_a_personal_address_keeps_only_its_domain(text, expected):
@@ -61,7 +61,7 @@ def test_a_role_mailbox_is_kept(address):
 def test_role_detection_reads_the_host_as_well_as_the_local_part():
     assert is_role_address("it", "helpdesk.bbmri-eric.eu")
     assert is_role_address("eudat.support", "example.org")
-    assert not is_role_address("jane.doe", "example.org")
+    assert not is_role_address("firstname.lastname", "example.org")
 
 
 def test_a_map_link_is_not_an_address():
@@ -71,7 +71,7 @@ def test_a_map_link_is_not_an_address():
 
 
 def test_masking_is_idempotent():
-    once = mask_text("Jane Doe, jane.doe@example.org, +31 20 123 4567")
+    once = mask_text("Firstname Lastname, firstname.lastname@example.org, +31 20 000 0000")
     assert mask_text(once) == once
 
 
@@ -81,18 +81,18 @@ def test_masking_is_idempotent():
 @pytest.mark.parametrize(
     "text, expected",
     [
-        ("+31 20 123 4567", "+31 XXXXXX"),
-        ("+420 725 640 000", "+420 XXXXXX"),
-        ("+33 (0)1 23 45 67 89", "+33 XXXXXX"),
-        ("T:+31(0)20 5304488", "T:+31 XXXXXX"),
-        ("+1 (555) 123-4567", "+1 XXXXXX"),
-        ("+358 9 457 0000.", "+358 XXXXXX."),
-        ("tel:+420725640000", "tel:+420 XXXXXX"),
-        ("tel:0043316349900", "tel:+43 XXXXXX"),  # dialled with 00
-        ("Tel.: 06 1234 5678", "Tel.: XXXXXX"),  # no prefix, but labelled
-        ("phone: +44 20 7946 0000", "phone: +44 XXXXXX"),
-        ("tel:+31(0)20%205300000", "tel:+31 XXXXXX"),  # %20 inside a tel: link
-        ("tel. (09) 457 0000 (switchboard)", "tel. XXXXXX (switchboard)"),  # bracketed area code
+        ("+31 20 000 0000", "+31 XXXXXX"),
+        ("+420 000 000 000", "+420 XXXXXX"),
+        ("+33 (0)1 00 00 00 00", "+33 XXXXXX"),
+        ("T:+31(0)20 0000000", "T:+31 XXXXXX"),
+        ("+1 (555) 010-0000", "+1 XXXXXX"),
+        ("+358 9 000 0000.", "+358 XXXXXX."),
+        ("tel:+420000000000", "tel:+420 XXXXXX"),
+        ("tel:0043000000000", "tel:+43 XXXXXX"),  # dialled with 00
+        ("Tel.: 06 0000 0000", "Tel.: XXXXXX"),  # no prefix, but labelled
+        ("phone: +44 20 0000 0000", "phone: +44 XXXXXX"),
+        ("tel:+31(0)20%200000000", "tel:+31 XXXXXX"),  # %20 inside a tel: link
+        ("tel. (09) 000 0000 (switchboard)", "tel. XXXXXX (switchboard)"),  # bracketed area code
     ],
 )
 def test_a_phone_number_keeps_only_its_international_prefix(text, expected):
@@ -117,11 +117,11 @@ def test_numbers_that_are_not_phones_are_left_alone(text):
 @pytest.mark.parametrize(
     "digits, code",
     [
-        ("31201234567", "31"),
-        ("420725640000", "420"),
-        ("15551234567", "1"),
-        ("74951234567", "7"),
-        ("35894570000", "358"),
+        ("31200000000", "31"),
+        ("420000000000", "420"),
+        ("15550100000", "1"),
+        ("74950000000", "7"),
+        ("35890000000", "358"),
     ],
 )
 def test_the_country_code_is_read_from_the_e164_plan(digits, code):
@@ -132,9 +132,11 @@ def test_the_country_code_is_read_from_the_e164_plan(digits, code):
 
 
 def test_the_name_beside_a_personal_address_is_masked_but_not_the_title():
+    # "Jméno Příjmení" is Czech for "Name Surname": a placeholder, not a person.
+    # The accents check that "prijmeni@" still finds "Příjmení".
     text = (
-        "Contact for media Mgr. Bc. Jana Nováková correspondence Address: "
-        "novakova@uni.example.cz phone: +420 725 640 000 General contacts: info@eosc.cz"
+        "Contact for media Mgr. Bc. Jméno Příjmení correspondence Address: "
+        "prijmeni@uni.example.cz phone: +420 000 000 000 General contacts: info@eosc.cz"
     )
     assert mask_text(text) == (
         "Contact for media Mgr. Bc. XXXXX XXXXX correspondence Address: "
@@ -144,9 +146,9 @@ def test_the_name_beside_a_personal_address_is_masked_but_not_the_title():
 
 def test_a_masked_address_masks_its_name_only_nearby_and_never_in_a_url():
     far = " filler" * 40
-    text = f"Anna Smith smith@x.example.org{far} Smith & Sons, https://x.example.org/smith/"
+    text = f"Firstname Lastname lastname@x.example.org{far} Lastname & Sons, https://x.example.org/lastname/"
     assert mask_text(text) == (
-        f"XXXXX XXXXX XXXXX@x.example.org{far} Smith & Sons, https://x.example.org/smith/"
+        f"XXXXX XXXXX XXXXX@x.example.org{far} Lastname & Sons, https://x.example.org/lastname/"
     )
 
 
@@ -157,11 +159,11 @@ def test_an_acronym_is_never_taken_for_a_surname():
 # --- where masking is applied ------------------------------------------------
 
 
-PERSONAL = "Head of unit John Smith, j.smith@example.org, +32 2 123 45 67"
+PERSONAL = "Head of unit Firstname Lastname, f.lastname@example.org, +32 2 000 00 00"
 
 
 def _has_personal_data(text: str) -> bool:
-    return any(s in text for s in ("j.smith@", "Smith", "123 45 67"))
+    return any(s in text for s in ("f.lastname@", "Lastname", "000 00 00"))
 
 
 def test_the_evidence_file_is_written_masked(tmp_path):
@@ -172,7 +174,7 @@ def test_the_evidence_file_is_written_masked(tmp_path):
         main_text=PERSONAL,
         full_text=PERSONAL,
         links=[
-            Link("mailto:j.smith@example.org", "j.smith@example.org"),
+            Link("mailto:f.lastname@example.org", "f.lastname@example.org"),
             Link("mailto:support@node.example", "Helpdesk"),
         ],
     )
@@ -222,9 +224,14 @@ def test_every_report_is_written_masked_even_from_unmasked_evidence(tmp_path):
 
 
 def test_mask_data_leaves_keys_and_non_strings_alone():
-    data = {"jane.doe@example.org": 1, "n": 3, "ok": True, "xs": ["+31 20 123 4567", None]}
+    data = {
+        "firstname.lastname@example.org": 1,
+        "n": 3,
+        "ok": True,
+        "xs": ["+31 20 000 0000", None],
+    }
     assert mask_data(data) == {
-        "jane.doe@example.org": 1,
+        "firstname.lastname@example.org": 1,
         "n": 3,
         "ok": True,
         "xs": ["+31 XXXXXX", None],

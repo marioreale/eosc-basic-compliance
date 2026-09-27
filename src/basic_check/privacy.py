@@ -8,18 +8,18 @@ person. So the evidence files and the reports keep role mailboxes as they are
 identify a person:
 
 - **Email addresses.** A personal local part becomes ``XXXXX`` and the domain
-  stays, so ``jane.doe@example.org`` becomes ``XXXXX@example.org``. The reader
+  stays, so ``firstname.lastname@example.org`` becomes ``XXXXX@example.org``. The reader
   can still see which organisation the address belongs to. Obfuscated forms
-  (``jane.doe [at] example.org``) are masked the same way.
+  (``firstname.lastname [at] example.org``) are masked the same way.
 - **Phone numbers.** Only the international prefix stays, so
-  ``+31 20 123 4567`` becomes ``+31 XXXXXX``. A number written without a prefix
+  ``+31 20 000 0000`` becomes ``+31 XXXXXX``. A number written without a prefix
   is masked only when a label such as "phone:" or "tel." introduces it, because
   a bare run of digits is as likely to be a date, a grant number or a price.
   A labelled number dialled with "00" keeps its country the same way
   (``tel:0043…`` becomes ``tel:+43 XXXXXX``). Office switchboards are masked
   too: nothing in a number says whether it rings a person or a reception desk.
-- **The name beside a masked address.** When ``skrickova@…`` is masked,
-  "Skřičková" is masked where it appears near the address, together with
+- **The name beside a masked address.** When ``prijmeni@…`` is masked,
+  "Příjmení" is masked where it appears near the address, together with
   a capitalised given name directly before it. Titles such as "Mgr." or "Dr."
   are left alone, because they end in a full stop, and so are all-capital
   words, which are acronyms (EBRAINS) rather than surnames. A mailbox named
@@ -244,7 +244,7 @@ _MIN_DIGITS_LABEL = 6
 
 
 def _fold(word: str) -> str:
-    """Lowercase, with accents removed, so "Skřičková" compares equal to "skrickova"."""
+    """Lowercase, with accents removed, so "Příjmení" compares equal to "prijmeni"."""
     decomposed = unicodedata.normalize("NFKD", word)
     return "".join(ch for ch in decomposed if not unicodedata.combining(ch)).casefold()
 
@@ -265,7 +265,7 @@ def is_role_address(local: str, domain: str) -> bool:
 
 
 def _name_tokens(local: str) -> set[str]:
-    """Parts of a personal local part long enough to be a name: "jane.doe" -> {jane, doe}."""
+    """Name-length parts of a personal local part: "first.last" -> {first, last}."""
     return {_fold(t) for t in re.split(r"[._+-]", local) if len(t) >= 3 and t.isalpha()}
 
 
@@ -307,8 +307,8 @@ def _mask_labelled(m: re.Match[str]) -> str:
     return f"{m.group('label')}{PHONE_MASK}"
 
 
-# How far from a personal address a name is looked for. "Mgr. Bc. Lucie
-# Skřičková correspondence Address: skrickova@…" puts the name 40 characters
+# How far from a personal address a name is looked for. "Mgr. Bc. Jméno
+# Příjmení correspondence Address: prijmeni@…" puts the name 40 characters
 # before it. Looking only nearby keeps an address from masking an ordinary word
 # that happens to share its spelling somewhere else on the page.
 NAME_WINDOW = 120
@@ -341,7 +341,7 @@ def _mask_names(text: str) -> str:
             continue
         hits.add(i)
         # A capitalised given name directly before the surname, but not a
-        # title: "Mgr. Bc. Lucie Skřičková" keeps "Mgr. Bc." and masks the rest.
+        # title: "Mgr. Bc. Jméno Příjmení" keeps "Mgr. Bc." and masks the rest.
         if i > 0:
             prev = words[i - 1].group(0)
             gap = text[words[i - 1].end() : w.start()]
