@@ -18,10 +18,12 @@ and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
 > **The published run changed on 28 September 2026.** `results/` now holds run
-> `web-10`, collected by the GitHub workflow on 28 September from all thirteen
-> nodes under checklist v3.1 (47 PASS, 8 FAIL, 75 MANUAL_REVIEW). It is the first
-> run with EOSC Node Poland, which replaced a node listed by mistake; the other
-> twelve rows repeat runs `web-4` to `web-9` of 26 September cell for cell. It has **not** been reviewed by
+> `web-11`, collected by the GitHub workflow on 28 September from all thirteen
+> nodes under checklist v3.1 (49 PASS, 8 FAIL, 73 MANUAL_REVIEW). It is the first
+> run with CERN's new landing page, `https://eosc.cern/`, and follows `web-10` of
+> the same day, the first with EOSC Node Poland, which replaced a node listed by
+> mistake. The other rows repeat runs `web-4` to `web-9` of 26 September cell for
+> cell. It has **not** been reviewed by
 > hand; the review of the run it replaced stays in
 > `results/REVIEW-2026-09-24.md` as history. Passages below that describe "the
 > published run of 24 September" are about that earlier, reviewed run, whose
@@ -29,7 +31,7 @@ noted rather than smoothed over.
 >
 > **Checklist v3.1 since 26 September 2026.** The default reference checklist
 > is now v3.1 of 24 September 2026 (`checklist/v3.1.yaml`). The evidence of
-> `web-4` was first re-scored against it offline, then `web-5` to `web-10`
+> `web-4` was first re-scored against it offline, then `web-5` to `web-11`
 > were collected under it; every verdict is unchanged. The header of `checklist/v3.1.yaml` lists the differences point by
 > point.
 
@@ -181,7 +183,7 @@ to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
 saying so. `eosc.it` had no address record on 24 September, so that run skipped
 Italy; nothing published depends on the old address. Italy was assessed for the
 first time in run `web-4` on 26 September, from the new address, and again in
-runs `web-5` to `web-10` (the published run).
+runs `web-5` to `web-11` (the published run).
 
 ### Changing a node's URL
 
@@ -237,18 +239,19 @@ exit code does not change, because the table is complete; it is just not about
 the configured page. The address finally reached, after redirects, is kept as
 `final_url` in the evidence file.
 
-To rebuild the published run, assess it under its own label, with the node
-list it was collected from. CERN's URL changed to `https://eosc.cern/` after
-that run, so the committed `nodes.yaml` would flag CERN's row as evidence from
-a different URL:
+To rebuild the published run, assess it under its own label. It was collected
+from the committed `nodes.yaml`, so no other option is needed and there is no
+URL warning:
 
 ```bash
-git show 8126aee:nodes.yaml > /tmp/nodes-web-10.yaml
-uv run basic-check assess --run web-10 --nodes /tmp/nodes-web-10.yaml
+uv run basic-check assess --run web-11
 ```
 
+Run `web-10`, collected before CERN's URL changed, needs its own node list
+(`git show 8126aee:nodes.yaml`) passed with `--nodes`.
+
 Verified on 28 September 2026: this reproduces the committed `results/`
-exactly, apart from the generation time, with 47 PASS, 8 FAIL and 75
+exactly, apart from the generation time, with 49 PASS, 8 FAIL and 73
 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
@@ -480,8 +483,8 @@ literally:
 | CERN, EOSC Finland, EGI, Italy | no match, and the phrase `EOSC Node` does not occur in the body text |
 | GÉANT | not looked for: the page answered HTTP 403 with the Cloudflare challenge |
 
-CERN's page in that run, its previous URL, is a sign-in endpoint with very little text, so there is
-almost nothing to match against. Italy's page shows "EOSC Node | Italy" in its
+CERN's new page shows "EOSC Node | CERN" only in its logo image, which is not
+text; its previous URL, a sign-in endpoint, had almost nothing to match against. Italy's page shows "EOSC Node | Italy" in its
 logo image, which is not text. GÉANT's page, when served on 24 September, wrote
 `EOSC Node GÉANT` and matched, which made five of twelve that day.
 
@@ -1024,9 +1027,9 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-10` (28 September 2026) was collected
+**The published run is masked.** Run `web-11` (28 September 2026) was collected
 with masking in place, and a search of all its evidence and reports found no
-personal address or phone number. Before it, commit `ada1b4a` (25 September
+personal address or phone number. Two personal names that the masking does not cover were then removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, where it had also been in earlier published runs). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
 offline. All 120 verdicts and the 44 / 6 / 70 tally were unchanged. A few character counts in the report dropped
 slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to
@@ -1366,13 +1369,13 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-10`). Update it to the new run's shape.
+  run `web-11`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 47 PASS · 8 FAIL · 75 review");
+- the headline tally in `README.md` ("130 cells: 49 PASS · 8 FAIL · 73 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

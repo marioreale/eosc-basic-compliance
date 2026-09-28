@@ -202,7 +202,7 @@ git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
 uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy --nodes /tmp/nodes-2026-09-24.yaml
 ```
 
-That command applies to the 24 September run, which is now in the git history at `800d632`. The published run `web-10` was collected before CERN's URL changed to `https://eosc.cern/`, so rebuild it with the node list of that run: `git show 8126aee:nodes.yaml > /tmp/nodes-web-10.yaml`, then `uv run basic-check assess --run web-10 --nodes /tmp/nodes-web-10.yaml`. That reproduces it exactly, apart from the generation time, with no URL warning (verified 28 September 2026). Runs published before 28 September 2026 were also scored with the earlier name list, so pass it too: `git show e7da5a8:checklist/approved-names.txt > /tmp/names-before-2026-09-28.txt`, then add `--approved-names /tmp/names-before-2026-09-28.txt`.
+That command applies to the 24 September run, which is now in the git history at `800d632`. The published run `web-11` was collected from the committed `nodes.yaml`, so `uv run basic-check assess --run web-11` rebuilds it exactly, apart from the generation time, with no URL warning (verified 28 September 2026). Run `web-10` was collected before CERN's URL changed to `https://eosc.cern/`, so it needs its own node list: `git show 8126aee:nodes.yaml > /tmp/nodes-web-10.yaml`, then add `--nodes /tmp/nodes-web-10.yaml`. Runs published before 28 September 2026 were also scored with the earlier name list, so pass it too: `git show e7da5a8:checklist/approved-names.txt > /tmp/names-before-2026-09-28.txt`, then add `--approved-names /tmp/names-before-2026-09-28.txt`.
 
 The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean. The step-by-step procedure for a URL change, through to new published results, is example 2 in section 11.
 
@@ -784,19 +784,23 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ### Current run: 28 September 2026 (unreviewed)
 
-From `results/results.json`, run `web-10`, collected on 28 September 2026 at 13:36 UTC by the GitHub workflow ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417), commit `c90761b`, unit tests passing first) against checklist v3.1 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `46af586b…`). It is the first run with EOSC Node Poland (`eosc-pl`, `https://eosc.pl/`), which replaced a node listed by mistake on 28 September 2026; the name list changed in the same commit ("EOSC Node | Poland" in place of that node's name). All thirteen nodes were assessed and none was skipped. The run made 41 requests (13 landing pages and 28 child pages). Twelve landing pages returned HTTP 200. GÉANT returned HTTP 403 with the Cloudflare challenge. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number. Offline, `uv run basic-check assess --run web-10` reproduces it exactly, apart from the generation time. The other twelve rows are the same, cell for cell, as in run `web-9` ([run 36275685119](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36275685119), commit `ca73161`), which repeated runs `web-8`, `web-6`, `web-5` and `web-4` of 26 September.
+From `results/results.json`, run `web-11`, collected on 28 September 2026 at 13:48 UTC by the GitHub workflow ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625), commit `f4eaebd`, unit tests passing first) against checklist v3.1 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `46af586b…`). It is the first run with CERN's new Node Landing Page, `https://eosc.cern/`, which replaced the INDIGO IAM sign-in URL `https://eosc-auth.cern.ch/login` in the same commit. All thirteen nodes were assessed and none was skipped. The run made 44 requests (13 landing pages and 31 child pages). Twelve landing pages returned HTTP 200. GÉANT returned HTTP 403 with the Cloudflare challenge. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number. Two personal names that the masking does not cover were then removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, where it had also been in earlier published runs). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Offline, `uv run basic-check assess --run web-11` reproduces it exactly, apart from the generation time.
+
+The run before it, `web-10` ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417), commit `c90761b`), was the first with EOSC Node Poland (`eosc-pl`, `https://eosc.pl/`), which replaced a node listed by mistake on 28 September 2026; the name list changed in the same commit ("EOSC Node | Poland" in place of that node's name). Apart from Poland's new row, its verdicts repeated run `web-9` of 26 September cell for cell, and `web-11` repeats `web-10` apart from CERN's row.
 
 | Verdict | Cells |
 |---|---|
-| 🟢 PASS | 47 |
+| 🟢 PASS | 49 |
 | 🔴 FAIL | 8 |
-| 🟠 MANUAL_REVIEW | 75 |
+| 🟠 MANUAL_REVIEW | 73 |
 | 🟣 ERROR | 0 |
 | **Total** | **130** (13 nodes × 10 points) |
 
 Seven FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, Italy), two link only to the federation index (PaNOSC, Czechia), and one only to the `eosc.eu` homepage (Poland). The eighth is Italy's point 6: none of its links is a contact route. Italy's page rendered with 15 links, but its main text is short, so both of its FAILs should be looked at by hand.
 
-**Poland, first assessment:** 4 PASS (1, 5b on its Terms of use, 6 on `support@eosc.pl`, 7), 1 FAIL (4) and 5 review. Point 3 is review: the header logo reads "EOSC Node | Poland", but the approved name is not in the page text.
+**CERN, new landing page:** 4 PASS (1, 4, 6 via its Contact page, 7) and 6 review. Points 1 and 4 moved from review to `PASS` against the sign-in URL of `web-10`: the page is public, renders about 6,000 characters, and links to `https://eosc.eu/building-the-eosc-federation/eosc-node-cern`. Point 3 is review: the logo reads "EOSC Node | CERN", but the approved name is not in the page text.
+
+**Poland, first assessed in `web-10`:** 4 PASS (1, 5b on its Terms of use, 6 on `support@eosc.pl`, 7), 1 FAIL (4) and 5 review. Point 3 is review: the header logo reads "EOSC Node | Poland", but the approved name is not in the page text.
 
 Compared with the reviewed run below, the runs of 26 September found (Poland was not yet configured):
 
@@ -817,7 +821,7 @@ No other cell changed. BBMRI-ERIC was collected again from its `www.` address wi
 
 ### Previous run: 24 September 2026 (reviewed)
 
-This subsection is kept as the record of the reviewed run that `web-4` (and then `web-5` to `web-10`) replaced. Its files are in the git history at `800d632`.
+This subsection is kept as the record of the reviewed run that `web-4` (and then `web-5` to `web-11`) replaced. Its files are in the git history at `800d632`.
 
 From `results/results.json` as it stood at `800d632`, run `live-2026-09-24-no-italy`, collected live on 24 September 2026 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `871161a5…`). Twelve nodes were assessed, and EOSC Node Italy was skipped with `--skip Italy` because `eosc.it` had no address record. The run made 44 requests (12 landing pages and 32 child pages), and all 12 landing pages returned HTTP 200. The figures below are from the re-assessment at commit `29dead8`, made from the same evidence after the point 6 and 5b/5c fixes. The first assessment gave 45 / 6 / 69.
 
@@ -1084,13 +1088,13 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-10`). Update it to the new run's shape.
+  run `web-11`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 47 PASS · 8 FAIL · 75 review");
+- the headline tally in `README.md` ("130 cells: 49 PASS · 8 FAIL · 73 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 
@@ -1329,7 +1333,7 @@ the documents together, so the commit shows the whole change.
 - Checklist: *Node Landing Page Verification Checklist v3.1*, 24 September 2026, committed as `checklist/20260910_Node_Landing_Page_Verification_Checklist_v3.1.pdf` and transcribed to `checklist/v3.1.yaml` with its SHA-256 pinned
 - EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
-- Figures in section 10, current run: `results/results.json`, run `web-10`, collected 28 September 2026 by [workflow run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417) under checklist v3.1, not reviewed
+- Figures in section 10, current run: `results/results.json`, run `web-11`, collected 28 September 2026 by [workflow run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625) under checklist v3.1, not reviewed
 - Figures in section 10, 24 September run: `results/results.json` at commit `800d632`, run `live-2026-09-24-no-italy`, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `46af586b…`, since 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`

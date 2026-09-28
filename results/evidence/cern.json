@@ -1,87 +1,957 @@
 {
   "node_id": "cern",
   "node_name": "CERN",
-  "requested_url": "https://eosc-auth.cern.ch/login",
-  "fetched_at": "2026-09-28T13:33:50+00:00",
-  "final_url": "https://eosc-auth.cern.ch/login",
+  "requested_url": "https://eosc.cern/",
+  "fetched_at": "2026-09-28T13:49:11+00:00",
+  "final_url": "https://eosc.cern/",
   "http_status": 200,
   "redirect_chain": [],
   "robots_allowed": true,
   "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
-  "title": "INDIGO IAM for CERN-EOSC-NODE-Log in",
-  "lang_attr": "en_US",
-  "main_text": "Welcome to CERN-EOSC-NODE Sign in with EOSC Local credentials Not a member? Apply for an account Privacy policy Contact Support",
-  "full_text": "Welcome to CERN-EOSC-NODE Sign in with EOSC Local credentials Not a member? Apply for an account Privacy policy Contact Support",
+  "title": "CERN Node",
+  "lang_attr": "en",
+  "main_text": "EOSC Federation · First wave Node The CERN Node for Open Science Integrating CERN's world-class research services and FAIR data into the European Open Science Cloud, enabling reproducible workflows, open datasets, and cross-disciplinary collaboration for researchers everywhere. Get Started Explore Services Try an Analysis What is the CERN Node? Part of the European Open Science Cloud Federation The CERN Node strengthens the EOSC Federation by providing high-TRL services and technology essential for high-energy physics and interdisciplinary research. It integrates CERN's established platforms such as Rucio, REANA, FTS, CERNBox, Zenodo, and the CERN VRE into a federated European infrastructure. The objective is to support the exploitation of FAIR CERN Open Data through reproducible workflows, analysis facilities, and cross-disciplinary collaboration, making particle physics data and tools accessible to the broader scientific community. “Building a successful federation is not just about the infrastructure but it's about making sure that the users are part of the co-design of the services. This is one of the reasons for the success of the WLCG, a federation of over 170 data centres spanning more than 40 countries.” — [removed], EOSC Association Find Your Path Get started based on what brings you here Researchers Run analyses on open data, manage large datasets, and publish reproducible workflows. Policy Makers Understand what the Node delivers, its maturity, and how to engage with it. Infrastructure Operators Reuse the open-source stack and federate your own infrastructure with the Node. Core Principles What drives open science at CERN Open Data CERN provides curated open data and analyses from its flagship particle physics experiments, preserved with long-term discoverability through the CERN Open Data portal and Zenodo. Interoperable Services CERN services use standard protocols and open APIs to enable interoperability across the EOSC Federation. Federated AAI, shared catalogues, and common data management tools ensure seamless integration with other nodes and research infrastructures. Reusable Workflows Containerised analysis pipelines on REANA or Jupyter can be shared, re-executed, and adapted by anyone. Near-data computation sends workflows to where datasets live, making results verifiable and building on prior work. Services Key services onboarded to the EOSC Federation View the full catalogue CERN Open Data Data Discovery Access collision data, simulated datasets, and educational resources from CERN experiments. CERN VRE Interactive Analysis Powered by SWAN (Service for Web based ANalysis) — a platform to perform interactive data analysis in the cloud using Jupyter notebooks. CERNBox Storage Cloud sync and share service allowing users to store and share data seamlessly across all their devices. REANA Workflow Execution Reusable Analysis platform. Allows researchers to run containerised data analysis pipelines on distributed compute clouds. Rucio Data Management Scientific Data Management system providing a complete and scalable solution for managing large volumes of data across globally distributed centres. Zenodo Publishing General-purpose open repository enabling researchers to deposit educational materials, datasets, software, and publications. View the full catalogue Virtual Research Environment The CERN VRE for cross-disciplinary science The CERN Virtual Research Environment is a modular, scalable platform that integrates software provisioning (CVMFS), data management (Rucio), reproducible workflows (REANA), and interactive analysis (Jupyter) into a unified workspace. Unlike a generic cloud notebook (Google Colab, AWS SageMaker, Azure ML), the VRE ships pre-configured with the specialised toolchains scientific communities actually need: HEP software stacks via CVMFS, federated AAI, direct access to experiment data lakes, and analysis pipelines that run close to the data rather than shuttling petabytes across the public internet. Access the VRE Browse Analyses Node Status See the rollout stages → View the status page → Current deployment phase of the CERN Node Phase 1 — Build-up Completed Onboarded CERN technology into the EOSC EU Node and tested the virtual credit model. Services including Indico, REANA, VRE, Zenodo, CERN Open Data, HEPData, and INSPIRE-HEP were successfully integrated. March – December 2025 Phase 2 — Production Active Establishing the CERN Node with quotas and controlled resource allocation, full federated AAI, and helpdesk support. Started Q1 2026 Open Science at CERN Training, outreach, and community At CERN, the practice of open science is key to delivering on the organisational mission. CERN Open Science encompasses an evolving ecosystem of policies, initiatives, services, and technologies, driven by people from across the organisation with the goal to maximise the global impact of research. Open Access Open Data Open Source Open Hardware Citizen Science Learn more at openscience.cern Competence Centre & Training Learn to leverage HEP software frameworks, Machine Learning tools, and distributed infrastructure through curated training programs. Data Management Plans Guidelines and templates for managing research data throughout the project lifecycle, aligned with FAIR principles. Contributing Organisations CERN departments, INSPIRE-HEP collaboration (DESY, Fermilab, IHEP, IN2P3, SLAC), Durham University, and ESCAPE partners.",
+  "full_text": "The CERN Node is not in production yet. Access to services is not guaranteed, and content and features may still change. CERN | Accelerating science Directory Get Started About Services Analysis Training Help Sign in EOSC Federation · First wave Node The CERN Node for Open Science Integrating CERN's world-class research services and FAIR data into the European Open Science Cloud, enabling reproducible workflows, open datasets, and cross-disciplinary collaboration for researchers everywhere. Get Started Explore Services Try an Analysis What is the CERN Node? Part of the European Open Science Cloud Federation The CERN Node strengthens the EOSC Federation by providing high-TRL services and technology essential for high-energy physics and interdisciplinary research. It integrates CERN's established platforms such as Rucio, REANA, FTS, CERNBox, Zenodo, and the CERN VRE into a federated European infrastructure. The objective is to support the exploitation of FAIR CERN Open Data through reproducible workflows, analysis facilities, and cross-disciplinary collaboration, making particle physics data and tools accessible to the broader scientific community. “Building a successful federation is not just about the infrastructure but it's about making sure that the users are part of the co-design of the services. This is one of the reasons for the success of the WLCG, a federation of over 170 data centres spanning more than 40 countries.” — [removed], EOSC Association Find Your Path Get started based on what brings you here Researchers Run analyses on open data, manage large datasets, and publish reproducible workflows. Policy Makers Understand what the Node delivers, its maturity, and how to engage with it. Infrastructure Operators Reuse the open-source stack and federate your own infrastructure with the Node. Core Principles What drives open science at CERN Open Data CERN provides curated open data and analyses from its flagship particle physics experiments, preserved with long-term discoverability through the CERN Open Data portal and Zenodo. Interoperable Services CERN services use standard protocols and open APIs to enable interoperability across the EOSC Federation. Federated AAI, shared catalogues, and common data management tools ensure seamless integration with other nodes and research infrastructures. Reusable Workflows Containerised analysis pipelines on REANA or Jupyter can be shared, re-executed, and adapted by anyone. Near-data computation sends workflows to where datasets live, making results verifiable and building on prior work. Services Key services onboarded to the EOSC Federation View the full catalogue CERN Open Data Data Discovery Access collision data, simulated datasets, and educational resources from CERN experiments. CERN VRE Interactive Analysis Powered by SWAN (Service for Web based ANalysis) — a platform to perform interactive data analysis in the cloud using Jupyter notebooks. CERNBox Storage Cloud sync and share service allowing users to store and share data seamlessly across all their devices. REANA Workflow Execution Reusable Analysis platform. Allows researchers to run containerised data analysis pipelines on distributed compute clouds. Rucio Data Management Scientific Data Management system providing a complete and scalable solution for managing large volumes of data across globally distributed centres. Zenodo Publishing General-purpose open repository enabling researchers to deposit educational materials, datasets, software, and publications. View the full catalogue Virtual Research Environment The CERN VRE for cross-disciplinary science The CERN Virtual Research Environment is a modular, scalable platform that integrates software provisioning (CVMFS), data management (Rucio), reproducible workflows (REANA), and interactive analysis (Jupyter) into a unified workspace. Unlike a generic cloud notebook (Google Colab, AWS SageMaker, Azure ML), the VRE ships pre-configured with the specialised toolchains scientific communities actually need: HEP software stacks via CVMFS, federated AAI, direct access to experiment data lakes, and analysis pipelines that run close to the data rather than shuttling petabytes across the public internet. Access the VRE Browse Analyses Node Status See the rollout stages → View the status page → Current deployment phase of the CERN Node Phase 1 — Build-up Completed Onboarded CERN technology into the EOSC EU Node and tested the virtual credit model. Services including Indico, REANA, VRE, Zenodo, CERN Open Data, HEPData, and INSPIRE-HEP were successfully integrated. March – December 2025 Phase 2 — Production Active Establishing the CERN Node with quotas and controlled resource allocation, full federated AAI, and helpdesk support. Started Q1 2026 Open Science at CERN Training, outreach, and community At CERN, the practice of open science is key to delivering on the organisational mission. CERN Open Science encompasses an evolving ecosystem of policies, initiatives, services, and technologies, driven by people from across the organisation with the goal to maximise the global impact of research. Open Access Open Data Open Source Open Hardware Citizen Science Learn more at openscience.cern Competence Centre & Training Learn to leverage HEP software frameworks, Machine Learning tools, and distributed infrastructure through curated training programs. Data Management Plans Guidelines and templates for managing research data throughout the project lifecycle, aligned with FAIR principles. Contributing Organisations CERN departments, INSPIRE-HEP collaboration (DESY, Fermilab, IHEP, IN2P3, SLAC), Durham University, and ESCAPE partners. CERN Node Integrating CERN's research infrastructure into the European Open Science Cloud. About CERN The CERN Node Scientific Collaboration CERN Node on eosc.eu ↗ Contact Contact FAQ Changelog Node Status Policies CERN ↗ © 2026 CERN — European Organization for Nuclear Research v1.0.3 eosc.eu ↗",
   "links": [
     {
-      "href": "https://eosc-auth.cern.ch/",
-      "text": "",
+      "href": "https://home.cern",
+      "text": "CERN | Accelerating science",
       "visible": true
     },
     {
-      "href": "https://eosc-auth.cern.ch/openid_connect_login?iss=https://proxy.acc.myaccessid.org",
-      "text": "EOSC",
+      "href": "https://cern.ch/directory",
+      "text": "Directory",
       "visible": true
     },
     {
-      "href": "https://eosc-auth.cern.ch/login?sll=y",
-      "text": "Local credentials",
+      "href": "https://eosc.cern/",
+      "text": "EOSC Node CERN",
       "visible": true
     },
     {
-      "href": "https://eosc-auth.cern.ch/start-registration",
-      "text": "Apply for an account",
+      "href": "https://eosc.cern/get-started",
+      "text": "Get Started",
       "visible": true
     },
     {
-      "href": "https://cern.service-now.com/service-portal?id=privacy_policy&se=SSO-Service&notice=wlcg-iam",
-      "text": "Privacy policy",
+      "href": "https://eosc.cern/services",
+      "text": "Services",
       "visible": true
     },
     {
-      "href": "https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM",
-      "text": "Contact Support",
+      "href": "https://eosc.cern/analysis",
+      "text": "Analysis",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/training",
+      "text": "Training",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/login",
+      "text": "Sign in",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/get-started",
+      "text": "Get Started",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/services",
+      "text": "Explore Services",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/analysis",
+      "text": "Try an Analysis",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/get-started#for-researchers",
+      "text": "Researchers Run analyses on open data, manage large datasets, and publish reproducible workflows.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/get-started#for-policy-makers",
+      "text": "Policy Makers Understand what the Node delivers, its maturity, and how to engage with it.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/get-started#for-operators",
+      "text": "Infrastructure Operators Reuse the open-source stack and federate your own infrastructure with the Node.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/services",
+      "text": "View the full catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://opendata.cern.ch",
+      "text": "CERN Open Data Data Discovery Access collision data, simulated datasets, and educational resources from CERN experiments.",
+      "visible": true
+    },
+    {
+      "href": "https://swan-eosc.cern.ch",
+      "text": "CERN VRE Interactive Analysis Powered by SWAN (Service for Web based ANalysis) — a platform to perform interactive data analysis in the cloud using Jupyter notebooks.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cernbox.cern.ch",
+      "text": "CERNBox Storage Cloud sync and share service allowing users to store and share data seamlessly across all their devices.",
+      "visible": true
+    },
+    {
+      "href": "https://reana.cern.ch",
+      "text": "REANA Workflow Execution Reusable Analysis platform. Allows researchers to run containerised data analysis pipelines on distributed compute clouds.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc-webui.rucioit.cern.ch/",
+      "text": "Rucio Data Management Scientific Data Management system providing a complete and scalable solution for managing large volumes of data across globally distributed centres.",
+      "visible": true
+    },
+    {
+      "href": "https://zenodo.org",
+      "text": "Zenodo Publishing General-purpose open repository enabling researchers to deposit educational materials, datasets, software, and publications.",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/services",
+      "text": "View the full catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://swan-eosc.cern.ch/",
+      "text": "Access the VRE",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/analysis",
+      "text": "Browse Analyses",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/about/cern-node#stages",
+      "text": "See the rollout stages →",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/status",
+      "text": "View the status page →",
+      "visible": true
+    },
+    {
+      "href": "https://openscience.cern/",
+      "text": "Learn more at openscience.cern",
+      "visible": true
+    },
+    {
+      "href": "https://home.cern/",
+      "text": "CERN",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/about/cern",
+      "text": "CERN",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/about/cern-node",
+      "text": "The CERN Node",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/about/collaboration",
+      "text": "Scientific Collaboration",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-cern",
+      "text": "CERN Node on eosc.eu ↗",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/faq",
+      "text": "FAQ",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/changelog",
+      "text": "Changelog",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/status",
+      "text": "Node Status",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.cern/policies",
+      "text": "Policies",
+      "visible": true
+    },
+    {
+      "href": "https://cern.ch",
+      "text": "CERN ↗",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu",
+      "text": "eosc.eu ↗",
       "visible": true
     }
   ],
-  "images": [],
+  "images": [
+    {
+      "src": "https://eosc.cern/_next/image?url=%2Feosc-node-cern-logo-light.png&w=750&q=75",
+      "alt": "EOSC Node CERN",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-9 w-auto object-contain",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.cern/_next/image?url=%2Feosc-node-cern-logo-light.png&w=1920&q=75",
+      "alt": "EOSC Node CERN",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full h-auto drop-shadow-2xl",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.cern/_next/image?url=%2Fswan-logo.png&w=48&q=75",
+      "alt": "SWAN",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-5 h-5 object-contain brightness-0 invert",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.cern/_next/image?url=%2Fvre-logo.png&w=828&q=75",
+      "alt": "CERN VRE",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-full max-w-sm h-auto object-contain",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.cern/_next/image?url=%2Fcern-logo-white.png&w=128&q=75",
+      "alt": "CERN",
+      "aria_label": "",
+      "title": "",
+      "css_class": "h-16 w-16 object-contain mb-3",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-3.5 h-3.5 transition-transform",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-3.5 h-3.5 transition-transform",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-7 h-7 text-cern-blue mb-4",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-7 h-7 text-cern-blue mb-4",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "w-7 h-7 text-cern-blue mb-4",
+      "inline_svg": true
+    }
+  ],
   "controls": [
     {
-      "text": "EOSC",
-      "href": "https://eosc-auth.cern.ch/openid_connect_login?iss=https://proxy.acc.myaccessid.org",
+      "text": "About",
+      "href": "https://eosc.cern/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Help",
+      "href": "https://eosc.cern/",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "CERN | Accelerating science",
+      "href": "https://home.cern",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "Local credentials",
-      "href": "https://eosc-auth.cern.ch/login?sll=y",
+      "text": "Directory",
+      "href": "https://cern.ch/directory",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "Apply for an account",
-      "href": "https://eosc-auth.cern.ch/start-registration",
+      "text": "Get Started",
+      "href": "https://eosc.cern/get-started",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "Privacy policy",
-      "href": "https://cern.service-now.com/service-portal?id=privacy_policy&se=SSO-Service&notice=wlcg-iam",
+      "text": "Services",
+      "href": "https://eosc.cern/services",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "Contact Support",
-      "href": "https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM",
+      "text": "Analysis",
+      "href": "https://eosc.cern/analysis",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training",
+      "href": "https://eosc.cern/training",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Sign in",
+      "href": "https://eosc.cern/login",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Get Started",
+      "href": "https://eosc.cern/get-started",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Explore Services",
+      "href": "https://eosc.cern/services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Try an Analysis",
+      "href": "https://eosc.cern/analysis",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Researchers Run analyses on open data, manage large datasets, and publish reproducible workflows.",
+      "href": "https://eosc.cern/get-started#for-researchers",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Policy Makers Understand what the Node delivers, its maturity, and how to engage with it.",
+      "href": "https://eosc.cern/get-started#for-policy-makers",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Infrastructure Operators Reuse the open-source stack and federate your own infrastructure with the Node.",
+      "href": "https://eosc.cern/get-started#for-operators",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "View the full catalogue",
+      "href": "https://eosc.cern/services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CERN Open Data Data Discovery Access collision data, simulated datasets, and educational resources from CERN experiments.",
+      "href": "https://opendata.cern.ch",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CERN VRE Interactive Analysis Powered by SWAN (Service for Web based ANalysis) — a platform to perform interactive data analysis in the cloud using Jupyter notebooks.",
+      "href": "https://swan-eosc.cern.ch",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CERNBox Storage Cloud sync and share service allowing users to store and share data seamlessly across all their devices.",
+      "href": "https://eosc.cernbox.cern.ch",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "REANA Workflow Execution Reusable Analysis platform. Allows researchers to run containerised data analysis pipelines on distributed compute clouds.",
+      "href": "https://reana.cern.ch",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Rucio Data Management Scientific Data Management system providing a complete and scalable solution for managing large volumes of data across globally distributed centres.",
+      "href": "https://eosc-webui.rucioit.cern.ch/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Zenodo Publishing General-purpose open repository enabling researchers to deposit educational materials, datasets, software, and publications.",
+      "href": "https://zenodo.org",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "View the full catalogue",
+      "href": "https://eosc.cern/services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Access the VRE",
+      "href": "https://swan-eosc.cern.ch/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Browse Analyses",
+      "href": "https://eosc.cern/analysis",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "See the rollout stages →",
+      "href": "https://eosc.cern/about/cern-node#stages",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "View the status page →",
+      "href": "https://eosc.cern/status",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Learn more at openscience.cern",
+      "href": "https://openscience.cern/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CERN",
+      "href": "https://eosc.cern/about/cern",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "The CERN Node",
+      "href": "https://eosc.cern/about/cern-node",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Scientific Collaboration",
+      "href": "https://eosc.cern/about/collaboration",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CERN Node on eosc.eu ↗",
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-cern",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://eosc.cern/contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "FAQ",
+      "href": "https://eosc.cern/faq",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Changelog",
+      "href": "https://eosc.cern/changelog",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Node Status",
+      "href": "https://eosc.cern/status",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Policies",
+      "href": "https://eosc.cern/policies",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "CERN ↗",
+      "href": "https://cern.ch",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "eosc.eu ↗",
+      "href": "https://eosc.eu",
       "tag": "a",
       "visible": true
     }
   ],
-  "meta_description": "",
+  "meta_description": "CERN Node for the EOSC Federation - Research, Analyses, Repositories",
   "error": "",
   "screenshot": "cern.png",
   "crawl_depth": 1,
-  "children": [],
-  "children_skipped": [],
-  "crawl_note": "depth 1: 6 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "children": [
+    {
+      "url": "https://eosc.cern/contact",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Contact",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.cern/contact",
+      "title": "CERN Node",
+      "lang_attr": "en",
+      "main_text": "Contact The Node offers two support channels. Each channel suits a different kind of request. EOSC Federation Forum Use the Forum for a question with a lasting answer, such as how something works or why an error occurs. Other users can find the answer later. Browse the CERN Node category Ask a new question CERN Node Helpdesk Open a helpdesk ticket for an incident, an outage, or an access request. Use it also for any task that needs an owner and a deadline. The team tracks the ticket until it closes. eosc-service-desk@cern.ch Not sure which channel to use? Start with the Forum. The team opens a ticket for you if the request needs one. For questions about the EOSC Federation more broadly, see the EOSC Association .",
+      "full_text": "The CERN Node is not in production yet. Access to services is not guaranteed, and content and features may still change. CERN | Accelerating science Directory Get Started About Services Analysis Training Help Sign in Contact The Node offers two support channels. Each channel suits a different kind of request. EOSC Federation Forum Use the Forum for a question with a lasting answer, such as how something works or why an error occurs. Other users can find the answer later. Browse the CERN Node category Ask a new question CERN Node Helpdesk Open a helpdesk ticket for an incident, an outage, or an access request. Use it also for any task that needs an owner and a deadline. The team tracks the ticket until it closes. eosc-service-desk@cern.ch Not sure which channel to use? Start with the Forum. The team opens a ticket for you if the request needs one. For questions about the EOSC Federation more broadly, see the EOSC Association . CERN Node Integrating CERN's research infrastructure into the European Open Science Cloud. About CERN The CERN Node Scientific Collaboration CERN Node on eosc.eu ↗ Contact Contact FAQ Changelog Node Status Policies CERN ↗ © 2026 CERN — European Organization for Nuclear Research v1.0.3 eosc.eu ↗",
+      "links": [
+        {
+          "href": "https://home.cern",
+          "text": "CERN | Accelerating science",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch/directory",
+          "text": "Directory",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/",
+          "text": "EOSC Node CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/get-started",
+          "text": "Get Started",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/login",
+          "text": "Sign in",
+          "visible": true
+        },
+        {
+          "href": "https://user-forum.eosc.eu/c/eosc-federation/cern-node/11",
+          "text": "Browse the CERN Node category",
+          "visible": true
+        },
+        {
+          "href": "https://user-forum.eosc.eu/new-topic?category=eosc-federation/cern-node/11",
+          "text": "Ask a new question",
+          "visible": true
+        },
+        {
+          "href": "mailto:eosc-service-desk@cern.ch",
+          "text": "eosc-service-desk@cern.ch",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu",
+          "text": "EOSC Association",
+          "visible": true
+        },
+        {
+          "href": "https://home.cern/",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern-node",
+          "text": "The CERN Node",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/collaboration",
+          "text": "Scientific Collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-cern",
+          "text": "CERN Node on eosc.eu ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/changelog",
+          "text": "Changelog",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/status",
+          "text": "Node Status",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch",
+          "text": "CERN ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu",
+          "text": "eosc.eu ↗",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc.cern/about/cern-node#stages",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "See the rollout stages →",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.cern/about/cern-node#stages",
+      "title": "CERN Node",
+      "lang_attr": "en",
+      "main_text": "The CERN Node A first-wave node of the EOSC Federation The CERN Node strengthens the EOSC Federation by providing high-TRL services and technology essential for high-energy physics and interdisciplinary research. It integrates CERN's established platforms, including Rucio, REANA, CERNBox, Zenodo, and the CERN Virtual Research Environment, into a federated European infrastructure. The objective is to support the exploitation of FAIR CERN Open Data through reproducible workflows, analysis facilities, and cross-disciplinary collaboration, making particle physics data and tools accessible to the broader scientific community. Rollout stages Stages describe what the Node offers you. Programme phases, further down this page, describe how we are building it. Stage 1 In progress Education and outreach Education & Outreach-Focused Node Schools, universities, teachers and students, and anyone meeting real particle-physics data for the first time. The Node opens with the full CERN Open Data corpus, curated tutorials, and pre-configured analyses that run end to end in the browser with no setup, in the SWAN-powered VRE and as reproducible REANA workflows. This is the default experience for anyone who signs in. ✓ The full CERN Open Data corpus ✓ Curated tutorials ✓ Ready-made analyses that run end to end via the VRE ✓ A session sized for teaching and first analyses Good to know: Sessions are shared and modest: enough for a classroom exercise or a first real analysis, not for a large study. Signing in gets you this default experience, but each underlying tool (e.g. the VRE, REANA, CERNBox) is still requested individually from the services catalogue, not granted automatically. At public launch (October 2026) Stage 2 In progress Research on open data Education and Research Node for Open Data Theorists, phenomenologists, and researchers taking a study on CERN open data to research grade. Everything in stage 1, and the Node also supports real research: collaborators bring their own code and run autonomous analysis against the open-data corpus, and package the result as a reproducible REANA workflow of their own. ✓ Autonomous analysis with your own code ✓ Package your own workflows for REANA ✓ Allocations beyond the teaching-sized default where the science needs them Good to know: Capacity is finite and shared, so anything beyond the default is decided case by case rather than granted automatically. The software delivery path for bring-your-own-code is still being designed. At public launch (October 2026) Stage 3 Planned Multi-tier research node Multi-tiered Research Node with Extra Services for CERN Users The open-data community, joined by CERN users working on the LHC and other experiments. A multi-tier, research-capable platform within the EOSC Federation. Here, CERN users get full access to the power and capabilities of the central CERN facility on top of the Node's baseline services, and the scope moves beyond open data: researchers can work directly with their experiments' own data. ✓ Full access to the central CERN facility's compute and storage power ✓ Work with experiment data, not just the open-data corpus ✓ Access for CERN users to the Node's baseline services Good to know: This stage is planned, not scheduled. After launch What to expect The Node is public research infrastructure with finite, shared capacity. It is not a commercial cloud, and it does not try to be: sessions are sized for analysis of open data, and fair-use limits apply. If your work needs more than that, get in touch and we will look at it case by case. For concrete figures, see the FAQ . Coming to this page Documentation and features we plan adding as the Node matures. User / use policy In progress Terms governing who can use the Node and how. At public launch (October 2026) Flexible, customisable quota limits Planned A more granular resource-allocation model, beyond today's fixed teaching-sized default. After launch (targeted Q1 2027) Architecture description In progress How the Node's services fit together technically. At public launch (October 2026) Use cases documentation In progress Worked examples of how different kinds of users put the Node to work. After launch (targeted Q4 2026) Track live service uptime on the status page , browse the full services catalogue , check the FAQ , or see who else is involved on the Scientific Collaboration page. This Node is also listed on the EOSC Federation site ↗ .",
+      "full_text": "The CERN Node is not in production yet. Access to services is not guaranteed, and content and features may still change. CERN | Accelerating science Directory Get Started About Services Analysis Training Help Sign in On This Page The CERN Node Rollout Stages The CERN Node A first-wave node of the EOSC Federation The CERN Node strengthens the EOSC Federation by providing high-TRL services and technology essential for high-energy physics and interdisciplinary research. It integrates CERN's established platforms, including Rucio, REANA, CERNBox, Zenodo, and the CERN Virtual Research Environment, into a federated European infrastructure. The objective is to support the exploitation of FAIR CERN Open Data through reproducible workflows, analysis facilities, and cross-disciplinary collaboration, making particle physics data and tools accessible to the broader scientific community. Rollout stages Stages describe what the Node offers you. Programme phases, further down this page, describe how we are building it. Stage 1 In progress Education and outreach Education & Outreach-Focused Node Schools, universities, teachers and students, and anyone meeting real particle-physics data for the first time. The Node opens with the full CERN Open Data corpus, curated tutorials, and pre-configured analyses that run end to end in the browser with no setup, in the SWAN-powered VRE and as reproducible REANA workflows. This is the default experience for anyone who signs in. ✓ The full CERN Open Data corpus ✓ Curated tutorials ✓ Ready-made analyses that run end to end via the VRE ✓ A session sized for teaching and first analyses Good to know: Sessions are shared and modest: enough for a classroom exercise or a first real analysis, not for a large study. Signing in gets you this default experience, but each underlying tool (e.g. the VRE, REANA, CERNBox) is still requested individually from the services catalogue, not granted automatically. At public launch (October 2026) Stage 2 In progress Research on open data Education and Research Node for Open Data Theorists, phenomenologists, and researchers taking a study on CERN open data to research grade. Everything in stage 1, and the Node also supports real research: collaborators bring their own code and run autonomous analysis against the open-data corpus, and package the result as a reproducible REANA workflow of their own. ✓ Autonomous analysis with your own code ✓ Package your own workflows for REANA ✓ Allocations beyond the teaching-sized default where the science needs them Good to know: Capacity is finite and shared, so anything beyond the default is decided case by case rather than granted automatically. The software delivery path for bring-your-own-code is still being designed. At public launch (October 2026) Stage 3 Planned Multi-tier research node Multi-tiered Research Node with Extra Services for CERN Users The open-data community, joined by CERN users working on the LHC and other experiments. A multi-tier, research-capable platform within the EOSC Federation. Here, CERN users get full access to the power and capabilities of the central CERN facility on top of the Node's baseline services, and the scope moves beyond open data: researchers can work directly with their experiments' own data. ✓ Full access to the central CERN facility's compute and storage power ✓ Work with experiment data, not just the open-data corpus ✓ Access for CERN users to the Node's baseline services Good to know: This stage is planned, not scheduled. After launch What to expect The Node is public research infrastructure with finite, shared capacity. It is not a commercial cloud, and it does not try to be: sessions are sized for analysis of open data, and fair-use limits apply. If your work needs more than that, get in touch and we will look at it case by case. For concrete figures, see the FAQ . Coming to this page Documentation and features we plan adding as the Node matures. User / use policy In progress Terms governing who can use the Node and how. At public launch (October 2026) Flexible, customisable quota limits Planned A more granular resource-allocation model, beyond today's fixed teaching-sized default. After launch (targeted Q1 2027) Architecture description In progress How the Node's services fit together technically. At public launch (October 2026) Use cases documentation In progress Worked examples of how different kinds of users put the Node to work. After launch (targeted Q4 2026) Track live service uptime on the status page , browse the full services catalogue , check the FAQ , or see who else is involved on the Scientific Collaboration page. This Node is also listed on the EOSC Federation site ↗ . CERN Node Integrating CERN's research infrastructure into the European Open Science Cloud. About CERN The CERN Node Scientific Collaboration CERN Node on eosc.eu ↗ Contact Contact FAQ Changelog Node Status Policies CERN ↗ © 2026 CERN — European Organization for Nuclear Research v1.0.3 eosc.eu ↗",
+      "links": [
+        {
+          "href": "https://home.cern",
+          "text": "CERN | Accelerating science",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch/directory",
+          "text": "Directory",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/",
+          "text": "EOSC Node CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/get-started",
+          "text": "Get Started",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/login",
+          "text": "Sign in",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/contact",
+          "text": "get in touch",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/status",
+          "text": "status page",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/services",
+          "text": "services catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/collaboration",
+          "text": "Scientific Collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-cern",
+          "text": "the EOSC Federation site ↗",
+          "visible": true
+        },
+        {
+          "href": "https://home.cern/",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern-node",
+          "text": "The CERN Node",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/collaboration",
+          "text": "Scientific Collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-cern",
+          "text": "CERN Node on eosc.eu ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/changelog",
+          "text": "Changelog",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/status",
+          "text": "Node Status",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch",
+          "text": "CERN ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu",
+          "text": "eosc.eu ↗",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc.cern/about/cern",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "CERN",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.cern/about/cern",
+      "title": "CERN Node",
+      "lang_attr": "en",
+      "main_text": "CERN The European Organization for Nuclear Research CERN is one of the world's largest centres for scientific research, straddling the Franco-Swiss border near Geneva. Founded in 1954, it is a collaboration between its Member States that operates the world's largest particle physics laboratory, home to the Large Hadron Collider (LHC) and the experiments that use it, including ATLAS, CMS, ALICE, and LHCb. CERN's scientific programme has produced discoveries that reshape our understanding of the universe, most notably the 2012 observation of the Higgs boson. Beyond physics, CERN has a long history of open collaboration and technology transfer: the World Wide Web itself was created at CERN in 1989 to help physicists share information. Our mission Fundamental Physics Research Perform world-class research to uncover what the universe is made of and how it works, from the Higgs boson to the open questions beyond the Standard Model. Advanced Infrastructure Provide unique particle accelerators and detectors, pushing them to the frontiers of human knowledge in a sustainable and environmentally responsible way. Global Collaboration Unite people from all over the world to push the frontiers of science and technology, for the benefit of all: a model of peaceful, open international cooperation. Education & Engagement Train the scientists and engineers of tomorrow, and share the excitement of fundamental science with everyone. That same culture of openness drives CERN's participation in open science today: curated open datasets from LHC experiments, open-source scientific software used across the research community, and infrastructure built to be shared far beyond particle physics. The CERN Node is one expression of that mission, making CERN's data, tools, and expertise available to the broader European research community through the European Open Science Cloud. Learn more at home.cern",
+      "full_text": "The CERN Node is not in production yet. Access to services is not guaranteed, and content and features may still change. CERN | Accelerating science Directory Get Started About Services Analysis Training Help Sign in On This Page About CERN CERN The European Organization for Nuclear Research CERN is one of the world's largest centres for scientific research, straddling the Franco-Swiss border near Geneva. Founded in 1954, it is a collaboration between its Member States that operates the world's largest particle physics laboratory, home to the Large Hadron Collider (LHC) and the experiments that use it, including ATLAS, CMS, ALICE, and LHCb. CERN's scientific programme has produced discoveries that reshape our understanding of the universe, most notably the 2012 observation of the Higgs boson. Beyond physics, CERN has a long history of open collaboration and technology transfer: the World Wide Web itself was created at CERN in 1989 to help physicists share information. Our mission Fundamental Physics Research Perform world-class research to uncover what the universe is made of and how it works, from the Higgs boson to the open questions beyond the Standard Model. Advanced Infrastructure Provide unique particle accelerators and detectors, pushing them to the frontiers of human knowledge in a sustainable and environmentally responsible way. Global Collaboration Unite people from all over the world to push the frontiers of science and technology, for the benefit of all: a model of peaceful, open international cooperation. Education & Engagement Train the scientists and engineers of tomorrow, and share the excitement of fundamental science with everyone. That same culture of openness drives CERN's participation in open science today: curated open datasets from LHC experiments, open-source scientific software used across the research community, and infrastructure built to be shared far beyond particle physics. The CERN Node is one expression of that mission, making CERN's data, tools, and expertise available to the broader European research community through the European Open Science Cloud. Learn more at home.cern CERN Node Integrating CERN's research infrastructure into the European Open Science Cloud. About CERN The CERN Node Scientific Collaboration CERN Node on eosc.eu ↗ Contact Contact FAQ Changelog Node Status Policies CERN ↗ © 2026 CERN — European Organization for Nuclear Research v1.0.3 eosc.eu ↗",
+      "links": [
+        {
+          "href": "https://home.cern",
+          "text": "CERN | Accelerating science",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch/directory",
+          "text": "Directory",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/",
+          "text": "EOSC Node CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/get-started",
+          "text": "Get Started",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/login",
+          "text": "Sign in",
+          "visible": true
+        },
+        {
+          "href": "https://home.cern/about/who-we-are/our-mission",
+          "text": "Learn more at home.cern",
+          "visible": true
+        },
+        {
+          "href": "https://home.cern/",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern-node",
+          "text": "The CERN Node",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/collaboration",
+          "text": "Scientific Collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-cern",
+          "text": "CERN Node on eosc.eu ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/changelog",
+          "text": "Changelog",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/status",
+          "text": "Node Status",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch",
+          "text": "CERN ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu",
+          "text": "eosc.eu ↗",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [
+    "https://eosc.cern/about/collaboration (cap for point 2)"
+  ],
+  "crawl_note": "depth 1: 39 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point"
 }

@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.1
 
-Run `web-10` · 2026-09-28T13:36:37+00:00 · 13 nodes · one page request per node plus 28 followed link(s) in total (depth 1).
+Run `web-11` · 2026-09-28T13:51:46+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -11,7 +11,7 @@ Run `web-10` · 2026-09-28T13:36:37+00:00 · 13 nodes · one page request per no
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| CERN | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
+| CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
@@ -141,46 +141,48 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - detected language: en (confidence 1.0)
 
 ### CERN
-<https://eosc-auth.cern.ch/login>
+<https://eosc.cern/>
 
-- **1** 🟠 review — HTTP 200 but only 127 characters rendered. The page may require JavaScript the tool did not execute, or may be a shell.
-  - HTTP 200
-  - text length: 127
-  - *Reviewer action:* Open the page in a browser and confirm content is served anonymously.
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 5969 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 1 distinct external host(s) linked from the landing page
-  - cern.service-now.com (Contact Support, Privacy policy)
-  - EOSC AAI indicators seen: myaccessid
+  - 9 distinct external host(s) linked from the landing page
+  - cern.ch (CERN ↗, Directory)
+  - eosc-webui.rucioit.cern.ch (Rucio Data Management Scientific Data Management system providing a complete and scalable solution for managing large volumes of data across globally distributed centres.)
+  - eosc.cernbox.cern.ch (CERNBox Storage Cloud sync and share service allowing users to store and share data seamlessly across all their devices.)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "Welcome to CERN-EOSC-NODE Sign in with EOSC Local credentials Not a member? Apply for an account Privacy policy Contact Support..."
-  - no organisation-like names matched by pattern
+  - meta description: "CERN Node for the EOSC Federation - Research, Analyses, Repositories"
+  - opening main text: "EOSC Federation · First wave Node The CERN Node for Open Science Integrating CERN's world-class research services and FAIR data into the European Open Science Cloud, enabling reproducible workflows, open datasets, and cross-disciplinary collaboration for researchers everywhere. Get Started Explore Services Try an Analysis What is the CERN Node? Part of the European Open Science Cloud Federation Th..."
+  - organisation-like names found: Competence Centre; Durham University; EOSC Association
+  - about page one level down: https://eosc.cern/about/cern-node#stages (HTTP 200) opening text: "The CERN Node A first-wave node of the EOSC Federation The CERN Node strengthens the EOSC Federation by providing high-TRL services and technology essential for high-energy physics and interdisciplinary research. It integrates CERN's established platforms, inc..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
-  - 0 image/SVG element(s) examined, none referencing EOSC
-  - mentions of EOSC in page text: 2
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
+  - EOSC-referencing image asset(s): 2
+  - img: EOSC Node CERN
+  - img: EOSC Node CERN
   - NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched
-  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
-- **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: the document is essentially empty (127 chars of text in total)
-  - 6 link(s) examined, none pointing to eosc.eu
-  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-cern/ but is not linked from here
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
+  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "CERN Node on eosc.eu ↗" -> https://eosc.eu/building-the-eosc-federation/eosc-node-cern
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
-  - 6 outbound link(s) on the landing page
-  - main text length: 127 characters
+  - 39 outbound link(s) on the landing page
+  - main text length: 5456 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 6 link(s) examined, none matching an Acceptable Use Policy
+  - 39 link(s) examined, none matching an Acceptable Use Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 6 link(s) examined, none matching a User Access Policy
+  - 39 link(s) examined, none matching a User Access Policy
   - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
-  - "Contact Support" -> https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM
-  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
+- **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
+  - "Contact" -> https://eosc.cern/contact
+  - followed: https://eosc.cern/contact -> HTTP 200
+  - helpdesk wording on that page: Helpdesk, ticket
+  - *Reviewer action:* Confirm the route reaches the node's user support.
 - **7** 🟢 PASS — The main content is English and the page declares English.
-  - declared lang attribute: "en_US"
-  - detected language: en (confidence 0.97)
+  - declared lang attribute: "en"
+  - detected language: en (confidence 1.0)
 
 ### EOSC Node Czechia
 <https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia>

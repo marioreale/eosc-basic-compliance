@@ -7,7 +7,7 @@ Checklist v3.1** (24 September 2026). One result per checklist point, per node.
 a headless browser. The tool then follows **at most one level** of links, and only
 links that can actually settle a checklist point — a policy, a contact page, an
 about page. Everything else is left alone. Across the thirteen nodes assessed on
-28 September 2026 that was **28 extra requests** at the default depth of 1,
+28 September 2026 that was **31 extra requests** at the default depth of 1,
 spaced 1.2 s apart, with `robots.txt` honoured per host. Evidence is saved to disk and every check reads only that
 saved evidence, so re-running the rules costs nothing.
 
@@ -37,20 +37,21 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-10`, and it has not been reviewed yet.** It
-> was collected on 28 September 2026 at 13:36 UTC by the GitHub workflow
-> ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417))
+> **The published report is run `web-11`, and it has not been reviewed yet.** It
+> was collected on 28 September 2026 at 13:48 UTC by the GitHub workflow
+> ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625))
 > against **checklist v3.1** (24 September 2026). It is the first run with
-> **EOSC Node Poland** (`https://eosc.pl/`, approved name "EOSC Node | Poland"),
-> which replaced a node listed by mistake on 28 September 2026. The previous
-> published run was `web-9` ([run 36275685119](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36275685119)),
-> which followed runs `web-8`, `web-6`, `web-5` and `web-4` of 26 September. The
-> hand review of the reviewed run of 24 September is kept as history in
+> CERN's new Node Landing Page, `https://eosc.cern/`, and the second with
+> **EOSC Node Poland** (`https://eosc.pl/`), which replaced a node listed by
+> mistake on 28 September 2026. It follows `web-10`
+> ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417)) of the same day and the
+> runs of 26 September (`web-4` to `web-9`). The hand review of the reviewed
+> run of 24 September is kept as history in
 > [results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md). Its findings
 > still apply wherever a page has not changed, but it does not cover this run.
 >
-> Apart from Poland's new row, all 120 verdicts of `web-10` are the same as
-> those of `web-9`, which in turn repeated `web-8`, `web-6`, `web-5` and `web-4`.
+> Apart from CERN's row, all 120 verdicts of `web-11` are the same as those of
+> `web-10`.
 
 All thirteen configured nodes were fetched on 28 September 2026 at `--depth 1`
 and assessed against the official unscoped names list. None was skipped.
@@ -59,14 +60,15 @@ The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 47 PASS · 🔴 8 FAIL · 🟠 75 review · 0 ERROR.
+130 cells: 🟢 49 PASS · 🔴 8 FAIL · 🟠 73 review · 0 ERROR.
 
-> **CERN's row predates its new landing page.** Since 28 September 2026 CERN's
-> Node Landing Page is `https://eosc.cern/`. The published row was collected
-> from the previous URL, an INDIGO IAM sign-in form, and describes that page,
-> not the new one. It stays as published until the next workflow run.
-
-- **EOSC Node Poland** appears for the first time, with 4 PASS, 1 FAIL and 5
+- **CERN** was assessed at its new Node Landing Page, `https://eosc.cern/`, for
+  the first time: 4 PASS, 0 FAIL and 6 review. Points 1 and 4 moved from review
+  to `PASS`: the page is public, with real content, and links to its own
+  `eosc.eu` entry. Points 6 (a Contact page with a helpdesk) and 7 pass as
+  before. Point 3 is review: the logo reads "EOSC Node | CERN", but the name is
+  not in the page text. The previous URL was an INDIGO IAM sign-in form.
+- **EOSC Node Poland**, first assessed in `web-10`, has 4 PASS, 1 FAIL and 5
   review. The page is public (point 1), in English (point 7), links to its
   Terms of use (5b) and to `support@eosc.pl` (6). Point 4 fails because its only
   `eosc.eu` link is the homepage, not its own entry
@@ -102,9 +104,8 @@ their own:
   (Poland) only to the `eosc.eu` homepage; the checklist explicitly excludes
   both.
 
-BBMRI-ERIC, EOSC DTO, EUDAT and Slovakia link correctly. CERN's previous sign-in page has
-no such link, but it is left to review rather than failed, and GÉANT's page could
-not be read. Each failure names the exact URL that is missing, so the fix is a
+BBMRI-ERIC, CERN, EOSC DTO, EUDAT and Slovakia link correctly, and GÉANT's page
+could not be read. Each failure names the exact URL that is missing, so the fix is a
 one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and
@@ -253,7 +254,7 @@ nodes; `assess`, `points` and `show` work offline.
 | `--approved-names <path>` | A list of approved node names for point 3, replacing `checklist/approved-names.txt`. `node-id: Name` ties a name to one node; a bare name counts for every node. |
 | `--no-approved-names` | Use no name list at all; point 3's name requirement is then not assessed. |
 | `--strict-separators` | Match the separators in approved names exactly. By default spaces, `\|`, `-`, `–`, `:`, `/` and `·` count as equivalent. |
-| `--run <label>` | A label for the run, recorded in the report, such as `web-10` or `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
+| `--run <label>` | A label for the run, recorded in the report, such as `web-11` or `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
 
 **Where results go**
 

@@ -1,6 +1,6 @@
 {
-  "run_id": "web-10",
-  "generated_at": "2026-09-28T13:36:37+00:00",
+  "run_id": "web-11",
+  "generated_at": "2026-09-28T13:51:46+00:00",
   "checklist": {
     "checklist_version": "3.1",
     "checklist_date": "2026-09-24",
@@ -111,7 +111,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-09-28T13:33:29+00:00",
+        "fetched_at": "2026-09-28T13:48:50+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -305,31 +305,75 @@
     {
       "id": "cern",
       "name": "CERN",
-      "url": "https://eosc-auth.cern.ch/login",
+      "url": "https://eosc.cern/",
       "ad_hoc": false,
       "fetch": {
         "http_status": 200,
-        "final_url": "https://eosc-auth.cern.ch/login",
-        "fetched_at": "2026-09-28T13:33:50+00:00",
+        "final_url": "https://eosc.cern/",
+        "fetched_at": "2026-09-28T13:49:11+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
         "crawl_depth": 1,
-        "crawl_note": "depth 1: 6 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point",
-        "children": [],
-        "children_skipped": []
+        "crawl_note": "depth 1: 39 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point",
+        "children": [
+          {
+            "url": "https://eosc.cern/contact",
+            "final_url": "https://eosc.cern/contact",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Contact",
+            "http_status": 200,
+            "title": "CERN Node",
+            "chars": 722,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.cern/about/cern-node#stages",
+            "final_url": "https://eosc.cern/about/cern-node#stages",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "See the rollout stages →",
+            "http_status": 200,
+            "title": "CERN Node",
+            "chars": 4447,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.cern/about/cern",
+            "final_url": "https://eosc.cern/about/cern",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "CERN",
+            "http_status": 200,
+            "title": "CERN Node",
+            "chars": 1904,
+            "error": ""
+          }
+        ],
+        "children_skipped": [
+          "https://eosc.cern/about/collaboration (cap for point 2)"
+        ]
       },
       "results": [
         {
           "point_id": "1",
           "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "MANUAL_REVIEW",
-          "message": "HTTP 200 but only 127 characters rendered. The page may require JavaScript the tool did not execute, or may be a shell.",
+          "verdict": "PASS",
+          "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200",
-            "text length: 127"
+            "HTTP 200 anonymously, 5969 characters of text rendered"
           ],
-          "reviewer_action": "Open the page in a browser and confirm content is served anonymously."
+          "reviewer_action": ""
         },
         {
           "point_id": "1R",
@@ -337,9 +381,17 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
-            "1 distinct external host(s) linked from the landing page",
-            "cern.service-now.com (Contact Support, Privacy policy)",
-            "EOSC AAI indicators seen: myaccessid"
+            "9 distinct external host(s) linked from the landing page",
+            "cern.ch (CERN ↗, Directory)",
+            "eosc-webui.rucioit.cern.ch (Rucio Data Management Scientific Data Management system providing a complete and scalable solution for managing large volumes of data across globally distributed centres.)",
+            "eosc.cernbox.cern.ch (CERNBox Storage Cloud sync and share service allowing users to store and share data seamlessly across all their devices.)",
+            "home.cern (CERN, CERN | Accelerating science)",
+            "opendata.cern.ch (CERN Open Data Data Discovery Access collision data, simulated datasets, and educational resources from CERN experiments.)",
+            "openscience.cern (Learn more at openscience.cern)",
+            "reana.cern.ch (REANA Workflow Execution Reusable Analysis platform. Allows researchers to run containerised data analysis pipelines on distributed compute clouds.)",
+            "swan-eosc.cern.ch (Access the VRE, CERN VRE Interactive Analysis Powered by SWAN (Service for Web based ANalysis) — a platform to perform interactive data analysis in the cloud using Jupyter notebooks.)",
+            "zenodo.org (Zenodo Publishing General-purpose open repository enabling researchers to deposit educational materials, datasets, software, and publications.)",
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -349,8 +401,10 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "opening main text: \"Welcome to CERN-EOSC-NODE Sign in with EOSC Local credentials Not a member? Apply for an account Privacy policy Contact Support...\"",
-            "no organisation-like names matched by pattern"
+            "meta description: \"CERN Node for the EOSC Federation - Research, Analyses, Repositories\"",
+            "opening main text: \"EOSC Federation · First wave Node The CERN Node for Open Science Integrating CERN's world-class research services and FAIR data into the European Open Science Cloud, enabling reproducible workflows, open datasets, and cross-disciplinary collaboration for researchers everywhere. Get Started Explore Services Try an Analysis What is the CERN Node? Part of the European Open Science Cloud Federation Th...\"",
+            "organisation-like names found: Competence Centre; Durham University; EOSC Association",
+            "about page one level down: https://eosc.cern/about/cern-node#stages (HTTP 200) opening text: \"The CERN Node A first-wave node of the EOSC Federation The CERN Node strengthens the EOSC Federation by providing high-TRL services and technology essential for high-energy physics and interdisciplinary research. It integrates CERN's established platforms, inc...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -358,24 +412,24 @@
           "point_id": "3",
           "title": "EOSC logo and official node name visible",
           "verdict": "MANUAL_REVIEW",
-          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
+          "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.",
           "evidence": [
-            "0 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 2",
+            "EOSC-referencing image asset(s): 2",
+            "img: EOSC Node CERN",
+            "img: EOSC Node CERN",
             "NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
-          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
+          "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
         },
         {
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No link to eosc.eu was found, but the page yielded too little to conclude absence: the document is essentially empty (127 chars of text in total)",
+          "verdict": "PASS",
+          "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
           "evidence": [
-            "6 link(s) examined, none pointing to eosc.eu",
-            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-cern/ but is not linked from here"
+            "\"CERN Node on eosc.eu ↗\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-cern"
           ],
-          "reviewer_action": "Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation."
+          "reviewer_action": ""
         },
         {
           "point_id": "5a",
@@ -383,8 +437,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
           "evidence": [
-            "6 outbound link(s) on the landing page",
-            "main text length: 127 characters"
+            "39 outbound link(s) on the landing page",
+            "main text length: 5456 characters"
           ],
           "reviewer_action": "List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry."
         },
@@ -394,7 +448,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.",
           "evidence": [
-            "6 link(s) examined, none matching an Acceptable Use Policy"
+            "39 link(s) examined, none matching an Acceptable Use Policy"
           ],
           "reviewer_action": "Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy."
         },
@@ -404,7 +458,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.",
           "evidence": [
-            "6 link(s) examined, none matching a User Access Policy"
+            "39 link(s) examined, none matching a User Access Policy"
           ],
           "reviewer_action": "Check the node's resource entries in the EOSC Catalogue for a User Access Policy."
         },
@@ -412,11 +466,13 @@
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
           "verdict": "PASS",
-          "message": "The landing page links to a route identified as a helpdesk or user support.",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
-            "\"Contact Support\" -> https://cern.service-now.com/service-portal?id=functional_element&name=WLCG-IAM"
+            "\"Contact\" -> https://eosc.cern/contact",
+            "followed: https://eosc.cern/contact -> HTTP 200",
+            "helpdesk wording on that page: Helpdesk, ticket"
           ],
-          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
@@ -424,8 +480,8 @@
           "verdict": "PASS",
           "message": "The main content is English and the page declares English.",
           "evidence": [
-            "declared lang attribute: \"en_US\"",
-            "detected language: en (confidence 0.97)"
+            "declared lang attribute: \"en\"",
+            "detected language: en (confidence 1.0)"
           ],
           "reviewer_action": ""
         }
@@ -439,7 +495,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-09-28T13:33:57+00:00",
+        "fetched_at": "2026-09-28T13:49:24+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -649,7 +705,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-09-28T13:34:15+00:00",
+        "fetched_at": "2026-09-28T13:49:41+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -686,7 +742,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEjdO6MNqKkWtkCoVhFpgwaZynSm1cOzgsXn8PUmqliIBkleee8%2FcGXuKotYNL4M%2FmDW8BkAflYjgvLJmbg2GGtwG3JuS8LBeFeTgfYOcUgxNY51PqhylAiMhse6ZipZDOySVQuudkC8kWrRMZUQH%2FLYLKW0wHn%2FzOxC6Rnqu0MZZb6XVPZlEy0VBtplkgx1LZTwZjvI436fjWOzyqzjLZDZKJWMs37dSxABLg14YXxA2YMN4MInZ%2BD7NeJa354lEj%2BCwz8aSAYk%2Bam2Qd40KEpzhVqBCbkQNyL3km%2FJmxVshF6clXVqa%2Fz2nOchs2ql5n87NHFS1MrBty1WQHXN7nn1KL5XT42vdtuTl4s5qJT%2BjUmv7Pm935qEg3gUg0bV1tfB%2FZ0mTtL9RVbzvpRxqoXRZVQ4QCZ0du%2F78FrMv",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPTwIxEMW%2Fyt562i1bENmGJdlATEjQGFAPXkhpR2nstmun9c%2B3d3cJiIl67bz3mzcznaKoTcOrGPZ2Da8RMCQVIvignZ07i7EGvwH%2FpiXcr1cl2YfQIKcUY9M4HzI1QqnBSsicf6ai5dAOSaUwZifkC0kWLVNb0QG%2F7UJKF23A3%2FwehKmRniq08S446UxPJslyUZItU2xX5Je7dMIKmY7ysUqLCZPpQAoxZkOVi3HRShEjLC0GYUNJ2ICN00GRssldPuSjgl9MHknyAB77bCwbkOSjNhZ516gk0VvuBGrkVtSAPEi%2Bqa5XvBVycVzSuaX533Ocg8ymnZr36fzMg6q1hW1bVlF2zO1p9ik9V04P17ppycvFrTNafiaVMe593u4sQEmCj0CSK%2BdrEf7Okmd5%2F6JV%2BtRLOdRCm0opD4iEzg5df36L2Rc%3D",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -830,7 +886,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.data-terra.org/eosc/",
-        "fetched_at": "2026-09-28T13:34:38+00:00",
+        "fetched_at": "2026-09-28T13:50:02+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
@@ -986,7 +1042,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-09-28T13:34:49+00:00",
+        "fetched_at": "2026-09-28T13:50:11+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
@@ -1190,7 +1246,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-09-28T13:35:06+00:00",
+        "fetched_at": "2026-09-28T13:50:26+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "panosc.png",
@@ -1384,7 +1440,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-09-28T13:35:29+00:00",
+        "fetched_at": "2026-09-28T13:50:42+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -1561,7 +1617,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-09-28T13:35:45+00:00",
+        "fetched_at": "2026-09-28T13:50:57+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
@@ -1743,7 +1799,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-09-28T13:35:57+00:00",
+        "fetched_at": "2026-09-28T13:51:09+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
@@ -1872,7 +1928,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-09-28T13:36:03+00:00",
+        "fetched_at": "2026-09-28T13:51:15+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
@@ -2033,7 +2089,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eoscnode-it.d4science.org/",
-        "fetched_at": "2026-09-28T13:36:14+00:00",
+        "fetched_at": "2026-09-28T13:51:25+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
@@ -2186,7 +2242,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-09-28T13:36:26+00:00",
+        "fetched_at": "2026-09-28T13:51:36+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-sk.png",

@@ -382,8 +382,9 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     Four of the pages carry their approved name in the body, all with a
     separator the official list does not use ("EOSC Node - BBMRI-ERIC",
     "EOSC Node Czechia", "EOSC Node EUDAT", "EOSC Node Slovakia"). This asserts
-    the real-world outcome, not a synthetic one. Evidence of runs web-4 to web-9 (26 September 2026) and web-10
-    (28 September 2026, the first with Poland, whose name is only in its logo). GÉANT's page also carries its name ("EOSC Node GÉANT", as
+    the real-world outcome, not a synthetic one. Evidence of runs web-4 to web-9 (26 September 2026) and web-10 and web-11
+    (28 September 2026: Poland and, in web-11, CERN's new page carry their names
+    only in their logos). GÉANT's page also carries its name ("EOSC Node GÉANT", as
     matched on 24 September), but on 26 September it answered with the
     Cloudflare challenge, so there was no body to match; on 21 September only
     BBMRI-ERIC and EUDAT matched, for the same reason and because Czechia and
