@@ -36,10 +36,12 @@ offline that day, again without contacting any node.
 > the [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
 > **The published run changed on 29 September 2026.** `results/` now holds run
-> `web-11-v3.2`: the evidence of run `web-11`, collected by the GitHub workflow on
-> 28 September 2026 from all thirteen nodes ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)),
-> scored again against v3.2 without contacting any node: 49 PASS, 14 FAIL, 67
-> MANUAL_REVIEW. Under v3.1 the same evidence gave 49 PASS, 8 FAIL and 73
+> `web-12`, collected by the GitHub workflow on 28 September 2026 between 22:34
+> and 22:38 UTC from all thirteen nodes ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)),
+> the first under v3.2: 49 PASS, 14 FAIL, 67 MANUAL_REVIEW. It repeats cell for
+> cell `web-11-v3.2`, the evidence of run `web-11`
+> ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) scored again against v3.2 without
+> contacting any node, which was published briefly before it. Under v3.1 the same evidence gave 49 PASS, 8 FAIL and 73
 > MANUAL_REVIEW; the six new FAILs are 5b and 5c for CERN, Data Terra and PaNOSC.
 > `web-11` was the first run with CERN's new landing page, `https://eosc.cern/`,
 > and followed `web-10` of the same day, the first with EOSC Node Poland, which
@@ -197,7 +199,7 @@ to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
 saying so. `eosc.it` had no address record on 24 September, so that run skipped
 Italy; nothing published depends on the old address. Italy was assessed for the
 first time in run `web-4` on 26 September, from the new address, and again in
-runs `web-5` to `web-11` (the published run is `web-11` re-scored under v3.2).
+runs `web-5` to `web-12` (the published run).
 
 ### Changing a node's URL
 
@@ -258,11 +260,14 @@ from the committed `nodes.yaml` and scored under the default checklist, so no
 other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-11-v3.2
+uv run basic-check assess --run web-12
 ```
 
-To see the same evidence as it was published under v3.1 (run `web-11`, 49 PASS,
-8 FAIL, 73 MANUAL_REVIEW), add `-c checklist/v3.1.yaml --run web-11`.
+Run `web-11` is in the git history: restore its `results/evidence` from commit
+`d3de829` into a scratch directory and assess it there with `--results`, as
+`--run web-11-v3.2` for the v3.2 scoring (49 PASS, 14 FAIL, 67 MANUAL_REVIEW)
+or with `-c checklist/v3.1.yaml --run web-11` for the scoring published on
+28 September (49 PASS, 8 FAIL, 73 MANUAL_REVIEW).
 
 Run `web-10`, collected before CERN's URL changed, needs its own node list
 (`git show 8126aee:nodes.yaml`) passed with `--nodes`.
@@ -1047,9 +1052,9 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-11` (28 September 2026), published re-scored under v3.2 as `web-11-v3.2`, was collected
+**The published run is masked.** Run `web-12` (28 September 2026) was collected
 with masking in place, and a search of all its evidence and reports found no
-personal address or phone number. Two personal names that the masking does not cover were then removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, where it had also been in earlier published runs). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
+personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
 offline. All 120 verdicts and the 44 / 6 / 70 tally were unchanged. A few character counts in the report dropped
 slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to
@@ -1389,7 +1394,7 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-11-v3.2`). Update it to the new run's shape.
+  run `web-12`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:

@@ -2,7 +2,7 @@
   "node_id": "eosc-it",
   "node_name": "EOSC Node Italy",
   "requested_url": "https://eoscnode-it.d4science.org/",
-  "fetched_at": "2026-09-28T13:51:25+00:00",
+  "fetched_at": "2026-09-28T22:37:59+00:00",
   "final_url": "https://eoscnode-it.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -115,7 +115,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eoscnode-it.d4science.org/image/layout_set_logo?img_id=498203629&t=1789349209992",
+      "src": "https://eoscnode-it.d4science.org/image/layout_set_logo?img_id=498203629&t=1790578561442",
       "alt": "EOSC-IT-Node Gateway",
       "aria_label": "",
       "title": "",
@@ -123,7 +123,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203609&t=1790600366699",
+      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203609&t=1790598817511",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -131,7 +131,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203608&t=1790600366702",
+      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203608&t=1790598817514",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -139,7 +139,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559202587&t=1790600366704",
+      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559202587&t=1790598817516",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",

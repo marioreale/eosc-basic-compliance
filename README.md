@@ -37,15 +37,16 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-11-v3.2`, and it has not been reviewed
-> yet.** It is the evidence of run `web-11`, collected on 28 September 2026 at
-> 13:48 UTC by the GitHub workflow
-> ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)), scored again
-> offline against **checklist v3.2** (28 September 2026), which replaced v3.1 on
-> 29 September 2026. No node was contacted for the re-scoring. `web-11` was the
-> first run with CERN's new Node Landing Page, `https://eosc.cern/`, and the
-> second with **EOSC Node Poland** (`https://eosc.pl/`), which replaced a node
-> listed by mistake on 28 September 2026. It followed `web-10`
+> **The published report is run `web-12`, and it has not been reviewed
+> yet.** It was collected on 28 September 2026 between 22:34 and 22:38 UTC by
+> the GitHub workflow ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)), the first run
+> collected under **checklist v3.2** (28 September 2026), which replaced v3.1 on
+> 29 September 2026. It repeats cell for cell `web-11-v3.2`, the evidence of run
+> `web-11` ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) scored again offline against
+> v3.2. `web-11` was the first run with CERN's new Node Landing Page,
+> `https://eosc.cern/`, and the second with **EOSC Node Poland**
+> (`https://eosc.pl/`), which replaced a node listed by mistake on 28 September
+> 2026. Before it came `web-10`
 > ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417)) of the same day and
 > the runs of 26 September (`web-4` to `web-9`). The hand review of the reviewed
 > run of 24 September is kept as history in
@@ -59,7 +60,8 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > page with no link to an AUP or a UAP, which used to be review (the policy
 > might be in the Catalogue), now **fails** 5b or 5c. Under v3.2, six cells moved
 > from review to `FAIL`: 5b and 5c for CERN, Data Terra and PaNOSC. Every other
-> verdict is the same as `web-11` under v3.1 (49 PASS, 8 FAIL, 73 review).
+> verdict is the same as `web-11` under v3.1 (49 PASS, 8 FAIL, 73 review), and
+> the fresh collection `web-12` confirmed all 130 cells.
 
 All thirteen configured nodes were fetched on 28 September 2026 at `--depth 1`
 and assessed against the official unscoped names list. None was skipped.

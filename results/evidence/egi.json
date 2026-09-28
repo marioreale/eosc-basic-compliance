@@ -2,7 +2,7 @@
   "node_id": "egi",
   "node_name": "EGI",
   "requested_url": "https://www.egi.eu/egi-node",
-  "fetched_at": "2026-09-28T13:50:57+00:00",
+  "fetched_at": "2026-09-28T22:37:31+00:00",
   "final_url": "https://www.egi.eu/egi-node",
   "http_status": 200,
   "redirect_chain": [],
@@ -564,7 +564,7 @@
       "visible": true
     },
     {
-      "href": "https://www.egi.eu/person/diego-scardaci/",
+      "href": "https://www.egi.eu/person/person-removed/",
       "text": "Coordination [name was removed], EGI Foundation",
       "visible": true
     },
@@ -1870,7 +1870,7 @@
     },
     {
       "text": "Coordination [name was removed], EGI Foundation",
-      "href": "https://www.egi.eu/person/diego-scardaci/",
+      "href": "https://www.egi.eu/person/person-removed/",
       "tag": "a",
       "visible": true
     },

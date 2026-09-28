@@ -1,6 +1,6 @@
 {
-  "run_id": "web-11-v3.2",
-  "generated_at": "2026-09-28T22:23:57+00:00",
+  "run_id": "web-12",
+  "generated_at": "2026-09-28T22:45:55+00:00",
   "checklist": {
     "checklist_version": "3.2",
     "checklist_date": "2026-09-28",
@@ -112,7 +112,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-09-28T13:48:50+00:00",
+        "fetched_at": "2026-09-28T22:35:23+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -313,7 +313,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.cern/",
-        "fetched_at": "2026-09-28T13:49:11+00:00",
+        "fetched_at": "2026-09-28T22:35:43+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
@@ -498,7 +498,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-09-28T13:49:24+00:00",
+        "fetched_at": "2026-09-28T22:35:56+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -710,7 +710,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-09-28T13:49:41+00:00",
+        "fetched_at": "2026-09-28T22:36:13+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -747,7 +747,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPTwIxEMW%2Fyt562i1bENmGJdlATEjQGFAPXkhpR2nstmun9c%2B3d3cJiIl67bz3mzcznaKoTcOrGPZ2Da8RMCQVIvignZ07i7EGvwH%2FpiXcr1cl2YfQIKcUY9M4HzI1QqnBSsicf6ai5dAOSaUwZifkC0kWLVNb0QG%2F7UJKF23A3%2FwehKmRniq08S446UxPJslyUZItU2xX5Je7dMIKmY7ysUqLCZPpQAoxZkOVi3HRShEjLC0GYUNJ2ICN00GRssldPuSjgl9MHknyAB77bCwbkOSjNhZ516gk0VvuBGrkVtSAPEi%2Bqa5XvBVycVzSuaX533Ocg8ymnZr36fzMg6q1hW1bVlF2zO1p9ik9V04P17ppycvFrTNafiaVMe593u4sQEmCj0CSK%2BdrEf7Okmd5%2F6JV%2BtRLOdRCm0opD4iEzg5df36L2Rc%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUufVtFhNpagVUqWCUAss2FSOM6UWjh08No%2B%2FJ0nVUiRg67n3zJ0Zz5A3qmWldwe9gVcP6IISEayTRi%2BMRt%2BA3YJ9kwIeNuuCHJxrkVGKvm2NdaM6QyFBCxgZ%2B0x5x6E9kgquVMXFCwmWHVNq3gO%2F7VwI47XD3%2FwWuGqQniu0tcYZYdRAJsFqWZBdPp7UeZzkYV5VVZjFOQ%2Bn0QTCNBvv91k6Sa8E76SIHlYaHdeuIEnU6aOrMJneJwlLc5ZGTyR4BItDtmQUkeCjURpZ36gg3mpmOEpkmjeAzAm2LW%2FWrBMyflrSpaX933Oag8xnvZoN6ezcQt1IDbuuXHvRM3fn2Wf0Ujk7Xuu2I6%2BWd0ZJ8RmUSpn3RbczBwVx1gMJro1tuPs7SzyKhxdZh%2FtByqDhUpV1bQGR0Pmx689vMf8C",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -769,7 +769,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 12319 characters of text rendered"
+            "HTTP 200 anonymously, 12326 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -894,7 +894,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.data-terra.org/eosc/",
-        "fetched_at": "2026-09-28T13:50:02+00:00",
+        "fetched_at": "2026-09-28T22:36:34+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
@@ -1050,7 +1050,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-09-28T13:50:11+00:00",
+        "fetched_at": "2026-09-28T22:36:43+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
@@ -1256,7 +1256,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-09-28T13:50:26+00:00",
+        "fetched_at": "2026-09-28T22:36:59+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "panosc.png",
@@ -1450,7 +1450,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-09-28T13:50:42+00:00",
+        "fetched_at": "2026-09-28T22:37:16+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -1628,7 +1628,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-09-28T13:50:57+00:00",
+        "fetched_at": "2026-09-28T22:37:31+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
@@ -1812,7 +1812,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-09-28T13:51:09+00:00",
+        "fetched_at": "2026-09-28T22:37:42+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
@@ -1941,7 +1941,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-09-28T13:51:15+00:00",
+        "fetched_at": "2026-09-28T22:37:48+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
@@ -1959,7 +1959,7 @@
             "link_text": "Terms of use",
             "http_status": 200,
             "title": "Polish Open Science Platform",
-            "chars": 6532,
+            "chars": 6530,
             "error": ""
           }
         ],
@@ -2055,7 +2055,7 @@
           "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
             "\"Terms of use\" -> https://eosc.pl/terms-of-use",
-            "followed: https://eosc.pl/terms-of-use -> HTTP 200, 6532 chars, title: Polish Open Science Platform",
+            "followed: https://eosc.pl/terms-of-use -> HTTP 200, 6530 chars, title: Polish Open Science Platform",
             "policy wording found: Conditions, Policy, You shall, authorized"
           ],
           "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
@@ -2103,7 +2103,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eoscnode-it.d4science.org/",
-        "fetched_at": "2026-09-28T13:51:25+00:00",
+        "fetched_at": "2026-09-28T22:37:59+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
@@ -2257,7 +2257,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-09-28T13:51:36+00:00",
+        "fetched_at": "2026-09-28T22:38:09+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-sk.png",

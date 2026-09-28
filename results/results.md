@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-11-v3.2` · 2026-09-28T22:23:57+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
+Run `web-12` · 2026-09-28T22:45:55+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -236,7 +236,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://eosc-dto.d4science.org/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 12319 characters of text rendered
+  - HTTP 200 anonymously, 12326 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 5 distinct external host(s) linked from the landing page
   - doi.org (EOSC-Marine project)
@@ -583,7 +583,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "Terms of use" -> https://eosc.pl/terms-of-use
-  - followed: https://eosc.pl/terms-of-use -> HTTP 200, 6532 chars, title: Polish Open Science Platform
+  - followed: https://eosc.pl/terms-of-use -> HTTP 200, 6530 chars, title: Polish Open Science Platform
   - policy wording found: Conditions, Policy, You shall, authorized
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
