@@ -37,6 +37,14 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
+> **Interim state, 28 September 2026.** A node listed by mistake has been removed
+> from `nodes.yaml` and replaced by **EOSC Node Poland** (`https://eosc.pl/`,
+> approved name "EOSC Node | Poland"). Until a new workflow run of all thirteen
+> nodes is published, `results/` holds run `web-9` without that row, re-scored
+> offline under the corrected name list: 12 nodes, 120 cells, 43 PASS · 7 FAIL ·
+> 70 review, with Poland not yet collected. The text below still describes
+> `web-9` as it was collected.
+
 > **The published report is run `web-9`, and it has not been reviewed yet.** It
 > was collected on 26 September 2026 at 22:19 UTC by the GitHub workflow
 > ([run 36275685119](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36275685119))
@@ -68,8 +76,8 @@ evidence behind every verdict, is in the report linked above:
 130 cells: 🟢 45 PASS · 🔴 8 FAIL · 🟠 77 review · 0 ERROR.
 
 > **Two rows describe a page, not a node.** CERN's configured URL is an INDIGO
-> IAM sign-in form, and EBRAINS's is the general EBRAINS homepage, which does not
-> mention EOSC. Both rows are published with that caveat, pending each node's
+> IAM sign-in form, and the other row was a node listed by mistake, whose URL was
+> a general homepage that does not mention EOSC. Both rows are published with that caveat, pending each node's
 > registered Website address.
 
 Compared with the reviewed run of 24 September 2026 (twelve nodes, 44 / 6 / 70):
@@ -94,7 +102,7 @@ dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
 read from the live index — but seven of the thirteen landing pages do not link to
 their own:
 
-- five (Data Terra, EOSC Finland, EGI, EBRAINS, Italy) link to nothing on `eosc.eu` at all;
+- five (Data Terra, EOSC Finland, EGI, Italy, and the node listed by mistake) link to nothing on `eosc.eu` at all;
 - two (PaNOSC, Czechia) link only to the federation index page, which the
   checklist explicitly excludes.
 
@@ -266,7 +274,7 @@ nodes; `assess`, `points` and `show` work offline.
 | `bbmri-eric` | BBMRI-ERIC | `eudat` | EUDAT |
 | `cern` | CERN | `egi` | EGI |
 | `eosc-cz` | EOSC Node Czechia | `geant` | GÉANT |
-| `eosc-dto` | EOSC DTO (D4Science) | `ebrains` | EBRAINS |
+| `eosc-dto` | EOSC DTO (D4Science) | `eosc-pl` | EOSC Node Poland |
 | `data-terra` | Data Terra | `eosc-it` | EOSC Node Italy |
 | `eosc-fi` | EOSC Finland | `eosc-sk` | EOSC Node Slovakia |
 | `panosc` | PaNOSC | | |

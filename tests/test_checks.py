@@ -644,15 +644,15 @@ def test_point6_a_funding_page_labelled_support_is_not_a_helpdesk():
 
 
 def test_point6_a_service_support_team_in_page_prose_is_not_the_node_helpdesk():
-    """EBRAINS: a EuroHPC proposal service says "Technical Support" and "support team"."""
+    """A EuroHPC proposal service says "Technical Support" and "support team"."""
     page = realistic(
-        [Link("https://ebrains.eu/data-tools-services/ebrains-support-for-eurohpc-applications",
-              "EBRAINS Support for EuroHPC Applications")],
+        [Link("https://node.example/data-tools-services/support-for-eurohpc-applications",
+              "Support for EuroHPC Applications")],
         children=[_followed(
-            "https://ebrains.eu/data-tools-services/ebrains-support-for-eurohpc-applications",
-            "Technical Support and Benchmarking. To request support, contact the EBRAINS for "
+            "https://node.example/data-tools-services/support-for-eurohpc-applications",
+            "Technical Support and Benchmarking. To request support, contact the "
             "EuroHPC Application Support team by email.",
-            [Link("mailto:base-infra-resources@ebrains.eu", "base-infra-resources@ebrains.eu")],
+            [Link("mailto:base-infra-resources@node.example", "base-infra-resources@node.example")],
         )],
     )
     assert checks.check_6(page).verdict == checks.MANUAL_REVIEW

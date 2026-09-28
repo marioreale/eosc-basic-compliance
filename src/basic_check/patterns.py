@@ -29,7 +29,7 @@ from urllib.parse import unquote, urlparse
 # Candidate wording: worth following a link for, NOT enough to settle point 6.
 # "support" alone is the problem word. On 24 September 2026 it passed three
 # pages that are not helpdesks: "National Support" (a funding programme),
-# "EBRAINS Support for EuroHPC Applications" (a proposal service) and
+# "Support for EuroHPC Applications" (a proposal service) and
 # "Services & Support" (a service overview). It stays here so those links are
 # still followed; HELPDESK_STRONG below decides whether a route is a helpdesk.
 HELPDESK_SPECIFIC = [
@@ -58,9 +58,9 @@ HELPDESK_STRONG = [
 
 # The subset that settles point 6 from the body of a followed page. Qualified
 # "support" phrases are left out on purpose: in a landing-page link label they
-# name a route, but in page prose they describe services. EBRAINS's EuroHPC
-# proposal page says "Technical Support" and "Application Support team" and is
-# still not the node helpdesk. A helpdesk, service desk or ticket system, or a
+# name a route, but in page prose they describe services. A EuroHPC
+# proposal page can say "Technical Support" and "Application Support team" and
+# still not be the node helpdesk. A helpdesk, service desk or ticket system, or a
 # support mailbox, is unambiguous wherever it appears.
 HELPDESK_ON_PAGE = [
     r"(?i)\bhelp\s?desk",

@@ -8,7 +8,7 @@ EOSC Node | PaNOSC
 EOSC Node | EUDAT
 EOSC Node | EGI
 EOSC Node | GÉANT
-EOSC Node | EBRAINS RI
+EOSC Node | Poland
 EOSC Node | Italy
 EOSC Node | Slovakia
 

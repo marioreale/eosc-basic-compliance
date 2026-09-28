@@ -22,7 +22,7 @@ identify a person:
   "Příjmení" is masked where it appears near the address, together with
   a capitalised given name directly before it. Titles such as "Mgr." or "Dr."
   are left alone, because they end in a full stop, and so are all-capital
-  words, which are acronyms (EBRAINS) rather than surnames. A mailbox named
+  words, which are acronyms (PANOSC) rather than surnames. A mailbox named
   after its own domain (``geant@geant.org``) is the organisation's, not a
   person's.
 
@@ -331,7 +331,7 @@ def _mask_names(text: str) -> str:
     for i, w in enumerate(words):
         word = w.group(0)
         # A title ends in a full stop (Mgr., Dr.); an all-capitals word is an
-        # acronym (EBRAINS); a word straight after "/" or "." is part of a URL.
+        # acronym (PANOSC); a word straight after "/" or "." is part of a URL.
         if word.endswith(".") or (word.isupper() and len(word) > 1):
             continue
         if w.start() > 0 and text[w.start() - 1] in "/.@":

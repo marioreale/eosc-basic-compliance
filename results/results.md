@@ -1,10 +1,12 @@
 # EOSC Node Landing Page compliance — checklist v3.1
 
-Run `web-9` · 2026-09-26T22:19:21+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
+Run `web-9-rescored` · 2026-09-28T13:29:32+00:00 · 12 nodes · one page request per node plus 27 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
-**Node names.** 13 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `871161a50fcb…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
+**Node names.** 13 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `46af586bc693…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
+
+> **Skipped by request.** eosc-pl was left out of this run with --skip: not fetched, not assessed and not shown below. This table does not cover every configured node.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
 
@@ -20,7 +22,6 @@ Run `web-9` · 2026-09-26T22:19:21+00:00 · 13 nodes · one page request per nod
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
-| EBRAINS | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 
@@ -536,51 +537,6 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en-US"
-  - detected language: en (confidence 1.0)
-
-### EBRAINS
-<https://ebrains.eu/>
-
-- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 6566 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 5 distinct external host(s) linked from the landing page
-  - bsky.app (Bluesky)
-  - mastodon.social (Mastodon)
-  - www.linkedin.com (LinkedIn)
-  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
-- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - meta description: "An open research infrastructure that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ."
-  - opening main text: "Built for Brain Breakthroughs Europe's Digital Infrastructure for Brain Research Explore data, tools and services EBRAINS RI EBRAINS is an open research infrastructure (RI) that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ. The EBRAINS infrastructure was originally built by the EU-funded Human Brain Project and is now adva..."
-  - organisation-like names found: University
-  - about page one level down: https://ebrains.eu/about (HTTP 200) opening text: "Breadcrumb Start > About About A Pioneering Ecosystem for Neuroscience Breakthroughs Digital Infrastructure for Brain Research Who we are EBRAINS is Europe’s digital infrastructure for brain research. It provides unique tools and data bringing together neurosc..."
-  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
-  - 54 image/SVG element(s) examined, none referencing EOSC
-  - mentions of EOSC in page text: 0
-  - NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched
-  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
-- **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
-  - 128 link(s) examined, none pointing to eosc.eu
-  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
-  - 128 outbound link(s) on the landing page
-  - main text length: 4706 characters
-  - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
-- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 128 link(s) examined, none matching an Acceptable Use Policy
-  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
-  - 128 link(s) examined, none matching a User Access Policy
-  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
-- **6** 🟠 review — A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. A link labelled "support" was found, but that word alone does not identify a helpdesk: it also labels funding programmes and service catalogues. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
-  - "EBRAINS Support for EuroHPC Applications" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications
-  - "Media Contact" -> https://ebrains.eu/news-events/media/media-contact
-  - "Contact Us" -> https://ebrains.eu/contact
-  - followed: https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications -> HTTP 200
-  - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.
-- **7** 🟢 PASS — The main content is English and the page declares English.
-  - declared lang attribute: "en"
   - detected language: en (confidence 1.0)
 
 ### EOSC Node Italy

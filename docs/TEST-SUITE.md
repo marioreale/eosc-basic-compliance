@@ -179,7 +179,7 @@ Two depth-2 runs on 21 September, of 18 and 14 second-hop requests, each changed
 
 ### The node list — a YAML file
 
-The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **thirteen** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `ebrains`, `eosc-it`, `eosc-sk`.
+The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **thirteen** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `eosc-pl`, `eosc-it`, `eosc-sk`.
 
 ```yaml
 nodes:
@@ -640,7 +640,7 @@ Twelve cases pin this — nine test functions, one of them parametrized across a
 
 **Re-running the nine published nodes confirms the blast radius is prose only.** Verdicts and evidence lines are byte-identical before and after — the tally is 28 PASS / 7 FAIL / 55 MANUAL_REVIEW either way. Only `message` and `reviewer_action` changed. BBMRI-ERIC and EUDAT now read "an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to" in place of the denial.
 
-One asymmetry is left deliberately. When no EOSC image asset is found, the summary discusses only the logo gap and says nothing about the name, while the evidence line still reports the name state. That summary makes no false claim, so it was not rewritten; EGI, GÉANT and EBRAINS take that branch in the published run.
+One asymmetry is left deliberately. When no EOSC image asset is found, the summary discusses only the logo gap and says nothing about the name, while the evidence line still reports the name state. That summary makes no false claim, so it was not rewritten; EGI, GÉANT and the node listed by mistake take that branch in the published run.
 
 ---
 
@@ -794,7 +794,7 @@ From `results/results.json`, run `web-9`, collected on 26 September 2026 at 22:1
 | 🟣 ERROR | 0 |
 | **Total** | **130** (13 nodes × 10 points) |
 
-Seven FAILs are point 4. Five landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, EBRAINS, Italy), and two link only to the federation index (PaNOSC, Czechia). The eighth is Italy's point 6: none of its links is a contact route. Italy's page rendered with 15 links, but its main text is short, so both of its FAILs should be looked at by hand.
+Seven FAILs are point 4. Five landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, Italy, and the node listed by mistake), and two link only to the federation index (PaNOSC, Czechia). The eighth is Italy's point 6: none of its links is a contact route. Italy's page rendered with 15 links, but its main text is short, so both of its FAILs should be looked at by hand.
 
 Compared with the run below:
 
@@ -828,9 +828,9 @@ From `results/results.json` as it stood at `800d632`, run `live-2026-09-24-no-it
 | 🟠 MANUAL_REVIEW | 70 |
 | **Total** | **120** (12 nodes × 10 points) |
 
-All six FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, EBRAINS), and two link only to the federation index (PaNOSC, GÉANT). Compared with the run below, EOSC DTO moved from `FAIL` to `PASS` on points 4 and 6. GÉANT was served this time, which settled points 1, 6 and 7 as `PASS` and point 4 as `FAIL`. CERN, Czechia and Slovakia appear for the first time. The point 6 and 5b/5c fixes account for the other two differences: GÉANT 5b is now `PASS`, and EBRAINS 6, which passed on 21 September, is now `MANUAL_REVIEW`. No other cell changed.
+All six FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, and a node that was listed by mistake and was replaced by EOSC Node Poland on 28 September 2026), and two link only to the federation index (PaNOSC, GÉANT). Compared with the run below, EOSC DTO moved from `FAIL` to `PASS` on points 4 and 6. GÉANT was served this time, which settled points 1, 6 and 7 as `PASS` and point 4 as `FAIL`. CERN, Czechia and Slovakia appear for the first time. The point 6 and 5b/5c fixes account for the other two differences: GÉANT 5b is now `PASS`, and point 6 of the node listed by mistake, which passed on 21 September, is now `MANUAL_REVIEW`. No other cell changed.
 
-The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, EBRAINS's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. BBMRI-ERIC's PASS was later upheld, because its contact page lists helpdesk mailboxes. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations were recorded there and have since been fixed in the checks; see "Point 6 and 5b/5c after the review" below. The committed `results/` was then re-assessed with the fixed checks from the same evidence. The review also records that the configured URLs for CERN (a sign-in form) and EBRAINS (the general homepage) are not descriptive landing pages, and both rows are published with that caveat.
+The run was reviewed by hand before publication. The review is in `results/REVIEW-2026-09-24.md`, and it leaves the tool's output untouched. It found three point 6 PASSes that rest on link text alone: Czechia's "National Support" is a funding page, the node listed by mistake's is a EuroHPC proposal service, and BBMRI-ERIC's is a service overview. BBMRI-ERIC's PASS was later upheld, because its contact page lists helpdesk mailboxes. It also found one AUP link the tool missed, on GÉANT, whose link text is prose. Those limitations were recorded there and have since been fixed in the checks; see "Point 6 and 5b/5c after the review" below. The committed `results/` was then re-assessed with the fixed checks from the same evidence. The review also records that the configured URLs for CERN (a sign-in form) and the node listed by mistake (a general homepage) are not descriptive landing pages, and both rows are published with that caveat.
 
 `test_names.py::test_the_official_names_match_the_nodes_that_show_them` was pinned to that evidence. It then expected five matching nodes (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia) in place of two. Re-measured on 25 September against the masked evidence: the node-scoped list finds the same five, and `--strict-separators` finds none of the twelve, because every one of the five writes the name with a different separator from the official list.
 
@@ -845,7 +845,7 @@ A trial run on 25 September 2026, with BBMRI-ERIC's new URL, is **not published*
 
 The review of the 24 September run found four tool issues. The three below are fixed in the checks. The fourth, noting the accepted name separators next to each point 3 match, is still open. The fixes change the assessment only, so the committed evidence was re-assessed offline and no node was contacted again.
 
-- **Point 6 passed on link text alone.** Any link whose label contained "support" was a PASS. Now a bare "support" link is still followed but settles nothing. A PASS needs one of three things: a label or address that names a helpdesk, service desk, ticket system, support team or request; a helpdesk host (`hd.`, `support.`, `helpdesk.`) or mailbox (`support@`, `it@helpdesk.…`); or a followed page that names a helpdesk, service desk or ticket system, or gives such an address. Page prose about "support" no longer counts, because EBRAINS's EuroHPC proposal page says "Technical Support" and "Application Support team". Every followed page is now read, where before only the first was. BBMRI-ERIC's helpdesk mailboxes are on the second.
+- **Point 6 passed on link text alone.** Any link whose label contained "support" was a PASS. Now a bare "support" link is still followed but settles nothing. A PASS needs one of three things: a label or address that names a helpdesk, service desk, ticket system, support team or request; a helpdesk host (`hd.`, `support.`, `helpdesk.`) or mailbox (`support@`, `it@helpdesk.…`); or a followed page that names a helpdesk, service desk or ticket system, or gives such an address. Page prose about "support" no longer counts, because the EuroHPC proposal page of the node listed by mistake says "Technical Support" and "Application Support team". Every followed page is now read, where before only the first was. BBMRI-ERIC's helpdesk mailboxes are on the second.
 - **5b/5c ignored words spelled with hyphens in the address.** GÉANT links its AUP with a sentence as the label, and the words appear only in `/geant-node-acceptable-use-policy/`. Link matching now also reads the address with its separators turned into spaces. The crawler and the checks share that matcher (`patterns.link_haystack`), so a future collection will fetch the page as well.
 - **The 5b/5c hint said "re-run with --depth 1" in every case.** Now it gives the actual reason the target was not fetched: the run did not follow links, the target is a PDF, a cap was reached, the target is on another site, or it was not selected when the evidence was collected. It suggests a re-run only when one would help.
 
@@ -854,7 +854,7 @@ Re-assessing the committed evidence with the fixed checks gives 44 PASS, 6 FAIL 
 | Node | Point | First assessment | Re-assessment (published) | Review determination |
 |---|---|---|---|---|
 | EOSC Node Czechia | 6 | PASS | MANUAL_REVIEW | not met |
-| EBRAINS | 6 | PASS | MANUAL_REVIEW | review |
+| Node listed by mistake | 6 | PASS | MANUAL_REVIEW | review |
 | GÉANT | 5b | MANUAL_REVIEW | PASS (pointer) | met as a pointer |
 
 BBMRI-ERIC's point 6 stays PASS, now on the helpdesk mailboxes its contact page lists (`it@helpdesk.bbmri-eric.eu`, `elsi-helpdesk@…`, `rd@helpdesk.…`) rather than on the "Services & Support" label. The review first proposed "review", considering only `contact@bbmri-eric.eu`. It was revised to "met" on this evidence.
@@ -890,7 +890,7 @@ Two of those three causes are the *tool's own reach* changing, not the nodes cha
 
 That GÉANT row is the safeguard from section 7 working as designed: the tool declines to assess a node it cannot see rather than publishing a block as a compliance failure. It also means the published tally is not a like-for-like comparison with any earlier figure — one node is unassessed rather than compliant, and one node was unreachable last time.
 
-> **The stable finding, across every run since 17 September, is point 4.** Individual verdicts move with network conditions; the point-4 column does not. Six nodes fail it outright in this run — EOSC DTO, Data Terra, EOSC Finland, PaNOSC, EGI and EBRAINS — and GÉANT failed it on index-only grounds at 12:09 before the block, leaving BBMRI-ERIC and EUDAT as the only two that link correctly to their own `eosc.eu` page. That is the finding worth taking to a self-assessment discussion, not the tally.
+> **The stable finding, across every run since 17 September, is point 4.** Individual verdicts move with network conditions; the point-4 column does not. Six nodes fail it outright in this run — EOSC DTO, Data Terra, EOSC Finland, PaNOSC, EGI and the node listed by mistake — and GÉANT failed it on index-only grounds at 12:09 before the block, leaving BBMRI-ERIC and EUDAT as the only two that link correctly to their own `eosc.eu` page. That is the finding worth taking to a self-assessment discussion, not the tally.
 
 The run was collected at `--depth 2`, and **the depth-1 and depth-2 tallies are identical, cell for cell**: 28 / 7 / 55 both ways.
 
@@ -904,7 +904,7 @@ The run was collected at `--depth 2`, and **the depth-1 and depth-2 tallies are 
 | EUDAT | 200 | 7 | 4 |
 | EGI | 200 | 4 | 1 |
 | GÉANT | **403** | 0 | 0 |
-| EBRAINS | 200 | 9 | 5 |
+| Node listed by mistake | 200 | 9 | 5 |
 
 ### Point 3 in the 21 September run, and a correction to the previous edition
 
@@ -915,7 +915,7 @@ Point 3 is `MANUAL_REVIEW` for all nine nodes for a different and more durable r
 | Outcome | Nodes |
 |---|---|
 | An approved name matched on the page | 2 — BBMRI-ERIC, EUDAT |
-| No approved name found in the page body | 6 — EOSC DTO, Data Terra, EOSC Finland, PaNOSC, EGI, EBRAINS |
+| No approved name found in the page body | 6 — EOSC DTO, Data Terra, EOSC Finland, PaNOSC, EGI, the node listed by mistake |
 | Names supplied but no page body captured (HTTP 403) | 1 — GÉANT |
 
 Three caveats the tool states itself, and which matter more than the count:

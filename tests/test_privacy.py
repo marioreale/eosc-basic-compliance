@@ -46,7 +46,7 @@ def test_a_personal_address_keeps_only_its_domain(text, expected):
         "rd@helpdesk.bbmri-eric.eu",
         "elsi-helpdesk@bbmri-eric.eu",
         "csirt@eudat.eu",
-        "base-infra-resources@ebrains.eu",
+        "base-infra-resources@example.eu",
         "report-vulnerability[at]egi.eu",
         "sit[at]egi.eu",
         "business[at]egi.eu",
@@ -153,7 +153,7 @@ def test_a_masked_address_masks_its_name_only_nearby_and_never_in_a_url():
 
 
 def test_an_acronym_is_never_taken_for_a_surname():
-    assert mask_text("ebrains@example.org EBRAINS") == "XXXXX@example.org EBRAINS"
+    assert mask_text("panosc@example.org PANOSC") == "XXXXX@example.org PANOSC"
 
 
 # --- where masking is applied ------------------------------------------------

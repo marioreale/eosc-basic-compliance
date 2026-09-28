@@ -306,6 +306,8 @@ assessed.
 
 ```text
 EOSC Node | BBMRI-ERIC
+EOSC Node | CERN
+EOSC Node | Czechia
 EOSC Node | European DTO
 EOSC Node | Data Terra
 EOSC Node | Finland
@@ -313,7 +315,9 @@ EOSC Node | PaNOSC
 EOSC Node | EUDAT
 EOSC Node | EGI
 EOSC Node | GÉANT
-EOSC Node | EBRAINS RI
+EOSC Node | Poland
+EOSC Node | Italy
+EOSC Node | Slovakia
 ```
 
 **Which list a run used is recorded in the report**, in one line at the top of
@@ -469,7 +473,7 @@ literally:
 | EUDAT | matched; the page writes `EOSC Node EUDAT` |
 | EOSC Node Slovakia | matched; the page writes `EOSC Node Slovakia` |
 | European DTO, Data Terra, PaNOSC | no match; the phrase `EOSC Node` occurs (5, 2 and 2 times), but never followed by an approved name |
-| CERN, EOSC Finland, EGI, EBRAINS, Italy | no match, and the phrase `EOSC Node` does not occur in the body text |
+| CERN, EOSC Finland, EGI, Italy, and the node listed by mistake (replaced by Poland on 28 September) | no match, and the phrase `EOSC Node` does not occur in the body text |
 | GÉANT | not looked for: the page answered HTTP 403 with the Cloudflare challenge |
 
 CERN's configured page is a sign-in endpoint with very little text, so there is

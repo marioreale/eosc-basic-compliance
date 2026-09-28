@@ -1,6 +1,6 @@
 {
-  "run_id": "web-9",
-  "generated_at": "2026-09-26T22:19:21+00:00",
+  "run_id": "web-9-rescored",
+  "generated_at": "2026-09-28T13:29:32+00:00",
   "checklist": {
     "checklist_version": "3.1",
     "checklist_date": "2026-09-24",
@@ -96,11 +96,13 @@
     "count": 13,
     "source": "checklist/approved-names.txt",
     "default_used": true,
-    "sha256": "871161a50fcb1b313740b72d3c02348593dec00d00f40400602bab3558be511e",
+    "sha256": "46af586bc6935b30a9a528a1b42c48ee46366bbf3d39f4f95e1b59eb03c94ac5",
     "strict_separators": false
   },
   "selection": [],
-  "skipped": [],
+  "skipped": [
+    "eosc-pl"
+  ],
   "approved_names_supplied": true,
   "nodes": [
     {
@@ -1858,220 +1860,6 @@
           "message": "The main content is English and the page declares English.",
           "evidence": [
             "declared lang attribute: \"en-US\"",
-            "detected language: en (confidence 1.0)"
-          ],
-          "reviewer_action": ""
-        }
-      ]
-    },
-    {
-      "id": "ebrains",
-      "name": "EBRAINS",
-      "url": "https://ebrains.eu/",
-      "ad_hoc": false,
-      "fetch": {
-        "http_status": 200,
-        "final_url": "https://ebrains.eu/",
-        "fetched_at": "2026-09-26T22:18:44+00:00",
-        "error": "",
-        "robots_note": "robots.txt consulted",
-        "screenshot": "ebrains.png",
-        "crawl_depth": 1,
-        "crawl_note": "depth 1: 128 link(s) on the landing page, 4 followed because they matched a checklist point, 16 matched but dropped by a cap, the rest not relevant to any point",
-        "children": [
-          {
-            "url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "final_url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "6"
-            ],
-            "link_text": "EBRAINS Support for EuroHPC Applications",
-            "http_status": 200,
-            "title": "EBRAINS Support for EuroHPC Applications | EBRAINS",
-            "chars": 2433,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/news-events/media/media-contact",
-            "final_url": "https://ebrains.eu/news-events/media/media-contact",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "6"
-            ],
-            "link_text": "Media Contact",
-            "http_status": 200,
-            "title": "Media Contact | EBRAINS",
-            "chars": 233,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about",
-            "final_url": "https://ebrains.eu/about",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "About",
-            "http_status": 200,
-            "title": "About | EBRAINS",
-            "chars": 3111,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/at-a-glance",
-            "final_url": "https://ebrains.eu/about/at-a-glance",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "At a glance",
-            "http_status": 200,
-            "title": "At a Glance | EBRAINS",
-            "chars": 6329,
-            "error": ""
-          }
-        ],
-        "children_skipped": [
-          "https://ebrains.eu/contact (cap for point 6)",
-          "https://ebrains.eu/about/at-a-glance/mission (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/ebrains-20 (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/ethics-society (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/governance (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/our-people (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/careers (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/procurements (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)"
-        ]
-      },
-      "results": [
-        {
-          "point_id": "1",
-          "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "PASS",
-          "message": "Served content to an anonymous request, satisfying branch (a).",
-          "evidence": [
-            "HTTP 200 anonymously, 6566 characters of text rendered"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "1R",
-          "title": "Linked resources public or via EOSC AAI",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
-          "evidence": [
-            "5 distinct external host(s) linked from the landing page",
-            "bsky.app (Bluesky)",
-            "mastodon.social (Mastodon)",
-            "www.linkedin.com (LinkedIn)",
-            "www.youtube.com (YouTube)",
-            "x.com (X)",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
-          ],
-          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
-        },
-        {
-          "point_id": "2",
-          "title": "Scope, users and responsible organisation stated",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
-          "evidence": [
-            "meta description: \"An open research infrastructure that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ.\"",
-            "opening main text: \"Built for Brain Breakthroughs Europe's Digital Infrastructure for Brain Research Explore data, tools and services EBRAINS RI EBRAINS is an open research infrastructure (RI) that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ. The EBRAINS infrastructure was originally built by the EU-funded Human Brain Project and is now adva...\"",
-            "organisation-like names found: University",
-            "about page one level down: https://ebrains.eu/about (HTTP 200) opening text: \"Breadcrumb Start > About About A Pioneering Ecosystem for Neuroscience Breakthroughs Digital Infrastructure for Brain Research Who we are EBRAINS is Europe’s digital infrastructure for brain research. It provides unique tools and data bringing together neurosc...\""
-          ],
-          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
-        },
-        {
-          "point_id": "3",
-          "title": "EOSC logo and official node name visible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
-          "evidence": [
-            "54 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 0",
-            "NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched"
-          ],
-          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
-        },
-        {
-          "point_id": "4",
-          "title": "Link to the node's page on eosc.eu",
-          "verdict": "FAIL",
-          "message": "No link to eosc.eu was found on the landing page.",
-          "evidence": [
-            "128 link(s) examined, none pointing to eosc.eu",
-            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/ but is not linked from here"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "5a",
-          "title": "Purpose description for research resources",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.",
-          "evidence": [
-            "128 outbound link(s) on the landing page",
-            "main text length: 4706 characters"
-          ],
-          "reviewer_action": "List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry."
-        },
-        {
-          "point_id": "5b",
-          "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to an Acceptable Use Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.",
-          "evidence": [
-            "128 link(s) examined, none matching an Acceptable Use Policy"
-          ],
-          "reviewer_action": "Check the node's resource entries in the EOSC Catalogue for an Acceptable Use Policy."
-        },
-        {
-          "point_id": "5c",
-          "title": "User Access Policy (UAP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.",
-          "evidence": [
-            "128 link(s) examined, none matching a User Access Policy"
-          ],
-          "reviewer_action": "Check the node's resource entries in the EOSC Catalogue for a User Access Policy."
-        },
-        {
-          "point_id": "6",
-          "title": "Means of contacting the node helpdesk",
-          "verdict": "MANUAL_REVIEW",
-          "message": "A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. A link labelled \"support\" was found, but that word alone does not identify a helpdesk: it also labels funding programmes and service catalogues. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
-          "evidence": [
-            "\"EBRAINS Support for EuroHPC Applications\" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "\"Media Contact\" -> https://ebrains.eu/news-events/media/media-contact",
-            "\"Contact Us\" -> https://ebrains.eu/contact",
-            "followed: https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications -> HTTP 200",
-            "followed: https://ebrains.eu/news-events/media/media-contact -> HTTP 200",
-            "address given: mailto:base-infra-resources@ebrains.eu",
-            "not followed: https://ebrains.eu/contact (cap for point 6)"
-          ],
-          "reviewer_action": "Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service."
-        },
-        {
-          "point_id": "7",
-          "title": "The page is in English",
-          "verdict": "PASS",
-          "message": "The main content is English and the page declares English.",
-          "evidence": [
-            "declared lang attribute: \"en\"",
             "detected language: en (confidence 1.0)"
           ],
           "reviewer_action": ""

@@ -594,7 +594,7 @@ would be the tool enforcing a stricter rule than the one it is checking.
 `check_6`. Two tiers: wording that identifies a helpdesk, then general contact
 vocabulary. The word "support" on its own is only a reason to follow a link. On
 24 September 2026 it labelled a funding programme (Czechia), a EuroHPC proposal
-service (EBRAINS) and a service overview (BBMRI-ERIC), and all three had passed.
+service (on the page of a node that was listed by mistake and was replaced by EOSC Node Poland on 28 September 2026) and a service overview (BBMRI-ERIC), and all three had passed.
 
 **Steps:**
 
