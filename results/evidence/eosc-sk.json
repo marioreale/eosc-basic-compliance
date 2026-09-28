@@ -2,7 +2,7 @@
   "node_id": "eosc-sk",
   "node_name": "EOSC Node Slovakia",
   "requested_url": "https://eosc.sk/",
-  "fetched_at": "2026-09-28T22:38:09+00:00",
+  "fetched_at": "2026-09-28T22:57:04+00:00",
   "final_url": "https://eosc.sk/",
   "http_status": 200,
   "redirect_chain": [],
@@ -838,7 +838,7 @@
   "meta_description": "EOSC Node Slovakia - pilot entry point (MVP) to research resources and services of the Slovak national EOSC node.",
   "error": "",
   "screenshot": "eosc-sk.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://hd.eosc.sk",
@@ -881,5 +881,5 @@
     }
   ],
   "children_skipped": [],
-  "crawl_note": "depth 1: 45 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "crawl_note": "depth 2: 45 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 19 of 60 used"
 }

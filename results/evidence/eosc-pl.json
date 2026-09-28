@@ -2,7 +2,7 @@
   "node_id": "eosc-pl",
   "node_name": "EOSC Node Poland",
   "requested_url": "https://eosc.pl/",
-  "fetched_at": "2026-09-28T22:37:48+00:00",
+  "fetched_at": "2026-09-28T22:56:42+00:00",
   "final_url": "https://eosc.pl/",
   "http_status": 200,
   "redirect_chain": [
@@ -628,7 +628,7 @@
   "meta_description": "",
   "error": "",
   "screenshot": "eosc-pl.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://eosc.pl/terms-of-use",
@@ -800,6 +800,8 @@
       "error": ""
     }
   ],
-  "children_skipped": [],
-  "crawl_note": "depth 1: 35 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "children_skipped": [
+    "https://eosc.pl/terms-of-use (already fetched at depth 1)"
+  ],
+  "crawl_note": "depth 2: 35 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 19 of 60 used"
 }

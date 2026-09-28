@@ -37,11 +37,14 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-12`, and it has not been reviewed
-> yet.** It was collected on 28 September 2026 between 22:34 and 22:38 UTC by
-> the GitHub workflow ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)), the first run
-> collected under **checklist v3.2** (28 September 2026), which replaced v3.1 on
-> 29 September 2026. It repeats cell for cell `web-11-v3.2`, the evidence of run
+> **The published report is run `web-13`, collected at `--depth 2`, and it has
+> not been reviewed yet.** It was collected on 28 September 2026 between 22:53
+> and 22:57 UTC by the GitHub workflow ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)),
+> under **checklist v3.2** (28 September 2026), which replaced v3.1 on
+> 29 September 2026. The report shows both depths; the second hop fetched 19
+> more pages and changed no verdict. It repeats cell for cell `web-12`
+> ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)), the first collection under v3.2 at
+> depth 1, and `web-11-v3.2`, the evidence of run
 > `web-11` ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) scored again offline against
 > v3.2. `web-11` was the first run with CERN's new Node Landing Page,
 > `https://eosc.cern/`, and the second with **EOSC Node Poland**
@@ -61,10 +64,11 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > might be in the Catalogue), now **fails** 5b or 5c. Under v3.2, six cells moved
 > from review to `FAIL`: 5b and 5c for CERN, Data Terra and PaNOSC. Every other
 > verdict is the same as `web-11` under v3.1 (49 PASS, 8 FAIL, 73 review), and
-> the fresh collection `web-12` confirmed all 130 cells.
+> the fresh collections `web-12` (depth 1) and `web-13` (depth 2) confirmed all
+> 130 cells.
 
-All thirteen configured nodes were fetched on 28 September 2026 at `--depth 1`
-and assessed against the official unscoped names list. None was skipped.
+All thirteen configured nodes were fetched on 28 September 2026 at `--depth 2`
+(13 landing pages, 31 direct links, 19 second-hop pages) and assessed against the official unscoped names list. None was skipped.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
@@ -445,7 +449,7 @@ uv run basic-check run --depth 2 --fetch-budget 20  # stricter ceiling
 
 **A depth-2 run reports both depths.** The report renders two summary tables — *Results at depth 1* and *Results at depth 2* — followed by a *What the second hop changed* section listing every cell whose verdict differs, and a table of exactly which pages the second hop fetched and what each was followed for. Both tables are computed from the **same capture**: the shallow view is the deep evidence with the second-hop pages set aside, not a second run. So any difference between the two tables is the extra hop, not the page changing between runs.
 
-On the 21 September 2026 run, the second hop made 14 extra requests and changed **no verdict at all** — all 90 cells landed exactly where depth 1 had them. An earlier depth-2 run the same day, with 18 second-hop requests, also changed nothing. That is a finding rather than a disappointment: the points still marked review turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all research resources offered by the Node"), and no amount of fetching settles either kind. Run it yourself before assuming the same holds for another federation or a later date.
+On the 21 September 2026 run, the second hop made 14 extra requests and changed **no verdict at all** — all 90 cells landed exactly where depth 1 had them. An earlier depth-2 run the same day, with 18 second-hop requests, also changed nothing. That is a finding rather than a disappointment: the points still marked review turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all research resources offered by the Node"), and no amount of fetching settles either kind. The published run `web-13` of 28 September 2026 is the latest check: 19 second-hop pages, and again no verdict changed in 130 cells. Run it yourself before assuming the same holds for another federation or a later date.
 
 ### Checking a page that is not in `nodes.yaml`
 

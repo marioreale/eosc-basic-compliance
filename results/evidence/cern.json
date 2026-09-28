@@ -2,7 +2,7 @@
   "node_id": "cern",
   "node_name": "CERN",
   "requested_url": "https://eosc.cern/",
-  "fetched_at": "2026-09-28T22:35:43+00:00",
+  "fetched_at": "2026-09-28T22:53:43+00:00",
   "final_url": "https://eosc.cern/",
   "http_status": 200,
   "redirect_chain": [],
@@ -530,7 +530,7 @@
   "meta_description": "CERN Node for the EOSC Federation - Research, Analyses, Repositories",
   "error": "",
   "screenshot": "cern.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://eosc.cern/contact",
@@ -948,10 +948,162 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://eosc.cern/about/collaboration",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "Scientific Collaboration",
+      "depth": 2,
+      "parent_url": "https://eosc.cern/contact",
+      "http_status": 200,
+      "final_url": "https://eosc.cern/about/collaboration",
+      "title": "CERN Node",
+      "lang_attr": "en",
+      "main_text": "Scientific Collaboration Open science at CERN, and the community behind the Node Open Science at CERN At CERN, the practice of open science is key to delivering on the organisational mission. CERN Open Science encompasses an evolving ecosystem of policies, initiatives, services, and technologies, driven by people from across the organisation with the goal to maximise the global impact of research, spanning open access, open data, open source, open hardware, and citizen science. The CERN Node extends that practice into the EOSC Federation, in collaboration with partner institutions across high-energy physics and beyond. Competence Centre & Training Learn to leverage HEP software frameworks, Machine Learning tools, and distributed infrastructure through curated training programs. Data Management Plans Guidelines and templates for managing research data throughout the project lifecycle, aligned with FAIR principles. Contributing Organisations CERN departments, INSPIRE-HEP collaboration (DESY, Fermilab, IHEP, IN2P3, SLAC), Durham University, and ESCAPE partners. Learn more at openscience.cern ESCAPE CERN also pursues open science through ESCAPE , the European Science Cluster of Astronomy & Particle Physics ESFRI Research Infrastructures, in which CERN participates alongside partner institutions from astronomy, nuclear, and particle physics, working toward shared, FAIR-compliant services connected to EOSC. The direction of travel in scientific computing, well beyond ESCAPE, is federation. The Worldwide LHC Computing Grid (WLCG) , around 160 computing centres in more than 40 countries built to store, distribute, and analyse the LHC's data, has long shown how a federated model can work at this scale. High-performance computing is moving the same way, and initiatives such as the EOSC Federation pursue a similar goal for the broader Open Science ecosystem: democratising access to computing capabilities, in the spirit of WLCG, with CERN among the participants. ESCAPE sits at the intersection of these federations, co-developing shared infrastructure and tools so that researchers can draw on heterogeneous resources without the overhead of managing each one separately. Looking ahead, the collaboration has set out its Distributed Computing Roadmap for 2026–2030 , coordinating computing infrastructure strategy across particle physics and astronomy partners including CERN, the Einstein Telescope, the Square Kilometer Array Observatory, the Cherenkov Telescope Array Observatory, and several other communities. Learn more at projectescape.eu",
+      "full_text": "The CERN Node is not in production yet. Access to services is not guaranteed, and content and features may still change. CERN | Accelerating science Directory Get Started About Services Analysis Training Help Sign in On This Page Scientific Collaboration Open Science at CERN ESCAPE Scientific Collaboration Open science at CERN, and the community behind the Node Open Science at CERN At CERN, the practice of open science is key to delivering on the organisational mission. CERN Open Science encompasses an evolving ecosystem of policies, initiatives, services, and technologies, driven by people from across the organisation with the goal to maximise the global impact of research, spanning open access, open data, open source, open hardware, and citizen science. The CERN Node extends that practice into the EOSC Federation, in collaboration with partner institutions across high-energy physics and beyond. Competence Centre & Training Learn to leverage HEP software frameworks, Machine Learning tools, and distributed infrastructure through curated training programs. Data Management Plans Guidelines and templates for managing research data throughout the project lifecycle, aligned with FAIR principles. Contributing Organisations CERN departments, INSPIRE-HEP collaboration (DESY, Fermilab, IHEP, IN2P3, SLAC), Durham University, and ESCAPE partners. Learn more at openscience.cern ESCAPE CERN also pursues open science through ESCAPE , the European Science Cluster of Astronomy & Particle Physics ESFRI Research Infrastructures, in which CERN participates alongside partner institutions from astronomy, nuclear, and particle physics, working toward shared, FAIR-compliant services connected to EOSC. The direction of travel in scientific computing, well beyond ESCAPE, is federation. The Worldwide LHC Computing Grid (WLCG) , around 160 computing centres in more than 40 countries built to store, distribute, and analyse the LHC's data, has long shown how a federated model can work at this scale. High-performance computing is moving the same way, and initiatives such as the EOSC Federation pursue a similar goal for the broader Open Science ecosystem: democratising access to computing capabilities, in the spirit of WLCG, with CERN among the participants. ESCAPE sits at the intersection of these federations, co-developing shared infrastructure and tools so that researchers can draw on heterogeneous resources without the overhead of managing each one separately. Looking ahead, the collaboration has set out its Distributed Computing Roadmap for 2026–2030 , coordinating computing infrastructure strategy across particle physics and astronomy partners including CERN, the Einstein Telescope, the Square Kilometer Array Observatory, the Cherenkov Telescope Array Observatory, and several other communities. Learn more at projectescape.eu CERN Node Integrating CERN's research infrastructure into the European Open Science Cloud. About CERN The CERN Node Scientific Collaboration CERN Node on eosc.eu ↗ Contact Contact FAQ Changelog Node Status Policies CERN ↗ © 2026 CERN — European Organization for Nuclear Research v1.0.3 eosc.eu ↗",
+      "links": [
+        {
+          "href": "https://home.cern",
+          "text": "CERN | Accelerating science",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch/directory",
+          "text": "Directory",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/",
+          "text": "EOSC Node CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/get-started",
+          "text": "Get Started",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/analysis",
+          "text": "Analysis",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/login",
+          "text": "Sign in",
+          "visible": true
+        },
+        {
+          "href": "https://openscience.cern/",
+          "text": "Learn more at openscience.cern",
+          "visible": true
+        },
+        {
+          "href": "https://wlcg.web.cern.ch/",
+          "text": "Worldwide LHC Computing Grid (WLCG)",
+          "visible": true
+        },
+        {
+          "href": "https://zenodo.org/records/20816562",
+          "text": "Distributed Computing Roadmap for 2026–2030",
+          "visible": true
+        },
+        {
+          "href": "https://projectescape.eu/about-us",
+          "text": "Learn more at projectescape.eu",
+          "visible": true
+        },
+        {
+          "href": "https://home.cern/",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern",
+          "text": "CERN",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/cern-node",
+          "text": "The CERN Node",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/about/collaboration",
+          "text": "Scientific Collaboration",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-cern",
+          "text": "CERN Node on eosc.eu ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/changelog",
+          "text": "Changelog",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/status",
+          "text": "Node Status",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cern/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://cern.ch",
+          "text": "CERN ↗",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu",
+          "text": "eosc.eu ↗",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
   "children_skipped": [
-    "https://eosc.cern/about/collaboration (cap for point 2)"
+    "https://eosc.cern/about/collaboration (cap for point 2)",
+    "https://eosc.cern/contact (already fetched at depth 1)",
+    "https://eosc.cern/about/cern (already fetched at depth 1)",
+    "https://eosc.cern/about/cern-node (already fetched at depth 1)",
+    "https://eosc.cern/contact (already fetched at depth 1)",
+    "https://eosc.cern/contact (already fetched at depth 1)",
+    "https://eosc.cern/about/collaboration (already fetched at depth 1)",
+    "https://eosc.cern/about/cern (already fetched at depth 1)",
+    "https://eosc.cern/about/cern-node (already fetched at depth 1)",
+    "https://eosc.cern/about/collaboration (already fetched at depth 1)",
+    "https://eosc.cern/contact (already fetched at depth 1)",
+    "https://eosc.cern/about/cern (already fetched at depth 1)",
+    "https://eosc.cern/about/cern-node (already fetched at depth 1)",
+    "https://eosc.cern/about/collaboration (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 1: 39 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point"
+  "crawl_note": "depth 2: 39 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 3 of 60 used"
 }

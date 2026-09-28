@@ -1,12 +1,20 @@
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-12` · 2026-09-28T22:45:55+00:00 · 13 nodes · one page request per node plus 31 followed link(s) in total (depth 1).
+Run `web-13` · 2026-09-28T22:58:47+00:00 · 13 nodes · one page request per node plus 31 followed link(s), then 19 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
 **Node names.** 13 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `46af586bc693…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
+
+This run was collected at `--depth=2`, so it is reported twice: once using only the landing page and its direct links, and once using the second hop as well. Both tables come from the **same capture** — the shallow view is the deep evidence with the second-hop pages set aside, not a separate run — so any difference between them is the hop itself and not the passage of time.
+
+### Results at depth 1
+
+Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
+
+130 cells: 🟢 49 PASS · 🔴 14 FAIL · 🟠 67 review.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -23,6 +31,59 @@ Run `web-12` · 2026-09-28T22:45:55+00:00 · 13 nodes · one page request per no
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+
+### Results at depth 2
+
+The same evidence plus 19 page(s) reached one further hop out, under a shared run budget.
+
+130 cells: 🟢 49 PASS · 🔴 14 FAIL · 🟠 67 review.
+
+| Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
+|---|---|---|---|---|---|---|---|---|---|---|
+| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS | 🟢 PASS |
+| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
+| EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🟢 PASS |
+| EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+
+### What the second hop changed
+
+**No verdict changed.** The second hop fetched 19 page(s) and left all 130 cells exactly as depth 1 had them.
+
+That is a finding, not a failure of the deeper crawl. The points still marked 🟠 review are not shallow-crawl artefacts: they turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all Node Exchange research resources offered by the Node"). Fetching more pages cannot settle either kind, which is why depth 1 remains the default.
+
+#### Pages the second hop fetched
+
+| Node | Point it was followed for | Page | Served |
+|---|---|---|---|
+| BBMRI-ERIC | 2 | <https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/> | 200 |
+| BBMRI-ERIC | 2 | <https://www.bbmri-eric.eu/national-nodes/> | 200 |
+| CERN | 2 | <https://eosc.cern/about/collaboration> | 200 |
+| EOSC Node Czechia | 2 | <https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data> | 200 |
+| EOSC Node Czechia | 2 | <https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz> | 200 |
+| EOSC Node Czechia | 2 | <https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz> | 200 |
+| EOSC Node Czechia | 2 | <https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation> | 200 |
+| EOSC DTO (D4Science) | 5b | <https://www.d4science.org/policies/terms-of-use> | 200 |
+| EOSC DTO (D4Science) | 6 | <https://www.d4science.org/support> | 200 |
+| EOSC DTO (D4Science) | 5b | <https://www.d4science.org/terms-of-use> | 404 |
+| EOSC Finland | 5b | <https://research.csc.fi/terms-of-use/data-processing-agreement/> | 200 |
+| EOSC Finland | 5b | <https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/> | 200 |
+| EOSC Finland | 6 | <https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/> | 200 |
+| PaNOSC | 2 | <https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/> | 200 |
+| EUDAT | 5b | <https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies> | 200 |
+| EUDAT | 6 | <https://www.eudat.eu/catalogue> | 200 |
+| EUDAT | 6 | <https://eudat.eu/contact-support-request> | 200 |
+| EUDAT | 2 | <https://docs.eudat.eu/b2access/about/> | 200 |
+| EGI | 2 | <https://www.egi.eu/egi-federation/> | 200 |
+
 
 ## What each column means
 

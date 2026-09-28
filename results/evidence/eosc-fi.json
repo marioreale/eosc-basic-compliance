@@ -2,7 +2,7 @@
   "node_id": "eosc-fi",
   "node_name": "EOSC Finland",
   "requested_url": "https://eosc.fi/",
-  "fetched_at": "2026-09-28T22:36:43+00:00",
+  "fetched_at": "2026-09-28T22:55:07+00:00",
   "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -1266,7 +1266,7 @@
   "meta_description": "",
   "error": "",
   "screenshot": "eosc-fi.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://research.csc.fi/terms-of-use/",
@@ -3123,11 +3123,1431 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+      "selected_for": [
+        "5b"
+      ],
+      "link_text": "Personal Data Processing Agreement",
+      "depth": 2,
+      "parent_url": "https://research.csc.fi/terms-of-use/",
+      "http_status": 200,
+      "final_url": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+      "title": "Personal Data Processing Agreement - Services for Research",
+      "lang_attr": "en-US",
+      "main_text": "Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Personal Data Processing Agreement suomeksi / in Finnish | Download PDF version Effective as of June 24 2025 At glance Purpose and scope of agreement Security of processing Cooperation in certain situations Use of sub-processors Duration and other conditions 1. At glance When you use a service provided by another organization for processing personal data, there must be a written contract (or another legal act) in place. What needs to be included in the contract is defined on the General Data Protection Regulation (2016/679). For that reason, this Personal Data Processing Agreement (DPA) is a mandatory part of the General Terms of Use for CSC’s Services for Research , if personal data is processed. 2. Purpose and scope of agreement 2.1. This Personal Data Processing Agreement (hereinafter “DPA”) establishes the rights and duties between CSC – Finnish IT Сenter for Science Ltd (hereinafter “CSC”) and a controller of data (hereinafter “Controller”) regarding the processing of personal data, as required by Article 28 of the General Data Protection Regulation (2016/679; https://eur-lex.europa.eu/eli/reg/2016/679 (External link) ), when CSC processes personal data in CSC’s Services for Research on behalf of the controller. This DPA does not govern collection and use of personal data in other contexts. This DPA is irremovable part of the Service Agreement (accepted General Terms of Use, accepted DPA and Service Descriptions), whereby the user may upload and process user Content (“Content”) including personal data in, to, or from CSC’s Services for Research. In the event of conflict between the provisions of this DPA and any other agreements or instructions, the provisions of this DPA will prevail. 2.2. The definitions of the terms used in this DPA, such as “personal data”, “controller” and “processor”, correspond to the definitions given in the General Data Protection Regulation. 2.3. CSC will act as the processor of personal data on behalf of the controller, unless explicitly otherwise agreed. 2.4. Processing refers to processing of personal data that is transferred to CSC by the controller or a party authorised by the controller. 2.5. The purpose of processing personal data is to perform the CSC’s Services for Research. 2.6. The person approving this DPA as a part of Service Agreement shall provide CSC with all of the following information in writing: Name and contact information of the controller of the data Types of personal data and categories of data subjects included in the data 2.7. Notifications relating to processing activities set out in this DPA may be sent in electronic format to the data controller, unless other contact information for notifications has been provided by the data controller. 2.8. The person approving this DPA undertakes to notify CSC in writing of any changes in the information mentioned in subparagraph 2.6 and paragraph 2.7. 2.9. The user will have sole responsibility for the legality, reliability, integrity, accuracy and quality of Content transferred for processing. 2.10. CSC shall take into consideration any documented instructions on data processing that the controller delivers to CSC prior to or during the processing. CSC processes personal data only in accordance with this DPA and on documented instructions from the controller. 2.11. If other legal acts under European Union or Member State law require measures targeted at the personal data governed by this DPA, CSC will inform the controller of that legal requirement before processing the data, unless that law prohibits giving such information on important grounds of public interest. 3. Security of processing 3.1. Both the controller and the processor will implement appropriate technical and organisational measures to ensure the security of data processing. The measures to be implemented by CSC depend on the used Service. CSC provides, upon request, more information on its technical and organisational security measures applicable to the processing activities set out in this DPA. 3.2. Unless otherwise specified in the Service Agreement, the controller, or a party authorised by the controller, may not provide CSC with any sensitive or special categories of personal data that imposes specific data security or data protection obligations on CSC in addition to or different from those specified in the Service Agreement. 3.3. The data processor shall keep any personal data received from the data controller confidential. The data processor will ensure that persons authorized to process personal data have committed to confidentiality or are required to comply with statutory obligations of confidentiality. 3.4. The data processor will not process (nor permit any third party to process) any personal data outside of the European Economic Area unless such processing shall be conducted in a country which the European Commission has declared to have adequate data protection laws; or the processor has taken all such measures as are necessary to ensure that any such processing outside of the European Economic Area is in compliance with EU Data Protection Laws. 4. Cooperation in certain situations 4.1. CSC assists the controller, insofar as this is possible, in facilitating the exercise of data subject rights. 4.2. If a data subject makes a request concerning personal data, the data processor will notify the controller of this without undue delay. CSC may not perform any processing activities on the data upon request of a data subject without written instructions from the controller. CSC will advise the data subject to identify and contact the relevant controller(s). 4.3. CSC may be required by law to provide access to data, such as to comply with a subpoena or other legal process, or to respond to government requests, including public and government authorities for national security and/or law enforcement purposes. CSC will promptly inform the controller of requests to provide access to data, unless otherwise required by law. 4.4. CSC assists the controller, insofar as is reasonably possible, in carrying out a data protection impact assessment where necessary and upon request. In determining the measures to be taken to assist the controller, CSC considers the nature of the personal data processing and available information. 4.5. CSC will make available to the controller on request all information necessary to demonstrate compliance with this DPA, and allows for and contribute to audits, including inspections, in relation to the processing of personal data. The controller may exercise information and audit rights to the extent that the Service Agreement does not otherwise give the relevant information to meet the requirements of Data Protection Law. The controller bears audit expenses unless otherwise agreed. 4.6. CSC will immediately inform the controller if it perceives that an instruction given by the controller infringes the Union or Member State data protection provisions. 4.7. CSC shall, without undue delay, notify the controller about any personal data breach it has become aware of concerning data governed by this DPA. The notification shall include at least the following information: Description of the nature of the personal data breach. Description of the processing procedures performed on the data based on this DPA. Description of the measures taken to address the personal data breach. Contact details of CSC’s data protection officer or other contact point where more information on the breach can be obtained. 4.8. In addition to the information mentioned in the previous paragraph, CSC shall, upon request, provide information in its possession to assist the controller in investigating the breach and mitigating its adverse effects to the degree the information is necessary and deliverable with reasonable effort considering the nature of the processing. 5. Use of sub-processors 5.1. The controller gives CSC a prior authorisation to engage sub-processors insofar as it is necessary for the performance of the processing. 5.2 . CSC shall, upon request, inform the controller of the sub-processors and any indented changes concerning the sub-processors. If the data controller doesn’t accept the used or intended sub-processors it may terminate the Service Agreement. 5.3. The same data protection obligations as set out in this DPA between the controller and CSC shall be imposed on the sub-processors. CSC allows, upon request, the controller to view the agreement or the outlined agreement between CSC and the sub-processor, with the exception of sections which contain confidential information and which are not significant in assessing the data protection obligations. 6. Duration and other conditions 6.1. The DPA is effective from its approving and for as long as CSC processes personal data on controller’s behalf. 6.2. If one of the parties to this DPA decides that processing is no longer justified, the processing in accordance with this DPA ends when the other party has been notified of this decision in writing. Upon termination of the Service Agreement, CSC will delete any remaining copies of data on Service environments, except as otherwise stated in the Service Agreement. 6.3. The contact details of the persons using CSC’s Services for Research are stored in a user register maintained by CSC. CSC acts as the controller of the data in the user register. The personal data mentioned in this paragraph are processed to allow the performance of this DPA. 6.4. The person approving this DPA as a part of Service Agreement assures that he or she has sufficient authority, to the extent required by this DPA, to agree on the rights related to the data and on the conditions of personal data processing. 6.5. The processor has a right to change this DPA. However, the version of the DPA that was applicable at the time of the relevant Service Agreement entered into force shall govern the processing between the parties until terminated or renewed. The processor will upkeep change history of the DPA. The person approving this DPA as a part of Service agreement is encouraged to download a copy of this DPA when approving it. 6.6. This DPA is governed by Finnish law.",
+      "full_text": "Skip to content Services for research Docs CSC - User guides (External link) MyCSC - User portal (External link) csc.fi - Company site (External link) Services for research Search for: Service Desk Service Desk Home How to start Services Services (External link) General Service catalog Service breaks Resource allocation Applying for resources Extremely large resources Managing service quotas Service categories High-performance computing Research data management Plan data management Store & share data Publish & discover data Cloud services Services for sensitive data Compare SD Services and ePouta Sensitive Data (SD) Services for Research Overview for IT personnel and organizations Quick access page Definition of sensitive data Managing sensitive data User groups Services for science & methods AI and data analytics Biosciences Chemistry Code optimization Computational engineering Geoinformatics Geocomputing Mathematics, statistics and technical computing Physics Quantum computing Social sciences and humanities Services for education Services for commercial use Purchasing CSC’s services Use cases Blogs Training Training (External link) Training calendar Training portfolio Terms & policies Terms & policies (External link) Free-of-charge use Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Policies CSC research infrastructure data management policy Persistent identifier (PID) policy Security & privacy Protection levels Privacy notice for remote identification service Home › Terms of use › Personal Data Processing Agreement Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Personal Data Processing Agreement suomeksi / in Finnish | Download PDF version Effective as of June 24 2025 At glance Purpose and scope of agreement Security of processing Cooperation in certain situations Use of sub-processors Duration and other conditions 1. At glance When you use a service provided by another organization for processing personal data, there must be a written contract (or another legal act) in place. What needs to be included in the contract is defined on the General Data Protection Regulation (2016/679). For that reason, this Personal Data Processing Agreement (DPA) is a mandatory part of the General Terms of Use for CSC’s Services for Research , if personal data is processed. 2. Purpose and scope of agreement 2.1. This Personal Data Processing Agreement (hereinafter “DPA”) establishes the rights and duties between CSC – Finnish IT Сenter for Science Ltd (hereinafter “CSC”) and a controller of data (hereinafter “Controller”) regarding the processing of personal data, as required by Article 28 of the General Data Protection Regulation (2016/679; https://eur-lex.europa.eu/eli/reg/2016/679 (External link) ), when CSC processes personal data in CSC’s Services for Research on behalf of the controller. This DPA does not govern collection and use of personal data in other contexts. This DPA is irremovable part of the Service Agreement (accepted General Terms of Use, accepted DPA and Service Descriptions), whereby the user may upload and process user Content (“Content”) including personal data in, to, or from CSC’s Services for Research. In the event of conflict between the provisions of this DPA and any other agreements or instructions, the provisions of this DPA will prevail. 2.2. The definitions of the terms used in this DPA, such as “personal data”, “controller” and “processor”, correspond to the definitions given in the General Data Protection Regulation. 2.3. CSC will act as the processor of personal data on behalf of the controller, unless explicitly otherwise agreed. 2.4. Processing refers to processing of personal data that is transferred to CSC by the controller or a party authorised by the controller. 2.5. The purpose of processing personal data is to perform the CSC’s Services for Research. 2.6. The person approving this DPA as a part of Service Agreement shall provide CSC with all of the following information in writing: Name and contact information of the controller of the data Types of personal data and categories of data subjects included in the data 2.7. Notifications relating to processing activities set out in this DPA may be sent in electronic format to the data controller, unless other contact information for notifications has been provided by the data controller. 2.8. The person approving this DPA undertakes to notify CSC in writing of any changes in the information mentioned in subparagraph 2.6 and paragraph 2.7. 2.9. The user will have sole responsibility for the legality, reliability, integrity, accuracy and quality of Content transferred for processing. 2.10. CSC shall take into consideration any documented instructions on data processing that the controller delivers to CSC prior to or during the processing. CSC processes personal data only in accordance with this DPA and on documented instructions from the controller. 2.11. If other legal acts under European Union or Member State law require measures targeted at the personal data governed by this DPA, CSC will inform the controller of that legal requirement before processing the data, unless that law prohibits giving such information on important grounds of public interest. 3. Security of processing 3.1. Both the controller and the processor will implement appropriate technical and organisational measures to ensure the security of data processing. The measures to be implemented by CSC depend on the used Service. CSC provides, upon request, more information on its technical and organisational security measures applicable to the processing activities set out in this DPA. 3.2. Unless otherwise specified in the Service Agreement, the controller, or a party authorised by the controller, may not provide CSC with any sensitive or special categories of personal data that imposes specific data security or data protection obligations on CSC in addition to or different from those specified in the Service Agreement. 3.3. The data processor shall keep any personal data received from the data controller confidential. The data processor will ensure that persons authorized to process personal data have committed to confidentiality or are required to comply with statutory obligations of confidentiality. 3.4. The data processor will not process (nor permit any third party to process) any personal data outside of the European Economic Area unless such processing shall be conducted in a country which the European Commission has declared to have adequate data protection laws; or the processor has taken all such measures as are necessary to ensure that any such processing outside of the European Economic Area is in compliance with EU Data Protection Laws. 4. Cooperation in certain situations 4.1. CSC assists the controller, insofar as this is possible, in facilitating the exercise of data subject rights. 4.2. If a data subject makes a request concerning personal data, the data processor will notify the controller of this without undue delay. CSC may not perform any processing activities on the data upon request of a data subject without written instructions from the controller. CSC will advise the data subject to identify and contact the relevant controller(s). 4.3. CSC may be required by law to provide access to data, such as to comply with a subpoena or other legal process, or to respond to government requests, including public and government authorities for national security and/or law enforcement purposes. CSC will promptly inform the controller of requests to provide access to data, unless otherwise required by law. 4.4. CSC assists the controller, insofar as is reasonably possible, in carrying out a data protection impact assessment where necessary and upon request. In determining the measures to be taken to assist the controller, CSC considers the nature of the personal data processing and available information. 4.5. CSC will make available to the controller on request all information necessary to demonstrate compliance with this DPA, and allows for and contribute to audits, including inspections, in relation to the processing of personal data. The controller may exercise information and audit rights to the extent that the Service Agreement does not otherwise give the relevant information to meet the requirements of Data Protection Law. The controller bears audit expenses unless otherwise agreed. 4.6. CSC will immediately inform the controller if it perceives that an instruction given by the controller infringes the Union or Member State data protection provisions. 4.7. CSC shall, without undue delay, notify the controller about any personal data breach it has become aware of concerning data governed by this DPA. The notification shall include at least the following information: Description of the nature of the personal data breach. Description of the processing procedures performed on the data based on this DPA. Description of the measures taken to address the personal data breach. Contact details of CSC’s data protection officer or other contact point where more information on the breach can be obtained. 4.8. In addition to the information mentioned in the previous paragraph, CSC shall, upon request, provide information in its possession to assist the controller in investigating the breach and mitigating its adverse effects to the degree the information is necessary and deliverable with reasonable effort considering the nature of the processing. 5. Use of sub-processors 5.1. The controller gives CSC a prior authorisation to engage sub-processors insofar as it is necessary for the performance of the processing. 5.2 . CSC shall, upon request, inform the controller of the sub-processors and any indented changes concerning the sub-processors. If the data controller doesn’t accept the used or intended sub-processors it may terminate the Service Agreement. 5.3. The same data protection obligations as set out in this DPA between the controller and CSC shall be imposed on the sub-processors. CSC allows, upon request, the controller to view the agreement or the outlined agreement between CSC and the sub-processor, with the exception of sections which contain confidential information and which are not significant in assessing the data protection obligations. 6. Duration and other conditions 6.1. The DPA is effective from its approving and for as long as CSC processes personal data on controller’s behalf. 6.2. If one of the parties to this DPA decides that processing is no longer justified, the processing in accordance with this DPA ends when the other party has been notified of this decision in writing. Upon termination of the Service Agreement, CSC will delete any remaining copies of data on Service environments, except as otherwise stated in the Service Agreement. 6.3. The contact details of the persons using CSC’s Services for Research are stored in a user register maintained by CSC. CSC acts as the controller of the data in the user register. The personal data mentioned in this paragraph are processed to allow the performance of this DPA. 6.4. The person approving this DPA as a part of Service Agreement assures that he or she has sufficient authority, to the extent required by this DPA, to agree on the rights related to the data and on the conditions of personal data processing. 6.5. The processor has a right to change this DPA. However, the version of the DPA that was applicable at the time of the relevant Service Agreement entered into force shall govern the processing between the parties until terminated or renewed. The processor will upkeep change history of the DPA. The person approving this DPA as a part of Service agreement is encouraged to download a copy of this DPA when approving it. 6.6. This DPA is governed by Finnish law. CSC - IT Center for Science Ltd. Contact information P.O. Box 405, 02101 Espoo tel. XXXXXX (switchboard) Service desk Open weekdays from 8:30 to 16:00 tel. XXXXXX servicedesk@csc.fi Detailed contact information (External link) Visiting addresses Espoo Life Science Center Keilaniemi Keilaranta 14, 02150 Espoo Directions (External link) Datacenter Kajaani Renforsin Ranta business area Tehdaskatu 15, 87100 Kajaani Directions (External link) Visit other CSC sites User guides – docs.csc.fi (External link) User portal – my.csc.fi (External link) Main website – csc.fi (External link) Follow us LinkedIn (External link) Instagram (External link) Facebook (External link) YouTube (External link) Subscribe to newsletters (External link) Copyright CSC – IT Center for Science Ltd. Service breaks Security & privacy Accessibility Search for: ×",
+      "links": [
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi/",
+          "text": "Docs CSC - User guides (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi/",
+          "text": "MyCSC - User portal (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.csc.fi/",
+          "text": "csc.fi - Company site (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/how-to-start/",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service",
+          "text": "Service catalog",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/",
+          "text": "Resource allocation",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/",
+          "text": "Applying for resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+          "text": "Extremely large resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/quotas/",
+          "text": "Managing service quotas",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/high-performance-computing/",
+          "text": "High-performance computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/",
+          "text": "Research data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/data-management-planning/",
+          "text": "Plan data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/storage/",
+          "text": "Store & share data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/publish-and-discover/",
+          "text": "Publish & discover data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/cloud-computing/",
+          "text": "Cloud services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/",
+          "text": "Services for sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/",
+          "text": "Compare SD Services and ePouta",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/",
+          "text": "Sensitive Data (SD) Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/",
+          "text": "Overview for IT personnel and organizations",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/",
+          "text": "Quick access page",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/definition-of-sensitive-data/",
+          "text": "Definition of sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/managing-sensitive-data/",
+          "text": "Managing sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/",
+          "text": "Services for science & methods",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/ai-and-data-analytics/",
+          "text": "AI and data analytics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/biosciences/",
+          "text": "Biosciences",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/chemistry/",
+          "text": "Chemistry",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/code-optimization/",
+          "text": "Code optimization",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/computational-engineering/",
+          "text": "Computational engineering",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/",
+          "text": "Geoinformatics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/geocomputing/",
+          "text": "Geocomputing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/mathematics-and-statistics/",
+          "text": "Mathematics, statistics and technical computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/physics/",
+          "text": "Physics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/quantum-computing/",
+          "text": "Quantum computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/social-sciences-and-humanities/",
+          "text": "Social sciences and humanities",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/educational-use/",
+          "text": "Services for education",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/",
+          "text": "Services for commercial use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/pricing/",
+          "text": "Purchasing CSC’s services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/use-case",
+          "text": "Use cases",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/blogs",
+          "text": "Blogs",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training",
+          "text": "Training calendar",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training-portfolio/",
+          "text": "Training portfolio",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/free-of-charge-use/",
+          "text": "Free-of-charge use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/dmpol/",
+          "text": "CSC research infrastructure data management policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/pid-policy/",
+          "text": "Persistent identifier (PID) policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/data-protection-levels/",
+          "text": "Protection levels",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/",
+          "text": "Privacy notice for remote identification service",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/tietojenkasittelysopimus/",
+          "text": "suomeksi / in Finnish",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/app/uploads/2025/09/2025-06-24-Personal-Data-Processing-Agreement.pdf",
+          "text": "Download PDF version",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/#1",
+          "text": "At glance",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/#2",
+          "text": "Purpose and scope of agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/#3",
+          "text": "Security of processing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/#4",
+          "text": "Cooperation in certain situations",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/#5",
+          "text": "Use of sub-processors",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/#6",
+          "text": "Duration and other conditions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "General Terms of Use for CSC’s Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://eur-lex.europa.eu/eli/reg/2016/679",
+          "text": "https://eur-lex.europa.eu/eli/reg/2016/679 (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/",
+          "text": "Detailed contact information (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#espoo-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#kajaani-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi",
+          "text": "User guides – docs.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi",
+          "text": "User portal – my.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi",
+          "text": "Main website – csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/csc---it-center-for-science/",
+          "text": "LinkedIn (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/CSCfi/",
+          "text": "Instagram (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/CSCfi/",
+          "text": "Facebook (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/c/CSCfi",
+          "text": "YouTube (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/subscribe-to-newsletters/",
+          "text": "Subscribe to newsletters (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/accessibility",
+          "text": "Accessibility",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+      "selected_for": [
+        "5b"
+      ],
+      "link_text": "Export restrictions and sanctions",
+      "depth": 2,
+      "parent_url": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+      "http_status": 200,
+      "final_url": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+      "title": "Export restrictions and sanctions - Services for Research",
+      "lang_attr": "en-US",
+      "main_text": "Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Export restrictions and sanctions suomeksi / in Finnish | Download PDF version Effective as of June 24 2025 , replaces the previous version of Export restrictions and sanctions. The content of this document is a mandatory part of the General Terms of Use for CSC’s Services for Research . Export restrictions apply to CSC’s Services for Research . For example, CSC’s supercomputing hardware, the services produced by the hardware is considered so-called dual-use item. Also the research results provided by the supercomputing services and expertise derived from them can be dual-use items. Dual-use items are regulated by a mandatory legislation. The users must obey Finnish and EU export restrictions and sanctions. The services must not be used against US export restrictions or sanctions since these are included as contract terms in contracts with US vendors, other subcontractors and software providers and in that way they bind CSC and also restrict service use. Software-specific license terms can be found from CSC guidelines and user manuals. (External link) CSC’s Service Desk will be happy to answer your questions. When using CSC services, creating a CSC Project, adding members to your CSC Project or applying resources for a CSC Project you affirm and confirm the following: Your use of CSC’s Services for Research or the results thereof do not violate export control regulations or sanctions. You are not on any sanctions list. The project manager of the CSC Project must ensure that no project member is on a sanctions list. You do not have any commitments that would violate export control or sanctions legislation. You are not affiliated with organizations operating in countries subject to sanctions. You do not use CSC’s Services for Research in countries subject to sanctions. You do not transfer content, for example software, computing results and research data, or competences to countries under the export restrictions or sanctions. You follow the possible export restrictions by the software vendor of the software you are using. You do not circumvent the above-mentioned prohibitions by technical means. If you are uncertain whether export restrictions or sanctions apply to your research project, we recommend to contact the Finnish home organization of your project or CSC Service Desk. CSC is responsible for inspection, monitoring and security processes related to the use of services and export restrictions. Service users and CSC staff are obliged to notify CSC of any illegal research or other unwanted act that may breach the contract, export or sanctions regulations or other commitments. If CSC has reasons to suspect that the services are used partially or entirely against export restrictions or sanctions, CSC is obliged to report the issue to the export control unit of the Ministry for Foreign Affairs according to the Finnish law on export control 500/2024. If a crime or violation is suspected, CSC is obliged to make a report of an offence to the police. In addition CSC may inform the CSC Project Manager and the relevant home organizations about possible violations of these rules. Information on export regulations and sanctions: Finnish law on dual-use items export control (Laki kaksikäyttötuotteiden vientivalvonnasta, in Finnish) (External link) Regulation (EU) 2021/821 of the European Parliament and of the Council (External link) for the control of exports, brokering, technical assistance, transit and transfer of dual-use items (recast), especially the Annex 1 Sanctions by countries (Ministry for Foreign Affairs, in Finnish) (External link) , Export Control (Ministry for Foreign Affairs, in English) (External link) In particular, sanctions against Russia (Ukraine) are the most important consolidated versions of Council Regulation (EU) 833/2014 and (EU) 269/2014. EU sanctions map on dual-use items (External link) Information on US export regulations and sanctions (External link) US Resources on Export Controls Implemented in Response to Russia’s Invasion of Ukraine (External link) US Commerce Control List (External link) US Commerce Country Chart (External link)",
+      "full_text": "Skip to content Services for research Docs CSC - User guides (External link) MyCSC - User portal (External link) csc.fi - Company site (External link) Services for research Search for: Service Desk Service Desk Home How to start Services Services (External link) General Service catalog Service breaks Resource allocation Applying for resources Extremely large resources Managing service quotas Service categories High-performance computing Research data management Plan data management Store & share data Publish & discover data Cloud services Services for sensitive data Compare SD Services and ePouta Sensitive Data (SD) Services for Research Overview for IT personnel and organizations Quick access page Definition of sensitive data Managing sensitive data User groups Services for science & methods AI and data analytics Biosciences Chemistry Code optimization Computational engineering Geoinformatics Geocomputing Mathematics, statistics and technical computing Physics Quantum computing Social sciences and humanities Services for education Services for commercial use Purchasing CSC’s services Use cases Blogs Training Training (External link) Training calendar Training portfolio Terms & policies Terms & policies (External link) Free-of-charge use Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Policies CSC research infrastructure data management policy Persistent identifier (PID) policy Security & privacy Protection levels Privacy notice for remote identification service Home › Terms of use › Export restrictions and sanctions Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Export restrictions and sanctions suomeksi / in Finnish | Download PDF version Effective as of June 24 2025 , replaces the previous version of Export restrictions and sanctions. The content of this document is a mandatory part of the General Terms of Use for CSC’s Services for Research . Export restrictions apply to CSC’s Services for Research . For example, CSC’s supercomputing hardware, the services produced by the hardware is considered so-called dual-use item. Also the research results provided by the supercomputing services and expertise derived from them can be dual-use items. Dual-use items are regulated by a mandatory legislation. The users must obey Finnish and EU export restrictions and sanctions. The services must not be used against US export restrictions or sanctions since these are included as contract terms in contracts with US vendors, other subcontractors and software providers and in that way they bind CSC and also restrict service use. Software-specific license terms can be found from CSC guidelines and user manuals. (External link) CSC’s Service Desk will be happy to answer your questions. When using CSC services, creating a CSC Project, adding members to your CSC Project or applying resources for a CSC Project you affirm and confirm the following: Your use of CSC’s Services for Research or the results thereof do not violate export control regulations or sanctions. You are not on any sanctions list. The project manager of the CSC Project must ensure that no project member is on a sanctions list. You do not have any commitments that would violate export control or sanctions legislation. You are not affiliated with organizations operating in countries subject to sanctions. You do not use CSC’s Services for Research in countries subject to sanctions. You do not transfer content, for example software, computing results and research data, or competences to countries under the export restrictions or sanctions. You follow the possible export restrictions by the software vendor of the software you are using. You do not circumvent the above-mentioned prohibitions by technical means. If you are uncertain whether export restrictions or sanctions apply to your research project, we recommend to contact the Finnish home organization of your project or CSC Service Desk. CSC is responsible for inspection, monitoring and security processes related to the use of services and export restrictions. Service users and CSC staff are obliged to notify CSC of any illegal research or other unwanted act that may breach the contract, export or sanctions regulations or other commitments. If CSC has reasons to suspect that the services are used partially or entirely against export restrictions or sanctions, CSC is obliged to report the issue to the export control unit of the Ministry for Foreign Affairs according to the Finnish law on export control 500/2024. If a crime or violation is suspected, CSC is obliged to make a report of an offence to the police. In addition CSC may inform the CSC Project Manager and the relevant home organizations about possible violations of these rules. Information on export regulations and sanctions: Finnish law on dual-use items export control (Laki kaksikäyttötuotteiden vientivalvonnasta, in Finnish) (External link) Regulation (EU) 2021/821 of the European Parliament and of the Council (External link) for the control of exports, brokering, technical assistance, transit and transfer of dual-use items (recast), especially the Annex 1 Sanctions by countries (Ministry for Foreign Affairs, in Finnish) (External link) , Export Control (Ministry for Foreign Affairs, in English) (External link) In particular, sanctions against Russia (Ukraine) are the most important consolidated versions of Council Regulation (EU) 833/2014 and (EU) 269/2014. EU sanctions map on dual-use items (External link) Information on US export regulations and sanctions (External link) US Resources on Export Controls Implemented in Response to Russia’s Invasion of Ukraine (External link) US Commerce Control List (External link) US Commerce Country Chart (External link) CSC - IT Center for Science Ltd. Contact information P.O. Box 405, 02101 Espoo tel. XXXXXX (switchboard) Service desk Open weekdays from 8:30 to 16:00 tel. XXXXXX servicedesk@csc.fi Detailed contact information (External link) Visiting addresses Espoo Life Science Center Keilaniemi Keilaranta 14, 02150 Espoo Directions (External link) Datacenter Kajaani Renforsin Ranta business area Tehdaskatu 15, 87100 Kajaani Directions (External link) Visit other CSC sites User guides – docs.csc.fi (External link) User portal – my.csc.fi (External link) Main website – csc.fi (External link) Follow us LinkedIn (External link) Instagram (External link) Facebook (External link) YouTube (External link) Subscribe to newsletters (External link) Copyright CSC – IT Center for Science Ltd. Service breaks Security & privacy Accessibility Search for: ×",
+      "links": [
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi/",
+          "text": "Docs CSC - User guides (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi/",
+          "text": "MyCSC - User portal (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.csc.fi/",
+          "text": "csc.fi - Company site (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/how-to-start/",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service",
+          "text": "Service catalog",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/",
+          "text": "Resource allocation",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/",
+          "text": "Applying for resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+          "text": "Extremely large resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/quotas/",
+          "text": "Managing service quotas",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/high-performance-computing/",
+          "text": "High-performance computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/",
+          "text": "Research data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/data-management-planning/",
+          "text": "Plan data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/storage/",
+          "text": "Store & share data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/publish-and-discover/",
+          "text": "Publish & discover data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/cloud-computing/",
+          "text": "Cloud services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/",
+          "text": "Services for sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/",
+          "text": "Compare SD Services and ePouta",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/",
+          "text": "Sensitive Data (SD) Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/",
+          "text": "Overview for IT personnel and organizations",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/",
+          "text": "Quick access page",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/definition-of-sensitive-data/",
+          "text": "Definition of sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/managing-sensitive-data/",
+          "text": "Managing sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/",
+          "text": "Services for science & methods",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/ai-and-data-analytics/",
+          "text": "AI and data analytics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/biosciences/",
+          "text": "Biosciences",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/chemistry/",
+          "text": "Chemistry",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/code-optimization/",
+          "text": "Code optimization",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/computational-engineering/",
+          "text": "Computational engineering",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/",
+          "text": "Geoinformatics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/geocomputing/",
+          "text": "Geocomputing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/mathematics-and-statistics/",
+          "text": "Mathematics, statistics and technical computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/physics/",
+          "text": "Physics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/quantum-computing/",
+          "text": "Quantum computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/social-sciences-and-humanities/",
+          "text": "Social sciences and humanities",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/educational-use/",
+          "text": "Services for education",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/",
+          "text": "Services for commercial use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/pricing/",
+          "text": "Purchasing CSC’s services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/use-case",
+          "text": "Use cases",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/blogs",
+          "text": "Blogs",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training",
+          "text": "Training calendar",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training-portfolio/",
+          "text": "Training portfolio",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/free-of-charge-use/",
+          "text": "Free-of-charge use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/dmpol/",
+          "text": "CSC research infrastructure data management policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/pid-policy/",
+          "text": "Persistent identifier (PID) policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/data-protection-levels/",
+          "text": "Protection levels",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/",
+          "text": "Privacy notice for remote identification service",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/yleiset-kayttoehdot/vientirajoitukset-ja-pakotteet/",
+          "text": "suomeksi / in Finnish",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/app/uploads/2025/09/2025-06-24-Export-restrictions-and-sanctions.pdf",
+          "text": "Download PDF version",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use",
+          "text": "General Terms of Use for CSC’s Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service/",
+          "text": "CSC’s Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi/apps/",
+          "text": "CSC guidelines and user manuals. (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.finlex.fi/fi/laki/alkup/2024/20240500",
+          "text": "Finnish law on dual-use items export control (Laki kaksikäyttötuotteiden vientivalvonnasta, in Finnish) (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://eur-lex.europa.eu/eli/reg/2021/821/oj",
+          "text": "Regulation (EU) 2021/821 of the European Parliament and of the Council (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://um.fi/pakotteet-maittain",
+          "text": "Sanctions by countries (Ministry for Foreign Affairs, in Finnish) (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://um.fi/services-and-guidelines-for-export-control",
+          "text": "Export Control (Ministry for Foreign Affairs, in English) (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.sanctionsmap.eu/#/main?filters=%7B%22adopted_by.id%22:%7B%221%22:false,%222%22:false,%223%22:false%7D,%22category.id%22:%7B%221%22:false,%222%22:false,%223%22:false,%225%22:false%7D,%22country.code%22:%7B%22AF%22:false,%22BY%22:false,%22BA%22:false,%22BI%22:false,%22CF%22:false,%22CN%22:false,%22KP%22:false,%22CD%22:false,%22GT%22:false,%22GN%22:false,%22GW%22:false,%22HT%22:false,%22IR%22:false,%22IQ%22:false,%22LB%22:false,%22LY%22:false,%22ML%22:false,%22MD%22:false,%22ME%22:false,%22MM%22:false,%22NI%22:false,%22NE%22:false,%22RU%22:false,%22RS%22:false,%22SO%22:false,%22SS%22:false,%22SD%22:false,%22SY%22:false,%22TN%22:false,%22TR%22:false,%22UA%22:false,%22US%22:false,%22VE%22:false,%22YE%22:false,%22ZW%22:false%7D,%22measures.type.id%22:%7B%222%22:false,%223%22:false,%224%22:false,%225%22:false,%226%22:false,%227%22:true,%228%22:true,%2211%22:false,%2212%22:false,%2213%22:false,%2214%22:false,%2215%22:false,%2216%22:false,%2217%22:false,%2218%22:false,%2219%22:false,%2220%22:false,%2221%22:false,%2222%22:false,%2223%22:false,%2224%22:false,%2225%22:false,%2226%22:false,%2227%22:false,%2228%22:false,%2229%22:false,%2230%22:false,%2233%22:false,%2234%22:false,%2235%22:false,%2236%22:false,%2237%22:false,%2239%22:false,%2240%22:false,%2241%22:false,%2242%22:false,%2243%22:false,%2244%22:false,%2245%22:false,%2246%22:false,%2247%22:false,%2248%22:false,%2249%22:false,%2250%22:false,%2251%22:false,%2252%22:false,%2253%22:false,%2255%22:false,%2256%22:false,%2257%22:false,%2258%22:false,%2259%22:false,%2261%22:false,%2262%22:false,%2263%22:false,%2264%22:false%7D%7D",
+          "text": "EU sanctions map on dual-use items (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bis.gov/regulations/ear",
+          "text": "Information on US export regulations and sanctions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bis.doc.gov/index.php/policy-guidance/country-guidance/russia-belarus",
+          "text": "US Resources on Export Controls Implemented in Response to Russia’s Invasion of Ukraine (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bis.gov/ear/title-15/subtitle-b/chapter-vii/subchapter-c/part-774/supplement-no-1-part-774-commerce-control",
+          "text": "US Commerce Control List (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.bis.gov/ear/title-15/subtitle-b/chapter-vii/subchapter-c/part-738/supplement-no-1-part-738-commerce-country",
+          "text": "US Commerce Country Chart (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/",
+          "text": "Detailed contact information (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#espoo-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#kajaani-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi",
+          "text": "User guides – docs.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi",
+          "text": "User portal – my.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi",
+          "text": "Main website – csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/csc---it-center-for-science/",
+          "text": "LinkedIn (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/CSCfi/",
+          "text": "Instagram (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/CSCfi/",
+          "text": "Facebook (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/c/CSCfi",
+          "text": "YouTube (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/subscribe-to-newsletters/",
+          "text": "Subscribe to newsletters (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/accessibility",
+          "text": "Accessibility",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "join our weekly online research support coffee sessions",
+      "depth": 2,
+      "parent_url": "https://research.csc.fi/support/",
+      "http_status": 200,
+      "final_url": "https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/",
+      "title": "CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time - Services for Research",
+      "lang_attr": "en-US",
+      "main_text": "Advanced Beginner Fundamentals Intermediate Online CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time Starting to use a new system is often not easy with many new concepts and ways of working. Sometimes your question is just easier asked in person? In our weekly research support coffee sessions you can directly discuss with our friendly user support staff! Sessions are on holiday break during 18.12.2025 – 13.1.2026 First session after break: 14.1.2026 When? – every Wednesday at 14:00 Where? – Zoom (External link) We use a collaborative document HedgeDoc (External link) , where you can write briefly about the topic of your question beforehand or during the session – this gives us a chance to invite the topic specialist to the call You can ask both in English and Finnish – or any language our specialists available speak. Please also note our specialized user support sessions for LUMI (External link) . Don’t hesitate to contact us anytime at: servicedesk(at)csc.fi (our main channel for user support). Upcoming short talks: 22.4. SSH authentication changes to Roihu 29.4. Roihus hardware overview 6.5. Data migration to Roihu + ProjData 13.5. – 20.5. FirecREST 27.5. Roihu performance 3.6. Using Allas and Lumi-O from Roihu 10.6.SSH authentication changes to Roihu 10.6. Satama Short talk archive (External link) Time Continuous course Place Online course Related content Related use cases Related blogs Related trainings",
+      "full_text": "Skip to content Services for research Docs CSC - User guides (External link) MyCSC - User portal (External link) csc.fi - Company site (External link) Services for research Search for: Service Desk Service Desk Home How to start Services Services (External link) General Service catalog Service breaks Resource allocation Applying for resources Extremely large resources Managing service quotas Service categories High-performance computing Research data management Plan data management Store & share data Publish & discover data Cloud services Services for sensitive data Compare SD Services and ePouta Sensitive Data (SD) Services for Research Overview for IT personnel and organizations Quick access page Definition of sensitive data Managing sensitive data User groups Services for science & methods AI and data analytics Biosciences Chemistry Code optimization Computational engineering Geoinformatics Geocomputing Mathematics, statistics and technical computing Physics Quantum computing Social sciences and humanities Services for education Services for commercial use Purchasing CSC’s services Use cases Blogs Training Training (External link) Training calendar Training portfolio Terms & policies Terms & policies (External link) Free-of-charge use Terms of use Prerequisites and responsibilities for a CSC project manager Personal Data Processing Agreement Export restrictions and sanctions Policies CSC research infrastructure data management policy Persistent identifier (PID) policy Security & privacy Protection levels Privacy notice for remote identification service Home › Trainings › CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time Advanced Beginner Fundamentals Intermediate Online CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time Starting to use a new system is often not easy with many new concepts and ways of working. Sometimes your question is just easier asked in person? In our weekly research support coffee sessions you can directly discuss with our friendly user support staff! Sessions are on holiday break during 18.12.2025 – 13.1.2026 First session after break: 14.1.2026 When? – every Wednesday at 14:00 Where? – Zoom (External link) We use a collaborative document HedgeDoc (External link) , where you can write briefly about the topic of your question beforehand or during the session – this gives us a chance to invite the topic specialist to the call You can ask both in English and Finnish – or any language our specialists available speak. Please also note our specialized user support sessions for LUMI (External link) . Don’t hesitate to contact us anytime at: servicedesk(at)csc.fi (our main channel for user support). Upcoming short talks: 22.4. SSH authentication changes to Roihu 29.4. Roihus hardware overview 6.5. Data migration to Roihu + ProjData 13.5. – 20.5. FirecREST 27.5. Roihu performance 3.6. Using Allas and Lumi-O from Roihu 10.6.SSH authentication changes to Roihu 10.6. Satama Short talk archive (External link) Time Continuous course Place Online course Related content Related use cases Related blogs Related trainings CSC - IT Center for Science Ltd. Contact information P.O. Box 405, 02101 Espoo tel. XXXXXX (switchboard) Service desk Open weekdays from 8:30 to 16:00 tel. XXXXXX servicedesk@csc.fi Detailed contact information (External link) Visiting addresses Espoo Life Science Center Keilaniemi Keilaranta 14, 02150 Espoo Directions (External link) Datacenter Kajaani Renforsin Ranta business area Tehdaskatu 15, 87100 Kajaani Directions (External link) Visit other CSC sites User guides – docs.csc.fi (External link) User portal – my.csc.fi (External link) Main website – csc.fi (External link) Follow us LinkedIn (External link) Instagram (External link) Facebook (External link) YouTube (External link) Subscribe to newsletters (External link) Copyright CSC – IT Center for Science Ltd. Service breaks Security & privacy Accessibility Search for: ×",
+      "links": [
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi/",
+          "text": "Docs CSC - User guides (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi/",
+          "text": "MyCSC - User portal (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.csc.fi/",
+          "text": "csc.fi - Company site (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi",
+          "text": "Services for research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/support",
+          "text": "Service Desk",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/how-to-start/",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service",
+          "text": "Service catalog",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/",
+          "text": "Resource allocation",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/",
+          "text": "Applying for resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+          "text": "Extremely large resources",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/resources/quotas/",
+          "text": "Managing service quotas",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/high-performance-computing/",
+          "text": "High-performance computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/",
+          "text": "Research data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/data-management-planning/",
+          "text": "Plan data management",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/storage/",
+          "text": "Store & share data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/data-management/publish-and-discover/",
+          "text": "Publish & discover data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/cloud-computing/",
+          "text": "Cloud services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/",
+          "text": "Services for sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/",
+          "text": "Compare SD Services and ePouta",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/",
+          "text": "Sensitive Data (SD) Services for Research",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/",
+          "text": "Overview for IT personnel and organizations",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/",
+          "text": "Quick access page",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/definition-of-sensitive-data/",
+          "text": "Definition of sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sensitive-data/managing-sensitive-data/",
+          "text": "Managing sensitive data",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/",
+          "text": "Services for science & methods",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/ai-and-data-analytics/",
+          "text": "AI and data analytics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/biosciences/",
+          "text": "Biosciences",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/chemistry/",
+          "text": "Chemistry",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/code-optimization/",
+          "text": "Code optimization",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/computational-engineering/",
+          "text": "Computational engineering",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/",
+          "text": "Geoinformatics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/geoinformatics/geocomputing/",
+          "text": "Geocomputing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/mathematics-and-statistics/",
+          "text": "Mathematics, statistics and technical computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/physics/",
+          "text": "Physics",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/quantum-computing/",
+          "text": "Quantum computing",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/sciences/social-sciences-and-humanities/",
+          "text": "Social sciences and humanities",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/educational-use/",
+          "text": "Services for education",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/",
+          "text": "Services for commercial use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/commercial-use/pricing/",
+          "text": "Purchasing CSC’s services",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/use-case",
+          "text": "Use cases",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/blogs",
+          "text": "Blogs",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training",
+          "text": "Training calendar",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training-portfolio/",
+          "text": "Training portfolio",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/free-of-charge-use/",
+          "text": "Free-of-charge use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+          "text": "Prerequisites and responsibilities for a CSC project manager",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+          "text": "Personal Data Processing Agreement",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+          "text": "Export restrictions and sanctions",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/dmpol/",
+          "text": "CSC research infrastructure data management policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/policies/pid-policy/",
+          "text": "Persistent identifier (PID) policy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/data-protection-levels/",
+          "text": "Protection levels",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/",
+          "text": "Privacy notice for remote identification service",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training/",
+          "text": "Trainings",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/level/advanced/",
+          "text": "Advanced",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/level/beginner/",
+          "text": "Beginner",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/theme-tax/fundamentals/",
+          "text": "Fundamentals",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/level/intermediate/",
+          "text": "Intermediate",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training-type/online/",
+          "text": "Online",
+          "visible": true
+        },
+        {
+          "href": "https://cscfi.zoom.us/j/65059161807",
+          "text": "Zoom (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://siili.rahtiapp.fi/weekly-user-zoom",
+          "text": "HedgeDoc (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.lumi-supercomputer.eu/events/usercoffeebreaks/",
+          "text": "specialized user support sessions for LUMI (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://hackmd.io/1xCtrll9SN2wqGYjgZEqhw?view",
+          "text": "Short talk archive (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/use-case/?level=advanced,beginner,intermediate&theme-tax=fundamentals&",
+          "text": "Related use cases",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/blogs/?level=advanced,beginner,intermediate&theme-tax=fundamentals&",
+          "text": "Related blogs",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/training/?level=advanced,beginner,intermediate&theme-tax=fundamentals&training-type=online&",
+          "text": "Related trainings",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/",
+          "text": "Detailed contact information (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#espoo-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/about-us/contact-information/#kajaani-directions-and-accessibility",
+          "text": "Directions (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://docs.csc.fi",
+          "text": "User guides – docs.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://my.csc.fi",
+          "text": "User portal – my.csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi",
+          "text": "Main website – csc.fi (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/csc---it-center-for-science/",
+          "text": "LinkedIn (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.instagram.com/CSCfi/",
+          "text": "Instagram (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/CSCfi/",
+          "text": "Facebook (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/c/CSCfi",
+          "text": "YouTube (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://csc.fi/en/subscribe-to-newsletters/",
+          "text": "Subscribe to newsletters (External link)",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/service-break",
+          "text": "Service breaks",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/security",
+          "text": "Security & privacy",
+          "visible": true
+        },
+        {
+          "href": "https://research.csc.fi/accessibility",
+          "text": "Accessibility",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
   "children_skipped": [
     "https://research.csc.fi/terms-of-use/data-processing-agreement/ (cap for point 5b)",
-    "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (cap for point 5b)"
+    "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (cap for point 5b)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (depth 2 cap for point 5b)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (depth 2 cap for point 5b)",
+    "https://research.csc.fi/terms-of-use/#1 (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/#2 (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/#3 (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/#31 (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+    "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/support (already fetched at depth 1)",
+    "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 1: 85 link(s) on the landing page, 4 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point"
+  "crawl_note": "depth 2: 85 link(s) on the landing page, 4 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 3 page(s); fetch budget: 13 of 60 used"
 }

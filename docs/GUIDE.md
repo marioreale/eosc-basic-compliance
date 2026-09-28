@@ -36,10 +36,13 @@ offline that day, again without contacting any node.
 > the [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
 > **The published run changed on 29 September 2026.** `results/` now holds run
-> `web-12`, collected by the GitHub workflow on 28 September 2026 between 22:34
-> and 22:38 UTC from all thirteen nodes ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)),
-> the first under v3.2: 49 PASS, 14 FAIL, 67 MANUAL_REVIEW. It repeats cell for
-> cell `web-11-v3.2`, the evidence of run `web-11`
+> `web-13`, collected by the GitHub workflow at `--depth 2` on 28 September 2026
+> between 22:53 and 22:57 UTC from all thirteen nodes
+> ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)), under v3.2: 49 PASS, 14 FAIL, 67
+> MANUAL_REVIEW at both depths, since the 19 second-hop pages changed no
+> verdict. It repeats cell for cell `web-12`
+> ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)), the first collection under v3.2, at
+> depth 1, and `web-11-v3.2`, the evidence of run `web-11`
 > ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) scored again against v3.2 without
 > contacting any node, which was published briefly before it. Under v3.1 the same evidence gave 49 PASS, 8 FAIL and 73
 > MANUAL_REVIEW; the six new FAILs are 5b and 5c for CERN, Data Terra and PaNOSC.
@@ -199,7 +202,7 @@ to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
 saying so. `eosc.it` had no address record on 24 September, so that run skipped
 Italy; nothing published depends on the old address. Italy was assessed for the
 first time in run `web-4` on 26 September, from the new address, and again in
-runs `web-5` to `web-12` (the published run).
+runs `web-5` to `web-13` (the published run).
 
 ### Changing a node's URL
 
@@ -260,8 +263,11 @@ from the committed `nodes.yaml` and scored under the default checklist, so no
 other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-12
+uv run basic-check assess --run web-13
 ```
+
+The evidence records the depth it was collected at, so `assess` renders both
+depths again without any option.
 
 Run `web-11` is in the git history: restore its `results/evidence` from commit
 `d3de829` into a scratch directory and assess it there with `--results`, as
@@ -901,8 +907,8 @@ This is the way to try a node's new address before changing `nodes.yaml`
 | `--depth` | What is fetched | Requests, 9 nodes, 21 Sep 2026 | Requests, 12 nodes, 24 Sep 2026 | Requests, 13 nodes, 26 Sep 2026 |
 |---|---|---|---|---|
 | `0` | The landing page only. | 9 | 12 | 13 |
-| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about. At most 8 per node, 2 per point. | 31 (9 + 22) | 44 (12 + 32) | 44 (13 + 31), the published run |
-| `2` | The above, plus one further hop: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, under a run-wide budget. | 45 (9 + 22 + 14) | not run | not run |
+| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about. At most 8 per node, 2 per point. | 31 (9 + 22) | 44 (12 + 32) | 44 (13 + 31), and the same on 28 Sep (`web-10` to `web-12`) |
+| `2` | The above, plus one further hop: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, under a run-wide budget. | 45 (9 + 22 + 14) | not run | not run; 63 (13 + 31 + 19) on 28 Sep, run `web-13`, the published run |
 
 `robots.txt` requests are not counted in these figures. The tool fetches one per
 host before touching it.
@@ -930,8 +936,8 @@ tables is the extra hop and not the page changing in between.
 is a finding, not a disappointment: the points still marked review turn on a
 judgement ("clearly state") or quantify over things no crawl enumerates ("all
 research resources offered by the Node"), and no amount of fetching settles
-either kind. Run it yourself before assuming the same holds for another
-federation or a later date.
+either kind. **Depth 2, 28 September 2026 (run `web-13`, checklist v3.2):** 19 second-hop pages on top of the 31 depth-1 links, and again **zero** verdicts changed: 49 PASS, 14 FAIL and 67 review at both depths. The second hop reached governance, secretariat and news pages, which is also where it met a personal name that depth 1 had never collected (section on masking). Run it yourself before assuming the same holds for
+another federation or a later date.
 
 ### Be considerate with other people's servers
 
@@ -1052,9 +1058,9 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-12` (28 September 2026) was collected
+**The published run is masked.** Run `web-13` (28 September 2026) was collected
 with masking in place, and a search of all its evidence and reports found no
-personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
+personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). A deeper run reads more pages, and so needs this check more. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
 offline. All 120 verdicts and the 44 / 6 / 70 tally were unchanged. A few character counts in the report dropped
 slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to
@@ -1394,7 +1400,7 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-12`). Update it to the new run's shape.
+  run `web-13`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:

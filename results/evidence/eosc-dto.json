@@ -2,7 +2,7 @@
   "node_id": "eosc-dto",
   "node_name": "EOSC DTO (D4Science)",
   "requested_url": "https://eosc-dto.d4science.org/",
-  "fetched_at": "2026-09-28T22:36:13+00:00",
+  "fetched_at": "2026-09-28T22:54:27+00:00",
   "final_url": "https://eosc-dto.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -732,7 +732,7 @@
   "meta_description": "",
   "error": "",
   "screenshot": "eosc-dto.png",
-  "crawl_depth": 1,
+  "crawl_depth": 2,
   "children": [
     {
       "url": "https://www.d4science.org/policies/access-and-acceptable-use",
@@ -1091,7 +1091,7 @@
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUufVtFhNpagVUqWCUAss2FSOM6UWjh08No%2B%2FJ0nVUiRg67n3zJ0Zz5A3qmWldwe9gVcP6IISEayTRi%2BMRt%2BA3YJ9kwIeNuuCHJxrkVGKvm2NdaM6QyFBCxgZ%2B0x5x6E9kgquVMXFCwmWHVNq3gO%2F7VwI47XD3%2FwWuGqQniu0tcYZYdRAJsFqWZBdPp7UeZzkYV5VVZjFOQ%2Bn0QTCNBvv91k6Sa8E76SIHlYaHdeuIEnU6aOrMJneJwlLc5ZGTyR4BItDtmQUkeCjURpZ36gg3mpmOEpkmjeAzAm2LW%2FWrBMyflrSpaX933Oag8xnvZoN6ezcQt1IDbuuXHvRM3fn2Wf0Ujk7Xuu2I6%2BWd0ZJ8RmUSpn3RbczBwVx1gMJro1tuPs7SzyKhxdZh%2FtByqDhUpV1bQGR0Pmx689vMf8C",
+      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUqchTVqrqRS1QqpUEGqBA5fKcTbUwrGD1%2Bbn7UlStRQJuHpnvp3d9Rx5o1pWeHfQW3j1gC4oEME6afTSaPQN2B3YNyngYbvJycG5Fhml6NvWWDeqEhQStICRsc%2BUdxzaI6ngSpVcvJBg1TGl5j3w286FMF47%2FM1vgasG6blCW2ucEUYNZBKsVznZz6o6q9NxGc6i9CpMsqQOOYdpmIyzdJJWZVRmZSdF9LDW6Lh2OYmjOA2jWRhP7%2BOYTRKWTJ5I8AgWh2zxKCLBR6M0sr5RTrzVzHCUyDRvAJkTbFfcbFgnZPy0pEtL%2B7%2FnNAdZzHs1G9LZhYWqkRr2Xbnyomfuz7PP6aVyfrzWbUder%2B6MkuIzKJQy78tuZw5y4qwHElwb23D3d5bxaDy8yCqsBymDhktVVJUFREIXx64%2Fv8XiCw%3D%3D",
       "title": "Sign in to D4Science Accounts prod",
       "lang_attr": "en",
       "main_text": "D4science Support English Catalan (Català) Chinese (Simplified) (中文 (简体)) Dutch (Nederlands) English French (Français) German (Deutsch) Italian (Italiano) Japanese (日本語) Lithuanian (Lietuvių) Norwegian (Norsk) Polish (Polski) Portuguese (Brazil) (Português (Brasil)) Russian (русский) Slovak (Slovenčina) Spanish (Español) Swedish (Svenska) Turkish (Türkçe) Sign in to your account Username or email Password Remember me Forgot Password? Or sign in with Academic / other Google LinkedIn Twitter GitHub CNR-ISTI ORCID New user? Register Terms of Use | Cookies Policy | Privacy Policy",
@@ -1108,132 +1108,132 @@
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
           "text": "Catalan (Català)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
           "text": "Chinese (Simplified) (中文 (简体))",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
           "text": "Dutch (Nederlands)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
           "text": "English",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
           "text": "French (Français)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
           "text": "German (Deutsch)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
           "text": "Italian (Italiano)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
           "text": "Japanese (日本語)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
           "text": "Lithuanian (Lietuvių)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
           "text": "Norwegian (Norsk)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
           "text": "Polish (Polski)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
           "text": "Portuguese (Brazil) (Português (Brasil))",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
           "text": "Russian (русский)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
           "text": "Slovak (Slovenčina)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
           "text": "Spanish (Español)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
           "text": "Swedish (Svenska)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
           "text": "Turkish (Türkçe)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9",
           "text": "Forgot Password?",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&session_code=LVg39gtEbpkQ5rFkfbqNO9pxpAHp1-1xLkr2ksVYZVA",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&session_code=6wsa1lTHFtn-JamH_6EtkriPkjvIz93vUuKQKKD4D4M",
           "text": "Academic / other",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&session_code=LVg39gtEbpkQ5rFkfbqNO9pxpAHp1-1xLkr2ksVYZVA",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&session_code=6wsa1lTHFtn-JamH_6EtkriPkjvIz93vUuKQKKD4D4M",
           "text": "Google",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&session_code=LVg39gtEbpkQ5rFkfbqNO9pxpAHp1-1xLkr2ksVYZVA",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&session_code=6wsa1lTHFtn-JamH_6EtkriPkjvIz93vUuKQKKD4D4M",
           "text": "LinkedIn",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&session_code=LVg39gtEbpkQ5rFkfbqNO9pxpAHp1-1xLkr2ksVYZVA",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&session_code=6wsa1lTHFtn-JamH_6EtkriPkjvIz93vUuKQKKD4D4M",
           "text": "Twitter",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&session_code=LVg39gtEbpkQ5rFkfbqNO9pxpAHp1-1xLkr2ksVYZVA",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&session_code=6wsa1lTHFtn-JamH_6EtkriPkjvIz93vUuKQKKD4D4M",
           "text": "GitHub",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&session_code=LVg39gtEbpkQ5rFkfbqNO9pxpAHp1-1xLkr2ksVYZVA",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&session_code=6wsa1lTHFtn-JamH_6EtkriPkjvIz93vUuKQKKD4D4M",
           "text": "CNR-ISTI",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9&session_code=LVg39gtEbpkQ5rFkfbqNO9pxpAHp1-1xLkr2ksVYZVA",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9&session_code=6wsa1lTHFtn-JamH_6EtkriPkjvIz93vUuKQKKD4D4M",
           "text": "ORCID",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=vZkDAMTpRCs&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzY1N2Q2MTI2LTZiYmItNDE2YS04MDdlLTM0NWZmNDM3MzljYSIsInJtIjoicG9zdCJ9",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=ZD-dTZShqVY&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzlkZjdmNjFiLTkwNjMtNDc0Zi1hYWU4LTQxNzY1NmRiMGI3YiIsInJtIjoicG9zdCJ9",
           "text": "Register",
           "visible": true
         },
@@ -1255,8 +1255,835 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://www.d4science.org/policies/terms-of-use",
+      "selected_for": [
+        "5b"
+      ],
+      "link_text": "Terms",
+      "depth": 2,
+      "parent_url": "https://www.d4science.org/policies/access-and-acceptable-use",
+      "http_status": 200,
+      "final_url": "https://www.d4science.org/policies/terms-of-use",
+      "title": "Terms of Use | D4Science",
+      "lang_attr": "en",
+      "main_text": "Defines the legal relationship between users and the D4Science infrastructure, including conditions of use, responsibilities, and limitations of liability. This is the final version 1.1 of the Terms of Use, which entered into force on 1 April 2026. Introduction These Terms of Use (“Terms”) define the conditions under which users may access and use the D4Science Infrastructure and the services provided through it. D4Science is a digital research infrastructure designed to support scientific communities by providing integrated environments where users can manage data, perform analyses, collaborate, and publish research results. These environments, known as Virtual Research Environments (VREs) , enable distributed communities to work together using shared tools and resources. By accessing or using any component of the D4Science infrastructure, users acknowledge that they have read and understood these Terms and agree to comply with them. Users also acknowledge that the infrastructure operates within a broader governance framework composed of multiple policies, which collectively regulate its use. Purpose of the Infrastructure The D4Science infrastructure has been designed to support the full lifecycle of scientific research. It provides a set of integrated services that allow research communities to create, manage, analyse, and share knowledge in a collaborative digital environment. Through its Virtual Research Environments, D4Science enables: collaborative data analysis and interpretation management and sharing of research artefacts execution of computational workflows publication and discovery of research outputs The infrastructure promotes the principles of Open Science , encouraging transparency, reproducibility, and responsible sharing of scientific knowledge. Acknowledgement and Citation of D4Science D4Science is the result of sustained scientific and technological effort and is maintained as a shared research infrastructure. For this reason, users are strongly encouraged to acknowledge the use of the infrastructure in any scientific outputs produced with its support. 🎓 Recommended citation Assante, M., Candela, L., Castelli, D., Coro, G., Dell’Amico, A., Pagano, P. (2019). Enacting Open Science by D4Science . Future Generation Computer Systems. https://doi.org/10.1016/j.future.2019.05.063 Additional guidance on how to cite D4Science, including references to specific services or Virtual Research Environments, is available at: https://www.d4science.org/how-cite Acknowledging the use of D4Science contributes to the visibility and sustainability of the infrastructure and supports its continued development. A suggested acknowledgement statement is: “This work has been enabled by the D4Science infrastructure ( https://www.d4science.org - ROR: https://ror.org/027cvs066 ).” Infrastructure Operator The D4Science infrastructure is operated by the Consiglio Nazionale delle Ricerche (CNR) through the Institute of Information Science and Technologies “A. Faedo” (ISTI) located in Pisa, Italy. The infrastructure is managed by a dedicated operational team, the D4Science Working Group, which is responsible for its design, operation, maintenance, and continuous evolution. The governance of the infrastructure includes an Executive Directorate that provides strategic direction and ensures alignment with scientific and institutional objectives. Definitions For clarity, the following terms are used throughout these Terms and the associated policy framework. D4Science Infrastructure: A distributed digital research infrastructure providing services, computing resources, and collaborative environments to scientific communities. Gateway: A web-based access point through which users authenticate and access infrastructure services. Virtual Research Environment (VRE): A customizable collaborative environment created for a specific research community or project. A VRE acts as a logical security context in which access to services and resources is controlled. Service: Any capability provided by the infrastructure, including data management, computational, collaboration, and API-based services. Research Artefact: Any digital resource used or produced within the infrastructure to support research activities, including datasets, models, workflows, software, scripts, notebooks, and applications. Scope of the Infrastructure The D4Science infrastructure provides a wide range of services supporting research activities, including data management, collaborative tools, computational platforms, and programmatic access through APIs. The infrastructure operates on a distributed model and may integrate resources hosted across: infrastructure managed by CNR infrastructure provided by GARR approved cloud providers As part of its evolution, the infrastructure periodically updates its services. For example, the DataMiner platform has been replaced by the Cloud Computing Platform (CCP), with legacy support planned until October 2026. Relationship with Other Policies These Terms are part of the D4Science Policy Framework , which includes several complementary documents addressing different aspects of infrastructure governance. These include: → Access and Acceptable Use Policy → Privacy and Data Protection Policy → Service Policy → Security and Incident Response Policy → Data and Research Artefact Governance and Licensing Policy By accepting these Terms, users acknowledge that these policies apply to their use of the infrastructure. Eligibility for Access Access to the D4Science infrastructure is intended for individuals and organizations engaged in research, education, or related activities. Users typically access the infrastructure through a Gateway and may join one or more Virtual Research Environments, depending on their role and the policies defined by each community. Each VRE may define its own access rules and participation criteria. User Responsibilities Users play a key role in ensuring the proper use of the infrastructure. They are expected to use the services responsibly and in compliance with applicable laws and regulations. In particular, users must: ensure that they have the right to use and share any research artefacts they upload respect intellectual property and licensing conditions avoid actions that could compromise the security or stability of the infrastructure Responsibility: Users are responsible for maintaining the confidentiality of their credentials and for all activities performed through their accounts. Intellectual Property Users retain ownership of the research artefacts they upload, create, or manage within the infrastructure. By using the infrastructure, users grant the operator a non-exclusive licence to process such artefacts solely for the purpose of providing the services . The infrastructure operator does not claim ownership of user-generated content. Security and Monitoring The D4Science infrastructure implements security measures designed to protect its systems and users. These measures include authentication controls, monitoring of system activity, and logging of relevant events. Monitoring activities are carried out in accordance with applicable laws and institutional policies. The security framework of the infrastructure is aligned with recognized best practices and with the principles introduced by the NIS2 Directive . Service Availability The infrastructure operator makes reasonable efforts to ensure that services are available and reliable. However, services are provided on a best-effort basis , and availability may vary depending on operational conditions. Typical availability targets exceed 99.5%, although temporary interruptions may occur due to maintenance or unforeseen issues. Changes to Services D4Science evolves continuously to meet the needs of research communities and to adapt to technological and regulatory changes. Services may be updated, replaced, or discontinued over time. When possible, users will be informed in advance of significant changes affecting the services they use. Limitation of Liability The infrastructure is provided without guarantees regarding uninterrupted availability or the accuracy of results produced through its use. The operator is not responsible for: loss of data, service interruptions, inaccuracies in research artefacts, or results generated through computational services. Users remain responsible for validating their results. Termination of Access and Governing Law Access to the infrastructure may be suspended or terminated in cases such as: violation of applicable policies, security risks, misuse of services, or prolonged inactivity. Such measures are taken to protect the integrity of the infrastructure and its users. These Terms are governed by the laws of Italy . Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa.",
+      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies Terms of Use Terms of Use Defines the legal relationship between users and the D4Science infrastructure, including conditions of use, responsibilities, and limitations of liability. This is the final version 1.1 of the Terms of Use, which entered into force on 1 April 2026. Introduction These Terms of Use (“Terms”) define the conditions under which users may access and use the D4Science Infrastructure and the services provided through it. D4Science is a digital research infrastructure designed to support scientific communities by providing integrated environments where users can manage data, perform analyses, collaborate, and publish research results. These environments, known as Virtual Research Environments (VREs) , enable distributed communities to work together using shared tools and resources. By accessing or using any component of the D4Science infrastructure, users acknowledge that they have read and understood these Terms and agree to comply with them. Users also acknowledge that the infrastructure operates within a broader governance framework composed of multiple policies, which collectively regulate its use. Purpose of the Infrastructure The D4Science infrastructure has been designed to support the full lifecycle of scientific research. It provides a set of integrated services that allow research communities to create, manage, analyse, and share knowledge in a collaborative digital environment. Through its Virtual Research Environments, D4Science enables: collaborative data analysis and interpretation management and sharing of research artefacts execution of computational workflows publication and discovery of research outputs The infrastructure promotes the principles of Open Science , encouraging transparency, reproducibility, and responsible sharing of scientific knowledge. Acknowledgement and Citation of D4Science D4Science is the result of sustained scientific and technological effort and is maintained as a shared research infrastructure. For this reason, users are strongly encouraged to acknowledge the use of the infrastructure in any scientific outputs produced with its support. 🎓 Recommended citation Assante, M., Candela, L., Castelli, D., Coro, G., Dell’Amico, A., Pagano, P. (2019). Enacting Open Science by D4Science . Future Generation Computer Systems. https://doi.org/10.1016/j.future.2019.05.063 Additional guidance on how to cite D4Science, including references to specific services or Virtual Research Environments, is available at: https://www.d4science.org/how-cite Acknowledging the use of D4Science contributes to the visibility and sustainability of the infrastructure and supports its continued development. A suggested acknowledgement statement is: “This work has been enabled by the D4Science infrastructure ( https://www.d4science.org - ROR: https://ror.org/027cvs066 ).” Infrastructure Operator The D4Science infrastructure is operated by the Consiglio Nazionale delle Ricerche (CNR) through the Institute of Information Science and Technologies “A. Faedo” (ISTI) located in Pisa, Italy. The infrastructure is managed by a dedicated operational team, the D4Science Working Group, which is responsible for its design, operation, maintenance, and continuous evolution. The governance of the infrastructure includes an Executive Directorate that provides strategic direction and ensures alignment with scientific and institutional objectives. Definitions For clarity, the following terms are used throughout these Terms and the associated policy framework. D4Science Infrastructure: A distributed digital research infrastructure providing services, computing resources, and collaborative environments to scientific communities. Gateway: A web-based access point through which users authenticate and access infrastructure services. Virtual Research Environment (VRE): A customizable collaborative environment created for a specific research community or project. A VRE acts as a logical security context in which access to services and resources is controlled. Service: Any capability provided by the infrastructure, including data management, computational, collaboration, and API-based services. Research Artefact: Any digital resource used or produced within the infrastructure to support research activities, including datasets, models, workflows, software, scripts, notebooks, and applications. Scope of the Infrastructure The D4Science infrastructure provides a wide range of services supporting research activities, including data management, collaborative tools, computational platforms, and programmatic access through APIs. The infrastructure operates on a distributed model and may integrate resources hosted across: infrastructure managed by CNR infrastructure provided by GARR approved cloud providers As part of its evolution, the infrastructure periodically updates its services. For example, the DataMiner platform has been replaced by the Cloud Computing Platform (CCP), with legacy support planned until October 2026. Relationship with Other Policies These Terms are part of the D4Science Policy Framework , which includes several complementary documents addressing different aspects of infrastructure governance. These include: → Access and Acceptable Use Policy → Privacy and Data Protection Policy → Service Policy → Security and Incident Response Policy → Data and Research Artefact Governance and Licensing Policy By accepting these Terms, users acknowledge that these policies apply to their use of the infrastructure. Eligibility for Access Access to the D4Science infrastructure is intended for individuals and organizations engaged in research, education, or related activities. Users typically access the infrastructure through a Gateway and may join one or more Virtual Research Environments, depending on their role and the policies defined by each community. Each VRE may define its own access rules and participation criteria. User Responsibilities Users play a key role in ensuring the proper use of the infrastructure. They are expected to use the services responsibly and in compliance with applicable laws and regulations. In particular, users must: ensure that they have the right to use and share any research artefacts they upload respect intellectual property and licensing conditions avoid actions that could compromise the security or stability of the infrastructure Responsibility: Users are responsible for maintaining the confidentiality of their credentials and for all activities performed through their accounts. Intellectual Property Users retain ownership of the research artefacts they upload, create, or manage within the infrastructure. By using the infrastructure, users grant the operator a non-exclusive licence to process such artefacts solely for the purpose of providing the services . The infrastructure operator does not claim ownership of user-generated content. Security and Monitoring The D4Science infrastructure implements security measures designed to protect its systems and users. These measures include authentication controls, monitoring of system activity, and logging of relevant events. Monitoring activities are carried out in accordance with applicable laws and institutional policies. The security framework of the infrastructure is aligned with recognized best practices and with the principles introduced by the NIS2 Directive . Service Availability The infrastructure operator makes reasonable efforts to ensure that services are available and reliable. However, services are provided on a best-effort basis , and availability may vary depending on operational conditions. Typical availability targets exceed 99.5%, although temporary interruptions may occur due to maintenance or unforeseen issues. Changes to Services D4Science evolves continuously to meet the needs of research communities and to adapt to technological and regulatory changes. Services may be updated, replaced, or discontinued over time. When possible, users will be informed in advance of significant changes affecting the services they use. Limitation of Liability The infrastructure is provided without guarantees regarding uninterrupted availability or the accuracy of results produced through its use. The operator is not responsible for: loss of data, service interruptions, inaccuracies in research artefacts, or results generated through computational services. Users remain responsible for validating their results. Termination of Access and Governing Law Access to the infrastructure may be suspended or terminated in cases such as: violation of applicable policies, security risks, misuse of services, or prolonged inactivity. Such measures are taken to protect the integrity of the infrastructure and its users. These Terms are governed by the laws of Italy . Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
+      "links": [
+        {
+          "href": "https://business.safety.google/privacy",
+          "text": "Google Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.cookieyes.com/product/cookie-consent/",
+          "text": "Cookieyes logo",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/index.php/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "How to Cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us/meet-our-team",
+          "text": "Meet Our Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/research",
+          "text": "Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/gateways",
+          "text": "Gateways",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/catalogues-dashboard",
+          "text": "Catalogues",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/support",
+          "text": "Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "D4Science Policies",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.1016/j.future.2019.05.063",
+          "text": "https://doi.org/10.1016/j.future.2019.05.063",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "https://www.d4science.org/how-cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org",
+          "text": "https://www.d4science.org",
+          "visible": true
+        },
+        {
+          "href": "https://ror.org/027cvs066",
+          "text": "https://ror.org/027cvs066",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "D4Science Policy Framework",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/access-and-acceptable-use",
+          "text": "→ Access and Acceptable Use Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
+          "text": "→ Privacy and Data Protection Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/service-policy",
+          "text": "→ Service Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/security-and-incident-response",
+          "text": "→ Security and Incident Response Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/data-and-research-artefact-governance",
+          "text": "→ Data and Research Artefact Governance and Licensing Policy",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org",
+          "text": "https://support.d4science.org",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
+          "text": "Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/cookie-policy",
+          "text": "Cookies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/terms-of-use",
+          "text": "Terms",
+          "visible": true
+        },
+        {
+          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "How to Cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us/meet-our-team",
+          "text": "Meet Our Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/research",
+          "text": "Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/gateways",
+          "text": "Gateways",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/catalogues-dashboard",
+          "text": "Catalogues",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/support",
+          "text": "Support",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.d4science.org/support",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Support",
+      "depth": 2,
+      "parent_url": "https://www.d4science.org/policies/access-and-acceptable-use",
+      "http_status": 200,
+      "final_url": "https://www.d4science.org/support",
+      "title": "Support | D4Science",
+      "lang_attr": "en",
+      "main_text": "How can we help? Check the links below to find what you are looking for. Please note: You should have a D4Science account to perform any of the operations suggested below. Request a new Functionality on existing VRE As member of any VRE you can request additional functionality. 3rd Party App Registration Docker App ShinyProxy App New Virtual Machine D4Science Gateways and VREs Gateways are the access point to infrastructure VREs. Visit D4Science.org Gateway or discover the D4Science Thematic Gateways . Request Support Assign a Task Report an Incident Request a VRE for your Community If you think your community would benefit from the use of a VRE you can submit a Request for a new Virtual Research Environment (VRE) A Virtual Research Environment (VRE) is an online system helping researchers collaborate. Learn more Could not find what you are looking for? Visit the Help Forum or Contact us .",
+      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home Support Support How can we help? Check the links below to find what you are looking for. Please note: You should have a D4Science account to perform any of the operations suggested below. Request a new Functionality on existing VRE As member of any VRE you can request additional functionality. 3rd Party App Registration Docker App ShinyProxy App New Virtual Machine D4Science Gateways and VREs Gateways are the access point to infrastructure VREs. Visit D4Science.org Gateway or discover the D4Science Thematic Gateways . Request Support Assign a Task Report an Incident Request a VRE for your Community If you think your community would benefit from the use of a VRE you can submit a Request for a new Virtual Research Environment (VRE) A Virtual Research Environment (VRE) is an online system helping researchers collaborate. Learn more Could not find what you are looking for? Visit the Help Forum or Contact us . © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement Help About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
+      "links": [
+        {
+          "href": "https://business.safety.google/privacy",
+          "text": "Google Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.cookieyes.com/product/cookie-consent/",
+          "text": "Cookieyes logo",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/index.php/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "How to Cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us/meet-our-team",
+          "text": "Meet Our Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/research",
+          "text": "Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/gateways",
+          "text": "Gateways",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/catalogues-dashboard",
+          "text": "Catalogues",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/support",
+          "text": "Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://services.d4science.org/group/d4science-services-gateway",
+          "text": "D4Science account",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org/my/page",
+          "text": "3rd Party App Registration",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org/my/page",
+          "text": "Docker App",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org/my/page",
+          "text": "ShinyProxy App",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org/my/page",
+          "text": "New Virtual Machine",
+          "visible": true
+        },
+        {
+          "href": "https://services.d4science.org/explore",
+          "text": "D4Science.org Gateway",
+          "visible": true
+        },
+        {
+          "href": "https://services.d4science.org/thematic-gateways",
+          "text": "D4Science Thematic Gateways",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org/my/page",
+          "text": "Request Support",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org/my/page",
+          "text": "Assign a Task",
+          "visible": true
+        },
+        {
+          "href": "https://support.d4science.org/my/page",
+          "text": "Report an Incident",
+          "visible": true
+        },
+        {
+          "href": "https://services.d4science.org/group/d4science-services-gateway/new-vre?p_p_id=requestvre_WAR_sbduploadshareportlet&p_p_lifecycle=0&p_p_state=maximized&p_p_state_rcv=1&p_p_col_id=column-1&p_p_col_count=1",
+          "text": "Request for a new Virtual Research Environment (VRE)",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://dev.d4science.org/support",
+          "text": "Help Forum",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
+          "text": "Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/cookie-policy",
+          "text": "Cookies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/terms-of-use",
+          "text": "Terms",
+          "visible": true
+        },
+        {
+          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "How to Cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us/meet-our-team",
+          "text": "Meet Our Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/research",
+          "text": "Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/gateways",
+          "text": "Gateways",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/catalogues-dashboard",
+          "text": "Catalogues",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/support",
+          "text": "Support",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.d4science.org/terms-of-use",
+      "selected_for": [
+        "5b"
+      ],
+      "link_text": "Terms of Use",
+      "depth": 2,
+      "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUqchTVqrqRS1QqpUEGqBA5fKcTbUwrGD1%2Bbn7UlStRQJuHpnvp3d9Rx5o1pWeHfQW3j1gC4oEME6afTSaPQN2B3YNyngYbvJycG5Fhml6NvWWDeqEhQStICRsc%2BUdxzaI6ngSpVcvJBg1TGl5j3w286FMF47%2FM1vgasG6blCW2ucEUYNZBKsVznZz6o6q9NxGc6i9CpMsqQOOYdpmIyzdJJWZVRmZSdF9LDW6Lh2OYmjOA2jWRhP7%2BOYTRKWTJ5I8AgWh2zxKCLBR6M0sr5RTrzVzHCUyDRvAJkTbFfcbFgnZPy0pEtL%2B7%2FnNAdZzHs1G9LZhYWqkRr2Xbnyomfuz7PP6aVyfrzWbUder%2B6MkuIzKJQy78tuZw5y4qwHElwb23D3d5bxaDy8yCqsBymDhktVVJUFREIXx64%2Fv8XiCw%3D%3D",
+      "http_status": 404,
+      "final_url": "https://www.d4science.org/terms-of-use",
+      "title": "Page not found | D4Science",
+      "lang_attr": "en",
+      "main_text": "The requested page could not be found.",
+      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home Page Not Found Page not found The requested page could not be found. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
+      "links": [
+        {
+          "href": "https://business.safety.google/privacy",
+          "text": "Google Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.cookieyes.com/product/cookie-consent/",
+          "text": "Cookieyes logo",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/index.php/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "How to Cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us/meet-our-team",
+          "text": "Meet Our Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/research",
+          "text": "Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/gateways",
+          "text": "Gateways",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/catalogues-dashboard",
+          "text": "Catalogues",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/support",
+          "text": "Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
+          "text": "Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/cookie-policy",
+          "text": "Cookies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies/terms-of-use",
+          "text": "Terms",
+          "visible": true
+        },
+        {
+          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us",
+          "text": "About Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/how-cite",
+          "text": "How to Cite",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/about-us/meet-our-team",
+          "text": "Meet Our Team",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/research",
+          "text": "Research",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/policies",
+          "text": "Policies",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/gateways",
+          "text": "Gateways",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/catalogues-dashboard",
+          "text": "Catalogues",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/products",
+          "text": "Products",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/success-stories",
+          "text": "Success Stories",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.d4science.org/support",
+          "text": "Support",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
-  "children_skipped": [],
-  "crawl_note": "depth 1: 57 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point"
+  "children_skipped": [
+    "https://www.d4science.org/contact-us (depth 2 cap for point 6)",
+    "https://www.d4science.org/contact-us (depth 2 cap for point 6)",
+    "https://support.d4science.org (depth 2 cap for point 6)",
+    "https://www.d4science.org/about-us (depth 2 per-page cap)",
+    "https://www.d4science.org/about-us (depth 2 per-page cap)",
+    "https://www.d4science.org/about-us/meet-our-team (depth 2 per-page cap)",
+    "https://www.d4science.org/about-us (depth 2 per-page cap)",
+    "https://www.d4science.org/about-us/meet-our-team (depth 2 per-page cap)",
+    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)"
+  ],
+  "crawl_note": "depth 2: 57 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 3 page(s); fetch budget: 10 of 60 used"
 }
