@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 438
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 449
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -37,12 +37,14 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-13`, collected at `--depth 2`, and it has
-> not been reviewed yet.** It was collected on 28 September 2026 between 22:53
+> **The published report is run `web-13-rescored`: the evidence of run
+> `web-13`, collected at `--depth 2`, scored again on 29 September 2026 against
+> the re-issued checklist v3.2. It has not been reviewed yet.** `web-13` was collected on 28 September 2026 between 22:53
 > and 22:57 UTC by the GitHub workflow ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)),
 > under **checklist v3.2** (28 September 2026), which replaced v3.1 on
 > 29 September 2026. The report shows both depths; the second hop fetched 19
-> more pages and changed no verdict. It repeats cell for cell `web-12`
+> more pages and changed no verdict, under either copy of v3.2. Under the
+> discarded first copy it repeated cell for cell `web-12`
 > ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)), the first collection under v3.2 at
 > depth 1, and `web-11-v3.2`, the evidence of run
 > `web-11` ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) scored again offline against
@@ -58,14 +60,21 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 >
 > **What v3.2 changed.** Only item 5. The purpose description, the Acceptable
 > Use Policy and the User Access Policy of every Node Exchange resource must now
-> be available **both** directly on the NLP that presents the resource **and** in
-> the resource's EOSC Catalogue metadata; v3.1 asked for either. So a landing
-> page with no link to an AUP or a UAP, which used to be review (the policy
-> might be in the Catalogue), now **fails** 5b or 5c. Under v3.2, six cells moved
-> from review to `FAIL`: 5b and 5c for CERN, Data Terra and PaNOSC. Every other
-> verdict is the same as `web-11` under v3.1 (49 PASS, 8 FAIL, 73 review), and
-> the fresh collections `web-12` (depth 1) and `web-13` (depth 2) confirmed all
-> 130 cells.
+> be available **both** on the NLP that presents the resource, directly or via
+> intermediate pages the NLP links to, **and** in the resource's EOSC Catalogue
+> metadata; v3.1 asked for either. The v3.2 document was re-issued on
+> 29 September 2026 with that wording. The first copy required the policies
+> "directly on the NLP" and is discarded. So a pointer on a policies, legal,
+> services or resources page linked from the landing page now counts, and the
+> crawler follows such links to find one. A landing page with no pointer anywhere
+> the tool can see **fails** 5b or 5c; if it links to such a page the tool did
+> not read, the point is review. `results/` now holds `web-13-rescored`: the
+> evidence of `web-13` scored again against the re-issued v3.2 without
+> contacting any node. It gives 50 PASS, 8 FAIL and 72 review. No 5b or 5c
+> FAIL remains: CERN, Data Terra and PaNOSC link to services or policies pages
+> that `web-13` did not read, so their 5b and 5c are review, and BBMRI-ERIC's
+> 5b now passes through its Access Policies page, which links the AUP. A new
+> collection would read those pages.
 
 All thirteen configured nodes were fetched on 28 September 2026 at `--depth 2`
 (13 landing pages, 31 direct links, 19 second-hop pages) and assessed against the official unscoped names list. None was skipped.
@@ -74,21 +83,24 @@ The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 49 PASS · 🔴 14 FAIL · 🟠 67 review · 0 ERROR.
+130 cells: 🟢 50 PASS · 🔴 8 FAIL · 🟠 72 review · 0 ERROR.
 
 - **Item 5 under v3.2.** CERN, Data Terra and PaNOSC link to no Acceptable Use
-  Policy and no User Access Policy from their landing pages, so 5b and 5c fail
-  for all three. Slovakia links one document that covers both, and passes both.
-  BBMRI-ERIC (UAP only), Czechia, EOSC DTO, EOSC Finland, EUDAT, EGI, Poland and
-  Italy (AUP or Terms of use only) pass one of the two; the other is review,
-  because v3.2 allows the AUP and the UAP to be one document. GÉANT's page could
+  Policy and no User Access Policy from their landing pages, but they do link to
+  services or policies pages (CERN: "Services" and "Policies"). `web-13` did
+  not read those pages, so 5b and 5c are review for all three. Slovakia links one
+  document that covers both, and passes both. BBMRI-ERIC links its Access
+  Policies page, which passes 5c and, because that page links the AUP, now also
+  5b. Czechia, EOSC DTO, EOSC Finland, EUDAT, EGI, Poland and Italy (AUP or Terms
+  of use only) pass one of the two; the other is review, because v3.2 allows the
+  AUP and the UAP to be one document. GÉANT's page could
   not be read. A PASS covers only the NLP half: no node's Catalogue metadata was
   read.
 - **CERN** was assessed at its new Node Landing Page, `https://eosc.cern/`, for
-  the first time: 4 PASS, 2 FAIL and 4 review. Points 1 and 4 moved from review
+  the first time: 4 PASS and 6 review. Points 1 and 4 moved from review
   to `PASS`: the page is public, with real content, and links to its own
   `eosc.eu` entry. Points 6 (a Contact page with a helpdesk) and 7 pass as
-  before. 5b and 5c fail under v3.2 (see above). Point 3 is review: the logo
+  before. 5b and 5c are review (see above). Point 3 is review: the logo
   reads "EOSC Node | CERN", but the name is not in the page text. The previous
   URL was an INDIGO IAM sign-in form.
 - **EOSC Node Poland**, first assessed in `web-10`, has 4 PASS, 1 FAIL and 5
@@ -177,7 +189,8 @@ enumerate, and since v3.2 it also requires the same information in each
 resource's EOSC Catalogue metadata, which the tool does not read. So the tool
 extracts the relevant evidence, attaches it, and says who must decide. The one
 part of point 5 it does decide is new in v3.2: an AUP or UAP must be linked from
-the landing page itself, so a page with no such link fails 5b or 5c.
+the landing page or from a page it links to, so a page with no such link, and no
+policies or services page left unread, fails 5b or 5c.
 
 The asymmetry drives this: a false PASS is never investigated again, and a false
 FAIL against a named organisation is expensive to retract. Where the tool cannot
@@ -266,7 +279,7 @@ nodes; `assess`, `points` and `show` work offline.
 
 | Option | Default | What it's for |
 |---|---|---|
-| `--depth 0\|1\|2` | `1` | `0` fetches the landing page only. `1` also follows links that can settle a checklist point (policies, contact, about). `2` follows one more hop from those pages, and the report shows both depths side by side. |
+| `--depth 0\|1\|2` | `1` | `0` fetches the landing page only. `1` also follows links that can settle a checklist point (policies, contact, about) and, for item 5, policies, legal, services and resources pages. `2` follows one more hop from those pages, and the report shows both depths side by side. |
 | `--max-children <n>` | `8` | The most linked pages followed per node at depth 1. `collect` only; `run` always uses 8. |
 | `--fetch-budget <n>` | `60` | Depth 2 only: a hard limit on second-hop requests for the whole run, shared across all nodes. |
 | `--delay <seconds>` | `2.0` | The pause between hosts, to go easy on the servers. |
@@ -437,7 +450,7 @@ command for the three changes that come up most:
 | `--depth` | What is fetched | Requests in the 21 Sep 2026 run |
 |---|---|---|
 | `0` | The landing page only. | 9 |
-| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about pages. At most 8 per node, 2 per point. | 31 (9 + 22) |
+| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about pages, and, for item 5, policies, legal, services and resources pages. At most 8 per node, 2 per purpose. | 31 (9 + 22) |
 | `2` | The above, plus one further hop from those pages: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, and the whole run shares a single `--fetch-budget` (default 60 requests). | 45 (9 + 22 + 14) |
 
 Depth 2 exists for the case where the answer is one click past where depth 1 stops. It is not the default, for two reasons. The first is other people's servers: every extra hop multiplies requests against production sites that did not ask to be tested, which is why the budget is a hard ceiling for the whole run rather than a per-node limit. The second is that, on this federation, it has not yet changed anything.
@@ -612,7 +625,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 438 tests, a few seconds, no network, no browser
+uv run pytest -q          # 449 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

@@ -490,3 +490,38 @@ def test_policy_words_only_in_the_address_are_still_followed():
                 "This policy defines the rules that govern your access.")
     selected, _ = select_children(page([link]))
     assert [c.selected_for for c in selected] == [["5b"]]
+
+
+# --- checklist v3.2: intermediate pages for item 5 ----------------------------
+
+
+def test_policies_and_services_pages_are_followed_for_item_5():
+    """v3.2 accepts the AUP/UAP "via intermediate web pages linked by the NLP".
+    CERN's landing page links "Services" and "Policies" but no policy by name."""
+    links = [
+        Link("https://node.example/services", "Services"),
+        Link("https://node.example/services", "Explore Services"),
+        Link("https://node.example/policies", "Policies"),
+        Link("https://node.example/privacy", "Privacy Policy"),
+        Link("https://node.example/get-started#for-policy-makers", "Policy Makers"),
+        Link("https://elsewhere.example/services", "Partner services"),
+    ]
+    selected, _ = select_children(page(links))
+    got = {c.url: c.selected_for for c in selected}
+    assert got == {"https://node.example/services": ["5s"], "https://node.example/policies": ["5p"]}
+
+
+def test_intermediate_pages_never_displace_a_link_that_settles_a_point():
+    """They are followed last, so a per-node cap drops them first."""
+    links = [Link(f"https://node.example/services/{i}", f"Service {i}") for i in range(4)]
+    links += [Link("https://node.example/aup", "Acceptable Use Policy"),
+              Link("https://node.example/contact", "Contact")]
+    selected, skipped = select_children(page(links), max_children=2)
+    assert [c.url for c in selected] == ["https://node.example/aup", "https://node.example/contact"]
+    assert any("services" in s for s in skipped)
+
+
+def test_intermediate_purposes_are_capped_like_the_others():
+    links = [Link(f"https://node.example/services/{i}", f"Service {i}") for i in range(6)]
+    selected, _ = select_children(page(links))
+    assert len(selected) == 2

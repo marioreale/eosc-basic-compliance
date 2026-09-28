@@ -6,7 +6,7 @@ a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
 clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
 **426 test cases, all passing in CI**. It was re-checked again on 29 September
-2026 for checklist v3.2: **438 test cases**, all passing. No node website was
+2026 for checklist v3.2: **449 test cases**, all passing. No node website was
 contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -16,7 +16,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.2*, with a pytest suite of 438 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.2*, with a pytest suite of 449 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -24,7 +24,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **426 cases** (438 since checklist v3.2, below) and gained four files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (14 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking) and `tests/test_update_row.py` (22 cases, updating one node's row). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **426 cases** (449 since checklist v3.2, below) and gained four files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (14 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking) and `tests/test_update_row.py` (22 cases, updating one node's row). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -37,7 +37,9 @@ conditions behind each of the ten checklist points.
 >
 > **Since 26 September 2026: checklist v3.1.** The reference document is now *Node Landing Page Verification Checklist v3.1* (24 September 2026), transcribed to `checklist/v3.1.yaml` and made the default; `v3.0.yaml` is kept so older runs can be rebuilt. The rules did not change: v3.1 rewords points 1, 2, 4, 6 and 7, narrows 1R and 5a–5c to *Node Exchange* resources, and defines EOSC AAI login by requirement [P.2] of the Production 1.0 Checklist v1.4, so only titles, quoted text and review messages were updated. The evidence of run `web-4` was first re-scored against v3.1 without contacting any node, and every one of the 130 verdicts was unchanged; runs `web-5`, `web-6`, `web-8` and `web-9`, collected under v3.1 by the workflow, then replaced it with the same verdicts; `web-9` is the published one. The suite now has 426 cases: the per-revision provenance test also runs on v3.1, and the stored-results update test no longer assumes version 3.0.
 >
-> **Since 29 September 2026: checklist v3.2.** The reference document is now *Node Landing Page Verification Checklist v3.2* (28 September 2026), transcribed to `checklist/v3.2.yaml` and made the default; `v3.1.yaml` and `v3.0.yaml` are kept. Unlike v3.1, this revision **changes a rule**. Item 5 now requires the purpose description, the AUP and the UAP of every Node Exchange resource to be available both directly on the NLP and in the resource's EOSC Catalogue metadata, where v3.1 accepted either. So a landing page that links to neither policy (nor to a licence, nor to the other policy, which the new notes allow) now gets `FAIL` on 5b or 5c instead of `MANUAL_REVIEW`. The rule is chosen by the checklist file (`item5_on_nlp: true` in `v3.2.yaml` only), so older runs still rebuild exactly under `-c checklist/v3.1.yaml`; this was verified on run `web-11`. The published evidence of `web-11` was re-scored against v3.2 without contacting any node and published as `web-11-v3.2`: six cells moved from review to `FAIL` (section 10). Run `web-12`, the first collected under v3.2, then replaced it with the same 130 verdicts, and `web-13`, at depth 2, confirmed them. The suite grew from 426 to **438 cases**: eight in `test_checks.py` for the two item 5 rules, two in `test_checklist.py` (each revision selects its own rule; the default is v3.2 or later and strict) with one more provenance case for v3.2, and one in `test_report.py` for the column legend.
+> **Since 29 September 2026: checklist v3.2.** The reference document is now *Node Landing Page Verification Checklist v3.2* (28 September 2026), transcribed to `checklist/v3.2.yaml` and made the default; `v3.1.yaml` and `v3.0.yaml` are kept. Unlike v3.1, this revision **changes a rule**. Item 5 now requires the purpose description, the AUP and the UAP of every Node Exchange resource to be available both on the NLP (directly, or, since the re-issue, via pages it links to) and in the resource's EOSC Catalogue metadata, where v3.1 accepted either. So a landing page that links to neither policy (nor to a licence, nor to the other policy, which the new notes allow) now gets `FAIL` on 5b or 5c instead of `MANUAL_REVIEW`. The rule is chosen by the checklist file (`item5_on_nlp: true` in `v3.2.yaml` only), so older runs still rebuild exactly under `-c checklist/v3.1.yaml`; this was verified on run `web-11`. The published evidence of `web-11` was re-scored against v3.2 without contacting any node and published as `web-11-v3.2`: six cells moved from review to `FAIL` (section 10). Run `web-12`, the first collected under v3.2, then replaced it with the same 130 verdicts, and `web-13`, at depth 2, confirmed them. The suite grew from 426 to 438 cases: eight in `test_checks.py` for the two item 5 rules, two in `test_checklist.py` (each revision selects its own rule; the default is v3.2 or later and applies it) with one more provenance case for v3.2, and one in `test_report.py` for the column legend.
+>
+> **Since 29 September 2026: v3.2 re-issued.** The v3.2 document was circulated again with a different item 5: the policies must be on the NLP "directly on the NLP itself or via intermediate web pages linked by the NLP", not only directly. The first copy is discarded: `checklist/v3.2.yaml` and the committed PDF were replaced, with the new hash. A pointer on a linked page the tool read now settles the NLP half, the crawler follows policies, legal, services and resources links for it (purposes `5p` and `5s`, after all others), and an unread page of that kind turns a missing policy into review instead of `FAIL`. The published evidence of `web-13` was re-scored without contacting any node as `web-13-rescored`: 50 PASS, 8 FAIL, 72 review, with no 5b/5c FAIL left (section 10). The suite grew to **449 cases**: eight in `test_checks.py` for pointers on linked pages, and three in `test_crawl.py` for the new purposes.
 >
 > **Since the 24 September edition.** Personal data is now masked in the evidence and in every report (section 5), and the published run was masked at commit `ada1b4a` with every verdict unchanged (section 10). BBMRI-ERIC's configured URL changed to a `dev3.` address on 25 September, and the published run was collected from the old one, so rebuilding it needs the old node list (section 5). The suite grew from 326 to 329 cases for these changes, to 333 with four tests that keep the command-line help complete, and to 339 with the tests for the URL-mismatch warning and for switching the default checklist revision (section 11). It is 357 with eighteen cases for `--node`, 369 with twelve for the configuration listings, 379 with ten for `--list-nodes-ids` and `--show-node`, and 390 with eleven for `--update-nlp` (section 5).
 >
@@ -69,22 +71,22 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**349 test functions, expanding to 438 executed cases** (twenty-two tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**360 test functions, expanding to 449 executed cases** (twenty-two tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
 The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 425 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
 | `test_names.py` | 64 | The approved-name matcher: separator tolerance, scoping to a node, anchoring, the committed default list and its provenance |
-| `test_checks.py` | 83 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — with both item 5 rules (v3.1 and v3.2), plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
+| `test_checks.py` | 91 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — with both item 5 rules (v3.1 and v3.2) and policy pointers on linked pages, plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
 | `test_report.py` | 37 | Matrix rendering, the column legend under each item 5 rule, the dual-depth tables, Markdown escaping, table-breaking input |
-| `test_crawl.py` | 35 | Link selection, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
+| `test_crawl.py` | 38 | Link selection, the item 5 intermediate pages, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
 | `test_cli.py` | 113 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring, and that every option has help text, shared options are described alike, and `--help` lists the node ids; that evidence from a URL other than the configured one is flagged in every report; `--node` with an alternative `--url`; the configuration listings (`--list-nodes`/`--list-nodes-ids`, `--list-nlps`, `--list-approved-names`, `--print-config`, `--show-node`) and `--update-nlp` |
 | `test_checklist.py` | 19 | Provenance of the checklist: source document hash for every committed revision, point-to-rule mapping, version/filename convention, that the default revision is one line that `--help` follows, and that each revision selects its own item 5 rule |
 | `test_nodes.py` | 14 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list, and the default copy for `--restore-default-config` identical to the committed `nodes.yaml` |
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
 | `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
-| **Total** | **438** | |
+| **Total** | **449** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -148,7 +150,7 @@ The last column is not decoration. Each point declares its implementing function
 
 **Two hops maximum, and the default is one.** `--depth` is validated by the command line as an integer in the range 0 to 2, so an out-of-range value is refused rather than silently clamped.
 
-A link is followed only when its target could settle a specific checklist point: an Acceptable Use Policy (5b), a User Access Policy (5c), a contact page (6), or an about page (2). Everything else is skipped, and every skip is recorded in the evidence so that a later "not found" is accountable rather than merely asserted.
+A link is followed only when its target could settle a specific checklist point: an Acceptable Use Policy (5b), a User Access Policy (5c), a contact page (6), or an about page (2). Since checklist v3.2 accepts the policies on "intermediate web pages linked by the NLP", two more purposes follow a policies, legal or terms page (`5p`) and a services, catalogue or resources page (`5s`), last, so they never displace a link that settles a point; privacy and cookie policies are not followed. Everything else is skipped, and every skip is recorded in the evidence so that a later "not found" is accountable rather than merely asserted.
 
 | `--depth` | What is fetched | Requests observed, the 9 published nodes, 21 Sep 2026 |
 |---|---|---|
@@ -445,7 +447,7 @@ checklist_version: "3.2"
 checklist_date: "2026-09-28"
 source_document: 20260928_Node_Landing_Page_Verification_Checklist_v3.2.docx
 source_file: 20260928_Node_Landing_Page_Verification_Checklist_v3.2.pdf
-source_sha256: e7f3fdfff0d9e1be4aa1466591c6ca65695f1e471707ad226ff137f8da6f6a42
+source_sha256: 318c6b71186641273961d3f70f87a92b78f81ccc072f6f6392bf17830d7ad83c
 item5_on_nlp: true
 ```
 
@@ -666,7 +668,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 438 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 449 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -751,7 +753,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 438 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 449 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -792,11 +794,35 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-13 at depth 2, 28 September 2026 (unreviewed)
+### Current run: web-13-rescored, 29 September 2026 (unreviewed)
 
-From `results/results.json`, run `web-13`, collected on 28 September 2026 between 22:53 and 22:57 UTC by the GitHub workflow ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672), commit `b0ad261`) at `--depth 2`, under checklist v3.2 and the official unscoped names list. It made 63 page requests: 13 landing pages, 31 direct links and 19 second-hop pages (EOSC Node Czechia 4, EUDAT 4, EOSC DTO 3, EOSC Finland 3, BBMRI-ERIC 2, CERN 1, EGI 1, PaNOSC 1). The report has a table for each depth, and they are identical: **the second hop changed no verdict**, 49 PASS, 14 FAIL and 67 MANUAL_REVIEW in both. Every cell also equals run `web-12`, described next. The direct links returned the same text as in `web-12`, apart from a language menu on Data Terra's contact page and a search-box label on EUDAT's documentation.
+`results/` holds `web-13-rescored`: the evidence of run `web-13`, described next, scored again on 29 September 2026 against the re-issued checklist v3.2 without contacting any node. `uv run basic-check assess --run web-13-rescored` reproduces it exactly, apart from the generation time. The evidence files and screenshots are byte-identical to `web-13`, masking included; only the verdicts changed.
 
-The privacy check found no personal address or phone number (the only addresses left are role mailboxes). By hand, the same two names as in `web-12` were removed, and one new one: a person quoted in a news item on the Czechia page `eosc-cz-in-data`, reached only at depth 2, whose name was in the quotation and, as a surname, in the address of the linked interview (`interview-…`). All were replaced by same-length placeholders, and re-assessing after the masking changed no verdict, message or evidence line. Offline, `uv run basic-check assess --run web-13` reproduces it exactly, both depths included, apart from the generation time.
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 50 |
+| 🔴 FAIL | 8 |
+| 🟠 MANUAL_REVIEW | 72 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+Depth 1 and depth 2 agree. The eight FAILs are the seven point 4 FAILs and Italy's point 6, described below. Per node, 5b and 5c:
+
+| 5b / 5c | Nodes | Why |
+|---|---|---|
+| PASS / PASS | Slovakia | one "Terms of Use (incl. AUP and UAP)" document |
+| PASS / PASS | BBMRI-ERIC | its Access Policies page is the UAP and links the "Acceptable Use Policy of BBMRI-ERIC Services" (a PDF, not fetched) |
+| PASS / review | Czechia, EOSC DTO, EOSC Finland, EUDAT, EGI, Poland, Italy | an AUP or terms of use is linked; one document may be both, so the UAP is left to a reviewer |
+| review / review | CERN, Data Terra, PaNOSC | no policy link on the pages read, but the landing page links to a services or policies page `web-13` did not read (CERN: `/services`, `/policies`; Data Terra: `/services/`; PaNOSC: `/services/`, the data policy framework) |
+| review / review | GÉANT | HTTP 403, the page was not served |
+
+A new collection at depth 1 would read those pages and settle CERN, Data Terra and PaNOSC one way or the other.
+
+### Run web-13 at depth 2, 28 September 2026
+
+From `results/results.json` as committed at `8346079`, run `web-13`, collected on 28 September 2026 between 22:53 and 22:57 UTC by the GitHub workflow ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672), commit `b0ad261`) at `--depth 2`, under checklist v3.2 and the official unscoped names list. It made 63 page requests: 13 landing pages, 31 direct links and 19 second-hop pages (EOSC Node Czechia 4, EUDAT 4, EOSC DTO 3, EOSC Finland 3, BBMRI-ERIC 2, CERN 1, EGI 1, PaNOSC 1). The report has a table for each depth, and they are identical: **the second hop changed no verdict**, 49 PASS, 14 FAIL and 67 MANUAL_REVIEW in both, under the first copy of v3.2. Every cell also equals run `web-12`, described next. The direct links returned the same text as in `web-12`, apart from a language menu on Data Terra's contact page and a search-box label on EUDAT's documentation.
+
+The privacy check found no personal address or phone number (the only addresses left are role mailboxes). By hand, the same two names as in `web-12` were removed, and one new one: a person quoted in a news item on the Czechia page `eosc-cz-in-data`, reached only at depth 2, whose name was in the quotation and, as a surname, in the address of the linked interview (`interview-…`). All were replaced by same-length placeholders, and re-assessing after the masking changed no verdict, message or evidence line. It was scored under the discarded first copy of v3.2, so it no longer rebuilds from the current checklist.
 
 Run `web-12` was collected on 28 September 2026 between 22:34 and 22:38 UTC by the GitHub workflow ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701), commit `d3de829`, unit tests passing first), the first under checklist v3.2, at `--depth 1` and against the official unscoped names list (13 names, SHA-256 `46af586b…`). All thirteen nodes were assessed and none was skipped; twelve landing pages returned HTTP 200 and GÉANT returned HTTP 403 with the Cloudflare challenge; 31 links were followed. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number; the only addresses left are EGI role mailboxes. The same two personal names as in `web-11` were then removed by hand with same-length placeholders: CERN's quotation attribution (in `cern.json` and its screenshot) and EGI's coordinator, whose name was also in the address of the link to their profile page (`/person/…/`), masked this time too. Re-assessing after the masking changed no verdict, message or evidence line. Offline, `uv run basic-check assess --run web-12` reproduces it exactly, apart from the generation time.
 
@@ -816,7 +842,7 @@ The run before it, `web-10` ([run 36429362417](https://github.com/marioreale/eos
 
 Seven FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, Italy), two link only to the federation index (PaNOSC, Czechia), and one only to the `eosc.eu` homepage (Poland). The eighth is Italy's point 6: none of its links is a contact route. Italy's page rendered with 15 links, but its main text is short, so both of its FAILs should be looked at by hand.
 
-The other six FAILs are new with v3.2: points 5b and 5c for CERN, Data Terra and PaNOSC, whose landing pages link to no AUP, no UAP and no licence. Under v3.1 all six were review. No other cell changed. Per node, 5b and 5c under v3.2:
+The other six FAILs were new with the first copy of v3.2: points 5b and 5c for CERN, Data Terra and PaNOSC, whose landing pages link to no AUP, no UAP and no licence. Under v3.1 all six were review, and under the re-issued v3.2 they are review again (above). Per node, 5b and 5c under the first copy of v3.2:
 
 | 5b / 5c | Nodes | Why |
 |---|---|---|
@@ -828,7 +854,7 @@ The other six FAILs are new with v3.2: points 5b and 5c for CERN, Data Terra and
 
 Every `PASS` here settles only the NLP half of item 5: the tool does not read the Catalogue metadata, and the reviewer action says so.
 
-**CERN, new landing page:** 4 PASS (1, 4, 6 via its Contact page, 7), 2 FAIL (5b, 5c, under v3.2) and 4 review. Points 1 and 4 moved from review to `PASS` against the sign-in URL of `web-10`: the page is public, renders about 6,000 characters, and links to `https://eosc.eu/building-the-eosc-federation/eosc-node-cern`. Point 3 is review: the logo reads "EOSC Node | CERN", but the approved name is not in the page text.
+**CERN, new landing page:** 4 PASS (1, 4, 6 via its Contact page, 7), 2 FAIL (5b, 5c, under the first copy of v3.2; review under the re-issued one) and 4 review. Points 1 and 4 moved from review to `PASS` against the sign-in URL of `web-10`: the page is public, renders about 6,000 characters, and links to `https://eosc.eu/building-the-eosc-federation/eosc-node-cern`. Point 3 is review: the logo reads "EOSC Node | CERN", but the approved name is not in the page text.
 
 **Poland, first assessed in `web-10`:** 4 PASS (1, 5b on its Terms of use, 6 on `support@eosc.pl`, 7), 1 FAIL (4) and 5 review. Point 3 is review: the header logo reads "EOSC Node | Poland", but the approved name is not in the page text.
 
@@ -1124,7 +1150,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 49 PASS · 14 FAIL · 67 review");
+- the headline tally in `README.md` ("130 cells: 50 PASS · 8 FAIL · 72 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 

@@ -149,6 +149,32 @@ LICENCE_PATTERNS = [
     r"(?i)\bCC[\s-]?BY\b",
 ]
 
+# Checklist v3.2, item 5: the AUP and UAP must be on the NLP presenting the
+# resource "directly on the NLP itself or via intermediate web pages linked by
+# the NLP". The pages that carry such pointers are, in practice, a policies or
+# legal index and a services or resources catalogue: on 28 September 2026 CERN's
+# landing page linked "Policies" and "Services" but no policy by name, so the
+# tool never looked where the pointers were. These links are followed so their
+# pages can be read for AUP/UAP links; they settle nothing by themselves.
+# Privacy and cookie policies are not candidates: they are never an AUP. Nor is
+# "Policy Makers", an audience label CERN's landing page uses.
+POLICY_INDEX_PATTERNS = [
+    r"(?i)(?<!privacy )(?<!cookie )(?<!cookies )\bpolic(y|ies)\b(?!\s*-?\s*mak)",
+    r"(?i)\blegal\b",
+    r"(?i)\bterms\b",
+]
+
+SERVICE_INDEX_PATTERNS = [
+    r"(?i)\bservices?\b",
+    r"(?i)\bcatalog(ue)?\b",
+    r"(?i)\bresources?\b",
+]
+
+# The crawl purpose ids of these two vocabularies. They are not checklist points:
+# a page fetched for them is read by points 5b and 5c for policy links.
+POLICY_INDEX = "5p"
+SERVICE_INDEX = "5s"
+
 ABOUT_PATTERNS = [
     r"(?i)\babout\b",
     r"(?i)\bwho\s+we\s+are\b",
@@ -179,11 +205,18 @@ AAI_HINTS = [
 ]
 
 # Which checklist point each vocabulary can settle if the link is followed one
-# level down, in descending order of how much a request buys. Consumed by
+# level down, in descending order of how much a request buys. The last two are
+# the intermediate pages of item 5, followed last so they never displace a link
+# that could settle a point directly. Consumed by
 # fetch.select_children; the point ids match the ids the checks look up.
 CRAWL_PURPOSES: list[tuple[str, list[str]]] = [
     ("5b", AUP_PATTERNS),
     ("5c", UAP_PATTERNS),
     ("6", CONTACT_PATTERNS),
     ("2", ABOUT_PATTERNS),
+    (POLICY_INDEX, POLICY_INDEX_PATTERNS),
+    (SERVICE_INDEX, SERVICE_INDEX_PATTERNS),
 ]
+
+# Crawl purposes that are intermediate pages rather than checklist points.
+INTERMEDIATE_PURPOSES = (POLICY_INDEX, SERVICE_INDEX)

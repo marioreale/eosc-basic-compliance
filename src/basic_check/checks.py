@@ -32,6 +32,8 @@ from .patterns import (
     HELPDESK_STRONG,
     LICENCE_PATTERNS,
     LOGIN_PATTERNS,
+    POLICY_INDEX_PATTERNS,
+    SERVICE_INDEX_PATTERNS,
     UAP_PATTERNS,
     is_helpdesk_address,
     is_helpdesk_host,
@@ -710,9 +712,10 @@ def check_4(ev: PageEvidence, expected_page: str = "") -> Result:
 def check_5a(ev: PageEvidence, on_nlp: bool = True) -> Result:
     """Purpose descriptions. `on_nlp` selects the item 5 wording in force.
 
-    Checklist v3.2 (28 September 2026) requires the information of item 5 "both
-    directly on the NLP presenting the resource to the users and via the link to
-    the resource's entry in the EOSC Catalogue"; v3.0 and v3.1 asked for either.
+    Checklist v3.2 (28 September 2026) requires the information of item 5 "both on
+    the NLP presenting the resource to the users (directly on the NLP itself or via
+    intermediate web pages linked by the NLP) and via the link to the resource's
+    entry in the EOSC Catalogue"; v3.0 and v3.1 asked for either.
     For 5a the verdict does not change -- judging whether a description states a
     purpose is reading, and the resources cannot be enumerated from the page --
     but the message and the reviewer's work list do.
@@ -726,14 +729,15 @@ def check_5a(ev: PageEvidence, on_nlp: bool = True) -> Result:
             MANUAL_REVIEW,
             'Quantifies over "all Node Exchange research resources offered by the Node", which cannot be '
             "enumerated from the landing page alone. Since checklist v3.2 each resource's purpose "
-            "description must be on the NLP that presents it and in the resource's metadata in the EOSC "
-            "Catalogue; the tool reads neither the resource list nor the Catalogue.",
+            "description must be on the NLP that presents it (directly or on a page the NLP links to) and "
+            "in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list "
+            "nor the Catalogue.",
             [
                 f"{len(ev.links)} outbound link(s) on the landing page",
                 f"main text length: {len(ev.main_text)} characters",
             ],
             reviewer_action="List the node's Node Exchange resources, then confirm each has an English purpose "
-            "description on the NLP and in its EOSC Catalogue metadata.",
+            "description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.",
         )
     return Result(
         "5a",
@@ -822,19 +826,22 @@ def _policy_check(
     """Points 5b and 5c.
 
     `on_nlp` is True under checklist v3.2, whose item 5 requires the AUP and the
-    UAP "both directly on the NLP presenting the resource to the users and via the
-    link to the resource's entry in the EOSC Catalogue". Under v3.0 and v3.1 the
+    UAP "both on the NLP presenting the resource to the users (directly on the
+    NLP itself or via intermediate web pages linked by the NLP) and via the link
+    to the resource's entry in the EOSC Catalogue". Under v3.0 and v3.1 the
     requirement was "either directly or via" the Catalogue, so a landing page
-    without a pointer could not fail: the policy might be in the Catalogue. Under
-    v3.2 that absence is a FAIL, with three exceptions that keep a human in the
-    loop, each taken from the checklist's own notes or from the collection:
+    without a pointer could not fail: the policy might be in the Catalogue.
 
-    * the page links to the *other* policy: "AUP and UAP can be provided through
+    Under v3.2 a pointer on any linked page the tool read counts as on the NLP.
+    Absence is a FAIL only when nothing else keeps a human in the loop:
+
+    * the NLP links to the *other* policy: "AUP and UAP can be provided through
       the same, single document";
-    * the page links to a licence: "AUP/UAP can be provided via specific product
-      licenses in the case of datasets, archives, software";
-    * the page text names the policy without a link (it may be on the page), or
-      the DOM did not arrive (`link_collection_warning`), as for point 4.
+    * the landing page links to a licence: "AUP/UAP can be provided via specific
+      product licenses in the case of datasets, archives, software";
+    * the DOM did not arrive (`link_collection_warning`), as for point 4;
+    * the landing page links to a policies, legal, services or resources page
+      the tool did not read, which may be where the pointers are.
 
     A pointer found on the NLP settles only the NLP half. The Catalogue half is
     not read by this tool, and the reviewer action says so.
@@ -939,22 +946,60 @@ def _policy_check(
             reviewer_action=f"Check the node's resource entries in the EOSC Catalogue for {what}.",
         )
 
-    absent = [f"{len(ev.links)} link(s) examined, none matching {what}"]
+    # Checklist v3.2: "directly on the NLP itself or via intermediate web pages
+    # linked by the NLP". Every linked page the tool read counts.
+    read = [c for c in ev.children if c.ok]
+    via = _linked_page_hits(read, patterns)
+    if via:
+        page, link = via[0]
+        target = _fetched(ev, link.href)
+        if target is not None and target.http_status in DEAD_STATUSES:
+            return Result(
+                point,
+                title,
+                FAIL,
+                f"The landing page links to {page.url}, which links to {what}, but that link is "
+                f"broken (HTTP {target.http_status}), so the policy is not accessible.",
+                [f"via {page.url}: {_fmt(link)}", f"followed: {target.url} -> HTTP {target.http_status}"],
+                reviewer_action="Fix or repoint the link.",
+            )
+        return Result(
+            point,
+            title,
+            PASS,
+            f"The landing page does not link to {what} itself, but a page it links to does. "
+            "Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. "
+            + ("The policy page was fetched too." if target is not None and target.ok
+               else "The policy page itself was not fetched, so this is a pointer, not a verified document."),
+            [f"landing page -> {page.url} (\"{page.link_text.strip() or page.title}\")"]
+            + [f"via {pg.url}: {_fmt(lk)}" for pg, lk in via[:3]],
+            reviewer_action="Confirm the policy covers every Node Exchange resource the landing page "
+            "presents, and is in English." + _CATALOGUE_HALF,
+        )
+
+    looked = [f"{len(ev.links)} link(s) on the landing page examined, none matching {what}"]
+    if read:
+        looked.append(
+            f"{len(read)} linked page(s) read, none linking to {what}: "
+            + ", ".join(c.url for c in read[:5]) + (" ..." if len(read) > 5 else "")
+        )
     if text_hits:
-        # Under v3.2 the policy document must be linked from the NLP. A page that
-        # names it ("based on the ... AUP") without a link does not make it
+        # Naming the AUP in prose ("based on the ... AUP") does not make it
         # accessible; the mention is kept as evidence so a reviewer can see it.
-        absent.append(f"named in the text without a link: {', '.join(sorted(set(text_hits))[:4])}")
+        looked.append(f"named in the text without a link: {', '.join(sorted(set(text_hits))[:4])}")
     other = _link_hits(ev, other_patterns) if other_patterns else []
-    if other:
+    other_via = _linked_page_hits(read, other_patterns) if other_patterns else []
+    if other or other_via:
+        shown = [f"{other_what}: {_fmt(link)}" for link in other[:2]]
+        shown += [f"{other_what} via {pg.url}: {_fmt(lk)}" for pg, lk in other_via[: 2 - len(shown[:2])]]
         return Result(
             point,
             title,
             MANUAL_REVIEW,
-            f"No pointer to {what} was found on the landing page, but it links to {other_what}. "
+            f"No pointer to {what} was found on the NLP, but it links to {other_what}. "
             "Checklist v3.2 allows the AUP and the UAP to be provided through the same, single "
             "document, so this may satisfy the point.",
-            absent + [f"{other_what}: {_fmt(link)}" for link in other[:2]],
+            looked + shown,
             reviewer_action=f"Open the linked {other_what} and confirm it also serves as {what} "
             "for every Node Exchange resource the page presents." + _CATALOGUE_HALF,
         )
@@ -964,12 +1009,12 @@ def _policy_check(
             point,
             title,
             MANUAL_REVIEW,
-            f"No pointer to {what} was found on the landing page, but it links to a licence. "
+            f"No pointer to {what} was found on the NLP, but the landing page links to a licence. "
             "Checklist v3.2 allows the AUP and UAP of datasets, archives and software to be "
             "provided through their product licences, which a reviewer must match to resources.",
-            absent + [f"licence: {_fmt(link)}" for link in licences[:2]],
+            looked + [f"licence: {_fmt(link)}" for link in licences[:2]],
             reviewer_action="Confirm which resources the licence covers, and that every service "
-            f"resource has {what} linked from the NLP." + _CATALOGUE_HALF,
+            f"resource has {what} on the NLP or a page it links to." + _CATALOGUE_HALF,
         )
     warning = link_collection_warning(ev)
     if warning:
@@ -979,9 +1024,25 @@ def _policy_check(
             MANUAL_REVIEW,
             f"No pointer to {what} was found, but the page yielded too little to conclude "
             "absence: " + warning,
-            absent,
+            looked,
             reviewer_action=f"Open the page, dismiss any consent banner, and look for {what} "
             "linked for each resource the page presents.",
+        )
+    unread = _unread_intermediate_links(ev)
+    if unread:
+        # A policies index or a services page the tool did not read may hold the
+        # pointers. Concluding absence without reading it would blame the node
+        # for the tool's own blind spot.
+        return Result(
+            point,
+            title,
+            MANUAL_REVIEW,
+            f"No pointer to {what} was found on the pages the tool read, but the landing page links "
+            "to pages that may carry it (a policies, legal, services or resources page) which were "
+            "not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+            looked + [f"not read: {_fmt(link)}" for link in unread[:3]],
+            reviewer_action=f"Open those pages and look for {what} for each resource. "
+            "Collecting the evidence again at depth 1 or more would read them.",
         )
     return Result(
         point,
@@ -989,13 +1050,72 @@ def _policy_check(
         FAIL,
         (f"{what.capitalize()} is named in the page text, but no link to it was found. "
          if text_hits else f"No pointer to {what} was found on the landing page. ")
-        + "Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange "
-        "resource the page presents, as well as in each resource's EOSC Catalogue metadata; "
-        "being in the Catalogue alone is no longer enough.",
-        absent + _render_note(ev),
-        reviewer_action=f"Ask the node to link {what} from the NLP for each of its resources "
-        "(one document may cover all of them, and may be the same as the other policy).",
+        + (f"None of the {len(read)} linked page(s) the tool read links to it either, and the landing "
+           "page links to no other policies, legal, services or resources page. " if read else
+           "The landing page links to no policies, legal, services or resources page that could carry it. ")
+        + "Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, "
+        "for every Node Exchange resource the page presents, as well as in each resource's EOSC "
+        "Catalogue metadata; being in the Catalogue alone is not enough.",
+        looked + _render_note(ev),
+        reviewer_action=f"Confirm on the live page, then ask the node to link {what} from the NLP or "
+        "a page it links to, for each of its resources (one document may cover all of them, and may "
+        "be the same as the other policy).",
     )
+
+
+def _linked_page_hits(pages: list, patterns: list[str]) -> list:
+    """(page, link) pairs: links on already-read linked pages matching `patterns`.
+
+    A linked page that is itself the policy (its title names it) counts as a
+    hit too, represented by a link to itself.
+    """
+    from .fetch import Link
+
+    out = []
+    for page in pages:
+        title_hit = _match(f"{page.title} {page.link_text}", patterns)
+        if title_hit and _match(page.main_text or page.full_text, POLICY_BODY_PATTERNS):
+            out.append((page, Link(page.final_url or page.url, page.title or page.link_text)))
+            continue
+        for link in page.links:
+            if link.href.lower().startswith(("mailto:", "tel:", "javascript:")):
+                continue
+            if any(re.search(p, link_haystack(link.text, link.href)) for p in patterns):
+                out.append((page, link))
+                break
+    return out
+
+
+def _fetched(ev: PageEvidence, href: str):
+    key = href.split("#")[0].rstrip("/")
+    for c in ev.children:
+        if key in (c.url.split("#")[0].rstrip("/"), (c.final_url or "").split("#")[0].rstrip("/")):
+            return c
+    return None
+
+
+def _unread_intermediate_links(ev: PageEvidence) -> list:
+    """Same-site landing-page links to a policies or services page not read."""
+    page_host = urlparse(ev.final_url or ev.requested_url).netloc.lower()
+    home = (ev.final_url or ev.requested_url).split("#")[0].rstrip("/")
+    out, seen = [], set()
+    for link in ev.links:
+        parsed = urlparse(link.href)
+        if parsed.scheme not in ("http", "https") or parsed.path.lower().endswith(BINARY_SUFFIXES):
+            continue
+        host = parsed.netloc.lower()
+        if not (host == page_host or _related_host(host, page_host)):
+            continue
+        key = link.href.split("#")[0].rstrip("/")
+        if key == home or key in seen:
+            continue
+        hay = link_haystack(link.text, parsed.path)
+        if not any(re.search(p, hay) for p in POLICY_INDEX_PATTERNS + SERVICE_INDEX_PATTERNS):
+            continue
+        seen.add(key)
+        if _fetched(ev, link.href) is None:
+            out.append(link)
+    return out
 
 
 _CATALOGUE_HALF = (

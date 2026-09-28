@@ -33,7 +33,7 @@ from urllib.parse import urljoin, urlparse
 import httpx
 from selectolax.parser import HTMLParser
 
-from .patterns import CRAWL_PURPOSES, link_haystack
+from .patterns import CRAWL_PURPOSES, INTERMEDIATE_PURPOSES, link_haystack
 from .privacy import mask_data
 
 UA = (
@@ -454,6 +454,10 @@ def select_children(
             if key == (ev.final_url or ev.requested_url).split("#")[0].rstrip("/"):
                 continue
             if key in chosen:
+                # A page already followed for a point is read for policy links
+                # anyway; tagging it as an intermediate page too would be noise.
+                if point_id in INTERMEDIATE_PURPOSES:
+                    continue
                 if point_id not in chosen[key].selected_for:
                     chosen[key].selected_for.append(point_id)
                 continue

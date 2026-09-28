@@ -177,6 +177,14 @@ Per node, in order:
    | 2 | 5c | user access policy, UAP, access policy, conditions of access, access conditions |
    | 3 | 6 | helpdesk, help desk, service desk, support, ticket, contact, get in touch |
    | 4 | 2 | about, who we are, our mission, mission |
+   | 5 | 5p | policy/policies (not privacy, cookie or "policy makers"), legal, terms |
+   | 6 | 5s | service/services, catalog/catalogue, resource/resources |
+
+   Purposes 5p and 5s are not checklist points. They exist because v3.2 accepts
+   the AUP and UAP "via intermediate web pages linked by the NLP": a page
+   fetched for them is read by 5b and 5c for policy links. They come last, so a
+   per-node cap drops them before a link that settles a point, and a link
+   already chosen for another purpose is not tagged with them.
 
    Caps: `MAX_PER_PURPOSE = 2`, `MAX_CHILDREN = 8` per node (overridable with
    `--max-children`), 1.2 s between child requests. Each child page carries
@@ -539,11 +547,14 @@ should know before quoting one:
 Item 5 changed in checklist v3.2 (28 September 2026). Under v3.0 and v3.1 the
 purpose description, the AUP and the UAP had to be accessible in English
 "either directly or via the link to the resource's entry in the EOSC
-Catalogue". Under v3.2 they must be accessible "both directly on the NLP
-presenting the resource to the users and via the link to the resource's entry
-in the EOSC Catalogue", which the document spells out as: present "for each
-resource in the EOSC Exchange, both on the NLP itself and in the Metadata about
-the Resource in the Node Catalogue".
+Catalogue". Under v3.2 they must be accessible "both on the NLP presenting the
+resource to the users (directly on the NLP itself or via intermediate web pages
+linked by the NLP) and via the link to the resource's entry in the EOSC
+Catalogue", which the document spells out as: present "for each resource in the
+EOSC Exchange, both on the NLP itself (or on pages linked by the NLP web page)
+and in the Metadata about the Resource in the Node Catalogue". This is the
+wording of v3.2 as re-issued on 29 September 2026; the first copy said
+"directly on the NLP" only, and is discarded.
 
 `check_5a`, `check_5b` and `check_5c` take a switch, `on_nlp`. `run_all` passes
 it as `item5_on_nlp`, and the CLI reads it from the checklist file:
@@ -566,8 +577,8 @@ The evidence is two numbers: the count of outbound links, and the length of
 offered by the Node", which cannot be enumerated from the landing page, and
 judging whether a description states a purpose is reading. Under v3.1 the
 message adds that the description may live in the Catalogue entry instead;
-under v3.2 it says the description must be both on the NLP and in the
-Catalogue metadata, and the reviewer action asks for both. There is no branch on
+under v3.2 it says the description must be both on the NLP (directly or on a
+page it links to) and in the Catalogue metadata, and the reviewer action asks for both. There is no branch on
 which the tool could honestly resolve it, so it does not pretend to.
 
 ---
@@ -611,14 +622,25 @@ When no link to the point's own policy was found, the rules differ.
 | 6 | No link, but the vocabulary appears in the page text | `MANUAL_REVIEW` — mentioned but not followable |
 | 7 | Nothing at all | `MANUAL_REVIEW` — **deliberately not a `FAIL`**: the policy could be in the Catalogue |
 
-**Checklist v3.2** (`on_nlp` true), in this order:
+**Checklist v3.2** (`on_nlp` true), in this order. "Linked pages read" are the
+child pages (depth 1 and 2) that returned 2xx, whatever purpose they were
+fetched for:
 
 | # | Condition | Verdict |
 |---|---|---|
-| 6 | The page links to the **other** policy (a UAP for 5b, an AUP for 5c) | `MANUAL_REVIEW` — "AUP and UAP can be provided through the same, single document" |
-| 7 | The page links to a **licence** (`LICENCE_PATTERNS`: licence/license, licensing, Creative Commons, CC BY) | `MANUAL_REVIEW` — "AUP/UAP can be provided via specific product licenses in the case of datasets, archives, software" |
-| 8 | `link_collection_warning` fires: no links, fewer than 10 DOM elements, or under 500 characters of text | `MANUAL_REVIEW` — the DOM did not arrive, so absence is not concluded (the same gate as point 4) |
-| 9 | Otherwise | **`FAIL`** — no pointer to the policy on the NLP. If the page names the policy in its text without a link, the message says so and the mention is kept in the evidence, but it is still a `FAIL`: naming a document does not make it accessible from the NLP |
+| 6a | A linked page read links to the policy (or is itself titled as the policy and reads like one), and that link, if fetched, is broken | `FAIL` — the policy is not accessible |
+| 6b | A linked page read links to the policy (or is itself the policy) | `PASS` — "via intermediate web pages linked by the NLP"; the evidence names the intermediate page, and the message says whether the policy page itself was fetched |
+| 7 | The landing page or a linked page read links to the **other** policy (a UAP for 5b, an AUP for 5c) | `MANUAL_REVIEW` — "AUP and UAP can be provided through the same, single document" |
+| 8 | The landing page links to a **licence** (`LICENCE_PATTERNS`: licence/license, licensing, Creative Commons, CC BY) | `MANUAL_REVIEW` — "AUP/UAP can be provided via specific product licenses in the case of datasets, archives, software" |
+| 9 | `link_collection_warning` fires: no links, fewer than 10 DOM elements, or under 500 characters of text | `MANUAL_REVIEW` — the DOM did not arrive, so absence is not concluded (the same gate as point 4) |
+| 10 | The landing page links, on its own site, to a policies, legal, terms, services, catalogue or resources page (`POLICY_INDEX_PATTERNS`, `SERVICE_INDEX_PATTERNS`) that was **not read** | `MANUAL_REVIEW` — the pointers may be there; the evidence lists up to three such links as "not read" |
+| 11 | Otherwise | **`FAIL`** — no pointer on the landing page nor on any linked page read, and no candidate page left unread. If the page names the policy in its text without a link, the message says so and the mention is kept in the evidence, but it is still a `FAIL`: naming a document does not make it accessible |
+
+Branch 10 is what keeps the new rule honest. The checklist accepts any page the
+NLP links to, and the tool reads at most eight; a `FAIL` asserts that the
+policy is nowhere the tool could reasonably look, so an unread policies or
+services page makes it review. Pages on other sites are not candidates, as for
+the crawl.
 
 Branch 1 is weaker than it looks, and the message says so: a link labelled
 "Acceptable Use Policy" pointing at a 404 satisfies "there is a link" while
@@ -635,21 +657,25 @@ tell a real policy document apart from a navigation page that merely has the wor
 
 Under v3.1, branch 7 was not a `FAIL` because the checklist permitted the policy
 to be reached via each resource's entry in the EOSC Catalogue alone. v3.2
-removed that alternative, so the same absence is now a `FAIL` (v3.2 branch 9).
-The exceptions in v3.2 branches 6 and 7 come from the checklist's own notes; they
+removed that alternative, so the same absence is now a `FAIL` (v3.2 branch 11).
+The exceptions in v3.2 branches 7 and 8 come from the checklist's own notes; they
 lead to review, never to `PASS`, because a UAP is not proof of an AUP and a
 licence is not proof of either. "AUP and UAP do not necessarily need to be
-unique per service" is why a single policy linked from the NLP satisfies the NLP
-half for every resource: the tool does not ask for one link per resource.
+unique per service" is why a single policy linked from the NLP, or from a page it
+links to, satisfies the NLP half for every resource: the tool does not ask for one link per resource.
 
-What the stricter rule changed on the published evidence (run `web-11`, re-scored
-without contacting any node): 5b and 5c moved from `MANUAL_REVIEW` to `FAIL` for
-CERN, Data Terra and PaNOSC, whose landing pages link to neither policy nor to a
-licence. Every other cell is unchanged: eight nodes link one of the two policies
-and get review on the other (v3.2 branch 6), Slovakia links one document labelled
-as both, and GÉANT's page was not served (branch 8). Run `web-12`, the first
-collected under v3.2, gave the same verdicts in all 130 cells, and so did
-`web-13` at `--depth 2`, at both depths.
+What the rule changed on the published evidence. Under the first copy of v3.2
+("directly on the NLP"), 5b and 5c moved from `MANUAL_REVIEW` to `FAIL` for
+CERN, Data Terra and PaNOSC, whose landing pages link to neither policy nor a
+licence; runs `web-12` and `web-13` confirmed it. Under the re-issued v3.2
+(`web-13` re-scored as `web-13-rescored`, without contacting any node), those
+six cells are review again, now by branch 10: each landing page links to a
+services or policies page that `web-13` did not read (CERN's "Services" and
+"Policies", for instance). BBMRI-ERIC's 5b moved from review to `PASS` by branch
+6b: its Access Policies page links the "Acceptable Use Policy of BBMRI-ERIC
+Services". Every other cell is unchanged: seven nodes link one of the two
+policies and get review on the other (branch 7), Slovakia links one document
+labelled as both, and GÉANT's page was not served (branch 9).
 
 ---
 
@@ -1057,7 +1083,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 49 PASS · 14 FAIL · 67 review");
+- the headline tally in `README.md` ("130 cells: 50 PASS · 8 FAIL · 72 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

@@ -19,13 +19,19 @@ checklist_date: "2026-09-28"
 # rendering of the .docx named in `source_document`, not that .docx itself: the
 # hash pins the exact bytes this transcription was made from, and is not a
 # signature over the authoritative original.
+#
+# This file transcribes the second circulated copy of v3.2, which replaced the
+# first on 29 September 2026. The two differ only in item 5: the first required
+# the information "directly on the NLP"; this one accepts it "directly on the NLP
+# itself or via intermediate web pages linked by the NLP". The first copy is
+# discarded and no run is rebuilt against it.
 source_document: 20260928_Node_Landing_Page_Verification_Checklist_v3.2.docx
 source_file: 20260928_Node_Landing_Page_Verification_Checklist_v3.2.pdf
-source_sha256: e7f3fdfff0d9e1be4aa1466591c6ca65695f1e471707ad226ff137f8da6f6a42
+source_sha256: 318c6b71186641273961d3f70f87a92b78f81ccc072f6f6392bf17830d7ad83c
 
 # The item 5 rule this revision applies. Read by the CLI and passed to
-# checks.run_all: true means the information of item 5 must be on the NLP *and*
-# in the Catalogue. v3.0.yaml and v3.1.yaml do not carry the key, which the CLI
+# checks.run_all: true means the information of item 5 must be on the NLP --
+# directly or via intermediate pages linked by the NLP -- *and* in the Catalogue. v3.0.yaml and v3.1.yaml do not carry the key, which the CLI
 # reads as false (on the NLP *or* in the Catalogue), so runs made under them are
 # rebuilt with their own rule.
 item5_on_nlp: true
@@ -35,16 +41,20 @@ item5_on_nlp: true
 # word the same, and their rules are unchanged.
 #
 # - 5a/5b/5c: "accessible in English either directly or via the link to the
-#   resource's entry in the EOSC Catalogue" becomes "both directly on the NLP
-#   presenting the resource to the users and via the link to the resource's
-#   entry in the EOSC Catalogue". The document adds that this means the purpose,
-#   AUP and UAP must be in the resource's metadata in the Service or Research
-#   Products metadata catalogues, and that "a), b) and c) must be present, for
-#   each resource in the EOSC Exchange, both on the NLP itself and in the
-#   Metadata about the Resource in the Node Catalogue".
-#   Consequence for 5b and 5c: a landing page with no pointer to the policy used
-#   to be MANUAL_REVIEW (it might be in the Catalogue); it is now FAIL, unless
-#   one of the exceptions below applies. 5a stays MANUAL_REVIEW: whether a
+#   resource's entry in the EOSC Catalogue" becomes "both on the NLP presenting
+#   the resource to the users (directly on the NLP itself or via intermediate web
+#   pages linked by the NLP) and via the link to the resource's entry in the EOSC
+#   Catalogue". The document adds that this means the purpose, AUP and UAP must
+#   be in the resource's metadata in the Service or Research Products metadata
+#   catalogues, and that "a), b) and c) must be present, for each resource in the
+#   EOSC Exchange, both on the NLP itself (or on pages linked by the NLP web page)
+#   and in the Metadata about the Resource in the Node Catalogue".
+#   Consequence for 5b and 5c: a pointer on the landing page, or on a linked page
+#   the tool read, settles the NLP half. To find those pages the crawler also
+#   follows policies, legal, services and resources links (crawl purposes 5p and
+#   5s). No pointer anywhere used to be MANUAL_REVIEW (it might be in the
+#   Catalogue); it is now FAIL, unless one of the exceptions below applies, or
+#   the landing page links to such a page that was not read. 5a stays MANUAL_REVIEW: whether a
 #   description states a purpose is reading, and the resources cannot be listed
 #   from the page. The Catalogue half is not read by this tool for any of the
 #   three, so a PASS on 5b or 5c covers the NLP half only and says so.
@@ -55,7 +65,7 @@ item5_on_nlp: true
 #   * "AUP and UAP can be provided through the same, single document": a link to
 #     the other policy turns a missing one into MANUAL_REVIEW, not PASS.
 #   * "AUP and UAP do not necessarily need to be unique per service": one
-#     policy linked from the NLP can serve every resource, so a single pointer
+#     policy linked from the NLP or a linked page can serve every resource, so a single pointer
 #     is enough for the NLP half.
 
 # Each point declares, in `implemented_by`, the function in basic_check.checks
@@ -144,11 +154,12 @@ points:
       are matched and rejected rather than ignored.
 
   - id: "5a"
-    title: Purpose description in English, on the NLP and in the Catalogue, for each Node Exchange resource
+    title: Purpose description in English, on the NLP (or a page it links to) and in the Catalogue, for each Node Exchange resource
     requirement: >-
       For all Node Exchange research resources offered by the Node to EOSC users,
-      a purpose description must be accessible in English both directly on the
-      NLP presenting the resource to the users and via the link to the
+      a purpose description must be accessible in English both on the NLP
+      presenting the resource to the users (directly on the NLP itself or via
+      intermediate web pages linked by the NLP) and via the link to the
       resource's entry in the EOSC Catalogue [...], i.e. in the Metadata about
       the Resource in the Service or Research Products Metadata catalogues.
     implemented_by: check_5a
@@ -161,12 +172,13 @@ points:
       starting point.
 
   - id: "5b"
-    title: Acceptable Use Policy (AUP) linked from the NLP, and in the Catalogue, for each Node Exchange resource
+    title: Acceptable Use Policy (AUP) on the NLP or a page it links to, and in the Catalogue, for each Node Exchange resource
     requirement: >-
       For all Node Exchange research resources offered by the Node to EOSC
       users, the Acceptable Use Policy (AUP) must be accessible in English both
-      directly on the NLP presenting the resource to the users and via the link
-      to the resource's entry in the EOSC Catalogue [...]. AUP/UAP can be
+      on the NLP presenting the resource to the users (directly on the NLP itself
+      or via intermediate web pages linked by the NLP) and via the link to the
+      resource's entry in the EOSC Catalogue [...]. AUP/UAP can be
       provided via specific product licenses in the case of datasets, archives,
       software, i.e. non-Services resources. AUP and UAP can be provided through
       the same, single document. AUP and UAP do not necessarily need to be
@@ -174,23 +186,27 @@ points:
     implemented_by: check_5b
     decidable: partial
     decidable_note: >-
-      The NLP half is checkable: a pointer to an AUP on the landing page, and,
-      one level down, whether the target is served and reads like a policy.
-      Since v3.2 its absence is a FAIL, because being in the Catalogue alone no
-      longer suffices -- except when the page links to a User Access Policy
-      (possibly one document for both) or to a licence (allowed for non-service
-      resources), when the page mentions the AUP without a link, or when the DOM
-      did not arrive; those are MANUAL_REVIEW. A PASS covers the NLP half only:
+      The NLP half is checkable: a pointer to an AUP on the landing page or on a
+      linked page the tool read (a policies, legal, services or resources page,
+      followed for that purpose), and whether the target is served and reads
+      like a policy. Since v3.2 its absence is a FAIL, because being in the
+      Catalogue alone no longer suffices -- except when the NLP links to a User
+      Access Policy (possibly one document for both) or to a licence (allowed
+      for non-service resources), when the DOM did not arrive, or when the
+      landing page links to a policies or services page the tool did not read;
+      those are MANUAL_REVIEW. A policy named in the text without a link is
+      recorded but does not count. Pages on other sites are not followed. A PASS covers the NLP half only:
       that the policy covers every resource presented, and that it is also in
       each resource's Catalogue metadata, remain a reviewer's check.
 
   - id: "5c"
-    title: User Access Policy (UAP) linked from the NLP, and in the Catalogue, for each Node Exchange resource
+    title: User Access Policy (UAP) on the NLP or a page it links to, and in the Catalogue, for each Node Exchange resource
     requirement: >-
       For all Node Exchange research resources offered by the Node to EOSC
       users, the User Access Policy (UAP) must be accessible in English both
-      directly on the NLP presenting the resource to the users and via the link
-      to the resource's entry in the EOSC Catalogue [...]. AUP/UAP can be
+      on the NLP presenting the resource to the users (directly on the NLP itself
+      or via intermediate web pages linked by the NLP) and via the link to the
+      resource's entry in the EOSC Catalogue [...]. AUP/UAP can be
       provided via specific product licenses in the case of datasets, archives,
       software, i.e. non-Services resources. AUP and UAP can be provided through
       the same, single document. AUP and UAP do not necessarily need to be

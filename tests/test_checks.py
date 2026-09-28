@@ -220,8 +220,11 @@ def test_under_v3_1_a_missing_policy_is_manual_review_not_fail():
 
 
 def test_under_v3_2_a_missing_policy_fails():
-    """v3.2: "both directly on the NLP [...] and via the link to the resource's
-    entry in the EOSC Catalogue". The Catalogue alone no longer satisfies it."""
+    """v3.2: "both on the NLP presenting the resource to the users (directly on the
+    NLP itself or via intermediate web pages linked by the NLP) and via the link
+    to the resource's entry in the EOSC Catalogue". The Catalogue alone no longer
+    satisfies it, and a page with no policies or services link has nowhere else
+    the policy could be."""
     page = realistic([Link("https://node.example/about", "About")])
     for check in (checks.check_5b, checks.check_5c):
         r = check(page)
@@ -268,6 +271,93 @@ def test_under_v3_2_a_licence_link_is_review_not_fail():
     for check in (checks.check_5b, checks.check_5c):
         r = check(page)
         assert r.verdict == checks.MANUAL_REVIEW and "licence" in r.message
+
+
+def _linked(url, links, title="Services", text="", **kw):
+    body = text or ("Our services for researchers are listed below. " * 20)
+    return ChildPage(url=url, final_url=url, selected_for=["5s"], link_text=title, http_status=200,
+                     title=title, main_text=body, full_text=body, links=links, **kw)
+
+
+def test_under_v3_2_a_pointer_on_a_linked_page_passes():
+    """v3.2: the policy may be "via intermediate web pages linked by the NLP".
+    CERN's shape: the landing page links "Services"; that page links each AUP."""
+    services = _linked("https://node.example/services", [
+        Link("https://node.example/services/vre/aup", "Acceptable Use Policy"),
+        Link("https://node.example/services/vre/access", "User Access Policy"),
+    ])
+    page = realistic([Link("https://node.example/services", "Services")], children=[services], crawl_depth=1)
+    for check in (checks.check_5b, checks.check_5c):
+        r = check(page)
+        assert r.verdict == checks.PASS, r
+        assert "a page it links to" in r.message and "not a verified document" in r.message
+        assert any("via https://node.example/services" in e for e in r.evidence)
+        assert "Catalogue" in r.reviewer_action
+
+
+def test_under_v3_2_a_linked_page_that_is_the_policy_passes():
+    """A "Policies" link whose page is itself the AUP, titled as such."""
+    body = "This Acceptable Use Policy sets the terms. You must not misuse the services. " * 10
+    pol = _linked("https://node.example/policies", [], title="Acceptable Use Policy", text=body)
+    page = realistic([Link("https://node.example/policies", "Policies")], children=[pol], crawl_depth=1)
+    assert checks.check_5b(page).verdict == checks.PASS
+
+
+def test_under_v3_2_a_broken_policy_link_on_a_linked_page_fails():
+    services = _linked("https://node.example/services",
+                       [Link("https://node.example/aup", "Acceptable Use Policy")])
+    dead = ChildPage(url="https://node.example/aup", final_url="https://node.example/aup",
+                     selected_for=["5b"], depth=2, http_status=404)
+    page = realistic([Link("https://node.example/services", "Services")],
+                     children=[services, dead], crawl_depth=2)
+    r = checks.check_5b(page)
+    assert r.verdict == checks.FAIL and "broken" in r.message
+
+
+def test_under_v3_2_an_unread_policies_or_services_page_is_review_not_fail():
+    """The pointers may be on a linked page the tool did not read. Concluding
+    absence then would blame the node for the tool's blind spot."""
+    for label, href in (("Policies", "/policies"), ("Services", "/services"),
+                        ("View the full catalogue", "/catalogue"), ("Legal notice", "/legal")):
+        page = realistic([Link(f"https://node.example{href}", label)])
+        for check in (checks.check_5b, checks.check_5c):
+            r = check(page)
+            assert r.verdict == checks.MANUAL_REVIEW, (label, r)
+            assert any(e.startswith("not read:") for e in r.evidence)
+
+
+def test_under_v3_2_unread_pages_on_other_sites_or_privacy_policies_do_not_count():
+    page = realistic([
+        Link("https://other.example/services", "Services"),
+        Link("https://node.example/privacy", "Privacy Policy"),
+        Link("https://node.example/cookies", "Cookie policy"),
+        Link("https://node.example/get-started#for-policy-makers", "Policy Makers"),
+    ])
+    assert checks.check_5b(page).verdict == checks.FAIL
+
+
+def test_under_v3_2_a_read_services_page_without_pointers_fails():
+    services = _linked("https://node.example/services", [Link("https://node.example/vre", "VRE")])
+    page = realistic([Link("https://node.example/services", "Services")], children=[services], crawl_depth=1)
+    r = checks.check_5b(page)
+    assert r.verdict == checks.FAIL
+    assert "1 linked page(s) read" in " ".join(r.evidence) and "intermediate" in r.message
+
+
+def test_under_v3_2_the_other_policy_on_a_linked_page_is_review():
+    services = _linked("https://node.example/services",
+                       [Link("https://node.example/access", "User Access Policy")])
+    page = realistic([Link("https://node.example/services", "Services")], children=[services], crawl_depth=1)
+    assert checks.check_5c(page).verdict == checks.PASS
+    r = checks.check_5b(page)
+    assert r.verdict == checks.MANUAL_REVIEW and "single" in r.message
+
+
+def test_under_v3_1_linked_pages_do_not_change_the_rule():
+    services = _linked("https://node.example/services",
+                       [Link("https://node.example/aup", "Acceptable Use Policy")])
+    page = realistic([Link("https://node.example/services", "Services")], children=[services], crawl_depth=1)
+    assert checks.check_5b(page, on_nlp=False).verdict == checks.MANUAL_REVIEW
 
 
 def test_under_v3_2_a_thin_page_is_review_not_fail():

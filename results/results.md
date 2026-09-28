@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-13` · 2026-09-28T22:58:47+00:00 · 13 nodes · one page request per node plus 31 followed link(s), then 19 second-hop page(s) (depth 2).
+Run `web-13-rescored` · 2026-09-28T23:37:35+00:00 · 13 nodes · one page request per node plus 31 followed link(s), then 19 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -14,17 +14,17 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-130 cells: 🟢 49 PASS · 🔴 14 FAIL · 🟠 67 review.
+130 cells: 🟢 50 PASS · 🔴 8 FAIL · 🟠 72 review.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS | 🟢 PASS |
+| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
@@ -36,17 +36,17 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 
 The same evidence plus 19 page(s) reached one further hop out, under a shared run budget.
 
-130 cells: 🟢 49 PASS · 🔴 14 FAIL · 🟠 67 review.
+130 cells: 🟢 50 PASS · 🔴 8 FAIL · 🟠 72 review.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS | 🟢 PASS |
+| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
-| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
@@ -96,9 +96,9 @@ Full requirement text and the reasoning behind each verdict: [checklist v3.2 exp
 | **2** | Does the page state the node's scope, its intended users, and who runs it? | no, human judgement |
 | **3** | Is the EOSC logo shown, together with the official Tripartite-approved node name? | partly |
 | **4** | Does the page link to this node's own entry on eosc.eu (not the homepage or the index)? | yes, by inspection |
-| **5a** | Is there an English purpose description for each research resource, on the page and in the EOSC Catalogue? | no, human judgement |
-| **5b** | Is an Acceptable Use Policy (AUP) linked from the landing page itself (and in the Catalogue)? | partly |
-| **5c** | Is a User Access Policy (UAP) linked from the landing page itself (and in the Catalogue)? | partly |
+| **5a** | Is there an English purpose description for each research resource, on the NLP (or a page it links to) and in the EOSC Catalogue? | no, human judgement |
+| **5b** | Is an Acceptable Use Policy (AUP) linked from the landing page or a page it links to (and in the Catalogue)? | partly |
+| **5c** | Is a User Access Policy (UAP) linked from the landing page or a page it links to (and in the Catalogue)? | partly |
 | **6** | Is there a way to contact the node's helpdesk? | partly |
 | **7** | Is the landing page in English? | yes, by inspection |
 
@@ -129,18 +129,18 @@ Include a link to the Node's own dedicated page on the eosc.eu website — the N
 
 > Fully decidable and the sharpest point in the checklist: an href under eosc.eu/building-the-eosc-federation/ with a path segment beyond the index. The checklist explicitly excludes both the homepage and the index, so those are matched and rejected rather than ignored.
 
-**5a — Purpose description in English, on the NLP and in the Catalogue, for each Node Exchange resource** (needs a human)  
-For all Node Exchange research resources offered by the Node to EOSC users, a purpose description must be accessible in English both directly on the NLP presenting the resource to the users and via the link to the resource's entry in the EOSC Catalogue [...], i.e. in the Metadata about the Resource in the Service or Research Products Metadata catalogues.
+**5a — Purpose description in English, on the NLP (or a page it links to) and in the Catalogue, for each Node Exchange resource** (needs a human)  
+For all Node Exchange research resources offered by the Node to EOSC users, a purpose description must be accessible in English both on the NLP presenting the resource to the users (directly on the NLP itself or via intermediate web pages linked by the NLP) and via the link to the resource's entry in the EOSC Catalogue [...], i.e. in the Metadata about the Resource in the Service or Research Products Metadata catalogues.
 
 > Requires enumerating "all Node Exchange research resources offered by the Node", which is not derivable from the landing page alone, and reading each description; the Catalogue metadata half is not read by this tool at all. The tool reports the page's size and link count so a reviewer has a starting point.
 
-**5b — Acceptable Use Policy (AUP) linked from the NLP, and in the Catalogue, for each Node Exchange resource** (partly decidable)  
-For all Node Exchange research resources offered by the Node to EOSC users, the Acceptable Use Policy (AUP) must be accessible in English both directly on the NLP presenting the resource to the users and via the link to the resource's entry in the EOSC Catalogue [...]. AUP/UAP can be provided via specific product licenses in the case of datasets, archives, software, i.e. non-Services resources. AUP and UAP can be provided through the same, single document. AUP and UAP do not necessarily need to be unique per service.
+**5b — Acceptable Use Policy (AUP) on the NLP or a page it links to, and in the Catalogue, for each Node Exchange resource** (partly decidable)  
+For all Node Exchange research resources offered by the Node to EOSC users, the Acceptable Use Policy (AUP) must be accessible in English both on the NLP presenting the resource to the users (directly on the NLP itself or via intermediate web pages linked by the NLP) and via the link to the resource's entry in the EOSC Catalogue [...]. AUP/UAP can be provided via specific product licenses in the case of datasets, archives, software, i.e. non-Services resources. AUP and UAP can be provided through the same, single document. AUP and UAP do not necessarily need to be unique per service.
 
-> The NLP half is checkable: a pointer to an AUP on the landing page, and, one level down, whether the target is served and reads like a policy. Since v3.2 its absence is a FAIL, because being in the Catalogue alone no longer suffices -- except when the page links to a User Access Policy (possibly one document for both) or to a licence (allowed for non-service resources), when the page mentions the AUP without a link, or when the DOM did not arrive; those are MANUAL_REVIEW. A PASS covers the NLP half only: that the policy covers every resource presented, and that it is also in each resource's Catalogue metadata, remain a reviewer's check.
+> The NLP half is checkable: a pointer to an AUP on the landing page or on a linked page the tool read (a policies, legal, services or resources page, followed for that purpose), and whether the target is served and reads like a policy. Since v3.2 its absence is a FAIL, because being in the Catalogue alone no longer suffices -- except when the NLP links to a User Access Policy (possibly one document for both) or to a licence (allowed for non-service resources), when the DOM did not arrive, or when the landing page links to a policies or services page the tool did not read; those are MANUAL_REVIEW. A policy named in the text without a link is recorded but does not count. Pages on other sites are not followed. A PASS covers the NLP half only: that the policy covers every resource presented, and that it is also in each resource's Catalogue metadata, remain a reviewer's check.
 
-**5c — User Access Policy (UAP) linked from the NLP, and in the Catalogue, for each Node Exchange resource** (partly decidable)  
-For all Node Exchange research resources offered by the Node to EOSC users, the User Access Policy (UAP) must be accessible in English both directly on the NLP presenting the resource to the users and via the link to the resource's entry in the EOSC Catalogue [...]. AUP/UAP can be provided via specific product licenses in the case of datasets, archives, software, i.e. non-Services resources. AUP and UAP can be provided through the same, single document. AUP and UAP do not necessarily need to be unique per service.
+**5c — User Access Policy (UAP) on the NLP or a page it links to, and in the Catalogue, for each Node Exchange resource** (partly decidable)  
+For all Node Exchange research resources offered by the Node to EOSC users, the User Access Policy (UAP) must be accessible in English both on the NLP presenting the resource to the users (directly on the NLP itself or via intermediate web pages linked by the NLP) and via the link to the resource's entry in the EOSC Catalogue [...]. AUP/UAP can be provided via specific product licenses in the case of datasets, archives, software, i.e. non-Services resources. AUP and UAP can be provided through the same, single document. AUP and UAP do not necessarily need to be unique per service.
 
 > Same rule as 5b, with the roles swapped: a link to an Acceptable Use Policy turns a missing UAP into MANUAL_REVIEW, because the checklist allows one document for both. The two are still recognised separately -- an "Access Policy" is matched for 5c, an "Acceptable Use Policy" or "Terms of use" for 5b -- so a page that links only one of them gets a PASS on that point and a review on the other, not two PASSes.
 
@@ -179,15 +179,14 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "See the dedicated page on the EOSC website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 84 outbound link(s) on the landing page
   - main text length: 7094 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
-- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the landing page, but it links to a User Access Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 84 link(s) examined, none matching an Acceptable Use Policy
-  - named in the text without a link: AUP
-  - a User Access Policy: "Access Policies" -> https://www.bbmri-eric.eu/services/access-policies/
-  - *Reviewer action:* Open the linked a User Access Policy and confirm it also serves as an Acceptable Use Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
+- **5b** 🟢 PASS — The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.
+  - landing page -> https://www.bbmri-eric.eu/services/access-policies/ ("Access Policies")
+  - via https://www.bbmri-eric.eu/services/access-policies/: "Acceptable Use Policy of BBMRI-ERIC Services" -> https://www.bbmri-eric.eu/wp-content/uploads/BBMRI-ERIC-AUP-IT-Services-1_3.pdf
+  - *Reviewer action:* Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **5c** 🟢 PASS — The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.
   - "Access Policies" -> https://www.bbmri-eric.eu/services/access-policies/
   - followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8923 chars, title: Access Policies - BBMRI-ERIC
@@ -228,16 +227,22 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "CERN Node on eosc.eu ↗" -> https://eosc.eu/building-the-eosc-federation/eosc-node-cern
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 39 outbound link(s) on the landing page
   - main text length: 5456 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
-- **5b** 🔴 **FAIL** — No pointer to an Acceptable Use Policy was found on the landing page. Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is no longer enough.
-  - 39 link(s) examined, none matching an Acceptable Use Policy
-  - *Reviewer action:* Ask the node to link an Acceptable Use Policy from the NLP for each of its resources (one document may cover all of them, and may be the same as the other policy).
-- **5c** 🔴 **FAIL** — No pointer to a User Access Policy was found on the landing page. Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is no longer enough.
-  - 39 link(s) examined, none matching a User Access Policy
-  - *Reviewer action:* Ask the node to link a User Access Policy from the NLP for each of its resources (one document may cover all of them, and may be the same as the other policy).
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
+- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.
+  - 39 link(s) on the landing page examined, none matching an Acceptable Use Policy
+  - 4 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.cern/contact, https://eosc.cern/about/cern-node#stages, https://eosc.cern/about/cern, https://eosc.cern/about/collaboration
+  - not read: "Services" -> https://eosc.cern/services
+  - not read: "Policies" -> https://eosc.cern/policies
+  - *Reviewer action:* Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.
+  - 39 link(s) on the landing page examined, none matching a User Access Policy
+  - 4 linked page(s) read, none linking to a User Access Policy: https://eosc.cern/contact, https://eosc.cern/about/cern-node#stages, https://eosc.cern/about/cern, https://eosc.cern/about/collaboration
+  - not read: "Services" -> https://eosc.cern/services
+  - not read: "Policies" -> https://eosc.cern/policies
+  - *Reviewer action:* Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them.
 - **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
   - "Contact" -> https://eosc.cern/contact
   - followed: https://eosc.cern/contact -> HTTP 200
@@ -273,15 +278,16 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🔴 **FAIL** — Links only to the building-the-eosc-federation index, which the checklist explicitly excludes. The node's own dedicated entry is required.
   - "EOSC Federation" -> https://eosc.eu/building-the-eosc-federation
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-czechia/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 78 outbound link(s) on the landing page
   - main text length: 4021 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it is on another site, which the tool does not follow), so this is a pointer, not a verified document.
   - "Acceptable Use Policy" -> https://www.cesnet.cz/en/cesid-aup
   - *Reviewer action:* Open the link and confirm the target really is an Acceptable Use Policy, in English. No --depth setting will fetch it. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 78 link(s) examined, none matching a User Access Policy
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 78 link(s) on the landing page examined, none matching a User Access Policy
+  - 8 linked page(s) read, none linking to a User Access Policy: https://www.eosc.cz/en/about-eosc-cz/contact, https://www.eosc.cz/en/projects/national-support, https://www.eosc.cz/en/about-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data ...
   - named in the text without a link: Access conditions
   - an Acceptable Use Policy: "Acceptable Use Policy" -> https://www.cesnet.cz/en/cesid-aup
   - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
@@ -317,21 +323,21 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - "View the dedicated Node page on eosc.eu →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
   - "Open the official Node entry →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
   - "Node page in EOSC Federation" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 57 outbound link(s) on the landing page
   - main text length: 12097 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "D4Science Access and Acceptable Use Policy" -> https://www.d4science.org/policies/access-and-acceptable-use
   - "AUP" -> https://www.d4science.org/policies/access-and-acceptable-use
   - followed: https://www.d4science.org/policies/access-and-acceptable-use -> HTTP 200, 5461 chars, title: Access and Acceptable Use Policy | D4Science
   - policy wording found: Policy, Responsib, authorized, comply
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 57 link(s) examined, none matching a User Access Policy
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 57 link(s) on the landing page examined, none matching a User Access Policy
+  - 5 linked page(s) read, none linking to a User Access Policy: https://www.d4science.org/policies/access-and-acceptable-use, https://eosc-dto.d4science.org/terms-of-use, https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new, https://www.d4science.org/policies/terms-of-use, https://www.d4science.org/support
   - named in the text without a link: Access Polic, UAP, User Access Polic
   - an Acceptable Use Policy: "D4Science Access and Acceptable Use Policy" -> https://www.d4science.org/policies/access-and-acceptable-use
-  - an Acceptable Use Policy: "AUP" -> https://www.d4science.org/policies/access-and-acceptable-use
   - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "Open a Node helpdesk request" -> https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new
@@ -364,16 +370,20 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 93 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 93 outbound link(s) on the landing page
   - main text length: 5739 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
-- **5b** 🔴 **FAIL** — No pointer to an Acceptable Use Policy was found on the landing page. Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is no longer enough.
-  - 93 link(s) examined, none matching an Acceptable Use Policy
-  - *Reviewer action:* Ask the node to link an Acceptable Use Policy from the NLP for each of its resources (one document may cover all of them, and may be the same as the other policy).
-- **5c** 🔴 **FAIL** — No pointer to a User Access Policy was found on the landing page. Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is no longer enough.
-  - 93 link(s) examined, none matching a User Access Policy
-  - *Reviewer action:* Ask the node to link a User Access Policy from the NLP for each of its resources (one document may cover all of them, and may be the same as the other policy).
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
+- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.
+  - 93 link(s) on the landing page examined, none matching an Acceptable Use Policy
+  - 1 linked page(s) read, none linking to an Acceptable Use Policy: https://www.data-terra.org/contact-acces/
+  - not read: "Les services proposés" -> https://www.data-terra.org/services/
+  - *Reviewer action:* Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.
+  - 93 link(s) on the landing page examined, none matching a User Access Policy
+  - 1 linked page(s) read, none linking to a User Access Policy: https://www.data-terra.org/contact-acces/
+  - not read: "Les services proposés" -> https://www.data-terra.org/services/
+  - *Reviewer action:* Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them.
 - **6** 🟠 review — The contact or support pages reached from the landing page do not identify a helpdesk. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
   - "Contact & accès" -> https://www.data-terra.org/contact-acces/
   - "Contact & accès" -> https://www.data-terra.org/contact-acces/
@@ -409,18 +419,19 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 85 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-finland/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 85 outbound link(s) on the landing page
   - main text length: 823 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "Terms of use" -> https://research.csc.fi/terms-of-use/
   - "Prerequisites and responsibilities for a CSC project manager" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/
   - followed: https://research.csc.fi/terms-of-use/ -> HTTP 200, 16556 chars, title: Terms of use - Services for Research
   - policy wording found: Terms, comply, conditions, permitted
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 85 link(s) examined, none matching a User Access Policy
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 85 link(s) on the landing page examined, none matching a User Access Policy
+  - 7 linked page(s) read, none linking to a User Access Policy: https://research.csc.fi/terms-of-use/, https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/, https://research.csc.fi/support, https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/, https://research.csc.fi/terms-of-use/data-processing-agreement/ ...
   - an Acceptable Use Policy: "Terms of use" -> https://research.csc.fi/terms-of-use/
   - an Acceptable Use Policy: "Prerequisites and responsibilities for a CSC project manager" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/
   - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
@@ -458,16 +469,22 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🔴 **FAIL** — Links only to the building-the-eosc-federation index, which the checklist explicitly excludes. The node's own dedicated entry is required.
   - "Building the EOSC Federation" -> https://eosc.eu/eosc-about/building-the-eosc-federation/
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 123 outbound link(s) on the landing page
   - main text length: 7846 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
-- **5b** 🔴 **FAIL** — No pointer to an Acceptable Use Policy was found on the landing page. Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is no longer enough.
-  - 123 link(s) examined, none matching an Acceptable Use Policy
-  - *Reviewer action:* Ask the node to link an Acceptable Use Policy from the NLP for each of its resources (one document may cover all of them, and may be the same as the other policy).
-- **5c** 🔴 **FAIL** — No pointer to a User Access Policy was found on the landing page. Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is no longer enough.
-  - 123 link(s) examined, none matching a User Access Policy
-  - *Reviewer action:* Ask the node to link a User Access Policy from the NLP for each of its resources (one document may cover all of them, and may be the same as the other policy).
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
+- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.
+  - 123 link(s) on the landing page examined, none matching an Acceptable Use Policy
+  - 4 linked page(s) read, none linking to an Acceptable Use Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/
+  - not read: "Services" -> https://www.panosc.eu/services/
+  - not read: "PaNOSC data policy framework" -> https://www.panosc.eu/data/panosc-data-policy-framework/
+  - *Reviewer action:* Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.
+  - 123 link(s) on the landing page examined, none matching a User Access Policy
+  - 4 linked page(s) read, none linking to a User Access Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/
+  - not read: "Services" -> https://www.panosc.eu/services/
+  - not read: "PaNOSC data policy framework" -> https://www.panosc.eu/data/panosc-data-policy-framework/
+  - *Reviewer action:* Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them.
 - **6** 🟠 review — A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
   - "Contact" -> https://www.panosc.eu/contact/
   - "Contact us" -> https://www.panosc.eu/contact/
@@ -503,18 +520,20 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EOSC Node EUDAT" -> https://eosc.eu/building-the-eosc-federation/eosc-node-eudat
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 11 outbound link(s) on the landing page
   - main text length: 742 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "EUDAT AUP" -> https://www.eudat.eu/eudat-cdi-aup
   - followed: https://www.eudat.eu/eudat-cdi-aup -> HTTP 200, 3101 chars, title: EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT
   - policy wording found: Conditions, You shall, permitted, policy
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 11 link(s) examined, none matching a User Access Policy
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 11 link(s) on the landing page examined, none matching a User Access Policy
+  - 7 linked page(s) read, none linking to a User Access Policy: https://www.eudat.eu/eudat-cdi-aup, https://portal.eudat.eu/helpdesk, https://docs.eudat.eu, https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies, https://www.eudat.eu/catalogue ...
   - an Acceptable Use Policy: "EUDAT AUP" -> https://www.eudat.eu/eudat-cdi-aup
+  - an Acceptable Use Policy via https://www.eudat.eu/eudat-cdi-aup: "EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT" -> https://www.eudat.eu/eudat-cdi-aup
   - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "Helpdesk Ask the EUDAT support team a question or report a problem." -> https://portal.eudat.eu/helpdesk
@@ -547,17 +566,18 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 167 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-egi/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 167 outbound link(s) on the landing page
   - main text length: 4451 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "terms of use" -> https://www.egi.eu/terms-of-use/
   - followed: https://www.egi.eu/terms-of-use/ -> HTTP 200, 2362 chars, title: Terms of Use - EGI
   - policy wording found: Conditions, Policy, Terms, You shall
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 167 link(s) examined, none matching a User Access Policy
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 167 link(s) on the landing page examined, none matching a User Access Policy
+  - 4 linked page(s) read, none linking to a User Access Policy: https://www.egi.eu/terms-of-use/, https://www.egi.eu/contact-us/, https://www.egi.eu/about/, https://www.egi.eu/egi-federation/
   - named in the text without a link: Access Polic
   - an Acceptable Use Policy: "terms of use" -> https://www.egi.eu/terms-of-use/
   - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
@@ -596,15 +616,15 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - 2 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-geant/ but is not linked from here
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 2 outbound link(s) on the landing page
   - main text length: 241 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟠 review — No pointer to an Acceptable Use Policy was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) examined, none matching an Acceptable Use Policy
+  - 2 link(s) on the landing page examined, none matching an Acceptable Use Policy
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for an Acceptable Use Policy linked for each resource the page presents.
 - **5c** 🟠 review — No pointer to a User Access Policy was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) examined, none matching a User Access Policy
+  - 2 link(s) on the landing page examined, none matching a User Access Policy
   - *Reviewer action:* Open the page, dismiss any consent banner, and look for a User Access Policy linked for each resource the page presents.
 - **6** 🟠 review — No contact route was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
   - 2 link(s) examined
@@ -638,18 +658,20 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🔴 **FAIL** — Links to eosc.eu but not to the node's dedicated page under building-the-eosc-federation. The checklist excludes the homepage.
   - "EOSC Association EOSC Association brings together institutions and organisations committed to building an open scientific ecosystem in Europe. It supports collaboration, common standards, and the development of sustainable infrastructure that improves access to research data, tools, and services." -> https://eosc.eu/
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-poland/ but is not linked from here
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 35 outbound link(s) on the landing page
   - main text length: 5075 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "Terms of use" -> https://eosc.pl/terms-of-use
   - followed: https://eosc.pl/terms-of-use -> HTTP 200, 6530 chars, title: Polish Open Science Platform
   - policy wording found: Conditions, Policy, You shall, authorized
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 35 link(s) examined, none matching a User Access Policy
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 35 link(s) on the landing page examined, none matching a User Access Policy
+  - 1 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use
   - an Acceptable Use Policy: "Terms of use" -> https://eosc.pl/terms-of-use
+  - an Acceptable Use Policy via https://eosc.pl/terms-of-use: "Polish Open Science Platform" -> https://eosc.pl/terms-of-use
   - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "support@eosc.pl" -> mailto:support@eosc.pl
@@ -683,18 +705,20 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - 15 link(s) examined, none pointing to eosc.eu
   - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-italy/ but is not linked from here
   - note: a cookie-consent overlay dominates the captured text (main text only 191 chars; markers: Accept All, Reject All, We value your privacy); only 15 links captured, low for a landing page; only 191 characters of main text captured — the DOM was nonetheless complete, so absence stands
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 15 outbound link(s) on the landing page
   - main text length: 191 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "Terms of Use" -> https://eoscnode-it.d4science.org/terms-of-use
   - followed: https://eoscnode-it.d4science.org/terms-of-use -> HTTP 200, 8785 chars, title: Terms of Use - D4Science Infrastructure Gateway
   - policy wording found: Terms, comply, conditions, policy
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 15 link(s) examined, none matching a User Access Policy
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 15 link(s) on the landing page examined, none matching a User Access Policy
+  - 1 linked page(s) read, none linking to a User Access Policy: https://eoscnode-it.d4science.org/terms-of-use
   - an Acceptable Use Policy: "Terms of Use" -> https://eoscnode-it.d4science.org/terms-of-use
+  - an Acceptable Use Policy via https://eoscnode-it.d4science.org/terms-of-use: "Terms of Use - D4Science Infrastructure Gateway" -> https://eoscnode-it.d4science.org/terms-of-use
   - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **6** 🔴 **FAIL** — No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.
   - 15 link(s) examined
@@ -727,10 +751,10 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EOSC Node Slovakia (EOSC-A)" -> https://eosc.eu/building-the-eosc-federation/eosc-node-slovakia
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 45 outbound link(s) on the landing page
   - main text length: 8227 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP and in its EOSC Catalogue metadata.
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.
   - "Terms of Use (incl. AUP and UAP)" -> https://eosc.sk/docs/eosc_sk_tou.pdf
   - *Reviewer action:* Open the PDF and confirm it is an Acceptable Use Policy, in English. No --depth setting will fetch it. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.

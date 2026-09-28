@@ -18,27 +18,42 @@ and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
 This edition was revised on 29 September 2026 for checklist v3.2: the test
-count (438), the tallies and the rebuild of the published report were re-measured
+count (449), the tallies and the rebuild of the published report were re-measured
 offline that day, again without contacting any node.
 
 > **Checklist v3.2 since 29 September 2026.** The default reference checklist
-> is now v3.2 of 28 September 2026 (`checklist/v3.2.yaml`). Only item 5 changed,
-> and it became stricter: the purpose description, the Acceptable Use Policy and
-> the User Access Policy of every Node Exchange resource must now be available
-> **both** directly on the NLP **and** in the resource's EOSC Catalogue metadata,
-> where v3.1 asked for either. So a landing page that links to no AUP or UAP now
-> **fails** 5b or 5c instead of going to review. Two notes in the new item 5
-> keep review rather than FAIL where they apply: one document may serve as both
-> AUP and UAP, and datasets, archives and software may provide them through a
-> product licence. The rule is selected by the checklist file (`item5_on_nlp`),
-> so runs made under v3.0 and v3.1 still rebuild exactly with `-c`. The header of
-> `checklist/v3.2.yaml` lists the differences point by point, and section 5 of
-> the [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
+> is now v3.2 of 28 September 2026 (`checklist/v3.2.yaml`). Only item 5 changed:
+> the purpose description, the Acceptable Use Policy and the User Access Policy
+> of every Node Exchange resource must now be available **both** on the NLP,
+> directly or via intermediate web pages linked by the NLP, **and** in the
+> resource's EOSC Catalogue metadata, where v3.1 asked for either. The document
+> was re-issued on 29 September 2026 with this wording; the first copy, which
+> required them "directly on the NLP", is discarded and its hash replaced. So a
+> pointer on the landing page, or on a policies, legal, services or resources
+> page it links to, settles the NLP half, and the crawler follows such links
+> (purposes `5p` and `5s`). A landing page with no pointer anywhere the tool
+> read **fails** 5b or 5c, unless it links to such a page the tool did not read,
+> which is review. Two notes in the new item 5 also keep review rather than
+> FAIL: one document may serve as both AUP and UAP, and datasets, archives and
+> software may provide them through a product licence. The rule is selected by
+> the checklist file (`item5_on_nlp`), so runs made under v3.0 and v3.1 still
+> rebuild exactly with `-c`. The header of `checklist/v3.2.yaml` lists the
+> differences point by point, and section 5 of the
+> [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
-> **The published run changed on 29 September 2026.** `results/` now holds run
+> **The published run changed again on 29 September 2026.** `results/` now
+> holds `web-13-rescored`: the evidence of `web-13`, described next, scored
+> again against the re-issued v3.2 without contacting any node. It gives 50
+> PASS, 8 FAIL and 72 MANUAL_REVIEW at both depths. The six 5b/5c FAILs of CERN,
+> Data Terra and PaNOSC are review, because each links to a services or
+> policies page that `web-13` did not read, and BBMRI-ERIC's 5b passes via its
+> Access Policies page, which links the AUP. A new collection would read those
+> pages.
+>
+> **Before that,** `results/` held run
 > `web-13`, collected by the GitHub workflow at `--depth 2` on 28 September 2026
 > between 22:53 and 22:57 UTC from all thirteen nodes
-> ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)), under v3.2: 49 PASS, 14 FAIL, 67
+> ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)), under the first copy of v3.2: 49 PASS, 14 FAIL, 67
 > MANUAL_REVIEW at both depths, since the 19 second-hop pages changed no
 > verdict. It repeats cell for cell `web-12`
 > ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)), the first collection under v3.2, at
@@ -144,13 +159,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-438 tests still pass, while `collect` fails with Playwright's
+449 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 438 passed
+uv run pytest -q                  # expect: 449 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -202,7 +217,7 @@ to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
 saying so. `eosc.it` had no address record on 24 September, so that run skipped
 Italy; nothing published depends on the old address. Italy was assessed for the
 first time in run `web-4` on 26 September, from the new address, and again in
-runs `web-5` to `web-13` (the published run).
+runs `web-5` to `web-13` (published re-scored as `web-13-rescored`).
 
 ### Changing a node's URL
 
@@ -263,7 +278,7 @@ from the committed `nodes.yaml` and scored under the default checklist, so no
 other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-13
+uv run basic-check assess --run web-13-rescored
 ```
 
 The evidence records the depth it was collected at, so `assess` renders both
@@ -271,7 +286,8 @@ depths again without any option.
 
 Run `web-11` is in the git history: restore its `results/evidence` from commit
 `d3de829` into a scratch directory and assess it there with `--results`, as
-`--run web-11-v3.2` for the v3.2 scoring (49 PASS, 14 FAIL, 67 MANUAL_REVIEW)
+`--run web-11-v3.2` for the v3.2 scoring (49 PASS, 14 FAIL, 67 MANUAL_REVIEW
+under the discarded first copy of v3.2; the current rules give other figures)
 or with `-c checklist/v3.1.yaml --run web-11` for the scoring published on
 28 September (49 PASS, 8 FAIL, 73 MANUAL_REVIEW).
 
@@ -279,7 +295,7 @@ Run `web-10`, collected before CERN's URL changed, needs its own node list
 (`git show 8126aee:nodes.yaml`) passed with `--nodes`.
 
 Verified on 29 September 2026: this reproduces the committed `results/`
-exactly, apart from the generation time, with 49 PASS, 14 FAIL and 67
+exactly, apart from the generation time, with 50 PASS, 8 FAIL and 72
 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
@@ -308,8 +324,8 @@ the source document so a reader can audit the rule without a diff, and
 The file also pins its own provenance: `source_file` names the committed PDF the
 transcription was made from and `source_sha256` is that file's hash, asserted by
 `tests/test_checklist.py`. v3.2 also carries `item5_on_nlp: true`, the one
-value the rules take from the file: it selects the stricter item 5 rule
-(policies linked from the NLP, and in the Catalogue). `v3.0.yaml` and
+value the rules take from the file: it selects the item 5 rule of v3.2
+(policies linked from the NLP or a page it links to, and in the Catalogue). `v3.0.yaml` and
 `v3.1.yaml` do not carry it, so they apply the older rule. Be clear about what this proves — it pins the exact
 bytes the transcription came from, which catches silent drift when a checklist
 is revised. It is not a signature, and the committed PDF is a rendering of the
@@ -907,7 +923,7 @@ This is the way to try a node's new address before changing `nodes.yaml`
 | `--depth` | What is fetched | Requests, 9 nodes, 21 Sep 2026 | Requests, 12 nodes, 24 Sep 2026 | Requests, 13 nodes, 26 Sep 2026 |
 |---|---|---|---|---|
 | `0` | The landing page only. | 9 | 12 | 13 |
-| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about. At most 8 per node, 2 per point. | 31 (9 + 22) | 44 (12 + 32) | 44 (13 + 31), and the same on 28 Sep (`web-10` to `web-12`) |
+| `1` **(default)** | The landing page, plus links from it that could settle a checklist point — policy, contact, about, and, for item 5, policies, legal, services and resources pages. At most 8 per node, 2 per purpose. | 31 (9 + 22) | 44 (12 + 32) | 44 (13 + 31), and the same on 28 Sep (`web-10` to `web-12`) |
 | `2` | The above, plus one further hop: a policy *index* that links on to the actual policy, for instance. At most 2 per fetched page and 1 per point, under a run-wide budget. | 45 (9 + 22 + 14) | not run | not run; 63 (13 + 31 + 19) on 28 Sep, run `web-13`, the published run |
 
 `robots.txt` requests are not counted in these figures. The tool fetches one per
@@ -936,7 +952,7 @@ tables is the extra hop and not the page changing in between.
 is a finding, not a disappointment: the points still marked review turn on a
 judgement ("clearly state") or quantify over things no crawl enumerates ("all
 research resources offered by the Node"), and no amount of fetching settles
-either kind. **Depth 2, 28 September 2026 (run `web-13`, checklist v3.2):** 19 second-hop pages on top of the 31 depth-1 links, and again **zero** verdicts changed: 49 PASS, 14 FAIL and 67 review at both depths. The second hop reached governance, secretariat and news pages, which is also where it met a personal name that depth 1 had never collected (section on masking). Run it yourself before assuming the same holds for
+either kind. **Depth 2, 28 September 2026 (run `web-13`, checklist v3.2):** 19 second-hop pages on top of the 31 depth-1 links, and again **zero** verdicts changed: 49 PASS, 14 FAIL and 67 review at both depths under the first copy of v3.2, and 50 PASS, 8 FAIL and 72 review at both depths when re-scored against the re-issued one. The second hop reached governance, secretariat and news pages, which is also where it met a personal name that depth 1 had never collected (section on masking). Run it yourself before assuming the same holds for
 another federation or a later date.
 
 ### Be considerate with other people's servers
@@ -1058,7 +1074,7 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-13` (28 September 2026) was collected
+**The published run is masked.** Run `web-13` (28 September 2026), published re-scored as `web-13-rescored`, was collected
 with masking in place, and a search of all its evidence and reports found no
 personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). A deeper run reads more pages, and so needs this check more. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
@@ -1094,7 +1110,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 438 tests, offline, a few seconds
+uv run pytest -q                    # 449 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -1406,7 +1422,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 49 PASS · 14 FAIL · 67 review");
+- the headline tally in `README.md` ("130 cells: 50 PASS · 8 FAIL · 72 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

@@ -37,7 +37,7 @@ VERDICT_MD = {
 # This is what the matrix columns mean in practice, as opposed to the formal
 # requirement text, which lives in checklist/v3.*.yaml and the generated
 # checklist HTML page. `gloss_for` swaps in ITEM5_ON_NLP_GLOSS for checklists
-# that declare the stricter item 5 rule of v3.2, so a run rebuilt under v3.0 or
+# that declare the item 5 rule of v3.2, so a run rebuilt under v3.0 or
 # v3.1 still reads as it did.
 COLUMN_GLOSS = {
     "1": "Is the landing page itself reachable without logging in (or via EOSC AAI)?",
@@ -53,9 +53,9 @@ COLUMN_GLOSS = {
 }
 
 ITEM5_ON_NLP_GLOSS = {
-    "5a": "Is there an English purpose description for each research resource, on the page and in the EOSC Catalogue?",
-    "5b": "Is an Acceptable Use Policy (AUP) linked from the landing page itself (and in the Catalogue)?",
-    "5c": "Is a User Access Policy (UAP) linked from the landing page itself (and in the Catalogue)?",
+    "5a": "Is there an English purpose description for each research resource, on the NLP (or a page it links to) and in the EOSC Catalogue?",
+    "5b": "Is an Acceptable Use Policy (AUP) linked from the landing page or a page it links to (and in the Catalogue)?",
+    "5c": "Is a User Access Policy (UAP) linked from the landing page or a page it links to (and in the Catalogue)?",
 }
 
 

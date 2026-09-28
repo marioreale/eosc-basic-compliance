@@ -1030,7 +1030,8 @@ def _item5_on_nlp(checklist: dict) -> bool:
     """Which item 5 rule the checklist file declares.
 
     Checklist v3.2 declares `item5_on_nlp: true`: the item 5 information must be on
-    the NLP and in the Catalogue. v3.0 and v3.1 do not declare it, and asked for
+    the NLP (directly or via intermediate pages linked by the NLP) and in the
+    Catalogue. v3.0 and v3.1 do not declare it, and asked for
     either; reading an absent key as False is what keeps runs made under them
     reproducible with `-c checklist/v3.1.yaml`.
     """
