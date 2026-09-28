@@ -36,7 +36,7 @@ DEFAULT_NODES_SNAPSHOT = Path(__file__).resolve().parent / "defaults" / "nodes.y
 # when a new revision is adopted: add checklist/vX.Y.yaml beside the old one (see
 # checklist/README.md), then point this at it. Help texts, tests and reports all
 # follow from here.
-DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"
 DEFAULT_CHECKLIST_LABEL = f"checklist/{DEFAULT_CHECKLIST.name}"
 # The official Tripartite-approved node names, committed alongside the checklist
 # they serve. Used unless --approved-names names another file, so the name half
@@ -1026,7 +1026,20 @@ def _resolve_names(
         return ApprovedNames(), "", False, ""
 
 
-def _node_entry(node: dict, evidence_dir: Path, names: ApprovedNames) -> tuple[dict, dict | None]:
+def _item5_on_nlp(checklist: dict) -> bool:
+    """Which item 5 rule the checklist file declares.
+
+    Checklist v3.2 declares `item5_on_nlp: true`: the item 5 information must be on
+    the NLP and in the Catalogue. v3.0 and v3.1 do not declare it, and asked for
+    either; reading an absent key as False is what keeps runs made under them
+    reproducible with `-c checklist/v3.1.yaml`.
+    """
+    return bool(checklist.get("item5_on_nlp", False))
+
+
+def _node_entry(
+    node: dict, evidence_dir: Path, names: ApprovedNames, item5_on_nlp: bool = False
+) -> tuple[dict, dict | None]:
     """One node's row of results.json, assessed from its evidence file, and its
     url_mismatch record (or None). Shared by a full assess and by
     --update-results-for-node, so a replaced row is built exactly like the rest."""
@@ -1044,14 +1057,14 @@ def _node_entry(node: dict, evidence_dir: Path, names: ApprovedNames) -> tuple[d
             "evidence_url": ev.requested_url,
             "fetched_at": ev.fetched_at,
         }
-    results = checks.run_all(ev, names, node.get('eosc_page', ''))
+    results = checks.run_all(ev, names, node.get('eosc_page', ''), item5_on_nlp)
     # When the capture went two hops deep, also assess it as if it had not,
     # so the report can show what the second hop changed rather than
     # asserting it was worth it.
     shallow_results = None
     if ev.crawl_depth >= 2:
         shallow_results = checks.run_all(
-            without_depth_2(ev), names, node.get('eosc_page', '')
+            without_depth_2(ev), names, node.get('eosc_page', ''), item5_on_nlp
         )
     entry = (
         {
@@ -1165,7 +1178,7 @@ def _do_assess(
         if not path.exists():
             missing.append(node["id"])
             continue
-        entry, mismatch = _node_entry(node, evidence_dir, names)
+        entry, mismatch = _node_entry(node, evidence_dir, names, _item5_on_nlp(checklist))
         if mismatch:
             url_mismatch.append(mismatch)
         run["nodes"].append(entry)
@@ -1337,7 +1350,7 @@ def _update_results_for_node(
             "instead of assess to fetch it"
         )
 
-    entry, mismatch = _node_entry(node, evidence_dir, names)
+    entry, mismatch = _node_entry(node, evidence_dir, names, _item5_on_nlp(checklist))
     rows = stored["nodes"]
     ids = [r["id"] for r in rows]
     previous = rows[ids.index(node_id)] if node_id in ids else None

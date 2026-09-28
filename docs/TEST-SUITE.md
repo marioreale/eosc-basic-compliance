@@ -5,8 +5,9 @@ figures actually say. Every figure was measured on 25 September 2026 against
 a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
 clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
-**426 test cases, all passing in CI**. No node website was contacted to prepare
-this edition.
+**426 test cases, all passing in CI**. It was re-checked again on 29 September
+2026 for checklist v3.2: **438 test cases**, all passing. No node website was
+contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
 run the tool. Section 7 of that guide is the short version of this document.
@@ -15,7 +16,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.1*, with a pytest suite of 426 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.2*, with a pytest suite of 438 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -23,7 +24,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **426 cases** and gained four files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (14 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking) and `tests/test_update_row.py` (22 cases, updating one node's row). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **426 cases** (438 since checklist v3.2, below) and gained four files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (14 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking) and `tests/test_update_row.py` (22 cases, updating one node's row). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -35,6 +36,8 @@ conditions behind each of the ten checklist points.
 > **Since 26 September 2026: a new published run.** `results/` held run `web-4`, collected by the GitHub workflow from all thirteen nodes, Italy included at its new address: 45 PASS, 8 FAIL, 77 MANUAL_REVIEW. It replaced the reviewed run of 24 September by decision of the maintainer and has **not** been reviewed by hand; section 10 has the figures. Four tests pinned to the old run were updated to the new one (section 10), and the count stayed 425.
 >
 > **Since 26 September 2026: checklist v3.1.** The reference document is now *Node Landing Page Verification Checklist v3.1* (24 September 2026), transcribed to `checklist/v3.1.yaml` and made the default; `v3.0.yaml` is kept so older runs can be rebuilt. The rules did not change: v3.1 rewords points 1, 2, 4, 6 and 7, narrows 1R and 5a–5c to *Node Exchange* resources, and defines EOSC AAI login by requirement [P.2] of the Production 1.0 Checklist v1.4, so only titles, quoted text and review messages were updated. The evidence of run `web-4` was first re-scored against v3.1 without contacting any node, and every one of the 130 verdicts was unchanged; runs `web-5`, `web-6`, `web-8` and `web-9`, collected under v3.1 by the workflow, then replaced it with the same verdicts; `web-9` is the published one. The suite now has 426 cases: the per-revision provenance test also runs on v3.1, and the stored-results update test no longer assumes version 3.0.
+>
+> **Since 29 September 2026: checklist v3.2.** The reference document is now *Node Landing Page Verification Checklist v3.2* (28 September 2026), transcribed to `checklist/v3.2.yaml` and made the default; `v3.1.yaml` and `v3.0.yaml` are kept. Unlike v3.1, this revision **changes a rule**. Item 5 now requires the purpose description, the AUP and the UAP of every Node Exchange resource to be available both directly on the NLP and in the resource's EOSC Catalogue metadata, where v3.1 accepted either. So a landing page that links to neither policy (nor to a licence, nor to the other policy, which the new notes allow) now gets `FAIL` on 5b or 5c instead of `MANUAL_REVIEW`. The rule is chosen by the checklist file (`item5_on_nlp: true` in `v3.2.yaml` only), so older runs still rebuild exactly under `-c checklist/v3.1.yaml`; this was verified on run `web-11`. The published evidence of `web-11` was re-scored against v3.2 without contacting any node and published as `web-11-v3.2`: six cells moved from review to `FAIL` (section 10). The suite grew from 426 to **438 cases**: eight in `test_checks.py` for the two item 5 rules, two in `test_checklist.py` (each revision selects its own rule; the default is v3.2 or later and strict) with one more provenance case for v3.2, and one in `test_report.py` for the column legend.
 >
 > **Since the 24 September edition.** Personal data is now masked in the evidence and in every report (section 5), and the published run was masked at commit `ada1b4a` with every verdict unchanged (section 10). BBMRI-ERIC's configured URL changed to a `dev3.` address on 25 September, and the published run was collected from the old one, so rebuilding it needs the old node list (section 5). The suite grew from 326 to 329 cases for these changes, to 333 with four tests that keep the command-line help complete, and to 339 with the tests for the URL-mismatch warning and for switching the default checklist revision (section 11). It is 357 with eighteen cases for `--node`, 369 with twelve for the configuration listings, 379 with ten for `--list-nodes-ids` and `--show-node`, and 390 with eleven for `--update-nlp` (section 5).
 >
@@ -66,22 +69,22 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**338 test functions, expanding to 426 executed cases** (twenty-two tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**349 test functions, expanding to 438 executed cases** (twenty-two tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
 The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 425 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
 | `test_names.py` | 64 | The approved-name matcher: separator tolerance, scoping to a node, anchoring, the committed default list and its provenance |
-| `test_checks.py` | 75 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
-| `test_report.py` | 36 | Matrix rendering, the dual-depth tables, Markdown escaping, table-breaking input |
+| `test_checks.py` | 83 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — with both item 5 rules (v3.1 and v3.2), plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
+| `test_report.py` | 37 | Matrix rendering, the column legend under each item 5 rule, the dual-depth tables, Markdown escaping, table-breaking input |
 | `test_crawl.py` | 35 | Link selection, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
 | `test_cli.py` | 113 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring, and that every option has help text, shared options are described alike, and `--help` lists the node ids; that evidence from a URL other than the configured one is flagged in every report; `--node` with an alternative `--url`; the configuration listings (`--list-nodes`/`--list-nodes-ids`, `--list-nlps`, `--list-approved-names`, `--print-config`, `--show-node`) and `--update-nlp` |
-| `test_checklist.py` | 16 | Provenance of the checklist: source document hash for every committed revision, point-to-rule mapping, version/filename convention, and that the default revision is one line that `--help` follows |
-| `test_nodes.py` | 13 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list, and the default copy for `--restore-default-config` identical to the committed `nodes.yaml` |
+| `test_checklist.py` | 19 | Provenance of the checklist: source document hash for every committed revision, point-to-rule mapping, version/filename convention, that the default revision is one line that `--help` follows, and that each revision selects its own item 5 rule |
+| `test_nodes.py` | 14 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list, and the default copy for `--restore-default-config` identical to the committed `nodes.yaml` |
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
 | `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
-| **Total** | **426** | |
+| **Total** | **438** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -108,7 +111,7 @@ Six principles run through the suite.
 - **Nothing may silently pass.** One test asserts that points the checklist leaves to human judgement can never return PASS. Another asserts exactly one result per checklist point per node, so a point cannot quietly vanish from the matrix. A third blocks a PASS on point 3 when no approved-names list is in force — which now requires `--no-approved-names`, since a committed default list is used otherwise.
 - **Absence is not concluded from a broken collection.** If a page did not render — a cookie overlay, a JavaScript shell — then a missing link cannot be reported as absent, because that describes the tool rather than the node. A companion test stops that safeguard becoming a blanket excuse for pages that did render.
 - **Link following must not make PASS cheaper.** A whole block of tests asserts that following a link can only make a verdict better-evidenced, never more generous: a broken policy link fails, a navigation stub is not accepted as a policy document, and an About page cannot flip point 2, which asks the landing page itself to state those things.
-- **The paperwork cannot drift from the code.** Fifteen tests assert that the checklist YAML and the rules stay in step: the source document is committed and still hashes to what was transcribed, every point names the function that decides it, every function is claimed by exactly one point, a revision must arrive as a new file, and the default revision is selected by one line that the help texts follow. See section 5.
+- **The paperwork cannot drift from the code.** Nineteen tests assert that the checklist YAML and the rules stay in step: the source document is committed and still hashes to what was transcribed, every point names the function that decides it, every function is claimed by exactly one point, a revision must arrive as a new file, and the default revision is selected by one line that the help texts follow. See section 5.
 - **Regression pins for real defects.** At least ten tests exist because the tool actually got something wrong. Each carries the reason in its docstring rather than only an assertion. Five are described in section 7.
 - **The configuration is part of the software.** Since the node list grew beyond the original nine, thirteen tests treat `nodes.yaml` as something that can be broken: a missing field, a duplicate id, a malformed URL, two nodes pointing at the same eosc.eu entry, or a node whose official name nothing in the scoped list covers all fail the suite rather than surfacing as a strange verdict later.
 
@@ -118,7 +121,7 @@ Six principles run through the suite.
 
 ## 3. The ten checklist points
 
-Checklist v3.1, dated 24 September 2026, which replaced v3.0 of 15 September 2026 (the header of `checklist/v3.1.yaml` lists the differences point by point). The tool scores ten columns, because point 1 covers two things, the page and every Node Exchange resource it links to, and is split into 1 and 1R.
+Checklist v3.2, dated 28 September 2026, which replaced v3.1 of 24 September 2026, itself the successor of v3.0 of 15 September 2026 (the header of `checklist/v3.2.yaml` lists the differences point by point). The tool scores ten columns, because point 1 covers two things, the page and every Node Exchange resource it links to, and is split into 1 and 1R.
 
 | Point | Requirement | Can a tool decide it? | Implemented by |
 |---|---|---|---|
@@ -127,13 +130,15 @@ Checklist v3.1, dated 24 September 2026, which replaced v3.0 of 15 September 202
 | 2 | Scope, intended users and responsible organization are stated | No — human judgement | `check_2` |
 | 3 | EOSC logo and official Tripartite-approved node name are visible | Partly — the name against a list, never the "clearly visible" judgement | `check_3` |
 | 4 | Links to the node's own dedicated page on `eosc.eu` | Yes, by inspection | `check_4` |
-| 5a | Purpose description accessible in English for research resources | No — human judgement | `check_5a` |
-| 5b | Acceptable Use Policy (AUP) accessible | Partly | `check_5b` |
-| 5c | User Access Policy (UAP) accessible | Partly | `check_5c` |
+| 5a | Purpose description in English for Node Exchange research resources, on the NLP and in the Catalogue | No — human judgement | `check_5a` |
+| 5b | Acceptable Use Policy (AUP) linked from the NLP and in the Catalogue | Partly — the NLP half; no link at all is `FAIL` | `check_5b` |
+| 5c | User Access Policy (UAP) linked from the NLP and in the Catalogue | Partly — the NLP half; no link at all is `FAIL` | `check_5c` |
 | 6 | Means of contacting the node helpdesk | Partly | `check_6` |
 | 7 | The page is in English | Yes, by inspection | `check_7` |
 
 The last column is not decoration. Each point declares its implementing function in the checklist YAML as `implemented_by`, and a test asserts the mapping is complete in both directions, so a rule cannot exist without being explained and a point cannot be described without being applied. Run `basic-check points` to print this mapping from the file itself.
+
+**Item 5 under v3.2.** The tool never reads the EOSC Catalogue, so for 5a–5c it checks the NLP half only, and every 5a–5c result says so. For 5b and 5c: a policy link that works is `PASS`, with a reviewer action to confirm the Catalogue half; a link to the other policy (one document may be both) or to a licence (allowed for datasets, archives and software) is `MANUAL_REVIEW`; a page whose links did not arrive is `MANUAL_REVIEW`; anything else is `FAIL`, including a policy named in the text without a link. Under v3.0 and v3.1 the same absence was `MANUAL_REVIEW`, because the policy could have been in the Catalogue alone. The decision procedure is in section 5 of the [analysis workflow](ANALYSIS-WORKFLOW.md).
 
 > **On the honesty of the output.** Three of the ten points cannot be settled by a script at all and four only partly. Those are reported as `MANUAL_REVIEW` with the evidence attached rather than guessed at. Roughly 60% of cells land in review by design. A confident wrong verdict about a named organisation costs more to retract than an honest "a human must look".
 
@@ -202,7 +207,7 @@ git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
 uv run basic-check assess --run live-2026-09-24-no-italy --skip Italy --nodes /tmp/nodes-2026-09-24.yaml
 ```
 
-That command applies to the 24 September run, which is now in the git history at `800d632`. The published run `web-11` was collected from the committed `nodes.yaml`, so `uv run basic-check assess --run web-11` rebuilds it exactly, apart from the generation time, with no URL warning (verified 28 September 2026). Run `web-10` was collected before CERN's URL changed to `https://eosc.cern/`, so it needs its own node list: `git show 8126aee:nodes.yaml > /tmp/nodes-web-10.yaml`, then add `--nodes /tmp/nodes-web-10.yaml`. Runs published before 28 September 2026 were also scored with the earlier name list, so pass it too: `git show e7da5a8:checklist/approved-names.txt > /tmp/names-before-2026-09-28.txt`, then add `--approved-names /tmp/names-before-2026-09-28.txt`.
+That command applies to the 24 September run, which is now in the git history at `800d632`. The published run `web-11-v3.2` is the evidence of `web-11`, collected from the committed `nodes.yaml`, so `uv run basic-check assess --run web-11-v3.2` rebuilds it exactly, apart from the generation time, with no URL warning (verified 29 September 2026). `web-11` as published under v3.1 rebuilds with `-c checklist/v3.1.yaml --run web-11`, and so does every earlier run, together with the options below. Run `web-10` was collected before CERN's URL changed to `https://eosc.cern/`, so it needs its own node list: `git show 8126aee:nodes.yaml > /tmp/nodes-web-10.yaml`, then add `--nodes /tmp/nodes-web-10.yaml`. Runs published before 28 September 2026 were also scored with the earlier name list, so pass it too: `git show e7da5a8:checklist/approved-names.txt > /tmp/names-before-2026-09-28.txt`, then add `--approved-names /tmp/names-before-2026-09-28.txt`.
 
 The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean. The step-by-step procedure for a URL change, through to new published results, is example 2 in section 11.
 
@@ -292,7 +297,7 @@ It reads `nodes.yaml` and writes `evidence/<node>.json` and a screenshot per
 node. **Assess** reads that evidence, the checklist and the approved-name list,
 and sends no request. **Report** is the last step of `assess`: it writes
 `results.json`, `results.md`, `index.html`, `results.csv` and
-`checklist-v3.1.html`. `run` performs the three in one invocation. With
+`checklist-v3.2.html`. `run` performs the three in one invocation. With
 `--update-results-for-node`, `run` does the same for one node only, and
 `results.json` supplies every other row unchanged. `points` and `show` only
 read, so they never need re-running.
@@ -313,7 +318,7 @@ command also takes `--help`.
 | `--depth 0/1/2` | ✓ | — | ✓ | How far to follow links (default 1) |
 | `--max-children <n>` | ✓ | — | — | Linked pages followed per node at depth 1 (default 8; `run` always uses 8) |
 | `--fetch-budget <n>` | ✓ | — | ✓ | Depth 2 only: ceiling on second-hop requests (default 60) |
-| `--checklist`, `-c <file>` | — | ✓ | ✓ | Checklist revision to apply (default `checklist/v3.1.yaml`) |
+| `--checklist`, `-c <file>` | — | ✓ | ✓ | Checklist revision to apply (default `checklist/v3.2.yaml`) |
 | `--approved-names <file>` | — | ✓ | ✓ | Approved-name list for point 3 (default `checklist/approved-names.txt`) |
 | `--no-approved-names` | — | ✓ | ✓ | Use no name list at all |
 | `--strict-separators` | — | ✓ | ✓ | Match separators in approved names literally |
@@ -377,7 +382,7 @@ Only `collect` and `run` need a browser or network access. `points`, `assess`, `
 | `--fetch-budget` | collect run | 60 | Depth 2 only: run-wide ceiling on second-hop requests |
 | `--max-children` | collect | 8 | Cap on followed pages per node |
 | `--delay` | collect run | 2.0 | Seconds between hosts |
-| `--checklist` / `-c` | assess run points | `checklist/v3.1.yaml` | Which checklist version to apply |
+| `--checklist` / `-c` | assess run points | `checklist/v3.2.yaml` | Which checklist version to apply |
 | `--approved-names` | assess run | committed default | Text file of Tripartite-approved names, one per line, replacing the committed default |
 | `--no-approved-names` | assess run | false | Use no name list at all, not even the committed default |
 | `--strict-separators` | assess run | false | Match the separator glyphs in an approved name literally |
@@ -416,63 +421,68 @@ Note that `--max-children` is on `collect` but not on `run`, so a combined run u
 
 ### The reference checklist — the single configuration point
 
-`checklist/v3.1.yaml` is data, not code, and it is the one place the reference checklist is configured. The tool never downloads the checklist document, so there is no URL to change when it is revised: the document is committed next to the YAML. One line in `src/basic_check/cli.py` selects the default revision, and `--checklist` / `-c` on `assess`, `run` and `points` overrides it for one run:
+`checklist/v3.2.yaml` is data, not code, and it is the one place the reference checklist is configured. The tool never downloads the checklist document, so there is no URL to change when it is revised: the document is committed next to the YAML. One line in `src/basic_check/cli.py` selects the default revision, and `--checklist` / `-c` on `assess`, `run` and `points` overrides it for one run:
 
 ```python
-DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"
 ```
 
-Nothing else in the codebase names the file. The help texts, the name of the generated `checklist-v3.1.html` and the tests in `test_checklist.py` all derive from that line.
+Nothing else in the codebase names the file. The help texts, the name of the generated `checklist-v3.2.html` and the tests in `test_checklist.py` all derive from that line.
 
 ```text
 checklist/
-  v3.1.yaml                                  # the checklist as data
-  20260910_Node_Landing_Page_..._v3.1.pdf    # the document it came from
+  v3.2.yaml                                  # the checklist as data (default)
+  20260928_Node_Landing_Page_..._v3.2.pdf    # the document it came from
+  v3.1.yaml, v3.0.yaml                       # earlier revisions, kept to rebuild older runs
+  20260910_Node_Landing_Page_..._v3.1.pdf    # and their documents
   README.md                                  # the revision procedure
 ```
 
 Each point carries its verbatim requirement text, a `decidable` flag, a `decidable_note` explaining how the tool treats it and why, and `implemented_by` naming the function that decides it. The file header records provenance:
 
 ```yaml
-checklist_version: "3.1"
-checklist_date: "2026-09-24"
-source_document: 20260910_Node_Landing_Page_Verification_Checklist_v3.1.docx
-source_file: 20260910_Node_Landing_Page_Verification_Checklist_v3.1.pdf
-source_sha256: 65ca61a12a38f61a65e0b419b48d817be0792f6886beaecdbf8592bfab58709e
+checklist_version: "3.2"
+checklist_date: "2026-09-28"
+source_document: 20260928_Node_Landing_Page_Verification_Checklist_v3.2.docx
+source_file: 20260928_Node_Landing_Page_Verification_Checklist_v3.2.pdf
+source_sha256: e7f3fdfff0d9e1be4aa1466591c6ca65695f1e471707ad226ff137f8da6f6a42
+item5_on_nlp: true
 ```
 
 Three guarantees are enforced by tests rather than by good intentions.
 
 - **The source document is committed and pinned.** A transcription you cannot audit against its source is a rumour. If the document is ever replaced under the same filename, the hash test fails and forces a deliberate decision rather than a silent one.
 - **Every point maps to one rule, and every rule to one point.** A check no point claims is either dead code or a rule the reports never explain. A point naming a function that does not exist fails immediately.
-- **A revision must be a new file.** The declared `checklist_version` must match the filename, so v3.2 cannot be edited into `v3.1.yaml`. Reports name the file they were generated from, so editing in place would retroactively invalidate every past run.
+- **A revision must be a new file.** The declared `checklist_version` must match the filename, so v3.3 cannot be edited into `v3.2.yaml`. Reports name the file they were generated from, so editing in place would retroactively invalidate every past run.
 
 > **What the hash does and does not prove.** The committed file is a PDF rendering of the `.docx` named in `source_document`, not that `.docx` itself. It pins the exact bytes the transcription was made from — which is what catches a document being silently swapped — but it is not a signature over the authoritative original. Replacing the PDF with the real `.docx` is a two-line change in the YAML plus a re-hash.
 
-What the YAML governs is the **reporting surface**: titles, the matrix columns and their order, the quoted wording, the decidable/review framing. What it does *not* govern is the logic — `checks.run_all()` calls ten hardcoded functions and never reads the file. The YAML declares the checklist; the Python interprets it. That is precisely why `implemented_by` and its tests exist.
+What the YAML governs is the **reporting surface**: titles, the matrix columns and their order, the quoted wording, the decidable/review framing. What it does *not* govern is the logic — `checks.run_all()` calls ten hardcoded functions and never reads the file. There is one deliberate exception: `item5_on_nlp`, which the CLI reads from the file and passes to `run_all()`, selects the item 5 rule. It is declared in `v3.2.yaml` only, so the older files keep the rule they were written for, and it is the pattern to follow whenever a revision changes a rule rather than a wording. The YAML declares the checklist; the Python interprets it. That is precisely why `implemented_by` and its tests exist.
 
 ### Adding a newer checklist revision
 
 ```bash
 # 1 - commit the new source document into checklist/
 # 2 - copy the YAML to the new version, never edit in place
-cp checklist/v3.1.yaml checklist/v3.2.yaml
+cp checklist/v3.2.yaml checklist/v3.3.yaml
 shasum -a 256 checklist/<new-source-document>   # macOS spelling
 
 # 3 - update checklist_version, checklist_date, source_document,
-#     source_file and source_sha256 in checklist/v3.2.yaml
+#     source_file and source_sha256 in checklist/v3.3.yaml
 # 4 - re-read every point against the new document and fix any
 #     check_* function whose requirement changed        <-- manual step
+#     (a changed rule gets a switch, like item5_on_nlp, so older
+#     revisions keep theirs)
 # 5 - try it offline against the saved evidence, before switching
-uv run basic-check assess -c checklist/v3.2.yaml --results /tmp/v32   # after copying results/evidence there
+uv run basic-check assess -c checklist/v3.3.yaml --results /tmp/v33   # after copying results/evidence there
 # 6 - make it the default: in src/basic_check/cli.py
-#     DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"
+#     DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.3.yaml"
 
 uv run pytest -q                                 # consistency
 uv run basic-check run --results /tmp/new-run    # then review and publish
 ```
 
-Example 3 in section 11 gives every command, including publication and the removal of the old `results/checklist-v3.1.html`. Step 4 is the one the tooling cannot do for you. The tests confirm that the checklist and the code agree about *which* rules exist; they cannot confirm that a rule still means what the revised document says. `checklist/README.md` repeats this procedure inside the repository.
+Example 3 in section 11 gives every command, including publication and the removal of the old `results/checklist-v3.2.html`. Step 4 is the one the tooling cannot do for you. The tests confirm that the checklist and the code agree about *which* rules exist; they cannot confirm that a rule still means what the revised document says. `checklist/README.md` repeats this procedure inside the repository.
 
 ### Personal data in the evidence and the reports
 
@@ -656,7 +666,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 426 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 438 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -695,7 +705,7 @@ uv run basic-check run -n ~/Documents/candidate-nodes.yaml \
   --results ~/Documents/candidate-results
 ```
 
-Outputs land in `results/`: `results.md` (renders with colour directly on GitHub), `index.html`, `checklist-v3.1.html`, `results.csv`, `results.json`, and per-node evidence under `results/evidence/`.
+Outputs land in `results/`: `results.md` (renders with colour directly on GitHub), `index.html`, `checklist-v3.2.html`, `results.csv`, `results.json`, and per-node evidence under `results/evidence/`.
 
 > **Use a scratch output directory for anything exploratory.** `uv run basic-check assess` rewrites `results/` wholesale, and `results/` holds the run that the published report is built from. Pass `--results /tmp/scratch` for trial runs, and check `git status --short results/` before committing.
 
@@ -741,7 +751,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 426 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 438 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -782,23 +792,37 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: 28 September 2026 (unreviewed)
+### Current run: web-11 re-scored under v3.2, 29 September 2026 (unreviewed)
 
-From `results/results.json`, run `web-11`, collected on 28 September 2026 at 13:48 UTC by the GitHub workflow ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625), commit `f4eaebd`, unit tests passing first) against checklist v3.1 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `46af586b…`). It is the first run with CERN's new Node Landing Page, `https://eosc.cern/`, which replaced the INDIGO IAM sign-in URL `https://eosc-auth.cern.ch/login` in the same commit. All thirteen nodes were assessed and none was skipped. The run made 44 requests (13 landing pages and 31 child pages). Twelve landing pages returned HTTP 200. GÉANT returned HTTP 403 with the Cloudflare challenge. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number. Two personal names that the masking does not cover were then removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, where it had also been in earlier published runs). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Offline, `uv run basic-check assess --run web-11` reproduces it exactly, apart from the generation time.
+From `results/results.json`, run `web-11-v3.2`. It is the evidence of run `web-11`, described in the next paragraph, scored again on 29 September 2026 against checklist v3.2 without contacting any node. The evidence files are byte for byte those of `web-11`, so the masking and the name checks below still hold, and the capture date in the report is still 28 September. Offline, `uv run basic-check assess --run web-11-v3.2` reproduces it exactly, apart from the generation time.
+
+Run `web-11` was collected on 28 September 2026 at 13:48 UTC by the GitHub workflow ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625), commit `f4eaebd`, unit tests passing first) against checklist v3.1 at `--depth 1` and assessed against the official unscoped names list (13 names, SHA-256 `46af586b…`). It is the first run with CERN's new Node Landing Page, `https://eosc.cern/`, which replaced the INDIGO IAM sign-in URL `https://eosc-auth.cern.ch/login` in the same commit. All thirteen nodes were assessed and none was skipped. The run made 44 requests (13 landing pages and 31 child pages). Twelve landing pages returned HTTP 200. GÉANT returned HTTP 403 with the Cloudflare challenge. The evidence was masked as it was collected, and a search of every evidence file and report found no personal address or phone number. Two personal names that the masking does not cover were then removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, where it had also been in earlier published runs). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Offline, `uv run basic-check assess -c checklist/v3.1.yaml --run web-11` reproduces it as published on 28 September (49 PASS, 8 FAIL, 73 MANUAL_REVIEW), apart from the generation time.
 
 The run before it, `web-10` ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417), commit `c90761b`), was the first with EOSC Node Poland (`eosc-pl`, `https://eosc.pl/`), which replaced a node listed by mistake on 28 September 2026; the name list changed in the same commit ("EOSC Node | Poland" in place of that node's name). Apart from Poland's new row, its verdicts repeated run `web-9` of 26 September cell for cell, and `web-11` repeats `web-10` apart from CERN's row.
 
 | Verdict | Cells |
 |---|---|
 | 🟢 PASS | 49 |
-| 🔴 FAIL | 8 |
-| 🟠 MANUAL_REVIEW | 73 |
+| 🔴 FAIL | 14 |
+| 🟠 MANUAL_REVIEW | 67 |
 | 🟣 ERROR | 0 |
 | **Total** | **130** (13 nodes × 10 points) |
 
 Seven FAILs are point 4. Four landing pages have no `eosc.eu` link at all (Data Terra, EOSC Finland, EGI, Italy), two link only to the federation index (PaNOSC, Czechia), and one only to the `eosc.eu` homepage (Poland). The eighth is Italy's point 6: none of its links is a contact route. Italy's page rendered with 15 links, but its main text is short, so both of its FAILs should be looked at by hand.
 
-**CERN, new landing page:** 4 PASS (1, 4, 6 via its Contact page, 7) and 6 review. Points 1 and 4 moved from review to `PASS` against the sign-in URL of `web-10`: the page is public, renders about 6,000 characters, and links to `https://eosc.eu/building-the-eosc-federation/eosc-node-cern`. Point 3 is review: the logo reads "EOSC Node | CERN", but the approved name is not in the page text.
+The other six FAILs are new with v3.2: points 5b and 5c for CERN, Data Terra and PaNOSC, whose landing pages link to no AUP, no UAP and no licence. Under v3.1 all six were review. No other cell changed. Per node, 5b and 5c under v3.2:
+
+| 5b / 5c | Nodes | Why |
+|---|---|---|
+| FAIL / FAIL | CERN, Data Terra, PaNOSC | no policy link on the NLP |
+| PASS / PASS | Slovakia | one "Terms of Use (incl. AUP and UAP)" document |
+| PASS / review | Czechia, EOSC DTO, EOSC Finland, EUDAT, EGI, Poland, Italy | an AUP or terms of use is linked; one document may be both, so the UAP is left to a reviewer |
+| review / PASS | BBMRI-ERIC | a UAP is linked, the AUP is left to a reviewer |
+| review / review | GÉANT | HTTP 403, the page was not served |
+
+Every `PASS` here settles only the NLP half of item 5: the tool does not read the Catalogue metadata, and the reviewer action says so.
+
+**CERN, new landing page:** 4 PASS (1, 4, 6 via its Contact page, 7), 2 FAIL (5b, 5c, under v3.2) and 4 review. Points 1 and 4 moved from review to `PASS` against the sign-in URL of `web-10`: the page is public, renders about 6,000 characters, and links to `https://eosc.eu/building-the-eosc-federation/eosc-node-cern`. Point 3 is review: the logo reads "EOSC Node | CERN", but the approved name is not in the page text.
 
 **Poland, first assessed in `web-10`:** 4 PASS (1, 5b on its Terms of use, 6 on `support@eosc.pl`, 7), 1 FAIL (4) and 5 review. Point 3 is review: the header logo reads "EOSC Node | Poland", but the approved name is not in the page text.
 
@@ -1088,13 +1112,13 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-11`). Update it to the new run's shape.
+  run `web-11-v3.2`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 49 PASS · 8 FAIL · 73 review");
+- the headline tally in `README.md` ("130 cells: 49 PASS · 14 FAIL · 67 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 
@@ -1204,51 +1228,52 @@ it:
 
 | Where | What it says |
 |---|---|
-| `src/basic_check/cli.py`, the line `DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"` | Which checklist revision is used when `--checklist` is not given. **This is the one line to change** to make a new revision the default. The help texts, the tests and the reports all follow it. |
+| `src/basic_check/cli.py`, the line `DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"` | Which checklist revision is used when `--checklist` is not given. **This is the one line to change** to make a new revision the default. The help texts, the tests and the reports all follow it. |
 | `checklist/vX.Y.yaml`: `checklist_version`, `checklist_date`, `source_document`, `source_file`, `source_sha256` | Which document that revision was transcribed from, and its SHA-256 hash. |
 | `--checklist` / `-c <file>` on `assess`, `run` and `points` | A different revision for a single run, without changing the default. |
 
 When the originating document changes, you therefore add a new file for the new
-revision and point the default at it. `v3.1.yaml` is never edited: the
+revision and point the default at it. `v3.2.yaml` is never edited: the
 published reports name the file they were produced from.
 
-The example assumes a v3.2 dated 15 October 2026. Use the real version, date
-and filenames. This procedure was last applied on 26 September 2026, to move
-from v3.0 to v3.1; the header of `checklist/v3.1.yaml` records what changed,
+The example assumes a v3.3 dated 15 October 2026. Use the real version, date
+and filenames. This procedure was last applied on 29 September 2026, to move
+from v3.1 to v3.2 (and before that on 26 September, from v3.0 to v3.1);
+the header of `checklist/v3.2.yaml` records what changed,
 point by point.
 
 **Step 1: commit the new document next to the old one.**
 
 ```bash
-cp ~/Downloads/20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf checklist/
-sha256sum checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf
-# on macOS: shasum -a 256 checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf
+cp ~/Downloads/20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf checklist/
+sha256sum checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf
+# on macOS: shasum -a 256 checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf
 ```
 
-The committed v3.1 file is a PDF rendering of the circulated `.docx`. Commit
+The committed v3.2 file is a PDF rendering of the circulated `.docx`. Commit
 the `.docx` itself if you prefer: `source_file` may name either.
 
 **Step 2: create the new revision's file from the old one.**
 
 ```bash
-cp checklist/v3.1.yaml checklist/v3.2.yaml
+cp checklist/v3.2.yaml checklist/v3.3.yaml
 ```
 
-In `checklist/v3.2.yaml`, change the header:
+In `checklist/v3.3.yaml`, change the header:
 
 ```yaml
-checklist_version: "3.2"
+checklist_version: "3.3"
 checklist_date: "2026-10-15"
-source_document: 20261015_Node_Landing_Page_Verification_Checklist_v3.2.docx
-source_file: 20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf
+source_document: 20261015_Node_Landing_Page_Verification_Checklist_v3.3.docx
+source_file: 20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf
 source_sha256: <the hash printed in step 1>
 ```
 
-The version must match the filename (`v3.2.yaml` declares `"3.2"`); a test
+The version must match the filename (`v3.3.yaml` declares `"3.3"`); a test
 enforces this.
 
 **Step 3: compare every point with the new document.** No tool can do this step
-for you. For each point in `v3.2.yaml`:
+for you. For each point in `v3.3.yaml`:
 
 - If the wording changed, update `title` and `requirement`, which are quoted
   word for word. Then read the `check_*` function named in `implemented_by`, in
@@ -1259,17 +1284,26 @@ for you. For each point in `v3.2.yaml`:
   call it from `run_all()` in checklist order, name it in the point's
   `implemented_by`, and add tests for it to `tests/test_checks.py`.
 - If a point was **removed**, delete its entry, its function and its tests.
+- If a rule became **stricter or looser**, older runs must keep the rule they
+  were made under. Do not simply change the function: give it a switch, pass
+  the switch from `run_all()`, and declare it in the new YAML only, so the older
+  files select the old rule by its absence. v3.2 did this for item 5:
+  `item5_on_nlp: true` in `v3.2.yaml`, read by `_item5_on_nlp` in `cli.py`,
+  selects the rule that the AUP and UAP must be linked from the NLP, and
+  `v3.0.yaml`/`v3.1.yaml`, which lack the key, keep "on the NLP or in the
+  Catalogue". Add tests for both rules, and rebuild the published run with the
+  old file to prove it is unchanged.
 
 **Step 4: try the new revision offline, before switching.** `-c` applies it to
 one run only. Re-scoring saved evidence contacts no one:
 
 ```bash
-uv run basic-check points -c checklist/v3.2.yaml
-mkdir -p /tmp/v32 && cp -r results/evidence /tmp/v32/
-uv run basic-check assess -c checklist/v3.2.yaml --results /tmp/v32 --run trial-v3.2
+uv run basic-check points -c checklist/v3.3.yaml
+mkdir -p /tmp/v33 && cp -r results/evidence /tmp/v33/
+uv run basic-check assess -c checklist/v3.3.yaml --results /tmp/v33 --run trial-v3.3
 ```
 
-Compare `/tmp/v32/results.md` with `results/results.md`. Any difference comes
+Compare `/tmp/v33/results.md` with `results/results.md`. Any difference comes
 from the new rules alone, since the evidence is the same. If the published run
 skipped a node or used an older `nodes.yaml`, pass the same `--skip` and
 `--nodes` here.
@@ -1277,63 +1311,63 @@ skipped a node or used an older `nodes.yaml`, pass the same `--skip` and
 **Step 5: make it the default, and run the tests.** In `src/basic_check/cli.py`:
 
 ```python
-DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.3.yaml"
 ```
 
 ```bash
 uv run pytest -q
-uv run basic-check --help     # now says "against checklist v3.2"
+uv run basic-check --help     # now says "against checklist v3.3"
 ```
 
 The tests check the new file's hash, that its version matches its filename,
 and that every point maps to exactly one `check_*` function and every function
-to one point. They also check that `v3.1.yaml` and its document are still
-intact, so older runs can still be rebuilt with `-c checklist/v3.1.yaml`. What
+to one point. They also check that `v3.2.yaml` and its document are still
+intact, so older runs can still be rebuilt with `-c checklist/v3.2.yaml`. What
 they cannot check is whether a rule is right: that is step 3.
 
 **Step 6: produce and publish the results.** The default revision is now
-v3.2, so no `-c` is needed. Choose between the same two paths as in example 1:
+v3.3, so no `-c` is needed. Choose between the same two paths as in example 1:
 
 ```bash
 # fresh evidence from every node:
-uv run basic-check run --results /tmp/new-run --run live-2026-10-20-v3.2
+uv run basic-check run --results /tmp/new-run --run live-2026-10-20-v3.3
 # review, then:
 rm -rf results/evidence && cp -r /tmp/new-run/evidence results/evidence
-uv run basic-check assess --run live-2026-10-20-v3.2
+uv run basic-check assess --run live-2026-10-20-v3.3
 ```
 
-Alternatively, re-score the published evidence against v3.2 without contacting
-anyone, as in step 4 but writing to `results/`. The report then says v3.2,
+Alternatively, re-score the published evidence against v3.3 without contacting
+anyone, as in step 4 but writing to `results/`. The report then says v3.3,
 while the capture date is still that of the evidence.
 
-The reports now link to `results/checklist-v3.2.html`. The old
-`results/checklist-v3.1.html` stays behind; remove it, and update the places
-that name v3.1 in prose or links:
+The reports now link to `results/checklist-v3.3.html`. The old
+`results/checklist-v3.2.html` stays behind; remove it, and update the places
+that name v3.2 in prose or links:
 
 ```bash
-git rm results/checklist-v3.1.html
-rg -n "v3\.1" README.md docs checklist/README.md .github
+git rm results/checklist-v3.2.html
+rg -n "v3\.2" README.md docs checklist/README.md .github
 ```
 
 In `README.md`, the table of checklist points links each point to
-`results/checklist-v3.1.html#p…`. Those links break once the file is removed,
-so change them to `v3.2`.
+`results/checklist-v3.2.html#p…`. Those links break once the file is removed,
+so change them to `v3.3`.
 
 **Step 7: tests, review, commit.** As in example 1, steps 5 and 6. If any
 `check_*` function changed in step 3, also update its decision procedure in
 section 5 of [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md), which describes
 each point's rule branch by branch. Commit the new document,
-`checklist/v3.2.yaml`, `cli.py`, any changed checks and tests, `results/` and
+`checklist/v3.3.yaml`, `cli.py`, any changed checks and tests, `results/` and
 the documents together, so the commit shows the whole change.
 
 ---
 
 ## Sources
 
-- Checklist: *Node Landing Page Verification Checklist v3.1*, 24 September 2026, committed as `checklist/20260910_Node_Landing_Page_Verification_Checklist_v3.1.pdf` and transcribed to `checklist/v3.1.yaml` with its SHA-256 pinned
+- Checklist: *Node Landing Page Verification Checklist v3.2*, 28 September 2026, committed as `checklist/20260928_Node_Landing_Page_Verification_Checklist_v3.2.pdf` and transcribed to `checklist/v3.2.yaml` with its SHA-256 pinned
 - EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>
 - Repository: <https://github.com/marioreale/eosc-basic-compliance>
-- Figures in section 10, current run: `results/results.json`, run `web-11`, collected 28 September 2026 by [workflow run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625) under checklist v3.1, not reviewed
+- Figures in section 10, current run: `results/results.json`, run `web-11-v3.2`: the evidence of run `web-11`, collected 28 September 2026 by [workflow run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625) under checklist v3.1, re-scored offline against v3.2 on 29 September 2026, not reviewed
 - Figures in section 10, 24 September run: `results/results.json` at commit `800d632`, run `live-2026-09-24-no-italy`, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
 - Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `46af586b…`, since 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`

@@ -1,7 +1,7 @@
 # Installation, configuration and run guide
 
 `eosc-basic-compliance` checks EOSC Node Landing Pages against the
-**Node Landing Page Verification Checklist v3.1** (24 September 2026) and writes
+**Node Landing Page Verification Checklist v3.2** (28 September 2026) and writes
 a report: a matrix of nodes against checklist points, with the evidence behind
 every verdict.
 
@@ -17,23 +17,37 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-> **The published run changed on 28 September 2026.** `results/` now holds run
-> `web-11`, collected by the GitHub workflow on 28 September from all thirteen
-> nodes under checklist v3.1 (49 PASS, 8 FAIL, 73 MANUAL_REVIEW). It is the first
-> run with CERN's new landing page, `https://eosc.cern/`, and follows `web-10` of
-> the same day, the first with EOSC Node Poland, which replaced a node listed by
-> mistake. The other rows repeat runs `web-4` to `web-9` of 26 September cell for
-> cell. It has **not** been reviewed by
-> hand; the review of the run it replaced stays in
-> `results/REVIEW-2026-09-24.md` as history. Passages below that describe "the
-> published run of 24 September" are about that earlier, reviewed run, whose
-> files are in the git history at commit `800d632`.
+This edition was revised on 29 September 2026 for checklist v3.2: the test
+count (438), the tallies and the rebuild of the published report were re-measured
+offline that day, again without contacting any node.
+
+> **Checklist v3.2 since 29 September 2026.** The default reference checklist
+> is now v3.2 of 28 September 2026 (`checklist/v3.2.yaml`). Only item 5 changed,
+> and it became stricter: the purpose description, the Acceptable Use Policy and
+> the User Access Policy of every Node Exchange resource must now be available
+> **both** directly on the NLP **and** in the resource's EOSC Catalogue metadata,
+> where v3.1 asked for either. So a landing page that links to no AUP or UAP now
+> **fails** 5b or 5c instead of going to review. Two notes in the new item 5
+> keep review rather than FAIL where they apply: one document may serve as both
+> AUP and UAP, and datasets, archives and software may provide them through a
+> product licence. The rule is selected by the checklist file (`item5_on_nlp`),
+> so runs made under v3.0 and v3.1 still rebuild exactly with `-c`. The header of
+> `checklist/v3.2.yaml` lists the differences point by point, and section 5 of
+> the [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
-> **Checklist v3.1 since 26 September 2026.** The default reference checklist
-> is now v3.1 of 24 September 2026 (`checklist/v3.1.yaml`). The evidence of
-> `web-4` was first re-scored against it offline, then `web-5` to `web-11`
-> were collected under it; every verdict is unchanged. The header of `checklist/v3.1.yaml` lists the differences point by
-> point.
+> **The published run changed on 29 September 2026.** `results/` now holds run
+> `web-11-v3.2`: the evidence of run `web-11`, collected by the GitHub workflow on
+> 28 September 2026 from all thirteen nodes ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)),
+> scored again against v3.2 without contacting any node: 49 PASS, 14 FAIL, 67
+> MANUAL_REVIEW. Under v3.1 the same evidence gave 49 PASS, 8 FAIL and 73
+> MANUAL_REVIEW; the six new FAILs are 5b and 5c for CERN, Data Terra and PaNOSC.
+> `web-11` was the first run with CERN's new landing page, `https://eosc.cern/`,
+> and followed `web-10` of the same day, the first with EOSC Node Poland, which
+> replaced a node listed by mistake. It has **not** been reviewed by hand; the
+> review of the run of 24 September stays in `results/REVIEW-2026-09-24.md` as
+> history. Passages below that describe "the published run of 24 September" are
+> about that earlier, reviewed run, whose files are in the git history at commit
+> `800d632`.
 
 **What this tool will not do:** it does not produce a compliance statement. Of
 the ten checklist points, three can be settled by inspection, four only partly,
@@ -125,13 +139,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-426 tests still pass, while `collect` fails with Playwright's
+438 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 426 passed
+uv run pytest -q                  # expect: 438 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -183,7 +197,7 @@ to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
 saying so. `eosc.it` had no address record on 24 September, so that run skipped
 Italy; nothing published depends on the old address. Italy was assessed for the
 first time in run `web-4` on 26 September, from the new address, and again in
-runs `web-5` to `web-11` (the published run).
+runs `web-5` to `web-11` (the published run is `web-11` re-scored under v3.2).
 
 ### Changing a node's URL
 
@@ -240,18 +254,21 @@ the configured page. The address finally reached, after redirects, is kept as
 `final_url` in the evidence file.
 
 To rebuild the published run, assess it under its own label. It was collected
-from the committed `nodes.yaml`, so no other option is needed and there is no
-URL warning:
+from the committed `nodes.yaml` and scored under the default checklist, so no
+other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-11
+uv run basic-check assess --run web-11-v3.2
 ```
+
+To see the same evidence as it was published under v3.1 (run `web-11`, 49 PASS,
+8 FAIL, 73 MANUAL_REVIEW), add `-c checklist/v3.1.yaml --run web-11`.
 
 Run `web-10`, collected before CERN's URL changed, needs its own node list
 (`git show 8126aee:nodes.yaml`) passed with `--nodes`.
 
-Verified on 28 September 2026: this reproduces the committed `results/`
-exactly, apart from the generation time, with 49 PASS, 8 FAIL and 73
+Verified on 29 September 2026: this reproduces the committed `results/`
+exactly, apart from the generation time, with 49 PASS, 14 FAIL and 67
 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
@@ -267,7 +284,7 @@ typical of a staging host and says nothing about compliance. Ask the node for
 the public address, or for the development host to allow the checker, before
 the next published run.
 
-### `checklist/v3.1.yaml` — the rules
+### `checklist/v3.2.yaml` — the rules
 
 One entry per checklist point. The `requirement` text is quoted verbatim from
 the source document so a reader can audit the rule without a diff, and
@@ -279,7 +296,10 @@ the source document so a reader can audit the rule without a diff, and
 
 The file also pins its own provenance: `source_file` names the committed PDF the
 transcription was made from and `source_sha256` is that file's hash, asserted by
-`tests/test_checklist.py`. Be clear about what this proves — it pins the exact
+`tests/test_checklist.py`. v3.2 also carries `item5_on_nlp: true`, the one
+value the rules take from the file: it selects the stricter item 5 rule
+(policies linked from the NLP, and in the Catalogue). `v3.0.yaml` and
+`v3.1.yaml` do not carry it, so they apply the older rule. Be clear about what this proves — it pins the exact
 bytes the transcription came from, which catches silent drift when a checklist
 is revised. It is not a signature, and the committed PDF is a rendering of the
 circulated `.docx`, not that `.docx` itself.
@@ -289,14 +309,14 @@ holds a URL for it. The document is committed in `checklist/`, and one line in
 `src/basic_check/cli.py` selects the revision used by default:
 
 ```python
-DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"
 ```
 
 `--checklist` / `-c` overrides it for a single run. The help texts, the report
-file name (`checklist-v3.1.html`) and the tests all follow that line.
+file name (`checklist-v3.2.html`) and the tests all follow that line.
 
-**If the checklist is revised to v3.2,** add a new `checklist/v3.2.yaml` with its
-own source file and hash rather than editing v3.1 in place, then change that
+**If the checklist is revised to v3.3,** add a new `checklist/v3.3.yaml` with its
+own source file and hash rather than editing v3.2 in place, then change that
 line. Past runs should remain reproducible against the rules that produced
 them. The full procedure is
 [example 3](#example-3--moving-to-a-new-revision-of-the-checklist) in
@@ -939,7 +959,7 @@ report itself.
 | `results.md` | The same content as Markdown, for reading on GitHub or pasting into a document. |
 | `results.csv` | One row per node-point, for a spreadsheet or pivot table. |
 | `results.json` | The full structured run, including every piece of evidence. Use this for any further analysis. |
-| `checklist-v3.1.html` | The checklist points in full, with the reasoning behind each verdict. |
+| `checklist-v3.2.html` | The checklist points in full, with the reasoning behind each verdict. |
 | `evidence/<id>.json` | The raw capture for one node: links, images, controls, text, headers. |
 | `evidence/screenshots/<id>.png` | What the page looked like when it was fetched — the **visible viewport only**, so footers and anything else below the fold are not in the image. Do not read a missing element here as absent from the page; check `links` and `full_text` in the evidence JSON. |
 
@@ -1027,7 +1047,7 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-11` (28 September 2026) was collected
+**The published run is masked.** Run `web-11` (28 September 2026), published re-scored under v3.2 as `web-11-v3.2`, was collected
 with masking in place, and a search of all its evidence and reports found no
 personal address or phone number. Two personal names that the masking does not cover were then removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, where it had also been in earlier published runs). The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
@@ -1063,7 +1083,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 426 tests, offline, a few seconds
+uv run pytest -q                    # 438 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -1072,14 +1092,14 @@ uv run ruff check src tests         # lint
 
 | File | Tests | Covers |
 |---|---|---|
-| `test_checklist.py` | 15 | The transcription matches the source document, including its SHA-256 for every committed revision, the scoped name list agrees with the official one, and switching `DEFAULT_CHECKLIST` carries the help texts with it. |
-| `test_checks.py` | 75 | The verdict logic, point by point, including the render gate, the EOSC-asset token rule, that a point 3 summary never denies having a name list it was given, and that a link merely labelled "support" does not settle point 6. |
+| `test_checklist.py` | 19 | The transcription matches the source document, including its SHA-256 for every committed revision, the scoped name list agrees with the official one, switching `DEFAULT_CHECKLIST` carries the help texts with it, and each revision selects its own item 5 rule. |
+| `test_checks.py` | 83 | The verdict logic, point by point, including both item 5 rules (v3.2: no AUP/UAP link on the NLP fails, one document for both and a licence are review), including the render gate, the EOSC-asset token rule, that a point 3 summary never denies having a name list it was given, and that a link merely labelled "support" does not settle point 6. |
 | `test_cli.py` | 113 | Command wiring, options, ad hoc `--url` isolation, that `--only` does not shrink the published report, that `--skip` leaves nodes out and says so, that `--help` stays complete, and that evidence from another URL than the configured one is flagged. |
 | `test_crawl.py` | 35 | Link selection, including policy words found only in a hyphenated address, host containment, depth-2 budget, the depth-1 view. |
 | `test_names.py` | 64 | Parsing, scoping, word boundaries, separator flexibility and its strict counterpart, and the recorded digest. |
 | `test_nodes.py` | 14 | `nodes.yaml` itself, and that the default copy shipped for `--restore-default-config` is the committed file: every node declares every field, ids are unique and usable as filenames, URLs are absolute `https`, no two nodes share an `eosc_page`, no `eosc_page` is the federation index, and every node has a scoped approved name. |
 | `test_privacy.py` | 51 | Personal-data masking: personal addresses and phone numbers masked, role mailboxes kept, the name beside an address masked but not a title or an acronym, that both the evidence files and every report format are written masked, and that the committed evidence stays masked. |
-| `test_report.py` | 36 | Matrix rendering, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
+| `test_report.py` | 37 | Matrix rendering, the column legend that follows the item 5 rule, the dual-depth tables, the mixed-freshness banner, the name-list provenance, and input that would break a table or a list — a `|` or a newline in a node name, an evidence line, a followed-link reason or a point title. |
 | `test_update_row.py` | 22 | `--update-results-for-node`, on a copy of the committed `results/`: only the named row changes, the reports gain one **Updated rows** line, `run` collects exactly one node, a failed fetch changes nothing unless `--accept-error`, a skipped node is inserted in `nodes.yaml` order, and every refusal. |
 
 The suite makes no network requests and needs no browser, which is why CI runs
@@ -1191,7 +1211,7 @@ number.
 
 - **Add a node:** three files together — `nodes.yaml`, `checklist/approved-names.txt` and `checklist/approved-names-scoped.txt` — then `pytest`, then `collect --only <id>`. Full procedure and failure modes in [Adding a node](#adding-a-node) in section 3; the commands through to publication in example 1, section 11.
 - **Change a node's URL:** the `url` line in `nodes.yaml` only. Example 2, section 11.
-- **Add a checklist version:** new YAML beside `v3.1.yaml`, with `source_file` and `source_sha256`; do not edit an existing version in place. Then change `DEFAULT_CHECKLIST` in `src/basic_check/cli.py`. Example 3, section 11.
+- **Add a checklist version:** new YAML beside `v3.2.yaml`, with `source_file` and `source_sha256`; do not edit an existing version in place. Then change `DEFAULT_CHECKLIST` in `src/basic_check/cli.py`. Example 3, section 11.
 - **Add a check:** implement in `src/basic_check/checks.py`, write the failing test first, and prefer returning `MANUAL_REVIEW` with good evidence over a confident guess. Document its branches in [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md) — a check whose decision procedure is not written down cannot be reviewed.
 - **Change the report:** `src/basic_check/report.py` renders HTML, Markdown and CSV from one run dict. `tests/test_report.py` covers the matrix; add to it, because a rendering bug is silent.
 
@@ -1369,13 +1389,13 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-11`). Update it to the new run's shape.
+  run `web-11-v3.2`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 49 PASS · 8 FAIL · 73 review");
+- the headline tally in `README.md` ("130 cells: 49 PASS · 14 FAIL · 67 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 
@@ -1485,51 +1505,52 @@ it:
 
 | Where | What it says |
 |---|---|
-| `src/basic_check/cli.py`, the line `DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.1.yaml"` | Which checklist revision is used when `--checklist` is not given. **This is the one line to change** to make a new revision the default. The help texts, the tests and the reports all follow it. |
+| `src/basic_check/cli.py`, the line `DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"` | Which checklist revision is used when `--checklist` is not given. **This is the one line to change** to make a new revision the default. The help texts, the tests and the reports all follow it. |
 | `checklist/vX.Y.yaml`: `checklist_version`, `checklist_date`, `source_document`, `source_file`, `source_sha256` | Which document that revision was transcribed from, and its SHA-256 hash. |
 | `--checklist` / `-c <file>` on `assess`, `run` and `points` | A different revision for a single run, without changing the default. |
 
 When the originating document changes, you therefore add a new file for the new
-revision and point the default at it. `v3.1.yaml` is never edited: the
+revision and point the default at it. `v3.2.yaml` is never edited: the
 published reports name the file they were produced from.
 
-The example assumes a v3.2 dated 15 October 2026. Use the real version, date
-and filenames. This procedure was last applied on 26 September 2026, to move
-from v3.0 to v3.1; the header of `checklist/v3.1.yaml` records what changed,
+The example assumes a v3.3 dated 15 October 2026. Use the real version, date
+and filenames. This procedure was last applied on 29 September 2026, to move
+from v3.1 to v3.2 (and before that on 26 September, from v3.0 to v3.1);
+the header of `checklist/v3.2.yaml` records what changed,
 point by point.
 
 **Step 1: commit the new document next to the old one.**
 
 ```bash
-cp ~/Downloads/20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf checklist/
-sha256sum checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf
-# on macOS: shasum -a 256 checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf
+cp ~/Downloads/20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf checklist/
+sha256sum checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf
+# on macOS: shasum -a 256 checklist/20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf
 ```
 
-The committed v3.1 file is a PDF rendering of the circulated `.docx`. Commit
+The committed v3.2 file is a PDF rendering of the circulated `.docx`. Commit
 the `.docx` itself if you prefer: `source_file` may name either.
 
 **Step 2: create the new revision's file from the old one.**
 
 ```bash
-cp checklist/v3.1.yaml checklist/v3.2.yaml
+cp checklist/v3.2.yaml checklist/v3.3.yaml
 ```
 
-In `checklist/v3.2.yaml`, change the header:
+In `checklist/v3.3.yaml`, change the header:
 
 ```yaml
-checklist_version: "3.2"
+checklist_version: "3.3"
 checklist_date: "2026-10-15"
-source_document: 20261015_Node_Landing_Page_Verification_Checklist_v3.2.docx
-source_file: 20261015_Node_Landing_Page_Verification_Checklist_v3.2.pdf
+source_document: 20261015_Node_Landing_Page_Verification_Checklist_v3.3.docx
+source_file: 20261015_Node_Landing_Page_Verification_Checklist_v3.3.pdf
 source_sha256: <the hash printed in step 1>
 ```
 
-The version must match the filename (`v3.2.yaml` declares `"3.2"`); a test
+The version must match the filename (`v3.3.yaml` declares `"3.3"`); a test
 enforces this.
 
 **Step 3: compare every point with the new document.** No tool can do this step
-for you. For each point in `v3.2.yaml`:
+for you. For each point in `v3.3.yaml`:
 
 - If the wording changed, update `title` and `requirement`, which are quoted
   word for word. Then read the `check_*` function named in `implemented_by`, in
@@ -1540,17 +1561,26 @@ for you. For each point in `v3.2.yaml`:
   call it from `run_all()` in checklist order, name it in the point's
   `implemented_by`, and add tests for it to `tests/test_checks.py`.
 - If a point was **removed**, delete its entry, its function and its tests.
+- If a rule became **stricter or looser**, older runs must keep the rule they
+  were made under. Do not simply change the function: give it a switch, pass
+  the switch from `run_all()`, and declare it in the new YAML only, so the older
+  files select the old rule by its absence. v3.2 did this for item 5:
+  `item5_on_nlp: true` in `v3.2.yaml`, read by `_item5_on_nlp` in `cli.py`,
+  selects the rule that the AUP and UAP must be linked from the NLP, and
+  `v3.0.yaml`/`v3.1.yaml`, which lack the key, keep "on the NLP or in the
+  Catalogue". Add tests for both rules, and rebuild the published run with the
+  old file to prove it is unchanged.
 
 **Step 4: try the new revision offline, before switching.** `-c` applies it to
 one run only. Re-scoring saved evidence contacts no one:
 
 ```bash
-uv run basic-check points -c checklist/v3.2.yaml
-mkdir -p /tmp/v32 && cp -r results/evidence /tmp/v32/
-uv run basic-check assess -c checklist/v3.2.yaml --results /tmp/v32 --run trial-v3.2
+uv run basic-check points -c checklist/v3.3.yaml
+mkdir -p /tmp/v33 && cp -r results/evidence /tmp/v33/
+uv run basic-check assess -c checklist/v3.3.yaml --results /tmp/v33 --run trial-v3.3
 ```
 
-Compare `/tmp/v32/results.md` with `results/results.md`. Any difference comes
+Compare `/tmp/v33/results.md` with `results/results.md`. Any difference comes
 from the new rules alone, since the evidence is the same. If the published run
 skipped a node or used an older `nodes.yaml`, pass the same `--skip` and
 `--nodes` here.
@@ -1558,60 +1588,60 @@ skipped a node or used an older `nodes.yaml`, pass the same `--skip` and
 **Step 5: make it the default, and run the tests.** In `src/basic_check/cli.py`:
 
 ```python
-DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.2.yaml"
+DEFAULT_CHECKLIST = ROOT / "checklist" / "v3.3.yaml"
 ```
 
 ```bash
 uv run pytest -q
-uv run basic-check --help     # now says "against checklist v3.2"
+uv run basic-check --help     # now says "against checklist v3.3"
 ```
 
 The tests check the new file's hash, that its version matches its filename,
 and that every point maps to exactly one `check_*` function and every function
-to one point. They also check that `v3.1.yaml` and its document are still
-intact, so older runs can still be rebuilt with `-c checklist/v3.1.yaml`. What
+to one point. They also check that `v3.2.yaml` and its document are still
+intact, so older runs can still be rebuilt with `-c checklist/v3.2.yaml`. What
 they cannot check is whether a rule is right: that is step 3.
 
 **Step 6: produce and publish the results.** The default revision is now
-v3.2, so no `-c` is needed. Choose between the same two paths as in example 1:
+v3.3, so no `-c` is needed. Choose between the same two paths as in example 1:
 
 ```bash
 # fresh evidence from every node:
-uv run basic-check run --results /tmp/new-run --run live-2026-10-20-v3.2
+uv run basic-check run --results /tmp/new-run --run live-2026-10-20-v3.3
 # review, then:
 rm -rf results/evidence && cp -r /tmp/new-run/evidence results/evidence
-uv run basic-check assess --run live-2026-10-20-v3.2
+uv run basic-check assess --run live-2026-10-20-v3.3
 ```
 
-Alternatively, re-score the published evidence against v3.2 without contacting
-anyone, as in step 4 but writing to `results/`. The report then says v3.2,
+Alternatively, re-score the published evidence against v3.3 without contacting
+anyone, as in step 4 but writing to `results/`. The report then says v3.3,
 while the capture date is still that of the evidence.
 
-The reports now link to `results/checklist-v3.2.html`. The old
-`results/checklist-v3.1.html` stays behind; remove it, and update the places
-that name v3.1 in prose or links:
+The reports now link to `results/checklist-v3.3.html`. The old
+`results/checklist-v3.2.html` stays behind; remove it, and update the places
+that name v3.2 in prose or links:
 
 ```bash
-git rm results/checklist-v3.1.html
-rg -n "v3\.1" README.md docs checklist/README.md .github
+git rm results/checklist-v3.2.html
+rg -n "v3\.2" README.md docs checklist/README.md .github
 ```
 
 In `README.md`, the table of checklist points links each point to
-`results/checklist-v3.1.html#p…`. Those links break once the file is removed,
-so change them to `v3.2`.
+`results/checklist-v3.2.html#p…`. Those links break once the file is removed,
+so change them to `v3.3`.
 
 **Step 7: tests, review, commit.** As in example 1, steps 5 and 6. If any
 `check_*` function changed in step 3, also update its decision procedure in
 section 5 of [`ANALYSIS-WORKFLOW.md`](ANALYSIS-WORKFLOW.md), which describes
 each point's rule branch by branch. Commit the new document,
-`checklist/v3.2.yaml`, `cli.py`, any changed checks and tests, `results/` and
+`checklist/v3.3.yaml`, `cli.py`, any changed checks and tests, `results/` and
 the documents together, so the commit shows the whole change.
 
 ---
 
 ## Sources
 
-- Checklist: `checklist/20260910_Node_Landing_Page_Verification_Checklist_v3.1.pdf`, transcribed to `checklist/v3.1.yaml` with its SHA-256 pinned
+- Checklist: `checklist/20260928_Node_Landing_Page_Verification_Checklist_v3.2.pdf`, transcribed to `checklist/v3.2.yaml` with its SHA-256 pinned (earlier revisions: `checklist/v3.1.yaml` and `checklist/v3.0.yaml`, with their documents)
 - EOSC Federation node index: https://eosc.eu/building-the-eosc-federation/
 - Repository: https://github.com/marioreale/eosc-basic-compliance
 - `uv` documentation: https://docs.astral.sh/uv/

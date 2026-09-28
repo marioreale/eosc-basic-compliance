@@ -137,6 +137,18 @@ UAP_PATTERNS = [
     r"(?i)\baccess\s+conditions\b",
 ]
 
+# Checklist v3.2, item 5: "AUP/UAP can be provided via specific product
+# licenses in the case of datasets, archives, software". A licence link is not
+# accepted as a policy on its own -- a site-content licence in a footer would
+# pass every page -- but under v3.2 it turns a missing policy from FAIL into
+# review. Not a crawl purpose: reading a licence settles nothing automatically.
+LICENCE_PATTERNS = [
+    r"(?i)\blicen[cs]e[sd]?\b",
+    r"(?i)\blicen[cs]ing\b",
+    r"(?i)\bcreative\s+commons\b",
+    r"(?i)\bCC[\s-]?BY\b",
+]
+
 ABOUT_PATTERNS = [
     r"(?i)\babout\b",
     r"(?i)\bwho\s+we\s+are\b",

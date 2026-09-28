@@ -227,3 +227,28 @@ def test_every_committed_revision_keeps_its_source_document_and_hash(path):
     assert hashlib.sha256(source.read_bytes()).hexdigest() == data["source_sha256"], (
         f"{path.name}: {source.name} no longer has the bytes it was transcribed from"
     )
+
+
+# --- the item 5 rule follows the checklist file, not the code -----------------
+
+
+def test_the_item5_rule_is_declared_by_each_revision():
+    """v3.2 made item 5 stricter: the information must be on the NLP *and* in the
+    Catalogue. The rule is selected by the checklist file, so v3.0 and v3.1 --
+    which do not declare the key -- are rebuilt with the rule they were run under."""
+    from basic_check.cli import _item5_on_nlp
+
+    def load(name):
+        return yaml.safe_load((CHECKLIST_DIR / name).read_text())
+
+    assert _item5_on_nlp(load("v3.2.yaml")) is True
+    for old in ("v3.0.yaml", "v3.1.yaml"):
+        assert "item5_on_nlp" not in load(old), f"{old} must not be edited to add the key"
+        assert _item5_on_nlp(load(old)) is False
+
+
+def test_the_default_revision_applies_the_strict_item5_rule(checklist):
+    """Whatever revision is the default must be v3.2 or later, with the strict rule."""
+    major, minor = (int(x) for x in checklist["checklist_version"].split("."))
+    assert (major, minor) >= (3, 2)
+    assert checklist.get("item5_on_nlp") is True

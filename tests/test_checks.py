@@ -206,11 +206,90 @@ def test_aup_and_uap_are_not_conflated():
     assert checks.check_5b(only_uap).verdict == checks.MANUAL_REVIEW
 
 
-def test_missing_policy_is_manual_review_not_fail():
-    """The checklist allows the policy to live in the resource's Catalogue entry."""
-    r = checks.check_5b(ev(links=[Link("https://node.example/about", "About")]))
-    assert r.verdict == checks.MANUAL_REVIEW
-    assert "Catalogue" in r.message
+def test_under_v3_1_a_missing_policy_is_manual_review_not_fail():
+    """v3.0 and v3.1 allowed the policy to live in the resource's Catalogue entry
+    only, so absence on the page could not fail. Kept so older runs rebuild."""
+    page = realistic([Link("https://node.example/about", "About")])
+    for check in (checks.check_5b, checks.check_5c):
+        r = check(page, on_nlp=False)
+        assert r.verdict == checks.MANUAL_REVIEW
+        assert "Catalogue" in r.message
+
+
+# --- point 5, checklist v3.2: on the NLP *and* in the Catalogue ----------------
+
+
+def test_under_v3_2_a_missing_policy_fails():
+    """v3.2: "both directly on the NLP [...] and via the link to the resource's
+    entry in the EOSC Catalogue". The Catalogue alone no longer satisfies it."""
+    page = realistic([Link("https://node.example/about", "About")])
+    for check in (checks.check_5b, checks.check_5c):
+        r = check(page)
+        assert r.verdict == checks.FAIL, r
+        assert "v3.2" in r.message and "Catalogue" in r.message
+
+
+def test_v3_2_is_the_default_rule():
+    page = realistic([Link("https://node.example/about", "About")])
+    assert checks.check_5b(page).verdict == checks.check_5b(page, on_nlp=True).verdict == checks.FAIL
+    results = {r.point_id: r.verdict for r in checks.run_all(page)}
+    assert results["5b"] == results["5c"] == checks.FAIL
+    old = {r.point_id: r.verdict for r in checks.run_all(page, item5_on_nlp=False)}
+    assert old["5b"] == old["5c"] == checks.MANUAL_REVIEW
+
+
+def test_under_v3_2_a_policy_named_without_a_link_still_fails():
+    """Naming the AUP in prose does not make it accessible from the NLP."""
+    body = "Access is granted under the node AUP and its UAP. " * 30
+    page = realistic([Link("https://node.example/about", "About")], full_text=body, main_text=body)
+    for check in (checks.check_5b, checks.check_5c):
+        r = check(page)
+        assert r.verdict == checks.FAIL
+        assert any("without a link" in e for e in r.evidence)
+    assert checks.check_5b(page, on_nlp=False).verdict == checks.MANUAL_REVIEW
+
+
+def test_under_v3_2_one_document_may_serve_as_both_policies():
+    """v3.2: "AUP and UAP can be provided through the same, single document".
+    A link to the other policy is a review, not a FAIL -- and not a PASS."""
+    aup_only = realistic([Link("https://node.example/aup", "Acceptable Use Policy")])
+    assert checks.check_5b(aup_only).verdict == checks.PASS
+    r = checks.check_5c(aup_only)
+    assert r.verdict == checks.MANUAL_REVIEW and "single" in r.message
+    uap_only = realistic([Link("https://node.example/access", "User Access Policy")])
+    assert checks.check_5c(uap_only).verdict == checks.PASS
+    assert checks.check_5b(uap_only).verdict == checks.MANUAL_REVIEW
+
+
+def test_under_v3_2_a_licence_link_is_review_not_fail():
+    """v3.2: AUP/UAP can be provided via product licences for non-service
+    resources. A licence is not a policy, so it earns review, never PASS."""
+    page = realistic([Link("https://node.example/data-licence", "Data licence (CC BY 4.0)")])
+    for check in (checks.check_5b, checks.check_5c):
+        r = check(page)
+        assert r.verdict == checks.MANUAL_REVIEW and "licence" in r.message
+
+
+def test_under_v3_2_a_thin_page_is_review_not_fail():
+    """As for point 4: when the DOM did not arrive, absence is not concluded."""
+    thin = ev(links=[Link("https://node.example/about", "About")])
+    for check in (checks.check_5b, checks.check_5c):
+        assert check(thin).verdict == checks.MANUAL_REVIEW
+
+
+def test_under_v3_2_a_pass_says_the_catalogue_half_is_unchecked():
+    page = realistic([Link("https://node.example/aup", "Acceptable Use Policy")])
+    r = checks.check_5b(page)
+    assert r.verdict == checks.PASS
+    assert "Catalogue" in r.reviewer_action
+    assert "Catalogue" not in checks.check_5b(page, on_nlp=False).reviewer_action
+
+
+def test_point_5a_stays_review_under_both_rules_but_names_the_rule():
+    page = realistic([])
+    new, old = checks.check_5a(page), checks.check_5a(page, on_nlp=False)
+    assert new.verdict == old.verdict == checks.MANUAL_REVIEW
+    assert "v3.2" in new.message and "v3.2" not in old.message
 
 
 # --- point 6 -----------------------------------------------------------------

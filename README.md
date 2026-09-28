@@ -1,7 +1,7 @@
 # eosc-basic-compliance
 
 Checks EOSC Node Landing Pages against the **Node Landing Page Verification
-Checklist v3.1** (24 September 2026). One result per checklist point, per node.
+Checklist v3.2** (28 September 2026). One result per checklist point, per node.
 
 **Deliberately light on the nodes' websites.** Each landing page is loaded once in
 a headless browser. The tool then follows **at most one level** of links, and only
@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 426
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 438
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -32,26 +32,34 @@ The Word and PDF copies are built from the Markdown guides committed with them.
 The Markdown is the source, so if the two differ, the Markdown is current.
 
 👉 **[Latest results](results/results.md)** · [browsable HTML report](results/index.html)
-· [checklist v3.1 explained](results/checklist-v3.1.html)
+· [checklist v3.2 explained](results/checklist-v3.2.html)
 (download and open locally, or use the GitHub Pages link if enabled)
 
 ## What it found
 
-> **The published report is run `web-11`, and it has not been reviewed yet.** It
-> was collected on 28 September 2026 at 13:48 UTC by the GitHub workflow
-> ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625))
-> against **checklist v3.1** (24 September 2026). It is the first run with
-> CERN's new Node Landing Page, `https://eosc.cern/`, and the second with
-> **EOSC Node Poland** (`https://eosc.pl/`), which replaced a node listed by
-> mistake on 28 September 2026. It follows `web-10`
-> ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417)) of the same day and the
-> runs of 26 September (`web-4` to `web-9`). The hand review of the reviewed
+> **The published report is run `web-11-v3.2`, and it has not been reviewed
+> yet.** It is the evidence of run `web-11`, collected on 28 September 2026 at
+> 13:48 UTC by the GitHub workflow
+> ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)), scored again
+> offline against **checklist v3.2** (28 September 2026), which replaced v3.1 on
+> 29 September 2026. No node was contacted for the re-scoring. `web-11` was the
+> first run with CERN's new Node Landing Page, `https://eosc.cern/`, and the
+> second with **EOSC Node Poland** (`https://eosc.pl/`), which replaced a node
+> listed by mistake on 28 September 2026. It followed `web-10`
+> ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417)) of the same day and
+> the runs of 26 September (`web-4` to `web-9`). The hand review of the reviewed
 > run of 24 September is kept as history in
 > [results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md). Its findings
 > still apply wherever a page has not changed, but it does not cover this run.
 >
-> Apart from CERN's row, all 120 verdicts of `web-11` are the same as those of
-> `web-10`.
+> **What v3.2 changed.** Only item 5. The purpose description, the Acceptable
+> Use Policy and the User Access Policy of every Node Exchange resource must now
+> be available **both** directly on the NLP that presents the resource **and** in
+> the resource's EOSC Catalogue metadata; v3.1 asked for either. So a landing
+> page with no link to an AUP or a UAP, which used to be review (the policy
+> might be in the Catalogue), now **fails** 5b or 5c. Under v3.2, six cells moved
+> from review to `FAIL`: 5b and 5c for CERN, Data Terra and PaNOSC. Every other
+> verdict is the same as `web-11` under v3.1 (49 PASS, 8 FAIL, 73 review).
 
 All thirteen configured nodes were fetched on 28 September 2026 at `--depth 1`
 and assessed against the official unscoped names list. None was skipped.
@@ -60,14 +68,23 @@ The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 49 PASS · 🔴 8 FAIL · 🟠 73 review · 0 ERROR.
+130 cells: 🟢 49 PASS · 🔴 14 FAIL · 🟠 67 review · 0 ERROR.
 
+- **Item 5 under v3.2.** CERN, Data Terra and PaNOSC link to no Acceptable Use
+  Policy and no User Access Policy from their landing pages, so 5b and 5c fail
+  for all three. Slovakia links one document that covers both, and passes both.
+  BBMRI-ERIC (UAP only), Czechia, EOSC DTO, EOSC Finland, EUDAT, EGI, Poland and
+  Italy (AUP or Terms of use only) pass one of the two; the other is review,
+  because v3.2 allows the AUP and the UAP to be one document. GÉANT's page could
+  not be read. A PASS covers only the NLP half: no node's Catalogue metadata was
+  read.
 - **CERN** was assessed at its new Node Landing Page, `https://eosc.cern/`, for
-  the first time: 4 PASS, 0 FAIL and 6 review. Points 1 and 4 moved from review
+  the first time: 4 PASS, 2 FAIL and 4 review. Points 1 and 4 moved from review
   to `PASS`: the page is public, with real content, and links to its own
   `eosc.eu` entry. Points 6 (a Contact page with a helpdesk) and 7 pass as
-  before. Point 3 is review: the logo reads "EOSC Node | CERN", but the name is
-  not in the page text. The previous URL was an INDIGO IAM sign-in form.
+  before. 5b and 5c fail under v3.2 (see above). Point 3 is review: the logo
+  reads "EOSC Node | CERN", but the name is not in the page text. The previous
+  URL was an INDIGO IAM sign-in form.
 - **EOSC Node Poland**, first assessed in `web-10`, has 4 PASS, 1 FAIL and 5
   review. The page is public (point 1), in English (point 7), links to its
   Terms of use (5b) and to `support@eosc.pl` (6). Point 4 fails because its only
@@ -94,7 +111,7 @@ the runs of 26 September found:
 
 No other verdict changed.
 
-**The one clear, repeated finding is checklist point 4.** Every node has a
+**The most repeated finding is checklist point 4.** Every node has a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
 read from the live index — but seven of the thirteen landing pages do not link to
 their own:
@@ -116,20 +133,20 @@ rest cannot be.
 
 | Column | The question it answers | Can a tool decide it? |
 |---|---|---|
-| [`1`](results/checklist-v3.1.html#p1) | Is the landing page served to an anonymous visitor, or behind an EOSC AAI login? | yes, by inspection |
-| [`1R`](results/checklist-v3.1.html#p1R) | Are the Node Exchange resources the page links to also public or behind EOSC AAI? | no, human judgement |
-| [`2`](results/checklist-v3.1.html#p2) | Does the page itself say what the node is and what it offers? | no, human judgement |
-| [`3`](results/checklist-v3.1.html#p3) | Does the page use the official Tripartite-approved node name? | partly |
-| [`4`](results/checklist-v3.1.html#p4) | Does the page link to this node's own page on eosc.eu? | yes, by inspection |
-| [`5a`](results/checklist-v3.1.html#p5a) | Does the page point to the policies governing its resources? | no, human judgement |
-| [`5b`](results/checklist-v3.1.html#p5b) | Is there an Acceptable Use Policy, and does it actually load? | partly |
-| [`5c`](results/checklist-v3.1.html#p5c) | Is there a User Access Policy, and does it actually load? | partly |
-| [`6`](results/checklist-v3.1.html#p6) | Can a user find a support or helpdesk route? | partly |
-| [`7`](results/checklist-v3.1.html#p7) | Is the landing page itself in English? | yes, by inspection |
+| [`1`](results/checklist-v3.2.html#p1) | Is the landing page served to an anonymous visitor, or behind an EOSC AAI login? | yes, by inspection |
+| [`1R`](results/checklist-v3.2.html#p1R) | Are the Node Exchange resources the page links to also public or behind EOSC AAI? | no, human judgement |
+| [`2`](results/checklist-v3.2.html#p2) | Does the page itself say what the node is and what it offers? | no, human judgement |
+| [`3`](results/checklist-v3.2.html#p3) | Does the page use the official Tripartite-approved node name? | partly |
+| [`4`](results/checklist-v3.2.html#p4) | Does the page link to this node's own page on eosc.eu? | yes, by inspection |
+| [`5a`](results/checklist-v3.2.html#p5a) | Does each resource have an English purpose description, on the page and in the Catalogue? | no, human judgement |
+| [`5b`](results/checklist-v3.2.html#p5b) | Is an Acceptable Use Policy linked from the page itself, and does it actually load? Since v3.2, no link is a FAIL | partly |
+| [`5c`](results/checklist-v3.2.html#p5c) | Is a User Access Policy linked from the page itself, and does it actually load? Since v3.2, no link is a FAIL | partly |
+| [`6`](results/checklist-v3.2.html#p6) | Can a user find a support or helpdesk route? | partly |
+| [`7`](results/checklist-v3.2.html#p7) | Is the landing page itself in English? | yes, by inspection |
 
 Full requirement text for every point, quoted from the source document, is in
-**[checklist v3.1 explained](results/checklist-v3.1.html)** — generated from the same
-`checklist/v3.1.yaml` the checks read, so the explanation cannot drift from the rules.
+**[checklist v3.2 explained](results/checklist-v3.2.html)** — generated from the same
+`checklist/v3.2.yaml` the checks read, so the explanation cannot drift from the rules.
 
 `1R` is not a numbered point in the source checklist. Point 1 covers two things: the
 landing page must be public or behind EOSC AAI, and so must *"every Node Exchange
@@ -148,11 +165,13 @@ Of the 10 points, **3 are decidable by inspection** (1, 4, 7), **4 only partly**
 `review` is a deliberate verdict, not a gap. Point 2 asks whether the page
 "clearly state[s]" scope, users and responsible organisation — "clearly" is a
 judgement about a reader, and a tool that scored it would be inventing a
-threshold the checklist does not set. Point 5 quantifies over "all research
-resources offered by the Node", which a single page request cannot enumerate, and
-the checklist permits the policies to live in the EOSC Catalogue rather than on
-the page. So the tool extracts the relevant evidence, attaches it, and says who
-must decide.
+threshold the checklist does not set. Point 5 quantifies over "all Node Exchange
+research resources offered by the Node", which a single page request cannot
+enumerate, and since v3.2 it also requires the same information in each
+resource's EOSC Catalogue metadata, which the tool does not read. So the tool
+extracts the relevant evidence, attaches it, and says who must decide. The one
+part of point 5 it does decide is new in v3.2: an AUP or UAP must be linked from
+the landing page itself, so a page with no such link fails 5b or 5c.
 
 The asymmetry drives this: a false PASS is never investigated again, and a false
 FAIL against a named organisation is expensive to retract. Where the tool cannot
@@ -250,7 +269,7 @@ nodes; `assess`, `points` and `show` work offline.
 
 | Option | What it's for |
 |---|---|
-| `--checklist`, `-c <path>` | A rules file to use instead of `checklist/v3.1.yaml`, for example `checklist/v3.0.yaml` to rebuild a run made before 26 September 2026. `points` takes it too. |
+| `--checklist`, `-c <path>` | A rules file to use instead of `checklist/v3.2.yaml`, for example `checklist/v3.1.yaml` to rebuild a run made between 26 and 28 September 2026, or `checklist/v3.0.yaml` for one made before. The item 5 rule follows the file: v3.0 and v3.1 apply the older "on the page or in the Catalogue" rule. `points` takes it too. |
 | `--approved-names <path>` | A list of approved node names for point 3, replacing `checklist/approved-names.txt`. `node-id: Name` ties a name to one node; a bare name counts for every node. |
 | `--no-approved-names` | Use no name list at all; point 3's name requirement is then not assessed. |
 | `--strict-separators` | Match the separators in approved names exactly. By default spaces, `\|`, `-`, `–`, `:`, `/` and `·` count as equivalent. |
@@ -575,15 +594,19 @@ format, how matching works, and what each node shows.
 - **AAI** compliance is verified under requirement [P.2] of the Production 1.0
   Checklist for EOSC Nodes (v1.4), not by reading a page. The
   tool only reports whether a login affordance is visible.
-- **AUP and UAP are kept distinct** (5b, 5c). They are different documents and
-  are not treated as interchangeable.
+- **AUP and UAP are recognised separately** (5b, 5c), but since v3.2 the
+  checklist allows one document to serve as both. A page that links only one of
+  them passes that point and gets *review*, not FAIL, on the other; a document
+  labelled as both (Slovakia's "Terms of Use (incl. AUP and UAP)") passes both.
+  A licence link also earns review rather than FAIL, because v3.2 lets datasets,
+  archives and software provide their AUP/UAP through a product licence.
 - The registered NLP is whatever is in the EOSC EU Node Contributors Dashboard
   (§1.2, field 6). `nodes.yaml` is a local copy and can drift from it.
 
 ## Tests
 
 ```bash
-uv run pytest -q          # 426 tests, a few seconds, no network, no browser
+uv run pytest -q          # 438 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -615,5 +638,5 @@ Two of them exist because probing found real bugs in this code:
 
 ## Source
 
-Checklist: *Node Landing Page Verification Checklist v3.1*, 24 September 2026.
+Checklist: *Node Landing Page Verification Checklist v3.2*, 28 September 2026 (earlier: v3.1 of 24 September and v3.0 of 15 September 2026, both kept in `checklist/`).
 EOSC Federation node index: <https://eosc.eu/building-the-eosc-federation/>

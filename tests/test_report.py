@@ -572,3 +572,17 @@ def test_the_url_mismatch_note_is_empty_without_a_mismatch_and_agrees_in_number(
     assert "https://new.example/" in single and "https://old.example/" in single
     assert "That row shows" in single and "rows" not in single
     assert "Those rows show" in _url_mismatch_note({"url_mismatch": [one, two]})
+
+
+def test_column_glosses_follow_the_item5_rule_of_the_checklist():
+    """v3.2 made item 5 stricter; the matrix legend must say so for v3.2 runs,
+    and must not change for runs rebuilt under v3.0 or v3.1."""
+    from basic_check.report import COLUMN_GLOSS, gloss_for
+
+    assert gloss_for({"checklist_version": "3.1"}) == COLUMN_GLOSS
+    strict = gloss_for({"checklist_version": "3.2", "item5_on_nlp": True})
+    for pid in ("5a", "5b", "5c"):
+        assert strict[pid] != COLUMN_GLOSS[pid] and "Catalogue" in strict[pid]
+    assert {k: v for k, v in strict.items() if k not in ("5a", "5b", "5c")} == {
+        k: v for k, v in COLUMN_GLOSS.items() if k not in ("5a", "5b", "5c")
+    }

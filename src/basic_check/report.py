@@ -35,8 +35,10 @@ VERDICT_MD = {
 
 # One line per checklist point, for readers who will not open the checklist PDF.
 # This is what the matrix columns mean in practice, as opposed to the formal
-# requirement text, which lives in checklist/v3.0.yaml and the generated
-# checklist HTML page.
+# requirement text, which lives in checklist/v3.*.yaml and the generated
+# checklist HTML page. `gloss_for` swaps in ITEM5_ON_NLP_GLOSS for checklists
+# that declare the stricter item 5 rule of v3.2, so a run rebuilt under v3.0 or
+# v3.1 still reads as it did.
 COLUMN_GLOSS = {
     "1": "Is the landing page itself reachable without logging in (or via EOSC AAI)?",
     "1R": "Are the resources the landing page points to also public or behind EOSC AAI?",
@@ -49,6 +51,19 @@ COLUMN_GLOSS = {
     "6": "Is there a way to contact the node's helpdesk?",
     "7": "Is the landing page in English?",
 }
+
+ITEM5_ON_NLP_GLOSS = {
+    "5a": "Is there an English purpose description for each research resource, on the page and in the EOSC Catalogue?",
+    "5b": "Is an Acceptable Use Policy (AUP) linked from the landing page itself (and in the Catalogue)?",
+    "5c": "Is a User Access Policy (UAP) linked from the landing page itself (and in the Catalogue)?",
+}
+
+
+def gloss_for(checklist: dict | None) -> dict:
+    """The column glosses that match the checklist's item 5 rule."""
+    if (checklist or {}).get("item5_on_nlp"):
+        return {**COLUMN_GLOSS, **ITEM5_ON_NLP_GLOSS}
+    return COLUMN_GLOSS
 
 CSS = """
 :root{--bg:#fff;--fg:#1a1d21;--muted:#5b6470;--line:#e3e7ec;
@@ -305,6 +320,7 @@ def _names_sentence(run: dict) -> str:
 
 
 def render_html(run: dict, out: Path) -> Path:
+    column_gloss = gloss_for(run.get("checklist"))
     points = run["checklist"]["points"]
     titles = _point_titles(points)
     order = [p["id"] for p in points]
@@ -319,7 +335,7 @@ def render_html(run: dict, out: Path) -> Path:
     checklist_href = f"checklist-v{version}.html"
     head = "".join(
         f'<th class="pt" title="{html.escape(pid)} — {html.escape(titles.get(pid, ""))}: '
-        f'{html.escape(COLUMN_GLOSS.get(pid, ""))}">'
+        f'{html.escape(column_gloss.get(pid, ""))}">'
         f'<a href="{checklist_href}#p{html.escape(pid)}">{html.escape(pid)}</a></th>'
         for pid in order
     )
@@ -518,7 +534,7 @@ def render_html(run: dict, out: Path) -> Path:
     cols_rows = "".join(
         f'<tr><td class="k"><a href="{checklist_href}#p{html.escape(p["id"])}">'
         f'{html.escape(p["id"])}</a></td>'
-        f'<td>{html.escape(COLUMN_GLOSS.get(p["id"], p["title"]))}</td>'
+        f'<td>{html.escape(column_gloss.get(p["id"], p["title"]))}</td>'
         f'<td class="d"><span class="v {dec_label.get(p.get("decidable"), ("manual", "?"))[0]}">'
         f'{dec_label.get(p.get("decidable"), ("manual", "?"))[1]}</span></td></tr>'
         for p in points
@@ -711,6 +727,7 @@ def render_checklist_html(checklist: dict, out: Path) -> Path:
     checklist sitting next to code that implements it differently is worse than
     none, because it is trusted.
     """
+    column_gloss = gloss_for(checklist)
     version = checklist.get("checklist_version", "?")
     points = checklist["points"]
     dec_meta = {
@@ -726,7 +743,7 @@ def render_checklist_html(checklist: dict, out: Path) -> Path:
     blocks = []
     for p in points:
         cls, label = dec_meta.get(p.get("decidable"), ("part", "Unknown"))
-        gloss = COLUMN_GLOSS.get(p["id"], "")
+        gloss = column_gloss.get(p["id"], "")
         why = " ".join(p.get("decidable_note", "").split())
         blocks.append(
             f'<div class="point" id="p{html.escape(p["id"])}">'
@@ -878,6 +895,7 @@ def _depth_2_pages(run: dict) -> list[tuple[str, dict]]:
 
 
 def render_markdown(run: dict, out: Path) -> Path:
+    column_gloss = gloss_for(run.get("checklist"))
     points = run["checklist"]["points"]
     order = [p["id"] for p in points]
     short = VERDICT_MD
@@ -1033,7 +1051,7 @@ def render_markdown(run: dict, out: Path) -> Path:
     ]
     dec_label = {True: "yes, by inspection", "partial": "partly", False: "no, human judgement"}
     for p in points:
-        gloss = COLUMN_GLOSS.get(p["id"], p["title"])
+        gloss = column_gloss.get(p["id"], p["title"])
         lines.append(
             f"| **{_md_cell(p['id'])}** | {_md_cell(gloss)} | "
             f"{dec_label.get(p.get('decidable'), '?')} |"

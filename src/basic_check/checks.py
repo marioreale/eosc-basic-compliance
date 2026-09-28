@@ -30,6 +30,7 @@ from .patterns import (
     CONTACT_PATTERNS,
     HELPDESK_ON_PAGE,
     HELPDESK_STRONG,
+    LICENCE_PATTERNS,
     LOGIN_PATTERNS,
     UAP_PATTERNS,
     is_helpdesk_address,
@@ -706,9 +707,34 @@ def check_4(ev: PageEvidence, expected_page: str = "") -> Result:
 # --- point 5 -----------------------------------------------------------------
 
 
-def check_5a(ev: PageEvidence) -> Result:
+def check_5a(ev: PageEvidence, on_nlp: bool = True) -> Result:
+    """Purpose descriptions. `on_nlp` selects the item 5 wording in force.
+
+    Checklist v3.2 (28 September 2026) requires the information of item 5 "both
+    directly on the NLP presenting the resource to the users and via the link to
+    the resource's entry in the EOSC Catalogue"; v3.0 and v3.1 asked for either.
+    For 5a the verdict does not change -- judging whether a description states a
+    purpose is reading, and the resources cannot be enumerated from the page --
+    but the message and the reviewer's work list do.
+    """
     if ev.error:
         return Result("5a", "Purpose description for research resources", ERROR, f"Page not fetched: {ev.error}")
+    if on_nlp:
+        return Result(
+            "5a",
+            "Purpose description for research resources",
+            MANUAL_REVIEW,
+            'Quantifies over "all Node Exchange research resources offered by the Node", which cannot be '
+            "enumerated from the landing page alone. Since checklist v3.2 each resource's purpose "
+            "description must be on the NLP that presents it and in the resource's metadata in the EOSC "
+            "Catalogue; the tool reads neither the resource list nor the Catalogue.",
+            [
+                f"{len(ev.links)} outbound link(s) on the landing page",
+                f"main text length: {len(ev.main_text)} characters",
+            ],
+            reviewer_action="List the node's Node Exchange resources, then confirm each has an English purpose "
+            "description on the NLP and in its EOSC Catalogue metadata.",
+        )
     return Result(
         "5a",
         "Purpose description for research resources",
@@ -783,7 +809,36 @@ def _why_not_fetched(ev: PageEvidence, links: list, what: str) -> tuple[str, str
             confirm + " Collecting the evidence again would fetch it.")
 
 
-def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str], what: str) -> Result:
+def _policy_check(
+    ev: PageEvidence,
+    point: str,
+    title: str,
+    patterns: list[str],
+    what: str,
+    on_nlp: bool = True,
+    other_patterns: list[str] | None = None,
+    other_what: str = "",
+) -> Result:
+    """Points 5b and 5c.
+
+    `on_nlp` is True under checklist v3.2, whose item 5 requires the AUP and the
+    UAP "both directly on the NLP presenting the resource to the users and via the
+    link to the resource's entry in the EOSC Catalogue". Under v3.0 and v3.1 the
+    requirement was "either directly or via" the Catalogue, so a landing page
+    without a pointer could not fail: the policy might be in the Catalogue. Under
+    v3.2 that absence is a FAIL, with three exceptions that keep a human in the
+    loop, each taken from the checklist's own notes or from the collection:
+
+    * the page links to the *other* policy: "AUP and UAP can be provided through
+      the same, single document";
+    * the page links to a licence: "AUP/UAP can be provided via specific product
+      licenses in the case of datasets, archives, software";
+    * the page text names the policy without a link (it may be on the page), or
+      the DOM did not arrive (`link_collection_warning`), as for point 4.
+
+    A pointer found on the NLP settles only the NLP half. The Catalogue half is
+    not read by this tool, and the reviewer action says so.
+    """
     if ev.error:
         return Result(point, title, ERROR, f"Page not fetched: {ev.error}")
 
@@ -806,7 +861,7 @@ def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str],
                 f"The landing page links to what appears to be {what}. "
                 f"The link target was not fetched ({why}), so this is a pointer, not a verified document.",
                 [_fmt(link) for link in links[:4]],
-                reviewer_action=action,
+                reviewer_action=action + (_CATALOGUE_HALF if on_nlp else ""),
             )
 
         if child.http_status in DEAD_STATUSES:
@@ -858,10 +913,11 @@ def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str],
             + [f"followed: {child.url} -> HTTP {child.http_status}, "
                f"{len(child.main_text)} chars, title: {child.title or '(none)'}",
                f"policy wording found: {', '.join(sorted(set(body))[:4])}"],
-            reviewer_action="Confirm it covers all the node's resources and is in English.",
+            reviewer_action="Confirm it covers all the node's resources and is in English."
+            + (_CATALOGUE_HALF if on_nlp else ""),
         )
 
-    if text_hits:
+    if text_hits and not on_nlp:
         return Result(
             point,
             title,
@@ -871,27 +927,94 @@ def _policy_check(ev: PageEvidence, point: str, title: str, patterns: list[str],
             reviewer_action=f"Find where {what} is actually published and confirm it is reachable.",
         )
 
+    if not on_nlp:
+        return Result(
+            point,
+            title,
+            MANUAL_REVIEW,
+            f"No pointer to {what} was found on the landing page. This is deliberately not a FAIL: "
+            "the checklist permits the policy to be reached via each resource's entry in the EOSC "
+            "Catalogue, which this tool does not follow.",
+            [f"{len(ev.links)} link(s) examined, none matching {what}"],
+            reviewer_action=f"Check the node's resource entries in the EOSC Catalogue for {what}.",
+        )
+
+    absent = [f"{len(ev.links)} link(s) examined, none matching {what}"]
+    if text_hits:
+        # Under v3.2 the policy document must be linked from the NLP. A page that
+        # names it ("based on the ... AUP") without a link does not make it
+        # accessible; the mention is kept as evidence so a reviewer can see it.
+        absent.append(f"named in the text without a link: {', '.join(sorted(set(text_hits))[:4])}")
+    other = _link_hits(ev, other_patterns) if other_patterns else []
+    if other:
+        return Result(
+            point,
+            title,
+            MANUAL_REVIEW,
+            f"No pointer to {what} was found on the landing page, but it links to {other_what}. "
+            "Checklist v3.2 allows the AUP and the UAP to be provided through the same, single "
+            "document, so this may satisfy the point.",
+            absent + [f"{other_what}: {_fmt(link)}" for link in other[:2]],
+            reviewer_action=f"Open the linked {other_what} and confirm it also serves as {what} "
+            "for every Node Exchange resource the page presents." + _CATALOGUE_HALF,
+        )
+    licences = _link_hits(ev, LICENCE_PATTERNS)
+    if licences:
+        return Result(
+            point,
+            title,
+            MANUAL_REVIEW,
+            f"No pointer to {what} was found on the landing page, but it links to a licence. "
+            "Checklist v3.2 allows the AUP and UAP of datasets, archives and software to be "
+            "provided through their product licences, which a reviewer must match to resources.",
+            absent + [f"licence: {_fmt(link)}" for link in licences[:2]],
+            reviewer_action="Confirm which resources the licence covers, and that every service "
+            f"resource has {what} linked from the NLP." + _CATALOGUE_HALF,
+        )
+    warning = link_collection_warning(ev)
+    if warning:
+        return Result(
+            point,
+            title,
+            MANUAL_REVIEW,
+            f"No pointer to {what} was found, but the page yielded too little to conclude "
+            "absence: " + warning,
+            absent,
+            reviewer_action=f"Open the page, dismiss any consent banner, and look for {what} "
+            "linked for each resource the page presents.",
+        )
     return Result(
         point,
         title,
-        MANUAL_REVIEW,
-        f"No pointer to {what} was found on the landing page. This is deliberately not a FAIL: "
-        "the checklist permits the policy to be reached via each resource's entry in the EOSC "
-        "Catalogue, which this tool does not follow.",
-        [f"{len(ev.links)} link(s) examined, none matching {what}"],
-        reviewer_action=f"Check the node's resource entries in the EOSC Catalogue for {what}.",
+        FAIL,
+        (f"{what.capitalize()} is named in the page text, but no link to it was found. "
+         if text_hits else f"No pointer to {what} was found on the landing page. ")
+        + "Since checklist v3.2 it must be linked directly from the NLP for every Node Exchange "
+        "resource the page presents, as well as in each resource's EOSC Catalogue metadata; "
+        "being in the Catalogue alone is no longer enough.",
+        absent + _render_note(ev),
+        reviewer_action=f"Ask the node to link {what} from the NLP for each of its resources "
+        "(one document may cover all of them, and may be the same as the other policy).",
     )
 
 
-def check_5b(ev: PageEvidence) -> Result:
+_CATALOGUE_HALF = (
+    " Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue,"
+    " which this tool does not read."
+)
+
+
+def check_5b(ev: PageEvidence, on_nlp: bool = True) -> Result:
     return _policy_check(
-        ev, "5b", "Acceptable Use Policy (AUP) accessible", AUP_PATTERNS, "an Acceptable Use Policy"
+        ev, "5b", "Acceptable Use Policy (AUP) accessible", AUP_PATTERNS, "an Acceptable Use Policy",
+        on_nlp, UAP_PATTERNS, "a User Access Policy",
     )
 
 
-def check_5c(ev: PageEvidence) -> Result:
+def check_5c(ev: PageEvidence, on_nlp: bool = True) -> Result:
     return _policy_check(
-        ev, "5c", "User Access Policy (UAP) accessible", UAP_PATTERNS, "a User Access Policy"
+        ev, "5c", "User Access Policy (UAP) accessible", UAP_PATTERNS, "a User Access Policy",
+        on_nlp, AUP_PATTERNS, "an Acceptable Use Policy",
     )
 
 
@@ -1129,17 +1252,24 @@ def run_all(
     ev: PageEvidence,
     approved_names: ApprovedNames | list[str] | None = None,
     expected_eosc_page: str = "",
+    item5_on_nlp: bool = True,
 ) -> list[Result]:
-    """Every checklist point, in checklist order, exactly one result each."""
+    """Every checklist point, in checklist order, exactly one result each.
+
+    `item5_on_nlp` selects the item 5 rule: True for checklist v3.2 and later
+    (the information must be on the NLP and in the Catalogue), False for v3.0 and
+    v3.1 (on the NLP or in the Catalogue). The CLI reads it from the checklist
+    file (`item5_on_nlp`), so rebuilding an older run applies that run's rule.
+    """
     return [
         check_1(ev),
         check_1R(ev),
         check_2(ev),
         check_3(ev, approved_names),
         check_4(ev, expected_eosc_page),
-        check_5a(ev),
-        check_5b(ev),
-        check_5c(ev),
+        check_5a(ev, item5_on_nlp),
+        check_5b(ev, item5_on_nlp),
+        check_5c(ev, item5_on_nlp),
         check_6(ev),
         check_7(ev),
     ]
