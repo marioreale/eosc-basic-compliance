@@ -61,9 +61,10 @@ evidence behind every verdict, is in the report linked above:
 
 130 cells: 🟢 47 PASS · 🔴 8 FAIL · 🟠 75 review · 0 ERROR.
 
-> **One row describes a page, not a node.** CERN's configured URL is an INDIGO
-> IAM sign-in form. The row is published with that caveat, pending the node's
-> registered Website address.
+> **CERN's row predates its new landing page.** Since 28 September 2026 CERN's
+> Node Landing Page is `https://eosc.cern/`. The published row was collected
+> from the previous URL, an INDIGO IAM sign-in form, and describes that page,
+> not the new one. It stays as published until the next workflow run.
 
 - **EOSC Node Poland** appears for the first time, with 4 PASS, 1 FAIL and 5
   review. The page is public (point 1), in English (point 7), links to its
@@ -101,7 +102,7 @@ their own:
   (Poland) only to the `eosc.eu` homepage; the checklist explicitly excludes
   both.
 
-BBMRI-ERIC, EOSC DTO, EUDAT and Slovakia link correctly. CERN's sign-in page has
+BBMRI-ERIC, EOSC DTO, EUDAT and Slovakia link correctly. CERN's previous sign-in page has
 no such link, but it is left to review rather than failed, and GÉANT's page could
 not be read. Each failure names the exact URL that is missing, so the fix is a
 one-line edit.
@@ -333,7 +334,7 @@ uv run basic-check --show-node bbmri-eric   # one node's row of that table
 Node id     Node Landing Page URL                                   Approved name
 ----------  ------------------------------------------------------  ------------------------
 bbmri-eric  https://www.bbmri-eric.eu/eosc-node-bbmri-eric/         EOSC Node | BBMRI-ERIC
-cern        https://eosc-auth.cern.ch/login                         EOSC Node | CERN
+cern        https://eosc.cern/                                      EOSC Node | CERN
 …
 eosc-sk     https://eosc.sk/                                        EOSC Node | Slovakia
 

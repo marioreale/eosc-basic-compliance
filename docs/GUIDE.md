@@ -237,12 +237,14 @@ exit code does not change, because the table is complete; it is just not about
 the configured page. The address finally reached, after redirects, is kept as
 `final_url` in the evidence file.
 
-To rebuild the published run, assess it under its own label. It was collected
-from the committed `nodes.yaml`, so no other option is needed and there is no
-URL warning:
+To rebuild the published run, assess it under its own label, with the node
+list it was collected from. CERN's URL changed to `https://eosc.cern/` after
+that run, so the committed `nodes.yaml` would flag CERN's row as evidence from
+a different URL:
 
 ```bash
-uv run basic-check assess --run web-10
+git show 8126aee:nodes.yaml > /tmp/nodes-web-10.yaml
+uv run basic-check assess --run web-10 --nodes /tmp/nodes-web-10.yaml
 ```
 
 Verified on 28 September 2026: this reproduces the committed `results/`
@@ -478,7 +480,7 @@ literally:
 | CERN, EOSC Finland, EGI, Italy | no match, and the phrase `EOSC Node` does not occur in the body text |
 | GÉANT | not looked for: the page answered HTTP 403 with the Cloudflare challenge |
 
-CERN's configured page is a sign-in endpoint with very little text, so there is
+CERN's page in that run, its previous URL, is a sign-in endpoint with very little text, so there is
 almost nothing to match against. Italy's page shows "EOSC Node | Italy" in its
 logo image, which is not text. GÉANT's page, when served on 24 September, wrote
 `EOSC Node GÉANT` and matched, which made five of twelve that day.
@@ -626,7 +628,7 @@ aligned columns (shortened here):
 | Node id | Node Landing Page URL | Approved name |
 |---|---|---|
 | `bbmri-eric` | `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` | EOSC Node \| BBMRI-ERIC |
-| `cern` | `https://eosc-auth.cern.ch/login` | EOSC Node \| CERN |
+| `cern` | `https://eosc.cern/` | EOSC Node \| CERN |
 | … | … | … |
 | `eosc-sk` | `https://eosc.sk/` | EOSC Node \| Slovakia |
 
