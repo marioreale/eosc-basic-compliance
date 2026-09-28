@@ -231,7 +231,7 @@ address becomes `XXXXX`. Role mailboxes are kept. The checks therefore run on
 masked text, which costs nothing: point 6 needs a helpdesk, and no check uses a
 person's address or number. Re-assessing the 24 September evidence after masking
 gave the same verdict in all 120 cells, and that run was masked this way at
-commit `ada1b4a`. Runs `web-4`, `web-5`, `web-6`, `web-8` and `web-9`, which replaced it as the published run on 26
+commit `ada1b4a`. Runs `web-4` to `web-10`, which replaced it as the published run on 26
 September, were masked as they were collected. The reports are masked a second time as they
 are written (`write_all` in `report.py`), so a report rebuilt from evidence
 captured before masking existed is masked too. Screenshots are not masked.
@@ -728,9 +728,9 @@ evidence it returns the same two nodes, BBMRI-ERIC and EUDAT, which retires the
 concern for this dataset: the 2-of-9 headline does not depend on names leaking
 between pages. The published run of 24 September confirms it on twelve nodes:
 both lists match the same five (BBMRI-ERIC, Czechia, EUDAT, GÉANT, Slovakia), and
-`--strict-separators` matches none. The published run of 26 September gives
+`--strict-separators` matches none. The published runs of 26 and 28 September give
 the same agreement on thirteen: both lists match four (GÉANT's page was blocked
-that day), and `--strict-separators` matches none. The residual weakness is no longer the matching but the mapping —
+both days), and `--strict-separators` matches none. The residual weakness is no longer the matching but the mapping —
 name to node id — which was derived in this repository rather than taken from
 the Tripartite file.
 
@@ -986,13 +986,13 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-9`). Update it to the new run's shape.
+  run `web-10`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 45 PASS · 8 FAIL · 77 review");
+- the headline tally in `README.md` ("130 cells: 47 PASS · 8 FAIL · 75 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

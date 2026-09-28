@@ -7,7 +7,7 @@ Checklist v3.1** (24 September 2026). One result per checklist point, per node.
 a headless browser. The tool then follows **at most one level** of links, and only
 links that can actually settle a checklist point — a policy, a contact page, an
 about page. Everything else is left alone. Across the thirteen nodes assessed on
-26 September 2026 that was **31 extra requests** at the default depth of 1,
+28 September 2026 that was **28 extra requests** at the default depth of 1,
 spaced 1.2 s apart, with `robots.txt` honoured per host. Evidence is saved to disk and every check reads only that
 saved evidence, so re-running the rules costs nothing.
 
@@ -37,50 +37,44 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **Interim state, 28 September 2026.** A node listed by mistake has been removed
-> from `nodes.yaml` and replaced by **EOSC Node Poland** (`https://eosc.pl/`,
-> approved name "EOSC Node | Poland"). Until a new workflow run of all thirteen
-> nodes is published, `results/` holds run `web-9` without that row, re-scored
-> offline under the corrected name list: 12 nodes, 120 cells, 43 PASS · 7 FAIL ·
-> 70 review, with Poland not yet collected. The text below still describes
-> `web-9` as it was collected.
-
-> **The published report is run `web-9`, and it has not been reviewed yet.** It
-> was collected on 26 September 2026 at 22:19 UTC by the GitHub workflow
-> ([run 36275685119](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36275685119))
-> against **checklist v3.1** (24 September 2026), which replaced v3.0. It follows
-> runs `web-8` ([run 36248633788](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36248633788)),
-> `web-6` ([run 36241719419](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36241719419)) and
-> `web-5` ([run 36236603533](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36236603533))
-> and run `web-4` of the same morning
-> ([run 36235183476](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36235183476)),
-> which had replaced the reviewed run of 24 September by decision of the maintainer.
-> The hand review of that earlier run is kept as history in
+> **The published report is run `web-10`, and it has not been reviewed yet.** It
+> was collected on 28 September 2026 at 13:36 UTC by the GitHub workflow
+> ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417))
+> against **checklist v3.1** (24 September 2026). It is the first run with
+> **EOSC Node Poland** (`https://eosc.pl/`, approved name "EOSC Node | Poland"),
+> which replaced a node listed by mistake on 28 September 2026. The previous
+> published run was `web-9` ([run 36275685119](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36275685119)),
+> which followed runs `web-8`, `web-6`, `web-5` and `web-4` of 26 September. The
+> hand review of the reviewed run of 24 September is kept as history in
 > [results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md). Its findings
 > still apply wherever a page has not changed, but it does not cover this run.
 >
-> All 130 verdicts of `web-9` are the same as those of `web-8`, `web-6`, `web-5` and `web-4`, both under v3.1
-> and as first published under v3.0: v3.1 rewords the points and narrows 1R and
-> 5a–5c to *Node Exchange* resources, which the tool already treats as review
-> items.
+> Apart from Poland's new row, all 120 verdicts of `web-10` are the same as
+> those of `web-9`, which in turn repeated `web-8`, `web-6`, `web-5` and `web-4`.
 
-All thirteen configured nodes were fetched on 26 September 2026 at `--depth 1`
-and assessed against the official unscoped names list. None was skipped. This
-is the first published run to include EOSC Node Italy, at its new address
-`https://eoscnode-it.d4science.org/`.
+All thirteen configured nodes were fetched on 28 September 2026 at `--depth 1`
+and assessed against the official unscoped names list. None was skipped.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 45 PASS · 🔴 8 FAIL · 🟠 77 review · 0 ERROR.
+130 cells: 🟢 47 PASS · 🔴 8 FAIL · 🟠 75 review · 0 ERROR.
 
-> **Two rows describe a page, not a node.** CERN's configured URL is an INDIGO
-> IAM sign-in form, and the other row was a node listed by mistake, whose URL was
-> a general homepage that does not mention EOSC. Both rows are published with that caveat, pending each node's
+> **One row describes a page, not a node.** CERN's configured URL is an INDIGO
+> IAM sign-in form. The row is published with that caveat, pending the node's
 > registered Website address.
 
-Compared with the reviewed run of 24 September 2026 (twelve nodes, 44 / 6 / 70):
+- **EOSC Node Poland** appears for the first time, with 4 PASS, 1 FAIL and 5
+  review. The page is public (point 1), in English (point 7), links to its
+  Terms of use (5b) and to `support@eosc.pl` (6). Point 4 fails because its only
+  `eosc.eu` link is the homepage, not its own entry
+  `https://eosc.eu/building-the-eosc-federation/eosc-node-poland/`. Point 3 is
+  review: the header logo reads "EOSC Node | Poland", but the name is not in
+  the page text, so a person has to confirm it.
+
+Compared with the reviewed run of 24 September 2026 (twelve nodes, 44 / 6 / 70),
+the runs of 26 September found:
 
 - **EOSC Node Italy** appears for the first time. It has 3 PASS, 2 FAIL and 5
   review. Point 4 fails because the page has no link to `eosc.eu`. Point 6 fails
@@ -102,9 +96,10 @@ dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
 read from the live index — but seven of the thirteen landing pages do not link to
 their own:
 
-- five (Data Terra, EOSC Finland, EGI, Italy, and the node listed by mistake) link to nothing on `eosc.eu` at all;
-- two (PaNOSC, Czechia) link only to the federation index page, which the
-  checklist explicitly excludes.
+- four (Data Terra, EOSC Finland, EGI, Italy) link to nothing on `eosc.eu` at all;
+- two (PaNOSC, Czechia) link only to the federation index page, and one
+  (Poland) only to the `eosc.eu` homepage; the checklist explicitly excludes
+  both.
 
 BBMRI-ERIC, EOSC DTO, EUDAT and Slovakia link correctly. CERN's sign-in page has
 no such link, but it is left to review rather than failed, and GÉANT's page could
@@ -257,7 +252,7 @@ nodes; `assess`, `points` and `show` work offline.
 | `--approved-names <path>` | A list of approved node names for point 3, replacing `checklist/approved-names.txt`. `node-id: Name` ties a name to one node; a bare name counts for every node. |
 | `--no-approved-names` | Use no name list at all; point 3's name requirement is then not assessed. |
 | `--strict-separators` | Match the separators in approved names exactly. By default spaces, `\|`, `-`, `–`, `:`, `/` and `·` count as equivalent. |
-| `--run <label>` | A label for the run, recorded in the report, such as `web-9` or `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
+| `--run <label>` | A label for the run, recorded in the report, such as `web-10` or `live-2026-09-24-no-italy`. By default, the current UTC time as `YYYY-MM-DD-HHMM`. |
 
 **Where results go**
 

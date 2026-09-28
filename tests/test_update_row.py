@@ -72,13 +72,9 @@ def _egi_evidence(stored: Path, **changes) -> dict:
 
 
 def test_published_results_are_the_run_these_tests_copy():
-    """The fixture relies on the committed run: rows and evidence for 12 nodes.
-
-    Interim state of 28 September 2026: run web-9 re-scored offline without the
-    node listed by mistake, and eosc-pl (Poland) not collected yet.
-    """
+    """The fixture relies on the committed run: rows and evidence for all 13 nodes."""
     run = _load(PUBLISHED)
-    assert len(run["nodes"]) == 12 and run["skipped"] == ["eosc-pl"]
+    assert len(run["nodes"]) == 13 and run["skipped"] == []
     assert "row_updates" not in run
 
 
@@ -175,8 +171,7 @@ def test_a_node_the_run_skipped_is_inserted_in_nodes_yaml_order(stored, monkeypa
     assert res.exit_code == 0, res.output
     after = _load(stored)
     ids = [n["id"] for n in after["nodes"]]
-    configured = [n["id"] for n in cli._load_nodes(cli.DEFAULT_NODES)]
-    assert ids == [i for i in configured if i in ids]
+    assert ids[ids.index("eosc-it") - 1 : ids.index("eosc-it") + 2] == ["eosc-pl", "eosc-it", "eosc-sk"]
     assert after["skipped"] == []
     assert after["row_updates"][-1]["previous"] is None
 

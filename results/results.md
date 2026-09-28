@@ -1,12 +1,10 @@
 # EOSC Node Landing Page compliance — checklist v3.1
 
-Run `web-9-rescored` · 2026-09-28T13:29:32+00:00 · 12 nodes · one page request per node plus 27 followed link(s) in total (depth 1).
+Run `web-10` · 2026-09-28T13:36:37+00:00 · 13 nodes · one page request per node plus 28 followed link(s) in total (depth 1).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
 **Node names.** 13 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `46af586bc693…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
-
-> **Skipped by request.** eosc-pl was left out of this run with --skip: not fetched, not assessed and not shown below. This table does not cover every configured node.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
 
@@ -22,6 +20,7 @@ Run `web-9-rescored` · 2026-09-28T13:29:32+00:00 · 12 nodes · one page reques
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 
@@ -539,6 +538,51 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - declared lang attribute: "en-US"
   - detected language: en (confidence 1.0)
 
+### EOSC Node Poland
+<https://eosc.pl/>
+
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 5496 characters of text rendered
+  - redirects followed: 1
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - 13 distinct external host(s) linked from the landing page
+  - creativecommons.org (Public domain)
+  - data.eosc.pl (Work with data)
+  - eosc.gov.pl (About, eosc.gov.pl EOSC.gov.pl is an initiative of the Polish EOSC partnership that supports the development of open science in Poland. It provides information on national EOSC-related activities and serves as a space for sharing experiences and good practices among institutions involved in open science.)
+  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
+- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
+  - opening main text: "Polish Open Science Platform We support the development of Polish science and innovation by offering modern tools and access to unique research data. All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match What can you explore on our platform? Explore the catalogue Find the resources you need qui..."
+  - organisation-like names found: Academic Computer Centre; EOSC Association EOSC Association; Institute; Interdisciplinary Centre; Networking Center; University
+  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
+  - EOSC-referencing image asset(s): 4
+  - img: EOSC Beyond
+  - img: eosc.gov.pl
+  - img: EOSC Association
+  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
+- **4** 🔴 **FAIL** — Links to eosc.eu but not to the node's dedicated page under building-the-eosc-federation. The checklist excludes the homepage.
+  - "EOSC Association EOSC Association brings together institutions and organisations committed to building an open scientific ecosystem in Europe. It supports collaboration, common standards, and the development of sustainable infrastructure that improves access to research data, tools, and services." -> https://eosc.eu/
+  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-poland/ but is not linked from here
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
+  - 35 outbound link(s) on the landing page
+  - main text length: 5075 characters
+  - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
+- **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
+  - "Terms of use" -> https://eosc.pl/terms-of-use
+  - followed: https://eosc.pl/terms-of-use -> HTTP 200, 6532 chars, title: Polish Open Science Platform
+  - policy wording found: Conditions, Policy, You shall, authorized
+  - *Reviewer action:* Confirm it covers all the node's resources and is in English.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the landing page. This is deliberately not a FAIL: the checklist permits the policy to be reached via each resource's entry in the EOSC Catalogue, which this tool does not follow.
+  - 35 link(s) examined, none matching a User Access Policy
+  - *Reviewer action:* Check the node's resource entries in the EOSC Catalogue for a User Access Policy.
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
+  - "support@eosc.pl" -> mailto:support@eosc.pl
+  - "support@eosc.pl" -> mailto:support@eosc.pl
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en"
+  - detected language: en (confidence 1.0)
+
 ### EOSC Node Italy
 <https://eoscnode-it.d4science.org/>
 
@@ -586,7 +630,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://eosc.sk/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 8448 characters of text rendered
+  - HTTP 200 anonymously, 8227 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 19 distinct external host(s) linked from the landing page
   - app.crepc.sk (CREPČ The Central Registry of Publications of Universities in the Slovak Republic [Slovak only])
@@ -608,7 +652,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - "EOSC Node Slovakia (EOSC-A)" -> https://eosc.eu/building-the-eosc-federation/eosc-node-slovakia
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. The checklist also allows the description to live in the resource's EOSC Catalogue entry rather than on this page.
   - 45 outbound link(s) on the landing page
-  - main text length: 8448 characters
+  - main text length: 8227 characters
   - *Reviewer action:* List the node's research resources, then confirm each has an English purpose description here or in its Catalogue entry.
 - **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.
   - "Terms of Use (incl. AUP and UAP)" -> https://eosc.sk/docs/eosc_sk_tou.pdf

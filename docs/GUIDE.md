@@ -17,10 +17,11 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-> **The published run changed on 26 September 2026.** `results/` now holds run
-> `web-9`, collected by the GitHub workflow on 26 September from all thirteen
-> nodes under checklist v3.1 (45 PASS, 8 FAIL, 77 MANUAL_REVIEW), after runs
-> `web-4`, `web-5`, `web-6` and `web-8` of the same day, whose verdicts it repeats cell for cell. It has **not** been reviewed by
+> **The published run changed on 28 September 2026.** `results/` now holds run
+> `web-10`, collected by the GitHub workflow on 28 September from all thirteen
+> nodes under checklist v3.1 (47 PASS, 8 FAIL, 75 MANUAL_REVIEW). It is the first
+> run with EOSC Node Poland, which replaced a node listed by mistake; the other
+> twelve rows repeat runs `web-4` to `web-9` of 26 September cell for cell. It has **not** been reviewed by
 > hand; the review of the run it replaced stays in
 > `results/REVIEW-2026-09-24.md` as history. Passages below that describe "the
 > published run of 24 September" are about that earlier, reviewed run, whose
@@ -28,8 +29,8 @@ noted rather than smoothed over.
 >
 > **Checklist v3.1 since 26 September 2026.** The default reference checklist
 > is now v3.1 of 24 September 2026 (`checklist/v3.1.yaml`). The evidence of
-> `web-4` was first re-scored against it offline, then `web-5`, `web-6`, `web-8`
-> and `web-9` were collected under it; every verdict is unchanged. The header of `checklist/v3.1.yaml` lists the differences point by
+> `web-4` was first re-scored against it offline, then `web-5` to `web-10`
+> were collected under it; every verdict is unchanged. The header of `checklist/v3.1.yaml` lists the differences point by
 > point.
 
 **What this tool will not do:** it does not produce a compliance statement. Of
@@ -180,7 +181,7 @@ to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
 saying so. `eosc.it` had no address record on 24 September, so that run skipped
 Italy; nothing published depends on the old address. Italy was assessed for the
 first time in run `web-4` on 26 September, from the new address, and again in
-runs `web-5`, `web-6`, `web-8` and `web-9` (the published run).
+runs `web-5` to `web-10` (the published run).
 
 ### Changing a node's URL
 
@@ -241,15 +242,15 @@ from the committed `nodes.yaml`, so no other option is needed and there is no
 URL warning:
 
 ```bash
-uv run basic-check assess --run web-9
+uv run basic-check assess --run web-10
 ```
 
-Verified on 26 September 2026: this reproduces the committed `results/`
-exactly, apart from the generation time, with 45 PASS, 8 FAIL and 77
+Verified on 28 September 2026: this reproduces the committed `results/`
+exactly, apart from the generation time, with 47 PASS, 8 FAIL and 75
 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
-commit `53081f6`. The full procedure, including how to publish the new node's
+commit `53081f6`. Runs published before 28 September 2026 were also scored with the earlier name list, so pass it too: `git show e7da5a8:checklist/approved-names.txt > /tmp/names-before-2026-09-28.txt`, then add `--approved-names /tmp/names-before-2026-09-28.txt`. The full procedure, including how to publish the new node's
 results, is [example 2](#example-2--changing-a-nodes-landing-page-url) in
 section 11.
 
@@ -461,7 +462,7 @@ sha256sum checklist/approved-names.txt
 
 #### What the official list actually finds
 
-In the published run of 26 September 2026, the committed list of thirteen names
+In the published run of 28 September 2026, the committed list of thirteen names
 matches **four of the thirteen** nodes assessed. Every one of the four writes the
 name with a different separator from the list, so none of them would match
 literally:
@@ -473,7 +474,8 @@ literally:
 | EUDAT | matched; the page writes `EOSC Node EUDAT` |
 | EOSC Node Slovakia | matched; the page writes `EOSC Node Slovakia` |
 | European DTO, Data Terra, PaNOSC | no match; the phrase `EOSC Node` occurs (5, 2 and 2 times), but never followed by an approved name |
-| CERN, EOSC Finland, EGI, Italy, and the node listed by mistake (replaced by Poland on 28 September) | no match, and the phrase `EOSC Node` does not occur in the body text |
+| Poland | no match; the header logo reads "EOSC Node \| Poland", and the phrase `EOSC Node` occurs once in the text, but never followed by an approved name |
+| CERN, EOSC Finland, EGI, Italy | no match, and the phrase `EOSC Node` does not occur in the body text |
 | GÉANT | not looked for: the page answered HTTP 403 with the Cloudflare challenge |
 
 CERN's configured page is a sign-in endpoint with very little text, so there is
@@ -1020,7 +1022,7 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-9` (26 September 2026) was collected
+**The published run is masked.** Run `web-10` (28 September 2026) was collected
 with masking in place, and a search of all its evidence and reports found no
 personal address or phone number. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
@@ -1362,13 +1364,13 @@ not to be satisfied mechanically:
   name, add its id to the expected set and update the docstring to say why.
 - `test_update_row.py::test_published_results_are_the_run_these_tests_copy`
   pins how many nodes the run has and which were skipped (13 and none, for
-  run `web-9`). Update it to the new run's shape.
+  run `web-10`). Update it to the new run's shape.
 
 **Step 6: update what quotes the published figures, then commit.**
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 45 PASS · 8 FAIL · 77 review");
+- the headline tally in `README.md` ("130 cells: 47 PASS · 8 FAIL · 75 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 
