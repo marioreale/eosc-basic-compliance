@@ -2,7 +2,7 @@
   "node_id": "eosc-pl",
   "node_name": "EOSC Node Poland",
   "requested_url": "https://eosc.pl/",
-  "fetched_at": "2026-09-28T22:56:42+00:00",
+  "fetched_at": "2026-09-28T23:49:56+00:00",
   "final_url": "https://eosc.pl/",
   "http_status": 200,
   "redirect_chain": [
@@ -798,10 +798,831 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://eosc.pl/privacy-policy",
+      "selected_for": [
+        "5p"
+      ],
+      "link_text": "Privacy policy",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.pl/privacy-policy",
+      "title": "Polish Open Science Platform",
+      "lang_attr": "en",
+      "main_text": "Privacy Policy of EOSC.pl Platform Last updated: July 2025 The EOSC.pl Platform, available at https://eosc.pl/ (hereinafter referred to as \"Site\" or \"Application\") comprises two main functionalities: one for users who browse and access research services and resources, and one for organisations and providers who register and onboard their services (e.g., computing services, repositories, training tools). This Privacy Notice outlines how personal data is collected, used, and protected across both functionalities, in compliance with the General Data Protection Regulation (GDPR) and related EU law. We follow these key principles: We collect only the minimum necessary personal data We limit sharing to what is legally or operationally necessary We provide clear options regarding data use We protect your data with appropriate security measures This Privacy Notice describes the policies applied to the personal information collected through the platform website, or when the platform communicates with its users (\"you\" or \"user\"), and the choices available to you. \"Personal Information\" means any data that relates to an identified or identifiable person, under Article 4(1) GDPR. The platform offers a search and discovery feature that allows users to browse scientific services and digital resources, such as publications, datasets, software, tools, and training materials. Users are provided with a personalised search interface, including filters and categories tailored to improve relevance and user experience. The platform also enables organisations and service providers to register and onboard their resources, making them discoverable and accessible to end users through the catalogue. Data Controller The Data Controller responsible for processing your data on the EOSC.pl platform is: ACC Cyfronet AGH Nawojki 11 30-950 Kraków, Poland Email: XXXXX@cyfronet.pl 1. Your consent By using the platform, you acknowledge this Privacy Notice. Where required by law (e.g., for analytics cookies or profiling), we will request your explicit consent before processing begins. 2. Scope This Privacy Notice applies solely to personal information that is collected and processed through the EOSC.pl platform or through any electronic communications initiated via the platform. It does not apply to third-party websites, services, or tools that may be linked from or integrated into the platform. The platform does not endorse, nor is it responsible for the content, terms, or privacy practices of these third-party websites. Any personal data you provide on third-party websites is subject to their respective privacy policies and terms. We encourage you to review these carefully before proceeding. 3. Personal data we collect Legal basis for processing: We process personal data under the following legal bases, as defined in Article 6 of the GDPR: Performance of a contract (Art. 6(1)(b)) , for providing access to platform features and services Compliance with legal obligations (Art. 6(1)(c)) , particularly for EU-funded project reporting Legitimate interest (Art. 6(1)(f)) , for platform security, usage analytics, and user experience improvements Consent (Art. 6(1)(a)) , where required for specific optional processing (e.g., cookies, newsletter) The data we collect The EOSC.pl Platform manages different types of personal data, all in compliance with applicable European data protection laws. Personal data concerning the user is collected and processed to enable the delivery of services and functionalities offered via the platform. This includes features aimed at: enabling users to browse and access scientific services and resources, and allowing provider organisations to register and onboard services into the platform. The data is collected for the following purposes: service access, user profile management, analytics, support communication, tag and metadata management, displaying external content, and system security. Depending on your interaction with the platform (either as a user or a service provider), the following types of personal data may be collected and processed by the platform, either directly or via third-party integrations: Cookies and usage data First name, last name Email address Affiliation/organisation name Country of origin Federated login attributes, such as your name, email address, organisation affiliation, and a unique user ID used for account recognition User typology (e.g. researcher, citizen, provider, educator) Reason for accessing EOSC services (if submitted voluntarily) Information on accessed or ordered services Messages and communication with the support team Order Management functionality For users who interact with the service ordering workflow, additional personal data may be processed, including: Details of the service order, such as descriptions, configuration parameters, or project references User identifiers and roles within the order flow Organisation and project affiliations Technical contact details and correspondence related to service requests Messages exchanged between users and providers as part of order handling and support This data is collected as part of delivering requested services, tracking progress, and enabling communication between involved parties. Data voluntarily supplied by the user The platform is designed to allow for anonymous browsing in most areas. However, access to personalised features (e.g., service ordering or provider registration) requires login and, in some cases, completion of a user profile. In such cases, the following data may be voluntarily submitted: Contact details (name, email, institution) Service metadata (for providers) Descriptions of use cases or projects Providing this data is optional, but necessary to access specific features. Consent may be withdrawn at any time, although this may disable the corresponding functionality. Service and resource metadata When providers onboard the resources and services, the platform stores and processes service descriptions and metadata, structured according to a standardised schema. This includes: Basic information: resource ID, name, description, provider identity Marketing materials: target users, promotional texts, multimedia assets Classification: scientific domains, categories Geographic and language availability Public contact details for user support Maturity levels (e.g., TRL, release version, lifecycle phase) Relations to other resources within EOSC Project and funding references Operational information: terms of use, helpdesk links, support SLA Access, ordering, and usage constraints Financial model or pricing details (if applicable) This metadata is published to the platform's catalogue and may be publicly accessible, except for specific operational fields reserved for internal management. Platform usage analytics The platform collects aggregated data on how users interact with services and resources. This includes: Anonymised or pseudonymised usage events (e.g., page views, searches, downloads) Search terms and selected filters Browsing history across sessions (if logged in) Resource engagement statistics (e.g., views, clicks, interactions) This data is used to: Provide personalised recommendations (where applicable) Generate aggregated statistics for platform improvement Improve resource discoverability No sensitive data or behavioural profiling is performed beyond what is required to improve relevance and user experience. Users may object to this processing. Cookies and tracking technologies Cookies and similar tracking technologies are used for: Session management and login authentication Remembering user preferences Usage analytics Displaying content from embedded third-party platforms (e.g., video, charts) We use cookies and third-party tools to support core features and improve your experience. Where required by law, we ask for your consent. Data retention We retain personal data only as long as needed for platform operation, or as required by legal obligations or project agreements (e.g., retention for 3 years after project completion). The User can always request that the Data Controller suspend or remove the data. Third-party data Users are responsible for any third-party personal data that they provide (e.g., in uploaded service descriptions or messages) and confirm that they have the right to do so. The platform assumes that such data has been shared lawfully. 4. Data storage, processing, and retention Data location All personal data processed via the EOSC.pl platform is managed and stored by ACC Cyfronet AGH, located in Kraków, Poland. Data processing takes place within the European Union, and no data is currently transferred outside the EU/EEA. For any inquiries, please contact: XXXXX@cyfronet.pl Log information The platform automatically collects general technical data during your visit. This includes: IP address Browser type and version Device type and screen resolution Operating system Pages visited and time spent Referring website (if any) Actions performed on the site This information is used for security, platform optimisation, and usage statistics. Data is anonymised or pseudonymised where applicable. Duration of processing Personal data is retained only for as long as necessary to: provide access to the platform fulfill service requests or communications comply with legal obligations Where data is collected in the context of funded projects, it may be retained for the project duration plus an additional 3 years, as required by standard EU grant terms. You may request deletion or restriction of your data at any time. Children's data The platform is not intended for use by children under the age of 16. We do not knowingly collect personal data from children. If we become aware that such data has been collected, it will be promptly deleted. 5. Use of personal data Personal data is used for the following purposes: Fulfilling your requests - Responding to inquiries, managing user accounts, and processing service access or usage Platform operation - Managing user sessions, authentication, security, and the availability of platform features Usage analytics - Collecting anonymised data to improve the platform and understand how users interact with services Personalisation (if applicable) - Offering search suggestions or resource recommendations based on your previous activity. This may involve basic profiling but does not include automated decision-making with legal effects Communication and support - Responding to your questions or support messages sent via the platform Legal compliance and safeguarding - Ensuring compliance with EU law and protecting the technical and legal integrity of the platform 6. Disclosure of personal data At this time, ACC Cyfronet AGH is the sole entity responsible for the processing of personal data on the EOSC.pl platform. There are no external data processors involved. Data is not shared with third parties unless required by law or you explicitly request a service that involves external communication (e.g., contacting a provider). Cyfronet takes appropriate technical and organisational measures to prevent unauthorised access, modification, or disclosure of your data. 7. Law enforcement and legal obligations We may disclose your personal data to law enforcement or other competent authorities: If required by law to comply with legal processes to prevent or investigate misuse of the platform or to protect the rights and safety of users or the service provider Unless prohibited by applicable law, we will inform you when such a disclosure occurs. 8. Your data protection rights Under the GDPR, you have the following rights regarding your personal data: Right of access (Art. 15) - You may request access to the personal data we hold about you Right to rectification (Art. 16) - You can request that inaccurate or incomplete data be corrected Right to erasure (Art. 17) - You can ask us to delete your data, unless legal grounds prevent us Right to restrict processing (Art. 18) - You may request temporary suspension of processing Right to object (Art. 21) - You may object to processing based on our legitimate interests Right to data portability (Art. 20) - You have the right to receive your data in a portable format, where applicable Requests can be submitted via: XXXXX@cyfronet.pl You also have the right to complain to a supervisory authority, such as the Polish Data Protection Office. 9. Security We apply technical and organisational measures to protect your personal data from loss, misuse, unauthorised access, alteration, or destruction. These measures are consistent with industry standards and include data access controls, secure infrastructure, and regular security assessments. However, no system is completely secure. We cannot guarantee the security of: our servers at all times data transmission over the internet (e.g. between your device and our platform) unencrypted communication channels such as email If you contact us by email, please note that messages are usually transmitted as plain text and may be vulnerable to interception. If your message includes sensitive or confidential information, we recommend contacting us first to arrange a secure communication method. 10. Jurisdiction and access responsibility This platform is operated under the laws and jurisdiction of the Republic of Poland and the European Union. We do not represent that the services are appropriate or available for use in all geographic locations. By accessing the platform from outside the EU, you do so on your own initiative and are responsible for compliance with any local laws or regulations applicable to your use. We reserve the right to restrict access to the platform in certain countries or regions, at our discretion. 11. Inquiries and complaints If you have questions, concerns, or complaints about this Privacy Notice or our data handling practices, you can contact us at: Email: XXXXX@cyfronet.pl Data Protection Lead ACC Cyfronet AGH Nawojki 11 30-950 Kraków, Poland We are committed to responding promptly and addressing legitimate concerns in line with applicable data protection law. 12. Updates to the Privacy Notice We may update this Privacy Notice from time to time, particularly in response to: legal or regulatory changes new features or data processing activities feedback from users or authorities If we make significant changes, we will provide a clear notice on the platform. Changes take effect upon publication, unless otherwise stated. Continued use of the platform following an update implies your acceptance of the revised terms. You may object to changes by contacting us at XXXXX@cyfronet.pl . If you do so, we will stop processing your personal data under the new terms, but this may limit your ability to continue using certain services. 13. Contact Us For questions about this Privacy Notice or our privacy and data protection practices, please contact: ACC Cyfronet AGH Nawojki 11 30-950 Kraków, Poland Email: XXXXX@cyfronet.pl",
+      "full_text": "About Browse resources Work with data Login Go back to resource discovery service Privacy Policy of EOSC.pl Platform Last updated: July 2025 The EOSC.pl Platform, available at https://eosc.pl/ (hereinafter referred to as \"Site\" or \"Application\") comprises two main functionalities: one for users who browse and access research services and resources, and one for organisations and providers who register and onboard their services (e.g., computing services, repositories, training tools). This Privacy Notice outlines how personal data is collected, used, and protected across both functionalities, in compliance with the General Data Protection Regulation (GDPR) and related EU law. We follow these key principles: We collect only the minimum necessary personal data We limit sharing to what is legally or operationally necessary We provide clear options regarding data use We protect your data with appropriate security measures This Privacy Notice describes the policies applied to the personal information collected through the platform website, or when the platform communicates with its users (\"you\" or \"user\"), and the choices available to you. \"Personal Information\" means any data that relates to an identified or identifiable person, under Article 4(1) GDPR. The platform offers a search and discovery feature that allows users to browse scientific services and digital resources, such as publications, datasets, software, tools, and training materials. Users are provided with a personalised search interface, including filters and categories tailored to improve relevance and user experience. The platform also enables organisations and service providers to register and onboard their resources, making them discoverable and accessible to end users through the catalogue. Data Controller The Data Controller responsible for processing your data on the EOSC.pl platform is: ACC Cyfronet AGH Nawojki 11 30-950 Kraków, Poland Email: XXXXX@cyfronet.pl 1. Your consent By using the platform, you acknowledge this Privacy Notice. Where required by law (e.g., for analytics cookies or profiling), we will request your explicit consent before processing begins. 2. Scope This Privacy Notice applies solely to personal information that is collected and processed through the EOSC.pl platform or through any electronic communications initiated via the platform. It does not apply to third-party websites, services, or tools that may be linked from or integrated into the platform. The platform does not endorse, nor is it responsible for the content, terms, or privacy practices of these third-party websites. Any personal data you provide on third-party websites is subject to their respective privacy policies and terms. We encourage you to review these carefully before proceeding. 3. Personal data we collect Legal basis for processing: We process personal data under the following legal bases, as defined in Article 6 of the GDPR: Performance of a contract (Art. 6(1)(b)) , for providing access to platform features and services Compliance with legal obligations (Art. 6(1)(c)) , particularly for EU-funded project reporting Legitimate interest (Art. 6(1)(f)) , for platform security, usage analytics, and user experience improvements Consent (Art. 6(1)(a)) , where required for specific optional processing (e.g., cookies, newsletter) The data we collect The EOSC.pl Platform manages different types of personal data, all in compliance with applicable European data protection laws. Personal data concerning the user is collected and processed to enable the delivery of services and functionalities offered via the platform. This includes features aimed at: enabling users to browse and access scientific services and resources, and allowing provider organisations to register and onboard services into the platform. The data is collected for the following purposes: service access, user profile management, analytics, support communication, tag and metadata management, displaying external content, and system security. Depending on your interaction with the platform (either as a user or a service provider), the following types of personal data may be collected and processed by the platform, either directly or via third-party integrations: Cookies and usage data First name, last name Email address Affiliation/organisation name Country of origin Federated login attributes, such as your name, email address, organisation affiliation, and a unique user ID used for account recognition User typology (e.g. researcher, citizen, provider, educator) Reason for accessing EOSC services (if submitted voluntarily) Information on accessed or ordered services Messages and communication with the support team Order Management functionality For users who interact with the service ordering workflow, additional personal data may be processed, including: Details of the service order, such as descriptions, configuration parameters, or project references User identifiers and roles within the order flow Organisation and project affiliations Technical contact details and correspondence related to service requests Messages exchanged between users and providers as part of order handling and support This data is collected as part of delivering requested services, tracking progress, and enabling communication between involved parties. Data voluntarily supplied by the user The platform is designed to allow for anonymous browsing in most areas. However, access to personalised features (e.g., service ordering or provider registration) requires login and, in some cases, completion of a user profile. In such cases, the following data may be voluntarily submitted: Contact details (name, email, institution) Service metadata (for providers) Descriptions of use cases or projects Providing this data is optional, but necessary to access specific features. Consent may be withdrawn at any time, although this may disable the corresponding functionality. Service and resource metadata When providers onboard the resources and services, the platform stores and processes service descriptions and metadata, structured according to a standardised schema. This includes: Basic information: resource ID, name, description, provider identity Marketing materials: target users, promotional texts, multimedia assets Classification: scientific domains, categories Geographic and language availability Public contact details for user support Maturity levels (e.g., TRL, release version, lifecycle phase) Relations to other resources within EOSC Project and funding references Operational information: terms of use, helpdesk links, support SLA Access, ordering, and usage constraints Financial model or pricing details (if applicable) This metadata is published to the platform's catalogue and may be publicly accessible, except for specific operational fields reserved for internal management. Platform usage analytics The platform collects aggregated data on how users interact with services and resources. This includes: Anonymised or pseudonymised usage events (e.g., page views, searches, downloads) Search terms and selected filters Browsing history across sessions (if logged in) Resource engagement statistics (e.g., views, clicks, interactions) This data is used to: Provide personalised recommendations (where applicable) Generate aggregated statistics for platform improvement Improve resource discoverability No sensitive data or behavioural profiling is performed beyond what is required to improve relevance and user experience. Users may object to this processing. Cookies and tracking technologies Cookies and similar tracking technologies are used for: Session management and login authentication Remembering user preferences Usage analytics Displaying content from embedded third-party platforms (e.g., video, charts) We use cookies and third-party tools to support core features and improve your experience. Where required by law, we ask for your consent. Data retention We retain personal data only as long as needed for platform operation, or as required by legal obligations or project agreements (e.g., retention for 3 years after project completion). The User can always request that the Data Controller suspend or remove the data. Third-party data Users are responsible for any third-party personal data that they provide (e.g., in uploaded service descriptions or messages) and confirm that they have the right to do so. The platform assumes that such data has been shared lawfully. 4. Data storage, processing, and retention Data location All personal data processed via the EOSC.pl platform is managed and stored by ACC Cyfronet AGH, located in Kraków, Poland. Data processing takes place within the European Union, and no data is currently transferred outside the EU/EEA. For any inquiries, please contact: XXXXX@cyfronet.pl Log information The platform automatically collects general technical data during your visit. This includes: IP address Browser type and version Device type and screen resolution Operating system Pages visited and time spent Referring website (if any) Actions performed on the site This information is used for security, platform optimisation, and usage statistics. Data is anonymised or pseudonymised where applicable. Duration of processing Personal data is retained only for as long as necessary to: provide access to the platform fulfill service requests or communications comply with legal obligations Where data is collected in the context of funded projects, it may be retained for the project duration plus an additional 3 years, as required by standard EU grant terms. You may request deletion or restriction of your data at any time. Children's data The platform is not intended for use by children under the age of 16. We do not knowingly collect personal data from children. If we become aware that such data has been collected, it will be promptly deleted. 5. Use of personal data Personal data is used for the following purposes: Fulfilling your requests - Responding to inquiries, managing user accounts, and processing service access or usage Platform operation - Managing user sessions, authentication, security, and the availability of platform features Usage analytics - Collecting anonymised data to improve the platform and understand how users interact with services Personalisation (if applicable) - Offering search suggestions or resource recommendations based on your previous activity. This may involve basic profiling but does not include automated decision-making with legal effects Communication and support - Responding to your questions or support messages sent via the platform Legal compliance and safeguarding - Ensuring compliance with EU law and protecting the technical and legal integrity of the platform 6. Disclosure of personal data At this time, ACC Cyfronet AGH is the sole entity responsible for the processing of personal data on the EOSC.pl platform. There are no external data processors involved. Data is not shared with third parties unless required by law or you explicitly request a service that involves external communication (e.g., contacting a provider). Cyfronet takes appropriate technical and organisational measures to prevent unauthorised access, modification, or disclosure of your data. 7. Law enforcement and legal obligations We may disclose your personal data to law enforcement or other competent authorities: If required by law to comply with legal processes to prevent or investigate misuse of the platform or to protect the rights and safety of users or the service provider Unless prohibited by applicable law, we will inform you when such a disclosure occurs. 8. Your data protection rights Under the GDPR, you have the following rights regarding your personal data: Right of access (Art. 15) - You may request access to the personal data we hold about you Right to rectification (Art. 16) - You can request that inaccurate or incomplete data be corrected Right to erasure (Art. 17) - You can ask us to delete your data, unless legal grounds prevent us Right to restrict processing (Art. 18) - You may request temporary suspension of processing Right to object (Art. 21) - You may object to processing based on our legitimate interests Right to data portability (Art. 20) - You have the right to receive your data in a portable format, where applicable Requests can be submitted via: XXXXX@cyfronet.pl You also have the right to complain to a supervisory authority, such as the Polish Data Protection Office. 9. Security We apply technical and organisational measures to protect your personal data from loss, misuse, unauthorised access, alteration, or destruction. These measures are consistent with industry standards and include data access controls, secure infrastructure, and regular security assessments. However, no system is completely secure. We cannot guarantee the security of: our servers at all times data transmission over the internet (e.g. between your device and our platform) unencrypted communication channels such as email If you contact us by email, please note that messages are usually transmitted as plain text and may be vulnerable to interception. If your message includes sensitive or confidential information, we recommend contacting us first to arrange a secure communication method. 10. Jurisdiction and access responsibility This platform is operated under the laws and jurisdiction of the Republic of Poland and the European Union. We do not represent that the services are appropriate or available for use in all geographic locations. By accessing the platform from outside the EU, you do so on your own initiative and are responsible for compliance with any local laws or regulations applicable to your use. We reserve the right to restrict access to the platform in certain countries or regions, at our discretion. 11. Inquiries and complaints If you have questions, concerns, or complaints about this Privacy Notice or our data handling practices, you can contact us at: Email: XXXXX@cyfronet.pl Data Protection Lead ACC Cyfronet AGH Nawojki 11 30-950 Kraków, Poland We are committed to responding promptly and addressing legitimate concerns in line with applicable data protection law. 12. Updates to the Privacy Notice We may update this Privacy Notice from time to time, particularly in response to: legal or regulatory changes new features or data processing activities feedback from users or authorities If we make significant changes, we will provide a clear notice on the platform. Changes take effect upon publication, unless otherwise stated. Continued use of the platform following an update implies your acceptance of the revised terms. You may object to changes by contacting us at XXXXX@cyfronet.pl . If you do so, we will stop processing your personal data under the new terms, but this may limit your ability to continue using certain services. 13. Contact Us For questions about this Privacy Notice or our privacy and data protection practices, please contact: ACC Cyfronet AGH Nawojki 11 30-950 Kraków, Poland Email: XXXXX@cyfronet.pl Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of use | Download Logo",
+      "links": [
+        {
+          "href": "https://eosc.pl/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.gov.pl/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://data.eosc.pl/",
+          "text": "Work with data",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/api/web/auth/request",
+          "text": "Login",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/?undefined=",
+          "text": "Go back to resource discovery service",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/",
+          "text": "https://eosc.pl/",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@cyfronet.pl",
+          "text": "XXXXX@cyfronet.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@cyfronet.pl",
+          "text": "XXXXX@cyfronet.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@cyfronet.pl",
+          "text": "XXXXX@cyfronet.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@cyfronet.pl",
+          "text": "XXXXX@cyfronet.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@cyfronet.pl",
+          "text": "XXXXX@cyfronet.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@cyfronet.pl",
+          "text": "XXXXX@cyfronet.pl",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/projects",
+          "text": "Your projects",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/user_documentation",
+          "text": "User documentations",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/services",
+          "text": "Backoffice",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/providers",
+          "text": "Become a provider",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/api_docs",
+          "text": "Marketplace API",
+          "visible": true
+        },
+        {
+          "href": "https://ncn.gov.pl/",
+          "text": "Narodowe centrum Nauki",
+          "visible": true
+        },
+        {
+          "href": "https://www.cyfronet.pl/",
+          "text": "ACK Cyfronet AGH",
+          "visible": true
+        },
+        {
+          "href": "https://pg.edu.pl/",
+          "text": "Politechnika Gdańska",
+          "visible": true
+        },
+        {
+          "href": "https://www.uw.edu.pl/",
+          "text": "Uniwersytet Warszawski",
+          "visible": true
+        },
+        {
+          "href": "mailto:contact@eosc.pl",
+          "text": "contact@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@eosc.pl",
+          "text": "XXXXX@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:support@eosc.pl",
+          "text": "support@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/privacy-policy",
+          "text": "Privacy policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/terms-of-use",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://s3.cloud.cyfronet.pl/eosc-pl-common/assets/eosc-node-poland.zip",
+          "text": "Download Logo",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc.pl/search/all_collection?q=*",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "Browse resources",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.pl/search/all_collection?q=*",
+      "title": "Polish Open Science Platform",
+      "lang_attr": "en",
+      "main_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Catalogues Browse listings of available data collections and repositories. Providers Browse list of providers offering platform services. Organisations Discover universities, institutes, or research bodies contributing to EOSC. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. Knowledge Base Trainings Find courses, tutorials, and workshops to build your skills on the platform. Knowledge Base Learn via courses, tutorials, workshops, and user guides. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines Trainings All Resources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of use | Download Logo",
+      "full_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Catalogues Browse listings of available data collections and repositories. Providers Browse list of providers offering platform services. Organisations Discover universities, institutes, or research bodies contributing to EOSC. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. Knowledge Base Trainings Find courses, tutorials, and workshops to build your skills on the platform. Knowledge Base Learn via courses, tutorials, workshops, and user guides. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines Trainings All Resources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of use | Download Logo",
+      "links": [
+        {
+          "href": "https://eosc.pl/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.gov.pl/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://data.eosc.pl/",
+          "text": "Work with data",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/api/web/auth/request",
+          "text": "Login",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/asguide",
+          "text": "Advanced Search Guide",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/dataset?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Datasets Access curated or raw datasets with metadata for analysis.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/publication?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Publications Browse articles, papers, and reports.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Software Find tools and applications to support research.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/service?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Services Explore compute, data processing, storage, and analysis services.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/bundle?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Bundles Discover packages combining multiple services.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/data_source?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Data sources Find original data providers or endpoints where data is collected.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/catalogue?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Catalogues Browse listings of available data collections and repositories.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/provider?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Providers Browse list of providers offering platform services.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/organisation?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Organisations Discover universities, institutes, or research bodies contributing to EOSC.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/guideline?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Interoperability Guidelines Access standards and best practices for seamless integration.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/training?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Trainings Find courses, tutorials, and workshops to build your skills on the platform.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "All Resources",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/dataset?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Datasets",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/publication?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/software?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Software",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/service?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/data_source?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Data sources",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/guideline?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Interoperability Guidelines",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/training?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Trainings",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/projects",
+          "text": "Your projects",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/user_documentation",
+          "text": "User documentations",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/services",
+          "text": "Backoffice",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/providers",
+          "text": "Become a provider",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/api_docs",
+          "text": "Marketplace API",
+          "visible": true
+        },
+        {
+          "href": "https://ncn.gov.pl/",
+          "text": "Narodowe centrum Nauki",
+          "visible": true
+        },
+        {
+          "href": "https://www.cyfronet.pl/",
+          "text": "ACK Cyfronet AGH",
+          "visible": true
+        },
+        {
+          "href": "https://pg.edu.pl/",
+          "text": "Politechnika Gdańska",
+          "visible": true
+        },
+        {
+          "href": "https://www.uw.edu.pl/",
+          "text": "Uniwersytet Warszawski",
+          "visible": true
+        },
+        {
+          "href": "mailto:contact@eosc.pl",
+          "text": "contact@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@eosc.pl",
+          "text": "XXXXX@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:support@eosc.pl",
+          "text": "support@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/privacy-policy",
+          "text": "Privacy policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/terms-of-use",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://s3.cloud.cyfronet.pl/eosc-pl-common/assets/eosc-node-poland.zip",
+          "text": "Download Logo",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc.pl/search/data_source",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "Browse resources",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.pl/search/data_source?q=*",
+      "title": "Polish Open Science Platform",
+      "lang_attr": "en",
+      "main_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Catalogues Browse listings of available data collections and repositories. Providers Browse list of providers offering platform services. Organisations Discover universities, institutes, or research bodies contributing to EOSC. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. Knowledge Base Trainings Find courses, tutorials, and workshops to build your skills on the platform. Knowledge Base Learn via courses, tutorials, workshops, and user guides. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines Trainings All Resources Data sources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of use | Download Logo",
+      "full_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Catalogues Browse listings of available data collections and repositories. Providers Browse list of providers offering platform services. Organisations Discover universities, institutes, or research bodies contributing to EOSC. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. Knowledge Base Trainings Find courses, tutorials, and workshops to build your skills on the platform. Knowledge Base Learn via courses, tutorials, workshops, and user guides. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines Trainings All Resources Data sources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of use | Download Logo",
+      "links": [
+        {
+          "href": "https://eosc.pl/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.gov.pl/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://data.eosc.pl/",
+          "text": "Work with data",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/api/web/auth/request",
+          "text": "Login",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/asguide",
+          "text": "Advanced Search Guide",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/dataset?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Datasets Access curated or raw datasets with metadata for analysis.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/publication?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Publications Browse articles, papers, and reports.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Software Find tools and applications to support research.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/service?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Services Explore compute, data processing, storage, and analysis services.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/bundle?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Bundles Discover packages combining multiple services.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/data_source?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Data sources Find original data providers or endpoints where data is collected.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/catalogue?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Catalogues Browse listings of available data collections and repositories.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/provider?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Providers Browse list of providers offering platform services.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/organisation?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Organisations Discover universities, institutes, or research bodies contributing to EOSC.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/guideline?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Interoperability Guidelines Access standards and best practices for seamless integration.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/training?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Trainings Find courses, tutorials, and workshops to build your skills on the platform.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "All Resources",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/dataset?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Datasets",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/publication?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/software?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Software",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/service?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/data_source?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Data sources",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/guideline?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Interoperability Guidelines",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/training?q=*&standard=true&exact=false&scope=pl&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+          "text": "Trainings",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection",
+          "text": "All Resources",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/projects",
+          "text": "Your projects",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/user_documentation",
+          "text": "User documentations",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/services",
+          "text": "Backoffice",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/providers",
+          "text": "Become a provider",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/api_docs",
+          "text": "Marketplace API",
+          "visible": true
+        },
+        {
+          "href": "https://ncn.gov.pl/",
+          "text": "Narodowe centrum Nauki",
+          "visible": true
+        },
+        {
+          "href": "https://www.cyfronet.pl/",
+          "text": "ACK Cyfronet AGH",
+          "visible": true
+        },
+        {
+          "href": "https://pg.edu.pl/",
+          "text": "Politechnika Gdańska",
+          "visible": true
+        },
+        {
+          "href": "https://www.uw.edu.pl/",
+          "text": "Uniwersytet Warszawski",
+          "visible": true
+        },
+        {
+          "href": "mailto:contact@eosc.pl",
+          "text": "contact@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@eosc.pl",
+          "text": "XXXXX@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:support@eosc.pl",
+          "text": "support@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/privacy-policy",
+          "text": "Privacy policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/terms-of-use",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://s3.cloud.cyfronet.pl/eosc-pl-common/assets/eosc-node-poland.zip",
+          "text": "Download Logo",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc.pl/?undefined=",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "Go back to resource discovery service",
+      "depth": 2,
+      "parent_url": "https://eosc.pl/terms-of-use",
+      "http_status": 200,
+      "final_url": "https://eosc.pl/?undefined=",
+      "title": "Polish Open Science Platform",
+      "lang_attr": "en",
+      "main_text": "Polish Open Science Platform We support the development of Polish science and innovation by offering modern tools and access to unique research data. All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match What can you explore on our platform? Explore the catalogue Find the resources you need quickly and easily. Simple and intuitive discovery Filters tailored to your needs Instant access to key information Browse resources Request resources and track your orders Request and manage resources online. Less paperwork, more control in one place. Easy ordering Order management Project managment in one place Learn how ordering works Provide your resources and reach a wider audience Share your resources with the European research community and manage requests in one place. Service and offer management Requests and ordering Visibility across Europe Contact our team Our Data Sources Our data sources bring together trusted research outputs, institutional repositories, and verified scientific datasets in one connected ecosystem. Access reliable, high-quality data from across Poland and Europe ready to discover, reuse, and build upon. Browse Data Sources Slide 1 of 5 ROHub ROHub ROHub enables the management, sharing and preservation of research artefacts related to a particular investigation/research challenge as a single information unit through the Research Object (RO) concept and model. Poznan Supercomputing and Networking Center Slide 2 of 5 RODBUK Cracow Open Research Data Repository The purpose of RODBUK is to collect, develop, archive and make available in open access all types of research data created by researchers, PhD candidates and students in the course of scientific activity. Academic Computer Centre CYFRONET AGH Slide 3 of 5 Bridge of Knowledge Open Research Data Catalog The nature of the ‘Bridge of Data’ project is to design and build a platform that allows collecting, searching, analyzing and sharing open research data and to provide it with unique data collected from the three most important Pomeranian universities Gdańsk University of Technology Slide 4 of 5 RepOD Repository for Open Data RepOD is the first Polish repository for open research data. All researchers, regardless of affiliation and academic discipline, can create a free account and start sharing data produced, collected, or described during research activities. Interdisciplinary Centre for Mathematical and Computational Modelling, University of Warsaw Slide 5 of 5 Oceanographic Data and Information System eCUDO.pl The eCUDO.pl project is created by a consortium of Project partners. These are research units, scientific institutes and universities whose scientific activity focuses on the area of knowledge related to the seas and oceans. Institute of Oceanology Polish Academy of Sciences Previous Next Work with data Within distributed infrastructures and collaborate on research data across infrastructures Work with shared research data in one environment. Upload files, manage access, and collaborate on the same data across providers and compute infrastructures. Shared data spaces Distributed data replication Team collaboration Sign-in to workspace Related Initiatives EOSC Beyond EOSC Beyond is a project developed within the European Open Science Cloud framework to strengthen collaboration among researchers across Europe. It introduces new capabilities to the EOSC Core services and helps research service providers access, integrate, and share resources more effectively. eosc.gov.pl EOSC.gov.pl is an initiative of the Polish EOSC partnership that supports the development of open science in Poland. It provides information on national EOSC-related activities and serves as a space for sharing experiences and good practices among institutions involved in open science. EOSC Association EOSC Association brings together institutions and organisations committed to building an open scientific ecosystem in Europe. It supports collaboration, common standards, and the development of sustainable infrastructure that improves access to research data, tools, and services. Marie Skłodowska-Curie and Pierre Curie in their laboratory in Paris, circa 1900–1906. Source: National Library of France (Gallica). License: Public domain . About eosc.pl The Polish Open Science Platform is part of the European Open Science Cloud, which supports open access to research resources across Europe. As a national EOSC node, the platform helps researchers access data, publications, and infrastructure for advanced research and international collaboration. Become a provider Ready to share your resources? We are here to help. Join the EOSC ecosystem and make your services, data, and tools visible to the European research community. Our team supports you throughout the onboarding process. Contact our team Adam and Ludwik Zamenhof at the 9th World Esperanto Congress in Bern, 1913. Author: Unknown. Source: Bildarchiv Austria. License: Public domain . Partners",
+      "full_text": "About Browse resources Work with data Login Polish Open Science Platform We support the development of Polish science and innovation by offering modern tools and access to unique research data. All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match What can you explore on our platform? Explore the catalogue Find the resources you need quickly and easily. Simple and intuitive discovery Filters tailored to your needs Instant access to key information Browse resources Request resources and track your orders Request and manage resources online. Less paperwork, more control in one place. Easy ordering Order management Project managment in one place Learn how ordering works Provide your resources and reach a wider audience Share your resources with the European research community and manage requests in one place. Service and offer management Requests and ordering Visibility across Europe Contact our team Our Data Sources Our data sources bring together trusted research outputs, institutional repositories, and verified scientific datasets in one connected ecosystem. Access reliable, high-quality data from across Poland and Europe ready to discover, reuse, and build upon. Browse Data Sources Slide 1 of 5 ROHub ROHub ROHub enables the management, sharing and preservation of research artefacts related to a particular investigation/research challenge as a single information unit through the Research Object (RO) concept and model. Poznan Supercomputing and Networking Center Slide 2 of 5 RODBUK Cracow Open Research Data Repository The purpose of RODBUK is to collect, develop, archive and make available in open access all types of research data created by researchers, PhD candidates and students in the course of scientific activity. Academic Computer Centre CYFRONET AGH Slide 3 of 5 Bridge of Knowledge Open Research Data Catalog The nature of the ‘Bridge of Data’ project is to design and build a platform that allows collecting, searching, analyzing and sharing open research data and to provide it with unique data collected from the three most important Pomeranian universities Gdańsk University of Technology Slide 4 of 5 RepOD Repository for Open Data RepOD is the first Polish repository for open research data. All researchers, regardless of affiliation and academic discipline, can create a free account and start sharing data produced, collected, or described during research activities. Interdisciplinary Centre for Mathematical and Computational Modelling, University of Warsaw Slide 5 of 5 Oceanographic Data and Information System eCUDO.pl The eCUDO.pl project is created by a consortium of Project partners. These are research units, scientific institutes and universities whose scientific activity focuses on the area of knowledge related to the seas and oceans. Institute of Oceanology Polish Academy of Sciences Previous Next Work with data Within distributed infrastructures and collaborate on research data across infrastructures Work with shared research data in one environment. Upload files, manage access, and collaborate on the same data across providers and compute infrastructures. Shared data spaces Distributed data replication Team collaboration Sign-in to workspace Related Initiatives EOSC Beyond EOSC Beyond is a project developed within the European Open Science Cloud framework to strengthen collaboration among researchers across Europe. It introduces new capabilities to the EOSC Core services and helps research service providers access, integrate, and share resources more effectively. eosc.gov.pl EOSC.gov.pl is an initiative of the Polish EOSC partnership that supports the development of open science in Poland. It provides information on national EOSC-related activities and serves as a space for sharing experiences and good practices among institutions involved in open science. EOSC Association EOSC Association brings together institutions and organisations committed to building an open scientific ecosystem in Europe. It supports collaboration, common standards, and the development of sustainable infrastructure that improves access to research data, tools, and services. Marie Skłodowska-Curie and Pierre Curie in their laboratory in Paris, circa 1900–1906. Source: National Library of France (Gallica). License: Public domain . About eosc.pl The Polish Open Science Platform is part of the European Open Science Cloud, which supports open access to research resources across Europe. As a national EOSC node, the platform helps researchers access data, publications, and infrastructure for advanced research and international collaboration. Become a provider Ready to share your resources? We are here to help. Join the EOSC ecosystem and make your services, data, and tools visible to the European research community. Our team supports you throughout the onboarding process. Contact our team Adam and Ludwik Zamenhof at the 9th World Esperanto Congress in Bern, 1913. Author: Unknown. Source: Bildarchiv Austria. License: Public domain . Partners Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of use | Download Logo",
+      "links": [
+        {
+          "href": "https://eosc.pl/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.gov.pl/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://data.eosc.pl/",
+          "text": "Work with data",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/api/web/auth/request",
+          "text": "Login",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/data_source",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/user_documentation",
+          "text": "Learn how ordering works",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/data_source",
+          "text": "Browse Data Sources",
+          "visible": true
+        },
+        {
+          "href": "https://onedata.org/#/home)",
+          "text": "Sign-in to workspace",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc-beyond.eu/",
+          "text": "EOSC Beyond EOSC Beyond is a project developed within the European Open Science Cloud framework to strengthen collaboration among researchers across Europe. It introduces new capabilities to the EOSC Core services and helps research service providers access, integrate, and share resources more effec",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.gov.pl/",
+          "text": "eosc.gov.pl EOSC.gov.pl is an initiative of the Polish EOSC partnership that supports the development of open science in Poland. It provides information on national EOSC-related activities and serves as a space for sharing experiences and good practices among institutions involved in open science.",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/",
+          "text": "EOSC Association EOSC Association brings together institutions and organisations committed to building an open scientific ecosystem in Europe. It supports collaboration, common standards, and the development of sustainable infrastructure that improves access to research data, tools, and services.",
+          "visible": true
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/mark/1.0",
+          "text": "Public domain",
+          "visible": true
+        },
+        {
+          "href": "https://creativecommons.org/publicdomain/mark/1.0",
+          "text": "Public domain",
+          "visible": true
+        },
+        {
+          "href": "https://www.cyfronet.pl",
+          "text": "Academic Computer Centre Cyfronet AGH",
+          "visible": true
+        },
+        {
+          "href": "https://pg.edu.pl",
+          "text": "Gdańsk University of Technology.",
+          "visible": true
+        },
+        {
+          "href": "https://www.uw.edu.pl",
+          "text": "the University of Warsaw",
+          "visible": true
+        },
+        {
+          "href": "https://www.ncn.gov.pl",
+          "text": "the National Science Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.iopan.pl",
+          "text": "the Institute of Oceanology of the Polish Academy of Sciences",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/search/all_collection?q=*",
+          "text": "Browse resources",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/projects",
+          "text": "Your projects",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/user_documentation",
+          "text": "User documentations",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/services",
+          "text": "Backoffice",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/backoffice/providers",
+          "text": "Become a provider",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl/api_docs",
+          "text": "Marketplace API",
+          "visible": true
+        },
+        {
+          "href": "https://ncn.gov.pl/",
+          "text": "Narodowe centrum Nauki",
+          "visible": true
+        },
+        {
+          "href": "https://www.cyfronet.pl/",
+          "text": "ACK Cyfronet AGH",
+          "visible": true
+        },
+        {
+          "href": "https://pg.edu.pl/",
+          "text": "Politechnika Gdańska",
+          "visible": true
+        },
+        {
+          "href": "https://www.uw.edu.pl/",
+          "text": "Uniwersytet Warszawski",
+          "visible": true
+        },
+        {
+          "href": "mailto:contact@eosc.pl",
+          "text": "contact@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@eosc.pl",
+          "text": "XXXXX@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "mailto:support@eosc.pl",
+          "text": "support@eosc.pl",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/privacy-policy",
+          "text": "Privacy policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.pl/terms-of-use",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://s3.cloud.cyfronet.pl/eosc-pl-common/assets/eosc-node-poland.zip",
+          "text": "Download Logo",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
   "children_skipped": [
-    "https://eosc.pl/terms-of-use (already fetched at depth 1)"
+    "https://marketplace.eosc.pl/backoffice/services (cap for point 5s)",
+    "https://eosc.pl/terms-of-use (already fetched at depth 1)",
+    "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+    "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+    "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+    "https://eosc.pl/terms-of-use (already fetched at depth 1)",
+    "https://eosc.pl/search/all_collection?q=* (already fetched at depth 1)",
+    "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+    "https://eosc.pl/search (depth 2 cap for point 5s)",
+    "https://eosc.pl/search (depth 2 cap for point 5s)",
+    "https://eosc.pl/search (depth 2 cap for point 5s)"
   ],
-  "crawl_note": "depth 2: 35 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 19 of 60 used"
+  "crawl_note": "depth 2: 35 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 60 of 60 used"
 }

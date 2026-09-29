@@ -184,7 +184,10 @@ Per node, in order:
    the AUP and UAP "via intermediate web pages linked by the NLP": a page
    fetched for them is read by 5b and 5c for policy links. They come last, so a
    per-node cap drops them before a link that settles a point, and a link
-   already chosen for another purpose is not tagged with them.
+   already chosen for another purpose is not tagged with them. They are looked
+   for on the landing page only, never at depth 2: in run `web-14` looking for
+   them at the second hop too used the whole fetch budget. A link is excluded
+   from 5p when its label or address mentions privacy or cookies.
 
    Caps: `MAX_PER_PURPOSE = 2`, `MAX_CHILDREN = 8` per node (overridable with
    `--max-children`), 1.2 s between child requests. Each child page carries
@@ -675,7 +678,13 @@ services or policies page that `web-13` did not read (CERN's "Services" and
 6b: its Access Policies page links the "Acceptable Use Policy of BBMRI-ERIC
 Services". Every other cell is unchanged: seven nodes link one of the two
 policies and get review on the other (branch 7), Slovakia links one document
-labelled as both, and GÉANT's page was not served (branch 9).
+labelled as both, and GÉANT's page was not served (branch 9). Run `web-14`,
+the first collection under the re-issued v3.2, read those pages: CERN's 5b and
+5c pass by branch 6b (its "Policies" page links both policies, which were
+fetched), Data Terra's fail by branch 11 (its two services pages were read and
+link neither; they are in French, which the English vocabulary does not
+cover), and PaNOSC's stay review by branch 10 (its services site was not
+read).
 
 ---
 
@@ -1083,7 +1092,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 50 PASS · 8 FAIL · 72 review");
+- the headline tally in `README.md` ("130 cells: 52 PASS · 10 FAIL · 68 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

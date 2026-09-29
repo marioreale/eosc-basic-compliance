@@ -156,10 +156,12 @@ LICENCE_PATTERNS = [
 # landing page linked "Policies" and "Services" but no policy by name, so the
 # tool never looked where the pointers were. These links are followed so their
 # pages can be read for AUP/UAP links; they settle nothing by themselves.
-# Privacy and cookie policies are not candidates: they are never an AUP. Nor is
+# Privacy and cookie policies are not candidates: they are never an AUP. The
+# exclusion reads the whole haystack, label and address, because run web-14
+# followed /privacy-policy and /cookie-policy, spelled with a hyphen. Nor is
 # "Policy Makers", an audience label CERN's landing page uses.
 POLICY_INDEX_PATTERNS = [
-    r"(?i)(?<!privacy )(?<!cookie )(?<!cookies )\bpolic(y|ies)\b(?!\s*-?\s*mak)",
+    r"(?is)^(?!.*\b(privacy|cookies?)\b).*\bpolic(y|ies)\b(?!\s*-?\s*mak)",
     r"(?i)\blegal\b",
     r"(?i)\bterms\b",
 ]

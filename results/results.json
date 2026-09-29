@@ -1,6 +1,6 @@
 {
-  "run_id": "web-13-rescored",
-  "generated_at": "2026-09-28T23:37:35+00:00",
+  "run_id": "web-14",
+  "generated_at": "2026-09-28T23:59:12+00:00",
   "checklist": {
     "checklist_version": "3.2",
     "checklist_date": "2026-09-28",
@@ -112,12 +112,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-09-28T22:53:15+00:00",
+        "fetched_at": "2026-09-28T23:43:52+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 84 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 2 of 60 used",
+        "crawl_note": "depth 2: 84 link(s) on the landing page, 7 followed because they matched a checklist point, 5 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 9 page(s); fetch budget: 9 of 60 used",
         "children": [
           {
             "url": "https://www.bbmri-eric.eu/services/access-policies/",
@@ -176,6 +176,48 @@
             "error": ""
           },
           {
+            "url": "https://www.bbmri-eric.eu/legalnotice/",
+            "final_url": "https://www.bbmri-eric.eu/legalnotice/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Legal Notice",
+            "http_status": 200,
+            "title": "Legal Notice - BBMRI-ERIC",
+            "chars": 4606,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/services/expert-centre/",
+            "final_url": "https://www.bbmri-eric.eu/services/expert-centre/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Expert Centres",
+            "http_status": 200,
+            "title": "Expert Centres - BBMRI-ERIC",
+            "chars": 8874,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/it/",
+            "final_url": "https://www.bbmri-eric.eu/it/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "IT SERVICES & RESEARCH",
+            "http_status": 200,
+            "title": "IT SERVICES & RESEARCH - BBMRI-ERIC",
+            "chars": 4703,
+            "error": ""
+          },
+          {
             "url": "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/",
             "final_url": "https://www.bbmri-eric.eu/wp-content/uploads/2017/03/JEL_Workshop_Malta.jpg",
             "depth": 2,
@@ -187,6 +229,48 @@
             "http_status": 200,
             "title": "JEL_Workshop_Malta.jpg (640×428)",
             "chars": 0,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/services/other-services/",
+            "final_url": "https://www.bbmri-eric.eu/services/other-services/",
+            "depth": 2,
+            "parent_url": "https://www.bbmri-eric.eu/services/access-policies/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Tools",
+            "http_status": 200,
+            "title": "Tools - BBMRI-ERIC",
+            "chars": 5515,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/services/quality-management/",
+            "final_url": "https://www.bbmri-eric.eu/services/quality-management/",
+            "depth": 2,
+            "parent_url": "https://www.bbmri-eric.eu/services-support/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Quality Management",
+            "http_status": 200,
+            "title": "Quality Management - BBMRI-ERIC",
+            "chars": 7128,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/elsi/",
+            "final_url": "https://www.bbmri-eric.eu/elsi/",
+            "depth": 2,
+            "parent_url": "https://www.bbmri-eric.eu/contact/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "ELSI Services & Research",
+            "http_status": 200,
+            "title": "ELSI - BBMRI-ERIC",
+            "chars": 4098,
             "error": ""
           },
           {
@@ -202,9 +286,70 @@
             "title": "Member States & National Nodes - BBMRI-ERIC",
             "chars": 5011,
             "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+            "final_url": "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/",
+            "depth": 2,
+            "parent_url": "https://www.bbmri-eric.eu/about/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "GDPR Code of Conduct",
+            "http_status": 200,
+            "title": "The Code of Conduct for Health Research - BBMRI-ERIC",
+            "chars": 4968,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+            "final_url": "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/",
+            "depth": 2,
+            "parent_url": "https://www.bbmri-eric.eu/legalnotice/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "List COVID-Ready Samples and Data on our Directory",
+            "http_status": 200,
+            "title": "List COVID-Ready Samples and Data on the BBMRI-ERIC Directory - BBMRI-ERIC",
+            "chars": 6863,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/services/standardisation/",
+            "final_url": "https://www.bbmri-eric.eu/services/standardisation/",
+            "depth": 2,
+            "parent_url": "https://www.bbmri-eric.eu/services/expert-centre/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Looking for advice on standardisation",
+            "http_status": 200,
+            "title": "Standardisation - BBMRI-ERIC",
+            "chars": 170,
+            "error": ""
+          },
+          {
+            "url": "https://www.bbmri-eric.eu/esli",
+            "final_url": "https://www.bbmri-eric.eu/elsi-knowledge-base/",
+            "depth": 2,
+            "parent_url": "https://www.bbmri-eric.eu/it/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "IT SERVICES & RESEARCH",
+            "http_status": 200,
+            "title": "ELSI Knowledge Base - BBMRI-ERIC",
+            "chars": 4863,
+            "error": ""
           }
         ],
         "children_skipped": [
+          "https://www.bbmri-eric.eu/services/other-services/ (cap for point 5s)",
+          "https://www.bbmri-eric.eu/services/quality-management/ (cap for point 5s)",
+          "https://www.bbmri-eric.eu/elsi/ (cap for point 5s)",
+          "https://www.bbmri-eric.eu/services/the-code-of-conduct-for-health-research/ (cap for point 5s)",
+          "https://www.bbmri-eric.eu/services/isber-biobank-collaboration/ (cap for point 5s)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
@@ -213,6 +358,8 @@
           "https://www.bbmri-eric.eu/contact/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/about/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/about/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
@@ -224,6 +371,7 @@
           "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/contact/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
@@ -233,13 +381,30 @@
           "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/contact/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/contact/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/about/ (already fetched at depth 1)",
           "https://www.bbmri-eric.eu/about/ (already fetched at depth 1)",
-          "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/ (already fetched at depth 1)"
+          "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/contact/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/contact/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/about/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/about/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/about/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services/access-policies/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/contact/ (already fetched at depth 1)",
+          "https://www.bbmri-eric.eu/services-support/ (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -267,7 +432,7 @@
             "www.linkedin.com",
             "www.rubikon.at (Website by Werbeagentur Rubikon)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 6 of 6 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 16 of 16 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -392,7 +557,7 @@
             "www.linkedin.com",
             "www.rubikon.at (Website by Werbeagentur Rubikon)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 7 of 7 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -501,12 +666,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.cern/",
-        "fetched_at": "2026-09-28T22:53:43+00:00",
+        "fetched_at": "2026-09-28T23:44:54+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 39 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 3 of 60 used",
+        "crawl_note": "depth 2: 39 link(s) on the landing page, 5 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 13 of 60 used",
         "children": [
           {
             "url": "https://eosc.cern/contact",
@@ -551,6 +716,34 @@
             "error": ""
           },
           {
+            "url": "https://eosc.cern/policies",
+            "final_url": "https://eosc.cern/policies",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Policies",
+            "http_status": 200,
+            "title": "Policies — CERN Node",
+            "chars": 1180,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.cern/services",
+            "final_url": "https://eosc.cern/services",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services",
+            "http_status": 200,
+            "title": "CERN Node",
+            "chars": 2014,
+            "error": ""
+          },
+          {
             "url": "https://eosc.cern/about/collaboration",
             "final_url": "https://eosc.cern/about/collaboration",
             "depth": 2,
@@ -563,6 +756,48 @@
             "title": "CERN Node",
             "chars": 2568,
             "error": ""
+          },
+          {
+            "url": "https://eosc.cern/policies/aup",
+            "final_url": "https://eosc.cern/policies/aup",
+            "depth": 2,
+            "parent_url": "https://eosc.cern/policies",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "Acceptable Use Policy and Conditions of Use The rules you agree to when you use the Node’s services.",
+            "http_status": 200,
+            "title": "Acceptable Use Policy — CERN Node",
+            "chars": 4288,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.cern/policies/uap",
+            "final_url": "https://eosc.cern/policies/uap",
+            "depth": 2,
+            "parent_url": "https://eosc.cern/policies",
+            "selected_for": [
+              "5c"
+            ],
+            "link_text": "User Access Policy Who can use the services, and how you get access to them.",
+            "http_status": 200,
+            "title": "User Access Policy — CERN Node",
+            "chars": 1964,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.cern/about/technology",
+            "final_url": "https://eosc.cern/about/technology",
+            "depth": 2,
+            "parent_url": "https://eosc.cern/services",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Learn about the open-source technology behind these services →",
+            "http_status": 200,
+            "title": "CERN Node",
+            "chars": 2735,
+            "error": ""
           }
         ],
         "children_skipped": [
@@ -570,16 +805,40 @@
           "https://eosc.cern/contact (already fetched at depth 1)",
           "https://eosc.cern/about/cern (already fetched at depth 1)",
           "https://eosc.cern/about/cern-node (already fetched at depth 1)",
+          "https://eosc.cern/policies (already fetched at depth 1)",
+          "https://eosc.cern/services (already fetched at depth 1)",
           "https://eosc.cern/contact (already fetched at depth 1)",
           "https://eosc.cern/contact (already fetched at depth 1)",
           "https://eosc.cern/about/collaboration (already fetched at depth 1)",
           "https://eosc.cern/about/cern (already fetched at depth 1)",
           "https://eosc.cern/about/cern-node (already fetched at depth 1)",
           "https://eosc.cern/about/collaboration (already fetched at depth 1)",
+          "https://eosc.cern/policies (already fetched at depth 1)",
+          "https://eosc.cern/services (already fetched at depth 1)",
+          "https://eosc.cern/services (already fetched at depth 1)",
           "https://eosc.cern/contact (already fetched at depth 1)",
           "https://eosc.cern/about/cern (already fetched at depth 1)",
           "https://eosc.cern/about/cern-node (already fetched at depth 1)",
-          "https://eosc.cern/about/collaboration (already fetched at depth 1)"
+          "https://eosc.cern/about/collaboration (already fetched at depth 1)",
+          "https://eosc.cern/policies (already fetched at depth 1)",
+          "https://eosc.cern/services (already fetched at depth 1)",
+          "https://eosc.cern/contact (already fetched at depth 1)",
+          "https://eosc.cern/about/cern (already fetched at depth 1)",
+          "https://eosc.cern/about/cern-node (already fetched at depth 1)",
+          "https://eosc.cern/about/collaboration (already fetched at depth 1)",
+          "https://eosc.cern/policies/terms (depth 2 per-page cap)",
+          "https://eosc.cern/policies (already fetched at depth 1)",
+          "https://eosc.cern/services (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/aup (already fetched at depth 1)",
+          "https://eosc.cern/policies/uap (already fetched at depth 1)",
+          "https://eosc.cern/policies/uap (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -609,7 +868,7 @@
             "reana.cern.ch (REANA Workflow Execution Reusable Analysis platform. Allows researchers to run containerised data analysis pipelines on distributed compute clouds.)",
             "swan-eosc.cern.ch (Access the VRE, CERN VRE Interactive Analysis Powered by SWAN (Service for Web based ANalysis) — a platform to perform interactive data analysis in the cloud using Jupyter notebooks.)",
             "zenodo.org (Zenodo Publishing General-purpose open repository enabling researchers to deposit educational materials, datasets, software, and publications.)",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 9 of 9 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -663,28 +922,28 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page was fetched too.",
           "evidence": [
-            "39 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "4 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.cern/contact, https://eosc.cern/about/cern-node#stages, https://eosc.cern/about/cern, https://eosc.cern/about/collaboration",
-            "not read: \"Services\" -> https://eosc.cern/services",
-            "not read: \"Policies\" -> https://eosc.cern/policies"
+            "landing page -> https://eosc.cern/policies (\"Policies\")",
+            "via https://eosc.cern/policies: \"Acceptable Use Policy and Conditions of Use The rules you agree to when you use the Node’s services.\" -> https://eosc.cern/policies/aup",
+            "via https://eosc.cern/services: \"Acceptable Use Policy\" -> https://eosc.cern/policies/aup",
+            "via https://eosc.cern/policies/aup: \"Acceptable Use Policy — CERN Node\" -> https://eosc.cern/policies/aup"
           ],
-          "reviewer_action": "Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to a User Access Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page was fetched too.",
           "evidence": [
-            "39 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://eosc.cern/contact, https://eosc.cern/about/cern-node#stages, https://eosc.cern/about/cern, https://eosc.cern/about/collaboration",
-            "not read: \"Services\" -> https://eosc.cern/services",
-            "not read: \"Policies\" -> https://eosc.cern/policies"
+            "landing page -> https://eosc.cern/policies (\"Policies\")",
+            "via https://eosc.cern/policies: \"User Access Policy Who can use the services, and how you get access to them.\" -> https://eosc.cern/policies/uap",
+            "via https://eosc.cern/services: \"User Access Policy\" -> https://eosc.cern/policies/uap",
+            "via https://eosc.cern/policies/uap: \"User Access Policy — CERN Node\" -> https://eosc.cern/policies/uap"
           ],
-          "reviewer_action": "Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
@@ -737,7 +996,7 @@
             "reana.cern.ch (REANA Workflow Execution Reusable Analysis platform. Allows researchers to run containerised data analysis pipelines on distributed compute clouds.)",
             "swan-eosc.cern.ch (Access the VRE, CERN VRE Interactive Analysis Powered by SWAN (Service for Web based ANalysis) — a platform to perform interactive data analysis in the cloud using Jupyter notebooks.)",
             "zenodo.org (Zenodo Publishing General-purpose open repository enabling researchers to deposit educational materials, datasets, software, and publications.)",
-            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 5 of 5 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -791,28 +1050,26 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.",
           "evidence": [
-            "39 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "3 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.cern/contact, https://eosc.cern/about/cern-node#stages, https://eosc.cern/about/cern",
-            "not read: \"Services\" -> https://eosc.cern/services",
-            "not read: \"Policies\" -> https://eosc.cern/policies"
+            "landing page -> https://eosc.cern/policies (\"Policies\")",
+            "via https://eosc.cern/policies: \"Acceptable Use Policy and Conditions of Use The rules you agree to when you use the Node’s services.\" -> https://eosc.cern/policies/aup",
+            "via https://eosc.cern/services: \"Acceptable Use Policy\" -> https://eosc.cern/policies/aup"
           ],
-          "reviewer_action": "Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to a User Access Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.",
           "evidence": [
-            "39 link(s) on the landing page examined, none matching a User Access Policy",
-            "3 linked page(s) read, none linking to a User Access Policy: https://eosc.cern/contact, https://eosc.cern/about/cern-node#stages, https://eosc.cern/about/cern",
-            "not read: \"Services\" -> https://eosc.cern/services",
-            "not read: \"Policies\" -> https://eosc.cern/policies"
+            "landing page -> https://eosc.cern/policies (\"Policies\")",
+            "via https://eosc.cern/policies: \"User Access Policy Who can use the services, and how you get access to them.\" -> https://eosc.cern/policies/uap",
+            "via https://eosc.cern/services: \"User Access Policy\" -> https://eosc.cern/policies/uap"
           ],
-          "reviewer_action": "Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
@@ -847,12 +1104,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-09-28T22:53:59+00:00",
+        "fetched_at": "2026-09-28T23:45:20+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 78 link(s) on the landing page, 4 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 7 of 60 used",
+        "crawl_note": "depth 2: 78 link(s) on the landing page, 6 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 19 of 60 used",
         "children": [
           {
             "url": "https://www.eosc.cz/en/about-eosc-cz/contact",
@@ -912,6 +1169,34 @@
             "error": ""
           },
           {
+            "url": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+            "final_url": "https://www.techlib.cz/en/84940-czech-academic-and-research-discovery-services-cards",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Czech Academic and Research Discovery Services (CARDS)",
+            "http_status": 200,
+            "title": "Czech Academic and Research Discovery Services (CARDS) - Czech National Library of Technology",
+            "chars": 8224,
+            "error": ""
+          },
+          {
+            "url": "https://www.eosc.cz/en/services",
+            "final_url": "https://www.eosc.cz/en/services/all",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services",
+            "http_status": 200,
+            "title": "All | EOSC - European Open Science Cloud",
+            "chars": 4510,
+            "error": ""
+          },
+          {
             "url": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
             "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
             "depth": 2,
@@ -965,6 +1250,34 @@
             "http_status": 200,
             "title": "Acknowledgement and Citation | EOSC - European Open Science Cloud",
             "chars": 3739,
+            "error": ""
+          },
+          {
+            "url": "https://dmp.eosc.cz/en/",
+            "final_url": "https://dmp.eosc.cz/en/",
+            "depth": 2,
+            "parent_url": "https://www.eosc.cz/en/services/all",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Data Stewardship Wizard (NRP) An open-source tool in its pilot version, available in a localized instance for the Czech Republic. It helps researchers create DMPs in accordance with the FAIR principles and provides methodological support and documentation.",
+            "http_status": 200,
+            "title": "DMP.eosc.cz",
+            "chars": 1161,
+            "error": ""
+          },
+          {
+            "url": "https://www.eosc.cz/en/about-eosc-cz/faq",
+            "final_url": "https://www.eosc.cz/en/about-eosc-cz/faq",
+            "depth": 2,
+            "parent_url": "https://www.eosc.cz/en/services/all",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "FAQ",
+            "http_status": 200,
+            "title": "FAQ | EOSC - European Open Science Cloud",
+            "chars": 19030,
             "error": ""
           }
         ],
@@ -1020,7 +1333,15 @@
           "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz (already fetched at depth 1)",
           "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia (already fetched at depth 1)",
           "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data (already fetched at depth 1)",
-          "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz (already fetched at depth 1)"
+          "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz (already fetched at depth 1)",
+          "https://www.eosc.cz/en/about-eosc-cz/contact (already fetched at depth 1)",
+          "https://www.eosc.cz/en/projects/national-support (already fetched at depth 1)",
+          "https://www.eosc.cz/en/about-eosc-cz/contact (already fetched at depth 1)",
+          "https://www.eosc.cz/en/projects/national-support (already fetched at depth 1)",
+          "https://www.eosc.cz/en/services/data-storage/repositories-in-nrp (depth 2 cap for point 6)",
+          "https://www.eosc.cz/en/about-eosc-cz/contact (already fetched at depth 1)",
+          "https://www.eosc.cz/en/about-eosc-cz (already fetched at depth 1)",
+          "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -1050,7 +1371,7 @@
             "www.muni.cz (Masaryk University)",
             "www.youtube.com (Youtube)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 8 of 8 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 12 of 12 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1118,9 +1439,10 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "78 link(s) on the landing page examined, none matching a User Access Policy",
-            "8 linked page(s) read, none linking to a User Access Policy: https://www.eosc.cz/en/about-eosc-cz/contact, https://www.eosc.cz/en/projects/national-support, https://www.eosc.cz/en/about-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data ...",
+            "12 linked page(s) read, none linking to a User Access Policy: https://www.eosc.cz/en/about-eosc-cz/contact, https://www.eosc.cz/en/projects/national-support, https://www.eosc.cz/en/about-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz, https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards ...",
             "named in the text without a link: Access conditions",
-            "an Acceptable Use Policy: \"Acceptable Use Policy\" -> https://www.cesnet.cz/en/cesid-aup"
+            "an Acceptable Use Policy: \"Acceptable Use Policy\" -> https://www.cesnet.cz/en/cesid-aup",
+            "an Acceptable Use Policy via https://dmp.eosc.cz/en/: \"Terms of Service\" -> https://dmp.eosc.cz/en/terms-of-service"
           ],
           "reviewer_action": "Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
@@ -1174,7 +1496,7 @@
             "www.muni.cz (Masaryk University)",
             "www.youtube.com (Youtube)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 6 of 6 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1242,7 +1564,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "78 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://www.eosc.cz/en/about-eosc-cz/contact, https://www.eosc.cz/en/projects/national-support, https://www.eosc.cz/en/about-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+            "6 linked page(s) read, none linking to a User Access Policy: https://www.eosc.cz/en/about-eosc-cz/contact, https://www.eosc.cz/en/projects/national-support, https://www.eosc.cz/en/about-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz, https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards ...",
             "named in the text without a link: Access conditions",
             "an Acceptable Use Policy: \"Acceptable Use Policy\" -> https://www.cesnet.cz/en/cesid-aup"
           ],
@@ -1280,12 +1602,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-09-28T22:54:27+00:00",
+        "fetched_at": "2026-09-28T23:45:59+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 57 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 3 page(s); fetch budget: 10 of 60 used",
+        "crawl_note": "depth 2: 57 link(s) on the landing page, 7 followed because they matched a checklist point, 15 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 8 page(s); fetch budget: 27 of 60 used",
         "children": [
           {
             "url": "https://www.d4science.org/policies/access-and-acceptable-use",
@@ -1317,7 +1639,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUqchTVqrqRS1QqpUEGqBA5fKcTbUwrGD1%2Bbn7UlStRQJuHpnvp3d9Rx5o1pWeHfQW3j1gC4oEME6afTSaPQN2B3YNyngYbvJycG5Fhml6NvWWDeqEhQStICRsc%2BUdxzaI6ngSpVcvJBg1TGl5j3w286FMF47%2FM1vgasG6blCW2ucEUYNZBKsVznZz6o6q9NxGc6i9CpMsqQOOYdpmIyzdJJWZVRmZSdF9LDW6Lh2OYmjOA2jWRhP7%2BOYTRKWTJ5I8AgWh2zxKCLBR6M0sr5RTrzVzHCUyDRvAJkTbFfcbFgnZPy0pEtL%2B7%2FnNAdZzHs1G9LZhYWqkRr2Xbnyomfuz7PP6aVyfrzWbUder%2B6MkuIzKJQy78tuZw5y4qwHElwb23D3d5bxaDy8yCqsBymDhktVVJUFREIXx64%2Fv8XiCw%3D%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPb8IwDMW%2FSm85ldCuQhBRpAo0CYlNE2w77IJMYka0NOniZH%2B%2B%2FdoiGJO2XeP3fn62MyWoTSOqGA52ja8RKSQVEfqgnZ07S7FGv0H%2FpiU%2BrFclO4TQkOCcYtM4HwaqIKnRShw4%2F8yh5fAOySUYswP5wpJFy9QWOuC3HaR00Qb6ze8RTE38XOGNd8FJZ3oyS5aLkm3HalJIgF06Vvt9WuxBpYAyS0cFTIp8l%2B1yLFopUcSlpQA2lCwf5qN0OEnz8X1%2BJYqRyIonljyipz5bPhiy5KM2lkTXqGTRW%2BGANAkLNZIIUmyqm5VohQJOS7q0NP97TnOw2bRTiz6dn3lUtba4bcsqyo65Pc8%2B5ZfK6fFaty15ubhzRsvPpDLGvc%2FbnQUsWfARWXLtfA3h7yzZIOtftEr3vVRgDdpUSnkkYnx27PrzW8y%2BAA%3D%3D",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -1327,6 +1649,62 @@
             "http_status": 200,
             "title": "Sign in to D4Science Accounts prod",
             "chars": 582,
+            "error": ""
+          },
+          {
+            "url": "https://www.d4science.org/policies/privacy-and-data-protection",
+            "final_url": "https://www.d4science.org/policies/privacy-and-data-protection",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Read the privacy policy →",
+            "http_status": 200,
+            "title": "Privacy and Data Protection Policy | D4Science",
+            "chars": 9475,
+            "error": ""
+          },
+          {
+            "url": "https://eosc-dto.d4science.org/cookie-policy",
+            "final_url": "https://eosc-dto.d4science.org/cookie-policy",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Cookies Policy",
+            "http_status": 200,
+            "title": "European-DTO Gateway - Cookie Policy",
+            "chars": 2443,
+            "error": ""
+          },
+          {
+            "url": "https://eosc-dto.d4science.org/catalogue",
+            "final_url": "https://eosc-dto.d4science.org/catalogue",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Catalogue",
+            "http_status": 200,
+            "title": "European-DTO Gateway - Catalogue",
+            "chars": 0,
+            "error": ""
+          },
+          {
+            "url": "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud",
+            "final_url": "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Catalogue",
+            "http_status": 200,
+            "title": "European-DTO Gateway - Catalogue",
+            "chars": 0,
             "error": ""
           },
           {
@@ -1358,10 +1736,38 @@
             "error": ""
           },
           {
+            "url": "https://www.d4science.org/policies",
+            "final_url": "https://www.d4science.org/policies",
+            "depth": 2,
+            "parent_url": "https://eosc-dto.d4science.org/terms-of-use",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "D4Science Policy Framework",
+            "http_status": 200,
+            "title": "D4Science Policies | D4Science",
+            "chars": 2195,
+            "error": ""
+          },
+          {
+            "url": "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue",
+            "final_url": "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue",
+            "depth": 2,
+            "parent_url": "https://eosc-dto.d4science.org/terms-of-use",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Service Catalogue",
+            "http_status": 200,
+            "title": "European-DTO Gateway - Service Catalogue",
+            "chars": 0,
+            "error": ""
+          },
+          {
             "url": "https://www.d4science.org/terms-of-use",
             "final_url": "https://www.d4science.org/terms-of-use",
             "depth": 2,
-            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUqchTVqrqRS1QqpUEGqBA5fKcTbUwrGD1%2Bbn7UlStRQJuHpnvp3d9Rx5o1pWeHfQW3j1gC4oEME6afTSaPQN2B3YNyngYbvJycG5Fhml6NvWWDeqEhQStICRsc%2BUdxzaI6ngSpVcvJBg1TGl5j3w286FMF47%2FM1vgasG6blCW2ucEUYNZBKsVznZz6o6q9NxGc6i9CpMsqQOOYdpmIyzdJJWZVRmZSdF9LDW6Lh2OYmjOA2jWRhP7%2BOYTRKWTJ5I8AgWh2zxKCLBR6M0sr5RTrzVzHCUyDRvAJkTbFfcbFgnZPy0pEtL%2B7%2FnNAdZzHs1G9LZhYWqkRr2Xbnyomfuz7PP6aVyfrzWbUder%2B6MkuIzKJQy78tuZw5y4qwHElwb23D3d5bxaDy8yCqsBymDhktVVJUFREIXx64%2Fv8XiCw%3D%3D",
+            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPb8IwDMW%2FSm85ldCuQhBRpAo0CYlNE2w77IJMYka0NOniZH%2B%2B%2FdoiGJO2XeP3fn62MyWoTSOqGA52ja8RKSQVEfqgnZ07S7FGv0H%2FpiU%2BrFclO4TQkOCcYtM4HwaqIKnRShw4%2F8yh5fAOySUYswP5wpJFy9QWOuC3HaR00Qb6ze8RTE38XOGNd8FJZ3oyS5aLkm3HalJIgF06Vvt9WuxBpYAyS0cFTIp8l%2B1yLFopUcSlpQA2lCwf5qN0OEnz8X1%2BJYqRyIonljyipz5bPhiy5KM2lkTXqGTRW%2BGANAkLNZIIUmyqm5VohQJOS7q0NP97TnOw2bRTiz6dn3lUtba4bcsqyo65Pc8%2B5ZfK6fFaty15ubhzRsvPpDLGvc%2FbnQUsWfARWXLtfA3h7yzZIOtftEr3vVRgDdpUSnkkYnx27PrzW8y%2BAA%3D%3D",
             "selected_for": [
               "5b"
             ],
@@ -1370,9 +1776,66 @@
             "title": "Page not found | D4Science",
             "chars": 38,
             "error": ""
+          },
+          {
+            "url": "https://www.d4science.org/cookie-policy",
+            "final_url": "https://www.d4science.org/cookie-policy",
+            "depth": 2,
+            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPb8IwDMW%2FSm85ldCuQhBRpAo0CYlNE2w77IJMYka0NOniZH%2B%2B%2FdoiGJO2XeP3fn62MyWoTSOqGA52ja8RKSQVEfqgnZ07S7FGv0H%2FpiU%2BrFclO4TQkOCcYtM4HwaqIKnRShw4%2F8yh5fAOySUYswP5wpJFy9QWOuC3HaR00Qb6ze8RTE38XOGNd8FJZ3oyS5aLkm3HalJIgF06Vvt9WuxBpYAyS0cFTIp8l%2B1yLFopUcSlpQA2lCwf5qN0OEnz8X1%2BJYqRyIonljyipz5bPhiy5KM2lkTXqGTRW%2BGANAkLNZIIUmyqm5VohQJOS7q0NP97TnOw2bRTiz6dn3lUtba4bcsqyo65Pc8%2B5ZfK6fFaty15ubhzRsvPpDLGvc%2FbnQUsWfARWXLtfA3h7yzZIOtftEr3vVRgDdpUSnkkYnx27PrzW8y%2BAA%3D%3D",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Cookies Policy",
+            "http_status": 200,
+            "title": "Cookie Policy | D4Science",
+            "chars": 7726,
+            "error": ""
+          },
+          {
+            "url": "https://www.d4science.org/contact-us",
+            "final_url": "https://www.d4science.org/contact-us",
+            "depth": 2,
+            "parent_url": "https://www.d4science.org/policies/privacy-and-data-protection",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Contact us",
+            "http_status": 403,
+            "title": "Access denied | D4Science",
+            "chars": 43,
+            "error": ""
+          },
+          {
+            "url": "https://www.d4science.org/about-us",
+            "final_url": "https://www.d4science.org/about-us",
+            "depth": 2,
+            "parent_url": "https://www.d4science.org/policies/privacy-and-data-protection",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About Us",
+            "http_status": 200,
+            "title": "About Us | D4Science",
+            "chars": 4151,
+            "error": ""
           }
         ],
         "children_skipped": [
+          "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue (cap for point 5s)",
+          "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/carbonplanktondynamics (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/coastalcurrentsfromobservations (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/eoscnodeeudto-lab (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/ecosystem-workbench (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/eutrophication-workbench (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/globalfisheriesatlas (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/icooe (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/marineenvironmentalindicators (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/physics-workbench (cap for point 5s)",
+          "https://eosc-dto.d4science.org/explore (cap for point 5s)",
+          "https://eosc-dto.d4science.org/web/ecologicalrestorationlab (cap for point 5s)",
+          "https://eosc-dto.d4science.org/explore (cap for point 5s)",
+          "https://eosc-dto.d4science.org/explore (cap for point 5s)",
           "https://www.d4science.org/contact-us (depth 2 cap for point 6)",
           "https://www.d4science.org/contact-us (depth 2 cap for point 6)",
           "https://support.d4science.org (depth 2 cap for point 6)",
@@ -1381,7 +1844,43 @@
           "https://www.d4science.org/about-us/meet-our-team (depth 2 per-page cap)",
           "https://www.d4science.org/about-us (depth 2 per-page cap)",
           "https://www.d4science.org/about-us/meet-our-team (depth 2 per-page cap)",
-          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)"
+          "https://www.d4science.org/policies (depth 2 per-page cap)",
+          "https://www.d4science.org/policies (depth 2 per-page cap)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
+          "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud (already fetched at depth 1)",
+          "https://www.d4science.org/policies/terms-of-use (already fetched at depth 1)",
+          "https://www.d4science.org/support (already fetched at depth 1)",
+          "https://support.d4science.org (depth 2 cap for point 6)",
+          "https://www.d4science.org/support (already fetched at depth 1)",
+          "https://www.d4science.org/about-us/meet-our-team (depth 2 cap for point 2)",
+          "https://www.d4science.org/about-us/meet-our-team (depth 2 cap for point 2)",
+          "https://www.d4science.org/policies (already fetched at depth 1)",
+          "https://www.d4science.org/policies (already fetched at depth 1)",
+          "https://www.d4science.org/policies (already fetched at depth 1)",
+          "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
+          "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
+          "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
+          "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
+          "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -1408,8 +1907,9 @@
             "www.d4science.org (AUP, D4Science, D4Science Access and Acceptable Use Policy)",
             "www.marinerg-i.eu (Project information)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 5 of 6 followed page(s) were served anonymously, so those are publicly accessible",
-            "not served anonymously: https://www.d4science.org/terms-of-use -> HTTP 404"
+            "depth 1: 13 of 15 followed page(s) were served anonymously, so those are publicly accessible",
+            "not served anonymously: https://www.d4science.org/terms-of-use -> HTTP 404",
+            "not served anonymously: https://www.d4science.org/contact-us -> HTTP 403"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1420,7 +1920,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"A thematic node of the European Open Science Cloud EOSC Node | European Digital Twin Ocean Federating marine data, research environments, analytical services and computing resources for collaborative, FAIR and reproducible ocean science. Sign in with EOSC AAI Explore Resource Catalogue Explore Services Explore Research Environments This Node Landing Page is publicly accessible without login. Prote...\"",
-            "organisation-like names found: AUP Consortium; CNR; CNR CNR; ERIC; European Research Executive Agency; OGS HCMR EMSO-ERIC ETT University"
+            "organisation-like names found: AUP Consortium; CNR; CNR CNR; ERIC; European Research Executive Agency; OGS HCMR EMSO-ERIC ETT University",
+            "about page one level down: https://www.d4science.org/about-us (HTTP 200) opening text: \"D4Science is a digital infrastructure designed to offer diverse communities of practices a comprehensive suite of services through tailored and co-created virtual research environments promoting collaboration and innovation. It is operated as a not-for-profit ...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -1479,7 +1980,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "57 link(s) on the landing page examined, none matching a User Access Policy",
-            "5 linked page(s) read, none linking to a User Access Policy: https://www.d4science.org/policies/access-and-acceptable-use, https://eosc-dto.d4science.org/terms-of-use, https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new, https://www.d4science.org/policies/terms-of-use, https://www.d4science.org/support",
+            "13 linked page(s) read, none linking to a User Access Policy: https://www.d4science.org/policies/access-and-acceptable-use, https://eosc-dto.d4science.org/terms-of-use, https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new, https://www.d4science.org/policies/privacy-and-data-protection, https://eosc-dto.d4science.org/cookie-policy ...",
             "named in the text without a link: Access Polic, UAP, User Access Polic",
             "an Acceptable Use Policy: \"D4Science Access and Acceptable Use Policy\" -> https://www.d4science.org/policies/access-and-acceptable-use",
             "an Acceptable Use Policy: \"AUP\" -> https://www.d4science.org/policies/access-and-acceptable-use"
@@ -1533,7 +2034,7 @@
             "www.d4science.org (AUP, D4Science, D4Science Access and Acceptable Use Policy)",
             "www.marinerg-i.eu (Project information)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 7 of 7 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1603,7 +2104,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "57 link(s) on the landing page examined, none matching a User Access Policy",
-            "3 linked page(s) read, none linking to a User Access Policy: https://www.d4science.org/policies/access-and-acceptable-use, https://eosc-dto.d4science.org/terms-of-use, https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
+            "7 linked page(s) read, none linking to a User Access Policy: https://www.d4science.org/policies/access-and-acceptable-use, https://eosc-dto.d4science.org/terms-of-use, https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new, https://www.d4science.org/policies/privacy-and-data-protection, https://eosc-dto.d4science.org/cookie-policy ...",
             "named in the text without a link: Access Polic, UAP, User Access Polic",
             "an Acceptable Use Policy: \"D4Science Access and Acceptable Use Policy\" -> https://www.d4science.org/policies/access-and-acceptable-use",
             "an Acceptable Use Policy: \"AUP\" -> https://www.d4science.org/policies/access-and-acceptable-use"
@@ -1642,12 +2143,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.data-terra.org/eosc/",
-        "fetched_at": "2026-09-28T22:54:57+00:00",
+        "fetched_at": "2026-09-28T23:46:47+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 93 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 10 of 60 used",
+        "crawl_note": "depth 2: 93 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 28 of 60 used",
         "children": [
           {
             "url": "https://www.data-terra.org/contact-acces/",
@@ -1662,12 +2163,45 @@
             "title": "Contact & accès | Infrastructure de recherche Data Terra",
             "chars": 1489,
             "error": ""
+          },
+          {
+            "url": "https://www.data-terra.org/services/",
+            "final_url": "https://www.data-terra.org/services/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Les services proposés",
+            "http_status": 200,
+            "title": "Les services proposés par l'IR Data Terra | Infrastructure de recherche Data Terra",
+            "chars": 4403,
+            "error": ""
+          },
+          {
+            "url": "https://www.data-terra.org/offre-de-services/",
+            "final_url": "https://www.data-terra.org/offre-de-services/",
+            "depth": 2,
+            "parent_url": "https://www.data-terra.org/services/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Accès rapide aux données et services",
+            "http_status": 200,
+            "title": "Accès rapide aux données et services | Infrastructure de recherche Data Terra",
+            "chars": 2479,
+            "error": ""
           }
         ],
         "children_skipped": [
           "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)",
           "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)",
-          "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)"
+          "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)",
+          "https://www.data-terra.org/services/ (already fetched at depth 1)",
+          "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)",
+          "https://www.data-terra.org/contact-acces/ (already fetched at depth 1)",
+          "https://www.data-terra.org/services/ (already fetched at depth 1)",
+          "https://www.data-terra.org/services/ (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -1700,7 +2234,7 @@
             "www.cirad.fr",
             "www.cnrs.fr",
             "www.enseignementsup-recherche.gouv.fr",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1752,26 +2286,24 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "FAIL",
+          "message": "No pointer to an Acceptable Use Policy was found on the landing page. None of the 3 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
           "evidence": [
             "93 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "1 linked page(s) read, none linking to an Acceptable Use Policy: https://www.data-terra.org/contact-acces/",
-            "not read: \"Les services proposés\" -> https://www.data-terra.org/services/"
+            "3 linked page(s) read, none linking to an Acceptable Use Policy: https://www.data-terra.org/contact-acces/, https://www.data-terra.org/services/, https://www.data-terra.org/offre-de-services/"
           ],
-          "reviewer_action": "Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "FAIL",
+          "message": "No pointer to a User Access Policy was found on the landing page. None of the 3 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
           "evidence": [
             "93 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://www.data-terra.org/contact-acces/",
-            "not read: \"Les services proposés\" -> https://www.data-terra.org/services/"
+            "3 linked page(s) read, none linking to a User Access Policy: https://www.data-terra.org/contact-acces/, https://www.data-terra.org/services/, https://www.data-terra.org/offre-de-services/"
           ],
-          "reviewer_action": "Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
         },
         {
           "point_id": "6",
@@ -1827,7 +2359,7 @@
             "www.cirad.fr",
             "www.cnrs.fr",
             "www.enseignementsup-recherche.gouv.fr",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 2 of 2 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -1879,26 +2411,24 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "FAIL",
+          "message": "No pointer to an Acceptable Use Policy was found on the landing page. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
           "evidence": [
             "93 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "1 linked page(s) read, none linking to an Acceptable Use Policy: https://www.data-terra.org/contact-acces/",
-            "not read: \"Les services proposés\" -> https://www.data-terra.org/services/"
+            "2 linked page(s) read, none linking to an Acceptable Use Policy: https://www.data-terra.org/contact-acces/, https://www.data-terra.org/services/"
           ],
-          "reviewer_action": "Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
+          "verdict": "FAIL",
+          "message": "No pointer to a User Access Policy was found on the landing page. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
           "evidence": [
             "93 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://www.data-terra.org/contact-acces/",
-            "not read: \"Les services proposés\" -> https://www.data-terra.org/services/"
+            "2 linked page(s) read, none linking to a User Access Policy: https://www.data-terra.org/contact-acces/, https://www.data-terra.org/services/"
           ],
-          "reviewer_action": "Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
+          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
         },
         {
           "point_id": "6",
@@ -1933,12 +2463,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-09-28T22:55:07+00:00",
+        "fetched_at": "2026-09-28T23:47:03+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 85 link(s) on the landing page, 4 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 3 page(s); fetch budget: 13 of 60 used",
+        "crawl_note": "depth 2: 85 link(s) on the landing page, 8 followed because they matched a checklist point, 26 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 12 page(s); fetch budget: 40 of 60 used",
         "children": [
           {
             "url": "https://research.csc.fi/terms-of-use/",
@@ -1999,10 +2529,10 @@
           {
             "url": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
             "final_url": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
-            "depth": 2,
-            "parent_url": "https://research.csc.fi/terms-of-use/",
+            "depth": 1,
+            "parent_url": "",
             "selected_for": [
-              "5b"
+              "5p"
             ],
             "link_text": "Personal Data Processing Agreement",
             "http_status": 200,
@@ -2013,15 +2543,99 @@
           {
             "url": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
             "final_url": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
-            "depth": 2,
-            "parent_url": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+            "depth": 1,
+            "parent_url": "",
             "selected_for": [
-              "5b"
+              "5p"
             ],
             "link_text": "Export restrictions and sanctions",
             "http_status": 200,
             "title": "Export restrictions and sanctions - Services for Research",
             "chars": 4273,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi",
+            "final_url": "https://research.csc.fi/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services for research",
+            "http_status": 200,
+            "title": "Home - Services for Research",
+            "chars": 1722,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/service",
+            "final_url": "https://research.csc.fi/service/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Service catalog",
+            "http_status": 200,
+            "title": "Services - Services for Research",
+            "chars": 4206,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/policies/",
+            "final_url": "https://research.csc.fi/policies/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/terms-of-use/",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Policies",
+            "http_status": 200,
+            "title": "Policies - Services for Research",
+            "chars": 628,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/service-break",
+            "final_url": "https://research.csc.fi/service-break/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/terms-of-use/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Service breaks",
+            "http_status": 200,
+            "title": "Service breaks - Services for Research",
+            "chars": 2622,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/policies/dmpol/",
+            "final_url": "https://research.csc.fi/policies/dmpol/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "CSC research infrastructure data management policy",
+            "http_status": 200,
+            "title": "CSC research infrastructure data management policy - Services for Research",
+            "chars": 16734,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/resources/",
+            "final_url": "https://research.csc.fi/resources/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Resource allocation",
+            "http_status": 200,
+            "title": "Resource allocation - Services for Research",
+            "chars": 4093,
             "error": ""
           },
           {
@@ -2037,31 +2651,153 @@
             "title": "CSC Research Support Coffee – Every Wednesday at 14:00 Finnish time - Services for Research",
             "chars": 1449,
             "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/policies/pid-policy/",
+            "final_url": "https://research.csc.fi/policies/pid-policy/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/support/",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Persistent identifier (PID) policy",
+            "http_status": 200,
+            "title": "Persistent identifier (PID) policy - Services for Research",
+            "chars": 4448,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/resources/applying-for-resources/",
+            "final_url": "https://research.csc.fi/resources/applying-for-resources/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Applying for resources",
+            "http_status": 200,
+            "title": "Applying for resources - Services for Research",
+            "chars": 4589,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+            "final_url": "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Extremely large resources",
+            "http_status": 200,
+            "title": "Extremely large resources - Services for Research",
+            "chars": 5262,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/resources/quotas/",
+            "final_url": "https://research.csc.fi/resources/quotas/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Managing service quotas",
+            "http_status": 200,
+            "title": "Managing service quotas - Services for Research",
+            "chars": 3694,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/cloud-computing/",
+            "final_url": "https://research.csc.fi/cloud-computing/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Cloud services",
+            "http_status": 200,
+            "title": "Cloud services - Services for Research",
+            "chars": 4193,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/service/advanced-support/",
+            "final_url": "https://research.csc.fi/service/advanced-support/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/service/",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Advanced support",
+            "http_status": 200,
+            "title": "Advanced support - Services for Research",
+            "chars": 2308,
+            "error": ""
+          },
+          {
+            "url": "https://research.csc.fi/sensitive-data/",
+            "final_url": "https://research.csc.fi/sensitive-data/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/service/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services for sensitive data",
+            "http_status": 200,
+            "title": "Services for sensitive data - Services for Research",
+            "chars": 1974,
+            "error": ""
           }
         ],
         "children_skipped": [
           "https://research.csc.fi/terms-of-use/data-processing-agreement/ (cap for point 5b)",
           "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (cap for point 5b)",
+          "https://research.csc.fi/policies/ (cap for point 5p)",
+          "https://research.csc.fi/policies/dmpol/ (cap for point 5p)",
+          "https://research.csc.fi/policies/pid-policy/ (cap for point 5p)",
+          "https://research.csc.fi/service-break (cap for point 5s)",
+          "https://research.csc.fi/resources/ (cap for point 5s)",
+          "https://research.csc.fi/resources/applying-for-resources/ (cap for point 5s)",
+          "https://research.csc.fi/resources/applying-for-resources/extremely-large-resources/ (cap for point 5s)",
+          "https://research.csc.fi/resources/quotas/ (cap for point 5s)",
+          "https://research.csc.fi/cloud-computing/ (cap for point 5s)",
+          "https://research.csc.fi/sensitive-data/ (cap for point 5s)",
+          "https://research.csc.fi/sensitive-data/compare-sd-services-and-e-pouta/ (cap for point 5s)",
+          "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/ (cap for point 5s)",
+          "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/overview-for-it-personnel-and-organizations/ (cap for point 5s)",
+          "https://research.csc.fi/sensitive-data/sensitive-data-sd-services-for-research/links-to-services/ (cap for point 5s)",
+          "https://research.csc.fi/sciences/ (cap for point 5s)",
+          "https://research.csc.fi/educational-use/ (cap for point 5s)",
+          "https://research.csc.fi/commercial-use/ (cap for point 5s)",
+          "https://research.csc.fi/commercial-use/pricing/ (cap for point 5s)",
+          "https://research.csc.fi/security/privacy-notice-for-remote-identification-service/ (cap for point 5s)",
+          "https://research.csc.fi/eosc-the-finnish-candidate-node/dataset-as-a-service/ (cap for point 5s)",
+          "https://research.csc.fi/eosc-the-finnish-candidate-node/eosc-the-finnish-candidate-node-relevance-for-service-providers-and-research-performing-organisation/ (cap for point 5s)",
+          "https://research.csc.fi/eosc-the-finnish-candidate-node/myaccessid-a-new-way-to-access-csc-services/ (cap for point 5s)",
+          "https://research.csc.fi/eosc-services/ (cap for point 5s)",
+          "https://research.csc.fi/service-break (cap for point 5s)",
           "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
-          "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (depth 2 cap for point 5b)",
+          "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+          "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
-          "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (depth 2 cap for point 5b)",
+          "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+          "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/#1 (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/#2 (already fetched at depth 1)",
-          "https://research.csc.fi/terms-of-use/#3 (already fetched at depth 1)",
-          "https://research.csc.fi/terms-of-use/#31 (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+          "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+          "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
-          "https://research.csc.fi/support (already fetched at depth 1)",
-          "https://research.csc.fi/support (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
@@ -2072,9 +2808,10 @@
           "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
-          "https://research.csc.fi/support (already fetched at depth 1)",
-          "https://research.csc.fi/support (already fetched at depth 1)",
-          "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/ (already fetched at depth 1)"
+          "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
+          "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
+          "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
+          "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -2107,7 +2844,7 @@
             "www.research.fi (Research.fi (External link))",
             "www.youtube.com (YouTube (External link))",
             "EOSC AAI indicators seen: MyAccessID, myaccessid",
-            "depth 1: 7 of 7 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 20 of 20 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -2177,7 +2914,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "85 link(s) on the landing page examined, none matching a User Access Policy",
-            "7 linked page(s) read, none linking to a User Access Policy: https://research.csc.fi/terms-of-use/, https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/, https://research.csc.fi/support, https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/, https://research.csc.fi/terms-of-use/data-processing-agreement/ ...",
+            "20 linked page(s) read, none linking to a User Access Policy: https://research.csc.fi/terms-of-use/, https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/, https://research.csc.fi/support, https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/, https://research.csc.fi/terms-of-use/data-processing-agreement/ ...",
             "an Acceptable Use Policy: \"Terms of use\" -> https://research.csc.fi/terms-of-use/",
             "an Acceptable Use Policy: \"Prerequisites and responsibilities for a CSC project manager\" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/"
           ],
@@ -2236,7 +2973,7 @@
             "www.research.fi (Research.fi (External link))",
             "www.youtube.com (YouTube (External link))",
             "EOSC AAI indicators seen: MyAccessID, myaccessid",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 8 of 8 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -2306,7 +3043,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "85 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://research.csc.fi/terms-of-use/, https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/, https://research.csc.fi/support, https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/",
+            "8 linked page(s) read, none linking to a User Access Policy: https://research.csc.fi/terms-of-use/, https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/, https://research.csc.fi/support, https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/, https://research.csc.fi/terms-of-use/data-processing-agreement/ ...",
             "an Acceptable Use Policy: \"Terms of use\" -> https://research.csc.fi/terms-of-use/",
             "an Acceptable Use Policy: \"Prerequisites and responsibilities for a CSC project manager\" -> https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/"
           ],
@@ -2344,12 +3081,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-09-28T22:55:31+00:00",
+        "fetched_at": "2026-09-28T23:48:01+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "panosc.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 123 link(s) on the landing page, 3 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 14 of 60 used",
+        "crawl_note": "depth 2: 123 link(s) on the landing page, 7 followed because they matched a checklist point, 3 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 3 page(s); fetch budget: 43 of 60 used",
         "children": [
           {
             "url": "https://www.panosc.eu/contact/",
@@ -2394,6 +3131,62 @@
             "error": ""
           },
           {
+            "url": "https://www.panosc.eu/data/panosc-data-policy-framework/",
+            "final_url": "https://www.panosc.eu/data/panosc-data-policy-framework/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "PaNOSC data policy framework",
+            "http_status": 200,
+            "title": "PaNOSC data policy framework - Panosc",
+            "chars": 5233,
+            "error": ""
+          },
+          {
+            "url": "https://www.panosc.eu/privacy-policy/",
+            "final_url": "https://www.panosc.eu/privacy-policy/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Privacy",
+            "http_status": 200,
+            "title": "Privacy Policy - Panosc",
+            "chars": 16328,
+            "error": ""
+          },
+          {
+            "url": "https://www.panosc.eu/services/",
+            "final_url": "https://www.panosc.eu/services/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services",
+            "http_status": 200,
+            "title": "Services Archive - Panosc",
+            "chars": 3447,
+            "error": ""
+          },
+          {
+            "url": "https://www.panosc.eu/training-catalogue/",
+            "final_url": "https://www.panosc.eu/training-catalogue/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Training",
+            "http_status": 200,
+            "title": "Training Catalogue - Panosc",
+            "chars": 3406,
+            "error": ""
+          },
+          {
             "url": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
             "final_url": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
             "depth": 2,
@@ -2406,11 +3199,40 @@
             "title": "Photon and Neutron Competence Centre - Panosc",
             "chars": 3950,
             "error": ""
+          },
+          {
+            "url": "https://www.panosc.eu/services/pan-software-catalogue/",
+            "final_url": "https://www.panosc.eu/services/pan-software-catalogue/",
+            "depth": 2,
+            "parent_url": "https://www.panosc.eu/services/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Software Access the PaN software catalogue linked to the analysis and simulation software used in PaN facilities. Find documentation, links and complete examples of data sets and practical information about the scientific instruments used to collect them. More info",
+            "http_status": 200,
+            "title": "Software - Panosc",
+            "chars": 2751,
+            "error": ""
+          },
+          {
+            "url": "https://www.panosc.eu/services/data-catalogue/",
+            "final_url": "https://www.panosc.eu/services/data-catalogue/",
+            "depth": 2,
+            "parent_url": "https://www.panosc.eu/services/",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Data Catalogue Search, find and access data from PaN sources across the federated, cross-disciplinary and cross-border data catalogues infrastructure. Get easy access to the broadest sets of data from the diverse catalogues of European photon and neutron facilities, through the PaNOSC data catalogue",
+            "http_status": 200,
+            "title": "Data Catalogue - Panosc",
+            "chars": 4131,
+            "error": ""
           }
         ],
         "children_skipped": [
           "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (cap for point 2)",
           "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (cap for point 2)",
+          "https://services.panosc.eu (cap for point 5s)",
           "https://www.panosc.eu/contact/ (already fetched at depth 1)",
           "https://www.panosc.eu/contact/ (already fetched at depth 1)",
           "https://www.panosc.eu/contact/ (already fetched at depth 1)",
@@ -2440,7 +3262,34 @@
           "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)",
           "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
           "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
-          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)"
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)",
+          "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)",
+          "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+          "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -2474,7 +3323,7 @@
             "ess.eu (ESS)",
             "github.com (PaNOSC repository on Github)",
             "ill.eu (ILL)",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 10 of 10 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -2533,10 +3382,8 @@
           "message": "No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
           "evidence": [
             "123 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "4 linked page(s) read, none linking to an Acceptable Use Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
-            "not read: \"Services\" -> https://www.panosc.eu/services/",
-            "not read: \"PaNOSC data policy framework\" -> https://www.panosc.eu/data/panosc-data-policy-framework/",
-            "not read: \"Training\" -> https://www.panosc.eu/training-catalogue/"
+            "10 linked page(s) read, none linking to an Acceptable Use Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/data/panosc-data-policy-framework/, https://www.panosc.eu/privacy-policy/ ...",
+            "not read: \"PaNOSC node services\" -> https://services.panosc.eu"
           ],
           "reviewer_action": "Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
         },
@@ -2547,10 +3394,8 @@
           "message": "No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
           "evidence": [
             "123 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
-            "not read: \"Services\" -> https://www.panosc.eu/services/",
-            "not read: \"PaNOSC data policy framework\" -> https://www.panosc.eu/data/panosc-data-policy-framework/",
-            "not read: \"Training\" -> https://www.panosc.eu/training-catalogue/"
+            "10 linked page(s) read, none linking to a User Access Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/data/panosc-data-policy-framework/, https://www.panosc.eu/privacy-policy/ ...",
+            "not read: \"PaNOSC node services\" -> https://services.panosc.eu"
           ],
           "reviewer_action": "Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
         },
@@ -2612,7 +3457,7 @@
             "ess.eu (ESS)",
             "github.com (PaNOSC repository on Github)",
             "ill.eu (ILL)",
-            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 7 of 7 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -2671,10 +3516,8 @@
           "message": "No pointer to an Acceptable Use Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
           "evidence": [
             "123 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "3 linked page(s) read, none linking to an Acceptable Use Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/",
-            "not read: \"Services\" -> https://www.panosc.eu/services/",
-            "not read: \"PaNOSC data policy framework\" -> https://www.panosc.eu/data/panosc-data-policy-framework/",
-            "not read: \"Training\" -> https://www.panosc.eu/training-catalogue/"
+            "7 linked page(s) read, none linking to an Acceptable Use Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/data/panosc-data-policy-framework/, https://www.panosc.eu/privacy-policy/ ...",
+            "not read: \"PaNOSC node services\" -> https://services.panosc.eu"
           ],
           "reviewer_action": "Open those pages and look for an Acceptable Use Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
         },
@@ -2685,10 +3528,8 @@
           "message": "No pointer to a User Access Policy was found on the pages the tool read, but the landing page links to pages that may carry it (a policies, legal, services or resources page) which were not read. Checklist v3.2 accepts the policy on intermediate pages linked by the NLP.",
           "evidence": [
             "123 link(s) on the landing page examined, none matching a User Access Policy",
-            "3 linked page(s) read, none linking to a User Access Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/",
-            "not read: \"Services\" -> https://www.panosc.eu/services/",
-            "not read: \"PaNOSC data policy framework\" -> https://www.panosc.eu/data/panosc-data-policy-framework/",
-            "not read: \"Training\" -> https://www.panosc.eu/training-catalogue/"
+            "7 linked page(s) read, none linking to a User Access Policy: https://www.panosc.eu/contact/, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/, https://www.panosc.eu/data/panosc-data-policy-framework/, https://www.panosc.eu/privacy-policy/ ...",
+            "not read: \"PaNOSC node services\" -> https://services.panosc.eu"
           ],
           "reviewer_action": "Open those pages and look for a User Access Policy for each resource. Collecting the evidence again at depth 1 or more would read them."
         },
@@ -2728,12 +3569,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-09-28T22:55:51+00:00",
+        "fetched_at": "2026-09-28T23:48:32+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 11 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 18 of 60 used",
+        "crawl_note": "depth 2: 11 link(s) on the landing page, 5 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 9 page(s); fetch budget: 52 of 60 used",
         "children": [
           {
             "url": "https://www.eudat.eu/eudat-cdi-aup",
@@ -2778,6 +3619,34 @@
             "error": ""
           },
           {
+            "url": "https://www.eudat.eu/privacy-policy",
+            "final_url": "https://www.eudat.eu/privacy-policy",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Privacy Policy",
+            "http_status": 200,
+            "title": "Privacy Policy | EUDAT",
+            "chars": 15031,
+            "error": ""
+          },
+          {
+            "url": "https://eudat.eu/catalogue",
+            "final_url": "https://eudat.eu/catalogue",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Service catalogue Browse the EUDAT Node services you can order, no account needed.",
+            "http_status": 200,
+            "title": "EUDAT Service catalogue | EUDAT",
+            "chars": 1404,
+            "error": ""
+          },
+          {
             "url": "https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies",
             "final_url": "https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies",
             "depth": 2,
@@ -2803,6 +3672,20 @@
             "http_status": 200,
             "title": "EUDAT Service catalogue | EUDAT",
             "chars": 1404,
+            "error": ""
+          },
+          {
+            "url": "https://portal.eudat.eu/catalog",
+            "final_url": "https://portal.eudat.eu/catalog",
+            "depth": 2,
+            "parent_url": "https://portal.eudat.eu/helpdesk",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Catalog",
+            "http_status": 200,
+            "title": "Service Catalog | EUDAT",
+            "chars": 1615,
             "error": ""
           },
           {
@@ -2832,6 +3715,62 @@
             "title": "About - EUDAT Documentation",
             "chars": 2437,
             "error": ""
+          },
+          {
+            "url": "https://www.eudat.eu/contact-support-request",
+            "final_url": "https://www.eudat.eu/contact-support-request",
+            "depth": 2,
+            "parent_url": "https://www.eudat.eu/privacy-policy",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Help Desk",
+            "http_status": 200,
+            "title": "Contact & Support request | EUDAT",
+            "chars": 645,
+            "error": ""
+          },
+          {
+            "url": "https://www.eudat.eu/about",
+            "final_url": "https://www.eudat.eu/about",
+            "depth": 2,
+            "parent_url": "https://www.eudat.eu/privacy-policy",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About",
+            "http_status": 200,
+            "title": "EUDAT | EUDAT",
+            "chars": 2604,
+            "error": ""
+          },
+          {
+            "url": "https://eudat.eu/about",
+            "final_url": "https://eudat.eu/about",
+            "depth": 2,
+            "parent_url": "https://eudat.eu/catalogue",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About",
+            "http_status": 200,
+            "title": "EUDAT | EUDAT",
+            "chars": 2604,
+            "error": ""
+          },
+          {
+            "url": "https://eudat.eu/service-catalogue/b2safe",
+            "final_url": "https://eudat.eu/service-catalogue/b2safe",
+            "depth": 2,
+            "parent_url": "https://eudat.eu/catalogue",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "B2SAFE Keep research data safe via data management policies View service",
+            "http_status": 200,
+            "title": "B2SAFE | EUDAT",
+            "chars": 8912,
+            "error": ""
           }
         ],
         "children_skipped": [
@@ -2847,6 +3786,7 @@
           "https://www.eudat.eu/about (depth 2 per-page cap)",
           "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
           "https://portal.eudat.eu/helpdesk (already fetched at depth 1)",
+          "https://www.eudat.eu/privacy-policy (already fetched at depth 1)",
           "https://eudat.eu/contact-support-request?service=DOCUMENTATION (depth 2 cap for point 6)",
           "https://docs.eudat.eu/b2drop/about/ (depth 2 cap for point 2)",
           "https://docs.eudat.eu/b2find/about/ (depth 2 cap for point 2)",
@@ -2854,7 +3794,29 @@
           "https://docs.eudat.eu/b2inst/about/ (depth 2 cap for point 2)",
           "https://docs.eudat.eu/b2safe/about/ (depth 2 cap for point 2)",
           "https://docs.eudat.eu/b2share/about/ (depth 2 cap for point 2)",
-          "https://docs.eudat.eu/datacite/about/ (depth 2 cap for point 2)"
+          "https://docs.eudat.eu/datacite/about/ (depth 2 cap for point 2)",
+          "https://docs.eudat.eu/b2share/communities/community-settings/ (depth 2 per-page cap)",
+          "https://docs.eudat.eu/b2access/howto-services/ (depth 2 per-page cap)",
+          "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/privacy-policy-summary (depth 2 per-page cap)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+          "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
+          "https://eudat.eu/catalogue (already fetched at depth 1)",
+          "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+          "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+          "https://eudat.eu/catalogue (already fetched at depth 1)",
+          "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+          "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+          "https://eudat.eu/catalogue (already fetched at depth 1)",
+          "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+          "https://eudat.eu/contact-support-request (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -2879,7 +3841,7 @@
             "docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node services.)",
             "eudat.eu (Service catalogue Browse the EUDAT Node services you can order, no account needed.)",
             "www.eudat.eu (Accessibility Statement, EUDAT AUP, FAQs)",
-            "depth 1: 7 of 7 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 14 of 14 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -2948,7 +3910,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "11 link(s) on the landing page examined, none matching a User Access Policy",
-            "7 linked page(s) read, none linking to a User Access Policy: https://www.eudat.eu/eudat-cdi-aup, https://portal.eudat.eu/helpdesk, https://docs.eudat.eu, https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies, https://www.eudat.eu/catalogue ...",
+            "14 linked page(s) read, none linking to a User Access Policy: https://www.eudat.eu/eudat-cdi-aup, https://portal.eudat.eu/helpdesk, https://docs.eudat.eu, https://www.eudat.eu/privacy-policy, https://eudat.eu/catalogue ...",
             "an Acceptable Use Policy: \"EUDAT AUP\" -> https://www.eudat.eu/eudat-cdi-aup",
             "an Acceptable Use Policy via https://www.eudat.eu/eudat-cdi-aup: \"EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT\" -> https://www.eudat.eu/eudat-cdi-aup"
           ],
@@ -2998,7 +3960,7 @@
             "docs.eudat.eu (Set up your workspace Read about the first steps in becoming an EUDAT Node user., User Guides Browse guides on how to best use the EUDAT Node services.)",
             "eudat.eu (Service catalogue Browse the EUDAT Node services you can order, no account needed.)",
             "www.eudat.eu (Accessibility Statement, EUDAT AUP, FAQs)",
-            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 5 of 5 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -3067,7 +4029,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "11 link(s) on the landing page examined, none matching a User Access Policy",
-            "3 linked page(s) read, none linking to a User Access Policy: https://www.eudat.eu/eudat-cdi-aup, https://portal.eudat.eu/helpdesk, https://docs.eudat.eu",
+            "5 linked page(s) read, none linking to a User Access Policy: https://www.eudat.eu/eudat-cdi-aup, https://portal.eudat.eu/helpdesk, https://docs.eudat.eu, https://www.eudat.eu/privacy-policy, https://eudat.eu/catalogue",
             "an Acceptable Use Policy: \"EUDAT AUP\" -> https://www.eudat.eu/eudat-cdi-aup",
             "an Acceptable Use Policy via https://www.eudat.eu/eudat-cdi-aup: \"EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT\" -> https://www.eudat.eu/eudat-cdi-aup"
           ],
@@ -3104,12 +4066,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-09-28T22:56:18+00:00",
+        "fetched_at": "2026-09-28T23:49:15+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 167 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 19 of 60 used",
+        "crawl_note": "depth 2: 167 link(s) on the landing page, 5 followed because they matched a checklist point, 15 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 7 page(s); fetch budget: 59 of 60 used",
         "children": [
           {
             "url": "https://www.egi.eu/terms-of-use/",
@@ -3154,6 +4116,76 @@
             "error": ""
           },
           {
+            "url": "https://www.egi.eu/services/",
+            "final_url": "https://www.egi.eu/services",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services",
+            "http_status": 200,
+            "title": "EGI Federation - Services",
+            "chars": 6212,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/services/research/",
+            "final_url": "https://www.egi.eu/services/research",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services for Research",
+            "http_status": 200,
+            "title": "EGI Federation - Services for Research",
+            "chars": 7142,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/privacy-policy/",
+            "final_url": "https://www.egi.eu/privacy-notice-surveys",
+            "depth": 2,
+            "parent_url": "https://www.egi.eu/terms-of-use",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "www.egi.eu/privacy-policy/",
+            "http_status": 200,
+            "title": "Privacy Notice for Surveys - EGI",
+            "chars": 19585,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/services/business/",
+            "final_url": "https://www.egi.eu/services/business",
+            "depth": 2,
+            "parent_url": "https://www.egi.eu/terms-of-use",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services for Business",
+            "http_status": 200,
+            "title": "Services for Business - EGI",
+            "chars": 5203,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/services/federation/",
+            "final_url": "https://www.egi.eu/services/federation",
+            "depth": 2,
+            "parent_url": "https://www.egi.eu/contact-us",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Services for Federation",
+            "http_status": 200,
+            "title": "Services for Federation - EGI",
+            "chars": 3305,
+            "error": ""
+          },
+          {
             "url": "https://www.egi.eu/egi-federation/",
             "final_url": "https://www.egi.eu/egi-federation",
             "depth": 2,
@@ -3166,9 +4198,66 @@
             "title": "EGI Federation - EGI",
             "chars": 5989,
             "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/service-contracts/",
+            "final_url": "https://www.egi.eu/service-contracts",
+            "depth": 2,
+            "parent_url": "https://www.egi.eu/about",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Service Contracts",
+            "http_status": 200,
+            "title": "Service Contracts - EGI",
+            "chars": 3923,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/resources/",
+            "final_url": "https://www.egi.eu/resources",
+            "depth": 2,
+            "parent_url": "https://www.egi.eu/services",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Resources",
+            "http_status": 200,
+            "title": "Resources - EGI",
+            "chars": 2143,
+            "error": ""
+          },
+          {
+            "url": "https://www.egi.eu/service/cloud-compute/",
+            "final_url": "https://www.egi.eu/service/cloud-compute",
+            "depth": 2,
+            "parent_url": "https://www.egi.eu/services/research",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Cloud Compute Run virtual machines on demand with complete control over computing resources More info",
+            "http_status": 200,
+            "title": "EGI Federation - Service - Cloud Compute",
+            "chars": 6281,
+            "error": ""
           }
         ],
         "children_skipped": [
+          "https://www.egi.eu/services/business/ (cap for point 5s)",
+          "https://www.egi.eu/services/federation/ (cap for point 5s)",
+          "https://www.egi.eu/service-contracts/ (cap for point 5s)",
+          "https://www.egi.eu/resources/ (cap for point 5s)",
+          "https://www.egi.eu/services/business/ (cap for point 5s)",
+          "https://www.egi.eu/services/federation/ (cap for point 5s)",
+          "https://www.egi.eu/service-contracts/ (cap for point 5s)",
+          "https://www.egi.eu/resources/ (cap for point 5s)",
+          "https://www.egi.eu/egi-for-eosc/ (cap for point 5s)",
+          "https://www.egi.eu/services-enabling-federated-computing-in-eosc/ (cap for point 5s)",
+          "https://www.egi.eu/services/business/ (cap for point 5s)",
+          "https://www.egi.eu/services/federation/ (cap for point 5s)",
+          "https://www.egi.eu/solution/service-hosting/ (cap for point 5s)",
+          "https://www.egi.eu/resources/ (cap for point 5s)",
+          "https://www.egi.eu/service-contracts/ (cap for point 5s)",
           "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
@@ -3176,6 +4265,9 @@
           "https://www.egi.eu/about/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/research/ (already fetched at depth 1)",
           "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
@@ -3183,10 +4275,31 @@
           "https://www.egi.eu/about/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/research/ (already fetched at depth 1)",
           "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/research/ (already fetched at depth 1)",
+          "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+          "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+          "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+          "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/about/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/ (already fetched at depth 1)",
+          "https://www.egi.eu/services/research/ (already fetched at depth 1)",
+          "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
+          "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)",
           "https://www.egi.eu/about/ (already fetched at depth 1)"
@@ -3216,7 +4329,7 @@
             "www.youtube.com",
             "zenodo.org (EGI on Zenodo)",
             "EOSC AAI indicators seen: EGI Check-in",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 12 of 12 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -3285,7 +4398,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "167 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://www.egi.eu/terms-of-use/, https://www.egi.eu/contact-us/, https://www.egi.eu/about/, https://www.egi.eu/egi-federation/",
+            "12 linked page(s) read, none linking to a User Access Policy: https://www.egi.eu/terms-of-use/, https://www.egi.eu/contact-us/, https://www.egi.eu/about/, https://www.egi.eu/services/, https://www.egi.eu/services/research/ ...",
             "named in the text without a link: Access Polic",
             "an Acceptable Use Policy: \"terms of use\" -> https://www.egi.eu/terms-of-use/",
             "an Acceptable Use Policy via https://www.egi.eu/terms-of-use/: \"Terms of Use - EGI\" -> https://www.egi.eu/terms-of-use"
@@ -3341,7 +4454,7 @@
             "www.youtube.com",
             "zenodo.org (EGI on Zenodo)",
             "EOSC AAI indicators seen: EGI Check-in",
-            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 5 of 5 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -3410,7 +4523,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "167 link(s) on the landing page examined, none matching a User Access Policy",
-            "3 linked page(s) read, none linking to a User Access Policy: https://www.egi.eu/terms-of-use/, https://www.egi.eu/contact-us/, https://www.egi.eu/about/",
+            "5 linked page(s) read, none linking to a User Access Policy: https://www.egi.eu/terms-of-use/, https://www.egi.eu/contact-us/, https://www.egi.eu/about/, https://www.egi.eu/services/, https://www.egi.eu/services/research/",
             "named in the text without a link: Access Polic",
             "an Acceptable Use Policy: \"terms of use\" -> https://www.egi.eu/terms-of-use/",
             "an Acceptable Use Policy via https://www.egi.eu/terms-of-use/: \"Terms of Use - EGI\" -> https://www.egi.eu/terms-of-use"
@@ -3451,12 +4564,12 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-09-28T22:56:35+00:00",
+        "fetched_at": "2026-09-28T23:49:50+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 19 of 60 used",
+        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 59 of 60 used",
         "children": [],
         "children_skipped": []
       },
@@ -3691,12 +4804,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-09-28T22:56:42+00:00",
+        "fetched_at": "2026-09-28T23:49:56+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 35 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 19 of 60 used",
+        "crawl_note": "depth 2: 35 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 60 of 60 used",
         "children": [
           {
             "url": "https://eosc.pl/terms-of-use",
@@ -3711,10 +4824,76 @@
             "title": "Polish Open Science Platform",
             "chars": 6530,
             "error": ""
+          },
+          {
+            "url": "https://eosc.pl/privacy-policy",
+            "final_url": "https://eosc.pl/privacy-policy",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Privacy policy",
+            "http_status": 200,
+            "title": "Polish Open Science Platform",
+            "chars": 15021,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.pl/search/all_collection?q=*",
+            "final_url": "https://eosc.pl/search/all_collection?q=*",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Browse resources",
+            "http_status": 200,
+            "title": "Polish Open Science Platform",
+            "chars": 2237,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.pl/search/data_source",
+            "final_url": "https://eosc.pl/search/data_source?q=*",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Browse resources",
+            "http_status": 200,
+            "title": "Polish Open Science Platform",
+            "chars": 2250,
+            "error": ""
+          },
+          {
+            "url": "https://eosc.pl/?undefined=",
+            "final_url": "https://eosc.pl/?undefined=",
+            "depth": 2,
+            "parent_url": "https://eosc.pl/terms-of-use",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Go back to resource discovery service",
+            "http_status": 200,
+            "title": "Polish Open Science Platform",
+            "chars": 5075,
+            "error": ""
           }
         ],
         "children_skipped": [
-          "https://eosc.pl/terms-of-use (already fetched at depth 1)"
+          "https://marketplace.eosc.pl/backoffice/services (cap for point 5s)",
+          "https://eosc.pl/terms-of-use (already fetched at depth 1)",
+          "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+          "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+          "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+          "https://eosc.pl/terms-of-use (already fetched at depth 1)",
+          "https://eosc.pl/search/all_collection?q=* (already fetched at depth 1)",
+          "https://eosc.pl/privacy-policy (already fetched at depth 1)",
+          "https://eosc.pl/search (depth 2 cap for point 5s)",
+          "https://eosc.pl/search (depth 2 cap for point 5s)",
+          "https://eosc.pl/search (depth 2 cap for point 5s)"
         ]
       },
       "results": [
@@ -3748,7 +4927,7 @@
             "www.eosc-beyond.eu (EOSC Beyond EOSC Beyond is a project developed within the European Open Science Cloud framework to strengthen collaboration among researchers across Europe. It introduces new capabilities to the EOSC Core services and helps research service providers access, integrate, and share resources more effec)",
             "www.iopan.pl (the Institute of Oceanology of the Polish Academy of Sciences)",
             "www.ncn.gov.pl (the National Science Centre)",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 5 of 5 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -3819,7 +4998,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "35 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use",
+            "5 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use, https://eosc.pl/privacy-policy, https://eosc.pl/search/all_collection?q=*, https://eosc.pl/search/data_source, https://eosc.pl/?undefined=",
             "an Acceptable Use Policy: \"Terms of use\" -> https://eosc.pl/terms-of-use",
             "an Acceptable Use Policy via https://eosc.pl/terms-of-use: \"Polish Open Science Platform\" -> https://eosc.pl/terms-of-use"
           ],
@@ -3879,7 +5058,7 @@
             "www.eosc-beyond.eu (EOSC Beyond EOSC Beyond is a project developed within the European Open Science Cloud framework to strengthen collaboration among researchers across Europe. It introduces new capabilities to the EOSC Core services and helps research service providers access, integrate, and share resources more effec)",
             "www.iopan.pl (the Institute of Oceanology of the Polish Academy of Sciences)",
             "www.ncn.gov.pl (the National Science Centre)",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -3950,7 +5129,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "35 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use",
+            "4 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use, https://eosc.pl/privacy-policy, https://eosc.pl/search/all_collection?q=*, https://eosc.pl/search/data_source",
             "an Acceptable Use Policy: \"Terms of use\" -> https://eosc.pl/terms-of-use",
             "an Acceptable Use Policy via https://eosc.pl/terms-of-use: \"Polish Open Science Platform\" -> https://eosc.pl/terms-of-use"
           ],
@@ -3988,12 +5167,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eoscnode-it.d4science.org/",
-        "fetched_at": "2026-09-28T22:56:52+00:00",
+        "fetched_at": "2026-09-28T23:50:15+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 15 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 19 of 60 used",
+        "crawl_note": "depth 2: 15 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget exhausted: 60 of 60 used, 1 further page(s) not fetched",
         "children": [
           {
             "url": "https://eoscnode-it.d4science.org/terms-of-use",
@@ -4008,11 +5187,55 @@
             "title": "Terms of Use - D4Science Infrastructure Gateway",
             "chars": 8785,
             "error": ""
+          },
+          {
+            "url": "https://eoscnode-it.d4science.org/cookie-policy",
+            "final_url": "https://eoscnode-it.d4science.org/cookie-policy",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Cookies Policy",
+            "http_status": 200,
+            "title": "Cookie Policy - D4Science Infrastructure Gateway",
+            "chars": 3902,
+            "error": ""
+          },
+          {
+            "url": "https://www.d4science.org/policies/privacy-and-data-protection",
+            "final_url": "https://www.d4science.org/policies/privacy-and-data-protection",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Privacy Policy",
+            "http_status": 200,
+            "title": "Privacy and Data Protection Policy | D4Science",
+            "chars": 9475,
+            "error": ""
+          },
+          {
+            "url": "https://eoscnode-it.d4science.org/catalogue-eoscnoteit-cloud",
+            "final_url": "https://eoscnode-it.d4science.org/catalogue-eoscnoteit-cloud",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Catalogue",
+            "http_status": 200,
+            "title": "Catalogue - D4Science Infrastructure Gateway",
+            "chars": 0,
+            "error": ""
           }
         ],
         "children_skipped": [
           "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)",
-          "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)"
+          "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)",
+          "https://www.d4science.org/policies (run fetch budget exhausted)"
         ]
       },
       "results": [
@@ -4040,7 +5263,7 @@
             "www.icdi.it (icdi)",
             "www.infn.it (cnr)",
             "www.supercomputing-icsc.it (icsc)",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -4109,7 +5332,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "15 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://eoscnode-it.d4science.org/terms-of-use",
+            "4 linked page(s) read, none linking to a User Access Policy: https://eoscnode-it.d4science.org/terms-of-use, https://eoscnode-it.d4science.org/cookie-policy, https://www.d4science.org/policies/privacy-and-data-protection, https://eoscnode-it.d4science.org/catalogue-eoscnoteit-cloud",
             "an Acceptable Use Policy: \"Terms of Use\" -> https://eoscnode-it.d4science.org/terms-of-use",
             "an Acceptable Use Policy via https://eoscnode-it.d4science.org/terms-of-use: \"Terms of Use - D4Science Infrastructure Gateway\" -> https://eoscnode-it.d4science.org/terms-of-use"
           ],
@@ -4163,7 +5386,7 @@
             "www.icdi.it (icdi)",
             "www.infn.it (cnr)",
             "www.supercomputing-icsc.it (icsc)",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -4232,7 +5455,7 @@
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "15 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://eoscnode-it.d4science.org/terms-of-use",
+            "4 linked page(s) read, none linking to a User Access Policy: https://eoscnode-it.d4science.org/terms-of-use, https://eoscnode-it.d4science.org/cookie-policy, https://www.d4science.org/policies/privacy-and-data-protection, https://eoscnode-it.d4science.org/catalogue-eoscnoteit-cloud",
             "an Acceptable Use Policy: \"Terms of Use\" -> https://eoscnode-it.d4science.org/terms-of-use",
             "an Acceptable Use Policy via https://eoscnode-it.d4science.org/terms-of-use: \"Terms of Use - D4Science Infrastructure Gateway\" -> https://eoscnode-it.d4science.org/terms-of-use"
           ],
@@ -4270,12 +5493,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-09-28T22:57:04+00:00",
+        "fetched_at": "2026-09-28T23:50:34+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-sk.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 45 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 19 of 60 used",
+        "crawl_note": "depth 2: 45 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget exhausted: 60 of 60 used, 1 further page(s) not fetched",
         "children": [
           {
             "url": "https://hd.eosc.sk",
@@ -4290,9 +5513,39 @@
             "title": "EOSC Node Slovakia HELPDESK - Sign in",
             "chars": 294,
             "error": ""
+          },
+          {
+            "url": "https://sc.eosc.sk",
+            "final_url": "https://sc.eosc.sk/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Service Catalogue EOSC Node Slovakia service catalogue listing the production services of the node. It offers a public API, catalogue exchange and demonstrates harvesting of service catalogues from other EOSC nodes.",
+            "http_status": 200,
+            "title": "Service Catalogue",
+            "chars": 717,
+            "error": ""
+          },
+          {
+            "url": "https://sc.eosc.sk/resolve/urn%3Auuid%3Ad06a5b18-9860-475c-9579-ce3c3eb68de9",
+            "final_url": "https://sc.eosc.sk/index.php#service/urn%3Auuid%3Ad06a5b18-9860-475c-9579-ce3c3eb68de9",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Genome of Slovakia by Science Park, Comenius University in Bratislava, Slovakia open access TRL 8 production Genomic variant browser of Slovak population View in the catalogue",
+            "http_status": 200,
+            "title": "Service Catalogue",
+            "chars": 232,
+            "error": ""
           }
         ],
-        "children_skipped": []
+        "children_skipped": [
+          "https://sc.eosc.sk/resolve/urn%3Auuid%3Aa027264f-8525-4130-9f45-e0729fbaf89f (cap for point 5s)"
+        ]
       },
       "results": [
         {
@@ -4325,7 +5578,7 @@
             "komis.cvtisr.sk (SEARCH Resources)",
             "microreact.org (microreact.org (data altered) SK PL Pilot Workflow)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -4452,7 +5705,7 @@
             "komis.cvtisr.sk (SEARCH Resources)",
             "microreact.org (microreact.org (data altered) SK PL Pilot Workflow)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },

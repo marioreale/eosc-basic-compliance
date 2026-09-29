@@ -2,12 +2,12 @@
   "node_id": "eosc-cz",
   "node_name": "EOSC Node Czechia",
   "requested_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-  "fetched_at": "2026-09-28T22:53:59+00:00",
+  "fetched_at": "2026-09-28T23:45:20+00:00",
   "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
   "http_status": 200,
   "redirect_chain": [
     "https://c.clarity.ms/c.gif",
-    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=5D123E24B5A540968DDCFB9F7894D63D&RedC=c.clarity.ms&MXFR=05BFFA8089AD6BD71AA8ED628DAD6520"
+    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=36509A8A3DAB4F97A10630B5FB3AB1A7&RedC=c.clarity.ms&MXFR=3D71242FF4726E7A300133CDF07260AD"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
@@ -2661,6 +2661,1324 @@
       "error": ""
     },
     {
+      "url": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "Czech Academic and Research Discovery Services (CARDS)",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.techlib.cz/en/84940-czech-academic-and-research-discovery-services-cards",
+      "title": "Czech Academic and Research Discovery Services (CARDS) - Czech National Library of Technology",
+      "lang_attr": "en",
+      "main_text": "Homepage Projects Czech Academic and Research Discovery Services (CARDS) Czech Academic and Research Discovery Services (CARDS) Name of Operational Programme: Operational Programme Jan Amos Komenský Call title and number: Individual system projects - VaV I, 02_22_004 Project name: Czech Academic and Research Discovery Services (CARDS) Project registration number: CZ.02.01.01/00/22_004/0004342 Recipient: National Library of Technology Project implementation period: 1 January 2023 – 31 December 2028 Budget: CZK 1,374,078,188.25 CARDS project: A significant step towards an open scientific space The Czech Academic and Research Discovery Services (CARDS) project represents a key milestone in the development of academic and research institutions in the Czech Republic. Its focus on modernising and digitising the information environment opens up new perspectives in access to scientific knowledge. Annotation of project The CARDS project aims to create and verify in test operation a new common library-information platform for the segment of research and academic libraries in the Czech Republic. This next-generation platform (PNG) will provide high quality searchability and accessibility of resources (electronic, digitised and printed) and research results via a central search engine and other services for R&D&I communities regardless of their physical location. It also contributes to the creation of a common background for the implementation of data-oriented components of the Open Science strategy in the Czech Republic, in particular as part of the Open/FAIR Data and EOSC pillars. Objectives of project The main objective of the CARDS project is the creation and test operation of an R&D&I information search engine and related methodological support for working with metadata, persistent identifiers and repositories. It is important to stress that the CARDS project is complementary to the project IPs EOSC-CZ under the coordination of Masaryk University as a member of e-Infra and also to the parallel project of the National Repository Platform under the coordination of CESNET. Together, the CARDS IPs and EOSC-CZ IPs form the basic infrastructure background for the implementation of other Open Science calls under the Operational Programme JAK . Key activities of IPs CARDS project Key Activity 1 – Project Management The invisible hand that manages all processes and activities related to the CARDS project. Management, control, reporting and administration are carried out in accordance with carefully set standards and norms including the Grant Decision, the approved project application, the Charter, the grant conditions, the internal regulations of the MoEYS and NLT, and the legislative framework. Key Activity 2 – Implementation and operation of Next Generation Platform (NGP): Vision of a single space This activity is the heart of the CARDS project. It deals with the acquisition and validation of a centrally created and populated next-generation platform that will serve as a shared space for the efficient management and sharing of diverse types of information resources. These include print, electronic and digitised documents and research data providing broad and comprehensive access to scientific knowledge. The essence of the activity is not only the acquisition of a common next-generation library platform for all participating libraries, but above all a fundamental paradigm shift in the functioning of libraries, consisting of the unification and centralisation of essential library services, starting with central cataloguing and NGP management, and ending with centralised search, sharing and provision of information resources and services. Areas addressed include: Acquisition and operation of a centralised integrated NGP core software solution (library system, electronic resource management system, and discovery service) for project member institutions, with a view to long-term use and development. Efficient sharing of processes, capacities and data by the participating libraries, including activities such as shared cataloguing, a CARDS union catalogue, a unified search system, and a connection to national library services. Development of a NGP ecosystem including innovative advanced tools and services for the needs of research libraries and their users, as well as integration of third-party systems used by member institutions. Establishment and operation of a Service Centre for NGP management and support for activities and services of participating libraries on a single technology platform. More efficient use of electronic resources for research and development acquired both through the CzechELib centre and independently by individual libraries. Support for technology transfer centres in academic and research organisations. Key activity 3 – Methodological support for work with research data metadata and persistent identifiers: Reliable interoperability This activity focuses on improving interoperability between different systems, in particular data repositories. Its main objectives are to facilitate the transfer of research data metadata to the National Metadata Directory, which is being developed as part of the complementary EOSC-CZ infrastructure project, and to uniquely identify key entities in the National Data Infrastructure. In this way, a common language will be created to enable the interconnection of different information systems, facilitate work with research data and help in compliance with the FAIR principles , ultimately leading to greater visibility of Czech research in the international environment. Areas addressed include: Establishment and operation of a national centre providing administrative, coordination, methodological and financial support for the introduction and use of persistent identifiers in the Czech Republic (ORCID, DOI, ISSN and others). For more information, see identifikátory.cz. Creation of a basic metadata model for describing research data in the Czech Republic, setting general elements for describing datasets that will be applicable in different data repositories and will ensure the interoperability of basic metadata across disciplines. For more information, see CCMM (Czech Core Metadata Model for Research Data) . Establishment and operation of a workplace for methodological support for work with research data metadata will serve as a primary consultation point for the R&D&I community in the area of research data metadata management. For more information, see Repository and Metadata Management Centre . Creation and pilot operation of the National Catalogue of Repositories (NCR), recording relevant information about (data) repositories in the Czech Republic, their parameters, metadata structures and tools for metadata exchange in terms of technical options and access policies. Target group of CARDS project The CARDS project reaches into the heart of academia, appealing to a wide range of professionals and curious individuals. Its influence extends to researchers at universities and research institutes of the CAS, experts from various sectors of industry, workers in small and large companies, tradesmen and members of the professional and general public. For all these actors, the CARDS project opens the door to a vast treasure trove of scientific and technical information. However, library staff and, in the future, the entire library network are also an important target group. For them, the project will mean freeing up staff capacity for other activities which currently have little time allotted to them. In this way, the library community will be able to develop its full potential and strengthen its role as a key information broker for the scientific and academic world. Contact Chief Expert Guarantor (KA 2 and KA 3) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX XXXXX XXXXX XXXXX@techlib.cz Senior Project Manager (KA 1) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX Next Generation Platform (KA 2) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX Methodological support for working with research data metadata and persistent identifiers (KA 3) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX Editor: XXXXX XXXXX Contact: XXXXX@techlib.cz , tel. XXXXXX Last modified: 29.6. 2026 13:06",
+      "full_text": "­ Skip navigation All All Books Journals Catalog Search Or browse: Catalog , eBook Search , Journal Search , All eResources , Show all resources What We Have eResources Accessible from Home Search & Find Library Search Print & eResources Journal Search Search journals and access articles eBook Search Find an eBook All eResources Find online articles and eBooks TECH Subject Gateway ChemTK Integrated UCT, IOCB & NTK Library More Resources NTK Open Stacks Guide Czech Technical Standards Rare Books & Special Collections Czech ISSN Centre Grey Literature Repository NTK Digital Library Tech Subject Heading System (PSH) Czech Technical University Library Virtual National Phonotheque Catalog CTU Search CTU Collections Services & Support General Services Registration & Entry About Your User Account Borrow, Return, Renew Places to Study Team Study Rooms Tech Guides Wi-Fi, Printers, Reservation System Interlibrary Loan Services Zásilka NTK Service Document Delivery VPK Conference Services & Rentals Business Services/Robotics Polytechnic workshop Education & Research Support - for High Schools - for Undergrad & Graduate Students - for Early Career Researchers (PhD+) Consultations Courses, Workshops, Webinars Doctoral Summer School Knowledge Transfer Academy Online Support Tutorials Searching, Writing, Citing STEMskiller Skill set map for mentors Subject Guides Ask Us Lost and Found Projects CARDS Czech Academic and Research Discovery Services (CARDS) National Centre for Persistent Identifiers ISSN, ORCID, DOI National Centre for Information Support of RDI Research, Development and Innovation CzechELib CzechELib National Centre eBooks on Demand (eOD) NTK Institutional Repository SCOAP 3 Completed Projects Effective Information Services (EFI) EIZ Consortium Europeana Cloud Green Building at NTK Virtual National Phonotheque Culture & Events Events at NTK Gallery NTK Guided Tours Who We Are About NTK History, Mission and Vision The Building Virtual tour Organizational Structure Library Regulations & House Rules Jobs & Internships Press & Media Contacts Opening Hours Newsletter NTK Projects ChemTK Czech | My account My account Log in Pre-registration Forgotten password Homepage Projects Czech Academic and Research Discovery Services (CARDS) Czech Academic and Research Discovery Services (CARDS) Name of Operational Programme: Operational Programme Jan Amos Komenský Call title and number: Individual system projects - VaV I, 02_22_004 Project name: Czech Academic and Research Discovery Services (CARDS) Project registration number: CZ.02.01.01/00/22_004/0004342 Recipient: National Library of Technology Project implementation period: 1 January 2023 – 31 December 2028 Budget: CZK 1,374,078,188.25 CARDS project: A significant step towards an open scientific space The Czech Academic and Research Discovery Services (CARDS) project represents a key milestone in the development of academic and research institutions in the Czech Republic. Its focus on modernising and digitising the information environment opens up new perspectives in access to scientific knowledge. Annotation of project The CARDS project aims to create and verify in test operation a new common library-information platform for the segment of research and academic libraries in the Czech Republic. This next-generation platform (PNG) will provide high quality searchability and accessibility of resources (electronic, digitised and printed) and research results via a central search engine and other services for R&D&I communities regardless of their physical location. It also contributes to the creation of a common background for the implementation of data-oriented components of the Open Science strategy in the Czech Republic, in particular as part of the Open/FAIR Data and EOSC pillars. Objectives of project The main objective of the CARDS project is the creation and test operation of an R&D&I information search engine and related methodological support for working with metadata, persistent identifiers and repositories. It is important to stress that the CARDS project is complementary to the project IPs EOSC-CZ under the coordination of Masaryk University as a member of e-Infra and also to the parallel project of the National Repository Platform under the coordination of CESNET. Together, the CARDS IPs and EOSC-CZ IPs form the basic infrastructure background for the implementation of other Open Science calls under the Operational Programme JAK . Key activities of IPs CARDS project Key Activity 1 – Project Management The invisible hand that manages all processes and activities related to the CARDS project. Management, control, reporting and administration are carried out in accordance with carefully set standards and norms including the Grant Decision, the approved project application, the Charter, the grant conditions, the internal regulations of the MoEYS and NLT, and the legislative framework. Key Activity 2 – Implementation and operation of Next Generation Platform (NGP): Vision of a single space This activity is the heart of the CARDS project. It deals with the acquisition and validation of a centrally created and populated next-generation platform that will serve as a shared space for the efficient management and sharing of diverse types of information resources. These include print, electronic and digitised documents and research data providing broad and comprehensive access to scientific knowledge. The essence of the activity is not only the acquisition of a common next-generation library platform for all participating libraries, but above all a fundamental paradigm shift in the functioning of libraries, consisting of the unification and centralisation of essential library services, starting with central cataloguing and NGP management, and ending with centralised search, sharing and provision of information resources and services. Areas addressed include: Acquisition and operation of a centralised integrated NGP core software solution (library system, electronic resource management system, and discovery service) for project member institutions, with a view to long-term use and development. Efficient sharing of processes, capacities and data by the participating libraries, including activities such as shared cataloguing, a CARDS union catalogue, a unified search system, and a connection to national library services. Development of a NGP ecosystem including innovative advanced tools and services for the needs of research libraries and their users, as well as integration of third-party systems used by member institutions. Establishment and operation of a Service Centre for NGP management and support for activities and services of participating libraries on a single technology platform. More efficient use of electronic resources for research and development acquired both through the CzechELib centre and independently by individual libraries. Support for technology transfer centres in academic and research organisations. Key activity 3 – Methodological support for work with research data metadata and persistent identifiers: Reliable interoperability This activity focuses on improving interoperability between different systems, in particular data repositories. Its main objectives are to facilitate the transfer of research data metadata to the National Metadata Directory, which is being developed as part of the complementary EOSC-CZ infrastructure project, and to uniquely identify key entities in the National Data Infrastructure. In this way, a common language will be created to enable the interconnection of different information systems, facilitate work with research data and help in compliance with the FAIR principles , ultimately leading to greater visibility of Czech research in the international environment. Areas addressed include: Establishment and operation of a national centre providing administrative, coordination, methodological and financial support for the introduction and use of persistent identifiers in the Czech Republic (ORCID, DOI, ISSN and others). For more information, see identifikátory.cz. Creation of a basic metadata model for describing research data in the Czech Republic, setting general elements for describing datasets that will be applicable in different data repositories and will ensure the interoperability of basic metadata across disciplines. For more information, see CCMM (Czech Core Metadata Model for Research Data) . Establishment and operation of a workplace for methodological support for work with research data metadata will serve as a primary consultation point for the R&D&I community in the area of research data metadata management. For more information, see Repository and Metadata Management Centre . Creation and pilot operation of the National Catalogue of Repositories (NCR), recording relevant information about (data) repositories in the Czech Republic, their parameters, metadata structures and tools for metadata exchange in terms of technical options and access policies. Target group of CARDS project The CARDS project reaches into the heart of academia, appealing to a wide range of professionals and curious individuals. Its influence extends to researchers at universities and research institutes of the CAS, experts from various sectors of industry, workers in small and large companies, tradesmen and members of the professional and general public. For all these actors, the CARDS project opens the door to a vast treasure trove of scientific and technical information. However, library staff and, in the future, the entire library network are also an important target group. For them, the project will mean freeing up staff capacity for other activities which currently have little time allotted to them. In this way, the library community will be able to develop its full potential and strengthen its role as a key information broker for the scientific and academic world. Contact Chief Expert Guarantor (KA 2 and KA 3) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX XXXXX XXXXX XXXXX@techlib.cz Senior Project Manager (KA 1) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX Next Generation Platform (KA 2) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX Methodological support for working with research data metadata and persistent identifiers (KA 3) XXXXX XXXXX XXXXX@techlib.cz +420 XXXXXX Editor: XXXXX XXXXX Contact: XXXXX@techlib.cz , tel. XXXXXX Last modified: 29.6. 2026 13:06 What We Have eResources Accessible from Home Library Search Journal Search eBook Search All eResources TECH ChemTK NTK Open Stacks Guide Czech Technical Standards Rare Books & Special Collections Czech ISSN Centre Grey Literature Repository NTK Digital Library Tech Subject Heading System (PSH) Czech Technical University Library Virtual National Phonotheque Catalog CTU Services & Support Registration & Entry About Your User Account Borrow, Return, Renew Places to Study Tech Guides Interlibrary Loan Services Zásilka NTK Service Document Delivery VPK Conference Services & Rentals Business Services/Robotics Polytechnic workshop Education & Research Support - for High Schools - for Undergrad & Graduate Students - for Early Career Researchers (PhD+) Consultations Courses, Workshops, Webinars Doctoral Summer School Knowledge Transfer Academy Tutorials STEMskiller Subject Guides Ask Us Lost and Found Projects CARDS National Centre for Persistent Identifiers National Centre for Information Support of RDI CzechELib eBooks on Demand (eOD) NTK Institutional Repository SCOAP 3 Effective Information Services (EFI) EIZ Consortium Europeana Cloud Green Building at NTK Virtual National Phonotheque Culture & Events Events at NTK Gallery NTK Guided Tours Who We Are About NTK The Building Organizational Structure Library Regulations & House Rules Jobs & Internships Press & Media Contacts Opening Hours Newsletter NTK Technická 2710/6, 160 80 Praha 6 - Dejvice info@techlib.cz , tel.: XXXXXX Accessibility Privacy Sitemap Copyright © 2006 - 2026",
+      "links": [
+        {
+          "href": "https://www.techlib.cz/en/",
+          "text": "Czech National Library of Technology",
+          "visible": true
+        },
+        {
+          "href": "https://discovery.techlib.cz",
+          "text": "Catalog",
+          "visible": true
+        },
+        {
+          "href": "https://sfx.techlib.cz/sfxlcl41/ebooksearch/ntk?lang=eng",
+          "text": "eBook Search",
+          "visible": true
+        },
+        {
+          "href": "https://discovery.techlib.cz/nde/jsearch?vid=420CARDS_NTK:NTK&lang=en",
+          "text": "Journal Search",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2883-eresources",
+          "text": "All eResources",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84370-searching-ntk-resources",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84103",
+          "text": "eResources Accessible from Home",
+          "visible": true
+        },
+        {
+          "href": "https://discovery.techlib.cz/?lng=en",
+          "text": "Library Search Print & eResources",
+          "visible": true
+        },
+        {
+          "href": "https://discovery.techlib.cz/nde/jsearch?vid=420CARDS_NTK:NTK&lang=en",
+          "text": "Journal Search Search journals and access articles",
+          "visible": true
+        },
+        {
+          "href": "https://sfx.techlib.cz/sfxlcl41/ebooksearch/ntk?&param_isbn_save=&param_chinese_checkbox_type_save=&param_perform_save=ebooksearch&param_type_save=textSearch&param_langcode_save=en&param_letter_group_script_save=&param_services2filter_save=getFullTxt&param_lang_save=cze&param_chinese_checkbox_save=&param_current_view_save=detail&param_jumpToPage_save=1&param_letter_group_save=&param_textSearchType_save=contains&param_sid_save=4d8869571d537722a32df82d13c34f32&param_ui_control_scripts_save=&&display_single_object=&is_books=1&lang=eng",
+          "text": "eBook Search Find an eBook",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2883-electronic-resources",
+          "text": "All eResources Find online articles and eBooks",
+          "visible": true
+        },
+        {
+          "href": "https://tech.knihovny.cz/",
+          "text": "TECH Subject Gateway",
+          "visible": true
+        },
+        {
+          "href": "https://www.chemtk.cz/en/",
+          "text": "ChemTK Integrated UCT, IOCB & NTK Library",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83306-collections-guide",
+          "text": "NTK Open Stacks Guide",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83219-technical-standards#tab_normLib1",
+          "text": "Czech Technical Standards",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2726-rare-books-collection",
+          "text": "Rare Books & Special Collections",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2774-issn-center",
+          "text": "Czech ISSN Centre",
+          "visible": true
+        },
+        {
+          "href": "http://www.nusl.cz/?lang=en&language=en",
+          "text": "Grey Literature Repository",
+          "visible": true
+        },
+        {
+          "href": "https://kramerius.techlib.cz",
+          "text": "NTK Digital Library",
+          "visible": true
+        },
+        {
+          "href": "https://psh.techlib.cz/skos/en",
+          "text": "Tech Subject Heading System (PSH)",
+          "visible": true
+        },
+        {
+          "href": "http://knihovna.cvut.cz/home/",
+          "text": "Czech Technical University Library",
+          "visible": true
+        },
+        {
+          "href": "https://www.narodnifonoteka.cz/",
+          "text": "Virtual National Phonotheque",
+          "visible": true
+        },
+        {
+          "href": "https://aleph.cvut.cz/F/?func=file&file_name=login&CON_LNG=ENG",
+          "text": "Catalog CTU Search CTU Collections",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2712-registration-day-pass",
+          "text": "Registration & Entry",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2908-about-your-user-account",
+          "text": "About Your User Account",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2759-borrow-return-renew",
+          "text": "Borrow, Return, Renew",
+          "visible": true
+        },
+        {
+          "href": "http://www.techlib.cz/en/83026-places-to-study",
+          "text": "Places to Study Team Study Rooms",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2862-tutorials-and-tech-guides",
+          "text": "Tech Guides Wi-Fi, Printers, Reservation System",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2791-interlibrary-loan-service",
+          "text": "Interlibrary Loan Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84420-zasilka-ntk-service",
+          "text": "Zásilka NTK Service",
+          "visible": true
+        },
+        {
+          "href": "http://www.techlib.cz/en/2879-virtual-polytechnical-library-vpk",
+          "text": "Document Delivery VPK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2717-event-conference-services",
+          "text": "Conference Services & Rentals",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85094-business-services",
+          "text": "Business Services/Robotics",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85017-polytechnic-workshop",
+          "text": "Polytechnic workshop",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83064",
+          "text": "Education & Research Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83608",
+          "text": "- for High Schools",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84514",
+          "text": "- for Undergrad & Graduate Students",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84414",
+          "text": "- for Early Career Researchers (PhD+)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83810-consultation-services",
+          "text": "Consultations",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83809-courses-workshops",
+          "text": "Courses, Workshops, Webinars",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85233",
+          "text": "Doctoral Summer School",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85391-ntk-knowledge-transfer-academy",
+          "text": "Knowledge Transfer Academy",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2719-tutorials",
+          "text": "Tutorials Searching, Writing, Citing",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84109-stemskiller",
+          "text": "STEMskiller Skill set map for mentors",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2720-subject-guides",
+          "text": "Subject Guides",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83649-ask-us",
+          "text": "Ask Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85278-lost-and-found",
+          "text": "Lost and Found",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84940",
+          "text": "CARDS Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84733",
+          "text": "National Centre for Persistent Identifiers ISSN, ORCID, DOI",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84891",
+          "text": "National Centre for Information Support of RDI Research, Development and Innovation",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83733-czechelib",
+          "text": "CzechELib CzechELib National Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2888-eod",
+          "text": "eBooks on Demand (eOD)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2975-ntk-repository",
+          "text": "NTK Institutional Repository",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/82742-scoap3",
+          "text": "SCOAP 3",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2885-efi",
+          "text": "Effective Information Services (EFI)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2967-eiz-consortium",
+          "text": "EIZ Consortium",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2974-european-cloud",
+          "text": "Europeana Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83376-green-building-at-ntk",
+          "text": "Green Building at NTK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83980-virtual-national-phonotheque",
+          "text": "Virtual National Phonotheque",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84715-incoming-events/en/84715",
+          "text": "Events at NTK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2746-gallery",
+          "text": "Gallery NTK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2744-visit-the-library",
+          "text": "Guided Tours",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2749-about-ntk",
+          "text": "About NTK History, Mission and Vision",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2755-the-building",
+          "text": "The Building Virtual tour",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2914-organizational-structure",
+          "text": "Organizational Structure",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2758",
+          "text": "Library Regulations & House Rules",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2754-jobs-internships",
+          "text": "Jobs & Internships",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2752-pr-media",
+          "text": "Press & Media",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2753-staff-directory",
+          "text": "Contacts",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2854-opening-hours",
+          "text": "Opening Hours",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85698-newsletter-ntk",
+          "text": "Newsletter NTK",
+          "visible": true
+        },
+        {
+          "href": "http://www.chemtk.cz/en/",
+          "text": "Společná chemická knihovna",
+          "visible": true
+        },
+        {
+          "href": "http://www.chemtk.cz/en/",
+          "text": "ChemTK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/cs/84666-czech-academic-and-research-discovery-services-cards",
+          "text": "Czech",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/secure",
+          "text": "My account",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/secure",
+          "text": "My account",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/secure",
+          "text": "Log in",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2767-pre-register",
+          "text": "Pre-registration",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/82798-forgotten-password",
+          "text": "Forgotten password",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en",
+          "text": "Homepage",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2711-projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/architecture-of-national-data-infrastructure",
+          "text": "IPs EOSC-CZ",
+          "visible": true
+        },
+        {
+          "href": "https://opjak.cz/en/",
+          "text": "Operational Programme JAK",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "EOSC-CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.go-fair.org/fair-principles/",
+          "text": "the FAIR principles",
+          "visible": true
+        },
+        {
+          "href": "https://identifikatory.cz/en/",
+          "text": "identifikátory.cz.",
+          "visible": true
+        },
+        {
+          "href": "https://www.ccmm.cz/en/",
+          "text": "CCMM (Czech Core Metadata Model for Research Data)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85191-support-for-metadata-management-of-research-data",
+          "text": "Repository and Metadata Management Centre",
+          "visible": true
+        },
+        {
+          "href": "https://repo.cz/#urls/objects/design?payload=about.html",
+          "text": "National Catalogue of Repositories",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@techlib.cz",
+          "text": "XXXXX@techlib.cz",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@techlib.cz",
+          "text": "XXXXX@techlib.cz",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@techlib.cz",
+          "text": "XXXXX@techlib.cz",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@techlib.cz",
+          "text": "XXXXX@techlib.cz",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@techlib.cz",
+          "text": "XXXXX@techlib.cz",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@techlib.cz?subject=http://www.techlib.cz/en/84940-czech-academic-and-research-discovery-services-cards",
+          "text": "XXXXX@techlib.cz",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84103",
+          "text": "eResources Accessible from Home",
+          "visible": true
+        },
+        {
+          "href": "https://discovery.techlib.cz/?lng=en",
+          "text": "Library Search",
+          "visible": true
+        },
+        {
+          "href": "https://discovery.techlib.cz/nde/jsearch?vid=420CARDS_NTK:NTK&lang=en",
+          "text": "Journal Search",
+          "visible": true
+        },
+        {
+          "href": "https://sfx.techlib.cz/sfxlcl41/ebooksearch/ntk?&param_isbn_save=&param_chinese_checkbox_type_save=&param_perform_save=ebooksearch&param_type_save=textSearch&param_langcode_save=en&param_letter_group_script_save=&param_services2filter_save=getFullTxt&param_lang_save=cze&param_chinese_checkbox_save=&param_current_view_save=detail&param_jumpToPage_save=1&param_letter_group_save=&param_textSearchType_save=contains&param_sid_save=4d8869571d537722a32df82d13c34f32&param_ui_control_scripts_save=&&display_single_object=&is_books=1&lang=eng",
+          "text": "eBook Search",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2883-electronic-resources",
+          "text": "All eResources",
+          "visible": true
+        },
+        {
+          "href": "https://tech.knihovny.cz/",
+          "text": "TECH",
+          "visible": true
+        },
+        {
+          "href": "https://www.chemtk.cz/en/",
+          "text": "ChemTK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83306-collections-guide",
+          "text": "NTK Open Stacks Guide",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83219-technical-standards#tab_normLib1",
+          "text": "Czech Technical Standards",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2726-rare-books-collection",
+          "text": "Rare Books & Special Collections",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2774-issn-center",
+          "text": "Czech ISSN Centre",
+          "visible": true
+        },
+        {
+          "href": "http://www.nusl.cz/?lang=en&language=en",
+          "text": "Grey Literature Repository",
+          "visible": true
+        },
+        {
+          "href": "https://kramerius.techlib.cz",
+          "text": "NTK Digital Library",
+          "visible": true
+        },
+        {
+          "href": "https://psh.techlib.cz/skos/en",
+          "text": "Tech Subject Heading System (PSH)",
+          "visible": true
+        },
+        {
+          "href": "http://knihovna.cvut.cz/home/",
+          "text": "Czech Technical University Library",
+          "visible": true
+        },
+        {
+          "href": "https://www.narodnifonoteka.cz/",
+          "text": "Virtual National Phonotheque",
+          "visible": true
+        },
+        {
+          "href": "https://aleph.cvut.cz/F/?func=file&file_name=login&CON_LNG=ENG",
+          "text": "Catalog CTU",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2712-registration-day-pass",
+          "text": "Registration & Entry",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2908-about-your-user-account",
+          "text": "About Your User Account",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2759-borrow-return-renew",
+          "text": "Borrow, Return, Renew",
+          "visible": true
+        },
+        {
+          "href": "http://www.techlib.cz/en/83026-places-to-study",
+          "text": "Places to Study",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2862-tutorials-and-tech-guides",
+          "text": "Tech Guides",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2791-interlibrary-loan-service",
+          "text": "Interlibrary Loan Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84420-zasilka-ntk-service",
+          "text": "Zásilka NTK Service",
+          "visible": true
+        },
+        {
+          "href": "http://www.techlib.cz/en/2879-virtual-polytechnical-library-vpk",
+          "text": "Document Delivery VPK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2717-event-conference-services",
+          "text": "Conference Services & Rentals",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85094-business-services",
+          "text": "Business Services/Robotics",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85017-polytechnic-workshop",
+          "text": "Polytechnic workshop",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83064",
+          "text": "Education & Research Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83608",
+          "text": "- for High Schools",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84514",
+          "text": "- for Undergrad & Graduate Students",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84414",
+          "text": "- for Early Career Researchers (PhD+)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83810-consultation-services",
+          "text": "Consultations",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83809-courses-workshops",
+          "text": "Courses, Workshops, Webinars",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85233",
+          "text": "Doctoral Summer School",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85391-ntk-knowledge-transfer-academy",
+          "text": "Knowledge Transfer Academy",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2719-tutorials",
+          "text": "Tutorials",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84109-stemskiller",
+          "text": "STEMskiller",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2720-subject-guides",
+          "text": "Subject Guides",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83649-ask-us",
+          "text": "Ask Us",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/85278-lost-and-found",
+          "text": "Lost and Found",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84940",
+          "text": "CARDS",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84733",
+          "text": "National Centre for Persistent Identifiers",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84891",
+          "text": "National Centre for Information Support of RDI",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83733-czechelib",
+          "text": "CzechELib",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2888-eod",
+          "text": "eBooks on Demand (eOD)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2975-ntk-repository",
+          "text": "NTK Institutional Repository",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/82742-scoap3",
+          "text": "SCOAP 3",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2885-efi",
+          "text": "Effective Information Services (EFI)",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2967-eiz-consortium",
+          "text": "EIZ Consortium",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2974-european-cloud",
+          "text": "Europeana Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83376-green-building-at-ntk",
+          "text": "Green Building at NTK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/83980-virtual-national-phonotheque",
+          "text": "Virtual National Phonotheque",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/84715-incoming-events/en/84715",
+          "text": "Events at NTK",
+          "visible": true
+        },
+        {
+          "href": "https://www.techlib.cz/en/2746-gallery",
+          "text": "Gallery NTK",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.eosc.cz/en/services",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "Services",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.eosc.cz/en/services/all",
+      "title": "All | EOSC - European Open Science Cloud",
+      "lang_attr": "en",
+      "main_text": "You are here: Home Services All Data Management Guide Roadmap All Data management planning Analyzing data and performing calculations Data storage Data searching Data management planning ARGOS ARGOS is a joint effort by OpenAIRE and EUDAT to create an open platform for data management planning Data Stewardship Wizard (NRP) An open-source tool in its pilot version, available in a localized instance for the Czech Republic. It helps researchers create DMPs in accordance with the FAIR principles and provides methodological support and documentation. DMPOnline DMPs that meet institutional requirements General DMP template Horizon Europe template Analyzing data and performing calculations Supercomputing Capacities IT4Innovations computing capacity for research and development tasks MetaCentrum Services Cloud and grid-based computing services CERIT-SC Services Computing services on batch, cloud and container platforms Sensitive data processing Advanced security features to ensure your data is safe and compliant Data storage Catch-all Data Repository A service for the storage, sharing and long-term preservation of research data, supporting open access and data management according to FAIR principles CCMM CCMM is the core metadata model for describing research data in the Czech Republic. Its goal is to define unified elements for dataset description across repositories and ensure interoperable metadata across disciplines. CC Signals A proposed framework designed to help content stewards express their preferences regarding the use of their works in AI training. DDRapp Web application for data-driven research that helps researchers annotate experimental data with essential metadata and simplifies data management. It supports integration with external systems, automated backups, and the electronic export of laboratory notebooks and instrument records. e-INFRA CZ data storage services Tools for backing up, archiving and sharing scientific data. Molecular Biophysics Database (MBDB) MBDB collects raw data from experiments with biomolecular samples and other materials using molecular biophysics methods such as MST, BLI, and SPR. Repositories in the NRP A service that provides technical infrastructure and methodological support for establishing repositories within the National Repository Platform. re3data A global data repository registry that allows researchers to search and retrieve information about repositories for storing, sharing and managing research data across disciplines ZENODO Enables researchers around the world to store, share and publish research data, papers, software tools and other outputs across disciplines, supporting the principles of open science Data searching CCMM CCMM is the core metadata model for describing research data in the Czech Republic. Its goal is to define unified elements for dataset description across repositories and ensure interoperable metadata across disciplines. data.europa.eu The European Union's central portal for open data, which provides access to datasets from various European institutions and member countries data.gov.cz National Open Data Portal of the Czech Republic, which provides access to public administration datasets Dataset Search Google Dataset Search is a search engine for easily finding and accessing publicly available research datasets from a variety of disciplines and sources around the world DRYAD An open repository for storing and sharing research data across scientific disciplines, supporting open access and ensuring the long-term availability of data FAIRsharing An online platform that provides a database of standards, data repositories and guidelines to support the principles of FAIR and open science Harvard Dataverse An open repository that enables the storage, sharing and management of research data to promote its accessibility and reuse across disciplines National Metadata Directory Enables search and access to scientific data metadata and repositories Nature Scientific Data An open access journal that publishes descriptions of high quality research datasets to support FAIR principles of scientific studies re3data A global data repository registry that allows researchers to search and retrieve information about repositories for storing, sharing and managing research data across disciplines ZENODO Enables researchers around the world to store, share and publish research data, papers, software tools and other outputs across disciplines, supporting the principles of open science",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home Services All Data Management Guide Roadmap All Data management planning Analyzing data and performing calculations Data storage Data searching Data management planning ARGOS ARGOS is a joint effort by OpenAIRE and EUDAT to create an open platform for data management planning Data Stewardship Wizard (NRP) An open-source tool in its pilot version, available in a localized instance for the Czech Republic. It helps researchers create DMPs in accordance with the FAIR principles and provides methodological support and documentation. DMPOnline DMPs that meet institutional requirements General DMP template Horizon Europe template Analyzing data and performing calculations Supercomputing Capacities IT4Innovations computing capacity for research and development tasks MetaCentrum Services Cloud and grid-based computing services CERIT-SC Services Computing services on batch, cloud and container platforms Sensitive data processing Advanced security features to ensure your data is safe and compliant Data storage Catch-all Data Repository A service for the storage, sharing and long-term preservation of research data, supporting open access and data management according to FAIR principles CCMM CCMM is the core metadata model for describing research data in the Czech Republic. Its goal is to define unified elements for dataset description across repositories and ensure interoperable metadata across disciplines. CC Signals A proposed framework designed to help content stewards express their preferences regarding the use of their works in AI training. DDRapp Web application for data-driven research that helps researchers annotate experimental data with essential metadata and simplifies data management. It supports integration with external systems, automated backups, and the electronic export of laboratory notebooks and instrument records. e-INFRA CZ data storage services Tools for backing up, archiving and sharing scientific data. Molecular Biophysics Database (MBDB) MBDB collects raw data from experiments with biomolecular samples and other materials using molecular biophysics methods such as MST, BLI, and SPR. Repositories in the NRP A service that provides technical infrastructure and methodological support for establishing repositories within the National Repository Platform. re3data A global data repository registry that allows researchers to search and retrieve information about repositories for storing, sharing and managing research data across disciplines ZENODO Enables researchers around the world to store, share and publish research data, papers, software tools and other outputs across disciplines, supporting the principles of open science Data searching CCMM CCMM is the core metadata model for describing research data in the Czech Republic. Its goal is to define unified elements for dataset description across repositories and ensure interoperable metadata across disciplines. data.europa.eu The European Union's central portal for open data, which provides access to datasets from various European institutions and member countries data.gov.cz National Open Data Portal of the Czech Republic, which provides access to public administration datasets Dataset Search Google Dataset Search is a search engine for easily finding and accessing publicly available research datasets from a variety of disciplines and sources around the world DRYAD An open repository for storing and sharing research data across scientific disciplines, supporting open access and ensuring the long-term availability of data FAIRsharing An online platform that provides a database of standards, data repositories and guidelines to support the principles of FAIR and open science Harvard Dataverse An open repository that enables the storage, sharing and management of research data to promote its accessibility and reuse across disciplines National Metadata Directory Enables search and access to scientific data metadata and repositories Nature Scientific Data An open access journal that publishes descriptions of high quality research datasets to support FAIR principles of scientific studies re3data A global data repository registry that allows researchers to search and retrieve information about repositories for storing, sharing and managing research data across disciplines ZENODO Enables researchers around the world to store, share and publish research data, papers, software tools and other outputs across disciplines, supporting the principles of open science Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+      "links": [
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/sluzby/vse",
+          "text": "Čeština",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/sluzby/vse",
+          "text": "CS",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp/national-repository-platform#roadmap",
+          "text": "Roadmap",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/all",
+          "text": "All",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/data-management-planning",
+          "text": "Data management planning",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/analyzing-data-and-performing-calculations",
+          "text": "Analyzing data and performing calculations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/data-storage",
+          "text": "Data storage",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/data-searching",
+          "text": "Data searching",
+          "visible": true
+        },
+        {
+          "href": "https://argos.openaire.eu/splash/",
+          "text": "ARGOS ARGOS is a joint effort by OpenAIRE and EUDAT to create an open platform for data management planning",
+          "visible": true
+        },
+        {
+          "href": "https://dmp.eosc.cz/en/",
+          "text": "Data Stewardship Wizard (NRP) An open-source tool in its pilot version, available in a localized instance for the Czech Republic. It helps researchers create DMPs in accordance with the FAIR principles and provides methodological support and documentation.",
+          "visible": true
+        },
+        {
+          "href": "https://dmponline.dcc.ac.uk/",
+          "text": "DMPOnline DMPs that meet institutional requirements",
+          "visible": true
+        },
+        {
+          "href": "https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.tacr.cz/wp-content/uploads/documents/2024/04/23/1713865197_Pl%25C3%25A1n%2520spr%25C3%25A1vy%2520dat%2520-%2520Horizont%2520Evropa.docx&ved=2ahUKEwj638-SgdSJAxVchv0HHZAHOyEQFnoECBYQAQ&usg=AOvVaw1NxjdDcTpoqSPduGRQxzDX",
+          "text": "General DMP template Horizon Europe template",
+          "visible": true
+        },
+        {
+          "href": "https://www.it4i.cz/pro-uzivatele/jak-ziskat-vypocetni-cas",
+          "text": "Supercomputing Capacities IT4Innovations computing capacity for research and development tasks",
+          "visible": true
+        },
+        {
+          "href": "https://www.metacentrum.cz/en/Sluzby/index.html",
+          "text": "MetaCentrum Services Cloud and grid-based computing services",
+          "visible": true
+        },
+        {
+          "href": "https://www.cerit-sc.cz/infrastructure-services/data-processing",
+          "text": "CERIT-SC Services Computing services on batch, cloud and container platforms",
+          "visible": true
+        },
+        {
+          "href": "https://www.cerit-sc.cz/infrastructure-services/sensitivecloud",
+          "text": "Sensitive data processing Advanced security features to ensure your data is safe and compliant",
+          "visible": true
+        },
+        {
+          "href": "https://datarepo.eosc.cz",
+          "text": "Catch-all Data Repository A service for the storage, sharing and long-term preservation of research data, supporting open access and data management according to FAIR principles",
+          "visible": true
+        },
+        {
+          "href": "https://www.ccmm.cz/en/",
+          "text": "CCMM CCMM is the core metadata model for describing research data in the Czech Republic. Its goal is to define unified elements for dataset description across repositories and ensure interoperable metadata across disciplines.",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/data-storage/cc-signals",
+          "text": "CC Signals A proposed framework designed to help content stewards express their preferences regarding the use of their works in AI training.",
+          "visible": true
+        },
+        {
+          "href": "https://ddrapp.nrp1.du.cesnet.cz/?lang=en",
+          "text": "DDRapp Web application for data-driven research that helps researchers annotate experimental data with essential metadata and simplifies data management. It supports integration with external systems, automated backups, and the electronic export of laboratory notebooks and instrument records.",
+          "visible": true
+        },
+        {
+          "href": "https://www.cesnet.cz/en/services/data-storage-3",
+          "text": "e-INFRA CZ data storage services Tools for backing up, archiving and sharing scientific data.",
+          "visible": true
+        },
+        {
+          "href": "https://mbdb-data.org",
+          "text": "Molecular Biophysics Database (MBDB) MBDB collects raw data from experiments with biomolecular samples and other materials using molecular biophysics methods such as MST, BLI, and SPR.",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/data-storage/repositories-in-nrp",
+          "text": "Repositories in the NRP A service that provides technical infrastructure and methodological support for establishing repositories within the National Repository Platform.",
+          "visible": true
+        },
+        {
+          "href": "https://www.re3data.org/",
+          "text": "re3data A global data repository registry that allows researchers to search and retrieve information about repositories for storing, sharing and managing research data across disciplines",
+          "visible": true
+        },
+        {
+          "href": "https://zenodo.org/",
+          "text": "ZENODO Enables researchers around the world to store, share and publish research data, papers, software tools and other outputs across disciplines, supporting the principles of open science",
+          "visible": true
+        },
+        {
+          "href": "https://www.ccmm.cz/en/",
+          "text": "CCMM CCMM is the core metadata model for describing research data in the Czech Republic. Its goal is to define unified elements for dataset description across repositories and ensure interoperable metadata across disciplines.",
+          "visible": true
+        },
+        {
+          "href": "https://data.europa.eu/en",
+          "text": "data.europa.eu The European Union's central portal for open data, which provides access to datasets from various European institutions and member countries",
+          "visible": true
+        },
+        {
+          "href": "https://data.gov.cz/english/",
+          "text": "data.gov.cz National Open Data Portal of the Czech Republic, which provides access to public administration datasets",
+          "visible": true
+        },
+        {
+          "href": "https://datasetsearch.research.google.com/",
+          "text": "Dataset Search Google Dataset Search is a search engine for easily finding and accessing publicly available research datasets from a variety of disciplines and sources around the world",
+          "visible": true
+        },
+        {
+          "href": "https://datadryad.org/stash",
+          "text": "DRYAD An open repository for storing and sharing research data across scientific disciplines, supporting open access and ensuring the long-term availability of data",
+          "visible": true
+        },
+        {
+          "href": "https://fairsharing.org/",
+          "text": "FAIRsharing An online platform that provides a database of standards, data repositories and guidelines to support the principles of FAIR and open science",
+          "visible": true
+        },
+        {
+          "href": "https://dataverse.harvard.edu/",
+          "text": "Harvard Dataverse An open repository that enables the storage, sharing and management of research data to promote its accessibility and reuse across disciplines",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services/data-searching/nma",
+          "text": "National Metadata Directory Enables search and access to scientific data metadata and repositories",
+          "visible": true
+        },
+        {
+          "href": "https://www.nature.com/sdata/",
+          "text": "Nature Scientific Data An open access journal that publishes descriptions of high quality research datasets to support FAIR principles of scientific studies",
+          "visible": true
+        },
+        {
+          "href": "https://www.re3data.org/",
+          "text": "re3data A global data repository registry that allows researchers to search and retrieve information about repositories for storing, sharing and managing research data across disciplines",
+          "visible": true
+        },
+        {
+          "href": "https://zenodo.org/",
+          "text": "ZENODO Enables researchers around the world to store, share and publish research data, papers, software tools and other outputs across disciplines, supporting the principles of open science",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+          "text": "Newsletter EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.muni.cz/en",
+          "text": "Masaryk University",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/system/web-admin",
+          "text": "Web Admin",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/eosccz.bsky.social",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+          "text": "Youtube",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
       "url": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
       "selected_for": [
         "2"
@@ -2672,8 +3990,8 @@
       "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
       "title": "EOSC CZ in data | EOSC - European Open Science Cloud",
       "lang_attr": "en",
-      "main_text": "You are here: Home EOSC CZ in data EOSC CZ in data EOSC CZ in data EOSC CZ Working Groups Training Marketing and Communication Implementing the EOSC initiative in the Czech Republic is a complex process. It is not limited to one specific area but extends to a wide range of research areas, which also impacts the everyday life of society. The initiative involves many institutions that need to be involved in cooperation. These institutions should be supported and their progress in adopting the principles of open science, FAIR data and EOSC should be monitored. In this section you will find information and data on the development of the initiative, as well as key documents and background documents accompanying the initiative. If you need to contact us, don't hesitate to get in touch with us at data@eosc.cz You might be interested 18 Sep “Poorly described data are like a book shelved in the wrong place. They practically don’t exist,” explains [name removed here]. A researcher may spend years collecting valuable data. But if those data remain on a personal drive without proper description, they effectively do not exist for anyone else. Metadata determine whether data can be found, understood and reused, and their importance is growing further with the rise of artificial intelligence. “ For AI tools, well-structured and rich metadata are a gold mine ,” says [name removed here], Head of the Repositories and Metadata Management Department at the National Library of Technology. In the interview, she explains why simply storing data is not enough, how the right repository can make a difference, and where AI can already reliably take over part of the work. 16 Sep Zenodo Leads the Way, but Czech Researchers Use Dozens of Different Repositories for Their Data Where do Czech researchers store their data, and at what stage of the research process are data most often deposited in repositories? The results collected so far from 193 respondents identified a total of 70 different repositories, databases and other storage solutions. Zenodo is the clear leader, while specialised databases used in molecular biology, genomics and proteomics are also strongly represented. 21 Aug Jupyter Notebooks: Code, Results, and Documentation in One Environment Source code, its outputs, explanatory text, and visualizations can all be combined in a single interactive document. This is the principle behind Jupyter Notebooks, which are widely used for data analysis, teaching, prototyping, and documenting computational workflows. Previous 1 2 3 4 5 6 7 … 10 Next",
-      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home EOSC CZ in data EOSC CZ in data EOSC CZ in data EOSC CZ Working Groups Training Marketing and Communication Implementing the EOSC initiative in the Czech Republic is a complex process. It is not limited to one specific area but extends to a wide range of research areas, which also impacts the everyday life of society. The initiative involves many institutions that need to be involved in cooperation. These institutions should be supported and their progress in adopting the principles of open science, FAIR data and EOSC should be monitored. In this section you will find information and data on the development of the initiative, as well as key documents and background documents accompanying the initiative. If you need to contact us, don't hesitate to get in touch with us at data@eosc.cz You might be interested 18 Sep “Poorly described data are like a book shelved in the wrong place. They practically don’t exist,” explains [name removed here]. A researcher may spend years collecting valuable data. But if those data remain on a personal drive without proper description, they effectively do not exist for anyone else. Metadata determine whether data can be found, understood and reused, and their importance is growing further with the rise of artificial intelligence. “ For AI tools, well-structured and rich metadata are a gold mine ,” says [name removed here], Head of the Repositories and Metadata Management Department at the National Library of Technology. In the interview, she explains why simply storing data is not enough, how the right repository can make a difference, and where AI can already reliably take over part of the work. 16 Sep Zenodo Leads the Way, but Czech Researchers Use Dozens of Different Repositories for Their Data Where do Czech researchers store their data, and at what stage of the research process are data most often deposited in repositories? The results collected so far from 193 respondents identified a total of 70 different repositories, databases and other storage solutions. Zenodo is the clear leader, while specialised databases used in molecular biology, genomics and proteomics are also strongly represented. 21 Aug Jupyter Notebooks: Code, Results, and Documentation in One Environment Source code, its outputs, explanatory text, and visualizations can all be combined in a single interactive document. This is the principle behind Jupyter Notebooks, which are widely used for data analysis, teaching, prototyping, and documenting computational workflows. Previous 1 2 3 4 5 6 7 … 10 Next Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+      "main_text": "You are here: Home EOSC CZ in data EOSC CZ in data EOSC CZ in data EOSC CZ Working Groups Training Marketing and Communication Implementing the EOSC initiative in the Czech Republic is a complex process. It is not limited to one specific area but extends to a wide range of research areas, which also impacts the everyday life of society. The initiative involves many institutions that need to be involved in cooperation. These institutions should be supported and their progress in adopting the principles of open science, FAIR data and EOSC should be monitored. In this section you will find information and data on the development of the initiative, as well as key documents and background documents accompanying the initiative. If you need to contact us, don't hesitate to get in touch with us at data@eosc.cz You might be interested 18 Sep “Poorly described data are like a book shelved in the wrong place. They practically don’t exist,” explains [names removed____]. A researcher may spend years collecting valuable data. But if those data remain on a personal drive without proper description, they effectively do not exist for anyone else. Metadata determine whether data can be found, understood and reused, and their importance is growing further with the rise of artificial intelligence. “ For AI tools, well-structured and rich metadata are a gold mine ,” says [names removed____], Head of the Repositories and Metadata Management Department at the National Library of Technology. In the interview, she explains why simply storing data is not enough, how the right repository can make a difference, and where AI can already reliably take over part of the work. 16 Sep Zenodo Leads the Way, but Czech Researchers Use Dozens of Different Repositories for Their Data Where do Czech researchers store their data, and at what stage of the research process are data most often deposited in repositories? The results collected so far from 193 respondents identified a total of 70 different repositories, databases and other storage solutions. Zenodo is the clear leader, while specialised databases used in molecular biology, genomics and proteomics are also strongly represented. 21 Aug Jupyter Notebooks: Code, Results, and Documentation in One Environment Source code, its outputs, explanatory text, and visualizations can all be combined in a single interactive document. This is the principle behind Jupyter Notebooks, which are widely used for data analysis, teaching, prototyping, and documenting computational workflows. Previous 1 2 3 4 5 6 7 … 10 Next",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home EOSC CZ in data EOSC CZ in data EOSC CZ in data EOSC CZ Working Groups Training Marketing and Communication Implementing the EOSC initiative in the Czech Republic is a complex process. It is not limited to one specific area but extends to a wide range of research areas, which also impacts the everyday life of society. The initiative involves many institutions that need to be involved in cooperation. These institutions should be supported and their progress in adopting the principles of open science, FAIR data and EOSC should be monitored. In this section you will find information and data on the development of the initiative, as well as key documents and background documents accompanying the initiative. If you need to contact us, don't hesitate to get in touch with us at data@eosc.cz You might be interested 18 Sep “Poorly described data are like a book shelved in the wrong place. They practically don’t exist,” explains [names removed____]. A researcher may spend years collecting valuable data. But if those data remain on a personal drive without proper description, they effectively do not exist for anyone else. Metadata determine whether data can be found, understood and reused, and their importance is growing further with the rise of artificial intelligence. “ For AI tools, well-structured and rich metadata are a gold mine ,” says [names removed____], Head of the Repositories and Metadata Management Department at the National Library of Technology. In the interview, she explains why simply storing data is not enough, how the right repository can make a difference, and where AI can already reliably take over part of the work. 16 Sep Zenodo Leads the Way, but Czech Researchers Use Dozens of Different Repositories for Their Data Where do Czech researchers store their data, and at what stage of the research process are data most often deposited in repositories? The results collected so far from 193 respondents identified a total of 70 different repositories, databases and other storage solutions. Zenodo is the clear leader, while specialised databases used in molecular biology, genomics and proteomics are also strongly represented. 21 Aug Jupyter Notebooks: Code, Results, and Documentation in One Environment Source code, its outputs, explanatory text, and visualizations can all be combined in a single interactive document. This is the principle behind Jupyter Notebooks, which are widely used for data analysis, teaching, prototyping, and documenting computational workflows. Previous 1 2 3 4 5 6 7 … 10 Next Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
       "links": [
         {
           "href": "https://www.eosc.cz/en",
@@ -3012,7 +4330,7 @@
         },
         {
           "href": "https://www.eosc.cz/en/news-and-events/news/interview-xxxxxxxxxxxxx",
-          "text": "18 Sep “Poorly described data are like a book shelved in the wrong place. They practically don’t exist,” explains [name removed here]. A researcher may spend years collecting valuable data. But if those data remain on a personal drive without proper description, they effectively do not exist for any",
+          "text": "18 Sep “Poorly described data are like a book shelved in the wrong place. They practically don’t exist,” explains [names removed____]. A researcher may spend years collecting valuable data. But if those data remain on a personal drive without proper description, they effectively do not exist for any",
           "visible": true
         },
         {
@@ -4034,8 +5352,8 @@
       "final_url": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
       "title": "Acknowledgement and Citation | EOSC - European Open Science Cloud",
       "lang_attr": "en",
-      "main_text": "You are here: Home Acknowledgement and Citation Acknowledgement and Citation For public outputs related to the activities and results of the EOSC CZ initiative, please use the acknowledgement and recommended citation provided below. Acknowledgement of Repository Outputs The acknowledgement is mandatory for publication and promotional outputs that are directly related to repositories: supported by the National Repository Platform for Research Data project (pilot repositories), participating in the National Repository Platform and/or the National Data Infrastructure. Czech version of the acknowledgement Tento výstup byl vytvořen s finanční podporou iniciativy EOSC CZ prostřednictvím projektu Národní repozitářová platforma pro výzkumná data (CZ.02.01.01/00/23_014/0008787), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement This output was developed with financial contributions from the EOSC CZ initiative through the National Repository Platform for Research Data project (CZ.02.01.01/00/23_014/0008787), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Outputs Supported by the Open Science II Project Czech version of the acknowledgement Výstup byl vytvořen za podpory Ministerstva školství, mládeže a tělovýchovy a Operačního programu Jan Amos Komenský v rámci projektu Open Science II (reg. č. CZ.02.01.01/00/24_030/0015041). English version of the acknowledgement This output was created with the support of the Ministry of Education, Youth and Sports and the Operational Programme Johannes Amos Comenius within the project Open Science II (reg. No. CZ.02.01.01/00/24_030/0015041). Other Outputs Supported by the EOSC CZ Initiative For other outputs created in connection with the activities of the EOSC CZ initiative (e.g. publications, presentations, methodologies, tools, etc.) without direct support from the NRP, OS II, or CARDS projects, including an acknowledgement is recommended. An acknowledgment is particularly appropriate if the output: uses EOSC CZ services or infrastructure, was developed with the support of EOSC-CZ project. Czech version of the acknowledgement Tímto vyjadřujeme poděkování iniciativě EOSC CZ za podporu prostřednictvím projektu IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement We acknowledge the support by the EOSC CZ Initiative through the project IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Publication Outputs Related to the EOSC CZ Initiative For publication outputs related to the EOSC CZ initiative, we recommend citing the following source: EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data DOI: https://doi.org/10.48550/arXiv.2402.13343 You may adapt the citation to the required citation style. Example (ČSN ISO 690 – CZ) ANTOL, Matej; MAREK, Jiří; CAPANDOVÁ, Michaela; JURÁČEK, Jaroslav a MATYSKA, Luděk. EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data . Online. ArXiv (Cornell University). 2024. Dostupné z: https://doi.org/10.48550/arxiv.2402.13343 . [cit. 2025-09-04]. Example (APA) Antol, M., Marek, J., Capandova, M., Juracek, J., & Matyska, L. (2024). EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2402.13343 .",
-      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home Acknowledgement and Citation Acknowledgement and Citation For public outputs related to the activities and results of the EOSC CZ initiative, please use the acknowledgement and recommended citation provided below. Acknowledgement of Repository Outputs The acknowledgement is mandatory for publication and promotional outputs that are directly related to repositories: supported by the National Repository Platform for Research Data project (pilot repositories), participating in the National Repository Platform and/or the National Data Infrastructure. Czech version of the acknowledgement Tento výstup byl vytvořen s finanční podporou iniciativy EOSC CZ prostřednictvím projektu Národní repozitářová platforma pro výzkumná data (CZ.02.01.01/00/23_014/0008787), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement This output was developed with financial contributions from the EOSC CZ initiative through the National Repository Platform for Research Data project (CZ.02.01.01/00/23_014/0008787), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Outputs Supported by the Open Science II Project Czech version of the acknowledgement Výstup byl vytvořen za podpory Ministerstva školství, mládeže a tělovýchovy a Operačního programu Jan Amos Komenský v rámci projektu Open Science II (reg. č. CZ.02.01.01/00/24_030/0015041). English version of the acknowledgement This output was created with the support of the Ministry of Education, Youth and Sports and the Operational Programme Johannes Amos Comenius within the project Open Science II (reg. No. CZ.02.01.01/00/24_030/0015041). Other Outputs Supported by the EOSC CZ Initiative For other outputs created in connection with the activities of the EOSC CZ initiative (e.g. publications, presentations, methodologies, tools, etc.) without direct support from the NRP, OS II, or CARDS projects, including an acknowledgement is recommended. An acknowledgment is particularly appropriate if the output: uses EOSC CZ services or infrastructure, was developed with the support of EOSC-CZ project. Czech version of the acknowledgement Tímto vyjadřujeme poděkování iniciativě EOSC CZ za podporu prostřednictvím projektu IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement We acknowledge the support by the EOSC CZ Initiative through the project IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Publication Outputs Related to the EOSC CZ Initiative For publication outputs related to the EOSC CZ initiative, we recommend citing the following source: EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data DOI: https://doi.org/10.48550/arXiv.2402.13343 You may adapt the citation to the required citation style. Example (ČSN ISO 690 – CZ) ANTOL, Matej; MAREK, Jiří; CAPANDOVÁ, Michaela; JURÁČEK, Jaroslav a MATYSKA, Luděk. EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data . Online. ArXiv (Cornell University). 2024. Dostupné z: https://doi.org/10.48550/arxiv.2402.13343 . [cit. 2025-09-04]. Example (APA) Antol, M., Marek, J., Capandova, M., Juracek, J., & Matyska, L. (2024). EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2402.13343 . Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
+      "main_text": "You are here: Home Acknowledgement and Citation Acknowledgement and Citation For public outputs related to the activities and results of the EOSC CZ initiative, please use the acknowledgement and recommended citation provided below. Acknowledgement of Repository Outputs The acknowledgement is mandatory for publication and promotional outputs that are directly related to repositories: supported by the National Repository Platform for Research Data project (pilot repositories), participating in the National Repository Platform and/or the National Data Infrastructure. Czech version of the acknowledgement Tento výstup byl vytvořen s finanční podporou iniciativy EOSC CZ prostřednictvím projektu Národní repozitářová platforma pro výzkumná data (CZ.02.01.01/00/23_014/0008787), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement This output was developed with financial contributions from the EOSC CZ initiative through the National Repository Platform for Research Data project (CZ.02.01.01/00/23_014/0008787), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Outputs Supported by the Open Science II Project Czech version of the acknowledgement Výstup byl vytvořen za podpory Ministerstva školství, mládeže a tělovýchovy a Operačního programu Jan Amos Komenský v rámci projektu Open Science II (reg. č. CZ.02.01.01/00/24_030/0015041). English version of the acknowledgement This output was created with the support of the Ministry of Education, Youth and Sports and the Operational Programme Johannes Amos Comenius within the project Open Science II (reg. No. CZ.02.01.01/00/24_030/0015041). Other Outputs Supported by the EOSC CZ Initiative For other outputs created in connection with the activities of the EOSC CZ initiative (e.g. publications, presentations, methodologies, tools, etc.) without direct support from the NRP, OS II, or CARDS projects, including an acknowledgement is recommended. An acknowledgment is particularly appropriate if the output: uses EOSC CZ services or infrastructure, was developed with the support of EOSC-CZ project. Czech version of the acknowledgement Tímto vyjadřujeme poděkování iniciativě EOSC CZ za podporu prostřednictvím projektu IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement We acknowledge the support by the EOSC CZ Initiative through the project IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Publication Outputs Related to the EOSC CZ Initiative For publication outputs related to the EOSC CZ initiative, we recommend citing the following source: EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data DOI: https://doi.org/10.48550/arXiv.2402.13343 You may adapt the citation to the required citation style. Example (ČSN ISO 690 – CZ) [names removed___________________________________________________________________]. EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data . Online. ArXiv (Cornell University). 2024. Dostupné z: https://doi.org/10.48550/arxiv.2402.13343 . [cit. 2025-09-04]. Example (APA) [names removed________________________________________________] (2024). EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2402.13343 .",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home Acknowledgement and Citation Acknowledgement and Citation For public outputs related to the activities and results of the EOSC CZ initiative, please use the acknowledgement and recommended citation provided below. Acknowledgement of Repository Outputs The acknowledgement is mandatory for publication and promotional outputs that are directly related to repositories: supported by the National Repository Platform for Research Data project (pilot repositories), participating in the National Repository Platform and/or the National Data Infrastructure. Czech version of the acknowledgement Tento výstup byl vytvořen s finanční podporou iniciativy EOSC CZ prostřednictvím projektu Národní repozitářová platforma pro výzkumná data (CZ.02.01.01/00/23_014/0008787), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement This output was developed with financial contributions from the EOSC CZ initiative through the National Repository Platform for Research Data project (CZ.02.01.01/00/23_014/0008787), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Outputs Supported by the Open Science II Project Czech version of the acknowledgement Výstup byl vytvořen za podpory Ministerstva školství, mládeže a tělovýchovy a Operačního programu Jan Amos Komenský v rámci projektu Open Science II (reg. č. CZ.02.01.01/00/24_030/0015041). English version of the acknowledgement This output was created with the support of the Ministry of Education, Youth and Sports and the Operational Programme Johannes Amos Comenius within the project Open Science II (reg. No. CZ.02.01.01/00/24_030/0015041). Other Outputs Supported by the EOSC CZ Initiative For other outputs created in connection with the activities of the EOSC CZ initiative (e.g. publications, presentations, methodologies, tools, etc.) without direct support from the NRP, OS II, or CARDS projects, including an acknowledgement is recommended. An acknowledgment is particularly appropriate if the output: uses EOSC CZ services or infrastructure, was developed with the support of EOSC-CZ project. Czech version of the acknowledgement Tímto vyjadřujeme poděkování iniciativě EOSC CZ za podporu prostřednictvím projektu IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), financovaného z Operačního programu Jan Amos Komenský (OP JAK) Ministerstva školství, mládeže a tělovýchovy České republiky (MŠMT). English version of the acknowledgement We acknowledge the support by the EOSC CZ Initiative through the project IPs EOSC-CZ (CZ.02.01.01/00/22_004/0007682), funded by the Programme Johannes Amos Comenius (P JAC) of the Ministry of Education, Youth and Sports of the Czech Republic (MEYS). Publication Outputs Related to the EOSC CZ Initiative For publication outputs related to the EOSC CZ initiative, we recommend citing the following source: EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data DOI: https://doi.org/10.48550/arXiv.2402.13343 You may adapt the citation to the required citation style. Example (ČSN ISO 690 – CZ) [names removed___________________________________________________________________]. EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data . Online. ArXiv (Cornell University). 2024. Dostupné z: https://doi.org/10.48550/arxiv.2402.13343 . [cit. 2025-09-04]. Example (APA) [names removed________________________________________________] (2024). EOSC CZ: Towards the development of Czech national ecosystem for FAIR research data (Version 1). arXiv. https://doi.org/10.48550/ARXIV.2402.13343 . Contact info@eosc.cz Templates EOSC CZ Newsletter EOSC CZ © 2026 Masaryk University Web Admin Cookies LinkedIn Youtube You are running an old browser version. We recommend updating your browser to its latest version. Close By clicking “Accept Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts. Cookie Settings Necessary Only Accept Cookies",
       "links": [
         {
           "href": "https://www.eosc.cz/en",
@@ -4410,6 +5728,479 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://dmp.eosc.cz/en/",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Data Stewardship Wizard (NRP) An open-source tool in its pilot version, available in a localized instance for the Czech Republic. It helps researchers create DMPs in accordance with the FAIR principles and provides methodological support and documentation.",
+      "depth": 2,
+      "parent_url": "https://www.eosc.cz/en/services/all",
+      "http_status": 200,
+      "final_url": "https://dmp.eosc.cz/en/",
+      "title": "DMP.eosc.cz",
+      "lang_attr": "en",
+      "main_text": "Pilot operation of DMP.eosc.cz Data management planning for the National Data Infrastructure Data Stewardship Wizard helps researchers prepare quality Data Management Plans through a localized instance for the Czech NDI environment. Start Planning Service Status Technical support: support@dmp.eosc.cz Services and Support Explore the services and support options available for different user groups and see what you can use today. Data Management Planning Efficient data management begins with a quality Data Management Plan (DMP). We help you create one and provide proven practices for managing research data. Start Planning (pilot operation) FAIR Implementation Profiles FAIR Implementation Profiles help communities define how to apply FAIR principles. Support for creating them within the NDI is currently in preparation. In Preparation Documentation The DSW user guide covers functionality, detailed instructions, tips for effective data management planning, and recommended practices. Read Guide Training We are preparing a DSW training instance where users will be able to safely test data management planning in a dedicated environment. In Preparation",
+      "full_text": "Česky Pilot operation of DMP.eosc.cz Data management planning for the National Data Infrastructure Data Stewardship Wizard helps researchers prepare quality Data Management Plans through a localized instance for the Czech NDI environment. Start Planning Service Status Technical support: support@dmp.eosc.cz Services and Support Explore the services and support options available for different user groups and see what you can use today. Data Management Planning Efficient data management begins with a quality Data Management Plan (DMP). We help you create one and provide proven practices for managing research data. Start Planning (pilot operation) FAIR Implementation Profiles FAIR Implementation Profiles help communities define how to apply FAIR principles. Support for creating them within the NDI is currently in preparation. In Preparation Documentation The DSW user guide covers functionality, detailed instructions, tips for effective data management planning, and recommended practices. Read Guide Training We are preparing a DSW training instance where users will be able to safely test data management planning in a dedicated environment. In Preparation Terms of Service Privacy Policy Service Status eosc.cz",
+      "links": [
+        {
+          "href": "https://dmp.eosc.cz/",
+          "text": "EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://dmp.eosc.cz/",
+          "text": "Česky",
+          "visible": true
+        },
+        {
+          "href": "https://ds-wizard.org",
+          "text": "Data Stewardship Wizard",
+          "visible": true
+        },
+        {
+          "href": "https://dmp.eosc.cz/wizard/",
+          "text": "Start Planning",
+          "visible": true
+        },
+        {
+          "href": "https://dsw-nrp.github.io/status/",
+          "text": "Service Status",
+          "visible": true
+        },
+        {
+          "href": "mailto:support@dmp.eosc.cz",
+          "text": "support@dmp.eosc.cz",
+          "visible": true
+        },
+        {
+          "href": "https://dmp.eosc.cz/wizard/",
+          "text": "Start Planning",
+          "visible": true
+        },
+        {
+          "href": "https://guide.ds-wizard.org/",
+          "text": "Read Guide",
+          "visible": true
+        },
+        {
+          "href": "https://dmp.eosc.cz/en/terms-of-service",
+          "text": "Terms of Service",
+          "visible": true
+        },
+        {
+          "href": "https://dmp.eosc.cz/en/privacy",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://dsw-nrp.github.io/status/",
+          "text": "Service Status",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.cz/en",
+          "text": "eosc.cz",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.eosc.cz/en/about-eosc-cz/faq",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "FAQ",
+      "depth": 2,
+      "parent_url": "https://www.eosc.cz/en/services/all",
+      "http_status": 200,
+      "final_url": "https://www.eosc.cz/en/about-eosc-cz/faq",
+      "title": "FAQ | EOSC - European Open Science Cloud",
+      "lang_attr": "en",
+      "main_text": "You are here: Home FAQ FAQ What is the architecture of the EOSC CZ Implementation? The basic architecture of EOSC implementation in the Czech Republic is described in the document prepared by the EOSC platform at the Ministry of Education, Youth and Sports and adopted in June 2021 by MEYS (here). Further development of the architecture of EOSC implementation in the Czech Republic and related services are carried out within the activities of the EOSC CZ working groups , in particular the WG EOSC CZ Architecture and WG EOSC CZ Core Services . The needs and services of the EOSC architecture in the Czech Republic in specific scientific disciplines will be defined continuously by the experts in the EOSC CZ thematic working groups . What are FAIR data? 1. Findability If you want your data to be reusable, you need to make sure that both people and machines can find it. To this end, it is crucial to prepare machine-readable data. 2. Accessibility Data should be openly accessible, ideally through a repository. If access to the data is restricted, then at least the metadata should be openly accessible. 3. Interoperability If you want to integrate your data with other datasets, it is advisable to use standardised terms to describe the data. 4. Reusability The main goal of the FAIR principles is to increase the reusability of scientific data. To achieve this goal, the data need to be sufficiently described and shared under the least restrictive licence possible so that the data users know how the data were created, what they describe and how they can use them. What does the EOSC-CZ project include? What will this project provide? The EOSC-CZ project is divided into three key professional activities: EOSC CZ Secretariat (professional and administrative support of the EOSC implementation in the Czech Republic) Shared components and services of the National Data Infrastructure (NDI) EOSC CZ Training Centre The project will provide basic administrative, professional and training services for the implementation of EOSC in the Czech Republic, as well as the development of key shared components of the National Data Infrastructure (NDI). In particular, the project will ensure the development of the National Metadata Directory (NMD) and the unification of policies within the NDI. The main objective of the EOSC-CZ Project is to create a common background for the implementation of the data-oriented parts of the Open Science strategy in the Czech Republic, especially within the OPEN/FAIR Data and EOSC pillars. What does the CARDS project include? What will this project provide? The CARDS project is divided into two key professional activities: Implementation and operation of the next-generation platform Methodological support for working with research data metadata and persistent identifiers The main objective of the CARDS Project is to create a unified environment for sharing and efficient management of information resources and to contribute to the establishment of a common background for the implementation of the data-oriented parts of the Open Science strategy in the Czech Republic, especially within the OPEN/FAIR Data and EOSC pillars. The project is complementary to the parallel project EOSC-CZ under the coordination of e-INFRA CZ (Masaryk University), and together, they create the basic background for the implementation of other Open Science calls under the OP JAC. What is the purpose of the National Repository Platform (NRP)? How will the NRP be prepared? The National Repository Platform represents the foundation (core) of the NDI. It is a collection of technical resources (hardware), software (basic and additional service) and policies that create the backbone for the creation of individual virtual repositories (tenants of the NRP, or NDI) for storing and further work with research data. The NRP will also include a general data repository for data that can not be placed in the thematic (subject-specific, institutional, etc.) repositories. From a technical standpoint, the NRP will be implemented as a distributed environment with different software; this heterogeneousness will allow for the gradual development and linking of repositories that already exist or will be created outside the NRP. The NRP will be built in compliance with the standards proposed by the individual EOSC CZ working groups and approved by the EOSC CZ Coordination Committee in cooperation with the EOSC CZ Secretariat as part of the EOSC CZ project. Thematic (subject-specific) repositories will be linked to the NRP; together, all the data will be traceable through the National Metadata Directory (NMA). The NRP will be created within the framework of a joint project of advanced scientific research academic institutions in the Czech Republic, coordinated by e-INFRA CZ, with a guarantee of a full, seamless connection to the national e-infrastructure. The joint NRP project will comprise the representatives of universities and academic institutions already working with larger quantities of scientific research data and already have or are currently implementing a real need for the management thereof. The project will thus enable the basic technical infrastructure and other related NDI rules and standards built within the EOSC CZ and CARDS projects to be put into practice and operated in the conditions of the Czech academic environment. While only a limited number of academic and research institutions will be involved in building the NRP, its results will be available to the entire academic and research community. This concerns primarily the creation and management of tenants (virtual repositories), making decisions regarding the terms of use of such tenants as well as the terms of accessing and processing such data and datasets. What is the purpose of the EOSC CZ Working Groups, and what groups already exist? How can I participate in the WGs’ work, and what are the planned outputs? The EOSC CZ working groups form a key component of the preparation and subsequent implementation of the EOSC in the Czech Republic. Their objective is to seek and find consensus within the Czech academic and research community regarding key architectural, operational, metadata, discipline-specific and other issues of EOSC implementation in the Czech Republic. The working groups also propose standards that will be binding for the implementation of the entire NDI. The gradual deployment of the working groups’ recommendations/standards into production operation will commence in 2023. More information on the working groups’ activities and an up-to-date list of the WGs is available online. Anyone can participate in the WGs’ activities by registering for a specific WG. What is the EOSC CZ Secretariat? The EOSC CZ Secretariat is the central administrative, expert and support component of the EOSC initiative implementation and the provision of FAIR research data in the Czech Republic. Its key activities include monitoring the actual EOSC implementation in the Czech Republic, providing broad publicity (including the development of the national EOSC portal) and continuously providing information on the state of the implementation. The Secretariat will also be connected to international (EU) activities, including supporting those interested in active involvement at the European level. Other activities of the EOSC CZ Secretariat will include administrative, logistical, technical and professional support of the working groups, communication with the EOSC CZ Coordination Committee, etc. The Secretariat is part of the EOSC-CZ project (activity KA2). More information on its activities will be available here. What is the EOSC CZ Training Centre? The EOSC CZ Training Centre is responsible for providing comprehensive support and facilities for training, educational and related activities, including the organisation of conferences. The Centre’s objective will be to consolidate and make the emerging materials widely available, register suitable trainers, support the use of training and educational materials, plan and implement training, including provision of suitable trainers and speakers, collect and evaluate feedback from implemented training and professional educational activities, etc. Furthermore, the Training Centre’s objectives will include cooperation with universities and other subjects and collection of requests for training and further education, dissemination and publicity of training and educational activities of all relevant national subjects, thus gradually creating an overview of available training within the Czech Republic (planned as an important component of the future national EOSC CZ portal). The Training Centre is part of the EOSC-CZ project (activity KA4). What does NDI mean? And what are its components? National Data Infrastructure (NDI) is the name of the entire complex environment that will be realised within the EOSC implementation in the Czech Republic. Its key components are: The National Metadata Directory (NMA), including support for metadata access control The National Repository Platform (NRP), including support for metadata access control Thematic and possibly other (physical) repositories Policies, conditions of access, participation and use Training and educational activities (coordinated by the EOSC CZ Training Centre) and generally taking care of new job positions (data steward, data scientist…) EOSC CZ Secretariat Within the NDI, the interoperability of all components will be ensured in accordance with the principles of building an Open Science environment in the Czech Republic. What is the purpose of the National Metadata Directory (NMD)? Who is responsible for the methodological and technical support of the NMD? The National Metadata Directory is a central directory in which the basic metadata of research data will be stored (the corresponding basic metadata model will be developed and continuously updated within the Metadata Directory WG with the support of the CARDS project). NMD will also contain the basic data necessary to ensure interoperability while accessing the data. The NMD will include search services and metadata retrieval. The NMD will index metadata from various data repositories and stores in the Czech Republic and abroad (the aim is to cover all research data produced in the Czech Republic). Methodological support is provided by the National Library of Technology (NLT) within the CARDS project, technical support and operation is provided by the e-INFRA CZ consortium within the EOSC-CZ project. What is the difference between the National Metadata Directory (NMD) and the National Catalogue of Repositories (NCR)? NMD is a central directory linked to a search engine. The NMD will maintain metadata of research data from various sources in the Czech Republic and abroad and will allow searching these metadata. NCR is a catalogue containing information on the individual repositories and controlled vocabularies, ontologies and metadata schemas used within. What is the difference between the National Data Infrastructure (NDI) a the National Repository Platform (NRP)? The National Data Infrastructure (NDI) is an umbrella term for a complex environment that will allow the management and further development of FAIR data in the Czech Republic. The National Repository Platform (NRP) is a part of NDI. The NDI (represented by the EOSC-CZ project and the complementary CARDS project) defines the standards and compliance therewith within the NRP; thus, the NDI provides the framework for the NRP. The actual concrete design of the NRP architecture and responsibility for its implementation lies with the NRP project. The NRP and its services (together with the National Metadata Directory) form the foundation or core to which other NDI components can be linked, such as data-oriented repositories and specific services related to specific thematic (large-scale domain-science) clusters. The NDI complex is complemented by human resources whose development and allocation are focused on research data management across the Czech Republic. Associated with this is a non-trivial improvement of the ability of the individual institutions, research teams and individuals to work with the agenda of secure and effective data management. How is EOSC related to EHDS? Are they parallel or collaborative projects? These are parallel projects. Their connection is crucial for the future; however, it is not yet clear even at the EU level, except for the general context of the European data strategy. In general, EHDS is on of the Data Spaces; the current interpretation puts Data Spaces closer to commercial (and other non-research) use, whereas the primary objective of EOSC is to provide background for Open Science and Excellent Science. Which European and national strategic documents in the field of R&D&I management does the EOSC initiative build upon? At the national level, the most important strategic documents are the National Research, Development and Innovation Policy of the Czech Republic 2021–2027 (actions 8 and 13), the Czech National Strategy of Open Access to Scientific Information 2017–2020 and the Action Plan thereof. The most important strategic documents on the European (or international) level are the Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information (article 10), Commission Recommendation (EU) 2018/790 of 25 April 2018 on access to and preservation of scientific information, Strategic Research and Innovation Agenda (SRIA) of the European Open Science Cloud (EOSC) Version 1.0 (15 February 2021) and UNESCO Recommendation on Open Science (23 November 2021). How do we cooperate with the international EOSC Environment? Who takes care of this cooperation? Who are the official nominees for the Czech Republic? The international cooperation is carried out mainly through the so-called EOSC Association (based in Brussels), an international non-profit organisation established under Belgian law in July 2020 (it took over the responsibility of the EOSC governing structures from previous years). This association plays a key role i.a. in the implementation of the European partnership for EOSC, which is one of the cross-cutting initiatives within Horizon Europe. The following institutions are representing the Czech Republic as members of the association: the CESNET Association (MEYS has also entrusted this association with the role of the national “Mandated Organisation”), Masaryk University (CERIT-SC), VSB – Technical University of Ostrava (IT4Innovations) and the National Library of Technology. Furthermore, J. Heyrovský Institute of Physical Chemistry of the Czech Academy of Sciences is involved as an observer. The strategic and implementation priorities of the EOSC are formulated and updated through the continuous work of the EOSC Association Task Forces, in which individuals from various collaborating research organisations from the Czech Republic are represented. Furthermore, the EOSC Steering Board, composed of the representatives of the public administration of the individual Member States, is an expert advisory body to the European Commission with regard to EOSC issues. Together, the EC, the EOSC Steering Board and the EOSC Association form the so-called EOSC Tripartite, which discusses the general direction of the EOSC partnership, updates the strategic roadmap, develops key elements of future EOSC challenges, etc. Information about EOSC at the European level is primarily available on the eosc.eu website. What international EOSC projects are the representatives of the Czech Republic involved in, and how are these projects linked to the implementation of EOSC in the Czech Republic? Here are some examples of international projects supporting EOSC with Czech involvement: EOSC-Life, PaNOSC, EOSC Synergy, EOSC Future, EOSC-Hub, EUROCC, EGI ACE, HPLT, etc. In general, these projects are primarily thematically focused (clustering of large European research infrastructures) or projects aimed at building pan-European universal FAIR data e-infrastructures. In what ways is the EOSC implementation supported in the EU and other EU member states? Within the support provided by the H2020 programmes, the EOSC initiative was targeted by calls from the Work Programme 2016–2017 (approx. € 36 million) and the 2018–2020 Work Programme (approx. € 188 million). Within the HE programme, the so-called European Partnership for EOSC was established, which is to support the EOSC initiative with €490 million between 2021–2030 (€ 500 million has been pledged collectively by the EOSC Association members). Among the EU member states that are at a moderately advanced stage of implementation of the national EOSC network are the Netherlands (since 2019, the National Programme for Open Science has been functionally linked to the public support programme with an input of € 40 million and later € 20 million per year – up to 2030), Germany (the Action Plan for Research Data of the Federal Ministry of Education and Research combined with a public support programme of € 90 million per year for 2019–2028) and France (the Second National Plan for Open Science 2021–2024 connected to the NFOS public support programme). The member states that, like the Czech Republic, are in the early stages of the implementation of the national EOSC network are e.g. Sweden, Austria and Portugal. In all these states, systematic national public support plans are currently being set up on the basis of relevant national strategies and infrastructures. What does it mean that the EOSC-CZ is an operation of strategic importance under Cohesion Policy 2021–2027? The managing authority of the OP JAC has identified EOSC-CZ (i.e. EOSC-CZ and all the complementary or future projects contributing to the development of this field) as an operation of strategic importance, which is characterised by a significant contribution to the fulfilment of the programme objectives; The managing authority of the OP JAC will also give increased attention to the monitoring and promotion thereof. The term OP JAC Strategic Project is used for short. The aim of the European Commission is to use this instrument to make the EU citizens more aware of the importance of European cohesion and regional policy. In addition to their significant financial volume and thus key contribution to the direction of the programme, operations of strategic importance are characterised by their fundamental innovativeness and specific character in the given national and economic context, and their outputs influence the activities of a large number of end users (see Communicating operations of strategic importance in 2021–2027). At the level of communication management of the EOSC-CZ project, closer cooperation with the publicity department of the OP JAC managing authority is expected, as well as compliance with the relevant recommendations of the European Commission.",
+      "full_text": "Go to main content | Go to main menu | Go to search Search ... Search ... Čeština CS About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking About EOSC CZ Initiative EOSC CZ EOSC Node Czechia EOSC CZ in data Secretariat EOSC CZ Templates EOSC CZ Acknowledgement and Citation Contact FAQ Projects National Support Outcomes of the EOSC CZ Initiative European Open Science Cloud Czech Republic (IPs EOSC-CZ) Czech Academic and Research Discovery Services (CARDS) National Repository Platform for Research Data (NRP) Open Science II (OS II) Open Science III (OS III) Open Calls Working groups Working Groups Task Forces Services Communities Data stewards Training News and Events News Events calendar Networking You are here: Home FAQ FAQ What is the architecture of the EOSC CZ Implementation? The basic architecture of EOSC implementation in the Czech Republic is described in the document prepared by the EOSC platform at the Ministry of Education, Youth and Sports and adopted in June 2021 by MEYS (here). Further development of the architecture of EOSC implementation in the Czech Republic and related services are carried out within the activities of the EOSC CZ working groups , in particular the WG EOSC CZ Architecture and WG EOSC CZ Core Services . The needs and services of the EOSC architecture in the Czech Republic in specific scientific disciplines will be defined continuously by the experts in the EOSC CZ thematic working groups . What are FAIR data? 1. Findability If you want your data to be reusable, you need to make sure that both people and machines can find it. To this end, it is crucial to prepare machine-readable data. 2. Accessibility Data should be openly accessible, ideally through a repository. If access to the data is restricted, then at least the metadata should be openly accessible. 3. Interoperability If you want to integrate your data with other datasets, it is advisable to use standardised terms to describe the data. 4. Reusability The main goal of the FAIR principles is to increase the reusability of scientific data. To achieve this goal, the data need to be sufficiently described and shared under the least restrictive licence possible so that the data users know how the data were created, what they describe and how they can use them. What does the EOSC-CZ project include? What will this project provide? The EOSC-CZ project is divided into three key professional activities: EOSC CZ Secretariat (professional and administrative support of the EOSC implementation in the Czech Republic) Shared components and services of the National Data Infrastructure (NDI) EOSC CZ Training Centre The project will provide basic administrative, professional and training services for the implementation of EOSC in the Czech Republic, as well as the development of key shared components of the National Data Infrastructure (NDI). In particular, the project will ensure the development of the National Metadata Directory (NMD) and the unification of policies within the NDI. The main objective of the EOSC-CZ Project is to create a common background for the implementation of the data-oriented parts of the Open Science strategy in the Czech Republic, especially within the OPEN/FAIR Data and EOSC pillars. What does the CARDS project include? What will this project provide? The CARDS project is divided into two key professional activities: Implementation and operation of the next-generation platform Methodological support for working with research data metadata and persistent identifiers The main objective of the CARDS Project is to create a unified environment for sharing and efficient management of information resources and to contribute to the establishment of a common background for the implementation of the data-oriented parts of the Open Science strategy in the Czech Republic, especially within the OPEN/FAIR Data and EOSC pillars. The project is complementary to the parallel project EOSC-CZ under the coordination of e-INFRA CZ (Masaryk University), and together, they create the basic background for the implementation of other Open Science calls under the OP JAC. What is the purpose of the National Repository Platform (NRP)? How will the NRP be prepared? The National Repository Platform represents the foundation (core) of the NDI. It is a collection of technical resources (hardware), software (basic and additional service) and policies that create the backbone for the creation of individual virtual repositories (tenants of the NRP, or NDI) for storing and further work with research data. The NRP will also include a general data repository for data that can not be placed in the thematic (subject-specific, institutional, etc.) repositories. From a technical standpoint, the NRP will be implemented as a distributed environment with different software; this heterogeneousness will allow for the gradual development and linking of repositories that already exist or will be created outside the NRP. The NRP will be built in compliance with the standards proposed by the individual EOSC CZ working groups and approved by the EOSC CZ Coordination Committee in cooperation with the EOSC CZ Secretariat as part of the EOSC CZ project. Thematic (subject-specific) repositories will be linked to the NRP; together, all the data will be traceable through the National Metadata Directory (NMA). The NRP will be created within the framework of a joint project of advanced scientific research academic institutions in the Czech Republic, coordinated by e-INFRA CZ, with a guarantee of a full, seamless connection to the national e-infrastructure. The joint NRP project will comprise the representatives of universities and academic institutions already working with larger quantities of scientific research data and already have or are currently implementing a real need for the management thereof. The project will thus enable the basic technical infrastructure and other related NDI rules and standards built within the EOSC CZ and CARDS projects to be put into practice and operated in the conditions of the Czech academic environment. While only a limited number of academic and research institutions will be involved in building the NRP, its results will be available to the entire academic and research community. This concerns primarily the creation and management of tenants (virtual repositories), making decisions regarding the terms of use of such tenants as well as the terms of accessing and processing such data and datasets. What is the purpose of the EOSC CZ Working Groups, and what groups already exist? How can I participate in the WGs’ work, and what are the planned outputs? The EOSC CZ working groups form a key component of the preparation and subsequent implementation of the EOSC in the Czech Republic. Their objective is to seek and find consensus within the Czech academic and research community regarding key architectural, operational, metadata, discipline-specific and other issues of EOSC implementation in the Czech Republic. The working groups also propose standards that will be binding for the implementation of the entire NDI. The gradual deployment of the working groups’ recommendations/standards into production operation will commence in 2023. More information on the working groups’ activities and an up-to-date list of the WGs is available online. Anyone can participate in the WGs’ activities by registering for a specific WG. What is the EOSC CZ Secretariat? The EOSC CZ Secretariat is the central administrative, expert and support component of the EOSC initiative implementation and the provision of FAIR research data in the Czech Republic. Its key activities include monitoring the actual EOSC implementation in the Czech Republic, providing broad publicity (including the development of the national EOSC portal) and continuously providing information on the state of the implementation. The Secretariat will also be connected to international (EU) activities, including supporting those interested in active involvement at the European level. Other activities of the EOSC CZ Secretariat will include administrative, logistical, technical and professional support of the working groups, communication with the EOSC CZ Coordination Committee, etc. The Secretariat is part of the EOSC-CZ project (activity KA2). More information on its activities will be available here. What is the EOSC CZ Training Centre? The EOSC CZ Training Centre is responsible for providing comprehensive support and facilities for training, educational and related activities, including the organisation of conferences. The Centre’s objective will be to consolidate and make the emerging materials widely available, register suitable trainers, support the use of training and educational materials, plan and implement training, including provision of suitable trainers and speakers, collect and evaluate feedback from implemented training and professional educational activities, etc. Furthermore, the Training Centre’s objectives will include cooperation with universities and other subjects and collection of requests for training and further education, dissemination and publicity of training and educational activities of all relevant national subjects, thus gradually creating an overview of available training within the Czech Republic (planned as an important component of the future national EOSC CZ portal). The Training Centre is part of the EOSC-CZ project (activity KA4). What does NDI mean? And what are its components? National Data Infrastructure (NDI) is the name of the entire complex environment that will be realised within the EOSC implementation in the Czech Republic. Its key components are: The National Metadata Directory (NMA), including support for metadata access control The National Repository Platform (NRP), including support for metadata access control Thematic and possibly other (physical) repositories Policies, conditions of access, participation and use Training and educational activities (coordinated by the EOSC CZ Training Centre) and generally taking care of new job positions (data steward, data scientist…) EOSC CZ Secretariat Within the NDI, the interoperability of all components will be ensured in accordance with the principles of building an Open Science environment in the Czech Republic. What is the purpose of the National Metadata Directory (NMD)? Who is responsible for the methodological and technical support of the NMD? The National Metadata Directory is a central directory in which the basic metadata of research data will be stored (the corresponding basic metadata model will be developed and continuously updated within the Metadata Directory WG with the support of the CARDS project). NMD will also contain the basic data necessary to ensure interoperability while accessing the data. The NMD will include search services and metadata retrieval. The NMD will index metadata from various data repositories and stores in the Czech Republic and abroad (the aim is to cover all research data produced in the Czech Republic). Methodological support is provided by the National Library of Technology (NLT) within the CARDS project, technical support and operation is provided by the e-INFRA CZ consortium within the EOSC-CZ project. What is the difference between the National Metadata Directory (NMD) and the National Catalogue of Repositories (NCR)? NMD is a central directory linked to a search engine. The NMD will maintain metadata of research data from various sources in the Czech Republic and abroad and will allow searching these metadata. NCR is a catalogue containing information on the individual repositories and controlled vocabularies, ontologies and metadata schemas used within. What is the difference between the National Data Infrastructure (NDI) a the National Repository Platform (NRP)? The National Data Infrastructure (NDI) is an umbrella term for a complex environment that will allow the management and further development of FAIR data in the Czech Republic. The National Repository Platform (NRP) is a part of NDI. The NDI (represented by the EOSC-CZ project and the complementary CARDS project) defines the standards and compliance therewith within the NRP; thus, the NDI provides the framework for the NRP. The actual concrete design of the NRP architecture and responsibility for its implementation lies with the NRP project. The NRP and its services (together with the National Metadata Directory) form the foundation or core to which other NDI components can be linked, such as data-oriented repositories and specific services related to specific thematic (large-scale domain-science) clusters. The NDI complex is complemented by human resources whose development and allocation are focused on research data management across the Czech Republic. Associated with this is a non-trivial improvement of the ability of the individual institutions, research teams and individuals to work with the agenda of secure and effective data management. How is EOSC related to EHDS? Are they parallel or collaborative projects? These are parallel projects. Their connection is crucial for the future; however, it is not yet clear even at the EU level, except for the general context of the European data strategy. In general, EHDS is on of the Data Spaces; the current interpretation puts Data Spaces closer to commercial (and other non-research) use, whereas the primary objective of EOSC is to provide background for Open Science and Excellent Science. Which European and national strategic documents in the field of R&D&I management does the EOSC initiative build upon? At the national level, the most important strategic documents are the National Research, Development and Innovation Policy of the Czech Republic 2021–2027 (actions 8 and 13), the Czech National Strategy of Open Access to Scientific Information 2017–2020 and the Action Plan thereof. The most important strategic documents on the European (or international) level are the Directive (EU) 2019/1024 of the European Parliament and of the Council of 20 June 2019 on open data and the re-use of public sector information (article 10), Commission Recommendation (EU) 2018/790 of 25 April 2018 on access to and preservation of scientific information, Strategic Research and Innovation Agenda (SRIA) of the European Open Science Cloud (EOSC) Version 1.0 (15 February 2021) and UNESCO Recommendation on Open Science (23 November 2021). How do we cooperate with the international EOSC Environment? Who takes care of this cooperation? Who are the official nominees for the Czech Republic? The international cooperation is carried out mainly through the so-called EOSC Association (based in Brussels), an international non-profit organisation established under Belgian law in July 2020 (it took over the responsibility of the EOSC governing structures from previous years). This association plays a key role i.a. in the implementation of the European partnership for EOSC, which is one of the cross-cutting initiatives within Horizon Europe. The following institutions are representing the Czech Republic as members of the association: the CESNET Association (MEYS has also entrusted this association with the role of the national “Mandated Organisation”), Masaryk University (CERIT-SC), VSB – Technical University of Ostrava (IT4Innovations) and the National Library of Technology. Furthermore, J. Heyrovský Institute of Physical Chemistry of the Czech Academy of Sciences is involved as an observer. The strategic and implementation priorities of the EOSC are formulated and updated through the continuous work of the EOSC Association Task Forces, in which individuals from various collaborating research organisations from the Czech Republic are represented. Furthermore, the EOSC Steering Board, composed of the representatives of the public administration of the individual Member States, is an expert advisory body to the European Commission with regard to EOSC issues. Together, the EC, the EOSC Steering Board and the EOSC Association form the so-called EOSC Tripartite, which discusses the general direction of the EOSC partnership, updates the strategic roadmap, develops key elements of future EOSC challenges, etc. Information about EOSC at the European level is primarily available on the eosc.eu website. What international EOSC projects are the representatives of the Czech Republic involved in, and how are these projects linked to the implementation of EOSC in the Czech Republic? Here are some examples of international projects supporting EOSC with Czech involvement: EOSC-Life, PaNOSC, EOSC Synergy, EOSC Future, EOSC-Hub, EUROCC, EGI ACE, HPLT, etc. In general, these projects are primarily thematically focused (clustering of large European research infrastructures) or projects aimed at building pan-European universal FAIR data e-infrastructures. In what ways is the EOSC implementation supported in the EU and other EU member states? Within the support provided by the H2020 programmes, the EOSC initiative was targeted by calls from the Work Programme 2016–2017 (approx. € 36 million) and the 2018–2020 Work Programme (approx. € 188 million). Within the HE programme, the so-called European Partnership for EOSC was established, which is to support the EOSC initiative with €490 million between 2021–2030 (€ 500 million has been pledged collectively by the EOSC Association members). Among the EU member states that are at a moderately advanced stage of implementation of the national EOSC network are the Netherlands (since 2019, the National Programme for Open Science has been functionally linked to the public support programme with an input of € 40 million and later € 20 million per year – up to 2030), Germany (the Action Plan for Research Data of the Federal Ministry of Education and Research combined with a public support programme of € 90 million per year for 2019–2028) and France (the Second National Plan for Open Science 2021–2024 connected to the NFOS public support programme). The member states that, like the Czech Republic, are in the early stages of the implementation of the national EOSC network are e.g. Sweden, Austria and Portugal. In all these states, systematic national public support plans are currently being set up on the basis of relevant national strategies and infrastructures. What does it mean that the EOSC-CZ is an operation of strategic importance under Cohesion Policy 2021–2027? The managing authority of the OP JAC has identified EOSC-CZ (i.e. EOSC-CZ and all the complementary or future projects contributing to the development of this field) as an operation of strategic importance, which is characterised by a significant contribution to the fulfilment of the programme objectives; The managing authority of the OP JAC will also give increased attention to the monitoring and promotion thereof. The term OP JAC Strategic Project is used for short. The aim of the European Commission is to use this instrument to make the EU citizens more aware of the importance of European cohesion and regional policy. In addition to their significant financial volume and thus key contribution to the direction of the programme, operations of strategic importance are characterised by their fundamental innovativeness and specific character in the given national and economic context, and their outputs influence the activities of a large number of end users (see Communicating operations of strategic importance in 2021–2",
+      "links": [
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/faq",
+          "text": "Čeština",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/o-nas/faq",
+          "text": "CS",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz",
+          "text": "About EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
+          "text": "Initiative EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
+          "text": "EOSC Node Czechia",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
+          "text": "EOSC CZ in data",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
+          "text": "Secretariat EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
+          "text": "Acknowledgement and Citation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/faq",
+          "text": "FAQ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-support",
+          "text": "National Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/outcomes-of-the-eosc-cz-initiative",
+          "text": "Outcomes of the EOSC CZ Initiative",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/eosc-cz",
+          "text": "European Open Science Cloud Czech Republic (IPs EOSC-CZ)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
+          "text": "Czech Academic and Research Discovery Services (CARDS)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/national-repository-platform-for-research-data-nrp",
+          "text": "National Repository Platform for Research Data (NRP)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-ii",
+          "text": "Open Science II (OS II)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/projects/open-science-iii",
+          "text": "Open Science III (OS III)",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/open-calls",
+          "text": "Open Calls",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "Working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/wg",
+          "text": "Working Groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/task-forces",
+          "text": "Task Forces",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities",
+          "text": "Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/communities/data-stewards",
+          "text": "Data stewards",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events",
+          "text": "News and Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/events-calendar",
+          "text": "Events calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events/networking",
+          "text": "Networking",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups",
+          "text": "EOSC CZ working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/architecture-of-national-data-infrastructure",
+          "text": "WG EOSC CZ Architecture",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups/core-services",
+          "text": "WG EOSC CZ Core Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/working-groups#thematic",
+          "text": "EOSC CZ thematic working groups",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "Templates EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
+          "text": "CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/news-and-events#newsletter",
+          "text": "Newsletter EOSC CZ",
+          "visible": true
+        },
+        {
+          "href": "https://www.muni.cz/en",
+          "text": "Masaryk University",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc.cz/en/system/web-admin",
+          "text": "Web Admin",
+          "visible": true
+        },
+        {
+          "href": "https://bsky.app/profile/eosccz.bsky.social",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eosc-czech-republic/",
+          "text": "LinkedIn",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/channel/UCFnYvpAfVzoGMt5hHYwc4Vg",
+          "text": "Youtube",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
   "children_skipped": [
@@ -4464,7 +6255,15 @@
     "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz (already fetched at depth 1)",
     "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia (already fetched at depth 1)",
     "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data (already fetched at depth 1)",
-    "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz (already fetched at depth 1)"
+    "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz (already fetched at depth 1)",
+    "https://www.eosc.cz/en/about-eosc-cz/contact (already fetched at depth 1)",
+    "https://www.eosc.cz/en/projects/national-support (already fetched at depth 1)",
+    "https://www.eosc.cz/en/about-eosc-cz/contact (already fetched at depth 1)",
+    "https://www.eosc.cz/en/projects/national-support (already fetched at depth 1)",
+    "https://www.eosc.cz/en/services/data-storage/repositories-in-nrp (depth 2 cap for point 6)",
+    "https://www.eosc.cz/en/about-eosc-cz/contact (already fetched at depth 1)",
+    "https://www.eosc.cz/en/about-eosc-cz (already fetched at depth 1)",
+    "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 78 link(s) on the landing page, 4 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 7 of 60 used"
+  "crawl_note": "depth 2: 78 link(s) on the landing page, 6 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 19 of 60 used"
 }

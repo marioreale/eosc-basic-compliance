@@ -372,6 +372,13 @@ def select_grandchildren(
     per_purpose: dict[str, int] = {}
 
     for point_id, patterns in CRAWL_PURPOSES:
+        # The intermediate pages of item 5 are pages "linked by the NLP", so
+        # they are looked for on the landing page only. At depth 2 they more
+        # than doubled the requests of run web-14 (EOSC Finland: 12 second-hop
+        # pages) for no verdict; the policy links on those pages are still
+        # followed here, under 5b and 5c.
+        if point_id in INTERMEDIATE_PURPOSES:
+            continue
         for link in child.links:
             href = link.href
             parsed = urlparse(href)

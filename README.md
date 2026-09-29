@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 449
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 450
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -37,24 +37,16 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-13-rescored`: the evidence of run
-> `web-13`, collected at `--depth 2`, scored again on 29 September 2026 against
-> the re-issued checklist v3.2. It has not been reviewed yet.** `web-13` was collected on 28 September 2026 between 22:53
-> and 22:57 UTC by the GitHub workflow ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)),
-> under **checklist v3.2** (28 September 2026), which replaced v3.1 on
-> 29 September 2026. The report shows both depths; the second hop fetched 19
-> more pages and changed no verdict, under either copy of v3.2. Under the
-> discarded first copy it repeated cell for cell `web-12`
-> ([run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)), the first collection under v3.2 at
-> depth 1, and `web-11-v3.2`, the evidence of run
-> `web-11` ([run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) scored again offline against
-> v3.2. `web-11` was the first run with CERN's new Node Landing Page,
-> `https://eosc.cern/`, and the second with **EOSC Node Poland**
-> (`https://eosc.pl/`), which replaced a node listed by mistake on 28 September
-> 2026. Before it came `web-10`
-> ([run 36429362417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36429362417)) of the same day and
-> the runs of 26 September (`web-4` to `web-9`). The hand review of the reviewed
-> run of 24 September is kept as history in
+> **The published report is run `web-14`, collected at `--depth 2`, and it has
+> not been reviewed yet.** It was collected on 28 September 2026 between 23:43
+> and 23:50 UTC by the GitHub workflow ([run 36499442323](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36499442323), commit `9c291f9`), from all
+> thirteen nodes, under the **re-issued checklist v3.2**. It is the first run
+> that reads the policies and services pages the landing pages link to. The
+> report shows both depths, and they agree. Before it, `web-13-rescored` (the
+> evidence of `web-13` scored offline against the re-issued v3.2) and `web-13`
+> itself ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)), scored under the
+> discarded first copy of v3.2, were published. The hand review of the run of
+> 24 September is kept as history in
 > [results/REVIEW-2026-09-24.md](results/REVIEW-2026-09-24.md). Its findings
 > still apply wherever a page has not changed, but it does not cover this run.
 >
@@ -68,39 +60,41 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > services or resources page linked from the landing page now counts, and the
 > crawler follows such links to find one. A landing page with no pointer anywhere
 > the tool can see **fails** 5b or 5c; if it links to such a page the tool did
-> not read, the point is review. `results/` now holds `web-13-rescored`: the
-> evidence of `web-13` scored again against the re-issued v3.2 without
-> contacting any node. It gives 50 PASS, 8 FAIL and 72 review. No 5b or 5c
-> FAIL remains: CERN, Data Terra and PaNOSC link to services or policies pages
-> that `web-13` did not read, so their 5b and 5c are review, and BBMRI-ERIC's
-> 5b now passes through its Access Policies page, which links the AUP. A new
-> collection would read those pages.
+> not read, the point is review. In `web-14` this settled two of the three
+> nodes that failed 5b and 5c under the first copy: CERN now passes both, and
+> Data Terra fails both after its services pages were read; PaNOSC is review.
 
 All thirteen configured nodes were fetched on 28 September 2026 at `--depth 2`
-(13 landing pages, 31 direct links, 19 second-hop pages) and assessed against the official unscoped names list. None was skipped.
+(13 landing pages, 63 direct links, 60 second-hop pages, the whole run budget)
+and assessed against the official unscoped names list. None was skipped. The
+second hop then also looked for services pages, which is why it used the whole
+budget and left none for Italy and Slovakia; that was fixed after the run, and
+changed no verdict (see the [guide](docs/GUIDE.md)). Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's service and federation pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO and Italy) and PaNOSC's pages. Masking changed no verdict, message or evidence line.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 50 PASS · 🔴 8 FAIL · 🟠 72 review · 0 ERROR.
+130 cells: 🟢 52 PASS · 🔴 10 FAIL · 🟠 68 review · 0 ERROR.
 
-- **Item 5 under v3.2.** CERN, Data Terra and PaNOSC link to no Acceptable Use
-  Policy and no User Access Policy from their landing pages, but they do link to
-  services or policies pages (CERN: "Services" and "Policies"). `web-13` did
-  not read those pages, so 5b and 5c are review for all three. Slovakia links one
-  document that covers both, and passes both. BBMRI-ERIC links its Access
-  Policies page, which passes 5c and, because that page links the AUP, now also
-  5b. Czechia, EOSC DTO, EOSC Finland, EUDAT, EGI, Poland and Italy (AUP or Terms
-  of use only) pass one of the two; the other is review, because v3.2 allows the
-  AUP and the UAP to be one document. GÉANT's page could
-  not be read. A PASS covers only the NLP half: no node's Catalogue metadata was
-  read.
+- **Item 5 under v3.2.** CERN links no policy from its landing page, but its
+  "Policies" page links an Acceptable Use Policy and a User Access Policy, and
+  its "Services" page links both for each service; the tool fetched both
+  policies, so 5b and 5c pass. Data Terra fails both: its two services pages
+  were read and link no AUP or UAP. The site is in French and the vocabulary is
+  English, so a French-named policy would be missed; check it by hand.
+  PaNOSC is review: its services site, `services.panosc.eu`, was not read.
+  Slovakia links one document that covers both, and passes both. BBMRI-ERIC
+  passes both through its Access Policies page, which links the AUP. Czechia,
+  EOSC DTO, EOSC Finland, EUDAT, EGI, Poland and Italy (AUP or Terms of use only)
+  pass one of the two; the other is review, because v3.2 allows the AUP and the
+  UAP to be one document. GÉANT's page could not be read. A PASS covers only the
+  NLP half: no node's Catalogue metadata was read.
 - **CERN** was assessed at its new Node Landing Page, `https://eosc.cern/`, for
-  the first time: 4 PASS and 6 review. Points 1 and 4 moved from review
+  the first time: 6 PASS and 4 review. Points 1 and 4 moved from review
   to `PASS`: the page is public, with real content, and links to its own
   `eosc.eu` entry. Points 6 (a Contact page with a helpdesk) and 7 pass as
-  before. 5b and 5c are review (see above). Point 3 is review: the logo
+  before. 5b and 5c pass through its Policies page (see above). Point 3 is review: the logo
   reads "EOSC Node | CERN", but the name is not in the page text. The previous
   URL was an INDIGO IAM sign-in form.
 - **EOSC Node Poland**, first assessed in `web-10`, has 4 PASS, 1 FAIL and 5
@@ -625,7 +619,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 449 tests, a few seconds, no network, no browser
+uv run pytest -q          # 450 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

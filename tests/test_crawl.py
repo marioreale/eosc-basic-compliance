@@ -503,6 +503,9 @@ def test_policies_and_services_pages_are_followed_for_item_5():
         Link("https://node.example/services", "Explore Services"),
         Link("https://node.example/policies", "Policies"),
         Link("https://node.example/privacy", "Privacy Policy"),
+        Link("https://node.example/privacy-policy", "Read this"),
+        Link("https://node.example/cookie-policy", "Cookies"),
+        Link("https://node.example/policies/privacy-and-data-protection", "Policies"),
         Link("https://node.example/get-started#for-policy-makers", "Policy Makers"),
         Link("https://elsewhere.example/services", "Partner services"),
     ]
@@ -525,3 +528,15 @@ def test_intermediate_purposes_are_capped_like_the_others():
     links = [Link(f"https://node.example/services/{i}", f"Service {i}") for i in range(6)]
     selected, _ = select_children(page(links))
     assert len(selected) == 2
+
+
+def test_intermediate_pages_are_not_looked_for_at_the_second_hop():
+    """They must be linked by the NLP; the second hop follows policy links only."""
+    child = ChildPage(url="https://node.example/services", final_url="https://node.example/services",
+                      http_status=200, selected_for=["5s"], links=[
+                          Link("https://node.example/services/vre", "VRE service"),
+                          Link("https://node.example/policies", "Policies"),
+                          Link("https://node.example/services/vre/aup", "Acceptable Use Policy"),
+                      ])
+    picked, _ = select_grandchildren(child, FetchBudget(10), node_host="node.example")
+    assert [(g.url, g.selected_for) for g in picked] == [("https://node.example/services/vre/aup", ["5b"])]

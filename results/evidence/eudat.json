@@ -2,7 +2,7 @@
   "node_id": "eudat",
   "node_name": "EUDAT",
   "requested_url": "https://portal.eudat.eu/",
-  "fetched_at": "2026-09-28T22:55:51+00:00",
+  "fetched_at": "2026-09-28T23:48:32+00:00",
   "final_url": "https://portal.eudat.eu/welcome",
   "http_status": 200,
   "redirect_chain": [
@@ -661,7 +661,7 @@
       "title": "EUDAT Documentation",
       "lang_attr": "en",
       "main_text": "EUDAT Documentation Documentation Documentation Table of contents Welcome to the EUDAT Documentation service Documentation Feedback Interested in EUDAT services B2ACCESS B2ACCESS Overview Assurance Concepts For Users For Users Enabling MFA Updating Email List of connected organisations For group administrators For group administrators Requesting a group Managing a group For Service Providers For Service Providers Registering a services Available attributes For Identity Providers For Identity Providers Joining as an Identity Provider Consumed attributes About B2DROP B2DROP Overview For Users For Users Overview For groups For groups Overview For Administrators For Administrators Overview Enabling the B2SHAREbridge Install B2DROP Integrate with B2ACCESS About B2FIND B2FIND Overview For Users For Providers About B2HANDLE B2HANDLE Overview For Administrators For Developers For Developers Overview PyHandle for Developers B2Handle for Developers API for Developers Information Information Ownership Security More Info About B2INST B2INST Overview For Users For Users Overview Advanced Search HTTP REST API (v2) Version 3 Version 3 HTTP REST API (v3) HTTP REST API (v3) Overview API Submission Guide Records API Communities API Requests API Users API Vocabularies API v2 vs v3 (Conceptual Diff) v2 vs v3 (JSON Diff) For Administrators For Developers About B2SAFE B2SAFE Overview For Users For Administrators For Developers About B2SHARE B2SHARE Overview Service Description Upgrade For Users For Users Overview For Administrators For Administrators Overview Command Line Interface Administration panel For Developers For Developers Overview Architecture Configuration Debugging Deployment Testing UI Live rebuild For communities For communities Overview Communities Details Communities Details Community Settings and Policies Community Roles Community Roles Member Role Curator Role Manager Role Admin Role Owner Role Community Schema Extension Features Features Github integration Github integration User documentation Admin documentation Remote files Remote files User documentation Admin documentation F.A.Q.s About HTTP REST API HTTP REST API Overview Records Communities Requests Users Vocabularies API submission guide Search Guide Publication Workflow DataCite DataCite Overview For Users About EUDAT website Feedback + Support Documentation Welcome to the EUDAT Documentation service # EUDAT’s vision is Data is shared and preserved across borders and disciplines . Achieving this vision means enabling data stewardship within and between European research communities through a Collaborative Data Infrastructure (CDI) , a common model and service infrastructure for managing data spanning all European research data centres and community data repositories. On the EUDAT Document service you can find the documentation for the EUDAT B2 services suite, this includes all public user, technical and administrative documentation, and explains how to engage, deploy and use the services. The documentation is organised per service and type of audience (i.e. Users, Administrators, Developers). Documentation # Find research data, research data portal Store and publish research data Sync and share research data Register your instruments Register your research data with a persistent identifier Keep research data safe via data management policies Identity & authorisation Assign DOIs to your publications You can find more information on the individual services by clicking on the service names on the menu bar at the top or on the service icons links above. Feedback # Please contact us if you are missing any content or if you have general comments on EUDAT documentation. Interested in EUDAT services # If you are interested in an EUDAT service from the B2 services suite, you can find more information and/or request the services via the EUDAT Service Catalogue . Last update: 09.02.2024 Last review: 24.01.2025 Back to top",
-      "full_text": "Skip to content EUDAT Documentation Documentation Initializing search Documentation B2ACCESS B2DROP B2FIND B2HANDLE B2INST B2SAFE B2SHARE DataCite EUDAT website Feedback + Support EUDAT Documentation Documentation Documentation Table of contents Welcome to the EUDAT Documentation service Documentation Feedback Interested in EUDAT services B2ACCESS B2ACCESS Overview Assurance Concepts For Users For Users Enabling MFA Updating Email List of connected organisations For group administrators For group administrators Requesting a group Managing a group For Service Providers For Service Providers Registering a services Available attributes For Identity Providers For Identity Providers Joining as an Identity Provider Consumed attributes About B2DROP B2DROP Overview For Users For Users Overview For groups For groups Overview For Administrators For Administrators Overview Enabling the B2SHAREbridge Install B2DROP Integrate with B2ACCESS About B2FIND B2FIND Overview For Users For Providers About B2HANDLE B2HANDLE Overview For Administrators For Developers For Developers Overview PyHandle for Developers B2Handle for Developers API for Developers Information Information Ownership Security More Info About B2INST B2INST Overview For Users For Users Overview Advanced Search HTTP REST API (v2) Version 3 Version 3 HTTP REST API (v3) HTTP REST API (v3) Overview API Submission Guide Records API Communities API Requests API Users API Vocabularies API v2 vs v3 (Conceptual Diff) v2 vs v3 (JSON Diff) For Administrators For Developers About B2SAFE B2SAFE Overview For Users For Administrators For Developers About B2SHARE B2SHARE Overview Service Description Upgrade For Users For Users Overview For Administrators For Administrators Overview Command Line Interface Administration panel For Developers For Developers Overview Architecture Configuration Debugging Deployment Testing UI Live rebuild For communities For communities Overview Communities Details Communities Details Community Settings and Policies Community Roles Community Roles Member Role Curator Role Manager Role Admin Role Owner Role Community Schema Extension Features Features Github integration Github integration User documentation Admin documentation Remote files Remote files User documentation Admin documentation F.A.Q.s About HTTP REST API HTTP REST API Overview Records Communities Requests Users Vocabularies API submission guide Search Guide Publication Workflow DataCite DataCite Overview For Users About EUDAT website Feedback + Support Documentation Welcome to the EUDAT Documentation service # EUDAT’s vision is Data is shared and preserved across borders and disciplines . Achieving this vision means enabling data stewardship within and between European research communities through a Collaborative Data Infrastructure (CDI) , a common model and service infrastructure for managing data spanning all European research data centres and community data repositories. On the EUDAT Document service you can find the documentation for the EUDAT B2 services suite, this includes all public user, technical and administrative documentation, and explains how to engage, deploy and use the services. The documentation is organised per service and type of audience (i.e. Users, Administrators, Developers). Documentation # Find research data, research data portal Store and publish research data Sync and share research data Register your instruments Register your research data with a persistent identifier Keep research data safe via data management policies Identity & authorisation Assign DOIs to your publications You can find more information on the individual services by clicking on the service names on the menu bar at the top or on the service icons links above. Feedback # Please contact us if you are missing any content or if you have general comments on EUDAT documentation. Interested in EUDAT services # If you are interested in an EUDAT service from the B2 services suite, you can find more information and/or request the services via the EUDAT Service Catalogue . Last update: 09.02.2024 Last review: 24.01.2025 Back to top This documentation is licensed under CC BY-SA 3.0",
+      "full_text": "Skip to content EUDAT Documentation Documentation Type to start searching Documentation B2ACCESS B2DROP B2FIND B2HANDLE B2INST B2SAFE B2SHARE DataCite EUDAT website Feedback + Support EUDAT Documentation Documentation Documentation Table of contents Welcome to the EUDAT Documentation service Documentation Feedback Interested in EUDAT services B2ACCESS B2ACCESS Overview Assurance Concepts For Users For Users Enabling MFA Updating Email List of connected organisations For group administrators For group administrators Requesting a group Managing a group For Service Providers For Service Providers Registering a services Available attributes For Identity Providers For Identity Providers Joining as an Identity Provider Consumed attributes About B2DROP B2DROP Overview For Users For Users Overview For groups For groups Overview For Administrators For Administrators Overview Enabling the B2SHAREbridge Install B2DROP Integrate with B2ACCESS About B2FIND B2FIND Overview For Users For Providers About B2HANDLE B2HANDLE Overview For Administrators For Developers For Developers Overview PyHandle for Developers B2Handle for Developers API for Developers Information Information Ownership Security More Info About B2INST B2INST Overview For Users For Users Overview Advanced Search HTTP REST API (v2) Version 3 Version 3 HTTP REST API (v3) HTTP REST API (v3) Overview API Submission Guide Records API Communities API Requests API Users API Vocabularies API v2 vs v3 (Conceptual Diff) v2 vs v3 (JSON Diff) For Administrators For Developers About B2SAFE B2SAFE Overview For Users For Administrators For Developers About B2SHARE B2SHARE Overview Service Description Upgrade For Users For Users Overview For Administrators For Administrators Overview Command Line Interface Administration panel For Developers For Developers Overview Architecture Configuration Debugging Deployment Testing UI Live rebuild For communities For communities Overview Communities Details Communities Details Community Settings and Policies Community Roles Community Roles Member Role Curator Role Manager Role Admin Role Owner Role Community Schema Extension Features Features Github integration Github integration User documentation Admin documentation Remote files Remote files User documentation Admin documentation F.A.Q.s About HTTP REST API HTTP REST API Overview Records Communities Requests Users Vocabularies API submission guide Search Guide Publication Workflow DataCite DataCite Overview For Users About EUDAT website Feedback + Support Documentation Welcome to the EUDAT Documentation service # EUDAT’s vision is Data is shared and preserved across borders and disciplines . Achieving this vision means enabling data stewardship within and between European research communities through a Collaborative Data Infrastructure (CDI) , a common model and service infrastructure for managing data spanning all European research data centres and community data repositories. On the EUDAT Document service you can find the documentation for the EUDAT B2 services suite, this includes all public user, technical and administrative documentation, and explains how to engage, deploy and use the services. The documentation is organised per service and type of audience (i.e. Users, Administrators, Developers). Documentation # Find research data, research data portal Store and publish research data Sync and share research data Register your instruments Register your research data with a persistent identifier Keep research data safe via data management policies Identity & authorisation Assign DOIs to your publications You can find more information on the individual services by clicking on the service names on the menu bar at the top or on the service icons links above. Feedback # Please contact us if you are missing any content or if you have general comments on EUDAT documentation. Interested in EUDAT services # If you are interested in an EUDAT service from the B2 services suite, you can find more information and/or request the services via the EUDAT Service Catalogue . Last update: 09.02.2024 Last review: 24.01.2025 Back to top This documentation is licensed under CC BY-SA 3.0",
       "links": [
         {
           "href": "https://docs.eudat.eu/",
@@ -1280,6 +1280,819 @@
         },
         {
           "href": "https://gitlab.eudat.eu/sa.apweiler/eudat-documentation",
+          "text": "",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.eudat.eu/privacy-policy",
+      "selected_for": [
+        "5p"
+      ],
+      "link_text": "Privacy Policy",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.eudat.eu/privacy-policy",
+      "title": "Privacy Policy | EUDAT",
+      "lang_attr": "en",
+      "main_text": "Privacy Policy of EUDAT This Application collects some Personal Data from its Users. The EUDAT platform, URL: eudat.eu , (hereinafter referred to as \"Site\" or \"Application\") abides by the following principles when handling personal information: We collect a small amount of personal information about our users in order to provide them with our content, products and services; We limit the sharing or disclosure of this personal information to our needs or to comply with applicable legal requirements; We give users meaningful choices over the use of their personal information; We strive to protect the personal information that we hold. This Privacy Notice describes the policies applied with respect to the personal information collected through the Site, or when the Site communicates with its users (\"you\" or \"user\"), and the choices that are made available to them. \"Personal Information\" means any information that relates to an identified or identifiable individual. The project is co-funded by the European Commission, therefore the EU data processing law applies. The policy on \"protection of individuals with regard to the processing of personal data by the Community institutions\" is based on EU regulation as described https://ec.europa.eu/info/legal-notice_en#personal-data-protection Data Controller EUDAT Ltd, Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Data Controller email : info[at]eudat.eu Data Processor Trust-IT Srl Via Nino Bixio, 25 56125 Pisa, Italy P.IVA e C.F. 01870130505 info[at]trust-itservices.com Commpla Srl Via Nino Bixio, 25 56125 Pisa - Italy P.IVA 01958380501 contact[at]commpla.com 1. Your consent Your use of the Site signifies that you agree will all terms of this Privacy Notice. If you communicate with us and provide us with personal information, we will assume that you agree that we can use this information to communicate with you. If you disagree with any part of this Privacy Notice, please do not use the Site or communicate with us. 2. Scope This Privacy Notice applies solely to personal information that the Application collects through the Site or through any electronic communications that you send to the Application, as indicated on the Site (Personal Data). It does not apply to the websites of third parties, such as business partners or sponsors, to which the Site may link. The Application does not endorse, nor is responsible for the content of these third-party websites, or their policies or practices. If you provide any personal information to or through third party websites, your transaction will be subject to the terms and conditions and the privacy policies of these third-party websites. 3. What information we collect, and how we collect it The Application manages different types of data, all in compliance with the current European legislation on Data Protection. Any Data concerning the User is collected to enable the Owner to provide its services, as well as for the following purposes: Tag Management, Displaying content from external platforms, Analytics, Contacting the User, Managing contacts and sending messages, Interaction with data collection platforms and other third parties. The Personal Data used for each purpose is outlined in the specific sections of this document. Among the types of Personal Data that this Application collects, by itself or through third parties, are: Cookies, Usage Data, first name, last name, email address, various types of Data and city. Data voluntarily supplied by the User -- The web platform is designed to allow users to browse through it without providing any contact information. However, certain areas may require, or allow for, the submission of personal information, such as when a user fills out a newsletter form or contacts us. As an example, clients of the Application need to register to become part of the web site community and use the Application solutions. The data collected and further processed are necessary to access the Application, as well as for communication and follow-up activities. Appropriate, detailed information is provided to the User and, where required, consent for the processing of Personal Data is obtained before a given service is activated. Said consent may be revoked at any time, whereby the ability to use the service in question ceases. Users are responsible for any third-party Personal Data obtained, published or shared through this Application and confirm that they have the third party's consent to provide the Data to the Owner. Cookies -- Any Cookies or other tracking tools used by this Application, or by the owners of third-party services used through this Application, serve the purpose of providing the service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy, if available. 4. Interaction with social networks and external platforms This kind of service allows you to interact with social networks, or other external platforms, directly from the pages of this application. The information acquired by the Application through this interaction is in any case subject to the User's privacy settings related to each social network. If an interaction service with social networks is installed, it is possible that, even if the Users do not use the service, the latter collect traffic data relating to the pages in which it is installed. Like button and Facebook social widgets (Facebook, Inc.) The \"Like\" button and Facebook social widgets are services of interaction with the social network Facebook, provided by Facebook, Inc. Personal Data collected: Cookies and Usage Data. Place of processing: USA - Privacy Policy Tweet button and Twitter social widgets (Twitter, Inc.) The Tweet button and Twitter social widgets are services of interaction with the Twitter social network, provided by Twitter, Inc. 5. Where and How the Data is processed Location -- The Application is provided via the web portal site, whose servers are located in Ireland, and provided by Amazon Elastic Compute Cloud (Amazon EC2). Amazon Web Services comply with the General Data Protection Regulation (GDPR) https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ The Data is processed at the Data Controller's operating offices and in any other places where the parties involved in the processing are located. For further information, please contact the Data Controller. Duration of Processing -- Data processing is limited to the time necessary to perform the service requested by the User. Unless otherwise requested by the European Commission, any data kept to the purposes of a project is retained for the duration of the project, plus the period requested by the European Commission (typically 3 years) after the project end. However, the User can ask at any time to interrupt the processing of the Data or have Data cancelled. Log information -- Our server software automatically gathers general information from all users. For example: IP address, computer type, screen resolution, OS version, domain name, location, date and time of the visit, page(s) visited, time spent on a page, website from which the user came, action taken by the user when leaving our Site. Some of this information is provided directly by the user's browser, the remainder is obtained through cookies and tracking technologies. Registration information -- Webinars and other events may be provided with the assistance of unaffiliated third-party vendors, which may require that the vendors have access to personal information such as name, company, and email address. These vendors will provide us with this information, so that we can keep track of who registers to, or attends these events. In this case, the information that you provide as part of this registration will be subject to both our Privacy Notice and the applicable privacy statement posted on the vendor's website. Children -- The Site is not intended for children. Nor does the Application knowingly collect personal information from children. 6. How we use this information The Application uses personal information for the following: Fulfilment of requests -- We may use your personal information to deal with your inquiries, register you to our events, and send you the publications or documents that you request. Internal business purposes -- We may use the collected information for internal business purposes, such as for audits or to track attendance at events. Site operation -- We use cookies to assign a unique identifier to a user's computer. Statistical analysis -- We use aggregated data about Site usage (which do not identify a specific user), such as the number of users who have visited certain pages of the Site, or how long users are spending on a particular page, in order to develop statistics as to the use of the Site, so that we can understand how users interact with the Site, to improve its content, products, or services. Displaying content from external platforms 7. To whom your personal information is disclosed The Data Controller processes the Data of Users in a proper manner and takes appropriate security measures to prevent unauthorized access, disclosure, modification, or destruction of the Data. The Data processing is carried out using computers and/or IT enabled tools, following organisational procedures and practices strictly related to the purposes indicated. The Data Controller processes the Data of Users in a proper manner and shall take appropriate security measures to prevent unauthorized access, disclosure, modification, or unauthorized destruction of the Data. In addition to the Data Controller, in some cases, the Data may be accessible to certain types of persons in charge, involved with the operation of the site (administration, sales, marketing, legal, system administration) or external parties (such as third-party technical service providers, mail carriers, hosting providers, IT companies, communications agencies) appointed, if necessary, as Data Processors by the Owner. The updated list of these parties may be requested from the Data Controller at any time. The Application Members -- We may share personal information with members of a Consortium for the purpose of creating a knowledge base and potential customer leads for the exploitation of results and assets. Law enforcement; compliance -- We may use or disclose personal information to any third party (a) if we believe that we are required to do so by law; (b) to comply with legal processes or respond to requests from governmental or public authorities; (c) to prevent, investigate, detect, or prosecute criminal offenses or attacks on the technical integrity of the Site or network; (d) to enforce our Terms and Conditions; or (e) to protect the rights, privacy, property, business, or safety of the Application, its business partners, employees, members, Site users, or the public. Unless prohibited by applicable law, we will inform you if a third party requests access to personal information about you. 8. Right to access and rectification You have the right to have access to the personal information that we hold about you, and to have this information corrected and amended, as defined in the GDPR art. 12 , 15 , 16 . To do so, please contact us as indicated in section 16. However, please be aware that in some cases, the administrative and technical burden associated with the retrieval of archived data may be substantial. We would need to be compensated for this effort in a manner that is consistent with our actual cost. 9. Right to erasure You have the right to request that we delete any Personal Information that we hold about you. The Application is compliant with the Right to Erasure as defined in the GDPR, art. 17 . If you would like us to erase the Personal Information that we hold about you, please contact us by email at info@eudat.eu 10. Right to object You have the right to object at any time to the processing of your personal data, on grounds relating to your particular situation, as defined in the GDPR, art. 21 . Please note that all the data you provide on this website will be used only for delivery of the services provided by the Application, as described in section 5. If you would like to apply your right to object, please contact us by email at info@eudat.eu . 11. Retention of information We will retain personal information about a user for as long as necessary to fulfil the purposes outlined in this Privacy Notice, unless a longer retention period is required by law and/or regulations. The User can always request that the Data Controller suspend or remove the data. 12. Security The Application seeks to adopt commercially reasonable security measures consistent with industry practice to protect personal information under its control against loss, misuse, and alteration. However, we cannot guarantee the security of our servers, the means by which personal information is transmitted between your computer and our servers, or any personal information that we receive through or in connection with the Site. We attempt to strike a reasonable balance between security and convenience. Emails are usually sent as unencrypted text. If misrouted or intercepted, an unencrypted email could be read easily. If there is a matter that requires high security or confidentiality, please keep us informed about the sensitivity of the information, and do not send the related information by email. 13. Jurisdiction The Application does not represent or warrant that the Site is appropriate or available for use in any particular jurisdiction. Those who choose to access the Site do so on their own initiative and at their own risk, and are responsible for complying with all local laws, rules, and regulations that apply to them. We may limit access to the Site to any person, geographic area, or jurisdiction that we choose, at our sole discretion. 14. Inquiries and Complaints If you have any questions, comments, or complaints about this Privacy Notice, or the use, management or disclosure of personal information collected on or through our Site, please contact us at info@eudat.eu . 15. Updates to the Privacy Notice We update this Privacy Notice from time to time. If the changes are significant, we will post prominent notification on this Site for a reasonable time to inform you of these changes. Unless, and until, you object in writing, by contacting us at info@eudat.eu , all changes will apply to the existing information about you that the Application already holds, and the personal information collected from the effective date of the revised Privacy Notice. Your use of the Site following the effective date of any revision will constitute your acceptance of the terms of the updated Privacy Notice. 16. How to contact Us If you have any questions, comments, or complaints, regarding this Privacy Notice, or our privacy, security or data protection practices, please contact us by email at info@eudat.eu . Effective Date : May, 25, 2018 - Ver 1.2",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home Privacy Policy Privacy Policy Privacy Policy of EUDAT This Application collects some Personal Data from its Users. The EUDAT platform, URL: eudat.eu , (hereinafter referred to as \"Site\" or \"Application\") abides by the following principles when handling personal information: We collect a small amount of personal information about our users in order to provide them with our content, products and services; We limit the sharing or disclosure of this personal information to our needs or to comply with applicable legal requirements; We give users meaningful choices over the use of their personal information; We strive to protect the personal information that we hold. This Privacy Notice describes the policies applied with respect to the personal information collected through the Site, or when the Site communicates with its users (\"you\" or \"user\"), and the choices that are made available to them. \"Personal Information\" means any information that relates to an identified or identifiable individual. The project is co-funded by the European Commission, therefore the EU data processing law applies. The policy on \"protection of individuals with regard to the processing of personal data by the Community institutions\" is based on EU regulation as described https://ec.europa.eu/info/legal-notice_en#personal-data-protection Data Controller EUDAT Ltd, Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Data Controller email : info[at]eudat.eu Data Processor Trust-IT Srl Via Nino Bixio, 25 56125 Pisa, Italy P.IVA e C.F. 01870130505 info[at]trust-itservices.com Commpla Srl Via Nino Bixio, 25 56125 Pisa - Italy P.IVA 01958380501 contact[at]commpla.com 1. Your consent Your use of the Site signifies that you agree will all terms of this Privacy Notice. If you communicate with us and provide us with personal information, we will assume that you agree that we can use this information to communicate with you. If you disagree with any part of this Privacy Notice, please do not use the Site or communicate with us. 2. Scope This Privacy Notice applies solely to personal information that the Application collects through the Site or through any electronic communications that you send to the Application, as indicated on the Site (Personal Data). It does not apply to the websites of third parties, such as business partners or sponsors, to which the Site may link. The Application does not endorse, nor is responsible for the content of these third-party websites, or their policies or practices. If you provide any personal information to or through third party websites, your transaction will be subject to the terms and conditions and the privacy policies of these third-party websites. 3. What information we collect, and how we collect it The Application manages different types of data, all in compliance with the current European legislation on Data Protection. Any Data concerning the User is collected to enable the Owner to provide its services, as well as for the following purposes: Tag Management, Displaying content from external platforms, Analytics, Contacting the User, Managing contacts and sending messages, Interaction with data collection platforms and other third parties. The Personal Data used for each purpose is outlined in the specific sections of this document. Among the types of Personal Data that this Application collects, by itself or through third parties, are: Cookies, Usage Data, first name, last name, email address, various types of Data and city. Data voluntarily supplied by the User -- The web platform is designed to allow users to browse through it without providing any contact information. However, certain areas may require, or allow for, the submission of personal information, such as when a user fills out a newsletter form or contacts us. As an example, clients of the Application need to register to become part of the web site community and use the Application solutions. The data collected and further processed are necessary to access the Application, as well as for communication and follow-up activities. Appropriate, detailed information is provided to the User and, where required, consent for the processing of Personal Data is obtained before a given service is activated. Said consent may be revoked at any time, whereby the ability to use the service in question ceases. Users are responsible for any third-party Personal Data obtained, published or shared through this Application and confirm that they have the third party's consent to provide the Data to the Owner. Cookies -- Any Cookies or other tracking tools used by this Application, or by the owners of third-party services used through this Application, serve the purpose of providing the service required by the User, in addition to any other purposes described in the present document and in the Cookie Policy, if available. 4. Interaction with social networks and external platforms This kind of service allows you to interact with social networks, or other external platforms, directly from the pages of this application. The information acquired by the Application through this interaction is in any case subject to the User's privacy settings related to each social network. If an interaction service with social networks is installed, it is possible that, even if the Users do not use the service, the latter collect traffic data relating to the pages in which it is installed. Like button and Facebook social widgets (Facebook, Inc.) The \"Like\" button and Facebook social widgets are services of interaction with the social network Facebook, provided by Facebook, Inc. Personal Data collected: Cookies and Usage Data. Place of processing: USA - Privacy Policy Tweet button and Twitter social widgets (Twitter, Inc.) The Tweet button and Twitter social widgets are services of interaction with the Twitter social network, provided by Twitter, Inc. 5. Where and How the Data is processed Location -- The Application is provided via the web portal site, whose servers are located in Ireland, and provided by Amazon Elastic Compute Cloud (Amazon EC2). Amazon Web Services comply with the General Data Protection Regulation (GDPR) https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/ The Data is processed at the Data Controller's operating offices and in any other places where the parties involved in the processing are located. For further information, please contact the Data Controller. Duration of Processing -- Data processing is limited to the time necessary to perform the service requested by the User. Unless otherwise requested by the European Commission, any data kept to the purposes of a project is retained for the duration of the project, plus the period requested by the European Commission (typically 3 years) after the project end. However, the User can ask at any time to interrupt the processing of the Data or have Data cancelled. Log information -- Our server software automatically gathers general information from all users. For example: IP address, computer type, screen resolution, OS version, domain name, location, date and time of the visit, page(s) visited, time spent on a page, website from which the user came, action taken by the user when leaving our Site. Some of this information is provided directly by the user's browser, the remainder is obtained through cookies and tracking technologies. Registration information -- Webinars and other events may be provided with the assistance of unaffiliated third-party vendors, which may require that the vendors have access to personal information such as name, company, and email address. These vendors will provide us with this information, so that we can keep track of who registers to, or attends these events. In this case, the information that you provide as part of this registration will be subject to both our Privacy Notice and the applicable privacy statement posted on the vendor's website. Children -- The Site is not intended for children. Nor does the Application knowingly collect personal information from children. 6. How we use this information The Application uses personal information for the following: Fulfilment of requests -- We may use your personal information to deal with your inquiries, register you to our events, and send you the publications or documents that you request. Internal business purposes -- We may use the collected information for internal business purposes, such as for audits or to track attendance at events. Site operation -- We use cookies to assign a unique identifier to a user's computer. Statistical analysis -- We use aggregated data about Site usage (which do not identify a specific user), such as the number of users who have visited certain pages of the Site, or how long users are spending on a particular page, in order to develop statistics as to the use of the Site, so that we can understand how users interact with the Site, to improve its content, products, or services. Displaying content from external platforms 7. To whom your personal information is disclosed The Data Controller processes the Data of Users in a proper manner and takes appropriate security measures to prevent unauthorized access, disclosure, modification, or destruction of the Data. The Data processing is carried out using computers and/or IT enabled tools, following organisational procedures and practices strictly related to the purposes indicated. The Data Controller processes the Data of Users in a proper manner and shall take appropriate security measures to prevent unauthorized access, disclosure, modification, or unauthorized destruction of the Data. In addition to the Data Controller, in some cases, the Data may be accessible to certain types of persons in charge, involved with the operation of the site (administration, sales, marketing, legal, system administration) or external parties (such as third-party technical service providers, mail carriers, hosting providers, IT companies, communications agencies) appointed, if necessary, as Data Processors by the Owner. The updated list of these parties may be requested from the Data Controller at any time. The Application Members -- We may share personal information with members of a Consortium for the purpose of creating a knowledge base and potential customer leads for the exploitation of results and assets. Law enforcement; compliance -- We may use or disclose personal information to any third party (a) if we believe that we are required to do so by law; (b) to comply with legal processes or respond to requests from governmental or public authorities; (c) to prevent, investigate, detect, or prosecute criminal offenses or attacks on the technical integrity of the Site or network; (d) to enforce our Terms and Conditions; or (e) to protect the rights, privacy, property, business, or safety of the Application, its business partners, employees, members, Site users, or the public. Unless prohibited by applicable law, we will inform you if a third party requests access to personal information about you. 8. Right to access and rectification You have the right to have access to the personal information that we hold about you, and to have this information corrected and amended, as defined in the GDPR art. 12 , 15 , 16 . To do so, please contact us as indicated in section 16. However, please be aware that in some cases, the administrative and technical burden associated with the retrieval of archived data may be substantial. We would need to be compensated for this effort in a manner that is consistent with our actual cost. 9. Right to erasure You have the right to request that we delete any Personal Information that we hold about you. The Application is compliant with the Right to Erasure as defined in the GDPR, art. 17 . If you would like us to erase the Personal Information that we hold about you, please contact us by email at info@eudat.eu 10. Right to object You have the right to object at any time to the processing of your personal data, on grounds relating to your particular situation, as defined in the GDPR, art. 21 . Please note that all the data you provide on this website will be used only for delivery of the services provided by the Application, as described in section 5. If you would like to apply your right to object, please contact us by email at info@eudat.eu . 11. Retention of information We will retain personal information about a user for as long as necessary to fulfil the purposes outlined in this Privacy Notice, unless a longer retention period is required by law and/or regulations. The User can always request that the Data Controller suspend or remove the data. 12. Security The Application seeks to adopt commercially reasonable security measures consistent with industry practice to protect personal information under its control against loss, misuse, and alteration. However, we cannot guarantee the security of our servers, the means by which personal information is transmitted between your computer and our servers, or any personal information that we receive through or in connection with the Site. We attempt to strike a reasonable balance between security and convenience. Emails are usually sent as unencrypted text. If misrouted or intercepted, an unencrypted email could be read easily. If there is a matter that requires high security or confidentiality, please keep us informed about the sensitivity of the information, and do not send the related information by email. 13. Jurisdiction The Application does not represent or warrant that the Site is appropriate or available for use in any particular jurisdiction. Those who choose to access the Site do so on their own initiative and at their own risk, and are responsible for complying with all local laws, rules, and regulations that apply to them. We may limit access to the Site to any person, geographic area, or jurisdiction that we choose, at our sole discretion. 14. Inquiries and Complaints If you have any questions, comments, or complaints about this Privacy Notice, or the use, management or disclosure of personal information collected on or through our Site, please contact us at info@eudat.eu . 15. Updates to the Privacy Notice We update this Privacy Notice from time to time. If the changes are significant, we will post prominent notification on this Site for a reasonable time to inform you of these changes. Unless, and until, you object in writing, by contacting us at info@eudat.eu , all changes will apply to the existing information about you that the Application already holds, and the personal information collected from the effective date of the revised Privacy Notice. Your use of the Site following the effective date of any revision will constitute your acceptance of the terms of the updated Privacy Notice. 16. How to contact Us If you have any questions, comments, or complaints, regarding this Privacy Notice, or our privacy, security or data protection practices, please contact us by email at info@eudat.eu . Effective Date : May, 25, 2018 - Ver 1.2 EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 EUDAT AUP Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
+      "links": [
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu",
+          "text": "eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://ec.europa.eu/info/legal-notice_en#personal-data-protection",
+          "text": "https://ec.europa.eu/info/legal-notice_en#personal-data-protection",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info[at]eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@trust-itservices.com",
+          "text": "info[at]trust-itservices.com",
+          "visible": true
+        },
+        {
+          "href": "mailto:contact@commpla.com",
+          "text": "contact[at]commpla.com",
+          "visible": true
+        },
+        {
+          "href": "https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/",
+          "text": "https://aws.amazon.com/blogs/security/all-aws-services-gdpr-ready/",
+          "visible": true
+        },
+        {
+          "href": "https://gdpr-info.eu/art-12-gdpr/",
+          "text": "GDPR art. 12",
+          "visible": true
+        },
+        {
+          "href": "https://gdpr-info.eu/art-15-gdpr/",
+          "text": "15",
+          "visible": true
+        },
+        {
+          "href": "https://gdpr-info.eu/art-16-gdpr/",
+          "text": "16",
+          "visible": true
+        },
+        {
+          "href": "https://gdpr-info.eu/art-17-gdpr/",
+          "text": "GDPR, art. 17",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://gdpr-info.eu/art-21-gdpr/",
+          "text": "GDPR, art. 21",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi-aup",
+          "text": "EUDAT AUP",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/privacy-policy-summary",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/accessibility-statement",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/frequently-asked-questions",
+          "text": "FAQs",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Eudat_eu",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "http://www.slideshare.net/EUDAT/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/EUDATTraining",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eudat/",
+          "text": "",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eudat.eu/catalogue",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "Service catalogue Browse the EUDAT Node services you can order, no account needed.",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eudat.eu/catalogue",
+      "title": "EUDAT Service catalogue | EUDAT",
+      "lang_attr": "en",
+      "main_text": "Using EUDAT services Any researcher or research group (organisations or individuals) may use the services that are supplied by EUDAT (and deployed at the service provider within EUDAT) according to the terms and conditions agreed on by EUDAT and its relevant service provider . Examples of Users range from single researchers or small research groups up to major research infrastructures (e.g. ESFRI research infrastructures) and other e-Infrastructures (e.g. EGI compute clusters or PRACE supercomputers). Users interact with the EUDAT through one or more of its service providers. Using EUDAT, they can rely on innovative data services to support their research collaboration and data management. In particular, they can: Benefit from a simple, efficient, trustworthy, affordable collaborative and interoperable data infrastructure Connect with Europe’s most powerful supercomputers Be supported by a pool of experts to tackle your data challenge Trace data origin in the metadata catalogue B2FIND Find research data View service B2SAFE Keep research data safe via data management policies View service B2SHARE Store and publish research data View service B2DROP Sync and share research data View service B2ACCESS Identity & authorisation View service B2HANDLE Register your research data with a persistent identifier View service DataCite Register your DOIs with EUDAT DataCite Consortium View service",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT Service Catalogue EUDAT Service catalogue Using EUDAT services Any researcher or research group (organisations or individuals) may use the services that are supplied by EUDAT (and deployed at the service provider within EUDAT) according to the terms and conditions agreed on by EUDAT and its relevant service provider . Examples of Users range from single researchers or small research groups up to major research infrastructures (e.g. ESFRI research infrastructures) and other e-Infrastructures (e.g. EGI compute clusters or PRACE supercomputers). Users interact with the EUDAT through one or more of its service providers. Using EUDAT, they can rely on innovative data services to support their research collaboration and data management. In particular, they can: Benefit from a simple, efficient, trustworthy, affordable collaborative and interoperable data infrastructure Connect with Europe’s most powerful supercomputers Be supported by a pool of experts to tackle your data challenge Trace data origin in the metadata catalogue B2FIND Find research data View service B2SAFE Keep research data safe via data management policies View service B2SHARE Store and publish research data View service B2DROP Sync and share research data View service B2ACCESS Identity & authorisation View service B2HANDLE Register your research data with a persistent identifier View service DataCite Register your DOIs with EUDAT DataCite Consortium View service EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 EUDAT AUP Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
+      "links": [
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/service-catalogue/b2find",
+          "text": "B2FIND Find research data View service",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/service-catalogue/b2safe",
+          "text": "B2SAFE Keep research data safe via data management policies View service",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/service-catalogue/b2share-0",
+          "text": "B2SHARE Store and publish research data View service",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/service-catalogue/b2drop",
+          "text": "B2DROP Sync and share research data View service",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/service-catalogue/b2access",
+          "text": "B2ACCESS Identity & authorisation View service",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/service-catalogue/b2handle",
+          "text": "B2HANDLE Register your research data with a persistent identifier View service",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/service-catalogue/datacite",
+          "text": "DataCite Register your DOIs with EUDAT DataCite Consortium View service",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi-aup",
+          "text": "EUDAT AUP",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/privacy-policy-summary",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/accessibility-statement",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/frequently-asked-questions",
+          "text": "FAQs",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Eudat_eu",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "http://www.slideshare.net/EUDAT/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/EUDATTraining",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eudat/",
           "text": "",
           "visible": true
         }
@@ -2266,6 +3079,120 @@
       "error": ""
     },
     {
+      "url": "https://portal.eudat.eu/catalog",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "Catalog",
+      "depth": 2,
+      "parent_url": "https://portal.eudat.eu/helpdesk",
+      "http_status": 200,
+      "final_url": "https://portal.eudat.eu/catalog",
+      "title": "Service Catalog | EUDAT",
+      "lang_attr": "en",
+      "main_text": "EUDAT service portfolio Find the research service you need Explore trusted data, compute, identity and collaboration services from the EUDAT EOSC node. Name (A–Z) Name (Z–A) Categories Reset filters All services Compute Data Data Sharing Data Storage Identifier Services Storage Available services 2 services B2Drop b2drop-2 Secure cloud storage for research data Data Sharing Storage View service B2HANDLE B2HANDLE Persistent identifier service based on the Handle System Identifier Services View service Services from other EOSC providers Discovered through the EOSC catalogue. These are operated and ordered on the provider’s own site. 6 services Provider CSC Ministry of Education and Culture Fairdata Services Fairdata Integrated services for storing, publishing and sharing research data Data Storage Data View service File format validation service Validate your files An open service for validating your files against open file format standards. View service Finto - Finnish Ontology and Vocabulary Service Finto Finto is a thesaurus and ontology service free for all users. View service Paituli Paituli An open service for downloading and sharing spatial data Data Storage Data View service Research.fi Research.fi Research.fi gathers and shares information about research and researchers in Finland. Compute View service The Language Bank of Finland The Language Bank The Language Bank of Finland hosts digital language resources and related tools for research Compute Data Storage Data View service We couldn't find a match Try a different search or reset the filters to view every service. Clear filters",
+      "full_text": "Skip to main content Main navigation Catalog My Hub Status Helpdesk User account menu Account Portal Member Log in Appearance System Light Dark Appearance System Light Dark Log in EUDAT service portfolio Find the research service you need Explore trusted data, compute, identity and collaboration services from the EUDAT EOSC node. Name (A–Z) Name (Z–A) Categories Reset filters All services Compute Data Data Sharing Data Storage Identifier Services Storage Available services 2 services B2Drop b2drop-2 Secure cloud storage for research data Data Sharing Storage View service B2HANDLE B2HANDLE Persistent identifier service based on the Handle System Identifier Services View service Services from other EOSC providers Discovered through the EOSC catalogue. These are operated and ordered on the provider’s own site. 6 services Provider CSC Ministry of Education and Culture Fairdata Services Fairdata Integrated services for storing, publishing and sharing research data Data Storage Data View service File format validation service Validate your files An open service for validating your files against open file format standards. View service Finto - Finnish Ontology and Vocabulary Service Finto Finto is a thesaurus and ontology service free for all users. View service Paituli Paituli An open service for downloading and sharing spatial data Data Storage Data View service Research.fi Research.fi Research.fi gathers and shares information about research and researchers in Finland. Compute View service The Language Bank of Finland The Language Bank The Language Bank of Finland hosts digital language resources and related tools for research Compute Data Storage Data View service We couldn't find a match Try a different search or reset the filters to view every service. Clear filters EUDAT is a pan-European network consisting of more than 25 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu Keilaranta 14, 02150 Espoo, Finland VAT number: FI 28953559 Navigation & Legal EUDAT AUP Privacy Policy Accessibility Statement EOSC Node EUDAT FAQs Connect LinkedIn YouTube SlideShare X © 2026 EUDAT — All rights reserved.",
+      "links": [
+        {
+          "href": "https://portal.eudat.eu/catalog",
+          "text": "Catalog",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/status",
+          "text": "Status",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/helpdesk",
+          "text": "Helpdesk",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/welcome",
+          "text": "EOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/user/login",
+          "text": "Log in",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/12",
+          "text": "B2Drop",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/14",
+          "text": "B2HANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/183",
+          "text": "Fairdata Services",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/184",
+          "text": "File format validation service",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/181",
+          "text": "Finto - Finnish Ontology and Vocabulary Service",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/180",
+          "text": "Paituli",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/179",
+          "text": "Research.fi",
+          "visible": true
+        },
+        {
+          "href": "https://portal.eudat.eu/catalog/182",
+          "text": "The Language Bank of Finland",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi-aup",
+          "text": "EUDAT AUP",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/privacy-policy",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/accessibility-statement",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-eudat",
+          "text": "EOSC Node EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/faq",
+          "text": "FAQs",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
       "url": "https://eudat.eu/contact-support-request",
       "selected_for": [
         "6"
@@ -3222,6 +4149,1732 @@
       ],
       "robots_allowed": true,
       "error": ""
+    },
+    {
+      "url": "https://www.eudat.eu/contact-support-request",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Help Desk",
+      "depth": 2,
+      "parent_url": "https://www.eudat.eu/privacy-policy",
+      "http_status": 200,
+      "final_url": "https://www.eudat.eu/contact-support-request",
+      "title": "Contact & Support request | EUDAT",
+      "lang_attr": "en",
+      "main_text": "Name Surname E-Mail address Community Community - None - CLARIN ELIXIR ENES EPOS ICOS LTER Europe VPH Citizen EOSCpilot SeaDataCloud Others Enter other… Type - None - Issue Request Request services (Project) Integration Support Request (start pilot) Become a community Service - None - B2DROP B2SHARE B2SAFE B2STAGE B2FIND B2ACCESS B2HANDLE B2INST B2NOTE DATACITE DOCUMENTATION GEF METADATA WEBSITE Other Please describe briefly the intention of your request and indicate which EUDAT services are of interest Subject Message 240 character(s) remaining This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home Contact & Support request Contact & Support request Name Surname E-Mail address Community Community - None - CLARIN ELIXIR ENES EPOS ICOS LTER Europe VPH Citizen EOSCpilot SeaDataCloud Others Enter other… Type - None - Issue Request Request services (Project) Integration Support Request (start pilot) Become a community Service - None - B2DROP B2SHARE B2SAFE B2STAGE B2FIND B2ACCESS B2HANDLE B2INST B2NOTE DATACITE DOCUMENTATION GEF METADATA WEBSITE Other Please describe briefly the intention of your request and indicate which EUDAT services are of interest Subject Message 240 character(s) remaining This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. The EUDAT helpdesk is co-funded by the EOSC-hub project (Horizon 2020) under Grant number 777536. EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 EUDAT AUP Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
+      "links": [
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://policies.google.com/privacy",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://policies.google.com/terms",
+          "text": "Terms of Service",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi-aup",
+          "text": "EUDAT AUP",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/privacy-policy-summary",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/accessibility-statement",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/frequently-asked-questions",
+          "text": "FAQs",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Eudat_eu",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "http://www.slideshare.net/EUDAT/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/EUDATTraining",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eudat/",
+          "text": "",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://www.eudat.eu/about",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "About",
+      "depth": 2,
+      "parent_url": "https://www.eudat.eu/privacy-policy",
+      "http_status": 200,
+      "final_url": "https://www.eudat.eu/about",
+      "title": "EUDAT | EUDAT",
+      "lang_attr": "en",
+      "main_text": "EUDAT is one of the largest infrastructures of integrated data services and resources supporting research in Europe . It is sustained by a network of several European research organisations, data and computing centres that renewed their commitment to EUDAT by signing the new EUDAT Collaborative Data Infrastructure Agreement on 19 June 2026. The new Agreement succeeds the original 2016 Agreement and extends the collaboration for a further 10 years. This infrastructure and its services have been developed in close collaboration with over 50 research communities spanning across many different scientific disciplines and involved at all stage of the design process. DOWNLOAD THE EUDAT BROCHURE HERE Our vision EUDAT’s vision is Data is shared and preserved across borders and disciplines . Achieving this vision means enabling data stewardship within and between European research communities through a Collaborative Data Infrastructure (CDI) , a common model and service infrastructure for managing data spanning all European research data centres and community data repositories. European researchers and practitioners from any research discipline can preserve, find, access, and process data in a trusted environment, as part of EUDAT . EUDAT offers heterogeneous research data management services and storage resources, supporting multiple research communities as well as individuals, through a geographically distributed, resilient network distributed across multiple European nations and data is stored alongside some of Europe’s most powerful supercomputers. See EUDAT's contributions to the European research landscape . Membership Membership to EUDAT is organised into four tiers — Observing, Thematic, Contributing and Leading Members — reflecting each organisation's level of engagement, resourcing and role in EUDAT's governance. See Membership for more details. Funding The EUDAT is an association of members with operations managed through its legal entity in Finland, EUDAT Ltd. Our funding comes primarily from the following sources: Membership subscriptions of EUDAT Members The European Union (EU), via the European Commission (EC), for the participation in related projects. More about the EUDAT projects . Before becoming a self-sustained network, EUDAT has received funding from the European Union’s Framework Programme 7 & Horizon 2020 programmes, DG Connect e-Infrastructure & Open Science Cloud Unit under 2 separate contracts: EUDAT – Sept 2012 – Feb 2015 - FP7 Contract No. 283304 EUDAT2020 – March 2015 – Feb 2018 - H2020 Contract No. 654065 DOWNLOAD THE EUDAT BROCHURE HERE",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT CDI EUDAT EUDAT is one of the largest infrastructures of integrated data services and resources supporting research in Europe . It is sustained by a network of several European research organisations, data and computing centres that renewed their commitment to EUDAT by signing the new EUDAT Collaborative Data Infrastructure Agreement on 19 June 2026. The new Agreement succeeds the original 2016 Agreement and extends the collaboration for a further 10 years. This infrastructure and its services have been developed in close collaboration with over 50 research communities spanning across many different scientific disciplines and involved at all stage of the design process. DOWNLOAD THE EUDAT BROCHURE HERE Our vision EUDAT’s vision is Data is shared and preserved across borders and disciplines . Achieving this vision means enabling data stewardship within and between European research communities through a Collaborative Data Infrastructure (CDI) , a common model and service infrastructure for managing data spanning all European research data centres and community data repositories. European researchers and practitioners from any research discipline can preserve, find, access, and process data in a trusted environment, as part of EUDAT . EUDAT offers heterogeneous research data management services and storage resources, supporting multiple research communities as well as individuals, through a geographically distributed, resilient network distributed across multiple European nations and data is stored alongside some of Europe’s most powerful supercomputers. See EUDAT's contributions to the European research landscape . Membership Membership to EUDAT is organised into four tiers — Observing, Thematic, Contributing and Leading Members — reflecting each organisation's level of engagement, resourcing and role in EUDAT's governance. See Membership for more details. Funding The EUDAT is an association of members with operations managed through its legal entity in Finland, EUDAT Ltd. Our funding comes primarily from the following sources: Membership subscriptions of EUDAT Members The European Union (EU), via the European Commission (EC), for the participation in related projects. More about the EUDAT projects . Before becoming a self-sustained network, EUDAT has received funding from the European Union’s Framework Programme 7 & Horizon 2020 programmes, DG Connect e-Infrastructure & Open Science Cloud Unit under 2 separate contracts: EUDAT – Sept 2012 – Feb 2015 - FP7 Contract No. 283304 EUDAT2020 – March 2015 – Feb 2018 - H2020 Contract No. 654065 DOWNLOAD THE EUDAT BROCHURE HERE EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 EUDAT AUP Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
+      "links": [
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://b2share.eudat.eu/records/aa04e143b22346159a58e9d37bd794cf",
+          "text": "DOWNLOAD THE EUDAT BROCHURE HERE",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi/members",
+          "text": "resilient network",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi/eudat-in-the-eu-landscape",
+          "text": "See EUDAT's contributions to the European research landscape",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/how-to-join-the-eudat-cdi",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/projects",
+          "text": "EUDAT projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-sept-2012-feb-2015",
+          "text": "EUDAT – Sept 2012 – Feb 2015 - FP7 Contract No. 283304",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat2020-%E2%80%93-march-2015-%E2%80%93-feb-2018",
+          "text": "EUDAT2020 – March 2015 – Feb 2018 - H2020 Contract No. 654065",
+          "visible": true
+        },
+        {
+          "href": "https://b2share.eudat.eu/records/aa04e143b22346159a58e9d37bd794cf",
+          "text": "DOWNLOAD THE EUDAT BROCHURE HERE",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi-aup",
+          "text": "EUDAT AUP",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/privacy-policy-summary",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/accessibility-statement",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/frequently-asked-questions",
+          "text": "FAQs",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Eudat_eu",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "http://www.slideshare.net/EUDAT/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/EUDATTraining",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eudat/",
+          "text": "",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eudat.eu/about",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "About",
+      "depth": 2,
+      "parent_url": "https://eudat.eu/catalogue",
+      "http_status": 200,
+      "final_url": "https://eudat.eu/about",
+      "title": "EUDAT | EUDAT",
+      "lang_attr": "en",
+      "main_text": "EUDAT is one of the largest infrastructures of integrated data services and resources supporting research in Europe . It is sustained by a network of several European research organisations, data and computing centres that renewed their commitment to EUDAT by signing the new EUDAT Collaborative Data Infrastructure Agreement on 19 June 2026. The new Agreement succeeds the original 2016 Agreement and extends the collaboration for a further 10 years. This infrastructure and its services have been developed in close collaboration with over 50 research communities spanning across many different scientific disciplines and involved at all stage of the design process. DOWNLOAD THE EUDAT BROCHURE HERE Our vision EUDAT’s vision is Data is shared and preserved across borders and disciplines . Achieving this vision means enabling data stewardship within and between European research communities through a Collaborative Data Infrastructure (CDI) , a common model and service infrastructure for managing data spanning all European research data centres and community data repositories. European researchers and practitioners from any research discipline can preserve, find, access, and process data in a trusted environment, as part of EUDAT . EUDAT offers heterogeneous research data management services and storage resources, supporting multiple research communities as well as individuals, through a geographically distributed, resilient network distributed across multiple European nations and data is stored alongside some of Europe’s most powerful supercomputers. See EUDAT's contributions to the European research landscape . Membership Membership to EUDAT is organised into four tiers — Observing, Thematic, Contributing and Leading Members — reflecting each organisation's level of engagement, resourcing and role in EUDAT's governance. See Membership for more details. Funding The EUDAT is an association of members with operations managed through its legal entity in Finland, EUDAT Ltd. Our funding comes primarily from the following sources: Membership subscriptions of EUDAT Members The European Union (EU), via the European Commission (EC), for the participation in related projects. More about the EUDAT projects . Before becoming a self-sustained network, EUDAT has received funding from the European Union’s Framework Programme 7 & Horizon 2020 programmes, DG Connect e-Infrastructure & Open Science Cloud Unit under 2 separate contracts: EUDAT – Sept 2012 – Feb 2015 - FP7 Contract No. 283304 EUDAT2020 – March 2015 – Feb 2018 - H2020 Contract No. 654065 DOWNLOAD THE EUDAT BROCHURE HERE",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT CDI EUDAT EUDAT is one of the largest infrastructures of integrated data services and resources supporting research in Europe . It is sustained by a network of several European research organisations, data and computing centres that renewed their commitment to EUDAT by signing the new EUDAT Collaborative Data Infrastructure Agreement on 19 June 2026. The new Agreement succeeds the original 2016 Agreement and extends the collaboration for a further 10 years. This infrastructure and its services have been developed in close collaboration with over 50 research communities spanning across many different scientific disciplines and involved at all stage of the design process. DOWNLOAD THE EUDAT BROCHURE HERE Our vision EUDAT’s vision is Data is shared and preserved across borders and disciplines . Achieving this vision means enabling data stewardship within and between European research communities through a Collaborative Data Infrastructure (CDI) , a common model and service infrastructure for managing data spanning all European research data centres and community data repositories. European researchers and practitioners from any research discipline can preserve, find, access, and process data in a trusted environment, as part of EUDAT . EUDAT offers heterogeneous research data management services and storage resources, supporting multiple research communities as well as individuals, through a geographically distributed, resilient network distributed across multiple European nations and data is stored alongside some of Europe’s most powerful supercomputers. See EUDAT's contributions to the European research landscape . Membership Membership to EUDAT is organised into four tiers — Observing, Thematic, Contributing and Leading Members — reflecting each organisation's level of engagement, resourcing and role in EUDAT's governance. See Membership for more details. Funding The EUDAT is an association of members with operations managed through its legal entity in Finland, EUDAT Ltd. Our funding comes primarily from the following sources: Membership subscriptions of EUDAT Members The European Union (EU), via the European Commission (EC), for the participation in related projects. More about the EUDAT projects . Before becoming a self-sustained network, EUDAT has received funding from the European Union’s Framework Programme 7 & Horizon 2020 programmes, DG Connect e-Infrastructure & Open Science Cloud Unit under 2 separate contracts: EUDAT – Sept 2012 – Feb 2015 - FP7 Contract No. 283304 EUDAT2020 – March 2015 – Feb 2018 - H2020 Contract No. 654065 DOWNLOAD THE EUDAT BROCHURE HERE EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 EUDAT AUP Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
+      "links": [
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://b2share.eudat.eu/records/aa04e143b22346159a58e9d37bd794cf",
+          "text": "DOWNLOAD THE EUDAT BROCHURE HERE",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-cdi/members",
+          "text": "resilient network",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-cdi/eudat-in-the-eu-landscape",
+          "text": "See EUDAT's contributions to the European research landscape",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/how-to-join-the-eudat-cdi",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "EUDAT projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-sept-2012-feb-2015",
+          "text": "EUDAT – Sept 2012 – Feb 2015 - FP7 Contract No. 283304",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat2020-%E2%80%93-march-2015-%E2%80%93-feb-2018",
+          "text": "EUDAT2020 – March 2015 – Feb 2018 - H2020 Contract No. 654065",
+          "visible": true
+        },
+        {
+          "href": "https://b2share.eudat.eu/records/aa04e143b22346159a58e9d37bd794cf",
+          "text": "DOWNLOAD THE EUDAT BROCHURE HERE",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi-aup",
+          "text": "EUDAT AUP",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/privacy-policy-summary",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/accessibility-statement",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/frequently-asked-questions",
+          "text": "FAQs",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Eudat_eu",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "http://www.slideshare.net/EUDAT/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/EUDATTraining",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eudat/",
+          "text": "",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eudat.eu/service-catalogue/b2safe",
+      "selected_for": [
+        "5p"
+      ],
+      "link_text": "B2SAFE Keep research data safe via data management policies View service",
+      "depth": 2,
+      "parent_url": "https://eudat.eu/catalogue",
+      "http_status": 200,
+      "final_url": "https://eudat.eu/service-catalogue/b2safe",
+      "title": "B2SAFE | EUDAT",
+      "lang_attr": "en",
+      "main_text": "B2SAFE Keep research data safe via data management policies Request B2SAFE and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2SAFE B2SAFE is a robust and highly available service which allows community and departmental repositories to implement data management policies on their research data across multiple administrative domains in a trustworthy manner. It offers an abstraction layer of large scale, heterogeneous data storages, guards against data loss in long-term archiving, allows to optimize access for users (e.g. from different regions), brings data closer to facilities for compute-intensive analysis. Features Support for data management policies (e.g. registration of PIDs, cross-site replication, data integrity checks) Support for policies customised to community and organisational needs Support for less frequently used archival data, but can also support active data Support for large scale storage resources (e.g up to PB-scale) A single namespace across hetrogeneous storages Supports integration with different kind of storage systems (e.g. Tape based HSM, POSIX filesystems, Object storage) Access via GridFTP, Webdav, iRODS commands Service offered by a network of EUDAT service providers Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Research Managers, Researchers, Research Communities, Research Projects, Research Groups, Research Organisations Access Types: Virtual Access Modes: Free Conditionally, Paid Tags: replication policy-based data management persistent identifiers data archiving Availablity Geographical Availabilities: European Union Languages: English Marketing Multimedia 1 Dependencies Related Resources: B2HANDLE Platforms: Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Order Required Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Open Source Technologies: iRODS ( https://irods.org/ ) Version: 4.2 Management Helpdesk Manual Terms of use Training information Status Monitoring Financial Information Pricing Resource offers For Archival data B2SAFE can provide an higher level of abstraction to different underlying Data Archival mechanisms, in order to maintain Data Objects metadata (including also PIDs) and integrating with external tools. This offer targets data which is not frequently used and needs to be stored for long term and offers the option to replicate data across different sites for safe keeping. Requested initial storage capacity 10TB - higher than 500TB Expected increase per year 10TB - higher than 100TB Type of storage Online - Offline Replication None - More than 1 site Average file size smaller than 100MB - larger than 10GB Expected number of files less than 10k - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - None Preferred provider(s) BSC, CINECA, CYPRUS, GRNET, KIT, MPCDF, SURF Contact For Active data As a standard default mechanism B2SAFE can allow users to simply store data directly in the iRODS File System (iRODS FS), rather than the Object Storage or the Data Archival (as previously described). B2SAFE can create and assign PIDs to data objects, and store metadata associated to files and directories that have been saved to the Posix FS, on users behalf. This offer targets active data which is frequently used. Requested initial storage capacity 1TB - higher than 100TB Expected increase per year 1TB - higher than 20TB Replication None - More than 1 site Backup yes - no Average file size smaller than 10MB - larger than 1GB Expected number of files less than 10K - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - Other Preferred provider(s) CINECA, FZJ, GRNET, IT4I, KIT, SNIC Contact Communities Organisations B2SAFE is perfect for: Communities and organisations looking for long-term preservation of their data can use B2SAFE to replicating them to one or several other EUDAT sites. Community centres can also join the B2SAFE network which allows them to deploy the full B2SAFE software stack Get started Need more information? Contact us and get in touch with one of our representatives Use Cases The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more Common Language Resources and Technology Infrastructure CLARIN is the Common Language Resources and Technology Infrastructure in Europe. Read more Long-term preservation of herbarium specimen images Herbadrop is both an archival service for long-term preservation of herbarium specimen images and a tool for extracting information by image analysis. Read more Support to scientific research on seasonal-to-decadal climate and air quality modelling This pilot aims to “better simulate” climate change, at seasonal to decadal time scale and forecast air quality using both existing and locally developed models EC-Earth (global circulation model, Read more High resolution simulations for Precision Cosmology The SIMCODE-DS project deals with the need of high resolution simulations in view of the advent of what is known as the epoch of “Precision Cosmology”. Read more Enriching Europeana Newspapers Enriching Europeana Newspapers aims to expose the full text aggregated as part of the Europeana Newspapers project. Read more European Plate Observing System The European Plate Observing System (EPOS) is the integrated solid Earth Sciences research infrastructure approved by the European Strategy For Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT Service Catalogue B2SAFE B2SAFE B2SAFE Keep research data safe via data management policies Request B2SAFE and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2SAFE B2SAFE is a robust and highly available service which allows community and departmental repositories to implement data management policies on their research data across multiple administrative domains in a trustworthy manner. It offers an abstraction layer of large scale, heterogeneous data storages, guards against data loss in long-term archiving, allows to optimize access for users (e.g. from different regions), brings data closer to facilities for compute-intensive analysis. Features Support for data management policies (e.g. registration of PIDs, cross-site replication, data integrity checks) Support for policies customised to community and organisational needs Support for less frequently used archival data, but can also support active data Support for large scale storage resources (e.g up to PB-scale) A single namespace across hetrogeneous storages Supports integration with different kind of storage systems (e.g. Tape based HSM, POSIX filesystems, Object storage) Access via GridFTP, Webdav, iRODS commands Service offered by a network of EUDAT service providers Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Research Managers, Researchers, Research Communities, Research Projects, Research Groups, Research Organisations Access Types: Virtual Access Modes: Free Conditionally, Paid Tags: replication policy-based data management persistent identifiers data archiving Availablity Geographical Availabilities: European Union Languages: English Marketing Multimedia 1 Dependencies Related Resources: B2HANDLE Platforms: Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Order Required Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Open Source Technologies: iRODS ( https://irods.org/ ) Version: 4.2 Management Helpdesk Manual Terms of use Training information Status Monitoring Financial Information Pricing Resource offers For Archival data B2SAFE can provide an higher level of abstraction to different underlying Data Archival mechanisms, in order to maintain Data Objects metadata (including also PIDs) and integrating with external tools. This offer targets data which is not frequently used and needs to be stored for long term and offers the option to replicate data across different sites for safe keeping. Requested initial storage capacity 10TB - higher than 500TB Expected increase per year 10TB - higher than 100TB Type of storage Online - Offline Replication None - More than 1 site Average file size smaller than 100MB - larger than 10GB Expected number of files less than 10k - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - None Preferred provider(s) BSC, CINECA, CYPRUS, GRNET, KIT, MPCDF, SURF Contact For Active data As a standard default mechanism B2SAFE can allow users to simply store data directly in the iRODS File System (iRODS FS), rather than the Object Storage or the Data Archival (as previously described). B2SAFE can create and assign PIDs to data objects, and store metadata associated to files and directories that have been saved to the Posix FS, on users behalf. This offer targets active data which is frequently used. Requested initial storage capacity 1TB - higher than 100TB Expected increase per year 1TB - higher than 20TB Replication None - More than 1 site Backup yes - no Average file size smaller than 10MB - larger than 1GB Expected number of files less than 10K - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - Other Preferred provider(s) CINECA, FZJ, GRNET, IT4I, KIT, SNIC Contact Communities Organisations B2SAFE is perfect for: Communities and organisations looking for long-term preservation of their data can use B2SAFE to replicating them to one or several other EUDAT sites. Community centres can also join the B2SAFE network which allows them to deploy the full B2SAFE software stack Get started Need more information? Contact us and get in touch with one of our representatives Use Cases The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more Common Language Resources and Technology Infrastructure CLARIN is the Common Language Resources and Technology Infrastructure in Europe. Read more Long-term preservation of herbarium specimen images Herbadrop is both an archival service for long-term preservation of herbarium specimen images and a tool for extracting information by image analysis. Read more Support to scientific research on seasonal-to-decadal climate and air quality modelling This pilot aims to “better simulate” climate change, at seasonal to decadal time scale and forecast air quality using both existing and locally developed models EC-Earth (global circulation model, Read more High resolution simulations for Precision Cosmology The SIMCODE-DS project deals with the need of high resolution simulations in view of the advent of what is known as the epoch of “Precision Cosmology”. Read more Enriching Europeana Newspapers Enriching Europeana Newspapers aims to expose the full text aggregated as part of the Europeana Newspapers project. Read more European Plate Observing System The European Plate Observing System (EPOS) is the integrated solid Earth Sciences research infrastructure approved by the European Strategy For Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 EUDAT AUP Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
+      "links": [
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/about",
+          "text": "EUDAT",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/governance",
+          "text": "Governance",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/members",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/collaborations",
+          "text": "Collaborations",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/projects",
+          "text": "Projects",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
+          "text": "Communications Kit",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/membership",
+          "text": "Membership",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Services & Support",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-eosc-node",
+          "text": "EOSC EUDAT Node",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "User Documentation",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Help Desk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases",
+          "text": "Research Communities",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/events",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue",
+          "text": "EUDAT Service Catalogue",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request?Service=B2SAFE",
+          "text": "Request B2SAFE and receive a custom setup!",
+          "visible": true
+        },
+        {
+          "href": "https://b2share.eudat.eu/records/b90812d56b014db78db33cdd9efb632a",
+          "text": "Get brochure",
+          "visible": true
+        },
+        {
+          "href": "https://docs.eudat.eu/",
+          "text": "Access the user documentation",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc-portal.eu/services?tag=replication",
+          "text": "replication",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc-portal.eu/services?tag=policy-based+data+management",
+          "text": "policy-based data management",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc-portal.eu/services?tag=persistent+identifiers",
+          "text": "persistent identifiers",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc-portal.eu/services?tag=data+archiving",
+          "text": "data archiving",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc-portal.eu/services?geographical_availabilities=European+Union",
+          "text": "European Union",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/watch?v=Vb4Q3x7hNBM",
+          "text": "Multimedia 1",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/catalogue/b2handle",
+          "text": "B2HANDLE",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request?Service=B2SAFE",
+          "text": "Order url",
+          "visible": true
+        },
+        {
+          "href": "mailto:helpdesk@eudat.eu",
+          "text": "helpdesk@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://irods.org/",
+          "text": "https://irods.org/",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/support-request?Service=B2SAFE",
+          "text": "Helpdesk",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/services/userdoc/b2safe",
+          "text": "Manual",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-cdi-aup",
+          "text": "Terms of use",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/b2safe-training-suite",
+          "text": "Training information",
+          "visible": true
+        },
+        {
+          "href": "https://avail.eudat.eu/eudat/dashboard/Critical/B2SAFE%20catch%20all",
+          "text": "Status Monitoring",
+          "visible": true
+        },
+        {
+          "href": "http://eudat.eu/support-request?service=B2STAGE",
+          "text": "Pricing",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request?Service=B2SAFE",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request?Service=B2SAFE",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/contact-support-request?Service=B2SAFE",
+          "text": "Get started",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/eudat-cdi/contact-us",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/the-use-of-the-eudat-repository-to-store-clinical-trials-in-a-secure-and-compliant-way-0",
+          "text": "The use of the EUDAT repository to store clinical trials in a secure and compliant way",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/unified-access-to-eiscat-radar-data-0",
+          "text": "Unified Access to EISCAT radar data",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/european-long-term-ecological-research-network-0",
+          "text": "European Long Term Ecological Research Network",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/data-management-in-compbiomed-using-eudat-services",
+          "text": "Data Management in CompBioMed using EUDAT services",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/eudat-services-to-guarantee-long-time-archiving-and-visibility-to-the-repository-of-ist-0",
+          "text": "EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/a-distributed-infrastructure-for-life-science-information-0",
+          "text": "A distributed infrastructure for life-science information",
+          "visible": true
+        },
+        {
+          "href": "https://www.elixir-europe.org/",
+          "text": "ELIXIR",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/common-language-resources-and-technology-infrastructure-0",
+          "text": "Common Language Resources and Technology Infrastructure",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/long-term-preservation-of-herbarium-specimen-images-0",
+          "text": "Long-term preservation of herbarium specimen images",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/support-to-scientific-research-on-seasonal-to-decadal-climate-and-air-quality-modelling-0",
+          "text": "Support to scientific research on seasonal-to-decadal climate and air quality modelling",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/high-resolution-simulations-for-precision-cosmology-0",
+          "text": "High resolution simulations for Precision Cosmology",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/enriching-europeana-newspapers-0",
+          "text": "Enriching Europeana Newspapers",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/european-plate-observing-system-0",
+          "text": "European Plate Observing System",
+          "visible": true
+        },
+        {
+          "href": "http://www.epos-eu.org/",
+          "text": "The European Plate Observing System (EPOS)",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/integrated-carbon-observation-system-0",
+          "text": "Integrated Carbon Observation System",
+          "visible": true
+        },
+        {
+          "href": "http://www.icos-ri.eu/",
+          "text": "ICOS (Integrated Carbon Observation System)",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/tokamak-data-mirror-for-jet-and-mast-data-0",
+          "text": "Tokamak data mirror for JET and MAST data",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/the-use-of-the-eudat-repository-to-store-clinical-trials-in-a-secure-and-compliant-way-0",
+          "text": "The use of the EUDAT repository to store clinical trials in a secure and compliant way",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/unified-access-to-eiscat-radar-data-0",
+          "text": "Unified Access to EISCAT radar data",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/european-long-term-ecological-research-network-0",
+          "text": "European Long Term Ecological Research Network",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/data-management-in-compbiomed-using-eudat-services",
+          "text": "Data Management in CompBioMed using EUDAT services",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/eudat-services-to-guarantee-long-time-archiving-and-visibility-to-the-repository-of-ist-0",
+          "text": "EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/use-cases/a-distributed-infrastructure-for-life-science-information-0",
+          "text": "A distributed infrastructure for life-science information",
+          "visible": true
+        },
+        {
+          "href": "https://www.elixir-europe.org/",
+          "text": "ELIXIR",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@eudat.eu",
+          "text": "info@eudat.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/eudat-cdi-aup",
+          "text": "EUDAT AUP",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/privacy-policy-summary",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/accessibility-statement",
+          "text": "Accessibility Statement",
+          "visible": true
+        },
+        {
+          "href": "https://eudat.eu/frequently-asked-questions",
+          "text": "FAQs",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Eudat_eu",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "http://www.slideshare.net/EUDAT/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.youtube.com/user/EUDATTraining",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/company/eudat/",
+          "text": "",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
     }
   ],
   "children_skipped": [
@@ -3237,6 +5890,7 @@
     "https://www.eudat.eu/about (depth 2 per-page cap)",
     "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
     "https://portal.eudat.eu/helpdesk (already fetched at depth 1)",
+    "https://www.eudat.eu/privacy-policy (already fetched at depth 1)",
     "https://eudat.eu/contact-support-request?service=DOCUMENTATION (depth 2 cap for point 6)",
     "https://docs.eudat.eu/b2drop/about/ (depth 2 cap for point 2)",
     "https://docs.eudat.eu/b2find/about/ (depth 2 cap for point 2)",
@@ -3244,7 +5898,29 @@
     "https://docs.eudat.eu/b2inst/about/ (depth 2 cap for point 2)",
     "https://docs.eudat.eu/b2safe/about/ (depth 2 cap for point 2)",
     "https://docs.eudat.eu/b2share/about/ (depth 2 cap for point 2)",
-    "https://docs.eudat.eu/datacite/about/ (depth 2 cap for point 2)"
+    "https://docs.eudat.eu/datacite/about/ (depth 2 cap for point 2)",
+    "https://docs.eudat.eu/b2share/communities/community-settings/ (depth 2 per-page cap)",
+    "https://docs.eudat.eu/b2access/howto-services/ (depth 2 per-page cap)",
+    "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/privacy-policy-summary (depth 2 per-page cap)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
+    "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
+    "https://eudat.eu/catalogue (already fetched at depth 1)",
+    "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+    "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+    "https://eudat.eu/catalogue (already fetched at depth 1)",
+    "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+    "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+    "https://eudat.eu/catalogue (already fetched at depth 1)",
+    "https://eudat.eu/contact-support-request (already fetched at depth 1)",
+    "https://eudat.eu/contact-support-request (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 11 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 18 of 60 used"
+  "crawl_note": "depth 2: 11 link(s) on the landing page, 5 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 9 page(s); fetch budget: 52 of 60 used"
 }
