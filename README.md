@@ -37,12 +37,14 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-14`, collected at `--depth 2`, and it has
-> not been reviewed yet.** It was collected on 28 September 2026 between 23:43
-> and 23:50 UTC by the GitHub workflow ([run 36499442323](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36499442323), commit `9c291f9`), from all
-> thirteen nodes, under the **re-issued checklist v3.2**. It is the first run
-> that reads the policies and services pages the landing pages link to. The
-> report shows both depths, and they agree. Before it, `web-13-rescored` (the
+> **The published report is run `web-15`, collected at `--depth 2`, and it has
+> not been reviewed yet.** It was collected on 29 September 2026 between 16:44
+> and 16:50 UTC by the GitHub workflow ([run 36599759210](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36599759210), commit `2bab16b`), from all
+> thirteen nodes, under the **re-issued checklist v3.2**, with the crawler fixes
+> made after `web-14`. The report shows both depths, and they agree. It differs
+> from `web-14` ([run 36499442323](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36499442323), 28 September) in one cell: EGI's point 4 now
+> passes, because EGI's landing page gained a link to its own `eosc.eu` entry.
+> Before `web-14`, `web-13-rescored` (the
 > evidence of `web-13` scored offline against the re-issued v3.2) and `web-13`
 > itself ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)), scored under the
 > discarded first copy of v3.2, were published. The hand review of the run of
@@ -60,28 +62,29 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > services or resources page linked from the landing page now counts, and the
 > crawler follows such links to find one. A landing page with no pointer anywhere
 > the tool can see **fails** 5b or 5c; if it links to such a page the tool did
-> not read, the point is review. In `web-14` this settled two of the three
+> not read, the point is review. Since `web-14` this has settled two of the three
 > nodes that failed 5b and 5c under the first copy: CERN now passes both, and
 > Data Terra fails both after its services pages were read; PaNOSC is review.
 
-All thirteen configured nodes were fetched on 28 September 2026 at `--depth 2`
-(13 landing pages, 63 direct links, 60 second-hop pages, the whole run budget)
-and assessed against the official unscoped names list. None was skipped. The
-second hop then also looked for services pages, which is why it used the whole
-budget and left none for Italy and Slovakia; that was fixed after the run, and
-changed no verdict (see the [guide](docs/GUIDE.md)). Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's service and federation pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO and Italy) and PaNOSC's pages. Masking changed no verdict, message or evidence line.
+All thirteen configured nodes were fetched on 29 September 2026 at `--depth 2`
+(95 page requests: 13 landing pages, 56 direct links, 26 second-hop pages, 26 of
+the 60 the run allows) and assessed against the official unscoped names
+list. None was skipped. `web-14` had used 136 requests, because its second hop
+also looked for services pages; the crawler now looks for them on the landing
+page only. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's service and federation pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO and Italy) and PaNOSC's pages. Masking changed no verdict, message or evidence line.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 52 PASS · 🔴 10 FAIL · 🟠 68 review · 0 ERROR.
+130 cells: 🟢 53 PASS · 🔴 9 FAIL · 🟠 68 review · 0 ERROR.
 
 - **Item 5 under v3.2.** CERN links no policy from its landing page, but its
   "Policies" page links an Acceptable Use Policy and a User Access Policy, and
   its "Services" page links both for each service; the tool fetched both
-  policies, so 5b and 5c pass. Data Terra fails both: its two services pages
-  were read and link no AUP or UAP. The site is in French and the vocabulary is
+  policies, so 5b and 5c pass. Data Terra fails both: its services page was
+  read and links no AUP or UAP (`web-14` also read `/offre-de-services/`, one
+  hop further, with the same result). The site is in French and the vocabulary is
   English, so a French-named policy would be missed; check it by hand.
   PaNOSC is review: its services site, `services.panosc.eu`, was not read.
   Slovakia links one document that covers both, and passes both. BBMRI-ERIC
@@ -125,15 +128,15 @@ No other verdict changed.
 
 **The most repeated finding is checklist point 4.** Every node has a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
-read from the live index — but seven of the thirteen landing pages do not link to
+read from the live index — but six of the thirteen landing pages do not link to
 their own:
 
-- four (Data Terra, EOSC Finland, EGI, Italy) link to nothing on `eosc.eu` at all;
+- three (Data Terra, EOSC Finland, Italy) link to nothing on `eosc.eu` at all;
 - two (PaNOSC, Czechia) link only to the federation index page, and one
   (Poland) only to the `eosc.eu` homepage; the checklist explicitly excludes
   both.
 
-BBMRI-ERIC, CERN, EOSC DTO, EUDAT and Slovakia link correctly, and GÉANT's page
+BBMRI-ERIC, CERN, EOSC DTO, EGI (since `web-15`), EUDAT and Slovakia link correctly, and GÉANT's page
 could not be read. Each failure names the exact URL that is missing, so the fix is a
 one-line edit.
 

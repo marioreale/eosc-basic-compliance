@@ -2,7 +2,7 @@
   "node_id": "eosc-it",
   "node_name": "EOSC Node Italy",
   "requested_url": "https://eoscnode-it.d4science.org/",
-  "fetched_at": "2026-09-28T23:50:15+00:00",
+  "fetched_at": "2026-09-29T16:49:17+00:00",
   "final_url": "https://eoscnode-it.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -123,7 +123,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203609&t=1790604229293",
+      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203609&t=1790692574883",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -131,7 +131,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203608&t=1790604229295",
+      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559203608&t=1790692574886",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -139,7 +139,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559202587&t=1790604229297",
+      "src": "https://eoscnode-it.d4science.org/image/layout_icon?img_id=559202587&t=1790692574889",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -487,374 +487,6 @@
       "error": ""
     },
     {
-      "url": "https://eoscnode-it.d4science.org/cookie-policy",
-      "selected_for": [
-        "5p"
-      ],
-      "link_text": "Cookies Policy",
-      "depth": 1,
-      "parent_url": "",
-      "http_status": 200,
-      "final_url": "https://eoscnode-it.d4science.org/cookie-policy",
-      "title": "Cookie Policy - D4Science Infrastructure Gateway",
-      "lang_attr": "en-US",
-      "main_text": "Cookie Policy Effective Date: 10-Jan-2022 Last Updated: 10-Jan-2022 What are cookies? This Cookie Policy explains what cookies are and how we use them, the types of cookies we use i.e, the information we collect using cookies and how that information is used, and how to manage the cookie settings. Cookies are small text files that are used to store small pieces of information. They are stored on your device when the website is loaded on your browser. These cookies help us make the website function properly, make it more secure, provide better user experience, and understand how the website performs and to analyze what works and where it needs improvement. How do we use cookies? As most of the online services, our website uses first-party and third-party cookies for several purposes. First-party cookies are mostly necessary for the website to function the right way, and they do not collect any of your personally identifiable data. The third-party cookies used on our website are mainly for understanding how the website performs, how you interact with our website, keeping our services secure, providing advertisements that are relevant to you, and all in all providing you with a better and improved user experience and help speed up your future interactions with our website. Types of Cookies we use Necessary Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. Cookie Duration Description JSESSIONID session New Relic uses this cookie to store a session identifier so that New Relic can monitor session counts for an application. COOKIE_SUPPORT 1 year 1 month 4 days This cookie is set by the Liferay. This cookie is used for verifying whether the visitor browser support cookies. cookieyes-consent 1 year CookieYes sets this cookie to remember users' consent preferences so that their preferences are respected on subsequent visits to this site. It does not collect or store any personal information about the site visitors. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. Cookie Duration Description GUEST_LANGUAGE_ID 1 year 1 month 4 days This cookie is used to store the visitors prefered language ID. Uncategorised Other uncategorised cookies are those that are being analysed and have not been classified into a category as yet. Cookie Duration Description KC_RESTART session No description available. AUTH_SESSION_ID session No description available. AUTH_SESSION_ID_LEGACY session No description available. LFR_SESSION_STATE_20158 session No description available. Manage cookie preferences Cookie Settings You can change your cookie preferences any time by clicking the above button. This will let you revisit the cookie consent banner and change your preferences or withdraw your consent right away. In addition to this, different browsers provide different methods to block and delete cookies used by websites. You can change the settings of your browser to block/delete the cookies. Listed below are the links to the support documents on how to manage and delete cookies from the major web browsers. Chrome: https://support.google.com/accounts/answer/32050 Safari: https://support.apple.com/en-in/guide/safari/sfri11471/mac Firefox: https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US Internet Explorer: https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc If you are using any other web browser, please visit your browser’s official support documents. Cookie Policy Generated By CookieYes - Cookie Policy Generator .",
-      "full_text": "Cookie Policy - D4Science Infrastructure Gateway We value your privacy We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. Cookie JSESSIONID Duration session Description New Relic uses this cookie to store a session identifier so that New Relic can monitor session counts for an application. Cookie COOKIE_SUPPORT Duration 1 year 1 month 4 days Description This cookie is set by the Liferay. This cookie is used for verifying whether the visitor browser support cookies. Cookie cookieyes-consent Duration 1 year Description CookieYes sets this cookie to remember users' consent preferences so that their preferences are respected on subsequent visits to this site. It does not collect or store any personal information about the site visitors. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. Cookie GUEST_LANGUAGE_ID Duration 1 year 1 month 4 days Description This cookie is used to store the visitors prefered language ID. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Uncategorised Other uncategorised cookies are those that are being analysed and have not been classified into a category as yet. Cookie KC_RESTART Duration session Description No description available. Cookie AUTH_SESSION_ID Duration session Description No description available. Cookie AUTH_SESSION_ID_LEGACY Duration session Description No description available. Cookie LFR_SESSION_STATE_20158 Duration session Description No description available. Reject All Save My Preferences Accept All Powered by Skip to Content Home Explore Catalogue Sign In Cookie Policy EOSC-IT-Node Gateway / Cookie Policy / Cookie Policy Effective Date: 10-Jan-2022 Last Updated: 10-Jan-2022 What are cookies? This Cookie Policy explains what cookies are and how we use them, the types of cookies we use i.e, the information we collect using cookies and how that information is used, and how to manage the cookie settings. Cookies are small text files that are used to store small pieces of information. They are stored on your device when the website is loaded on your browser. These cookies help us make the website function properly, make it more secure, provide better user experience, and understand how the website performs and to analyze what works and where it needs improvement. How do we use cookies? As most of the online services, our website uses first-party and third-party cookies for several purposes. First-party cookies are mostly necessary for the website to function the right way, and they do not collect any of your personally identifiable data. The third-party cookies used on our website are mainly for understanding how the website performs, how you interact with our website, keeping our services secure, providing advertisements that are relevant to you, and all in all providing you with a better and improved user experience and help speed up your future interactions with our website. Types of Cookies we use Necessary Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. Cookie Duration Description JSESSIONID session New Relic uses this cookie to store a session identifier so that New Relic can monitor session counts for an application. COOKIE_SUPPORT 1 year 1 month 4 days This cookie is set by the Liferay. This cookie is used for verifying whether the visitor browser support cookies. cookieyes-consent 1 year CookieYes sets this cookie to remember users' consent preferences so that their preferences are respected on subsequent visits to this site. It does not collect or store any personal information about the site visitors. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. Cookie Duration Description GUEST_LANGUAGE_ID 1 year 1 month 4 days This cookie is used to store the visitors prefered language ID. Uncategorised Other uncategorised cookies are those that are being analysed and have not been classified into a category as yet. Cookie Duration Description KC_RESTART session No description available. AUTH_SESSION_ID session No description available. AUTH_SESSION_ID_LEGACY session No description available. LFR_SESSION_STATE_20158 session No description available. Manage cookie preferences Cookie Settings You can change your cookie preferences any time by clicking the above button. This will let you revisit the cookie consent banner and change your preferences or withdraw your consent right away. In addition to this, different browsers provide different methods to block and delete cookies used by websites. You can change the settings of your browser to block/delete the cookies. Listed below are the links to the support documents on how to manage and delete cookies from the major web browsers. Chrome: https://support.google.com/accounts/answer/32050 Safari: https://support.apple.com/en-in/guide/safari/sfri11471/mac Firefox: https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US Internet Explorer: https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc If you are using any other web browser, please visit your browser’s official support documents. Cookie Policy Generated By CookieYes - Cookie Policy Generator . Terms of Use Cookies Policy Privacy Policy Powered by Supported by",
-      "links": [
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org:443/cookie-policy?p_p_id=49&p_p_lifecycle=1&p_p_state=normal&p_p_mode=view&_49_struts_action=%2Fmy_sites%2Fview&_49_groupId=498189974&_49_privateLayout=false",
-          "text": "EOSC-IT-Node Gateway",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org/home",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org/explore",
-          "text": "Explore",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org/catalogue-eoscnoteit-cloud",
-          "text": "Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org/c/portal/login?p_l_id=498203638",
-          "text": "Sign In",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org",
-          "text": "EOSC-IT-Node Gateway",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org/cookie-policy",
-          "text": "Cookie Policy",
-          "visible": true
-        },
-        {
-          "href": "https://support.google.com/accounts/answer/32050",
-          "text": "https://support.google.com/accounts/answer/32050",
-          "visible": true
-        },
-        {
-          "href": "https://support.apple.com/en-in/guide/safari/sfri11471/mac",
-          "text": "https://support.apple.com/en-in/guide/safari/sfri11471/mac",
-          "visible": true
-        },
-        {
-          "href": "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US",
-          "text": "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US",
-          "visible": true
-        },
-        {
-          "href": "https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc",
-          "text": "https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/?utm_source=CP&utm_medium=footer&utm_campaign=UW",
-          "text": "CookieYes - Cookie Policy Generator",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org/terms-of-use",
-          "text": "Terms of Use",
-          "visible": true
-        },
-        {
-          "href": "https://eoscnode-it.d4science.org/cookie-policy",
-          "text": "Cookies Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.supercomputing-icsc.it",
-          "text": "icsc",
-          "visible": true
-        },
-        {
-          "href": "https://www.cnr.it",
-          "text": "cnr",
-          "visible": true
-        },
-        {
-          "href": "https://www.infn.it",
-          "text": "cnr",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org",
-          "text": "D4Science",
-          "visible": true
-        },
-        {
-          "href": "https://www.icdi.it",
-          "text": "icdi",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
-      "url": "https://www.d4science.org/policies/privacy-and-data-protection",
-      "selected_for": [
-        "5p"
-      ],
-      "link_text": "Privacy Policy",
-      "depth": 1,
-      "parent_url": "",
-      "http_status": 200,
-      "final_url": "https://www.d4science.org/policies/privacy-and-data-protection",
-      "title": "Privacy and Data Protection Policy | D4Science",
-      "lang_attr": "en",
-      "main_text": "Describes how personal data are processed within the D4Science infrastructure, clarifying governance roles, security measures, user rights, and compliance with GDPR. This is the final version 1.1 of the Privacy and Data Protection Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure processes personal data as part of its operation as a shared digital environment supporting scientific research and innovation. This Privacy and Data Protection Policy explains how personal data are collected, used, stored, and protected within the infrastructure, ensuring that such processing is carried out in a lawful, transparent, and secure manner. This policy applies to all personal data processed in connection with user registration and authentication, access to infrastructure services, operation of Virtual Research Environments, system administration and monitoring, and the provision of user support. D4Science is operated as a public research infrastructure and processes personal data in compliance with the General Data Protection Regulation (EU) 2016/679 , applicable Italian data protection legislation, and institutional policies governing public research organizations. Relationship with the Policy Framework This document forms part of the D4Science Policy Framework . It should be read in conjunction with the Terms of Use and other governance documents to understand the full set of rules and protections applicable to the infrastructure. Roles in Personal Data Processing The processing of personal data within D4Science may involve different roles depending on the context in which the data are processed. Understanding these roles is essential to ensure that responsibilities are clearly assigned in accordance with the GDPR. Data Controller For personal data related to the operation of the infrastructure itself, the Data Controller is the Consiglio Nazionale delle Ricerche (CNR) , through the Institute of Information Science and Technologies “A. Faedo” (ISTI), Pisa, Italy. In this role, CNR determines the purposes and means of processing personal data necessary to manage user identities and authentication, operate infrastructure services, monitor system usage and security, and provide technical support. This processing is necessary to ensure the secure and reliable operation of the infrastructure. Data Processor In certain cases, the D4Science infrastructure processes personal data on behalf of third parties. This typically occurs when personal data are included in research artefacts managed within a Virtual Research Environment. In these situations, the research project, institution, or community operating the Virtual Research Environment acts as the Data Controller , while D4Science, operated by CNR-ISTI, acts as a Data Processor by providing the technical environment for storage and processing. Responsibility for ensuring compliance with applicable data protection regulations for such data remains with the relevant Data Controller. Data Protection Governance The D4Science infrastructure adopts a structured governance model to ensure that personal data are processed securely and in compliance with applicable regulations. The infrastructure is operated by the D4Science Working Group within CNR-ISTI, which is responsible for the operation and maintenance of services, implementation of security measures, and support to users and communities. System administrators are formally appointed personnel responsible for the technical operation of the infrastructure. Their responsibilities include managing systems, implementing security controls, monitoring activity, managing authentication services, and ensuring backup and recovery procedures. An Information Security Manager oversees the implementation of security measures across the infrastructure, including the definition of security policies, monitoring of threats, and coordination of incident response. Technical support personnel may assist in infrastructure operations, including system maintenance, log monitoring, and support for backup procedures, under the supervision of authorized personnel. Categories of Personal Data D4Science processes only the personal data necessary to provide its services and ensure the security and operability of the infrastructure. Identity information: such as name, email address, institutional affiliation, and identifiers provided by authentication systems. Account-related data: such as user identifiers, account status, Virtual Research Environment memberships, and user roles. Usage data: related to access to services and activity within Virtual Research Environments, as well as system logs generated for security and operational purposes. Legal Basis for Processing Personal data are processed in accordance with Article 6 of the GDPR . Processing is based on the performance of tasks carried out in the public interest, the legitimate interests of the infrastructure operator, and the necessity of processing to provide infrastructure services. These legal bases reflect the role of D4Science as a public research infrastructure supporting scientific communities. Purposes of Processing Personal data are processed exclusively for purposes related to the operation and governance of the infrastructure. These purposes include authentication and access control , operation of Virtual Research Environments, system monitoring and security, infrastructure maintenance, and user support. Processing is limited to what is necessary to achieve these objectives. Authentication and Identity Management Authentication to the infrastructure is managed through the Identity and Access Management (IAM) system. The IAM system supports federated authentication through eduGAIN and compatible identity providers, local accounts where permitted by the relevant Gateway, and optional multi-factor authentication where required by a community. This model supports secure and interoperable access to D4Science services while reducing exposure of internal identity systems. Logging and Monitoring To ensure the security and integrity of the infrastructure, D4Science monitors system activity and maintains operational logs. Logs are used to detect anomalies, investigate incidents, and support system operations. Authentication logs include user identifiers, timestamps, and login and logout events. These logs are retained for a minimum period of six months , unless a longer period is required for security investigations or legal reasons. Data Retention Personal data are retained only for as long as necessary to provide infrastructure services and comply with legal or operational requirements. Account data: are retained for the duration of the user account. Inactive accounts may be suspended or removed in accordance with infrastructure policies. Account deletion: When a user account is deleted, private data stored in personal areas are removed, while data previously shared with collaborators may remain accessible to those collaborators in read-only mode, where technically applicable and consistent with the collaboration context. System logs: are retained in accordance with security requirements and institutional policies. Data Sharing and Third Parties Personal data processed by the infrastructure are not disclosed to third parties except where necessary to operate services, comply with legal obligations, or respond to security incidents. D4Science may rely on external infrastructure providers, such as network or cloud service providers, to deliver specific infrastructure capabilities. Where such providers are used, processing is carried out in compliance with applicable data protection regulations and subject to appropriate safeguards. Security Measures D4Science implements technical and organizational measures to protect personal data against unauthorized access, loss, misuse, or alteration. These measures include access control mechanisms, authentication systems, network protection, monitoring and logging, and backup and recovery procedures. The infrastructure security model is aligned with recognized best practices and supports the cybersecurity principles promoted by the NIS2 Directive . Data Subject Rights Users may exercise their rights under the GDPR, including the right to access personal data, request rectification of inaccurate information, request deletion where applicable, restrict processing, and object to processing in cases provided by law. Requests related to personal data may be submitted through the support channel indicated below. Data Breach Management In the event of a personal data breach, the infrastructure operator will assess and contain the incident, investigate its cause, and take appropriate corrective measures. Where required by law, the competent authorities and relevant parties will be notified in accordance with applicable regulations. Reporting: Users are encouraged to report suspected incidents promptly. Policy Updates This policy may be updated to reflect changes in legal requirements, infrastructure services, or operational practices. Updated versions will be published through official D4Science channels and will become applicable from the effective date indicated in the document. Contact and Support For questions, requests, or notifications related to data protection and the D4Science infrastructure, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies Privacy and Data Protection Po... Privacy and Data Protection Policy Describes how personal data are processed within the D4Science infrastructure, clarifying governance roles, security measures, user rights, and compliance with GDPR. This is the final version 1.1 of the Privacy and Data Protection Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure processes personal data as part of its operation as a shared digital environment supporting scientific research and innovation. This Privacy and Data Protection Policy explains how personal data are collected, used, stored, and protected within the infrastructure, ensuring that such processing is carried out in a lawful, transparent, and secure manner. This policy applies to all personal data processed in connection with user registration and authentication, access to infrastructure services, operation of Virtual Research Environments, system administration and monitoring, and the provision of user support. D4Science is operated as a public research infrastructure and processes personal data in compliance with the General Data Protection Regulation (EU) 2016/679 , applicable Italian data protection legislation, and institutional policies governing public research organizations. Relationship with the Policy Framework This document forms part of the D4Science Policy Framework . It should be read in conjunction with the Terms of Use and other governance documents to understand the full set of rules and protections applicable to the infrastructure. Roles in Personal Data Processing The processing of personal data within D4Science may involve different roles depending on the context in which the data are processed. Understanding these roles is essential to ensure that responsibilities are clearly assigned in accordance with the GDPR. Data Controller For personal data related to the operation of the infrastructure itself, the Data Controller is the Consiglio Nazionale delle Ricerche (CNR) , through the Institute of Information Science and Technologies “A. Faedo” (ISTI), Pisa, Italy. In this role, CNR determines the purposes and means of processing personal data necessary to manage user identities and authentication, operate infrastructure services, monitor system usage and security, and provide technical support. This processing is necessary to ensure the secure and reliable operation of the infrastructure. Data Processor In certain cases, the D4Science infrastructure processes personal data on behalf of third parties. This typically occurs when personal data are included in research artefacts managed within a Virtual Research Environment. In these situations, the research project, institution, or community operating the Virtual Research Environment acts as the Data Controller , while D4Science, operated by CNR-ISTI, acts as a Data Processor by providing the technical environment for storage and processing. Responsibility for ensuring compliance with applicable data protection regulations for such data remains with the relevant Data Controller. Data Protection Governance The D4Science infrastructure adopts a structured governance model to ensure that personal data are processed securely and in compliance with applicable regulations. The infrastructure is operated by the D4Science Working Group within CNR-ISTI, which is responsible for the operation and maintenance of services, implementation of security measures, and support to users and communities. System administrators are formally appointed personnel responsible for the technical operation of the infrastructure. Their responsibilities include managing systems, implementing security controls, monitoring activity, managing authentication services, and ensuring backup and recovery procedures. An Information Security Manager oversees the implementation of security measures across the infrastructure, including the definition of security policies, monitoring of threats, and coordination of incident response. Technical support personnel may assist in infrastructure operations, including system maintenance, log monitoring, and support for backup procedures, under the supervision of authorized personnel. Categories of Personal Data D4Science processes only the personal data necessary to provide its services and ensure the security and operability of the infrastructure. Identity information: such as name, email address, institutional affiliation, and identifiers provided by authentication systems. Account-related data: such as user identifiers, account status, Virtual Research Environment memberships, and user roles. Usage data: related to access to services and activity within Virtual Research Environments, as well as system logs generated for security and operational purposes. Legal Basis for Processing Personal data are processed in accordance with Article 6 of the GDPR . Processing is based on the performance of tasks carried out in the public interest, the legitimate interests of the infrastructure operator, and the necessity of processing to provide infrastructure services. These legal bases reflect the role of D4Science as a public research infrastructure supporting scientific communities. Purposes of Processing Personal data are processed exclusively for purposes related to the operation and governance of the infrastructure. These purposes include authentication and access control , operation of Virtual Research Environments, system monitoring and security, infrastructure maintenance, and user support. Processing is limited to what is necessary to achieve these objectives. Authentication and Identity Management Authentication to the infrastructure is managed through the Identity and Access Management (IAM) system. The IAM system supports federated authentication through eduGAIN and compatible identity providers, local accounts where permitted by the relevant Gateway, and optional multi-factor authentication where required by a community. This model supports secure and interoperable access to D4Science services while reducing exposure of internal identity systems. Logging and Monitoring To ensure the security and integrity of the infrastructure, D4Science monitors system activity and maintains operational logs. Logs are used to detect anomalies, investigate incidents, and support system operations. Authentication logs include user identifiers, timestamps, and login and logout events. These logs are retained for a minimum period of six months , unless a longer period is required for security investigations or legal reasons. Data Retention Personal data are retained only for as long as necessary to provide infrastructure services and comply with legal or operational requirements. Account data: are retained for the duration of the user account. Inactive accounts may be suspended or removed in accordance with infrastructure policies. Account deletion: When a user account is deleted, private data stored in personal areas are removed, while data previously shared with collaborators may remain accessible to those collaborators in read-only mode, where technically applicable and consistent with the collaboration context. System logs: are retained in accordance with security requirements and institutional policies. Data Sharing and Third Parties Personal data processed by the infrastructure are not disclosed to third parties except where necessary to operate services, comply with legal obligations, or respond to security incidents. D4Science may rely on external infrastructure providers, such as network or cloud service providers, to deliver specific infrastructure capabilities. Where such providers are used, processing is carried out in compliance with applicable data protection regulations and subject to appropriate safeguards. Security Measures D4Science implements technical and organizational measures to protect personal data against unauthorized access, loss, misuse, or alteration. These measures include access control mechanisms, authentication systems, network protection, monitoring and logging, and backup and recovery procedures. The infrastructure security model is aligned with recognized best practices and supports the cybersecurity principles promoted by the NIS2 Directive . Data Subject Rights Users may exercise their rights under the GDPR, including the right to access personal data, request rectification of inaccurate information, request deletion where applicable, restrict processing, and object to processing in cases provided by law. Requests related to personal data may be submitted through the support channel indicated below. Data Breach Management In the event of a personal data breach, the infrastructure operator will assess and contain the incident, investigate its cause, and take appropriate corrective measures. Where required by law, the competent authorities and relevant parties will be notified in accordance with applicable regulations. Reporting: Users are encouraged to report suspected incidents promptly. Policy Updates This policy may be updated to reflect changes in legal requirements, infrastructure services, or operational practices. Updated versions will be published through official D4Science channels and will become applicable from the effective date indicated in the document. Contact and Support For questions, requests, or notifications related to data protection and the D4Science infrastructure, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
-      "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/index.php/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "D4Science Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "D4Science Policy Framework",
-          "visible": true
-        },
-        {
-          "href": "https://support.d4science.org",
-          "text": "https://support.d4science.org",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/cookie-policy",
-          "text": "Cookies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/terms-of-use",
-          "text": "Terms",
-          "visible": true
-        },
-        {
-          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
-          "text": "Accessibility Statement",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
       "url": "https://eoscnode-it.d4science.org/catalogue-eoscnoteit-cloud",
       "selected_for": [
         "5s"
@@ -957,8 +589,7 @@
   "children_skipped": [
     "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)",
     "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://www.d4science.org/policies (run fetch budget exhausted)"
+    "https://eoscnode-it.d4science.org/terms-of-use (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 15 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget exhausted: 60 of 60 used, 1 further page(s) not fetched"
+  "crawl_note": "depth 2: 15 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 26 of 60 used"
 }

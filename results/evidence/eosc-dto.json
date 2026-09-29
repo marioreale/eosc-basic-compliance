@@ -2,7 +2,7 @@
   "node_id": "eosc-dto",
   "node_name": "EOSC DTO (D4Science)",
   "requested_url": "https://eosc-dto.d4science.org/",
-  "fetched_at": "2026-09-28T23:45:59+00:00",
+  "fetched_at": "2026-09-29T16:46:03+00:00",
   "final_url": "https://eosc-dto.d4science.org/",
   "http_status": 200,
   "redirect_chain": [],
@@ -301,7 +301,7 @@
   ],
   "images": [
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1789413277991",
+      "src": "https://eosc-dto.d4science.org/image/layout_set_logo?img_id=566574442&t=1790247644713",
       "alt": "European-DTO Gateway",
       "aria_label": "",
       "title": "",
@@ -309,7 +309,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1790622117228",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567593&t=1790447538215",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -317,7 +317,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1790622117232",
+      "src": "https://eosc-dto.d4science.org/image/layout_icon?img_id=566567600&t=1790447538219",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -747,18 +747,8 @@
       "title": "Access and Acceptable Use Policy | D4Science",
       "lang_attr": "en",
       "main_text": "Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. This is the final version 1.1 of the Access and Acceptable Use Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure is a shared digital environment designed to support scientific research and innovation through collaborative access to data, computational resources, and services. As a common infrastructure operated for the benefit of multiple research communities, it is essential that access to its services is governed by clear rules ensuring secure and controlled use of infrastructure resources, protection of users and research activities, fair access to shared capabilities, and compliance with applicable legal and institutional requirements. This policy establishes the conditions under which users may access and use D4Science services. It applies to all interactions with the infrastructure, including access through Gateway portals, Virtual Research Environments (VREs), APIs, and programmatic interfaces. Relationship with the Policy Framework This policy is part of the D4Science Policy Framework and should be read together with the other policies governing the infrastructure. Together, these policies define the rules for access, usage, security, and data management, ensuring that the infrastructure operates as a secure, reliable, and sustainable environment supporting scientific research. Access to the Infrastructure Access to D4Science is provided through Gateway portals , which serve as the main entry point to infrastructure services. Through these portals, users can authenticate, discover available services, and participate in collaborative environments tailored to specific research communities. Access is governed by participation in Virtual Research Environments (VREs) , which define the scope of services and resources available to each user. User Roles The infrastructure supports a role-based access model that reflects the collaborative nature of research activities: Gateway Member: A registered user who can access the infrastructure and request participation in VREs. VRE Member: A user granted access to a specific VRE to use its services and resources. VRE Manager: Responsible for managing participation, approving requests, and defining community-specific access rules. Infrastructure Administrators: Responsible for operating and maintaining the core services. Authentication and Identity Management The D4Science infrastructure uses a robust Identity and Access Management (IAM) system. Authentication mechanisms include federated identities through eduGAIN , local accounts where permitted, and optional multi-factor authentication. Security Responsibility: Users are responsible for protecting their credentials and must not share access to their accounts. Virtual Research Environment Access Policies D4Science supports flexible access models to meet different community needs: • Open Access VRE: Allows any registered user to join without approval. • Moderated Access VRE: Requires a request reviewed by a VRE Manager. • Private Access VRE: Access is strictly by invitation only. These models enable the infrastructure to support both open and controlled scientific collaborations. Each VRE acts as a logical security context , ensuring that access to services and data is restricted to authorized users. Programmatic Access and APIs D4Science provides APIs to enable integration with external applications and automation of workflows. API access is based on OpenID Connect (OIDC) authentication and secure token-based authorization. To ensure fair use and system stability, the infrastructure may apply limits such as rate limits, quotas, and concurrency restrictions. Acceptable Use D4Science is a shared infrastructure supporting public research activities. Acceptable use includes scientific research, education, collaboration, and dissemination of results. Users must comply with applicable laws, respect intellectual property rights, and adhere to ethical standards. Prohibited Activities Certain activities are not permitted as they may compromise the infrastructure. Users must NOT : Bypass security mechanisms or access unauthorized data. Deploy malicious code or misuse APIs. Impersonate other users or perform illegal activities. These restrictions are necessary to protect the integrity of the infrastructure. Responsible Use of Resources D4Science is a shared resource and must be used responsibly. Users must avoid excessive consumption of storage, computational power, and API usage. Operational limits (quotas, constraints) may be enforced to ensure fair and sustainable use for all users. Reporting and Enforcement Users are encouraged to report any suspected security issues, including unauthorized access or abnormal behaviour, through the support portal. Failure to comply with this policy may result in suspension or termination of access, or removal from VREs. Policy Updates This policy may be updated to reflect changes in services, operational practices, or regulatory requirements. Updated versions will be published through official D4Science channels. Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies Access and Acceptable Use Poli... Access and Acceptable Use Policy Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. This is the final version 1.1 of the Access and Acceptable Use Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure is a shared digital environment designed to support scientific research and innovation through collaborative access to data, computational resources, and services. As a common infrastructure operated for the benefit of multiple research communities, it is essential that access to its services is governed by clear rules ensuring secure and controlled use of infrastructure resources, protection of users and research activities, fair access to shared capabilities, and compliance with applicable legal and institutional requirements. This policy establishes the conditions under which users may access and use D4Science services. It applies to all interactions with the infrastructure, including access through Gateway portals, Virtual Research Environments (VREs), APIs, and programmatic interfaces. Relationship with the Policy Framework This policy is part of the D4Science Policy Framework and should be read together with the other policies governing the infrastructure. Together, these policies define the rules for access, usage, security, and data management, ensuring that the infrastructure operates as a secure, reliable, and sustainable environment supporting scientific research. Access to the Infrastructure Access to D4Science is provided through Gateway portals , which serve as the main entry point to infrastructure services. Through these portals, users can authenticate, discover available services, and participate in collaborative environments tailored to specific research communities. Access is governed by participation in Virtual Research Environments (VREs) , which define the scope of services and resources available to each user. User Roles The infrastructure supports a role-based access model that reflects the collaborative nature of research activities: Gateway Member: A registered user who can access the infrastructure and request participation in VREs. VRE Member: A user granted access to a specific VRE to use its services and resources. VRE Manager: Responsible for managing participation, approving requests, and defining community-specific access rules. Infrastructure Administrators: Responsible for operating and maintaining the core services. Authentication and Identity Management The D4Science infrastructure uses a robust Identity and Access Management (IAM) system. Authentication mechanisms include federated identities through eduGAIN , local accounts where permitted, and optional multi-factor authentication. Security Responsibility: Users are responsible for protecting their credentials and must not share access to their accounts. Virtual Research Environment Access Policies D4Science supports flexible access models to meet different community needs: • Open Access VRE: Allows any registered user to join without approval. • Moderated Access VRE: Requires a request reviewed by a VRE Manager. • Private Access VRE: Access is strictly by invitation only. These models enable the infrastructure to support both open and controlled scientific collaborations. Each VRE acts as a logical security context , ensuring that access to services and data is restricted to authorized users. Programmatic Access and APIs D4Science provides APIs to enable integration with external applications and automation of workflows. API access is based on OpenID Connect (OIDC) authentication and secure token-based authorization. To ensure fair use and system stability, the infrastructure may apply limits such as rate limits, quotas, and concurrency restrictions. Acceptable Use D4Science is a shared infrastructure supporting public research activities. Acceptable use includes scientific research, education, collaboration, and dissemination of results. Users must comply with applicable laws, respect intellectual property rights, and adhere to ethical standards. Prohibited Activities Certain activities are not permitted as they may compromise the infrastructure. Users must NOT : Bypass security mechanisms or access unauthorized data. Deploy malicious code or misuse APIs. Impersonate other users or perform illegal activities. These restrictions are necessary to protect the integrity of the infrastructure. Responsible Use of Resources D4Science is a shared resource and must be used responsibly. Users must avoid excessive consumption of storage, computational power, and API usage. Operational limits (quotas, constraints) may be enforced to ensure fair and sustainable use for all users. Reporting and Enforcement Users are encouraged to report any suspected security issues, including unauthorized access or abnormal behaviour, through the support portal. Failure to comply with this policy may result in suspension or termination of access, or removal from VREs. Policy Updates This policy may be updated to reflect changes in services, operational practices, or regulatory requirements. Updated versions will be published through official D4Science channels. Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
+      "full_text": "Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies Access and Acceptable Use Poli... Access and Acceptable Use Policy Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. This is the final version 1.1 of the Access and Acceptable Use Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure is a shared digital environment designed to support scientific research and innovation through collaborative access to data, computational resources, and services. As a common infrastructure operated for the benefit of multiple research communities, it is essential that access to its services is governed by clear rules ensuring secure and controlled use of infrastructure resources, protection of users and research activities, fair access to shared capabilities, and compliance with applicable legal and institutional requirements. This policy establishes the conditions under which users may access and use D4Science services. It applies to all interactions with the infrastructure, including access through Gateway portals, Virtual Research Environments (VREs), APIs, and programmatic interfaces. Relationship with the Policy Framework This policy is part of the D4Science Policy Framework and should be read together with the other policies governing the infrastructure. Together, these policies define the rules for access, usage, security, and data management, ensuring that the infrastructure operates as a secure, reliable, and sustainable environment supporting scientific research. Access to the Infrastructure Access to D4Science is provided through Gateway portals , which serve as the main entry point to infrastructure services. Through these portals, users can authenticate, discover available services, and participate in collaborative environments tailored to specific research communities. Access is governed by participation in Virtual Research Environments (VREs) , which define the scope of services and resources available to each user. User Roles The infrastructure supports a role-based access model that reflects the collaborative nature of research activities: Gateway Member: A registered user who can access the infrastructure and request participation in VREs. VRE Member: A user granted access to a specific VRE to use its services and resources. VRE Manager: Responsible for managing participation, approving requests, and defining community-specific access rules. Infrastructure Administrators: Responsible for operating and maintaining the core services. Authentication and Identity Management The D4Science infrastructure uses a robust Identity and Access Management (IAM) system. Authentication mechanisms include federated identities through eduGAIN , local accounts where permitted, and optional multi-factor authentication. Security Responsibility: Users are responsible for protecting their credentials and must not share access to their accounts. Virtual Research Environment Access Policies D4Science supports flexible access models to meet different community needs: • Open Access VRE: Allows any registered user to join without approval. • Moderated Access VRE: Requires a request reviewed by a VRE Manager. • Private Access VRE: Access is strictly by invitation only. These models enable the infrastructure to support both open and controlled scientific collaborations. Each VRE acts as a logical security context , ensuring that access to services and data is restricted to authorized users. Programmatic Access and APIs D4Science provides APIs to enable integration with external applications and automation of workflows. API access is based on OpenID Connect (OIDC) authentication and secure token-based authorization. To ensure fair use and system stability, the infrastructure may apply limits such as rate limits, quotas, and concurrency restrictions. Acceptable Use D4Science is a shared infrastructure supporting public research activities. Acceptable use includes scientific research, education, collaboration, and dissemination of results. Users must comply with applicable laws, respect intellectual property rights, and adhere to ethical standards. Prohibited Activities Certain activities are not permitted as they may compromise the infrastructure. Users must NOT : Bypass security mechanisms or access unauthorized data. Deploy malicious code or misuse APIs. Impersonate other users or perform illegal activities. These restrictions are necessary to protect the integrity of the infrastructure. Responsible Use of Resources D4Science is a shared resource and must be used responsibly. Users must avoid excessive consumption of storage, computational power, and API usage. Operational limits (quotas, constraints) may be enforced to ensure fair and sustainable use for all users. Reporting and Enforcement Users are encouraged to report any suspected security issues, including unauthorized access or abnormal behaviour, through the support portal. Failure to comply with this policy may result in suspension or termination of access, or removal from VREs. Policy Updates This policy may be updated to reflect changes in services, operational practices, or regulatory requirements. Updated versions will be published through official D4Science channels. Contact and Support For questions regarding the policy framework or infrastructure services, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
       "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
         {
           "href": "https://www.d4science.org/index.php/",
           "text": "Home",
@@ -1091,7 +1081,7 @@
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPb8IwDMW%2FSm85ldCuQhBRpAo0CYlNE2w77IJMYka0NOniZH%2B%2B%2FdoiGJO2XeP3fn62MyWoTSOqGA52ja8RKSQVEfqgnZ07S7FGv0H%2FpiU%2BrFclO4TQkOCcYtM4HwaqIKnRShw4%2F8yh5fAOySUYswP5wpJFy9QWOuC3HaR00Qb6ze8RTE38XOGNd8FJZ3oyS5aLkm3HalJIgF06Vvt9WuxBpYAyS0cFTIp8l%2B1yLFopUcSlpQA2lCwf5qN0OEnz8X1%2BJYqRyIonljyipz5bPhiy5KM2lkTXqGTRW%2BGANAkLNZIIUmyqm5VohQJOS7q0NP97TnOw2bRTiz6dn3lUtba4bcsqyo65Pc8%2B5ZfK6fFaty15ubhzRsvPpDLGvc%2FbnQUsWfARWXLtfA3h7yzZIOtftEr3vVRgDdpUSnkkYnx27PrzW8y%2BAA%3D%3D",
+      "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUjdWWhEriRS1QqpUEGqBA5fK2Ftq4djBa%2FPz9iSpCkUCrt6Zb3d2XaJoTcebGA52Ay8RMCQNIvignV04i7EFvwX%2FqiXcbdYVOYTQIacUY9c5HyYqR6nBSpg4%2F0RFz6EDkkphzKOQzyRZ9kxtxQD8tgspXbQBf%2FN7EKZF%2BlWhnXfBSWdGMklWy4rsVF4owWYXKcuZSnNQWVpkskhVsRdZAYWazaCXIkZYWQzChoqwKZun0yJlxW025%2FmcM%2FZAknvwOM7GJlOSvLfGIh8aVSR6y51AjdyKFpAHybfN1Zr3Qi5OSzq3dP97TjlIXQ5qPk7naw%2Bq1RZ2fVlFOTB3X9lLeq4sj9e67smr5Y0zWn4kjTHubdHvLEBFgo996kvnWxH%2BniWbZOOLVul%2BlHJohTaNUh4QCa2PXX9%2Bi%2FoT",
       "title": "Sign in to D4Science Accounts prod",
       "lang_attr": "en",
       "main_text": "D4science Support English Catalan (Català) Chinese (Simplified) (中文 (简体)) Dutch (Nederlands) English French (Français) German (Deutsch) Italian (Italiano) Japanese (日本語) Lithuanian (Lietuvių) Norwegian (Norsk) Polish (Polski) Portuguese (Brazil) (Português (Brasil)) Russian (русский) Slovak (Slovenčina) Spanish (Español) Swedish (Svenska) Turkish (Türkçe) Sign in to your account Username or email Password Remember me Forgot Password? Or sign in with Academic / other Google LinkedIn Twitter GitHub CNR-ISTI ORCID New user? Register Terms of Use | Cookies Policy | Privacy Policy",
@@ -1108,132 +1098,132 @@
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ca",
           "text": "Catalan (Català)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=zh-CN",
           "text": "Chinese (Simplified) (中文 (简体))",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=nl",
           "text": "Dutch (Nederlands)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=en",
           "text": "English",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=fr",
           "text": "French (Français)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=de",
           "text": "German (Deutsch)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=it",
           "text": "Italian (Italiano)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ja",
           "text": "Japanese (日本語)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=lt",
           "text": "Lithuanian (Lietuvių)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=no",
           "text": "Norwegian (Norsk)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pl",
           "text": "Polish (Polski)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=pt-BR",
           "text": "Portuguese (Brazil) (Português (Brasil))",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=ru",
           "text": "Russian (русский)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sk",
           "text": "Slovak (Slovenčina)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=es",
           "text": "Spanish (Español)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=sv",
           "text": "Swedish (Svenska)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/authenticate?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&execution=3da996bc-34a1-413e-8639-a98f61fef6dc&kc_locale=tr",
           "text": "Turkish (Türkçe)",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/reset-credentials?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9",
           "text": "Forgot Password?",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&session_code=hFtIvOGwCP30_kUsPdJwcLwFLh483pD2FuUYe9oVKPY",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/eosc-oidc/login?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&session_code=RlHig6xpubCnmzUidIn1jnOplRR6WXgocVp9Y_lbp1s",
           "text": "Academic / other",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&session_code=hFtIvOGwCP30_kUsPdJwcLwFLh483pD2FuUYe9oVKPY",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/google/login?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&session_code=RlHig6xpubCnmzUidIn1jnOplRR6WXgocVp9Y_lbp1s",
           "text": "Google",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&session_code=hFtIvOGwCP30_kUsPdJwcLwFLh483pD2FuUYe9oVKPY",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/linkedin-openid-connect/login?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&session_code=RlHig6xpubCnmzUidIn1jnOplRR6WXgocVp9Y_lbp1s",
           "text": "LinkedIn",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&session_code=hFtIvOGwCP30_kUsPdJwcLwFLh483pD2FuUYe9oVKPY",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/twitter/login?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&session_code=RlHig6xpubCnmzUidIn1jnOplRR6WXgocVp9Y_lbp1s",
           "text": "Twitter",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&session_code=hFtIvOGwCP30_kUsPdJwcLwFLh483pD2FuUYe9oVKPY",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/github/login?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&session_code=RlHig6xpubCnmzUidIn1jnOplRR6WXgocVp9Y_lbp1s",
           "text": "GitHub",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&session_code=hFtIvOGwCP30_kUsPdJwcLwFLh483pD2FuUYe9oVKPY",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/isti-keycloak-oidc/login?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&session_code=RlHig6xpubCnmzUidIn1jnOplRR6WXgocVp9Y_lbp1s",
           "text": "CNR-ISTI",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9&session_code=hFtIvOGwCP30_kUsPdJwcLwFLh483pD2FuUYe9oVKPY",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/broker/orcid/login?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9&session_code=RlHig6xpubCnmzUidIn1jnOplRR6WXgocVp9Y_lbp1s",
           "text": "ORCID",
           "visible": true
         },
         {
-          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=f7892sukHAM&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiXzhkOTRjYWFiLThkZmYtNGZhZC1hZWMxLTY0YTk0MmIxYjJlNCIsInJtIjoicG9zdCJ9",
+          "href": "https://accounts.d4science.org/auth/realms/d4science/login-actions/registration?client_id=redmine_production_d4science&tab_id=ZIIYLLRyq0w&client_data=eyJydSI6Imh0dHBzOi8vc3VwcG9ydC5kNHNjaWVuY2Uub3JnL2F1dGgvc2FtbC9jYWxsYmFjayIsInJ0IjoiX2Q0OWRhMjU4LTI0MmQtNGVkMS05MWM5LWQ5ZmExOWU5ZDU1ZSIsInJtIjoicG9zdCJ9",
           "text": "Register",
           "visible": true
         },
@@ -1250,354 +1240,6 @@
         {
           "href": "https://www.iubenda.com/privacy-policy/441050",
           "text": "Privacy Policy",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
-      "url": "https://www.d4science.org/policies/privacy-and-data-protection",
-      "selected_for": [
-        "5p"
-      ],
-      "link_text": "Read the privacy policy →",
-      "depth": 1,
-      "parent_url": "",
-      "http_status": 200,
-      "final_url": "https://www.d4science.org/policies/privacy-and-data-protection",
-      "title": "Privacy and Data Protection Policy | D4Science",
-      "lang_attr": "en",
-      "main_text": "Describes how personal data are processed within the D4Science infrastructure, clarifying governance roles, security measures, user rights, and compliance with GDPR. This is the final version 1.1 of the Privacy and Data Protection Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure processes personal data as part of its operation as a shared digital environment supporting scientific research and innovation. This Privacy and Data Protection Policy explains how personal data are collected, used, stored, and protected within the infrastructure, ensuring that such processing is carried out in a lawful, transparent, and secure manner. This policy applies to all personal data processed in connection with user registration and authentication, access to infrastructure services, operation of Virtual Research Environments, system administration and monitoring, and the provision of user support. D4Science is operated as a public research infrastructure and processes personal data in compliance with the General Data Protection Regulation (EU) 2016/679 , applicable Italian data protection legislation, and institutional policies governing public research organizations. Relationship with the Policy Framework This document forms part of the D4Science Policy Framework . It should be read in conjunction with the Terms of Use and other governance documents to understand the full set of rules and protections applicable to the infrastructure. Roles in Personal Data Processing The processing of personal data within D4Science may involve different roles depending on the context in which the data are processed. Understanding these roles is essential to ensure that responsibilities are clearly assigned in accordance with the GDPR. Data Controller For personal data related to the operation of the infrastructure itself, the Data Controller is the Consiglio Nazionale delle Ricerche (CNR) , through the Institute of Information Science and Technologies “A. Faedo” (ISTI), Pisa, Italy. In this role, CNR determines the purposes and means of processing personal data necessary to manage user identities and authentication, operate infrastructure services, monitor system usage and security, and provide technical support. This processing is necessary to ensure the secure and reliable operation of the infrastructure. Data Processor In certain cases, the D4Science infrastructure processes personal data on behalf of third parties. This typically occurs when personal data are included in research artefacts managed within a Virtual Research Environment. In these situations, the research project, institution, or community operating the Virtual Research Environment acts as the Data Controller , while D4Science, operated by CNR-ISTI, acts as a Data Processor by providing the technical environment for storage and processing. Responsibility for ensuring compliance with applicable data protection regulations for such data remains with the relevant Data Controller. Data Protection Governance The D4Science infrastructure adopts a structured governance model to ensure that personal data are processed securely and in compliance with applicable regulations. The infrastructure is operated by the D4Science Working Group within CNR-ISTI, which is responsible for the operation and maintenance of services, implementation of security measures, and support to users and communities. System administrators are formally appointed personnel responsible for the technical operation of the infrastructure. Their responsibilities include managing systems, implementing security controls, monitoring activity, managing authentication services, and ensuring backup and recovery procedures. An Information Security Manager oversees the implementation of security measures across the infrastructure, including the definition of security policies, monitoring of threats, and coordination of incident response. Technical support personnel may assist in infrastructure operations, including system maintenance, log monitoring, and support for backup procedures, under the supervision of authorized personnel. Categories of Personal Data D4Science processes only the personal data necessary to provide its services and ensure the security and operability of the infrastructure. Identity information: such as name, email address, institutional affiliation, and identifiers provided by authentication systems. Account-related data: such as user identifiers, account status, Virtual Research Environment memberships, and user roles. Usage data: related to access to services and activity within Virtual Research Environments, as well as system logs generated for security and operational purposes. Legal Basis for Processing Personal data are processed in accordance with Article 6 of the GDPR . Processing is based on the performance of tasks carried out in the public interest, the legitimate interests of the infrastructure operator, and the necessity of processing to provide infrastructure services. These legal bases reflect the role of D4Science as a public research infrastructure supporting scientific communities. Purposes of Processing Personal data are processed exclusively for purposes related to the operation and governance of the infrastructure. These purposes include authentication and access control , operation of Virtual Research Environments, system monitoring and security, infrastructure maintenance, and user support. Processing is limited to what is necessary to achieve these objectives. Authentication and Identity Management Authentication to the infrastructure is managed through the Identity and Access Management (IAM) system. The IAM system supports federated authentication through eduGAIN and compatible identity providers, local accounts where permitted by the relevant Gateway, and optional multi-factor authentication where required by a community. This model supports secure and interoperable access to D4Science services while reducing exposure of internal identity systems. Logging and Monitoring To ensure the security and integrity of the infrastructure, D4Science monitors system activity and maintains operational logs. Logs are used to detect anomalies, investigate incidents, and support system operations. Authentication logs include user identifiers, timestamps, and login and logout events. These logs are retained for a minimum period of six months , unless a longer period is required for security investigations or legal reasons. Data Retention Personal data are retained only for as long as necessary to provide infrastructure services and comply with legal or operational requirements. Account data: are retained for the duration of the user account. Inactive accounts may be suspended or removed in accordance with infrastructure policies. Account deletion: When a user account is deleted, private data stored in personal areas are removed, while data previously shared with collaborators may remain accessible to those collaborators in read-only mode, where technically applicable and consistent with the collaboration context. System logs: are retained in accordance with security requirements and institutional policies. Data Sharing and Third Parties Personal data processed by the infrastructure are not disclosed to third parties except where necessary to operate services, comply with legal obligations, or respond to security incidents. D4Science may rely on external infrastructure providers, such as network or cloud service providers, to deliver specific infrastructure capabilities. Where such providers are used, processing is carried out in compliance with applicable data protection regulations and subject to appropriate safeguards. Security Measures D4Science implements technical and organizational measures to protect personal data against unauthorized access, loss, misuse, or alteration. These measures include access control mechanisms, authentication systems, network protection, monitoring and logging, and backup and recovery procedures. The infrastructure security model is aligned with recognized best practices and supports the cybersecurity principles promoted by the NIS2 Directive . Data Subject Rights Users may exercise their rights under the GDPR, including the right to access personal data, request rectification of inaccurate information, request deletion where applicable, restrict processing, and object to processing in cases provided by law. Requests related to personal data may be submitted through the support channel indicated below. Data Breach Management In the event of a personal data breach, the infrastructure operator will assess and contain the incident, investigate its cause, and take appropriate corrective measures. Where required by law, the competent authorities and relevant parties will be notified in accordance with applicable regulations. Reporting: Users are encouraged to report suspected incidents promptly. Policy Updates This policy may be updated to reflect changes in legal requirements, infrastructure services, or operational practices. Updated versions will be published through official D4Science channels and will become applicable from the effective date indicated in the document. Contact and Support For questions, requests, or notifications related to data protection and the D4Science infrastructure, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies Privacy and Data Protection Po... Privacy and Data Protection Policy Describes how personal data are processed within the D4Science infrastructure, clarifying governance roles, security measures, user rights, and compliance with GDPR. This is the final version 1.1 of the Privacy and Data Protection Policy, which entered into force on 1 April 2026. Purpose and Scope The D4Science infrastructure processes personal data as part of its operation as a shared digital environment supporting scientific research and innovation. This Privacy and Data Protection Policy explains how personal data are collected, used, stored, and protected within the infrastructure, ensuring that such processing is carried out in a lawful, transparent, and secure manner. This policy applies to all personal data processed in connection with user registration and authentication, access to infrastructure services, operation of Virtual Research Environments, system administration and monitoring, and the provision of user support. D4Science is operated as a public research infrastructure and processes personal data in compliance with the General Data Protection Regulation (EU) 2016/679 , applicable Italian data protection legislation, and institutional policies governing public research organizations. Relationship with the Policy Framework This document forms part of the D4Science Policy Framework . It should be read in conjunction with the Terms of Use and other governance documents to understand the full set of rules and protections applicable to the infrastructure. Roles in Personal Data Processing The processing of personal data within D4Science may involve different roles depending on the context in which the data are processed. Understanding these roles is essential to ensure that responsibilities are clearly assigned in accordance with the GDPR. Data Controller For personal data related to the operation of the infrastructure itself, the Data Controller is the Consiglio Nazionale delle Ricerche (CNR) , through the Institute of Information Science and Technologies “A. Faedo” (ISTI), Pisa, Italy. In this role, CNR determines the purposes and means of processing personal data necessary to manage user identities and authentication, operate infrastructure services, monitor system usage and security, and provide technical support. This processing is necessary to ensure the secure and reliable operation of the infrastructure. Data Processor In certain cases, the D4Science infrastructure processes personal data on behalf of third parties. This typically occurs when personal data are included in research artefacts managed within a Virtual Research Environment. In these situations, the research project, institution, or community operating the Virtual Research Environment acts as the Data Controller , while D4Science, operated by CNR-ISTI, acts as a Data Processor by providing the technical environment for storage and processing. Responsibility for ensuring compliance with applicable data protection regulations for such data remains with the relevant Data Controller. Data Protection Governance The D4Science infrastructure adopts a structured governance model to ensure that personal data are processed securely and in compliance with applicable regulations. The infrastructure is operated by the D4Science Working Group within CNR-ISTI, which is responsible for the operation and maintenance of services, implementation of security measures, and support to users and communities. System administrators are formally appointed personnel responsible for the technical operation of the infrastructure. Their responsibilities include managing systems, implementing security controls, monitoring activity, managing authentication services, and ensuring backup and recovery procedures. An Information Security Manager oversees the implementation of security measures across the infrastructure, including the definition of security policies, monitoring of threats, and coordination of incident response. Technical support personnel may assist in infrastructure operations, including system maintenance, log monitoring, and support for backup procedures, under the supervision of authorized personnel. Categories of Personal Data D4Science processes only the personal data necessary to provide its services and ensure the security and operability of the infrastructure. Identity information: such as name, email address, institutional affiliation, and identifiers provided by authentication systems. Account-related data: such as user identifiers, account status, Virtual Research Environment memberships, and user roles. Usage data: related to access to services and activity within Virtual Research Environments, as well as system logs generated for security and operational purposes. Legal Basis for Processing Personal data are processed in accordance with Article 6 of the GDPR . Processing is based on the performance of tasks carried out in the public interest, the legitimate interests of the infrastructure operator, and the necessity of processing to provide infrastructure services. These legal bases reflect the role of D4Science as a public research infrastructure supporting scientific communities. Purposes of Processing Personal data are processed exclusively for purposes related to the operation and governance of the infrastructure. These purposes include authentication and access control , operation of Virtual Research Environments, system monitoring and security, infrastructure maintenance, and user support. Processing is limited to what is necessary to achieve these objectives. Authentication and Identity Management Authentication to the infrastructure is managed through the Identity and Access Management (IAM) system. The IAM system supports federated authentication through eduGAIN and compatible identity providers, local accounts where permitted by the relevant Gateway, and optional multi-factor authentication where required by a community. This model supports secure and interoperable access to D4Science services while reducing exposure of internal identity systems. Logging and Monitoring To ensure the security and integrity of the infrastructure, D4Science monitors system activity and maintains operational logs. Logs are used to detect anomalies, investigate incidents, and support system operations. Authentication logs include user identifiers, timestamps, and login and logout events. These logs are retained for a minimum period of six months , unless a longer period is required for security investigations or legal reasons. Data Retention Personal data are retained only for as long as necessary to provide infrastructure services and comply with legal or operational requirements. Account data: are retained for the duration of the user account. Inactive accounts may be suspended or removed in accordance with infrastructure policies. Account deletion: When a user account is deleted, private data stored in personal areas are removed, while data previously shared with collaborators may remain accessible to those collaborators in read-only mode, where technically applicable and consistent with the collaboration context. System logs: are retained in accordance with security requirements and institutional policies. Data Sharing and Third Parties Personal data processed by the infrastructure are not disclosed to third parties except where necessary to operate services, comply with legal obligations, or respond to security incidents. D4Science may rely on external infrastructure providers, such as network or cloud service providers, to deliver specific infrastructure capabilities. Where such providers are used, processing is carried out in compliance with applicable data protection regulations and subject to appropriate safeguards. Security Measures D4Science implements technical and organizational measures to protect personal data against unauthorized access, loss, misuse, or alteration. These measures include access control mechanisms, authentication systems, network protection, monitoring and logging, and backup and recovery procedures. The infrastructure security model is aligned with recognized best practices and supports the cybersecurity principles promoted by the NIS2 Directive . Data Subject Rights Users may exercise their rights under the GDPR, including the right to access personal data, request rectification of inaccurate information, request deletion where applicable, restrict processing, and object to processing in cases provided by law. Requests related to personal data may be submitted through the support channel indicated below. Data Breach Management In the event of a personal data breach, the infrastructure operator will assess and contain the incident, investigate its cause, and take appropriate corrective measures. Where required by law, the competent authorities and relevant parties will be notified in accordance with applicable regulations. Reporting: Users are encouraged to report suspected incidents promptly. Policy Updates This policy may be updated to reflect changes in legal requirements, infrastructure services, or operational practices. Updated versions will be published through official D4Science channels and will become applicable from the effective date indicated in the document. Contact and Support For questions, requests, or notifications related to data protection and the D4Science infrastructure, please visit our support portal: https://support.d4science.org © D4Science Infrastructure - ISTI-CNR, Pisa. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
-      "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/index.php/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "D4Science Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "D4Science Policy Framework",
-          "visible": true
-        },
-        {
-          "href": "https://support.d4science.org",
-          "text": "https://support.d4science.org",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/cookie-policy",
-          "text": "Cookies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/terms-of-use",
-          "text": "Terms",
-          "visible": true
-        },
-        {
-          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
-          "text": "Accessibility Statement",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
-      "url": "https://eosc-dto.d4science.org/cookie-policy",
-      "selected_for": [
-        "5p"
-      ],
-      "link_text": "Cookies Policy",
-      "depth": 1,
-      "parent_url": "",
-      "http_status": 200,
-      "final_url": "https://eosc-dto.d4science.org/cookie-policy",
-      "title": "European-DTO Gateway - Cookie Policy",
-      "lang_attr": "en-US",
-      "main_text": "Cookie Policy Effective Date: 10-Jan-2022 Last Updated: 10-Jan-2022 What are cookies? This Cookie Policy explains what cookies are and how we use them, the types of cookies we use i.e, the information we collect using cookies and how that information is used, and how to manage the cookie settings. Cookies are small text files that are used to store small pieces of information. They are stored on your device when the website is loaded on your browser. These cookies help us make the website function properly, make it more secure, provide better user experience, and understand how the website performs and to analyze what works and where it needs improvement. How do we use cookies? As most of the online services, our website uses first-party and third-party cookies for several purposes. First-party cookies are mostly necessary for the website to function the right way, and they do not collect any of your personally identifiable data. The third-party cookies used on our website are mainly for understanding how the website performs, how you interact with our website, keeping our services secure, providing advertisements that are relevant to you, and all in all providing you with a better and improved user experience and help speed up your future interactions with our website. Types of Cookies we use Manage cookie preferences Cookie Settings You can change your cookie preferences any time by clicking the above button. This will let you revisit the cookie consent banner and change your preferences or withdraw your consent right away. In addition to this, different browsers provide different methods to block and delete cookies used by websites. You can change the settings of your browser to block/delete the cookies. Listed below are the links to the support documents on how to manage and delete cookies from the major web browsers. Chrome: https://support.google.com/accounts/answer/32050 Safari: https://support.apple.com/en-in/guide/safari/sfri11471/mac Firefox: https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US Internet Explorer: https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc If you are using any other web browser, please visit your browser’s official support documents. Cookie Policy Generated By CookieYes - Cookie Policy Generator .",
-      "full_text": "European-DTO Gateway - Cookie Policy Your session expired! Please try reload this page or logout Skip to Content Sign In Cookie Policy Home Virtual Labs Catalogue Catalogue Service Catalogue Cookie Policy Effective Date: 10-Jan-2022 Last Updated: 10-Jan-2022 What are cookies? This Cookie Policy explains what cookies are and how we use them, the types of cookies we use i.e, the information we collect using cookies and how that information is used, and how to manage the cookie settings. Cookies are small text files that are used to store small pieces of information. They are stored on your device when the website is loaded on your browser. These cookies help us make the website function properly, make it more secure, provide better user experience, and understand how the website performs and to analyze what works and where it needs improvement. How do we use cookies? As most of the online services, our website uses first-party and third-party cookies for several purposes. First-party cookies are mostly necessary for the website to function the right way, and they do not collect any of your personally identifiable data. The third-party cookies used on our website are mainly for understanding how the website performs, how you interact with our website, keeping our services secure, providing advertisements that are relevant to you, and all in all providing you with a better and improved user experience and help speed up your future interactions with our website. Types of Cookies we use Manage cookie preferences Cookie Settings You can change your cookie preferences any time by clicking the above button. This will let you revisit the cookie consent banner and change your preferences or withdraw your consent right away. In addition to this, different browsers provide different methods to block and delete cookies used by websites. You can change the settings of your browser to block/delete the cookies. Listed below are the links to the support documents on how to manage and delete cookies from the major web browsers. Chrome: https://support.google.com/accounts/answer/32050 Safari: https://support.apple.com/en-in/guide/safari/sfri11471/mac Firefox: https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US Internet Explorer: https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc If you are using any other web browser, please visit your browser’s official support documents. Cookie Policy Generated By CookieYes - Cookie Policy Generator . Terms of Use | Cookies Policy | Privacy Policy | // ]]>",
-      "links": [
-        {
-          "href": "https://eosc-dto.d4science.org/c/portal/logout",
-          "text": "logout",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/c/portal/login?p_l_id=566567595",
-          "text": "Sign In",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org",
-          "text": "European-DTO Gateway",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/home",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/explore",
-          "text": "Virtual Labs",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/catalogue",
-          "text": "Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud",
-          "text": "Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://support.google.com/accounts/answer/32050",
-          "text": "https://support.google.com/accounts/answer/32050",
-          "visible": true
-        },
-        {
-          "href": "https://support.apple.com/en-in/guide/safari/sfri11471/mac",
-          "text": "https://support.apple.com/en-in/guide/safari/sfri11471/mac",
-          "visible": true
-        },
-        {
-          "href": "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US",
-          "text": "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox?redirectslug=delete-cookies-remove-info-websites-stored&redirectlocale=en-US",
-          "visible": true
-        },
-        {
-          "href": "https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc",
-          "text": "https://support.microsoft.com/en-us/topic/how-to-delete-cookie-files-in-internet-explorer-bca9446f-d873-78de-77ba-d42645fa52fc",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/?utm_source=CP&utm_medium=footer&utm_campaign=UW",
-          "text": "CookieYes - Cookie Policy Generator",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/terms-of-use",
-          "text": "Terms of Use",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/cookie-policy",
-          "text": "Cookies Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "http://ec.europa.eu/programmes/horizon2020/",
-          "text": "EU H2020 programme",
           "visible": true
         }
       ],
@@ -2351,366 +1993,13 @@
       "error": ""
     },
     {
-      "url": "https://www.d4science.org/policies",
-      "selected_for": [
-        "5p"
-      ],
-      "link_text": "D4Science Policy Framework",
-      "depth": 2,
-      "parent_url": "https://eosc-dto.d4science.org/terms-of-use",
-      "http_status": 200,
-      "final_url": "https://www.d4science.org/policies",
-      "title": "D4Science Policies | D4Science",
-      "lang_attr": "en",
-      "main_text": "Policy Framework Overview The D4Science Policy Framework defines the rules governing access to and use of the infrastructure, including legal terms, data protection, security, services, and research artefact management. It provides a coherent governance model ensuring secure, transparent, and sustainable support to scientific communities. Terms of Use Defines the legal relationship between users and the D4Science infrastructure, including conditions of use, responsibilities, and limitations of liability. Access and Acceptable Use Policy Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. Privacy and Data Protection Policy Describes how personal data are processed within the D4Science infrastructure, clarifying governance roles, security measures, user rights, and compliance with GDPR. Service Policy Describes the architecture and integrated services of the D4Science infrastructure, including Virtual Research Environments, data and research artefact services, computational platforms, APIs, support, and service evolution. Security and Incident Response Policy Defines the security governance model of the D4Science infrastructure, including roles, protection measures, monitoring, incident response procedures, and alignment with GDPR and NIS2 principles. Data and Research Artefact Governance and Licensing Policy Defines how datasets, models, workflows, applications, and other research artefacts are managed, shared, licensed, and reused within the D4Science infrastructure, promoting FAIR principles and responsible scientific collaboration. API and Developer Usage Policy Defines the conditions for programmatic access to the D4Science infrastructure, including OIDC-based authentication, VRE-scoped authorization, fair use limits, secure development practices, and API lifecycle management. Data Processing Addendum (DPA) Defines the roles and responsibilities of Data Controllers and Data Processors when personal data are processed within the D4Science infrastructure on behalf of third parties, in accordance with Article 28 of the GDPR.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home D4Science Policies D4Science Policies Policy Framework Overview The D4Science Policy Framework defines the rules governing access to and use of the infrastructure, including legal terms, data protection, security, services, and research artefact management. It provides a coherent governance model ensuring secure, transparent, and sustainable support to scientific communities. Terms of Use Defines the legal relationship between users and the D4Science infrastructure, including conditions of use, responsibilities, and limitations of liability. Access and Acceptable Use Policy Defines how users access the D4Science infrastructure, how Virtual Research Environments are governed, and which uses of services, APIs, and shared resources are permitted or prohibited. Privacy and Data Protection Policy Describes how personal data are processed within the D4Science infrastructure, clarifying governance roles, security measures, user rights, and compliance with GDPR. Service Policy Describes the architecture and integrated services of the D4Science infrastructure, including Virtual Research Environments, data and research artefact services, computational platforms, APIs, support, and service evolution. Security and Incident Response Policy Defines the security governance model of the D4Science infrastructure, including roles, protection measures, monitoring, incident response procedures, and alignment with GDPR and NIS2 principles. Data and Research Artefact Governance and Licensing Policy Defines how datasets, models, workflows, applications, and other research artefacts are managed, shared, licensed, and reused within the D4Science infrastructure, promoting FAIR principles and responsible scientific collaboration. API and Developer Usage Policy Defines the conditions for programmatic access to the D4Science infrastructure, including OIDC-based authentication, VRE-scoped authorization, fair use limits, secure development practices, and API lifecycle management. Data Processing Addendum (DPA) Defines the roles and responsibilities of Data Controllers and Data Processors when personal data are processed within the D4Science infrastructure on behalf of third parties, in accordance with Article 28 of the GDPR. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
-      "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/index.php/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/policy-framework-overview",
-          "text": "Policy Framework Overview",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/terms-of-use",
-          "text": "Terms of Use",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/access-and-acceptable-use",
-          "text": "Access and Acceptable Use Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy and Data Protection Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/service-policy",
-          "text": "Service Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/security-and-incident-response",
-          "text": "Security and Incident Response Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/data-and-research-artefact-governance",
-          "text": "Data and Research Artefact Governance and Licensing Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/api-and-developer-usage",
-          "text": "API and Developer Usage Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/data-processing-addendum",
-          "text": "Data Processing Addendum (DPA)",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/cookie-policy",
-          "text": "Cookies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/terms-of-use",
-          "text": "Terms",
-          "visible": true
-        },
-        {
-          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
-          "text": "Accessibility Statement",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
-      "url": "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue",
-      "selected_for": [
-        "5s"
-      ],
-      "link_text": "Service Catalogue",
-      "depth": 2,
-      "parent_url": "https://eosc-dto.d4science.org/terms-of-use",
-      "http_status": 200,
-      "final_url": "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue",
-      "title": "European-DTO Gateway - Service Catalogue",
-      "lang_attr": "en-US",
-      "main_text": "",
-      "full_text": "European-DTO Gateway - Service Catalogue Your session expired! Please try reload this page or logout Skip to Content Sign In Service Catalogue Home Virtual Labs Catalogue Catalogue Service Catalogue Terms of Use | Cookies Policy | Privacy Policy | const url = new URL(window.location.href); if (!url.searchParams.has(\"path\")) { url.searchParams.set(\"path\", \"dataset\"); url.searchParams.set(\"query\", \"c3lzdGVtdHlwZT1TZXJ2aWNl\"); window.location.replace(url.toString()); } // ]]>",
-      "links": [
-        {
-          "href": "https://eosc-dto.d4science.org/c/portal/logout",
-          "text": "logout",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/c/portal/login?p_l_id=566567708",
-          "text": "Sign In",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org",
-          "text": "European-DTO Gateway",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/home",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/explore",
-          "text": "Virtual Labs",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/catalogue",
-          "text": "Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud",
-          "text": "Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/terms-of-use",
-          "text": "Terms of Use",
-          "visible": true
-        },
-        {
-          "href": "https://eosc-dto.d4science.org/cookie-policy",
-          "text": "Cookies Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "http://ec.europa.eu/programmes/horizon2020/",
-          "text": "EU H2020 programme",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
       "url": "https://www.d4science.org/terms-of-use",
       "selected_for": [
         "5b"
       ],
       "link_text": "Terms of Use",
       "depth": 2,
-      "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPb8IwDMW%2FSm85ldCuQhBRpAo0CYlNE2w77IJMYka0NOniZH%2B%2B%2FdoiGJO2XeP3fn62MyWoTSOqGA52ja8RKSQVEfqgnZ07S7FGv0H%2FpiU%2BrFclO4TQkOCcYtM4HwaqIKnRShw4%2F8yh5fAOySUYswP5wpJFy9QWOuC3HaR00Qb6ze8RTE38XOGNd8FJZ3oyS5aLkm3HalJIgF06Vvt9WuxBpYAyS0cFTIp8l%2B1yLFopUcSlpQA2lCwf5qN0OEnz8X1%2BJYqRyIonljyipz5bPhiy5KM2lkTXqGTRW%2BGANAkLNZIIUmyqm5VohQJOS7q0NP97TnOw2bRTiz6dn3lUtba4bcsqyo65Pc8%2B5ZfK6fFaty15ubhzRsvPpDLGvc%2FbnQUsWfARWXLtfA3h7yzZIOtftEr3vVRgDdpUSnkkYnx27PrzW8y%2BAA%3D%3D",
+      "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefUjdWWhEriRS1QqpUEGqBA5fK2Ftq4djBa%2FPz9iSpCkUCrt6Zb3d2XaJoTcebGA52Ay8RMCQNIvignV04i7EFvwX%2FqiXcbdYVOYTQIacUY9c5HyYqR6nBSpg4%2F0RFz6EDkkphzKOQzyRZ9kxtxQD8tgspXbQBf%2FN7EKZF%2BlWhnXfBSWdGMklWy4rsVF4owWYXKcuZSnNQWVpkskhVsRdZAYWazaCXIkZYWQzChoqwKZun0yJlxW025%2FmcM%2FZAknvwOM7GJlOSvLfGIh8aVSR6y51AjdyKFpAHybfN1Zr3Qi5OSzq3dP97TjlIXQ5qPk7naw%2Bq1RZ2fVlFOTB3X9lLeq4sj9e67smr5Y0zWn4kjTHubdHvLEBFgo996kvnWxH%2BniWbZOOLVul%2BlHJohTaNUh4QCa2PXX9%2Bi%2FoT",
       "http_status": 404,
       "final_url": "https://www.d4science.org/terms-of-use",
       "title": "Page not found | D4Science",
@@ -2931,783 +2220,6 @@
       ],
       "robots_allowed": true,
       "error": ""
-    },
-    {
-      "url": "https://www.d4science.org/cookie-policy",
-      "selected_for": [
-        "5p"
-      ],
-      "link_text": "Cookies Policy",
-      "depth": 2,
-      "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPb8IwDMW%2FSm85ldCuQhBRpAo0CYlNE2w77IJMYka0NOniZH%2B%2B%2FdoiGJO2XeP3fn62MyWoTSOqGA52ja8RKSQVEfqgnZ07S7FGv0H%2FpiU%2BrFclO4TQkOCcYtM4HwaqIKnRShw4%2F8yh5fAOySUYswP5wpJFy9QWOuC3HaR00Qb6ze8RTE38XOGNd8FJZ3oyS5aLkm3HalJIgF06Vvt9WuxBpYAyS0cFTIp8l%2B1yLFopUcSlpQA2lCwf5qN0OEnz8X1%2BJYqRyIonljyipz5bPhiy5KM2lkTXqGTRW%2BGANAkLNZIIUmyqm5VohQJOS7q0NP97TnOw2bRTiz6dn3lUtba4bcsqyo65Pc8%2B5ZfK6fFaty15ubhzRsvPpDLGvc%2FbnQUsWfARWXLtfA3h7yzZIOtftEr3vVRgDdpUSnkkYnx27PrzW8y%2BAA%3D%3D",
-      "http_status": 200,
-      "final_url": "https://www.d4science.org/cookie-policy",
-      "title": "Cookie Policy | D4Science",
-      "lang_attr": "en",
-      "main_text": "D4Science is an information service provided by the Institute of Information Science and Technologies (ISTI), a division of the Italian National Research Council (CNR). The CNR's registered offices are located at Piazzale Aldo Moro 7, 00185 Roma, Italy (VAT no. 02118311006, Fiscal Code 80054330586), while ISTI's operational headquarters are in via G. Moruzzi 1, 56124 Pisa, Italy. D4Science is committed to protecting the online privacy of the users of this website (“Website”). Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. Some of the purposes of installing cookies may also require the consent of the user. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Cookies are small text files that may be sent to and registered on your computer by the websites you visit, to then be re-sent to those same sites when you visit them again. It is thanks to these cookies that those websites can “remember” your actions and preferences (e.g., login data, language, font size, other display settings, etc.), so that you do not need to configure them again when you next visit the website, or when you change pages within a website. Cookies are used for electronic authentication, monitoring of sessions and storage of information regarding your activities when accessing a website. They may also contain a unique ID code which allows tracking of your browsing activities within a website, for statistical or advertising purposes. Some operations within a website may not be able to be performed without the use of cookies which, in certain cases, are technically necessary for operation of the website. When browsing a website, you may also receive cookies from websites or web servers other than the website being visited (i.e., “third-party cookies”). There are various types of cookies, depending on their characteristics and functions, which may be stored on your computer for different periods of time: “session cookies”, which are automatically deleted when you close your browser, and “persistent cookies”, which will remain on your device until their pre-set expiration period passes. According to the law which may be applicable to you, your consent may not always be necessary for cookies to be used on a website. In particular, “technical cookies” – i.e. cookies which are only used to send messages through an electronic communications network, or which are needed to provide services you request – typically do not require this consent. This includes browsing or session cookies (used to allow users to login) and function cookies (used to remember choices made by a user when accessing the website, such as language or products selected for purchase). Types of cookies used by the Website The Website uses the following types of cookies: Browsing or session cookies, which are strictly necessary for the Website’s operation, and/or to allow you to use the Website’s content and Services. Analytics cookies, which allow D4Science to understand how users make use of the Website, and to track traffic to and from the Website. Function cookies, which are used to activate specific Website functions and to configure the Website according to your choices (e.g., language), in order to improve your experience. D4Science also uses third-party cookies – i.e., cookies from websites/web servers other than the Website owned by third parties. These third parties will either act as independent data controllers from CNR regarding their own cookies (using the data they collect for their own purposes and under terms defined by them) or as data processors for CNR (processing personal data on CNR’s behalf). First-party cookies present on the Website In detail, the cookies present on the Website are as follows: Common TECHNICAL NAME DATA CONTROLLER COOKIE TYPE, FUNCTION AND PURPOSE TYPE OF COOKIE DURATION has_js CNR Functional cookie to remember whether a visitor has javascript in his browser first party cookie/browsing cookie Expires at the end of the session consent_3rdparties_cookies CNR Cookie that records if the user accepted the 3rd parties cookies first party cookie/browsing cookie Expires at the end of the session consent_additional_cookies CNR Cookie that records if the user accepted additional cookies first party cookie/browsing cookie Expires at the end of the session Google Analytics TECHNICAL NAME DATA CONTROLLER COOKIE TYPE, FUNCTION AND PURPOSE TYPE OF COOKIE DURATION _ga Google Google Analytics cookie used to distinguish users. third party cookie/cookie analytics 2 Years _gat _gat_gtag_UA_XXXXXXXX_X Google Google Analytics cookie that does not store any user information; it's just used to limit the number of requests that have to be made to doubleclick.net third party cookie/cookie analytics 60 seconds _gid Google Google Analytics cookie used to distinguish users. third party cookie/cookie analytics 24 hours Drupal TECHNICAL NAME DATA CONTROLLER COOKIE TYPE, FUNCTION AND PURPOSE TYPE OF COOKIE DURATION SSESSxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx CNR Drupal cookie that stores session identification. first party cookie/session cookies 200000 seconds 200000 seconds - ~23 days Drupal.tableDrag.showWeight CNR Drupal cookie that helps handle the consistent navigation of tabbed pages and forms across a range of different browsers. first party cookie/functional cookies 1 Year Cookie settings You can block or delete cookies used on the Website via your browser options. Your cookie preferences will be reset if different browsers are used to access the Website. For more information on how to set the preferences for cookies via your browser, please refer to the following instructions: Chrome Firefox Internet Explorer Safari You may also set your preferences on third-party cookies by using online platforms such as AdChoice . CAUTION If you block or delete technical and/or function cookies used by the Website, the Website may become impossible to browse, certain services or functions of the Website may become unavailable or other malfunctions may occur. In this case, you may have to modify or manually enter some information or preferences every time you visit the Website. How can I express consent to the installation of Cookies? In addition to what is indicated in this document, the User can manage the preferences for Cookies directly from within his browser and prevent - for example - that third parties can install them. Through the browser preferences it is also possible to delete the Cookies installed in the past, including the Cookie in which the consent to the installation of Cookies by this site is eventually saved. The User can find information on how to manage Cookies with some of the most popular browsers such as the following addresses: Google Chrome , Mozilla Firefox , Apple Safari e Microsoft Internet Explorer . With reference to cookies installed by third parties, the User can also manage his own settings and revoke the consent by visiting the related opt out link (if available), using the tools described in the privacy policy of the third party or by contacting the same directly. Without prejudice to the above, the User may use the information provided by Your Online Choices (UE), Network Advertising Initiative (USA) e Digital Advertising Alliance (USA), DAAC (Canada), DDAI (Japan) or other similar services. With these services it is possible to manage the tracking preferences of most advertising tools. The Data Controller therefore advises Users to use these resources in addition to the information provided in this document.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home Cookie Policy Cookie Policy D4Science is an information service provided by the Institute of Information Science and Technologies (ISTI), a division of the Italian National Research Council (CNR). The CNR's registered offices are located at Piazzale Aldo Moro 7, 00185 Roma, Italy (VAT no. 02118311006, Fiscal Code 80054330586), while ISTI's operational headquarters are in via G. Moruzzi 1, 56124 Pisa, Italy. D4Science is committed to protecting the online privacy of the users of this website (“Website”). Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. Some of the purposes of installing cookies may also require the consent of the user. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Cookies are small text files that may be sent to and registered on your computer by the websites you visit, to then be re-sent to those same sites when you visit them again. It is thanks to these cookies that those websites can “remember” your actions and preferences (e.g., login data, language, font size, other display settings, etc.), so that you do not need to configure them again when you next visit the website, or when you change pages within a website. Cookies are used for electronic authentication, monitoring of sessions and storage of information regarding your activities when accessing a website. They may also contain a unique ID code which allows tracking of your browsing activities within a website, for statistical or advertising purposes. Some operations within a website may not be able to be performed without the use of cookies which, in certain cases, are technically necessary for operation of the website. When browsing a website, you may also receive cookies from websites or web servers other than the website being visited (i.e., “third-party cookies”). There are various types of cookies, depending on their characteristics and functions, which may be stored on your computer for different periods of time: “session cookies”, which are automatically deleted when you close your browser, and “persistent cookies”, which will remain on your device until their pre-set expiration period passes. According to the law which may be applicable to you, your consent may not always be necessary for cookies to be used on a website. In particular, “technical cookies” – i.e. cookies which are only used to send messages through an electronic communications network, or which are needed to provide services you request – typically do not require this consent. This includes browsing or session cookies (used to allow users to login) and function cookies (used to remember choices made by a user when accessing the website, such as language or products selected for purchase). Types of cookies used by the Website The Website uses the following types of cookies: Browsing or session cookies, which are strictly necessary for the Website’s operation, and/or to allow you to use the Website’s content and Services. Analytics cookies, which allow D4Science to understand how users make use of the Website, and to track traffic to and from the Website. Function cookies, which are used to activate specific Website functions and to configure the Website according to your choices (e.g., language), in order to improve your experience. D4Science also uses third-party cookies – i.e., cookies from websites/web servers other than the Website owned by third parties. These third parties will either act as independent data controllers from CNR regarding their own cookies (using the data they collect for their own purposes and under terms defined by them) or as data processors for CNR (processing personal data on CNR’s behalf). First-party cookies present on the Website In detail, the cookies present on the Website are as follows: Common TECHNICAL NAME DATA CONTROLLER COOKIE TYPE, FUNCTION AND PURPOSE TYPE OF COOKIE DURATION has_js CNR Functional cookie to remember whether a visitor has javascript in his browser first party cookie/browsing cookie Expires at the end of the session consent_3rdparties_cookies CNR Cookie that records if the user accepted the 3rd parties cookies first party cookie/browsing cookie Expires at the end of the session consent_additional_cookies CNR Cookie that records if the user accepted additional cookies first party cookie/browsing cookie Expires at the end of the session Google Analytics TECHNICAL NAME DATA CONTROLLER COOKIE TYPE, FUNCTION AND PURPOSE TYPE OF COOKIE DURATION _ga Google Google Analytics cookie used to distinguish users. third party cookie/cookie analytics 2 Years _gat _gat_gtag_UA_XXXXXXXX_X Google Google Analytics cookie that does not store any user information; it's just used to limit the number of requests that have to be made to doubleclick.net third party cookie/cookie analytics 60 seconds _gid Google Google Analytics cookie used to distinguish users. third party cookie/cookie analytics 24 hours Drupal TECHNICAL NAME DATA CONTROLLER COOKIE TYPE, FUNCTION AND PURPOSE TYPE OF COOKIE DURATION SSESSxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx CNR Drupal cookie that stores session identification. first party cookie/session cookies 200000 seconds 200000 seconds - ~23 days Drupal.tableDrag.showWeight CNR Drupal cookie that helps handle the consistent navigation of tabbed pages and forms across a range of different browsers. first party cookie/functional cookies 1 Year Cookie settings You can block or delete cookies used on the Website via your browser options. Your cookie preferences will be reset if different browsers are used to access the Website. For more information on how to set the preferences for cookies via your browser, please refer to the following instructions: Chrome Firefox Internet Explorer Safari You may also set your preferences on third-party cookies by using online platforms such as AdChoice . CAUTION If you block or delete technical and/or function cookies used by the Website, the Website may become impossible to browse, certain services or functions of the Website may become unavailable or other malfunctions may occur. In this case, you may have to modify or manually enter some information or preferences every time you visit the Website. How can I express consent to the installation of Cookies? In addition to what is indicated in this document, the User can manage the preferences for Cookies directly from within his browser and prevent - for example - that third parties can install them. Through the browser preferences it is also possible to delete the Cookies installed in the past, including the Cookie in which the consent to the installation of Cookies by this site is eventually saved. The User can find information on how to manage Cookies with some of the most popular browsers such as the following addresses: Google Chrome , Mozilla Firefox , Apple Safari e Microsoft Internet Explorer . With reference to cookies installed by third parties, the User can also manage his own settings and revoke the consent by visiting the related opt out link (if available), using the tools described in the privacy policy of the third party or by contacting the same directly. Without prejudice to the above, the User may use the information provided by Your Online Choices (UE), Network Advertising Initiative (USA) e Digital Advertising Alliance (USA), DAAC (Canada), DDAI (Japan) or other similar services. With these services it is possible to manage the tracking preferences of most advertising tools. The Data Controller therefore advises Users to use these resources in addition to the information provided in this document. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
-      "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/index.php/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://support.google.com/chrome/answer/95647?hl=en&topic=14666&ctx=topic",
-          "text": "Chrome",
-          "visible": true
-        },
-        {
-          "href": "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop",
-          "text": "Firefox",
-          "visible": true
-        },
-        {
-          "href": "https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d",
-          "text": "Internet Explorer",
-          "visible": true
-        },
-        {
-          "href": "https://support.apple.com/kb/index?page=search&type=suggested&locale=en_US&q=cookies+safari&src=globalnav_support",
-          "text": "Safari",
-          "visible": true
-        },
-        {
-          "href": "http://optout.aboutads.info/#!/",
-          "text": "AdChoice",
-          "visible": true
-        },
-        {
-          "href": "https://support.google.com/chrome/answer/95647?hl=en&topic=14666&ctx=topic",
-          "text": "Google Chrome",
-          "visible": true
-        },
-        {
-          "href": "https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop",
-          "text": "Mozilla Firefox",
-          "visible": true
-        },
-        {
-          "href": "https://support.apple.com/en-me/guide/safari/sfri11471/mac",
-          "text": "Apple Safari",
-          "visible": true
-        },
-        {
-          "href": "https://support.microsoft.com/en-us/windows/delete-and-manage-cookies-168dab11-0753-043d-7c16-ede5947fc64d",
-          "text": "Microsoft Internet Explorer",
-          "visible": true
-        },
-        {
-          "href": "http://www.youronlinechoices.eu/",
-          "text": "Your Online Choices",
-          "visible": true
-        },
-        {
-          "href": "https://thenai.org/about-online-advertising/",
-          "text": "Network Advertising Initiative",
-          "visible": true
-        },
-        {
-          "href": "https://www.aboutads.info/consumers/",
-          "text": "Digital Advertising Alliance",
-          "visible": true
-        },
-        {
-          "href": "https://youradchoices.ca/understanding-online-advertising/",
-          "text": "DAAC",
-          "visible": true
-        },
-        {
-          "href": "http://www.ddai.info/optout",
-          "text": "DDAI",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/cookie-policy",
-          "text": "Cookies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/terms-of-use",
-          "text": "Terms",
-          "visible": true
-        },
-        {
-          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
-          "text": "Accessibility Statement",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
-      "url": "https://www.d4science.org/contact-us",
-      "selected_for": [
-        "6"
-      ],
-      "link_text": "Contact us",
-      "depth": 2,
-      "parent_url": "https://www.d4science.org/policies/privacy-and-data-protection",
-      "http_status": 403,
-      "final_url": "https://www.d4science.org/contact-us",
-      "title": "Access denied | D4Science",
-      "lang_attr": "en",
-      "main_text": "You are not authorized to access this page.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home Access Denied Access denied You are not authorized to access this page. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
-      "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/index.php/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/cookie-policy",
-          "text": "Cookies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/terms-of-use",
-          "text": "Terms",
-          "visible": true
-        },
-        {
-          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
-          "text": "Accessibility Statement",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
-    },
-    {
-      "url": "https://www.d4science.org/about-us",
-      "selected_for": [
-        "2"
-      ],
-      "link_text": "About Us",
-      "depth": 2,
-      "parent_url": "https://www.d4science.org/policies/privacy-and-data-protection",
-      "http_status": 200,
-      "final_url": "https://www.d4science.org/about-us",
-      "title": "About Us | D4Science",
-      "lang_attr": "en",
-      "main_text": "D4Science is a digital infrastructure designed to offer diverse communities of practices a comprehensive suite of services through tailored and co-created virtual research environments promoting collaboration and innovation. It is operated as a not-for-profit service. Its development was supported by several EU-funded projects. Our virtual research environments support the entire research lifecycle—from data management and analysis to publication and collaboration. By integrating services, tools, and resources, D4Science advances open science practices. Its effectiveness is exemplified through numerous success stories and impactful use cases . What Makes D4Science Unique? Open Science Enabler: D4Science is designed to enact open science by providing researchers with an environment where open practices are transparently promoted. It aims to make science more fair, solid, and democratic. Co-creation Approach: D4Science utilises a co-creation approach, ensuring that the resulting Virtual Research Environments (VREs) are well-matched to the expectations of their designated communities. This fosters a collaborative environment where the platform evolves in response to the needs of its users. Virtual Research Environments (VREs): D4Science delivers VREs as a Service , which are web-based, community-oriented, collaborative, and user-friendly working environments. VREs are designed to support scientists and practitioners willing to work together on specific research tasks. Each VRE offers a unifying web application with custom pages and menu items, providing a wide range of functionalities. Reproducibility and Reusability: D4Science is designed to enable the reproducibility and reusability of research processes. It provides tools for capturing research activities and ensuring that every step of the research process can be replicated. The platform also supports the sharing of methods, data, and results, thereby fostering open and transparent science. Integrated, User-Friendly Services: Our platform integrates multiple tools into cohesive, user-friendly services, accessible to researchers with varying technical expertise. These services cover key research areas, including data analytics, data publishing, data storage, community building, service deployment, and software development, ensuring secure, scalable, and collaborative workflows. Our Infrastructure D4Science is managed by the Italian National Research Council (CNR). Its headquarters are hosted by CNR's Institute of Information Science and Technologies \"A. Faedo\" (CNR-ISTI) in Pisa, Tuscany, Italy. To ensure high availability and resilience, the D4Science infrastructure is deployed across five geographically distributed sites: the D4Science data center in Pisa, three locations within GARR (the Italian National Research and Education Network), and one at the Google Cloud Platform (GCP). This distributed architecture provides access to substantial computing resources: 11,700 CPU cores, 82 TB of RAM, and 1,720 TB of storage. The new CNR data center in Pisa is designed according to the best practices recommended by the CEN-CENELEC CLC TR50600-99-1 standard, \"Data center facilities and infrastructures - Part 99-1: Recommended practices for energy management.\" Furthermore, it adheres to the \"Climate Neutral Data Centre Pact,\" a self-regulatory initiative by data center and infrastructure operators to contribute to the European Green Deal. Our Journey From its initial focus on Earth and Marine Sciences, D4Science has evolved into a key digital infrastructure supporting a wide range of scientific disciplines, including Social Sciences, Agri-Food, Humanities, and Health Sciences. The following timeline charts this expansion and highlights key innovations and adaptations in the platform's architecture and services, driven by a commitment to Open Science principles. It showcases D4Science's continuous growth in terms of user base, data processed, and services offered, demonstrating its versatility and dedication to providing cutting-edge solutions for data management, processing, sharing and publishing across diverse research communities.",
-      "full_text": "Cookie consent We use cookies to enhance your browsing experience, serve personalised ads or content, and analyse our traffic. By clicking \"Accept All\", you consent to our use of cookies. Cookie Policy Customise Reject All Accept All Customise Consent Preferences We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below. The cookies that are categorised as \"Necessary\" are stored on your browser as they are essential for enabling the basic functionalities of the site. ... Show more For more information on how Google's third-party cookies operate and handle your data, see: Google Privacy Policy Necessary Always Active Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data. No cookies to display. Functional Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features. No cookies to display. Analytics Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc. No cookies to display. Performance Performance cookies are used to understand and analyse the key performance indexes of the website which helps in delivering a better user experience for the visitors. No cookies to display. Advertisement Advertisement cookies are used to provide visitors with customised advertisements based on the pages you visited previously and to analyse the effectiveness of the ad campaigns. No cookies to display. Reject All Save My Preferences Accept All Powered by Skip to main content Main navigation About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Contact us Search Search Contact us Breadcrumb Home About Us About Us D4Science is a digital infrastructure designed to offer diverse communities of practices a comprehensive suite of services through tailored and co-created virtual research environments promoting collaboration and innovation. It is operated as a not-for-profit service. Its development was supported by several EU-funded projects. Our virtual research environments support the entire research lifecycle—from data management and analysis to publication and collaboration. By integrating services, tools, and resources, D4Science advances open science practices. Its effectiveness is exemplified through numerous success stories and impactful use cases . What Makes D4Science Unique? Open Science Enabler: D4Science is designed to enact open science by providing researchers with an environment where open practices are transparently promoted. It aims to make science more fair, solid, and democratic. Co-creation Approach: D4Science utilises a co-creation approach, ensuring that the resulting Virtual Research Environments (VREs) are well-matched to the expectations of their designated communities. This fosters a collaborative environment where the platform evolves in response to the needs of its users. Virtual Research Environments (VREs): D4Science delivers VREs as a Service , which are web-based, community-oriented, collaborative, and user-friendly working environments. VREs are designed to support scientists and practitioners willing to work together on specific research tasks. Each VRE offers a unifying web application with custom pages and menu items, providing a wide range of functionalities. Reproducibility and Reusability: D4Science is designed to enable the reproducibility and reusability of research processes. It provides tools for capturing research activities and ensuring that every step of the research process can be replicated. The platform also supports the sharing of methods, data, and results, thereby fostering open and transparent science. Integrated, User-Friendly Services: Our platform integrates multiple tools into cohesive, user-friendly services, accessible to researchers with varying technical expertise. These services cover key research areas, including data analytics, data publishing, data storage, community building, service deployment, and software development, ensuring secure, scalable, and collaborative workflows. Our Infrastructure D4Science is managed by the Italian National Research Council (CNR). Its headquarters are hosted by CNR's Institute of Information Science and Technologies \"A. Faedo\" (CNR-ISTI) in Pisa, Tuscany, Italy. To ensure high availability and resilience, the D4Science infrastructure is deployed across five geographically distributed sites: the D4Science data center in Pisa, three locations within GARR (the Italian National Research and Education Network), and one at the Google Cloud Platform (GCP). This distributed architecture provides access to substantial computing resources: 11,700 CPU cores, 82 TB of RAM, and 1,720 TB of storage. The new CNR data center in Pisa is designed according to the best practices recommended by the CEN-CENELEC CLC TR50600-99-1 standard, \"Data center facilities and infrastructures - Part 99-1: Recommended practices for energy management.\" Furthermore, it adheres to the \"Climate Neutral Data Centre Pact,\" a self-regulatory initiative by data center and infrastructure operators to contribute to the European Green Deal. Our Journey From its initial focus on Earth and Marine Sciences, D4Science has evolved into a key digital infrastructure supporting a wide range of scientific disciplines, including Social Sciences, Agri-Food, Humanities, and Health Sciences. The following timeline charts this expansion and highlights key innovations and adaptations in the platform's architecture and services, driven by a commitment to Open Science principles. It showcases D4Science's continuous growth in terms of user base, data processed, and services offered, demonstrating its versatility and dedication to providing cutting-edge solutions for data management, processing, sharing and publishing across diverse research communities. © 2010 - 2025 Privacy - Cookies - Terms - Accessibility Statement About Us About Us How to Cite Meet Our Team Research Policies Communities Communities Gateways Catalogues Products Products Services Use Cases Success Stories Success Stories Help FAQ Support Connect with us",
-      "links": [
-        {
-          "href": "https://business.safety.google/privacy",
-          "text": "Google Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.cookieyes.com/product/cookie-consent/",
-          "text": "Cookieyes logo",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/index.php/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "communities of practices",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "suite of services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "success stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "use cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/privacy-and-data-protection",
-          "text": "Privacy",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/cookie-policy",
-          "text": "Cookies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies/terms-of-use",
-          "text": "Terms",
-          "visible": true
-        },
-        {
-          "href": "https://form.agid.gov.it/cnr/d4science/dichiarazione",
-          "text": "Accessibility Statement",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us",
-          "text": "About Us",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/how-cite",
-          "text": "How to Cite",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/about-us/meet-our-team",
-          "text": "Meet Our Team",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/research",
-          "text": "Research",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/policies",
-          "text": "Policies",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/communities",
-          "text": "Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/gateways",
-          "text": "Gateways",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/catalogues-dashboard",
-          "text": "Catalogues",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/products",
-          "text": "Products",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/services",
-          "text": "Services",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/use-cases",
-          "text": "Use Cases",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/success-stories",
-          "text": "Success Stories",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/faq",
-          "text": "FAQ",
-          "visible": true
-        },
-        {
-          "href": "https://www.d4science.org/support",
-          "text": "Support",
-          "visible": true
-        }
-      ],
-      "robots_allowed": true,
-      "error": ""
     }
   ],
   "children_skipped": [
@@ -3734,43 +2246,9 @@
     "https://www.d4science.org/about-us/meet-our-team (depth 2 per-page cap)",
     "https://www.d4science.org/about-us (depth 2 per-page cap)",
     "https://www.d4science.org/about-us/meet-our-team (depth 2 per-page cap)",
-    "https://www.d4science.org/policies (depth 2 per-page cap)",
-    "https://www.d4science.org/policies (depth 2 per-page cap)",
     "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
     "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
-    "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud (already fetched at depth 1)",
-    "https://www.d4science.org/policies/terms-of-use (already fetched at depth 1)",
-    "https://www.d4science.org/support (already fetched at depth 1)",
-    "https://support.d4science.org (depth 2 cap for point 6)",
-    "https://www.d4science.org/support (already fetched at depth 1)",
-    "https://www.d4science.org/about-us/meet-our-team (depth 2 cap for point 2)",
-    "https://www.d4science.org/about-us/meet-our-team (depth 2 cap for point 2)",
-    "https://www.d4science.org/policies (already fetched at depth 1)",
-    "https://www.d4science.org/policies (already fetched at depth 1)",
-    "https://www.d4science.org/policies (already fetched at depth 1)",
-    "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
-    "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
-    "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/catalogue-eoscnodeeudto-cloud (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/service-catalogue-organization/eoscnodedto-catalogue (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/cookie-policy (already fetched at depth 1)",
-    "https://www.d4science.org/policies/privacy-and-data-protection (already fetched at depth 1)",
-    "https://eosc-dto.d4science.org/catalogue (already fetched at depth 1)"
+    "https://eosc-dto.d4science.org/terms-of-use (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 57 link(s) on the landing page, 7 followed because they matched a checklist point, 15 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 8 page(s); fetch budget: 27 of 60 used"
+  "crawl_note": "depth 2: 57 link(s) on the landing page, 5 followed because they matched a checklist point, 15 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 3 page(s); fetch budget: 15 of 60 used"
 }

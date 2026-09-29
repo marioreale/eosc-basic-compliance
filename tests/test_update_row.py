@@ -93,7 +93,9 @@ def test_assess_update_replaces_only_that_row_and_keeps_the_others(stored, monke
     assert after["generated_at"] == before["generated_at"]
     (update,) = after["row_updates"]
     assert update["id"] == "egi" and update["how"].startswith("assess")
-    assert update["previous"]["verdicts"]["4"] == "FAIL"
+    egi_before = next(n for n in before["nodes"] if n["id"] == "egi")
+    # The previous verdicts are recorded as they were, whatever the published run says.
+    assert update["previous"]["verdicts"] == {r["point_id"]: r["verdict"] for r in egi_before["results"]}
     assert (stored / "REVIEW-2026-09-24.md").read_bytes() == review
 
 

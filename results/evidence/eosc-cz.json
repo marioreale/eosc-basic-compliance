@@ -2,12 +2,12 @@
   "node_id": "eosc-cz",
   "node_name": "EOSC Node Czechia",
   "requested_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-  "fetched_at": "2026-09-28T23:45:20+00:00",
+  "fetched_at": "2026-09-29T16:45:22+00:00",
   "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
   "http_status": 200,
   "redirect_chain": [
     "https://c.clarity.ms/c.gif",
-    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=36509A8A3DAB4F97A10630B5FB3AB1A7&RedC=c.clarity.ms&MXFR=3D71242FF4726E7A300133CDF07260AD"
+    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=33043154E99F472398B49F678A7DE176&RedC=c.clarity.ms&MXFR=17D1EEE507526D0F2BBBF9060352634D"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
@@ -327,6 +327,11 @@
       "visible": true
     },
     {
+      "href": "https://www.eosc.cz/media/4239440/eoscnode_czechia_colourpos.svg",
+      "text": "https://www.eosc.cz/media/4239440/eoscnode_czechia_colourpos.svg",
+      "visible": true
+    },
+    {
       "href": "https://nma.eosc.cz",
       "text": "National Metadata Directory",
       "visible": true
@@ -409,8 +414,8 @@
   ],
   "images": [
     {
-      "src": "https://cdn.muni.cz/media/4237097/node_web.png?mode=crop&center=0.5,0.5&rnd=134347369290000000&width=467",
-      "alt": "No description",
+      "src": "https://cdn.muni.cz/media/4239440/eoscnode_czechia_colourpos.svg?mode=crop&center=0.5,0.5&rnd=134351463890000000",
+      "alt": "https://www.eosc.cz/media/4239440/eoscnode_czechia_colourpos.svg",
       "aria_label": "",
       "title": "",
       "css_class": "",
@@ -6265,5 +6270,5 @@
     "https://www.eosc.cz/en/about-eosc-cz (already fetched at depth 1)",
     "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 78 link(s) on the landing page, 6 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 19 of 60 used"
+  "crawl_note": "depth 2: 79 link(s) on the landing page, 6 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 12 of 60 used"
 }

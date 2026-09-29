@@ -794,19 +794,23 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-14 at depth 2, 28 September 2026 (unreviewed)
+### Current run: web-15 at depth 2, 29 September 2026 (unreviewed)
 
-From `results/results.json`, run `web-14`, collected on 28 September 2026 between 23:43 and 23:50 UTC by the GitHub workflow ([run 36499442323](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36499442323), commit `9c291f9`, unit tests passing) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 136 page requests: 13 landing pages, 63 direct links and 60 second-hop pages, the whole run budget, so Italy and Slovakia got no second hop. Twelve landing pages returned HTTP 200 and GÉANT HTTP 403. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-14` reproduces it exactly, apart from the generation time.
+From `results/results.json`, run `web-15`, collected on 29 September 2026 between 16:44 and 16:50 UTC by the GitHub workflow ([run 36599759210](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36599759210), commit `2bab16b`, unit tests passing) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, with the two crawl fixes described below. It made 95 page requests: 13 landing pages, 56 direct links and 26 second-hop pages, 26 of the 60 the run allows for the second hop. Twelve landing pages returned HTTP 200 and GÉANT HTTP 403. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-15` reproduces it exactly, apart from the generation time.
 
 | Verdict | Cells |
 |---|---|
-| 🟢 PASS | 52 |
-| 🔴 FAIL | 10 |
+| 🟢 PASS | 53 |
+| 🔴 FAIL | 9 |
 | 🟠 MANUAL_REVIEW | 68 |
 | 🟣 ERROR | 0 |
 | **Total** | **130** (13 nodes × 10 points) |
 
-Seven FAILs are point 4, as before, and one is Italy's point 6. The other two are Data Terra's 5b and 5c. Per node, 5b and 5c:
+Only one cell differs from `web-14`: **EGI's point 4 passes**, because its landing page now links "EGI EOSC Node on EOSC Association's website", `https://eosc.eu/building-the-eosc-federation/eosc-node-egi`. Six FAILs are point 4, one is Italy's point 6 and two are Data Terra's 5b and 5c. Data Terra's services page `/services/` was read and links no AUP or UAP; `/offre-de-services/`, which `web-14` reached one hop further, is no longer followed, and gave the same result then. 5b and 5c per node are as in `web-14`, below. The masking is the same as for `web-14`: every name masked there was found again and masked, no new name appeared, and CERN's screenshot was masked again.
+
+### Previous run: web-14 at depth 2, 28 September 2026
+
+From run `web-14`, collected on 28 September 2026 between 23:43 and 23:50 UTC ([run 36499442323](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36499442323), commit `9c291f9`). It made 136 page requests: 13 landing pages, 63 direct links and 60 second-hop pages, the whole run budget, so Italy and Slovakia got no second hop. It gave 52 PASS, 10 FAIL and 68 MANUAL_REVIEW, with EGI's point 4 still FAIL. Per node, 5b and 5c:
 
 | 5b / 5c | Nodes | Why |
 |---|---|---|
@@ -1160,7 +1164,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 52 PASS · 10 FAIL · 68 review");
+- the headline tally in `README.md` ("130 cells: 53 PASS · 9 FAIL · 68 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 
