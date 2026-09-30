@@ -685,7 +685,7 @@ fetched), Data Terra's fail by branch 11 (its two services pages were read and
 link neither; they are in French, which the English vocabulary does not
 cover), and PaNOSC's stay review by branch 10 (its services site was not
 read). Run `web-15`, with the second hop no longer looking for services
-pages, kept all three.
+pages, kept all three, and so did `web-16`.
 
 ---
 
@@ -1093,7 +1093,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 53 PASS · 9 FAIL · 68 review");
+- the headline tally in `README.md` ("130 cells: 57 PASS · 6 FAIL · 67 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

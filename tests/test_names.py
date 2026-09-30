@@ -385,10 +385,11 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     the real-world outcome, not a synthetic one. Evidence of runs web-4 to web-9 (26 September 2026) and web-10 and web-11
     (28 September 2026: Poland and, in web-11, CERN's new page carry their names
     only in their logos). GÉANT's page also carries its name ("EOSC Node GÉANT", as
-    matched on 24 September), but on 26 September it answered with the
+    matched on 24 September), but from 26 to 29 September it answered with the
     Cloudflare challenge, so there was no body to match; on 21 September only
     BBMRI-ERIC and EUDAT matched, for the same reason and because Czechia and
-    Slovakia were not collected.
+    Slovakia were not collected. From web-16 (30 September 2026) GÉANT's page
+    is served again and matches as the fifth.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -399,7 +400,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk"}
+    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "geant"}
 
 
 # --- what the page calls itself, when nothing matched ------------------------

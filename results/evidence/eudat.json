@@ -2,7 +2,7 @@
   "node_id": "eudat",
   "node_name": "EUDAT",
   "requested_url": "https://portal.eudat.eu/",
-  "fetched_at": "2026-09-29T16:48:01+00:00",
+  "fetched_at": "2026-09-30T15:01:51+00:00",
   "final_url": "https://portal.eudat.eu/welcome",
   "http_status": 200,
   "redirect_chain": [
