@@ -37,7 +37,9 @@ nodes:
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean/
   - id: data-terra
     name: Data Terra
-    url: https://www.data-terra.org/eosc/
+    # Changed on 1 October 2026 from https://www.data-terra.org/eosc/
+    # (basic-check --update-nlp), the address used until run web-18.
+    url: https://www.earth-data.eu/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra/
   - id: eosc-fi
     name: EOSC Finland
