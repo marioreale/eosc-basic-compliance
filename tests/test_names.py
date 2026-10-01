@@ -391,7 +391,9 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     Slovakia were not collected. In web-16 (30 September 2026) GÉANT's page was
     served and matched as the fifth; in web-18 (1 October 2026) it is behind
     the challenge again, and Italy's new page at https://eosc.it/ matches
-    instead, with the official separator ("EOSC Node | Italy").
+    instead, with the official separator ("EOSC Node | Italy"). In web-21
+    (1 October 2026) Data Terra's new page, https://www.earth-data.eu/, matches
+    too ("EOSC Node Data Terra").
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -402,7 +404,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it"}
+    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra"}
 
 
 # --- what the page calls itself, when nothing matched ------------------------

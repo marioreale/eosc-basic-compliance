@@ -2,7 +2,7 @@
   "node_id": "eosc-fi",
   "node_name": "EOSC Finland",
   "requested_url": "https://eosc.fi/",
-  "fetched_at": "2026-10-01T16:07:21+00:00",
+  "fetched_at": "2026-10-01T20:21:07+00:00",
   "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -6026,5 +6026,5 @@
     "https://research.csc.fi/eosc-the-finnish-candidate-node/short-definition-of-eosc-and-the-federation-and-the-finnish-candidate-node/ (already fetched at depth 1)",
     "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 85 link(s) on the landing page, 8 followed because they matched a checklist point, 26 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 15 of 60 used"
+  "crawl_note": "depth 2: 85 link(s) on the landing page, 8 followed because they matched a checklist point, 26 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 18 of 60 used"
 }

@@ -2,7 +2,7 @@
   "node_id": "geant",
   "node_name": "GÉANT",
   "requested_url": "https://geant.org/geant-eosc-node/",
-  "fetched_at": "2026-10-01T16:09:15+00:00",
+  "fetched_at": "2026-10-01T20:22:54+00:00",
   "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
   "http_status": 403,
   "redirect_chain": [
@@ -13,7 +13,7 @@
   "title": "Just a moment...",
   "lang_attr": "en-US",
   "main_text": "geant.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for geant.org to respond",
-  "full_text": "geant.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for geant.org to respond Ray ID: a43cbb13bba0c933 Performance and Security by Cloudflare Privacy",
+  "full_text": "geant.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for geant.org to respond Ray ID: a43e2ea409e9abb9 Performance and Security by Cloudflare Privacy",
   "links": [
     {
       "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
@@ -56,5 +56,5 @@
   "crawl_depth": 2,
   "children": [],
   "children_skipped": [],
-  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 23 of 60 used"
+  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 26 of 60 used"
 }

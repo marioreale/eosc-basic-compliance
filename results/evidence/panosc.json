@@ -2,7 +2,7 @@
   "node_id": "panosc",
   "node_name": "PaNOSC",
   "requested_url": "https://eosc.panosc.eu/",
-  "fetched_at": "2026-10-01T16:07:52+00:00",
+  "fetched_at": "2026-10-01T20:21:37+00:00",
   "final_url": "https://www.panosc.eu/panosc-eosc-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -5691,5 +5691,5 @@
     "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 123 link(s) on the landing page, 6 followed because they matched a checklist point, 3 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 17 of 60 used"
+  "crawl_note": "depth 2: 123 link(s) on the landing page, 6 followed because they matched a checklist point, 3 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 20 of 60 used"
 }

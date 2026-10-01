@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-18` · 2026-10-01T17:35:18+00:00 · 13 nodes · one page request per node plus 57 followed link(s), then 26 second-hop page(s) (depth 2).
+Run `web-21` · 2026-10-01T20:25:15+00:00 · 13 nodes · one page request per node plus 58 followed link(s), then 27 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -14,7 +14,7 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-130 cells: 🟢 60 PASS · 🔴 6 FAIL · 🟠 64 review.
+130 cells: 🟢 63 PASS · 🔴 3 FAIL · 🟠 64 review.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -22,7 +22,7 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 | CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
@@ -34,9 +34,9 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 
 ### Results at depth 2
 
-The same evidence plus 26 page(s) reached one further hop out, under a shared run budget.
+The same evidence plus 27 page(s) reached one further hop out, under a shared run budget.
 
-130 cells: 🟢 60 PASS · 🔴 6 FAIL · 🟠 64 review.
+130 cells: 🟢 63 PASS · 🔴 3 FAIL · 🟠 64 review.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -44,7 +44,7 @@ The same evidence plus 26 page(s) reached one further hop out, under a shared ru
 | CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
@@ -56,7 +56,7 @@ The same evidence plus 26 page(s) reached one further hop out, under a shared ru
 
 ### What the second hop changed
 
-**No verdict changed.** The second hop fetched 26 page(s) and left all 130 cells exactly as depth 1 had them.
+**No verdict changed.** The second hop fetched 27 page(s) and left all 130 cells exactly as depth 1 had them.
 
 That is a finding, not a failure of the deeper crawl. The points still marked 🟠 review are not shallow-crawl artefacts: they turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all Node Exchange research resources offered by the Node"). Fetching more pages cannot settle either kind, which is why depth 1 remains the default.
 
@@ -79,6 +79,7 @@ That is a finding, not a failure of the deeper crawl. The points still marked �
 | EOSC DTO (D4Science) | 5b | <https://www.d4science.org/policies/terms-of-use> | 200 |
 | EOSC DTO (D4Science) | 6 | <https://www.d4science.org/support> | 200 |
 | EOSC DTO (D4Science) | 5b | <https://www.d4science.org/terms-of-use> | 404 |
+| Data Terra | 2 | <https://www.earth-data.eu/fr/about-2/> | 200 |
 | EOSC Finland | 6 | <https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/> | 200 |
 | EOSC Finland | 6 | <https://research.csc.fi/service/advanced-support/> | 200 |
 | PaNOSC | 2 | <https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/> | 200 |
@@ -307,12 +308,12 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://eosc-dto.d4science.org/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 12316 characters of text rendered
+  - HTTP 200 anonymously, 15582 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 5 distinct external host(s) linked from the landing page
   - doi.org (EOSC-Marine project)
-  - ec.europa.eu (EU H2020 programme)
   - support.d4science.org (Helpdesk, Open a Node helpdesk request)
+  - www.cookieyes.com
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
   - opening main text: "A thematic node of the European Open Science Cloud EOSC Node | European Digital Twin Ocean Federating marine data, research environments, analytical services and computing resources for collaborative, FAIR and reproducible ocean science. Sign in with EOSC AAI Explore Resource Catalogue Explore Services Explore Research Environments This Node Landing Page is publicly accessible without login. Prote..."
@@ -328,7 +329,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - "Open the official Node entry →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
   - "Node page in EOSC Federation" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 56 outbound link(s) on the landing page
+  - 58 outbound link(s) on the landing page
   - main text length: 12097 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
@@ -351,49 +352,49 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - detected language: en (confidence 1.0)
 
 ### Data Terra
-<https://www.data-terra.org/eosc/>
+<https://www.earth-data.eu/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 19639 characters of text rendered
+  - HTTP 200 anonymously, 3482 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 38 distinct external host(s) linked from the landing page
-  - cnes.fr
-  - fr.linkedin.com
-  - intranet.data-terra.org
+  - 4 distinct external host(s) linked from the landing page
+  - data-terra.org (Data Terra)
+  - earth-data-community.github.io (Documentation, EOSC Node Data Terra Acceptable Use Policy)
+  - open-science-cloud.ec.europa.eu (EOSC EU Node)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "Accueil The EOSC Node f... The EOSC Node for the Earth system and environmental sciences (under construction) The EOSC node’s digital gateway plays a crucial role in connecting research organizations to the broader European ecosystem. It serves as a single-entry point to the European Open Science Cloud (EOSC), facilitating access to open science resources and services across Europe. The DATA TERRA..."
-  - no organisation-like names matched by pattern
+  - opening main text: "Welcome to EOSC thematic node for Earth system, biodiversity and environmental sciences A digital gateway to FAIR-ready, multi-source data and cross-domain services supported by high-performance computing facilities Explore Our Resources Learn more Powered by Discover Resource Catalogue with community-tailored data information curated by EOSC Node Data Terra Search a dataset, a service… Search Bro..."
+  - organisation-like names found: EOSC Association
+  - about page one level down: https://www.earth-data.eu/about/ (HTTP 200) opening text: "Data Terra EOSC Node helpdesk@earth-data.eu About Resource hub Service Hub Projects Use Cases Documentation About Resource hub Service Hub Projects Use Cases Documentation A thematic node within the European Open Science Cloud dedicated to Earth system, biodiv..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
-  - EOSC-referencing image asset(s): 1
-  - img: eosc node data terra environment
-  - NONE of the 13 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
-  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
-- **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
-  - 93 link(s) examined, none pointing to eosc.eu
-  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra/ but is not linked from here
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
+  - EOSC-referencing image asset(s): 2
+  - img: default-logo
+  - img: EOSCNodeDataTerra_ColourNeg.svg
+  - approved name matched from the unscoped list: "EOSC Node | Data Terra" (the page writes it "EOSC Node Data Terra") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
+  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "EOSC F" -> https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 93 outbound link(s) on the landing page
-  - main text length: 5739 characters
+  - 51 outbound link(s) on the landing page
+  - main text length: 3044 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
-- **5b** 🔴 **FAIL** — No pointer to an Acceptable Use Policy was found on the landing page. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
-  - 93 link(s) on the landing page examined, none matching an Acceptable Use Policy
-  - 2 linked page(s) read, none linking to an Acceptable Use Policy: https://www.data-terra.org/contact-acces/, https://www.data-terra.org/services/
-  - *Reviewer action:* Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
-- **5c** 🔴 **FAIL** — No pointer to a User Access Policy was found on the landing page. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
-  - 93 link(s) on the landing page examined, none matching a User Access Policy
-  - 2 linked page(s) read, none linking to a User Access Policy: https://www.data-terra.org/contact-acces/, https://www.data-terra.org/services/
-  - *Reviewer action:* Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
-- **6** 🟠 review — The contact or support pages reached from the landing page do not identify a helpdesk. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
-  - "Contact & accès" -> https://www.data-terra.org/contact-acces/
-  - "Contact & accès" -> https://www.data-terra.org/contact-acces/
-  - followed: https://www.data-terra.org/contact-acces/ -> HTTP 200
-  - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.
-- **7** 🟢 PASS — The main content is English. The page declares "fr-FR", which is a metadata inconsistency worth fixing but does not breach point 7.
-  - declared lang attribute: "fr-FR"
+- **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it is on another site, which the tool does not follow), so this is a pointer, not a verified document.
+  - "EOSC Node Data Terra Acceptable Use Policy" -> https://earth-data-community.github.io/docs-website/docs/eosc-node-data-terra/policies/user-access/
+  - *Reviewer action:* Open the link and confirm the target really is an Acceptable Use Policy, in English. No --depth setting will fetch it. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 51 link(s) on the landing page examined, none matching a User Access Policy
+  - 4 linked page(s) read, none linking to a User Access Policy: https://www.earth-data.eu/about/, https://www.earth-data.eu/resource-hub/, https://www.earth-data.eu/service-hub/, https://www.earth-data.eu/fr/about-2/
+  - an Acceptable Use Policy: "EOSC Node Data Terra Acceptable Use Policy" -> https://earth-data-community.github.io/docs-website/docs/eosc-node-data-terra/policies/user-access/
+  - an Acceptable Use Policy via https://www.earth-data.eu/about/: "EOSC Node Data Terra Acceptable Use Policy" -> https://earth-data-community.github.io/docs-website/docs/eosc-node-data-terra/policies/user-access/
+  - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
+  - "helpdesk@earth-data.eu" -> mailto:helpdesk@earth-data.eu
+  - "helpdesk@earth-data.eu" -> mailto:helpdesk@earth-data.eu
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en-GB"
   - detected language: en (confidence 1.0)
-  - *Reviewer action:* Suggest the node correct its lang attribute.
 
 ### EOSC Finland
 <https://eosc.fi/>

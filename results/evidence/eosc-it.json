@@ -2,7 +2,7 @@
   "node_id": "eosc-it",
   "node_name": "EOSC Node Italy",
   "requested_url": "https://eosc.it/",
-  "fetched_at": "2026-10-01T16:09:38+00:00",
+  "fetched_at": "2026-10-01T20:23:18+00:00",
   "final_url": "https://eosc.it/",
   "http_status": 200,
   "redirect_chain": [],
@@ -850,5 +850,5 @@
     "https://eosc.it/terms-of-use (already fetched at depth 1)",
     "https://eosc.it/terms-of-use (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 41 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 24 of 60 used"
+  "crawl_note": "depth 2: 41 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 27 of 60 used"
 }

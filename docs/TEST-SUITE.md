@@ -213,7 +213,7 @@ That command applies to the 24 September run, which is now in the git history at
 
 The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean. The step-by-step procedure for a URL change, through to new published results, is example 2 in section 11.
 
-EOSC Node Italy's `url` changed on 26 September 2026, from `https://eosc.it/` to `https://eoscnode-it.d4science.org/`, and on 1 October 2026 back to `https://eosc.it/`, which now resolves; the entry carries a comment saying so. BBMRI-ERIC's was changed to the `dev3.` address again on 1 October and set back the same day, for the same `robots.txt` reason. The published run skipped Italy, because `eosc.it` had no address record on 24 September, so it holds no evidence for Italy and no published row depends on the old address.
+EOSC Node Italy's `url` changed on 26 September 2026, from `https://eosc.it/` to `https://eoscnode-it.d4science.org/`, and on 1 October 2026 back to `https://eosc.it/`, which now resolves; the entry carries a comment saying so. BBMRI-ERIC's was changed to the `dev3.` address again on 1 October and set back the same day, for the same `robots.txt` reason. Data Terra's changed on 1 October 2026, from `https://www.data-terra.org/eosc/` to `https://www.earth-data.eu/`. The published run skipped Italy, because `eosc.it` had no address record on 24 September, so it holds no evidence for Italy and no published row depends on the old address.
 
 ### Adding a node
 
@@ -794,9 +794,34 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-18 at depth 2, 1 October 2026 (unreviewed)
+### Current run: web-21 at depth 2, 1 October 2026 (unreviewed)
 
-From `results/results.json`, run `web-18`, collected on 1 October 2026 between 16:05 and 16:10 UTC by the GitHub workflow ([run 36888865559](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36888865559), commit `46b5cad`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. Two things were done to it before publishing:
+From `results/results.json`, run `web-21`, collected on 1 October 2026 between 20:18 and 20:24 UTC by the GitHub workflow ([run 36920498532](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36920498532), commit `fc023b7`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, with Data Terra's new Node Landing Page, `https://www.earth-data.eu/`. It made 98 page requests: 13 landing pages, 58 direct links and 27 second-hop pages. Twelve landing pages returned HTTP 200 and GÉANT's HTTP 403 (the Cloudflare challenge). Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-21` reproduces it exactly, apart from the generation time.
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 63 |
+| 🔴 FAIL | 3 |
+| 🟠 MANUAL_REVIEW | 64 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+The three FAILs are point 4 for EOSC Finland, PaNOSC and Poland. Only Data Terra's row changed against `web-18`:
+
+| Node | Cells | Why |
+|---|---|---|
+| Data Terra | 4: `FAIL` to `PASS` | the new page links its own entry, `eosc.eu/building-the-eosc-federation/eosc-node-data-terra` |
+| Data Terra | 5b: `FAIL` to `PASS` | it links "EOSC Node Data Terra Acceptable Use Policy" on its documentation site (another site, so a pointer, not fetched) |
+| Data Terra | 5c: `FAIL` to review | no User Access Policy is linked, but an AUP is, and v3.2 allows one document for both; the AUP link's address ends in `/policies/user-access/` |
+| Data Terra | 6: review to `PASS` | it links `helpdesk@earth-data.eu` |
+
+The new page is in English (`en-GB`), so the French-vocabulary caveat of the old address no longer applies. At depth 2 the tool followed the page's "Français" link as an About page; it changed no verdict.
+
+**Masking.** The same names as before were masked, and CERN's screenshot again. Data Terra's new page carries one personal name, a photo credit in an image description; it was masked like the others. The privacy check found only role mailboxes.
+
+### Previous run: web-18 at depth 2, 1 October 2026
+
+Run `web-18` was collected on 1 October 2026 between 16:05 and 16:10 UTC by the GitHub workflow ([run 36888865559](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36888865559), commit `46b5cad`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. Two things were done to it before publishing:
 
 - **BBMRI-ERIC's row was collected again.** `46b5cad` had set its URL to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, whose `robots.txt` disallows the page, so all ten cells were `ERROR`. The URL was set back to the `www.` address and BBMRI-ERIC collected alone ([run 36899901060](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36899901060), commit `1418f05`, 17:31 UTC); its evidence replaced the `ERROR` row.
 - **It was scored with the fix in `1418f05`.** Italy's landing page links "Infrastructure AUP/UAP" to D4Science's policy page, and "Review resource access conditions" to a page that returns 404. The tool had followed the second for 5c and failed the point on it. Now a broken policy link fails 5b or 5c only when no other link to the policy remains, on the landing page or on a linked page; otherwise the point is judged on the others and the broken link is reported in the evidence. Three tests cover it. Re-scoring `web-16` with the fix changes nothing; re-scoring `web-18` changes only Italy's 5c, at both depths.
@@ -1216,7 +1241,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 60 PASS · 6 FAIL · 64 review");
+- the headline tally in `README.md` ("130 cells: 63 PASS · 3 FAIL · 64 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 
