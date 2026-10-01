@@ -6,7 +6,7 @@ a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
 clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
 **426 test cases, all passing in CI**. It was re-checked again on 29 September
-2026 for checklist v3.2: **450 test cases**, all passing. No node website was
+2026 for checklist v3.2: **453 test cases**, all passing. No node website was
 contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -16,7 +16,7 @@ run the tool. Section 7 of that guide is the short version of this document.
 running: the collection sequence, the evidence model, and the exact branch
 conditions behind each of the ten checklist points.
 
-> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.2*, with a pytest suite of 450 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
+> **In one line.** A Python tool that checks EOSC Node Landing Pages against *Node Landing Page Verification Checklist v3.2*, with a pytest suite of 453 hermetic test cases that never touch a node's website, and at most two bounded hops of link following.
 
 > **On "the previous edition".** This document has been revised several times while the tool was
 > being built. Earlier editions circulated as Word and PDF files outside the repository; this is the
@@ -24,7 +24,7 @@ conditions behind each of the ten checklist points.
 > kept rather than silently dropped, because a figure that was quoted in a meeting is worth being
 > able to trace.
 
-> **What changed since the 21 September edition.** The suite grew from 111 to **426 cases** (450 since checklist v3.2, below) and gained four files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (14 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking) and `tests/test_update_row.py` (22 cases, updating one node's row). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
+> **What changed since the 21 September edition.** The suite grew from 111 to **426 cases** (450 since checklist v3.2, below, and 453 since the broken-link fix of 1 October 2026) and gained four files: `tests/test_names.py` (64 cases, the approved-name matcher), `tests/test_nodes.py` (14 cases, guarding the node configuration) and `tests/test_privacy.py` (51 cases, personal-data masking) and `tests/test_update_row.py` (22 cases, updating one node's row). Four things the previous edition described as true are no longer true, and each is corrected in place below rather than quietly dropped:
 >
 > | Previous edition said | Now |
 > |---|---|
@@ -71,14 +71,14 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**361 test functions, expanding to 450 executed cases** (twenty-two tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**364 test functions, expanding to 453 executed cases** (twenty-two tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
 The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 425 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
 | File | Cases | Covers |
 |---|---|---|
 | `test_names.py` | 64 | The approved-name matcher: separator tolerance, scoping to a node, anchoring, the committed default list and its provenance |
-| `test_checks.py` | 91 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — with both item 5 rules (v3.1 and v3.2) and policy pointers on linked pages, plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
+| `test_checks.py` | 94 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — with both item 5 rules (v3.1 and v3.2) and policy pointers on linked pages, plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
 | `test_report.py` | 37 | Matrix rendering, the column legend under each item 5 rule, the dual-depth tables, Markdown escaping, table-breaking input |
 | `test_crawl.py` | 39 | Link selection, the item 5 intermediate pages, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
 | `test_cli.py` | 113 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring, and that every option has help text, shared options are described alike, and `--help` lists the node ids; that evidence from a URL other than the configured one is flagged in every report; `--node` with an alternative `--url`; the configuration listings (`--list-nodes`/`--list-nodes-ids`, `--list-nlps`, `--list-approved-names`, `--print-config`, `--show-node`) and `--update-nlp` |
@@ -86,7 +86,7 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_nodes.py` | 14 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list, and the default copy for `--restore-default-config` identical to the committed `nodes.yaml` |
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
 | `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
-| **Total** | **450** | |
+| **Total** | **453** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -112,7 +112,7 @@ Six principles run through the suite.
 - **Per-point rules with their near-misses.** For each decidable point, a passing case and the ways it can nearly pass. Point 4 has **six** tests because it is the sharpest point in the checklist: a correct node entry passes, the federation index fails, the `eosc.eu` homepage fails, no link at all fails, a lookalike domain fails, and a domain merely *ending* in `eosc.eu` fails.
 - **Nothing may silently pass.** One test asserts that points the checklist leaves to human judgement can never return PASS. Another asserts exactly one result per checklist point per node, so a point cannot quietly vanish from the matrix. A third blocks a PASS on point 3 when no approved-names list is in force — which now requires `--no-approved-names`, since a committed default list is used otherwise.
 - **Absence is not concluded from a broken collection.** If a page did not render — a cookie overlay, a JavaScript shell — then a missing link cannot be reported as absent, because that describes the tool rather than the node. A companion test stops that safeguard becoming a blanket excuse for pages that did render.
-- **Link following must not make PASS cheaper.** A whole block of tests asserts that following a link can only make a verdict better-evidenced, never more generous: a broken policy link fails, a navigation stub is not accepted as a policy document, and an About page cannot flip point 2, which asks the landing page itself to state those things.
+- **Link following must not make PASS cheaper.** A whole block of tests asserts that following a link can only make a verdict better-evidenced, never more generous: a broken policy link fails (unless another link to the policy remains), a navigation stub is not accepted as a policy document, and an About page cannot flip point 2, which asks the landing page itself to state those things.
 - **The paperwork cannot drift from the code.** Nineteen tests assert that the checklist YAML and the rules stay in step: the source document is committed and still hashes to what was transcribed, every point names the function that decides it, every function is claimed by exactly one point, a revision must arrive as a new file, and the default revision is selected by one line that the help texts follow. See section 5.
 - **Regression pins for real defects.** At least ten tests exist because the tool actually got something wrong. Each carries the reason in its docstring rather than only an assertion. Five are described in section 7.
 - **The configuration is part of the software.** Since the node list grew beyond the original nine, thirteen tests treat `nodes.yaml` as something that can be broken: a missing field, a duplicate id, a malformed URL, two nodes pointing at the same eosc.eu entry, or a node whose official name nothing in the scoped list covers all fail the suite rather than surfacing as a strange verdict later.
@@ -213,7 +213,7 @@ That command applies to the 24 September run, which is now in the git history at
 
 The new address also behaves differently. On a trial run on 25 September its `robots.txt` read `User-agent: *` / `Disallow: /`. The tool honours that, so no page was requested and all ten points were `ERROR`. Section 6 of the [run guide](GUIDE.md) explains what `ERROR` does and does not mean. The step-by-step procedure for a URL change, through to new published results, is example 2 in section 11.
 
-EOSC Node Italy's `url` changed on 26 September 2026, from `https://eosc.it/` to `https://eoscnode-it.d4science.org/`, and the entry carries a comment saying so. The published run skipped Italy, because `eosc.it` had no address record on 24 September, so it holds no evidence for Italy and no published row depends on the old address.
+EOSC Node Italy's `url` changed on 26 September 2026, from `https://eosc.it/` to `https://eoscnode-it.d4science.org/`, and on 1 October 2026 back to `https://eosc.it/`, which now resolves; the entry carries a comment saying so. BBMRI-ERIC's was changed to the `dev3.` address again on 1 October and set back the same day, for the same `robots.txt` reason. The published run skipped Italy, because `eosc.it` had no address record on 24 September, so it holds no evidence for Italy and no published row depends on the old address.
 
 ### Adding a node
 
@@ -668,7 +668,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 450 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 453 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -753,7 +753,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 450 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 453 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -794,9 +794,36 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-16 at depth 2, 30 September 2026 (unreviewed)
+### Current run: web-18 at depth 2, 1 October 2026 (unreviewed)
 
-From `results/results.json`, run `web-16`, collected on 30 September 2026 between 14:58 and 15:04 UTC by the GitHub workflow ([run 36732900487](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36732900487), commit `a83c0f1`, unit tests passing) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200 and Italy's HTTP 503. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-16` reproduces it exactly, apart from the generation time.
+From `results/results.json`, run `web-18`, collected on 1 October 2026 between 16:05 and 16:10 UTC by the GitHub workflow ([run 36888865559](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36888865559), commit `46b5cad`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. Two things were done to it before publishing:
+
+- **BBMRI-ERIC's row was collected again.** `46b5cad` had set its URL to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, whose `robots.txt` disallows the page, so all ten cells were `ERROR`. The URL was set back to the `www.` address and BBMRI-ERIC collected alone ([run 36899901060](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36899901060), commit `1418f05`, 17:31 UTC); its evidence replaced the `ERROR` row.
+- **It was scored with the fix in `1418f05`.** Italy's landing page links "Infrastructure AUP/UAP" to D4Science's policy page, and "Review resource access conditions" to a page that returns 404. The tool had followed the second for 5c and failed the point on it. Now a broken policy link fails 5b or 5c only when no other link to the policy remains, on the landing page or on a linked page; otherwise the point is judged on the others and the broken link is reported in the evidence. Three tests cover it. Re-scoring `web-16` with the fix changes nothing; re-scoring `web-18` changes only Italy's 5c, at both depths.
+
+The published evidence holds 96 page requests: 13 landing pages, 57 direct links and 26 second-hop pages. Twelve landing pages returned HTTP 200 and GÉANT's HTTP 403 (the Cloudflare challenge). Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-18` reproduces it exactly, apart from the generation time.
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 60 |
+| 🔴 FAIL | 6 |
+| 🟠 MANUAL_REVIEW | 64 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+The six FAILs are the same as in `web-16`: point 4 for Data Terra, EOSC Finland, PaNOSC and Poland, and Data Terra's 5b and 5c. Eleven cells changed against `web-16`:
+
+| Node | Cells | Why |
+|---|---|---|
+| Italy | 1, 4, 5b, 5c, 6, 7: review to `PASS` | read for the first time at `https://eosc.it/` (HTTP 200, English); it links its own `eosc.eu` entry, "Infrastructure AUP/UAP", a Terms of Use page (fetched) and a D4Science helpdesk; `web-16` got HTTP 503 from the old address |
+| GÉANT | 1, 4, 5b, 6: `PASS` to review | HTTP 403, the Cloudflare challenge, as before `web-16` |
+| EOSC DTO | 5c: review to `PASS` | its Catalogue page now links "AUP and access policy" |
+
+**Masking.** The same names as before were masked, and CERN's screenshot again. Italy's new pages carry no personal names; BBMRI-ERIC's pages changed only in layout. The privacy check found only role mailboxes.
+
+### Previous run: web-16 at depth 2, 30 September 2026
+
+Run `web-16` was collected on 30 September 2026 between 14:58 and 15:04 UTC by the GitHub workflow ([run 36732900487](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36732900487), commit `a83c0f1`, unit tests passing) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200 and Italy's HTTP 503. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-16` reproduces it exactly, apart from the generation time.
 
 | Verdict | Cells |
 |---|---|
@@ -1127,10 +1154,10 @@ uv run basic-check assess --only eosc-example --skip Italy \
 
 The report covers every node. A **Mixed freshness** banner says that only
 `eosc-example` is new and that the other rows are reused from the earlier
-capture, with its date. `--skip Italy` keeps the same scope as the published
-run. Italy's URL changed on 26 September to
-`https://eoscnode-it.d4science.org/`; drop `--skip Italy` once a trial
-collection (`collect --only eosc-it --results /tmp/trial`) shows the page loads.
+capture, with its date. The published run includes Italy, read at
+`https://eosc.it/` since 1 October 2026, so no `--skip` is needed; skip a node
+only while a trial collection (`collect --only <id> --results /tmp/trial`)
+shows its page does not load.
 
 *B — a complete new run (every node contacted once).* Use this when the
 existing evidence is old enough that a single timestamp is worth more than
@@ -1189,7 +1216,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 57 PASS · 6 FAIL · 67 review");
+- the headline tally in `README.md` ("130 cells: 60 PASS · 6 FAIL · 64 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 

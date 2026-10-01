@@ -607,7 +607,7 @@ Branches 1–5 are the same under both rules:
 | # | Condition | Verdict |
 |---|---|---|
 | 1 | Link found, **no child fetched** | `PASS`, stated as "a pointer, not a verified document", with the reason: depth 0, a PDF or other document, a cap reached, another site, or not selected at collection |
-| 2 | Link found, child returned 404/410 | `FAIL` — the policy is not accessible |
+| 2 | Link found, child returned 404/410 | `FAIL` — the policy is not accessible; but if the page has other links to the policy, pointing elsewhere, branch 1 applies to them and the evidence reports the broken one |
 | 3 | Link found, child not `ok` for another reason | `MANUAL_REVIEW` — may be a bot restriction rather than a real problem |
 | 4 | Child fetched, but `main_text` < 400 chars **or** no policy wording | `MANUAL_REVIEW` — reads like a navigation stub, not a policy |
 | 5 | Child fetched, substantial, policy wording present | `PASS` |
@@ -631,7 +631,7 @@ fetched for:
 
 | # | Condition | Verdict |
 |---|---|---|
-| 6a | A linked page read links to the policy (or is itself titled as the policy and reads like one), and that link, if fetched, is broken | `FAIL` — the policy is not accessible |
+| 6a | A linked page read links to the policy (or is itself titled as the policy and reads like one), and every such link that was fetched is broken, with no other left | `FAIL` — the policy is not accessible |
 | 6b | A linked page read links to the policy (or is itself the policy) | `PASS` — "via intermediate web pages linked by the NLP"; the evidence names the intermediate page, and the message says whether the policy page itself was fetched |
 | 7 | The landing page or a linked page read links to the **other** policy (a UAP for 5b, an AUP for 5c) | `MANUAL_REVIEW` — "AUP and UAP can be provided through the same, single document" |
 | 8 | The landing page links to a **licence** (`LICENCE_PATTERNS`: licence/license, licensing, Creative Commons, CC BY) | `MANUAL_REVIEW` — "AUP/UAP can be provided via specific product licenses in the case of datasets, archives, software" |
@@ -651,6 +651,13 @@ failing the actual requirement, which is that the policy be *accessible*. Runnin
 at `--depth 1` converts branch 1 into one of branches 2–5 for ordinary pages on
 the node's own site. It cannot do so for a PDF or a page on another site, and
 the reviewer action says so rather than suggesting a re-run that would not help.
+
+Branches 2 and 6a fail only when the broken link is the only way to the policy
+(since 1 October 2026, commit `1418f05`). EOSC Node Italy linked "Infrastructure
+AUP/UAP" to a working policy page and "Review resource access conditions" to a
+404; the tool followed the second and had failed 5c, though the policy was
+linked. A broken link next to a working one is a defect to report, not an
+absence.
 
 Branch 4's "policy wording" test is `POLICY_BODY_PATTERNS`: `must not`,
 `you may/must/shall/agree`, `permitted`, `prohibit`, `terms`, `policy`,
@@ -685,7 +692,7 @@ fetched), Data Terra's fail by branch 11 (its two services pages were read and
 link neither; they are in French, which the English vocabulary does not
 cover), and PaNOSC's stay review by branch 10 (its services site was not
 read). Run `web-15`, with the second hop no longer looking for services
-pages, kept all three, and so did `web-16`.
+pages, kept all three, and so did `web-16` and `web-18`.
 
 ---
 
@@ -1031,10 +1038,10 @@ uv run basic-check assess --only eosc-example --skip Italy \
 
 The report covers every node. A **Mixed freshness** banner says that only
 `eosc-example` is new and that the other rows are reused from the earlier
-capture, with its date. `--skip Italy` keeps the same scope as the published
-run. Italy's URL changed on 26 September to
-`https://eoscnode-it.d4science.org/`; drop `--skip Italy` once a trial
-collection (`collect --only eosc-it --results /tmp/trial`) shows the page loads.
+capture, with its date. The published run includes Italy, read at
+`https://eosc.it/` since 1 October 2026, so no `--skip` is needed; skip a node
+only while a trial collection (`collect --only <id> --results /tmp/trial`)
+shows its page does not load.
 
 *B — a complete new run (every node contacted once).* Use this when the
 existing evidence is old enough that a single timestamp is worth more than
@@ -1093,7 +1100,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 57 PASS · 6 FAIL · 67 review");
+- the headline tally in `README.md` ("130 cells: 60 PASS · 6 FAIL · 64 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

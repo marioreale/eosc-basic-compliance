@@ -17,9 +17,9 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-This edition was revised on 29 September 2026 for checklist v3.2: the test
-count (450), the tallies and the rebuild of the published report were re-measured
-offline that day, again without contacting any node.
+This edition was revised on 1 October 2026 for checklist v3.2: the test
+count (453), the tallies and the rebuild of the published report were re-measured
+offline that day, again without contacting any node from the sandbox.
 
 > **Checklist v3.2 since 29 September 2026.** The default reference checklist
 > is now v3.2 of 28 September 2026 (`checklist/v3.2.yaml`). Only item 5 changed:
@@ -41,15 +41,17 @@ offline that day, again without contacting any node.
 > differences point by point, and section 5 of the
 > [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
-> **The published run changed again on 30 September 2026.** `results/` now
-> holds run `web-16`, collected by the GitHub workflow at `--depth 2` on
-> 30 September 2026 between 14:58 and 15:04 UTC from all thirteen nodes
-> ([run 36732900487](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36732900487), commit `a83c0f1`), under the re-issued v3.2: 57 PASS, 6 FAIL and 67
-> MANUAL_REVIEW at both depths, in 109 page requests. GÉANT's page was served
-> for the first time since 24 September; Italy's returned HTTP 503, also when
-> re-collected alone ([run 36733978874](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36733978874)), so its ten cells are review. Before it came
-> `web-15` ([run 36599759210](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36599759210), 29 September, 53 / 9 / 68 in 95 requests), which differed from
-> `web-14` only in EGI's point 4. `web-14` was the first run that reads the policies and
+> **The published run changed again on 1 October 2026.** `results/` now holds
+> run `web-18`, collected by the GitHub workflow at `--depth 2` on 1 October
+> 2026 from all thirteen nodes ([run 36888865559](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36888865559), commit `46b5cad`), under the re-issued
+> v3.2: 60 PASS, 6 FAIL and 64 MANUAL_REVIEW at both depths. Italy was read at
+> its new address, `https://eosc.it/`. BBMRI-ERIC's row comes from a separate
+> single-node run from the `www.` address ([run 36899901060](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36899901060)), because the `dev3.` address
+> tried first is disallowed by its `robots.txt`. The run was scored with the 5b
+> and 5c fix of commit `1418f05` (one broken policy link no longer fails the
+> point when other links to the policy remain). Before it came `web-16`
+> ([run 36732900487](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36732900487), 30 September, 57 / 6 / 67), in which GÉANT's page was served and
+> Italy's returned HTTP 503. `web-14` was the first run that reads the policies and
 > services pages linked from the landing pages. CERN's 5b and 5c pass through
 > its Policies page; Data Terra's fail after its services pages were read (a
 > French-named policy would be missed, so check it by hand); PaNOSC's are review.
@@ -166,13 +168,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-450 tests still pass, while `collect` fails with Playwright's
+453 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 450 passed
+uv run pytest -q                  # expect: 453 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -211,20 +213,22 @@ from the live index at
 [eosc.eu/building-the-eosc-federation/](https://eosc.eu/building-the-eosc-federation/).
 If you add a node, look its slug up there rather than guessing it from the name.
 
-**BBMRI-ERIC's URL was changed and then set back.** On 25 September 2026 it
-was changed to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`; on 26
+**BBMRI-ERIC's URL was changed and then set back, twice.** On 25 September 2026
+it was changed to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`; on 26
 September it was set back to the `www.` address shown above, because the `dev3.`
-host's `robots.txt` excludes every path. `nodes.yaml` carries a comment saying
-so. The published run in `results/` (26 September) was collected from this
-`www.` address, as was the reviewed run of 24 September, so the configuration
-and the published evidence agree.
+host's `robots.txt` excludes every path. On 1 October it was changed to the
+`dev3.` address again, and set back the same day for the same reason (run
+`web-18` found the page disallowed). `nodes.yaml` carries a comment saying so.
+The published run in `results/` takes BBMRI-ERIC's row from a single-node run
+from this `www.` address, so the configuration and the published evidence
+agree.
 
-**EOSC Node Italy's URL changed on 26 September 2026**, from `https://eosc.it/`
-to `https://eoscnode-it.d4science.org/`, and `nodes.yaml` carries a comment
-saying so. `eosc.it` had no address record on 24 September, so that run skipped
-Italy; nothing published depends on the old address. Italy was assessed for the
-first time in run `web-4` on 26 September, from the new address, and again in
-runs `web-5` to `web-16` (the published run).
+**EOSC Node Italy's URL changed twice.** On 26 September 2026 it changed from
+`https://eosc.it/` to `https://eoscnode-it.d4science.org/`, because `eosc.it`
+had no address record on 24 September; Italy was assessed from that address in
+runs `web-4` to `web-16`. On 1 October it changed back to `https://eosc.it/`,
+which now resolves, and `nodes.yaml` carries a comment saying so. The published
+run, `web-18`, was collected from `https://eosc.it/`.
 
 ### Changing a node's URL
 
@@ -285,7 +289,7 @@ from the committed `nodes.yaml` and scored under the default checklist, so no
 other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-16
+uv run basic-check assess --run web-18
 ```
 
 The evidence records the depth it was collected at, so `assess` renders both
@@ -302,7 +306,7 @@ Run `web-10`, collected before CERN's URL changed, needs its own node list
 (`git show 8126aee:nodes.yaml`) passed with `--nodes`.
 
 Verified on 29 September 2026: this reproduces the committed `results/`
-exactly, apart from the generation time, with 57 PASS, 6 FAIL and 67
+exactly, apart from the generation time, with 60 PASS, 6 FAIL and 64
 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
@@ -959,7 +963,7 @@ tables is the extra hop and not the page changing in between.
 is a finding, not a disappointment: the points still marked review turn on a
 judgement ("clearly state") or quantify over things no crawl enumerates ("all
 research resources offered by the Node"), and no amount of fetching settles
-either kind. **Depth 2, 28 September 2026 (run `web-13`, checklist v3.2):** 19 second-hop pages on top of the 31 depth-1 links, and again **zero** verdicts changed: 49 PASS, 14 FAIL and 67 review at both depths under the first copy of v3.2, and 50 PASS, 8 FAIL and 72 review at both depths when re-scored against the re-issued one. **Depth 2, run `web-14`:** 60 second-hop pages on top of 63 direct links, and again **zero** verdicts changed (52 PASS, 10 FAIL, 68 review at both depths). That run also looked for services and policies pages at the second hop, which used the whole fetch budget before Italy and Slovakia were reached; since then those pages are looked for on the landing page only, as "pages linked by the NLP", and the second hop follows policy links alone. **Depth 2, run `web-15`, with that fix:** 26 second-hop pages on top of 56 direct links, 95 requests in all, and again **zero** verdicts changed (53 PASS, 9 FAIL, 68 review at both depths). **Run `web-16`:** 34 second-hop pages, 109 requests, and again **zero** verdicts changed (57 / 6 / 67 at both depths). The second hop reached governance, secretariat and news pages, which is also where it met a personal name that depth 1 had never collected (section on masking). Run it yourself before assuming the same holds for
+either kind. **Depth 2, 28 September 2026 (run `web-13`, checklist v3.2):** 19 second-hop pages on top of the 31 depth-1 links, and again **zero** verdicts changed: 49 PASS, 14 FAIL and 67 review at both depths under the first copy of v3.2, and 50 PASS, 8 FAIL and 72 review at both depths when re-scored against the re-issued one. **Depth 2, run `web-14`:** 60 second-hop pages on top of 63 direct links, and again **zero** verdicts changed (52 PASS, 10 FAIL, 68 review at both depths). That run also looked for services and policies pages at the second hop, which used the whole fetch budget before Italy and Slovakia were reached; since then those pages are looked for on the landing page only, as "pages linked by the NLP", and the second hop follows policy links alone. **Depth 2, run `web-15`, with that fix:** 26 second-hop pages on top of 56 direct links, 95 requests in all, and again **zero** verdicts changed (53 PASS, 9 FAIL, 68 review at both depths). **Run `web-16`:** 34 second-hop pages, 109 requests, and again **zero** verdicts changed (57 / 6 / 67 at both depths). **Run `web-18`:** 26 second-hop pages, 96 requests in the published evidence, and again **zero** verdicts changed (60 / 6 / 64 at both depths). The second hop reached governance, secretariat and news pages, which is also where it met a personal name that depth 1 had never collected (section on masking). Run it yourself before assuming the same holds for
 another federation or a later date.
 
 ### Be considerate with other people's servers
@@ -1081,9 +1085,9 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-16` (30 September 2026) was collected
+**The published run is masked.** Run `web-18` (1 October 2026) was collected
 with masking in place, and a search of all its evidence and reports found no
-personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). `web-14`, which also reads services and policies pages, added many more, and `web-15` and `web-16` carry the same ones: about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO, Italy) and PaNOSC's pages. Two of those citation lists were already in the evidence published as `web-13` and were missed then; they remain in the git history. `web-16`, the first run with GÉANT's page served since 24 September, reached its executive team, governance and membership pages: about 120 names of officers, board members and General Assembly representatives, some cut short at the end of a link label ("Heidi Fraser-Kr…"). They were taken from the fixed patterns of those pages ("Representative:", "Substitute:", "… Chief … Officer", "… Member") and masked everywhere, truncated forms included. A deeper run reads more pages, and so needs this check more; look for citations ("Surname, I." lists before a year) as well as for people named in prose. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
+personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). `web-14`, which also reads services and policies pages, added many more, and `web-15`, `web-16` and `web-18` carry the same ones: about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO, Italy) and PaNOSC's pages. Two of those citation lists were already in the evidence published as `web-13` and were missed then; they remain in the git history. `web-16`, the first run with GÉANT's page served since 24 September, reached its executive team, governance and membership pages: about 120 names of officers, board members and General Assembly representatives, some cut short at the end of a link label ("Heidi Fraser-Kr…"). They were taken from the fixed patterns of those pages ("Representative:", "Substitute:", "… Chief … Officer", "… Member") and masked everywhere, truncated forms included. A deeper run reads more pages, and so needs this check more; look for citations ("Surname, I." lists before a year) as well as for people named in prose. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
 offline. All 120 verdicts and the 44 / 6 / 70 tally were unchanged. A few character counts in the report dropped
 slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to
@@ -1117,7 +1121,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 450 tests, offline, a few seconds
+uv run pytest -q                    # 453 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth
@@ -1367,10 +1371,10 @@ uv run basic-check assess --only eosc-example --skip Italy \
 
 The report covers every node. A **Mixed freshness** banner says that only
 `eosc-example` is new and that the other rows are reused from the earlier
-capture, with its date. `--skip Italy` keeps the same scope as the published
-run. Italy's URL changed on 26 September to
-`https://eoscnode-it.d4science.org/`; drop `--skip Italy` once a trial
-collection (`collect --only eosc-it --results /tmp/trial`) shows the page loads.
+capture, with its date. The published run includes Italy, read at
+`https://eosc.it/` since 1 October 2026, so no `--skip` is needed; skip a node
+only while a trial collection (`collect --only <id> --results /tmp/trial`)
+shows its page does not load.
 
 *B — a complete new run (every node contacted once).* Use this when the
 existing evidence is old enough that a single timestamp is worth more than
@@ -1429,7 +1433,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 57 PASS · 6 FAIL · 67 review");
+- the headline tally in `README.md` ("130 cells: 60 PASS · 6 FAIL · 64 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

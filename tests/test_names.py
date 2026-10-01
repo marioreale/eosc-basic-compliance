@@ -388,8 +388,10 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     matched on 24 September), but from 26 to 29 September it answered with the
     Cloudflare challenge, so there was no body to match; on 21 September only
     BBMRI-ERIC and EUDAT matched, for the same reason and because Czechia and
-    Slovakia were not collected. From web-16 (30 September 2026) GÉANT's page
-    is served again and matches as the fifth.
+    Slovakia were not collected. In web-16 (30 September 2026) GÉANT's page was
+    served and matched as the fifth; in web-18 (1 October 2026) it is behind
+    the challenge again, and Italy's new page at https://eosc.it/ matches
+    instead, with the official separator ("EOSC Node | Italy").
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -400,7 +402,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "geant"}
+    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it"}
 
 
 # --- what the page calls itself, when nothing matched ------------------------

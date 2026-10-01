@@ -2,7 +2,7 @@
   "node_id": "cern",
   "node_name": "CERN",
   "requested_url": "https://eosc.cern/",
-  "fetched_at": "2026-09-30T14:59:03+00:00",
+  "fetched_at": "2026-10-01T16:05:34+00:00",
   "final_url": "https://eosc.cern/",
   "http_status": 200,
   "redirect_chain": [],
@@ -2174,5 +2174,5 @@
     "https://eosc.cern/policies/uap (already fetched at depth 1)",
     "https://eosc.cern/policies/uap (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 39 link(s) on the landing page, 5 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 6 of 60 used"
+  "crawl_note": "depth 2: 39 link(s) on the landing page, 5 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 4 of 60 used"
 }
