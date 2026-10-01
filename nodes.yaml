@@ -17,11 +17,10 @@
 nodes:
   - id: bbmri-eric
     name: BBMRI-ERIC
-    # Changed on 1 October 2026 from https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
-    # (basic-check --update-nlp), the address used from 26 September to
-    # 30 September. dev3 was also used on 25-26 September, when its robots.txt
-    # disallowed every path.
-    url: https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
+    # On 1 October 2026 changed to https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
+    # and set back the same day: that host's robots.txt disallowed the page
+    # (run web-18), as it did when dev3 was used on 25-26 September.
+    url: https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
   - id: cern
     name: CERN

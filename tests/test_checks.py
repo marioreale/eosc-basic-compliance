@@ -906,3 +906,49 @@ def test_policy_hint_for_a_pdf_says_no_depth_will_fetch_it():
         assert r.verdict == checks.PASS
         assert "PDF" in r.message and "PDF" in r.reviewer_action
         assert "--depth 1" not in r.reviewer_action
+
+
+def test_a_broken_policy_link_does_not_fail_when_another_link_to_the_policy_remains():
+    """EOSC Node Italy, 1 October 2026 (web-18): the page linked "Infrastructure
+    AUP/UAP" to a working policy page and "Review resource access conditions"
+    to a 404. The tool followed the second for 5c and failed it, though the
+    policy was linked. One broken link is a defect to report, not an absence."""
+    dead = ChildPage(url="https://node.example/access-conditions",
+                     final_url="https://node.example/access-conditions",
+                     selected_for=["5c"], depth=1, http_status=404,
+                     link_text="Review resource access conditions")
+    page = realistic([
+        Link("https://policies.example/access-and-acceptable-use", "Infrastructure AUP/UAP"),
+        Link("https://node.example/access-conditions", "Review resource access conditions"),
+    ], children=[dead], crawl_depth=1)
+    r = checks.check_5c(page)
+    assert r.verdict == checks.PASS, r
+    assert "broken" in r.message and "not a verified document" in r.message
+    assert any(e.startswith("broken:") and "HTTP 404" in e for e in r.evidence)
+    assert any("access-and-acceptable-use" in e for e in r.evidence)
+    assert "Fix or repoint the broken link" in r.reviewer_action
+
+
+def test_a_broken_policy_link_still_fails_when_every_link_to_the_policy_is_that_one():
+    dead = ChildPage(url="https://node.example/uap/", final_url="https://node.example/uap/",
+                     selected_for=["5c"], depth=1, http_status=404, link_text="User Access Policy")
+    page = realistic([
+        Link("https://node.example/uap", "User Access Policy"),
+        Link("https://node.example/uap/#top", "UAP"),
+    ], children=[dead], crawl_depth=1)
+    r = checks.check_5c(page)
+    assert r.verdict == checks.FAIL and "broken" in r.message
+
+
+def test_on_a_linked_page_a_broken_pointer_is_skipped_for_a_working_one():
+    services = _linked("https://node.example/services", [
+        Link("https://node.example/aup-old", "Acceptable Use Policy"),
+        Link("https://node.example/aup", "Acceptable Use Policy"),
+    ])
+    dead = ChildPage(url="https://node.example/aup-old", final_url="https://node.example/aup-old",
+                     selected_for=["5b"], depth=2, http_status=404)
+    page = realistic([Link("https://node.example/services", "Services")],
+                     children=[services, dead], crawl_depth=2)
+    r = checks.check_5b(page)
+    assert r.verdict == checks.PASS, r
+    assert "a page it links to" in r.message

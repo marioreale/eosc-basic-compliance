@@ -773,6 +773,12 @@ BOT_WALL_PATTERNS = [
 ]
 
 
+def _same_url_key(url: str) -> str:
+    """A URL without fragment, trailing slash or case in scheme and host, for comparing links."""
+    parts = urlparse((url or "").strip())
+    return f"{parts.scheme.lower()}://{parts.netloc.lower()}{parts.path.rstrip('/')}" + (f"?{parts.query}" if parts.query else "")
+
+
 def _verify_child(ev: PageEvidence, point: str, patterns: list[str]):
     """Return the fetched child page that was followed for this point, or None."""
     for child in ev.children_for(point):
@@ -872,6 +878,25 @@ def _policy_check(
             )
 
         if child.http_status in DEAD_STATUSES:
+            # One broken link is not the absence of the policy when the page
+            # also links it elsewhere: FAIL only when no other matching link
+            # remains (EOSC Node Italy, 1 October 2026, linked "AUP/UAP" to a
+            # working page and "Review resource access conditions" to a 404).
+            broken = {_same_url_key(child.url), _same_url_key(child.final_url or child.url)}
+            others = [lk for lk in links if _same_url_key(lk.href) not in broken]
+            if others:
+                why, action = _why_not_fetched(ev, others, what)
+                return Result(
+                    point,
+                    title,
+                    PASS,
+                    f"The landing page links to what appears to be {what}. One such link is broken "
+                    f"(HTTP {child.http_status}), but others point elsewhere. Their target was not "
+                    f"fetched ({why}), so this is a pointer, not a verified document.",
+                    [_fmt(link) for link in others[:3]]
+                    + [f"broken: \"{child.link_text.strip() or '(no label)'}\" -> {child.url} -> HTTP {child.http_status}"],
+                    reviewer_action="Fix or repoint the broken link. " + action + (_CATALOGUE_HALF if on_nlp else ""),
+                )
             return Result(
                 point,
                 title,
@@ -951,7 +976,13 @@ def _policy_check(
     read = [c for c in ev.children if c.ok]
     via = _linked_page_hits(read, patterns)
     if via:
-        page, link = via[0]
+        # Judge the first pointer that is not known to be broken; FAIL only when
+        # every pointer found on the linked pages is broken.
+        def _dead(lk):
+            t = _fetched(ev, lk.href)
+            return t is not None and t.http_status in DEAD_STATUSES
+        alive = [(pg, lk) for pg, lk in _linked_page_hits(read, patterns, every_link=True) if not _dead(lk)]
+        page, link = alive[0] if alive else via[0]
         target = _fetched(ev, link.href)
         if target is not None and target.http_status in DEAD_STATUSES:
             return Result(
@@ -1063,8 +1094,11 @@ def _policy_check(
     )
 
 
-def _linked_page_hits(pages: list, patterns: list[str]) -> list:
+def _linked_page_hits(pages: list, patterns: list[str], every_link: bool = False) -> list:
     """(page, link) pairs: links on already-read linked pages matching `patterns`.
+
+    The first matching link of each page by default; with `every_link`, all of
+    them, so that a broken pointer can be passed over for a working one.
 
     A linked page that is itself the policy (its title names it) counts as a
     hit too, represented by a link to itself.
@@ -1082,7 +1116,8 @@ def _linked_page_hits(pages: list, patterns: list[str]) -> list:
                 continue
             if any(re.search(p, link_haystack(link.text, link.href)) for p in patterns):
                 out.append((page, link))
-                break
+                if not every_link:
+                    break
     return out
 
 
