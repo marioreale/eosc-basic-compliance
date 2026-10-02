@@ -2,7 +2,7 @@
   "node_id": "eosc-it",
   "node_name": "EOSC Node Italy",
   "requested_url": "https://eosc.it/",
-  "fetched_at": "2026-10-02T15:48:27+00:00",
+  "fetched_at": "2026-10-02T16:24:15+00:00",
   "final_url": "https://eosc.it/",
   "http_status": 200,
   "redirect_chain": [],
@@ -221,7 +221,7 @@
   ],
   "images": [
     {
-      "src": "https://eosc.it/image/layout_set_logo?img_id=498203629&t=1790951749388",
+      "src": "https://eosc.it/image/layout_set_logo?img_id=498203629&t=1790958070167",
       "alt": "EOSC Node | Italy",
       "aria_label": "",
       "title": "",
@@ -229,7 +229,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc.it/image/layout_icon?img_id=559203608&t=1790951749581",
+      "src": "https://eosc.it/image/layout_icon?img_id=559203608&t=1790958070258",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -237,7 +237,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc.it/image/layout_icon?img_id=559202587&t=1790951749583",
+      "src": "https://eosc.it/image/layout_icon?img_id=559202587&t=1790958070258",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -850,5 +850,5 @@
     "https://eosc.it/terms-of-use (already fetched at depth 1)",
     "https://eosc.it/terms-of-use (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 41 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 37 of 60 used"
+  "crawl_note": "depth 2: 41 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 29 of 60 used"
 }

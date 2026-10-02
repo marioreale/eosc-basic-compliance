@@ -393,8 +393,9 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     the challenge again, and Italy's new page at https://eosc.it/ matches
     instead, with the official separator ("EOSC Node | Italy"). In web-21
     (1 October 2026) Data Terra's new page, https://www.earth-data.eu/, matches
-    too ("EOSC Node Data Terra"). In web-22 (2 October 2026) GÉANT's page is
-    served again and matches as the seventh.
+    too ("EOSC Node Data Terra"). In web-22 (2 October 2026) GÉANT's page was
+    served and matched; in web-23 it was not, and Poland's page now writes
+    "EOSC Node Poland", the seventh match.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -405,7 +406,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "geant"}
+    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-pl"}
 
 
 # --- what the page calls itself, when nothing matched ------------------------

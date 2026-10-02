@@ -37,16 +37,15 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-22`, collected at `--depth 2`, and it has
-> not been reviewed yet.** It was collected on 2 October 2026 between 15:42 and
-> 15:49 UTC by the GitHub workflow ([run 37028804263](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37028804263), commit `aa2f7a8`), from all thirteen
+> **The published report is run `web-23`, collected at `--depth 2`, and it has
+> not been reviewed yet.** It was collected on 2 October 2026 between 16:19 and
+> 16:25 UTC by the GitHub workflow ([run 37033017657](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37033017657), commit `142e002`), from all thirteen
 > nodes, under the **re-issued checklist v3.2**. The report shows both depths,
-> and they agree. Against `web-21` ([run 36920498532](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36920498532), 1 October) seven cells changed.
-> **GÉANT's page was served** (HTTP 200, no Cloudflare challenge), for the
-> second time after `web-16`, so points 1, 4, 5b and 6 pass. **PaNOSC** now
-> links a node user-policies page and a helpdesk, so 5c and 6 pass. **EUDAT**'s
-> redesigned landing page no longer links its helpdesk, so point 6 moved from
-> PASS to review.
+> and they agree. Against `web-22` ([run 37028804263](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37028804263), 2 October, 68 / 3 / 59) six cells
+> changed. **PaNOSC** and **Poland** now link their own `eosc.eu` entries, so
+> point 4 passes for both, and EOSC Finland is the only FAIL left. **GÉANT**
+> got the Cloudflare challenge again (`HTTP 403`), so points 1, 4, 5b and 6
+> went back to review: the tool does not turn bot protection into a verdict.
 > Before `web-14`, `web-13-rescored` (the
 > evidence of `web-13` scored offline against the re-issued v3.2) and `web-13`
 > itself ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)), scored under the
@@ -70,14 +69,14 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > Data Terra fails both after its services pages were read; PaNOSC is review.
 
 All thirteen configured nodes were fetched on 2 October 2026 at `--depth 2`
-(118 page requests: 13 landing pages, 68 direct links, 37 second-hop pages) and
-assessed against the official unscoped names list. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, about 120 names on GÉANT's executive team, governance and membership pages (including names cut short in link labels), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
+(102 page requests: 13 landing pages, 60 direct links, 29 second-hop pages) and
+assessed against the official unscoped names list. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, about 120 names on GÉANT's executive team, governance and membership pages in `web-16` and `web-22` (including names cut short in link labels; GÉANT's page was not served in `web-23`), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 68 PASS · 🔴 3 FAIL · 🟠 59 review · 0 ERROR.
+130 cells: 🟢 66 PASS · 🔴 1 FAIL · 🟠 63 review · 0 ERROR.
 
 - **Item 5 under v3.2.** CERN links no policy from its landing page, but its
   "Policies" page links an Acceptable Use Policy and a User Access Policy, and
@@ -100,10 +99,11 @@ evidence behind every verdict, is in the report linked above:
   since `web-18`: its Catalogue page links "AUP and access policy". Italy
   passes both: it links "Infrastructure AUP/UAP" to D4Science's policy page and
   a Terms of Use page, which was read; a third link, "Review resource access
-  conditions", returns 404, and the evidence reports it. EOSC Finland, EUDAT,
-  Poland and GÉANT (its "GÉANT Node Acceptable Use Policy" page, fetched) pass
-  5b only; 5c is review, because v3.2 allows the AUP and the UAP to be one
-  document. A PASS covers only the
+  conditions", returns 404, and the evidence reports it. EOSC Finland, EUDAT and
+  Poland pass 5b only; 5c is review, because v3.2 allows the AUP and the UAP to
+  be one document. GÉANT, when its page is served (`web-22`), links a "GÉANT
+  Node Acceptable Use Policy" page; in `web-23` it was not served. A PASS covers
+  only the
   NLP half: no node's Catalogue metadata was read.
 - **CERN** was assessed at its new Node Landing Page, `https://eosc.cern/`, for
   the first time: 6 PASS and 4 review. Points 1 and 4 moved from review
@@ -112,13 +112,13 @@ evidence behind every verdict, is in the report linked above:
   before. 5b and 5c pass through its Policies page (see above). Point 3 is review: the logo
   reads "EOSC Node | CERN", but the name is not in the page text. The previous
   URL was an INDIGO IAM sign-in form.
-- **EOSC Node Poland**, first assessed in `web-10`, has 4 PASS, 1 FAIL and 5
-  review. The page is public (point 1), in English (point 7), links to its
-  Terms of use (5b) and to `support@eosc.pl` (6). Point 4 fails because its only
-  `eosc.eu` link is the homepage, not its own entry
-  `https://eosc.eu/building-the-eosc-federation/eosc-node-poland/`. Point 3 is
-  review: the header logo reads "EOSC Node | Poland", but the name is not in
-  the page text, so a person has to confirm it.
+- **EOSC Node Poland**, first assessed in `web-10`, has 5 PASS and 5 review.
+  The page is public (point 1), in English (point 7), links to its Terms of use
+  (5b) and to `support@eosc.pl` (6), and, since `web-23`, to its own entry
+  `https://eosc.eu/building-the-eosc-federation/eosc-node-poland/` (point 4,
+  which failed before because its only `eosc.eu` link was the homepage). Point 3
+  is review: the page now writes "EOSC Node Poland" in its text, which matches
+  the approved list, but whether the logo is clearly shown is a judgement.
 
 Compared with the reviewed run of 24 September 2026 (twelve nodes, 44 / 6 / 70),
 the runs of 26 September found:
@@ -138,21 +138,19 @@ the runs of 26 September found:
 
 No other verdict changed.
 
-**The most repeated finding is checklist point 4.** Every node has a
+**The most repeated finding has been checklist point 4.** Every node has a
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
-read from the live index — but three of the thirteen landing pages do not link
-to their own:
-
-- EOSC Finland links to nothing on `eosc.eu` at all;
-- PaNOSC links only to the EOSC Federation User Forum (`user-forum.eosc.eu`),
-  and Poland only to the `eosc.eu` homepage; the checklist explicitly excludes
-  the homepage.
+read from the live index. In `web-23` only one of the twelve landing pages read
+does not link to its own: **EOSC Finland**, which links to nothing on `eosc.eu`
+at all. PaNOSC (which linked only the federation index, then only the User
+Forum) and Poland (which linked only the `eosc.eu` homepage) fixed theirs on
+2 October 2026; both now link their own entries.
 
 BBMRI-ERIC, CERN, Czechia (since `web-16`), Data Terra (since `web-21`, at
-`earth-data.eu`), EOSC DTO, EGI (since `web-15`), EUDAT, GÉANT (whenever its
-page is served), Italy (since `web-18`, at `eosc.it`) and Slovakia link
-correctly. Each failure names the exact URL that is missing, so the fix is a
-one-line edit.
+`earth-data.eu`), EOSC DTO, EGI (since `web-15`), EUDAT, Italy (since `web-18`,
+at `eosc.it`), PaNOSC and Poland (since `web-23`) and Slovakia link correctly;
+GÉANT does too whenever its page is served (`web-16`, `web-22`). The failure
+names the exact URL that is missing, so the fix is a one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and
 excludes two specific near-misses, so it can be decided mechanically. Most of the

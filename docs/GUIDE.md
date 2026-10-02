@@ -41,15 +41,15 @@ offline that day, again without contacting any node from the sandbox.
 > differences point by point, and section 5 of the
 > [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
-> **The published run changed again on 2 October 2026.** `results/` now holds
-> run `web-22`, collected by the GitHub workflow at `--depth 2` on 2 October
-> 2026 between 15:42 and 15:49 UTC from all thirteen nodes ([run 37028804263](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37028804263), commit
-> `aa2f7a8`), under the re-issued v3.2: 68 PASS, 3 FAIL and 59 MANUAL_REVIEW at
-> both depths, in 118 page requests. GÉANT's page was served (the second time,
-> after `web-16`), PaNOSC links a user-policies page and a helpdesk, and EUDAT's
-> redesigned page no longer links its helpdesk. Before it came `web-21`
-> ([run 36920498532](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36920498532), 1 October, 63 / 3 / 64), which first read Data Terra at
-> `https://www.earth-data.eu/`. `web-14` was the first run that reads the policies and
+> **The published run changed again on 2 October 2026, later in the day.**
+> `results/` now holds run `web-23`, collected by the GitHub workflow at
+> `--depth 2` on 2 October 2026 between 16:19 and 16:25 UTC from all thirteen
+> nodes ([run 37033017657](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37033017657), commit `142e002`), under the re-issued v3.2: 66 PASS, 1 FAIL
+> and 63 MANUAL_REVIEW at both depths, in 102 page requests. PaNOSC and Poland
+> now link their own `eosc.eu` entries (point 4 passes), so EOSC Finland's
+> point 4 is the only FAIL; GÉANT got the Cloudflare challenge again. Before it
+> came `web-22` ([run 37028804263](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37028804263), 2 October, 68 / 3 / 59), in which GÉANT's page was
+> served. `web-14` was the first run that reads the policies and
 > services pages linked from the landing pages. CERN's 5b and 5c pass through
 > its Policies page; Data Terra's fail after its services pages were read (a
 > French-named policy would be missed, so check it by hand); PaNOSC's are review.
@@ -226,12 +226,12 @@ agree.
 had no address record on 24 September; Italy was assessed from that address in
 runs `web-4` to `web-16`. On 1 October it changed back to `https://eosc.it/`,
 which now resolves, and `nodes.yaml` carries a comment saying so. Runs `web-18`,
-`web-21` and `web-22` (the published run) were collected from `https://eosc.it/`.
+`web-21`, `web-22` and `web-23` (the published run) were collected from `https://eosc.it/`.
 
 **Data Terra's URL changed on 1 October 2026**, from
 `https://www.data-terra.org/eosc/` to `https://www.earth-data.eu/`, and
 `nodes.yaml` carries a comment saying so. Runs up to `web-18` read the old
-address; runs `web-21` and `web-22` (the published run) read the new one.
+address; runs `web-21`, `web-22` and `web-23` (the published run) read the new one.
 
 ### Changing a node's URL
 
@@ -292,7 +292,7 @@ from the committed `nodes.yaml` and scored under the default checklist, so no
 other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-22
+uv run basic-check assess --run web-23
 ```
 
 The evidence records the depth it was collected at, so `assess` renders both
@@ -309,7 +309,7 @@ Run `web-10`, collected before CERN's URL changed, needs its own node list
 (`git show 8126aee:nodes.yaml`) passed with `--nodes`.
 
 Verified on 29 September 2026: this reproduces the committed `results/`
-exactly, apart from the generation time, with 68 PASS, 3 FAIL and 59
+exactly, apart from the generation time, with 66 PASS, 1 FAIL and 63
 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
@@ -544,10 +544,11 @@ literally:
 | CERN, EOSC Finland, EGI, Italy | no match, and the phrase `EOSC Node` does not occur in the body text |
 | GÉANT | not looked for: the page answered HTTP 403 with the Cloudflare challenge |
 
-In the published run, `web-22` (2 October 2026), seven nodes match: the same
+In the published run, `web-23` (2 October 2026), seven nodes match: the same
 four, Italy at its new address (`EOSC Node | Italy`, the list's own separator),
-Data Terra at its new address (`EOSC Node Data Terra`), and GÉANT, whose page
-was served (`EOSC Node GÉANT`), as in `web-16`.
+Data Terra at its new address (`EOSC Node Data Terra`), and Poland, whose page
+now writes `EOSC Node Poland` in its text. GÉANT matched (`EOSC Node GÉANT`)
+in `web-16` and `web-22`, when its page was served; in `web-23` it was not.
 
 CERN's new page shows "EOSC Node | CERN" only in its logo image, which is not
 text; its previous URL, a sign-in endpoint, had almost nothing to match against. Italy's page shows "EOSC Node | Italy" in its
@@ -971,7 +972,7 @@ tables is the extra hop and not the page changing in between.
 is a finding, not a disappointment: the points still marked review turn on a
 judgement ("clearly state") or quantify over things no crawl enumerates ("all
 research resources offered by the Node"), and no amount of fetching settles
-either kind. **Depth 2, 28 September 2026 (run `web-13`, checklist v3.2):** 19 second-hop pages on top of the 31 depth-1 links, and again **zero** verdicts changed: 49 PASS, 14 FAIL and 67 review at both depths under the first copy of v3.2, and 50 PASS, 8 FAIL and 72 review at both depths when re-scored against the re-issued one. **Depth 2, run `web-14`:** 60 second-hop pages on top of 63 direct links, and again **zero** verdicts changed (52 PASS, 10 FAIL, 68 review at both depths). That run also looked for services and policies pages at the second hop, which used the whole fetch budget before Italy and Slovakia were reached; since then those pages are looked for on the landing page only, as "pages linked by the NLP", and the second hop follows policy links alone. **Depth 2, run `web-15`, with that fix:** 26 second-hop pages on top of 56 direct links, 95 requests in all, and again **zero** verdicts changed (53 PASS, 9 FAIL, 68 review at both depths). **Run `web-16`:** 34 second-hop pages, 109 requests, and again **zero** verdicts changed (57 / 6 / 67 at both depths). **Run `web-18`:** 26 second-hop pages, 96 requests in the published evidence, and again **zero** verdicts changed (60 / 6 / 64 at both depths). **Run `web-21`:** 27 second-hop pages, 98 requests, and again **zero** verdicts changed (63 / 3 / 64 at both depths). **Run `web-22`:** 37 second-hop pages, 118 requests, and again **zero** verdicts changed (68 / 3 / 59 at both depths). The second hop reached governance, secretariat and news pages, which is also where it met a personal name that depth 1 had never collected (section on masking). Run it yourself before assuming the same holds for
+either kind. **Depth 2, 28 September 2026 (run `web-13`, checklist v3.2):** 19 second-hop pages on top of the 31 depth-1 links, and again **zero** verdicts changed: 49 PASS, 14 FAIL and 67 review at both depths under the first copy of v3.2, and 50 PASS, 8 FAIL and 72 review at both depths when re-scored against the re-issued one. **Depth 2, run `web-14`:** 60 second-hop pages on top of 63 direct links, and again **zero** verdicts changed (52 PASS, 10 FAIL, 68 review at both depths). That run also looked for services and policies pages at the second hop, which used the whole fetch budget before Italy and Slovakia were reached; since then those pages are looked for on the landing page only, as "pages linked by the NLP", and the second hop follows policy links alone. **Depth 2, run `web-15`, with that fix:** 26 second-hop pages on top of 56 direct links, 95 requests in all, and again **zero** verdicts changed (53 PASS, 9 FAIL, 68 review at both depths). **Run `web-16`:** 34 second-hop pages, 109 requests, and again **zero** verdicts changed (57 / 6 / 67 at both depths). **Run `web-18`:** 26 second-hop pages, 96 requests in the published evidence, and again **zero** verdicts changed (60 / 6 / 64 at both depths). **Run `web-21`:** 27 second-hop pages, 98 requests, and again **zero** verdicts changed (63 / 3 / 64 at both depths). **Run `web-22`:** 37 second-hop pages, 118 requests, and again **zero** verdicts changed (68 / 3 / 59 at both depths). **Run `web-23`:** 29 second-hop pages, 102 requests, and again **zero** verdicts changed (66 / 1 / 63 at both depths). The second hop reached governance, secretariat and news pages, which is also where it met a personal name that depth 1 had never collected (section on masking). Run it yourself before assuming the same holds for
 another federation or a later date.
 
 ### Be considerate with other people's servers
@@ -1093,9 +1094,9 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-22` (2 October 2026) was collected
+**The published run is masked.** Run `web-23` (2 October 2026) was collected
 with masking in place, and a search of all its evidence and reports found no
-personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). `web-14`, which also reads services and policies pages, added many more, and `web-15`, `web-16`, `web-18`, `web-21` and `web-22` carry the same ones (`web-21` adds one, a photo credit in an image description on Data Terra's new page; `web-22` adds two staff names in a news item on EUDAT's new page and one more GÉANT observer): about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO, Italy) and PaNOSC's pages. Two of those citation lists were already in the evidence published as `web-13` and were missed then; they remain in the git history. `web-16`, the first run with GÉANT's page served since 24 September, reached its executive team, governance and membership pages: about 120 names of officers, board members and General Assembly representatives, some cut short at the end of a link label ("Heidi Fraser-Kr…"). They were taken from the fixed patterns of those pages ("Representative:", "Substitute:", "… Chief … Officer", "… Member") and masked everywhere, truncated forms included. A deeper run reads more pages, and so needs this check more; look for citations ("Surname, I." lists before a year) as well as for people named in prose. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
+personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). `web-14`, which also reads services and policies pages, added many more, and `web-15`, `web-16`, `web-18`, `web-21`, `web-22` and `web-23` carry the same ones (`web-21` adds one, a photo credit in an image description on Data Terra's new page; `web-22` adds two staff names in a news item on EUDAT's new page and one more GÉANT observer): about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO, Italy) and PaNOSC's pages. Two of those citation lists were already in the evidence published as `web-13` and were missed then; they remain in the git history. `web-16`, the first run with GÉANT's page served since 24 September, reached its executive team, governance and membership pages: about 120 names of officers, board members and General Assembly representatives, some cut short at the end of a link label ("Heidi Fraser-Kr…"). They were taken from the fixed patterns of those pages ("Representative:", "Substitute:", "… Chief … Officer", "… Member") and masked everywhere, truncated forms included. A deeper run reads more pages, and so needs this check more; look for citations ("Surname, I." lists before a year) as well as for people named in prose. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
 offline. All 120 verdicts and the 44 / 6 / 70 tally were unchanged. A few character counts in the report dropped
 slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to
@@ -1441,7 +1442,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 68 PASS · 3 FAIL · 59 review");
+- the headline tally in `README.md` ("130 cells: 66 PASS · 1 FAIL · 63 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

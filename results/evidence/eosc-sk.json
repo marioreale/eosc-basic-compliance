@@ -2,7 +2,7 @@
   "node_id": "eosc-sk",
   "node_name": "EOSC Node Slovakia",
   "requested_url": "https://eosc.sk/",
-  "fetched_at": "2026-10-02T15:48:41+00:00",
+  "fetched_at": "2026-10-02T16:24:29+00:00",
   "final_url": "https://eosc.sk/",
   "http_status": 200,
   "redirect_chain": [],
@@ -1073,5 +1073,5 @@
     "https://hd.eosc.sk (already fetched at depth 1)",
     "https://hd.eosc.sk (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 45 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 37 of 60 used"
+  "crawl_note": "depth 2: 45 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 29 of 60 used"
 }
