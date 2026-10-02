@@ -2,7 +2,7 @@
   "node_id": "panosc",
   "node_name": "PaNOSC",
   "requested_url": "https://eosc.panosc.eu/",
-  "fetched_at": "2026-10-01T20:21:37+00:00",
+  "fetched_at": "2026-10-02T15:45:54+00:00",
   "final_url": "https://www.panosc.eu/panosc-eosc-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -13,8 +13,8 @@
   "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
   "title": "PaNOSC Node - Panosc",
   "lang_attr": "en-GB",
-  "main_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home PaNOSC Node PaNOSC Node “ The vision for EOSC is to put in place a system in Europe to find and access data and services for research and innovation. This is to help researchers store, share, process, analyse and reuse FAIR research outputs within and across disciplines and borders . ” see “ Building the EOSC Federation ” by the EOSC Association for more information. For questions and comments on the EOSC Federation and the Nodes visit the EOSC Federation User Forum . The PaNOSC Node is one of the first wave of EOSC Nodes to participate in the build-up phase of the EOSC Federation. The following facilities have committed to providing services and data to the PaNOSC Node: ESRF (as host), ALBA , DESY , ELETTRA , ESS , European XFEL , HZDR , ILL , MAX IV Laboratory , PSI , and SOLEIL . The following services are currently registered with the PaNOSC Node with more to come: Overview of PaNOSC Node Services Overview of PaNOSC Node Services Content Provider ESRF – European Synchrotron Radiation Facility 4 Deutsches Elektronen-Synchrotron (DESY) 3 Helmholtz-Zentrum Dresden-Rossendorf (HZDR) 3 Paul Scherrer Institute (PSI) 3 ESS – European Spallation Source 2 MAX IV 2 ALBA 1 Elettra 1 Institut Laue-Langevin (ILL) 1 PaNOSC 1 SOLEIL 1 More... Keywords PaNOSC 19 PaN 18 discovery 14 data management 12 Photon and Neutron 11 Data 8 SciCat 6 login required 5 Photon science 4 X-rays 4 Synchrotron 3 VISA 3 catalogue 3 Computing 2 Data Management 2 Materials Science 2 Simulations 2 Virtual Research Environment 2 compute hardware 2 data analysis 2 health 2 ExPaNDS 1 Open Science 1 Open data 1 PaNET 1 User access 1 User space 1 Workflows 1 data catalogue 1 data discovery 1 doi 1 human 1 metadata 1 open data 1 organs 1 persistent identifiers 1 portal 1 prototype 1 remote analysis 1 training 1 More... Show Filters 22 results found × Search Name Description DESY Public Data Repository Opendata Portal for data at DESY. PETRA III Public Data Repository Opendata Portal for experimental data produced at PETRA III, DESY. SOLEIL VISA Service The SOLEIL VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at SOLEIL using just your web browser. (Show more) MAX IV Open Data Repository The MAX IV Open Data Repository provides access to scientific data generated at MAX IV Laboratory. It links datasets with domain-specific metadata for experiments using photons and neutrons, assigns persistent identifiers (DOIs), and enables open access to individual datasets. The repository supports the FAIR principles and promotes Open Science. (Show more) MAX IV Metadata Catalogue SciCat MAX IV SciCat is the metadata catalogue for managing and discovering scientific data from MAX IV Laboratory at the Lund University. It captures detailed metadata throughout the research lifecycle, enabling efficient search, linking to raw and processed data, and integration with facility workflows and FAIR data services. (Show more) AiiDAlab Quantum ESPRESSO app AiiDAlab , a Jupyter-based web platform powered by the AiiDA workflow management system, offers lightweight web apps for running complex and robust automated workflows on remote machines. The AiiDAlab Quantum ESPRESSO (QE) app streamlines access to a host of materials properties, including electronic structure, X-ray and muon spectroscopies, vibrational and Bader analyses, neutron scattering, and more. The AiiDAlab demo server , pre-configured with the QE app, allows users to quickly test out the features of AiiDAlab, guided by dedicated examples and built-in tutorials. (Show more) Materials Cloud Archive Open repository for research data relevant to computational materials science. ESRF VISA Service The ESRF VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at the ESRF using just your web browser. (Show more) Elettra Open Access Data Portal Opendata Portal for the Elettra Sincrotrone Trieste synchrotron facility ( https://www.elettra.eu/ ). PSI Data Portal Find, access, and reuse public data acquired at PSI PaN-Finder The PaN-Finder is a discovery portal that helps researchers locate and access data from European photon and neutron facilities. By connecting metadata from multiple sources, it enables users to easily find FAIR datasets, publications, and related resources across the PaN community. Integrated with the EOSC, PaN-Finder supports open science by making experimental data more visible, searchable, and reusable. (Show more) PaN-Space The PaNOSC User Space is an integrated online environment where researchers can access, analyze, and share data from photon and neutron facilities. It connects users to FAIR datasets, remote computing resources, and training materials, all within the EOSC ecosystem. Designed for simplicity and interoperability, the User Space enables seamless transitions from data discovery to analysis and publication, supporting open and reproducible science across disciplines. (Show more) Page: Next Last View your results on the PaN-Services Catalogue Monitoring The status of the PaNOSC node services is monitored on the PaNOSC Status page . User eXperience Users of the PaNOSC Node will have access to: the PaN-Finder search engine for finding FAIR Data from all partner facilities, the PaN-Space user space for keeping track of data and PaN tasks, the VISA virtual research environment for processing PaN data by running workflows, Jupyter Notebooks, and graphical applications, the PaN-Training training platform. The following video gives users an idea of what to expect from the PaNOSC Node: EU Node Try out the first EOSC Node – the EU Node . Login with your institute credentials and take the EU Node for a spin! Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
-  "full_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home PaNOSC Node PaNOSC Node “ The vision for EOSC is to put in place a system in Europe to find and access data and services for research and innovation. This is to help researchers store, share, process, analyse and reuse FAIR research outputs within and across disciplines and borders . ” see “ Building the EOSC Federation ” by the EOSC Association for more information. For questions and comments on the EOSC Federation and the Nodes visit the EOSC Federation User Forum . The PaNOSC Node is one of the first wave of EOSC Nodes to participate in the build-up phase of the EOSC Federation. The following facilities have committed to providing services and data to the PaNOSC Node: ESRF (as host), ALBA , DESY , ELETTRA , ESS , European XFEL , HZDR , ILL , MAX IV Laboratory , PSI , and SOLEIL . The following services are currently registered with the PaNOSC Node with more to come: Overview of PaNOSC Node Services Overview of PaNOSC Node Services Content Provider ESRF – European Synchrotron Radiation Facility 4 Deutsches Elektronen-Synchrotron (DESY) 3 Helmholtz-Zentrum Dresden-Rossendorf (HZDR) 3 Paul Scherrer Institute (PSI) 3 ESS – European Spallation Source 2 MAX IV 2 ALBA 1 Elettra 1 Institut Laue-Langevin (ILL) 1 PaNOSC 1 SOLEIL 1 More... Keywords PaNOSC 19 PaN 18 discovery 14 data management 12 Photon and Neutron 11 Data 8 SciCat 6 login required 5 Photon science 4 X-rays 4 Synchrotron 3 VISA 3 catalogue 3 Computing 2 Data Management 2 Materials Science 2 Simulations 2 Virtual Research Environment 2 compute hardware 2 data analysis 2 health 2 ExPaNDS 1 Open Science 1 Open data 1 PaNET 1 User access 1 User space 1 Workflows 1 data catalogue 1 data discovery 1 doi 1 human 1 metadata 1 open data 1 organs 1 persistent identifiers 1 portal 1 prototype 1 remote analysis 1 training 1 More... Show Filters 22 results found × Search Name Description DESY Public Data Repository Opendata Portal for data at DESY. PETRA III Public Data Repository Opendata Portal for experimental data produced at PETRA III, DESY. SOLEIL VISA Service The SOLEIL VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at SOLEIL using just your web browser. (Show more) MAX IV Open Data Repository The MAX IV Open Data Repository provides access to scientific data generated at MAX IV Laboratory. It links datasets with domain-specific metadata for experiments using photons and neutrons, assigns persistent identifiers (DOIs), and enables open access to individual datasets. The repository supports the FAIR principles and promotes Open Science. (Show more) MAX IV Metadata Catalogue SciCat MAX IV SciCat is the metadata catalogue for managing and discovering scientific data from MAX IV Laboratory at the Lund University. It captures detailed metadata throughout the research lifecycle, enabling efficient search, linking to raw and processed data, and integration with facility workflows and FAIR data services. (Show more) AiiDAlab Quantum ESPRESSO app AiiDAlab , a Jupyter-based web platform powered by the AiiDA workflow management system, offers lightweight web apps for running complex and robust automated workflows on remote machines. The AiiDAlab Quantum ESPRESSO (QE) app streamlines access to a host of materials properties, including electronic structure, X-ray and muon spectroscopies, vibrational and Bader analyses, neutron scattering, and more. The AiiDAlab demo server , pre-configured with the QE app, allows users to quickly test out the features of AiiDAlab, guided by dedicated examples and built-in tutorials. (Show more) Materials Cloud Archive Open repository for research data relevant to computational materials science. ESRF VISA Service The ESRF VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at the ESRF using just your web browser. (Show more) Elettra Open Access Data Portal Opendata Portal for the Elettra Sincrotrone Trieste synchrotron facility ( https://www.elettra.eu/ ). PSI Data Portal Find, access, and reuse public data acquired at PSI PaN-Finder The PaN-Finder is a discovery portal that helps researchers locate and access data from European photon and neutron facilities. By connecting metadata from multiple sources, it enables users to easily find FAIR datasets, publications, and related resources across the PaN community. Integrated with the EOSC, PaN-Finder supports open science by making experimental data more visible, searchable, and reusable. (Show more) PaN-Space The PaNOSC User Space is an integrated online environment where researchers can access, analyze, and share data from photon and neutron facilities. It connects users to FAIR datasets, remote computing resources, and training materials, all within the EOSC ecosystem. Designed for simplicity and interoperability, the User Space enables seamless transitions from data discovery to analysis and publication, supporting open and reproducible science across disciplines. (Show more) Page: Next Last View your results on the PaN-Services Catalogue Monitoring The status of the PaNOSC node services is monitored on the PaNOSC Status page . User eXperience Users of the PaNOSC Node will have access to: the PaN-Finder search engine for finding FAIR Data from all partner facilities, the PaN-Space user space for keeping track of data and PaN tasks, the VISA virtual research environment for processing PaN data by running workflows, Jupyter Notebooks, and graphical applications, the PaN-Training training platform. The following video gives users an idea of what to expect from the PaNOSC Node: EU Node Try out the first EOSC Node – the EU Node . Login with your institute credentials and take the EU Node for a spin! Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
+  "main_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home PaNOSC Node PaNOSC Node Introduction The Photon and Neutron science cluster (PaNOSC – https://panosc.eu ), comprising leading photon and neutron European research infrastructures, is committed to advancing Open Science and maximising the societal and scientific impact of publicly funded research. Recognising the critical importance of FAIR data, PaNOSC fully embraces the FAIR principles (Findable, Accessible, Interoperable, Reusable) as foundational values for the management and dissemination of scientific data. The following PaNOSC facilities – ESRF (host), ALBA, DESY, ELETTRA, ESS, European XFEL, HZDR, ILL, MAX IV Laboratory, PSI, and Synchrotron Soleil – are building the PaNOSC Node to provide seamless access to scientific data from photon and neutron sources, tools, workflows and services from the participating facilities, promote the use of services for a user-centric open data research commons, and foster collaboration between scientific domains through shared data, technologies, methods and insights. The following services are currently registered with the PaNOSC Node with more to come. All services are covered by the Acceptable User Policy and User Access Policy . When using these services users accept to respect these policies. Overview of PaNOSC Node Services Overview of PaNOSC Node Services Content Provider ESRF – European Synchrotron Radiation Facility 4 Deutsches Elektronen-Synchrotron (DESY) 3 Helmholtz-Zentrum Dresden-Rossendorf (HZDR) 3 Paul Scherrer Institute (PSI) 3 ESS – European Spallation Source 2 MAX IV 2 ALBA 1 Elettra 1 Institut Laue-Langevin (ILL) 1 PaNOSC 1 SOLEIL 1 More... Keywords PaNOSC 19 PaN 18 discovery 14 data management 12 Photon and Neutron 11 Data 8 SciCat 6 login required 5 Photon science 4 X-rays 4 Synchrotron 3 VISA 3 catalogue 3 Computing 2 Data Management 2 Materials Science 2 Simulations 2 Virtual Research Environment 2 compute hardware 2 data analysis 2 health 2 ExPaNDS 1 Open Science 1 Open data 1 PaNET 1 User access 1 User space 1 Workflows 1 data catalogue 1 data discovery 1 doi 1 human 1 metadata 1 open data 1 organs 1 persistent identifiers 1 portal 1 prototype 1 remote analysis 1 training 1 More... Show Filters 22 results found × Search Name Description DESY Public Data Repository Opendata Portal for data at DESY. PETRA III Public Data Repository Opendata Portal for experimental data produced at PETRA III, DESY. SOLEIL VISA Service The SOLEIL VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at SOLEIL using just your web browser. (Show more) MAX IV Open Data Repository The MAX IV Open Data Repository provides access to scientific data generated at MAX IV Laboratory. It links datasets with domain-specific metadata for experiments using photons and neutrons, assigns persistent identifiers (DOIs), and enables open access to individual datasets. The repository supports the FAIR principles and promotes Open Science. (Show more) MAX IV Metadata Catalogue SciCat MAX IV SciCat is the metadata catalogue for managing and discovering scientific data from MAX IV Laboratory at the Lund University. It captures detailed metadata throughout the research lifecycle, enabling efficient search, linking to raw and processed data, and integration with facility workflows and FAIR data services. (Show more) AiiDAlab Quantum ESPRESSO app AiiDAlab , a Jupyter-based web platform powered by the AiiDA workflow management system, offers lightweight web apps for running complex and robust automated workflows on remote machines. The AiiDAlab Quantum ESPRESSO (QE) app streamlines access to a host of materials properties, including electronic structure, X-ray and muon spectroscopies, vibrational and Bader analyses, neutron scattering, and more. The AiiDAlab demo server , pre-configured with the QE app, allows users to quickly test out the features of AiiDAlab, guided by dedicated examples and built-in tutorials. (Show more) Materials Cloud Archive Open repository for research data relevant to computational materials science. ESRF VISA Service The ESRF VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at the ESRF using just your web browser. (Show more) Elettra Open Access Data Portal Opendata Portal for the Elettra Sincrotrone Trieste synchrotron facility ( https://www.elettra.eu/ ). PSI Data Portal Find, access, and reuse public data acquired at PSI PaN-Finder The PaN-Finder is a discovery portal that helps researchers locate and access data from European photon and neutron facilities. By connecting metadata from multiple sources, it enables users to easily find FAIR datasets, publications, and related resources across the PaN community. Integrated with the EOSC, PaN-Finder supports open science by making experimental data more visible, searchable, and reusable. (Show more) PaN-Space The PaNOSC User Space is an integrated online environment where researchers can access, analyze, and share data from photon and neutron facilities. It connects users to FAIR datasets, remote computing resources, and training materials, all within the EOSC ecosystem. Designed for simplicity and interoperability, the User Space enables seamless transitions from data discovery to analysis and publication, supporting open and reproducible science across disciplines. (Show more) Page: Next Last View your results on the PaN-Services Catalogue Status and Monitoring The status of the PaNOSC node services is monitored on the PaNOSC Status page . Helpdesk and User Forum For help on specific issues please contact the PaNOSC Helpdesk or send an email to panosc-helpdesk@scc.kit.edu . For general questions and comments on the EOSC Federation and the Nodes including PaNOSC visit the EOSC Federation User Forum : EU Node Try out the first EOSC Node – the EU Node . Login with your institute credentials and take the EU Node for a spin! User eXperience Users of the PaNOSC Node will have access to: the PaN-Finder search engine for finding FAIR Data from all partner facilities, the PaN-Space user space for keeping track of data and PaN tasks, the VISA virtual research environment for processing PaN data by running workflows, Jupyter Notebooks, and graphical applications, the PaN-Training training platform. The following video gives users an idea of what to expect from the PaNOSC Node: Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
+  "full_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home PaNOSC Node PaNOSC Node Introduction The Photon and Neutron science cluster (PaNOSC – https://panosc.eu ), comprising leading photon and neutron European research infrastructures, is committed to advancing Open Science and maximising the societal and scientific impact of publicly funded research. Recognising the critical importance of FAIR data, PaNOSC fully embraces the FAIR principles (Findable, Accessible, Interoperable, Reusable) as foundational values for the management and dissemination of scientific data. The following PaNOSC facilities – ESRF (host), ALBA, DESY, ELETTRA, ESS, European XFEL, HZDR, ILL, MAX IV Laboratory, PSI, and Synchrotron Soleil – are building the PaNOSC Node to provide seamless access to scientific data from photon and neutron sources, tools, workflows and services from the participating facilities, promote the use of services for a user-centric open data research commons, and foster collaboration between scientific domains through shared data, technologies, methods and insights. The following services are currently registered with the PaNOSC Node with more to come. All services are covered by the Acceptable User Policy and User Access Policy . When using these services users accept to respect these policies. Overview of PaNOSC Node Services Overview of PaNOSC Node Services Content Provider ESRF – European Synchrotron Radiation Facility 4 Deutsches Elektronen-Synchrotron (DESY) 3 Helmholtz-Zentrum Dresden-Rossendorf (HZDR) 3 Paul Scherrer Institute (PSI) 3 ESS – European Spallation Source 2 MAX IV 2 ALBA 1 Elettra 1 Institut Laue-Langevin (ILL) 1 PaNOSC 1 SOLEIL 1 More... Keywords PaNOSC 19 PaN 18 discovery 14 data management 12 Photon and Neutron 11 Data 8 SciCat 6 login required 5 Photon science 4 X-rays 4 Synchrotron 3 VISA 3 catalogue 3 Computing 2 Data Management 2 Materials Science 2 Simulations 2 Virtual Research Environment 2 compute hardware 2 data analysis 2 health 2 ExPaNDS 1 Open Science 1 Open data 1 PaNET 1 User access 1 User space 1 Workflows 1 data catalogue 1 data discovery 1 doi 1 human 1 metadata 1 open data 1 organs 1 persistent identifiers 1 portal 1 prototype 1 remote analysis 1 training 1 More... Show Filters 22 results found × Search Name Description DESY Public Data Repository Opendata Portal for data at DESY. PETRA III Public Data Repository Opendata Portal for experimental data produced at PETRA III, DESY. SOLEIL VISA Service The SOLEIL VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at SOLEIL using just your web browser. (Show more) MAX IV Open Data Repository The MAX IV Open Data Repository provides access to scientific data generated at MAX IV Laboratory. It links datasets with domain-specific metadata for experiments using photons and neutrons, assigns persistent identifiers (DOIs), and enables open access to individual datasets. The repository supports the FAIR principles and promotes Open Science. (Show more) MAX IV Metadata Catalogue SciCat MAX IV SciCat is the metadata catalogue for managing and discovering scientific data from MAX IV Laboratory at the Lund University. It captures detailed metadata throughout the research lifecycle, enabling efficient search, linking to raw and processed data, and integration with facility workflows and FAIR data services. (Show more) AiiDAlab Quantum ESPRESSO app AiiDAlab , a Jupyter-based web platform powered by the AiiDA workflow management system, offers lightweight web apps for running complex and robust automated workflows on remote machines. The AiiDAlab Quantum ESPRESSO (QE) app streamlines access to a host of materials properties, including electronic structure, X-ray and muon spectroscopies, vibrational and Bader analyses, neutron scattering, and more. The AiiDAlab demo server , pre-configured with the QE app, allows users to quickly test out the features of AiiDAlab, guided by dedicated examples and built-in tutorials. (Show more) Materials Cloud Archive Open repository for research data relevant to computational materials science. ESRF VISA Service The ESRF VISA (Virtual Infrastructure for Scientific Analysis) service makes it simple to create compute instances on the data analysis infrastructure to analyse experimental data at the ESRF using just your web browser. (Show more) Elettra Open Access Data Portal Opendata Portal for the Elettra Sincrotrone Trieste synchrotron facility ( https://www.elettra.eu/ ). PSI Data Portal Find, access, and reuse public data acquired at PSI PaN-Finder The PaN-Finder is a discovery portal that helps researchers locate and access data from European photon and neutron facilities. By connecting metadata from multiple sources, it enables users to easily find FAIR datasets, publications, and related resources across the PaN community. Integrated with the EOSC, PaN-Finder supports open science by making experimental data more visible, searchable, and reusable. (Show more) PaN-Space The PaNOSC User Space is an integrated online environment where researchers can access, analyze, and share data from photon and neutron facilities. It connects users to FAIR datasets, remote computing resources, and training materials, all within the EOSC ecosystem. Designed for simplicity and interoperability, the User Space enables seamless transitions from data discovery to analysis and publication, supporting open and reproducible science across disciplines. (Show more) Page: Next Last View your results on the PaN-Services Catalogue Status and Monitoring The status of the PaNOSC node services is monitored on the PaNOSC Status page . Helpdesk and User Forum For help on specific issues please contact the PaNOSC Helpdesk or send an email to panosc-helpdesk@scc.kit.edu . For general questions and comments on the EOSC Federation and the Nodes including PaNOSC visit the EOSC Federation User Forum : EU Node Try out the first EOSC Node – the EU Node . Login with your institute credentials and take the EU Node for a spin! User eXperience Users of the PaNOSC Node will have access to: the PaN-Finder search engine for finding FAIR Data from all partner facilities, the PaN-Space user space for keeping track of data and PaN tasks, the VISA virtual research environment for processing PaN data by running workflows, Jupyter Notebooks, and graphical applications, the PaN-Training training platform. The following video gives users an idea of what to expect from the PaNOSC Node: Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
   "links": [
     {
       "href": "https://www.panosc.eu/",
@@ -207,78 +207,13 @@
       "visible": true
     },
     {
-      "href": "https://eosc.eu/eosc-about/building-the-eosc-federation/",
-      "text": "Building the EOSC Federation",
+      "href": "https://panosc.eu",
+      "text": "https://panosc.eu",
       "visible": true
     },
     {
-      "href": "https://eosc.eu",
-      "text": "EOSC Association",
-      "visible": true
-    },
-    {
-      "href": "https://user-forum.eosc.eu",
-      "text": "EOSC Federation User Forum",
-      "visible": true
-    },
-    {
-      "href": "https://user-forum.eosc.eu",
-      "text": "EOSC Federation User Forum",
-      "visible": true
-    },
-    {
-      "href": "https://esrf.fr",
-      "text": "ESRF",
-      "visible": true
-    },
-    {
-      "href": "https://www.cells.es/en/",
-      "text": "ALBA",
-      "visible": true
-    },
-    {
-      "href": "https://desy.de",
-      "text": "DESY",
-      "visible": true
-    },
-    {
-      "href": "https://www.elettra.eu/",
-      "text": "ELETTRA",
-      "visible": true
-    },
-    {
-      "href": "https://ess.eu/",
-      "text": "ESS",
-      "visible": true
-    },
-    {
-      "href": "https://www.xfel.eu/",
-      "text": "European XFEL",
-      "visible": true
-    },
-    {
-      "href": "https://www.hzdr.de",
-      "text": "HZDR",
-      "visible": true
-    },
-    {
-      "href": "https://ill.eu",
-      "text": "ILL",
-      "visible": true
-    },
-    {
-      "href": "https://www.maxiv.lu.se/",
-      "text": "MAX IV Laboratory",
-      "visible": true
-    },
-    {
-      "href": "https://www.psi.ch/en",
-      "text": "PSI",
-      "visible": true
-    },
-    {
-      "href": "https://www.synchrotron-soleil.fr/en",
-      "text": "SOLEIL",
+      "href": "https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/",
+      "text": "Acceptable User Policy and User Access Policy",
       "visible": true
     },
     {
@@ -387,6 +322,26 @@
       "visible": true
     },
     {
+      "href": "https://helpdesk.panosc.eu",
+      "text": "PaNOSC Helpdesk",
+      "visible": true
+    },
+    {
+      "href": "https://user-forum.eosc.eu",
+      "text": "EOSC Federation User Forum",
+      "visible": true
+    },
+    {
+      "href": "https://user-forum.eosc.eu",
+      "text": "EOSC Federation User Forum",
+      "visible": true
+    },
+    {
+      "href": "https://open-science-cloud.ec.europa.eu/dashboard",
+      "text": "EU Node",
+      "visible": true
+    },
+    {
       "href": "https://pan-space.panosc.eu",
       "text": "PaN-Space",
       "visible": true
@@ -394,11 +349,6 @@
     {
       "href": "https://zenodo.org/records/17552243/preview/PaNOSC-Node-Demo_v1.mp4?include_deleted=0",
       "text": "following video",
-      "visible": true
-    },
-    {
-      "href": "https://open-science-cloud.ec.europa.eu/dashboard",
-      "text": "EU Node",
       "visible": true
     },
     {
@@ -658,19 +608,19 @@
       "inline_svg": false
     },
     {
-      "src": "https://www.panosc.eu/wp-content/uploads/2026/09/eosc-federation-user-forum-logo-compact.png",
-      "alt": "EOSC Federation User Forum",
-      "aria_label": "",
-      "title": "",
-      "css_class": "wp-image-2196",
-      "inline_svg": false
-    },
-    {
       "src": "https://service-status.tesshub.hzdr.de/api/badge/12/uptime/48",
       "alt": "",
       "aria_label": "",
       "title": "",
       "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.panosc.eu/wp-content/uploads/2026/09/eosc-federation-user-forum-logo-compact.png",
+      "alt": "EOSC Federation User Forum",
+      "aria_label": "",
+      "title": "",
+      "css_class": "wp-image-2196",
       "inline_svg": false
     },
     {
@@ -1036,86 +986,14 @@
       "visible": true
     },
     {
-      "text": "Building the EOSC Federation",
-      "href": "https://eosc.eu/eosc-about/building-the-eosc-federation/",
+      "text": "https://panosc.eu",
+      "href": "https://panosc.eu",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "EOSC Association",
-      "href": "https://eosc.eu",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "EOSC Federation User Forum",
-      "href": "https://user-forum.eosc.eu",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "ESRF",
-      "href": "https://esrf.fr",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "ALBA",
-      "href": "https://www.cells.es/en/",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "DESY",
-      "href": "https://desy.de",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "ELETTRA",
-      "href": "https://www.elettra.eu/",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "ESS",
-      "href": "https://ess.eu/",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "European XFEL",
-      "href": "https://www.xfel.eu/",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "HZDR",
-      "href": "https://www.hzdr.de",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "ILL",
-      "href": "https://ill.eu",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "MAX IV Laboratory",
-      "href": "https://www.maxiv.lu.se/",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "PSI",
-      "href": "https://www.psi.ch/en",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "SOLEIL",
-      "href": "https://www.synchrotron-soleil.fr/en",
+      "text": "Acceptable User Policy and User Access Policy",
+      "href": "https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/",
       "tag": "a",
       "visible": true
     },
@@ -1576,6 +1454,24 @@
       "visible": true
     },
     {
+      "text": "PaNOSC Helpdesk",
+      "href": "https://helpdesk.panosc.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Federation User Forum",
+      "href": "https://user-forum.eosc.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EU Node",
+      "href": "https://open-science-cloud.ec.europa.eu/dashboard",
+      "tag": "a",
+      "visible": true
+    },
+    {
       "text": "PaN-Space",
       "href": "https://pan-space.panosc.eu",
       "tag": "a",
@@ -1584,12 +1480,6 @@
     {
       "text": "following video",
       "href": "https://zenodo.org/records/17552243/preview/PaNOSC-Node-Demo_v1.mp4?include_deleted=0",
-      "tag": "a",
-      "visible": true
-    },
-    {
-      "text": "EU Node",
-      "href": "https://open-science-cloud.ec.europa.eu/dashboard",
       "tag": "a",
       "visible": true
     },
@@ -1911,6 +1801,450 @@
   "screenshot": "panosc.png",
   "crawl_depth": 2,
   "children": [
+    {
+      "url": "https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/",
+      "selected_for": [
+        "5c"
+      ],
+      "link_text": "Acceptable User Policy and User Access Policy",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/",
+      "title": "PaNOSC Node User Policies - Panosc",
+      "lang_attr": "en-GB",
+      "main_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home PaNOSC Node PaNOSC Node User Policies PaNOSC Node User Policies This page documents the Acceptable Use Policy (AUP) and User Access Policy (UAP) for the PaNOSC EOSC Node Services and Data. Any users of these Services and Data need to be aware of and respect these policies. AUP UAP Tab 1 1. Acceptable Use Policy (AUP) 1.1 Acceptable Use Unless state otherwise the PaNOSC Services may be used for scientific research, education, training, software/data development, and related open-science activities. This includes the reuse of open data. All uses — in particular commercial use — need to respect the licences covering the data and any additional policies for specific Services. 1.2 Prohibited Use It is prohibited to: Use the Service for any unlawful purpose or in violation of applicable law, export-control or sanctions regulations. Attempt to gain unauthorised access to accounts, data, sessions, or infrastructure; probe, scan, or test vulnerabilities without explicit written authorisation. Interfere with or disrupt the Service or connected services, degrade performance, or circumvent authentication, session limits, storage quotas, or access controls. Misrepresent identity, affiliation, or location to obtain access beyond entitlement. Upload, store, transmit, or distribute malicious software or content infringing third-party rights. Launch computational jobs unrelated to the intended use of the analysis environments; in particular no cryptocurrency mining, password cracking, or bulk scraping through VRE sessions. Place personal or confidential data in open or shared areas beyond what is necessary for the intended research. Share accounts or credentials, or use automated means to create accounts. 1.3 Fair Use of Compute and Storage Analysis environments and storage are shared, finite resources. Usage limits (see UAP 2.4) are fair-use based. Systematically circumventing limits, occupying idle sessions or storage to reserve capacity (“Use It or Lose It”), or otherwise depriving other users of resources is prohibited. 1.4 Security Incident Reporting Suspected or confirmed security incidents (unauthorised access, data breach, malware, vulnerabilities) must be reported immediately to the PaNOSC Node operators (panosc-helpdesk@scc.kit.edu). 1.5 Monitoring and Enforcement Usage of the Service may be logged and audited for security, capacity planning, and compliance purposes, in accordance with the Privacy Statement. Violations may result in warning, restriction, suspension or termination of access, and notification of the user’s home organisation. Sanctions are proportionate; appeals are handled via the Helpdesk within a few hours or days. UAP 2. User Access Policy (UAP) 2.1 Purpose This UAP defines access groups, corresponding rights, and usage limits for users of PaNOSC Services where now dedicated UAP exists for a Service. 2.2 Access Groups This table describes the different PaNOSC User Groups (PUG) and their access policy rights: Group Authentication Rights Limits PUG-0 (Visitor) None Browse services, search PaNOSC catalogues and open metadata, view open training materials Fair-use rate limits PUG-A (Authenticated User) PaN AAI (UmbrellaID/MyAccessID), eduGAIN All PUG-0 rights plus personalised dashboard, saved searches/workflows, API tokens, training enrollment API rate limits and number of concurrent sessions PUG-A1 (Facility User) PaN or local AAI with facility entitlement attributes All PUG-A rights plus access to embargoed datasets and remote-analysis/VISA sessions of their facility, subject to that facility’s own access policy Per facility Group assignment relies on federated attributes (affiliation, entitlement). Users whose IdP does not release the required attributes must contact their home IdP first. No automatic transition between groups; changes via Helpdesk, case-by-case. 2.3 Data Access Tiers Open access: immediate discovery and download under the dataset licence. Restricted (gated): available to entitled facility users; authorisation is performed by the responsible facility. Metadata-only: discovery always open; access per dataset policy. 2.4 Service Limits API: 1000 requests/hour per token; bulk endpoints paginated. VRE/analysis sessions: is accordingly regulated by the provider of the relevant service and set out in its UAP. 2.5 Enforcement, Modification, Termination Violation of this UAP may result in suspension or termination. The PaNOSC Operating Unit may modify this policy at any time; users are notified of significant changes and continued use implies acceptance. Upon termination, quota allocations expire without compensation; user data is deleted subject to legal retention requirements. Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
+      "full_text": "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Contact us Search PaNOSC Home PaNOSC Node PaNOSC Node User Policies PaNOSC Node User Policies This page documents the Acceptable Use Policy (AUP) and User Access Policy (UAP) for the PaNOSC EOSC Node Services and Data. Any users of these Services and Data need to be aware of and respect these policies. AUP UAP Tab 1 1. Acceptable Use Policy (AUP) 1.1 Acceptable Use Unless state otherwise the PaNOSC Services may be used for scientific research, education, training, software/data development, and related open-science activities. This includes the reuse of open data. All uses — in particular commercial use — need to respect the licences covering the data and any additional policies for specific Services. 1.2 Prohibited Use It is prohibited to: Use the Service for any unlawful purpose or in violation of applicable law, export-control or sanctions regulations. Attempt to gain unauthorised access to accounts, data, sessions, or infrastructure; probe, scan, or test vulnerabilities without explicit written authorisation. Interfere with or disrupt the Service or connected services, degrade performance, or circumvent authentication, session limits, storage quotas, or access controls. Misrepresent identity, affiliation, or location to obtain access beyond entitlement. Upload, store, transmit, or distribute malicious software or content infringing third-party rights. Launch computational jobs unrelated to the intended use of the analysis environments; in particular no cryptocurrency mining, password cracking, or bulk scraping through VRE sessions. Place personal or confidential data in open or shared areas beyond what is necessary for the intended research. Share accounts or credentials, or use automated means to create accounts. 1.3 Fair Use of Compute and Storage Analysis environments and storage are shared, finite resources. Usage limits (see UAP 2.4) are fair-use based. Systematically circumventing limits, occupying idle sessions or storage to reserve capacity (“Use It or Lose It”), or otherwise depriving other users of resources is prohibited. 1.4 Security Incident Reporting Suspected or confirmed security incidents (unauthorised access, data breach, malware, vulnerabilities) must be reported immediately to the PaNOSC Node operators (panosc-helpdesk@scc.kit.edu). 1.5 Monitoring and Enforcement Usage of the Service may be logged and audited for security, capacity planning, and compliance purposes, in accordance with the Privacy Statement. Violations may result in warning, restriction, suspension or termination of access, and notification of the user’s home organisation. Sanctions are proportionate; appeals are handled via the Helpdesk within a few hours or days. UAP 2. User Access Policy (UAP) 2.1 Purpose This UAP defines access groups, corresponding rights, and usage limits for users of PaNOSC Services where now dedicated UAP exists for a Service. 2.2 Access Groups This table describes the different PaNOSC User Groups (PUG) and their access policy rights: Group Authentication Rights Limits PUG-0 (Visitor) None Browse services, search PaNOSC catalogues and open metadata, view open training materials Fair-use rate limits PUG-A (Authenticated User) PaN AAI (UmbrellaID/MyAccessID), eduGAIN All PUG-0 rights plus personalised dashboard, saved searches/workflows, API tokens, training enrollment API rate limits and number of concurrent sessions PUG-A1 (Facility User) PaN or local AAI with facility entitlement attributes All PUG-A rights plus access to embargoed datasets and remote-analysis/VISA sessions of their facility, subject to that facility’s own access policy Per facility Group assignment relies on federated attributes (affiliation, entitlement). Users whose IdP does not release the required attributes must contact their home IdP first. No automatic transition between groups; changes via Helpdesk, case-by-case. 2.3 Data Access Tiers Open access: immediate discovery and download under the dataset licence. Restricted (gated): available to entitled facility users; authorisation is performed by the responsible facility. Metadata-only: discovery always open; access per dataset policy. 2.4 Service Limits API: 1000 requests/hour per token; bulk endpoints paginated. VRE/analysis sessions: is accordingly regulated by the provider of the relevant service and set out in its UAP. 2.5 Enforcement, Modification, Termination Violation of this UAP may result in suspension or termination. The PaNOSC Operating Unit may modify this policy at any time; users are notified of significant changes and continued use implies acceptance. Upon termination, quota allocations expire without compensation; user data is deleted subject to legal retention requirements. Share this content About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Publications PaN presentations Video News & Events News Events Events’ Calendar EOSC PaNOSC Node PaN OSCARS funded projects PaNOSC project (2018-2022) ExPaNDS project (2019-2023) Other related projects science-clusters.eu Follow us PaNOSC on Zenodo PaNOSC repository on Github © 2019, 2020 PaNOSC photon and neutron open science cloud This project has received funding from the European Union's Horizon 2020 research and innovation programme under grant agreement No. 823852. Privacy Torna su Search PaNOSC Use this form to search the entire PaNOSC site Search for: Close By using this site, you accept the use of cookies and third-party cookies Learn more Accept The cookie settings on this website are set to \"allow cookies\" to give you the best browsing experience possible. If you continue to use this website without changing your cookie settings or you click \"Accept\" below then you are consenting to this. Close",
+      "links": [
+        {
+          "href": "https://www.panosc.eu/",
+          "text": "Panosc",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-european-research-infrastructures/",
+          "text": "European Research Infrastructures",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/fair-principles/",
+          "text": "FAIR Principles",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/members/",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
+          "text": "Photon and Neutron Competence Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/panosc-data-policy-framework/",
+          "text": "PaNOSC data policy framework",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/training-catalogue/",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/",
+          "text": "Data",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/e-learning-platform/",
+          "text": "E-learning platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/all-use-cases/",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/women-in-science/",
+          "text": "Women in science",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/branding-material/",
+          "text": "Branding Material",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/publications/",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/pan-presentations/",
+          "text": "PaN presentations",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/news/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events-calendar/",
+          "text": "Events’ Calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc-portal.eu",
+          "text": "EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/expands-project/",
+          "text": "ExPaNDS project (2019-2023)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/related-projects/",
+          "text": "Other related projects",
+          "visible": true
+        },
+        {
+          "href": "https://science-clusters.eu/",
+          "text": "science-clusters.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/contact/",
+          "text": "Contact us",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/",
+          "text": "Home",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.panosc.eu%2Fpanosc-eosc-node%2Fpanosc-node-user-policies%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/intent/tweet?text=PaNOSC%20Node%20User%20Policies&url=https%3A%2F%2Fwww.panosc.eu%2Fpanosc-eosc-node%2Fpanosc-node-user-policies%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.panosc.eu%2Fpanosc-eosc-node%2Fpanosc-node-user-policies%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://api.whatsapp.com/send?text=PaNOSC%20Node%20User%20Policies%20https%3A%2F%2Fwww.panosc.eu%2Fpanosc-eosc-node%2Fpanosc-node-user-policies%2F",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-european-research-infrastructures/",
+          "text": "European Research Infrastructures",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/fair-principles/",
+          "text": "FAIR Principles",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/contact/",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/members/",
+          "text": "Members",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
+          "text": "Photon and Neutron Competence Centre",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/panosc-data-policy-framework/",
+          "text": "PaNOSC data policy framework",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/training-catalogue/",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/services/",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/data/",
+          "text": "Data",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/e-learning-platform/",
+          "text": "E-learning platform",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/all-use-cases/",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/women-in-science/",
+          "text": "Women in science",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/branding-material/",
+          "text": "Branding Material",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/publications/",
+          "text": "Publications",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/pan-presentations/",
+          "text": "PaN presentations",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/video/",
+          "text": "Video",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/news/",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events/",
+          "text": "Events",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/events-calendar/",
+          "text": "Events’ Calendar",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc-portal.eu",
+          "text": "EOSC",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-eosc-node/",
+          "text": "PaNOSC Node",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panoscars-dashboard/",
+          "text": "PaN OSCARS funded projects",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/panosc-project/",
+          "text": "PaNOSC project (2018-2022)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/expands-project/",
+          "text": "ExPaNDS project (2019-2023)",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/related-projects/",
+          "text": "Other related projects",
+          "visible": true
+        },
+        {
+          "href": "https://science-clusters.eu/",
+          "text": "science-clusters.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.eosc-portal.eu/",
+          "text": "European Open Science Cloud",
+          "visible": true
+        },
+        {
+          "href": "https://twitter.com/Panosc_eu",
+          "text": "Follow us",
+          "visible": true
+        },
+        {
+          "href": "https://zenodo.org/communities/panosc/",
+          "text": "PaNOSC on Zenodo",
+          "visible": true
+        },
+        {
+          "href": "https://github.com/panosc-eu",
+          "text": "PaNOSC repository on Github",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/privacy-policy/",
+          "text": "Privacy",
+          "visible": true
+        },
+        {
+          "href": "https://www.panosc.eu/privacy-policy/",
+          "text": "Learn more",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
     {
       "url": "https://www.panosc.eu/contact/",
       "selected_for": [
@@ -2359,6 +2693,35 @@
         {
           "href": "https://www.panosc.eu/privacy-policy/",
           "text": "Learn more",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://helpdesk.panosc.eu",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "PaNOSC Helpdesk",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://helpdesk.panosc.eu/#login",
+      "title": "PANOSC Helpdesk - Sign in",
+      "lang_attr": "en",
+      "main_text": "Log in to helpdesk.panosc.eu Username / email Password Remember me Sign in Forgot password? You're already registered with your email address if you've been in touch with our Support team. You can request your password here. Register as a new customer Powered by Loading…",
+      "full_text": "Log in to helpdesk.panosc.eu Username / email Password Remember me Sign in Forgot password? You're already registered with your email address if you've been in touch with our Support team. You can request your password here. Register as a new customer Powered by Loading…",
+      "links": [
+        {
+          "href": "https://zammad.org",
+          "text": "",
+          "visible": true
+        },
+        {
+          "href": "https://zammad.org",
+          "text": "",
           "visible": true
         }
       ],
@@ -4697,7 +5060,7 @@
       ],
       "link_text": "Photon and Neutron Competence Centre",
       "depth": 2,
-      "parent_url": "https://www.panosc.eu/contact/",
+      "parent_url": "https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/",
       "http_status": 200,
       "final_url": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
       "title": "Photon and Neutron Competence Centre - Panosc",
@@ -5636,13 +5999,23 @@
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
-    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
     "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)",
+    "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
+    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
@@ -5663,16 +6036,6 @@
     "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
-    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
-    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
-    "https://www.panosc.eu/contact/ (already fetched at depth 1)",
-    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
-    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
-    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
-    "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)",
-    "https://www.panosc.eu/panosc-eosc-node/ (already fetched at depth 1)",
-    "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
-    "https://www.panosc.eu/about-european-research-infrastructures/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
     "https://www.panosc.eu/contact/ (already fetched at depth 1)",
@@ -5691,5 +6054,5 @@
     "https://www.panosc.eu/about-panosc/ (already fetched at depth 1)",
     "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 123 link(s) on the landing page, 6 followed because they matched a checklist point, 3 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 20 of 60 used"
+  "crawl_note": "depth 2: 113 link(s) on the landing page, 8 followed because they matched a checklist point, 3 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 20 of 60 used"
 }

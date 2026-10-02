@@ -794,9 +794,32 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-21 at depth 2, 1 October 2026 (unreviewed)
+### Current run: web-22 at depth 2, 2 October 2026 (unreviewed)
 
-From `results/results.json`, run `web-21`, collected on 1 October 2026 between 20:18 and 20:24 UTC by the GitHub workflow ([run 36920498532](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36920498532), commit `fc023b7`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, with Data Terra's new Node Landing Page, `https://www.earth-data.eu/`. It made 98 page requests: 13 landing pages, 58 direct links and 27 second-hop pages. Twelve landing pages returned HTTP 200 and GÉANT's HTTP 403 (the Cloudflare challenge). Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-21` reproduces it exactly, apart from the generation time.
+From `results/results.json`, run `web-22`, collected on 2 October 2026 between 15:42 and 15:49 UTC by the GitHub workflow ([run 37028804263](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37028804263), commit `aa2f7a8`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 118 page requests: 13 landing pages, 68 direct links and 37 second-hop pages. All thirteen landing pages returned HTTP 200. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-22` reproduces it exactly, apart from the generation time.
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 68 |
+| 🔴 FAIL | 3 |
+| 🟠 MANUAL_REVIEW | 59 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+The three FAILs are point 4 for EOSC Finland, PaNOSC and Poland. Seven cells changed against `web-21`:
+
+| Node | Cells | Why |
+|---|---|---|
+| GÉANT | 1, 4, 5b, 6: review to `PASS` | the page was served (HTTP 200), as in `web-16`; it links its own `eosc.eu` entry, the "GÉANT Node Acceptable Use Policy" page (fetched) and a Contact page that names a helpdesk |
+| PaNOSC | 5c: review to `PASS` | it links "Acceptable User Policy and User Access Policy" to a PaNOSC Node User Policies page, fetched and reading like a policy; 5b stays review because "Acceptable User Policy" is not the vocabulary's "Acceptable Use Policy" |
+| PaNOSC | 6: review to `PASS` | it links "PaNOSC Helpdesk", `helpdesk.panosc.eu` |
+| EUDAT | 6: `PASS` to review | the redesigned landing page no longer links "Helpdesk"; it links `info@eudat.eu`, and a "Help Desk" support-request form is two hops away |
+
+**Masking.** The same names as before were masked, and CERN's screenshot again. GÉANT's governance and membership pages were reached again: the same names, plus one more additional observer. EUDAT's new page carries a news item naming two new staff members; both were masked. The privacy check found only role mailboxes.
+
+### Previous run: web-21 at depth 2, 1 October 2026
+
+Run `web-21` was collected on 1 October 2026 between 20:18 and 20:24 UTC by the GitHub workflow ([run 36920498532](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36920498532), commit `fc023b7`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, with Data Terra's new Node Landing Page, `https://www.earth-data.eu/`. It made 98 page requests: 13 landing pages, 58 direct links and 27 second-hop pages. Twelve landing pages returned HTTP 200 and GÉANT's HTTP 403 (the Cloudflare challenge). Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-21` reproduces it exactly, apart from the generation time.
 
 | Verdict | Cells |
 |---|---|
@@ -1241,7 +1264,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 63 PASS · 3 FAIL · 64 review");
+- the headline tally in `README.md` ("130 cells: 68 PASS · 3 FAIL · 59 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 
