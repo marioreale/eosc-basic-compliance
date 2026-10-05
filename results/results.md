@@ -1,6 +1,6 @@
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-23` · 2026-10-02T16:25:59+00:00 · 13 nodes · one page request per node plus 60 followed link(s), then 29 second-hop page(s) (depth 2).
+Run `web-24` · 2026-10-05T21:22:58+00:00 · 13 nodes · one page request per node plus 54 followed link(s), then 28 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -14,18 +14,18 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-130 cells: 🟢 66 PASS · 🔴 1 FAIL · 🟠 63 review.
+130 cells: 🟢 60 PASS · 🔴 1 FAIL · 🟠 59 review · 🟣 10 error.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| BBMRI-ERIC | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR |
 | CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟠 review | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
@@ -34,20 +34,20 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 
 ### Results at depth 2
 
-The same evidence plus 29 page(s) reached one further hop out, under a shared run budget.
+The same evidence plus 28 page(s) reached one further hop out, under a shared run budget.
 
-130 cells: 🟢 66 PASS · 🔴 1 FAIL · 🟠 63 review.
+130 cells: 🟢 60 PASS · 🔴 1 FAIL · 🟠 59 review · 🟣 10 error.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
-| BBMRI-ERIC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| BBMRI-ERIC | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR |
 | CERN | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
+| EOSC Node Czechia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC DTO (D4Science) | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Data Terra | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Finland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
+| EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟠 review | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
@@ -56,7 +56,7 @@ The same evidence plus 29 page(s) reached one further hop out, under a shared ru
 
 ### What the second hop changed
 
-**No verdict changed.** The second hop fetched 29 page(s) and left all 130 cells exactly as depth 1 had them.
+**No verdict changed.** The second hop fetched 28 page(s) and left all 130 cells exactly as depth 1 had them.
 
 That is a finding, not a failure of the deeper crawl. The points still marked 🟠 review are not shallow-crawl artefacts: they turn on a judgement ("clearly state") or quantify over things no crawl enumerates ("all Node Exchange research resources offered by the Node"). Fetching more pages cannot settle either kind, which is why depth 1 remains the default.
 
@@ -64,8 +64,6 @@ That is a finding, not a failure of the deeper crawl. The points still marked �
 
 | Node | Point it was followed for | Page | Served |
 |---|---|---|---|
-| BBMRI-ERIC | 2 | <https://www.bbmri-eric.eu/news-events/bbmri-eric-at-the-integrating-research-and-healthcare-for-rare-diseases-workshop-in-malta/jel_workshop_malta/> | 200 |
-| BBMRI-ERIC | 2 | <https://www.bbmri-eric.eu/national-nodes/> | 200 |
 | CERN | 2 | <https://eosc.cern/about/collaboration> | 200 |
 | CERN | 5b | <https://eosc.cern/policies/aup> | 200 |
 | CERN | 5c | <https://eosc.cern/policies/uap> | 200 |
@@ -88,6 +86,7 @@ That is a finding, not a failure of the deeper crawl. The points still marked �
 | EUDAT | 6 | <https://www.eudat.eu/catalogue> | 200 |
 | EUDAT | 6 | <https://www.eudat.eu/contact-support-request> | 200 |
 | EUDAT | 2 | <https://www.eudat.eu/about> | 200 |
+| EUDAT | 6 | <https://www.eudat.eu/contact-support-request?Service=B2SAFE> | 200 |
 | EUDAT | 6 | <https://www.eudat.eu/contact-support-request?service=B2SHARE> | 200 |
 | EUDAT | 5b | <https://www.eudat.eu/b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html> | 200 |
 | EUDAT | 6 | <https://www.eudat.eu/contact-support-request?service=B2DROP> | 200 |
@@ -167,58 +166,27 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 ## Detail
 
 ### BBMRI-ERIC
-<https://www.bbmri-eric.eu/eosc-node-bbmri-eric/>
+<https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/>
 
-- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 7094 characters of text rendered
-- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 6 distinct external host(s) linked from the landing page
-  - directory.bbmri-eric.eu (Directory)
-  - negotiator.bbmri-eric.eu (Negotiator)
-  - open-science-cloud.ec.europa.eu (European Open Science Cloud (EOSC))
-  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
-- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "­ EOSC Node - BBMRI-ERIC - BBMRI-ERIC Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that my information will be processed according to BBMRI-ERIC's privacy notice . Leave this field empty if you're human: FAQ Downl..."
-  - organisation-like names found: CSC; EOSC4CANCER EPND EPPerMed ERDERA ERIC; ERIC; European Research Infrastructure Consortium
-  - about page one level down: https://www.bbmri-eric.eu/about/ (HTTP 200) opening text: "­ About us - BBMRI-ERIC Fonts A A Contrast A A Newsletter sign-up I give permission for BBMRI-ERIC to send me their newsletter and emails about subjects which they think may be of interest to me. I can unsubscribe from all emails at any time. I understand that..."
-  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
-  - EOSC-referencing image asset(s): 1
-  - img: eosc node - bbmri-eric logo
-  - approved name matched from the unscoped list: "EOSC Node | BBMRI-ERIC" (the page writes it "EOSC Node - BBMRI-ERIC") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
-  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
-- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
-  - "See the dedicated page on the EOSC website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 84 outbound link(s) on the landing page
-  - main text length: 7094 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
-- **5b** 🟢 PASS — The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.
-  - landing page -> https://www.bbmri-eric.eu/services/access-policies/ ("Access Policies")
-  - via https://www.bbmri-eric.eu/services/access-policies/: "Acceptable Use Policy of BBMRI-ERIC Services" -> https://www.bbmri-eric.eu/wp-content/uploads/BBMRI-ERIC-AUP-IT-Services-1_3.pdf
-  - *Reviewer action:* Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟢 PASS — The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.
-  - "Access Policies" -> https://www.bbmri-eric.eu/services/access-policies/
-  - followed: https://www.bbmri-eric.eu/services/access-policies/ -> HTTP 200, 8923 chars, title: Access Policies - BBMRI-ERIC
-  - policy wording found: Policy, You may, conditions
-  - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
-  - "Services & Support" -> https://www.bbmri-eric.eu/services-support/
-  - "Contact" -> https://www.bbmri-eric.eu/contact/
-  - followed: https://www.bbmri-eric.eu/contact/ -> HTTP 200
-  - helpdesk wording on that page: helpdesk
-  - *Reviewer action:* Confirm the route reaches the node's user support.
-- **7** 🟢 PASS — The main content is English and the page declares English.
-  - declared lang attribute: "en-GB"
-  - detected language: en (confidence 1.0)
+- **1** 🟣 ERROR — The page could not be fetched: not fetched: robots.txt disallows it
+  - *Reviewer action:* Retry; if it persists, check the URL registered in the Contributors Dashboard.
+- **1R** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **2** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **3** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **4** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **5a** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **5b** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **5c** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **6** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
+- **7** 🟣 ERROR — Page not fetched: not fetched: robots.txt disallows it
 
 ### CERN
 <https://eosc.cern/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 5984 characters of text rendered
+  - HTTP 200 anonymously, 6011 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 9 distinct external host(s) linked from the landing page
+  - 8 distinct external host(s) linked from the landing page
   - cern.ch (CERN ↗, Directory)
   - eosc-webui.rucioit.cern.ch (Rucio Data Management Scientific Data Management system providing a complete and scalable solution for managing large volumes of data across globally distributed centres.)
   - eosc.cernbox.cern.ch (CERNBox Storage Cloud sync and share service allowing users to store and share data seamlessly across all their devices.)
@@ -238,8 +206,8 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "CERN Node on eosc.eu ↗" -> https://eosc.eu/building-the-eosc-federation/eosc-node-cern
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 39 outbound link(s) on the landing page
-  - main text length: 5471 characters
+  - 37 outbound link(s) on the landing page
+  - main text length: 5498 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page was fetched too.
   - landing page -> https://eosc.cern/policies ("Policies")
@@ -266,13 +234,13 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 5736 characters of text rendered
+  - HTTP 200 anonymously, 5942 characters of text rendered
   - redirects followed: 2
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 7 distinct external host(s) linked from the landing page
+  - 10 distinct external host(s) linked from the landing page
   - bsky.app
-  - nma.eosc.cz (National Metadata Directory)
-  - www.cesnet.cz (Acceptable Use Policy, Privacy Notice, User Access Policy)
+  - chat.ai.e-infra.cz (Sovereign LLM-as-a-Service Workflow Platform)
+  - horizon.brno.openstack.cloud.e-infra.cz (OpenStack)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
   - meta description: "Through the Czech EOSC Node, European researchers can access computing resources, data, repositories, and secure AI and LLM tools through a single sign-on and a single point of access."
@@ -288,16 +256,21 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "DETAILED DESCRIPTION OF EOSC NODE CZECHIA" -> https://eosc.eu/building-the-eosc-federation/eosc-node-czechia
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 81 outbound link(s) on the landing page
-  - main text length: 4082 characters
+  - 93 outbound link(s) on the landing page
+  - main text length: 4288 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to what appears to be an Acceptable Use Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.
-  - "User Access Policy" -> https://www.cesnet.cz/gimg/default/2/0/5/3/2053-CESiD%20AUP%201.0.pdf
-  - "Acceptable Use Policy" -> https://www.cesnet.cz/en/cesid-aup
+  - "AP/AUP EOSC Node Czechia" -> https://www.eosc.cz/media/4245060/aup_eosc_node_czechia-2.pdf
+  - "AUP CESiD" -> https://www.cesnet.cz/gimg/default/2/0/5/3/2053-CESiD%20AUP%201.0.pdf
+  - "AP/AUP EOSC Node Czechia" -> https://www.eosc.cz/media/4245060/aup_eosc_node_czechia-2.pdf
+  - "AUP CESiD" -> https://www.cesnet.cz/gimg/default/2/0/5/3/2053-CESiD%20AUP%201.0.pdf
   - *Reviewer action:* Open the PDF and confirm it is an Acceptable Use Policy, in English. No --depth setting will fetch it. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟢 PASS — The landing page links to what appears to be a User Access Policy. The link target was not fetched (it is a PDF document, which the tool does not download or read), so this is a pointer, not a verified document.
-  - "User Access Policy" -> https://www.cesnet.cz/gimg/default/2/0/5/3/2053-CESiD%20AUP%201.0.pdf
-  - *Reviewer action:* Open the PDF and confirm it is a User Access Policy, in English. No --depth setting will fetch it. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 93 link(s) on the landing page examined, none matching a User Access Policy
+  - 12 linked page(s) read, none linking to a User Access Policy: https://www.eosc.cz/en/about-eosc-cz/contact, https://www.eosc.cz/en/projects/national-support, https://www.eosc.cz/en/about-eosc-cz, https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz, https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards ...
+  - named in the text without a link: Access conditions
+  - an Acceptable Use Policy: "AP/AUP EOSC Node Czechia" -> https://www.eosc.cz/media/4245060/aup_eosc_node_czechia-2.pdf
+  - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
   - "support@eosc.cz" -> mailto:support@eosc.cz
   - "support@eosc.cz" -> mailto:support@eosc.cz
@@ -451,17 +424,17 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://eosc.panosc.eu/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 8533 characters of text rendered
+  - HTTP 200 anonymously, 8231 characters of text rendered
   - redirects followed: 2
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 32 distinct external host(s) linked from the landing page
-  - aiidalab-qe.readthedocs.io (AiiDAlab Quantum ESPRESSO (QE) app)
+  - 28 distinct external host(s) linked from the landing page
   - api.whatsapp.com
   - archive.materialscloud.org (Materials Cloud Archive)
+  - doi.desy.de (PETRA III Public Data Repository)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
   - opening main text: "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Pub..."
-  - organisation-like names found: Institut; Lund University; Neutron Competence Centre; Paul Scherrer Institute
+  - organisation-like names found: Lund University; Neutron Competence Centre; Paul Scherrer Institute
   - about page one level down: https://www.panosc.eu/about-panosc/ (HTTP 200) opening text: "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node Ab..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
@@ -473,11 +446,11 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "PaNOSC Node" -> https://eosc.eu/building-the-eosc-federation/eosc-node-panosc
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 114 outbound link(s) on the landing page
-  - main text length: 8533 characters
+  - 120 outbound link(s) on the landing page
+  - main text length: 8231 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the NLP, but it links to a User Access Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 114 link(s) on the landing page examined, none matching an Acceptable Use Policy
+  - 120 link(s) on the landing page examined, none matching an Acceptable Use Policy
   - 10 linked page(s) read, none linking to an Acceptable Use Policy: https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/, https://www.panosc.eu/contact/, https://helpdesk.panosc.eu, https://www.panosc.eu/about-panosc/, https://www.panosc.eu/about-european-research-infrastructures/ ...
   - a User Access Policy: "Acceptable User Policy and User Access Policy" -> https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/
   - a User Access Policy via https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/: "PaNOSC Node User Policies - Panosc" -> https://www.panosc.eu/panosc-eosc-node/panosc-node-user-policies/
@@ -498,12 +471,12 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://portal.eudat.eu/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 2821 characters of text rendered
+  - HTTP 200 anonymously, 2852 characters of text rendered
   - redirects followed: 1
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 1 distinct external host(s) linked from the landing page
-  - www.eudat.eu (Accessibility Statement, B2DROP Sync and share research data Keep working files in sync across devices and exchange them with collaborators. Learn more, B2FIND Find research data Search a cross-domain metadata catalogue harvested from research communities and repositories. Learn more)
-  - depth 1: 11 of 11 followed page(s) were served anonymously, so those are publicly accessible
+  - www.eudat.eu (Acceptable Use Policy, Accessibility Statement, B2DROP Sync and share research data Keep working files in sync across devices and exchange them with collaborators. Learn more)
+  - depth 1: 13 of 13 followed page(s) were served anonymously, so those are publicly accessible
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
   - opening main text: "Part of the EOSC Federation FAIR data management for every research community The EUDAT EOSC Node brings together services, resources and communities to share, publish and preserve research data across domains and borders. Explore the service catalogue Read the user guides View the dedicated Node page on eosc.eu..."
@@ -520,25 +493,24 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - "View the dedicated Node page on eosc.eu" -> https://eosc.eu/building-the-eosc-federation/eosc-node-eudat
   - "EOSC Node EUDAT" -> https://eosc.eu/building-the-eosc-federation/eosc-node-eudat
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 13 outbound link(s) on the landing page
+  - 14 outbound link(s) on the landing page
   - main text length: 313 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
-  - "EUDAT AUP" -> https://www.eudat.eu/eudat-cdi-aup
-  - followed: https://www.eudat.eu/eudat-cdi-aup -> HTTP 200, 3101 chars, title: EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT
+  - "Acceptable Use Policy" -> https://www.eudat.eu/eudat-cdi-aup
+  - followed: https://www.eudat.eu/eudat-cdi-aup -> HTTP 200, 3101 chars, title: Acceptable Use Policy and Conditions of Use | EUDAT
   - policy wording found: Conditions, You shall, permitted, policy
   - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
-- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
-  - 13 link(s) on the landing page examined, none matching a User Access Policy
-  - 11 linked page(s) read, none linking to a User Access Policy: https://www.eudat.eu/eudat-cdi-aup, https://www.eudat.eu/service-catalogue/b2safe, https://www.eudat.eu/service-catalogue/b2share-0, https://www.eudat.eu/service-catalogue/b2drop, https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies ...
-  - an Acceptable Use Policy: "EUDAT AUP" -> https://www.eudat.eu/eudat-cdi-aup
-  - an Acceptable Use Policy via https://www.eudat.eu/eudat-cdi-aup: "EUDAT CDI Acceptable Use Policy and Conditions of Use | EUDAT" -> https://www.eudat.eu/eudat-cdi-aup
-  - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+- **5c** 🟢 PASS — The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.
+  - "User Access Policy" -> https://www.eudat.eu/eudat-cdi-uap
+  - followed: https://www.eudat.eu/eudat-cdi-uap -> HTTP 200, 9108 chars, title: User Access Policy | EUDAT
+  - policy wording found: authorised, comply, conditions, must not
+  - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **6** 🟠 review — A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
   - "info@eudat.eu" -> mailto:info@eudat.eu
   - followed: https://www.eudat.eu/catalogue -> HTTP 200
   - followed: https://www.eudat.eu/contact-support-request -> HTTP 200
-  - followed: https://www.eudat.eu/contact-support-request?service=B2SHARE -> HTTP 200
+  - followed: https://www.eudat.eu/contact-support-request?Service=B2SAFE -> HTTP 200
   - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
@@ -548,12 +520,12 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://www.egi.eu/egi-node>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 6981 characters of text rendered
+  - HTTP 200 anonymously, 7717 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 6 distinct external host(s) linked from the landing page
+  - 7 distinct external host(s) linked from the landing page
   - bsky.app
   - cdn.egi.eu (EGI User Access Policy (UAP))
-  - github.com
+  - doi.org (Handbook)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
   - opening main text: "EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases ..."
@@ -568,8 +540,8 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EGI EOSC Node on EOSC Association's website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-egi
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 171 outbound link(s) on the landing page
-  - main text length: 4794 characters
+  - 188 outbound link(s) on the landing page
+  - main text length: 5530 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
   - "Acceptable Use Policy and Conditions of Use (AUP)" -> https://www.egi.eu/terms-of-use
@@ -681,15 +653,15 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://eosc.it/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 10612 characters of text rendered
+  - HTTP 200 anonymously, 14122 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 3 distinct external host(s) linked from the landing page
+  - 9 distinct external host(s) linked from the landing page
   - ec.europa.eu (EU H2020 programme)
   - support.d4science.org (Helpdesk, Open the support portal)
-  - www.d4science.org (AUP/UAP, Infrastructure AUP/UAP, Privacy)
+  - www.cineca.it (CINECA)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "Italy's national node of the European Open Science Cloud Candidate EOSC Node · build-up phase Italy EOSC Node | Italy Federating Italian research data, high-performance computing, cloud infrastructure and digital services for FAIR, secure and cross-disciplinary science in Europe. Sign in with EOSC AAI Explore the Node Catalogue Explore Node resources This Node Landing Page is publicly accessible w..."
+  - opening main text: "Italy's national node of the European Open Science Cloud Italy EOSC Node | Italy Federating Italian research data, high-performance computing, cloud infrastructure and digital services for FAIR, secure and cross-disciplinary science in Europe. Sign in with EOSC AAI Explore the Node Catalogue Explore Node resources This Node Landing Page is publicly accessible without login. Protected resources mus..."
   - organisation-like names found: CNR; Italian Research Center
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
@@ -703,11 +675,11 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - "Read the official scientific-impact descriptions on eosc.eu →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-italy
   - "Open the official Node entry →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-italy
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 41 outbound link(s) on the landing page
-  - main text length: 10426 characters
+  - 60 outbound link(s) on the landing page
+  - main text length: 13936 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
-  - "Infrastructure AUP/UAP" -> https://www.d4science.org/policies/access-and-acceptable-use
+  - "Read the D4Science AUP →" -> https://www.d4science.org/policies/access-and-acceptable-use
   - "Infrastructure AUP/UAP" -> https://www.d4science.org/policies/access-and-acceptable-use
   - followed: https://eosc.it/terms-of-use -> HTTP 200, 8785 chars, title: EOSC Node | Italy - Terms of Use
   - policy wording found: Terms, comply, conditions, policy

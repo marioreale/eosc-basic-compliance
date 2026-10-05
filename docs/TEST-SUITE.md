@@ -192,7 +192,7 @@ The landing pages you want checked live in a configuration file, and that is the
 nodes:
   - id: bbmri-eric
     name: BBMRI-ERIC
-    url: https://www.bbmri-eric.eu/eosc-node-bbmri-eric/
+    url: https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-bbmri-eric/
 ```
 
@@ -202,7 +202,7 @@ nodes:
 
 You can also point at an entirely different file without editing the default: `--nodes /path/to/my-nodes.yaml`, available on `collect`, `assess` and `run`. That is the clean way to keep a separate candidate-node list alongside the production one.
 
-**Changing a URL.** BBMRI-ERIC's `url` changed on 25 September 2026, from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, and was set back to the `www.` address on 26 September; the entry carries a comment saying so. `assess` takes each node's URL from `nodes.yaml` and its verdicts from the evidence on disk. So while the `dev3.` address was configured, a bare `assess` headed BBMRI-ERIC's row with it, above verdicts taken from the old page. It says so: it compares the configured URL with the `requested_url` in the evidence, prints a warning, puts an **Evidence from a different URL** banner in `results.md` and `index.html`, and records the pair under `url_mismatch` in `results.json`. To rebuild the published run, assess it with the node list it was collected with; since 26 September the committed `nodes.yaml` differs from it only in Italy's URL, which the skipped Italy row never uses. The command below names that list explicitly and stays right if `nodes.yaml` changes again. It gives no warning, and reproduces the committed `results/` exactly, apart from the generation time:
+**Changing a URL.** BBMRI-ERIC's `url` changed on 25 September 2026, from `https://www.bbmri-eric.eu/eosc-node-bbmri-eric/` to `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`, and was set back to the `www.` address on 26 September; it was changed and set back again on 1 October, and on 5 October 2026 the `dev3.` address was made the default (commit `42aacbe`). The entry carries a comment recording this. `assess` takes each node's URL from `nodes.yaml` and its verdicts from the evidence on disk. So while the `dev3.` address was configured, a bare `assess` headed BBMRI-ERIC's row with it, above verdicts taken from the old page. It says so: it compares the configured URL with the `requested_url` in the evidence, prints a warning, puts an **Evidence from a different URL** banner in `results.md` and `index.html`, and records the pair under `url_mismatch` in `results.json`. To rebuild the published run, assess it with the node list it was collected with; since 26 September the committed `nodes.yaml` differs from it only in Italy's URL, which the skipped Italy row never uses. The command below names that list explicitly and stays right if `nodes.yaml` changes again. It gives no warning, and reproduces the committed `results/` exactly, apart from the generation time:
 
 ```bash
 git show 53081f6:nodes.yaml > /tmp/nodes-2026-09-24.yaml
@@ -794,9 +794,33 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-23 at depth 2, 2 October 2026 (unreviewed)
+### Current run: web-24 at depth 2, 5 October 2026 (unreviewed)
 
-From `results/results.json`, run `web-23`, collected on 2 October 2026 between 16:19 and 16:25 UTC by the GitHub workflow ([run 37033017657](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37033017657), commit `142e002`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 102 page requests: 13 landing pages, 60 direct links and 29 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-23` reproduces it exactly, apart from the generation time.
+From `results/results.json`, run `web-24`, collected on 5 October 2026 between 21:17 and 21:23 UTC by the GitHub workflow ([run 37374849652](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37374849652), commit `42aacbe`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. Commit `42aacbe` made BBMRI-ERIC's default landing page `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`. The run made 94 page requests: 12 landing pages, 54 direct links and 28 second-hop pages. Eleven landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge; BBMRI-ERIC's was not requested, because the `dev3.` host's `robots.txt` disallows it. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-24` reproduces it exactly, apart from the generation time (verified 5 October 2026).
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 60 |
+| 🔴 FAIL | 1 |
+| 🟠 MANUAL_REVIEW | 59 |
+| 🟣 ERROR | 10 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+The one FAIL is point 4 for EOSC Finland. Twelve cells changed against `web-23`:
+
+| Node | Cells | Why |
+|---|---|---|
+| BBMRI-ERIC | all ten to `ERROR` (were 6 PASS, 4 review) | `not fetched: robots.txt disallows it`, at the new `dev3.` default, as on 25 September (trial) and 1 October (`web-18`); this says nothing about compliance |
+| Czechia | 5c: `PASS` to review | no User Access Policy link was found on the landing page or the 12 pages read; it links its AUP ("AP/AUP EOSC Node Czechia", a PDF), and v3.2 allows one document for both |
+| EUDAT | 5c: review to `PASS` | it links "User Access Policy" to `https://www.eudat.eu/eudat-cdi-uap`, which was read (HTTP 200, policy wording) |
+
+**Masking.** The same names as before were masked, and CERN's screenshot again; BBMRI-ERIC has no evidence to mask in this run. No new personal names were found. The privacy check found only role mailboxes. The workflow carried over BBMRI-ERIC's screenshot from `web-23` (its `www.` page); it does not belong to this run and was not published.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects six matches (BBMRI-ERIC left out: no page was read), and `test_update_row.py::test_evidence_from_another_url_is_flagged_on_that_row` now configures the `www.` address against the `dev3.` evidence.
+
+### Previous run: web-23 at depth 2, 2 October 2026
+
+Run `web-23` was collected on 2 October 2026 between 16:19 and 16:25 UTC by the GitHub workflow ([run 37033017657](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37033017657), commit `142e002`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 102 page requests: 13 landing pages, 60 direct links and 29 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-23` reproduces it exactly, apart from the generation time.
 
 | Verdict | Cells |
 |---|---|
@@ -1286,7 +1310,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 66 PASS · 1 FAIL · 63 review");
+- the headline tally in `README.md` ("130 cells: 60 PASS · 1 FAIL · 59 review · 10 ERROR");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 

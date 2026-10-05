@@ -2,7 +2,7 @@
   "node_id": "egi",
   "node_name": "EGI",
   "requested_url": "https://www.egi.eu/egi-node",
-  "fetched_at": "2026-10-02T16:23:34+00:00",
+  "fetched_at": "2026-10-05T21:21:44+00:00",
   "final_url": "https://www.egi.eu/egi-node",
   "http_status": 200,
   "redirect_chain": [],
@@ -10,8 +10,8 @@
   "robots_note": "robots.txt consulted",
   "title": "EGI Node - EGI",
   "lang_attr": "en",
-  "main_text": "EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases in reproducible workflows, AI, sensitive data analysis, machine learning and federated LLM services. EGI for EOSC EGI EOSC Node on EOSC Association's website Objectives Impact Status Access the EGI Node Capabilities Coordination Key Objective in Capacity as a Node To act as a Node for data-intensive computing and large-scale research data exploitation, enabling seamless, cross-border access to FAIR data, advanced analytics, AI/ML models, compute, storage, workflow and federating capabilities for EOSC. Impact Science Areas The EGI Node is multidisciplinary, operating in the following areas: Data-intensive science Cloud computing High-throughput computing High-performance computing Artificial Intelligence and machine learning Cross-disciplinary research Scientific Impact EGI enables large-scale interdisciplinary data exploitation by combining compute, storage, workflows, data services, AI/ML models and EOSC federating capabilities across a distributed European infrastructure. Use Cases Reproducible workflows AI validation on sensitive health data Cross-node machine learning pipelines Federated LLM services Large-scale cross-node data processing FAIR Data Scientific datasets accessible through EGI DataHub and integrated NGI/RI resources. Domain data services such as EODC Data Catalog, HAL, Recherche Data Gouv, FAIDare API, WeNMR, DATAlife, yProvStore and PITHIA e-Science. FAIR-enabling services for data access, transfer, storage, provenance and reuse. Status The EGI Node currently has the status of Candidate Node. Technical status Federated AAI Onboarded service catalogues (EGI catalogue; NGI and RI service resources) Application workflow management Service monitoring Service and research product accounting Order management Helpdesk Management system Timeline and milestones Phased deployment roadmap for 2026-2027, with use cases expanded through EOSC Mesh and ongoing operation of EOSC federating capabilities. Deliverables Project charter Integration with Federating Capabilities: AAI and Catalogue Application Deployment Management API – Software Release Report: Use cases – Lessons learnt and next steps Integration with Federating Capabilities: Helpdesk, Monitoring, SMS Stakeholders and communities’ engagement strategy EOSC Mesh Cross-Node use case analysis and implementation plan How to access the node Services offered through the EGI EOSC Node are provided in accordance with the EGI User Access Policy (UAP) and Acceptable Use Policy and Conditions of Use (AUP) . Individual services may define additional or service-specific access conditions reflecting their specific characteristics, funding model, technical requirements or target communities. Where a service has a customised User Access Policy, the applicable policy is provided on the service’s web page. EGI Node Services EGI EOSC Node Helpdesk Capabilities of Node 1 1 Federated Services EGI Check-in EGI Service Catalogue Monitoring Accounting Helpdesk Order Management Application Deployment Management 2 2 Data repositories EGI DataHub NGI-AT EODC Data Catalog NGI-FR HAL Recherche Data Gouv FAIDare API WeNMR portal DATAlife PITHIA e-Science 3 3 Virtual Research Environments EGI Notebooks EGI Replay Galaxy and community VREs through NGI/RI services 4 4 File sync-and-share EGI Online Storage EGI Data Transfer 5 5 Compute and storage EGI Cloud Compute EGI Cloud Container EGI HTC EGI Online Storage EGI Data Transfer 6 6 Other EGI Software Distribution EGI Workload Manager EGI Infrastructure Manager Secrets Store AI/ML platforms Node Coordination & Structure Coordination [names removed___], EGI Foundation Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI Internal organisational structure Operated by EGI Foundation on behalf of EGI Federation Federated research data centres across Europe and beyond NGI and RI service providers Federator / hub role for EOSC core capabilities Read More Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform",
-  "full_text": "About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases in reproducible workflows, AI, sensitive data analysis, machine learning and federated LLM services. EGI for EOSC EGI EOSC Node on EOSC Association's website Objectives Impact Status Access the EGI Node Capabilities Coordination Key Objective in Capacity as a Node To act as a Node for data-intensive computing and large-scale research data exploitation, enabling seamless, cross-border access to FAIR data, advanced analytics, AI/ML models, compute, storage, workflow and federating capabilities for EOSC. Impact Science Areas The EGI Node is multidisciplinary, operating in the following areas: Data-intensive science Cloud computing High-throughput computing High-performance computing Artificial Intelligence and machine learning Cross-disciplinary research Scientific Impact EGI enables large-scale interdisciplinary data exploitation by combining compute, storage, workflows, data services, AI/ML models and EOSC federating capabilities across a distributed European infrastructure. Use Cases Reproducible workflows AI validation on sensitive health data Cross-node machine learning pipelines Federated LLM services Large-scale cross-node data processing FAIR Data Scientific datasets accessible through EGI DataHub and integrated NGI/RI resources. Domain data services such as EODC Data Catalog, HAL, Recherche Data Gouv, FAIDare API, WeNMR, DATAlife, yProvStore and PITHIA e-Science. FAIR-enabling services for data access, transfer, storage, provenance and reuse. Status The EGI Node currently has the status of Candidate Node. Technical status Federated AAI Onboarded service catalogues (EGI catalogue; NGI and RI service resources) Application workflow management Service monitoring Service and research product accounting Order management Helpdesk Management system Timeline and milestones Phased deployment roadmap for 2026-2027, with use cases expanded through EOSC Mesh and ongoing operation of EOSC federating capabilities. Deliverables Project charter Integration with Federating Capabilities: AAI and Catalogue Application Deployment Management API – Software Release Report: Use cases – Lessons learnt and next steps Integration with Federating Capabilities: Helpdesk, Monitoring, SMS Stakeholders and communities’ engagement strategy EOSC Mesh Cross-Node use case analysis and implementation plan How to access the node Services offered through the EGI EOSC Node are provided in accordance with the EGI User Access Policy (UAP) and Acceptable Use Policy and Conditions of Use (AUP) . Individual services may define additional or service-specific access conditions reflecting their specific characteristics, funding model, technical requirements or target communities. Where a service has a customised User Access Policy, the applicable policy is provided on the service’s web page. EGI Node Services EGI EOSC Node Helpdesk Capabilities of Node 1 1 Federated Services EGI Check-in EGI Service Catalogue Monitoring Accounting Helpdesk Order Management Application Deployment Management 2 2 Data repositories EGI DataHub NGI-AT EODC Data Catalog NGI-FR HAL Recherche Data Gouv FAIDare API WeNMR portal DATAlife PITHIA e-Science 3 3 Virtual Research Environments EGI Notebooks EGI Replay Galaxy and community VREs through NGI/RI services 4 4 File sync-and-share EGI Online Storage EGI Data Transfer 5 5 Compute and storage EGI Cloud Compute EGI Cloud Container EGI HTC EGI Online Storage EGI Data Transfer 6 6 Other EGI Software Distribution EGI Workload Manager EGI Infrastructure Manager Secrets Store AI/ML platforms Node Coordination & Structure Coordination [names removed___], EGI Foundation Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI Internal organisational structure Operated by EGI Foundation on behalf of EGI Federation Federated research data centres across Europe and beyond NGI and RI service providers Federator / hub role for EOSC core capabilities Read More Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform Services Services for Research Services for Business Services for Federation EGI Access Call Solutions Batch computing Interactive computing Federated access Data spaces Data federation Service hosting EGI for AI EGI for Data Spaces EGI for EOSC EGI Node Resources Magazine News Publications Subcribe to our Newsletter Training Materials EGI Conference EGI on Zenodo Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons RI-SCALE SPECTRUM Service Contracts Past projects About EGI Foundation EGI Federation EGI Infrastructure EGI Community EGI Digital Innovation Hub Foundation Team Careers Frequently Asked Questions Contact us terms of use | data protection | certifications",
+  "main_text": "EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases in reproducible workflows, AI, sensitive data analysis, machine learning and federated LLM services. EGI for EOSC EGI EOSC Node on EOSC Association's website Objectives Impact Status Access the EGI Node Services Capabilities Coordination Key Objective in Capacity as a Node To act as a Node for data-intensive computing and large-scale research data exploitation, enabling seamless, cross-border access to FAIR data, advanced analytics, AI/ML models, compute, storage, workflow and federating capabilities for EOSC. Impact Science Areas The EGI Node is multidisciplinary, operating in the following areas: Data-intensive science Cloud computing High-throughput computing High-performance computing Artificial Intelligence and machine learning Cross-disciplinary research Scientific Impact EGI enables large-scale interdisciplinary data exploitation by combining compute, storage, workflows, data services, AI/ML models and EOSC federating capabilities across a distributed European infrastructure. Use Cases Reproducible workflows AI validation on sensitive health data Cross-node machine learning pipelines Federated LLM services Large-scale cross-node data processing FAIR Data Scientific datasets accessible through EGI DataHub and integrated NGI/RI resources. Domain data services such as EODC Data Catalog, HAL, Recherche Data Gouv, FAIDare API, WeNMR, DATAlife, yProvStore and PITHIA e-Science. FAIR-enabling services for data access, transfer, storage, provenance and reuse. Status The EGI Node currently has the status of Candidate Node. Technical status Federated AAI “Onboarded service catalogues (initially EGI Services for Research catalogue; later NGI and RI service resources and other EGI services) Application workflow management Service monitoring Service and research product accounting Order management Helpdesk Management system Timeline and milestones Phased deployment roadmap for 2026-2027, with use cases expanded through EOSC Mesh and ongoing operation of EOSC federating capabilities. Deliverables Project charter Integration with Federating Capabilities: AAI and Catalogue Application Deployment Management API – Software Release Report: Use cases – Lessons learnt and next steps Integration with Federating Capabilities: Helpdesk, Monitoring, SMS Stakeholders and communities’ engagement strategy EOSC Mesh Cross-Node use case analysis and implementation plan How to access the node Services offered through the EGI EOSC Node are provided in accordance with the EGI User Access Policy (UAP) and Acceptable Use Policy and Conditions of Use (AUP) . Individual services may define additional or service-specific access conditions reflecting their specific characteristics, funding model, technical requirements or target communities. Where a service has a customised User Access Policy, the applicable policy is provided on the service’s web page. EGI Node Services EGI EOSC Node Helpdesk Services Check-in Cloud Compute Cloud Container Compute DataHub Data Transfer FitSM Training High-Throughput Compute Infrastructure Manager ISO 27001 Training Notebooks Online Storage Replay Secrets Store Software Distribution Training Infrastructure Workload Manager Capabilities of the Node Node Core Capabilities EGI Node operates a mature portfolio of production services delivering all functions required by the Node Core Capabilities defined in the Handbook : AAI, Catalogues, Helpdesk, Service Monitoring, Service and Research Product accounting, Configuration Management System, User Space & Order Management, Application Deployment Management, Resource Provisioning. These Node Core Capabilities are also offered as building blocks to other aspiring EOSC Nodes. Services for Research A rich portfolio of services for data-intensive computing and large-scale research data exploitation including scalable compute and storage resources, cloud and container platforms, workflows, research data repositories, AI/ML models, and applications. The offering will be progressively complemented by research environments and repositories integrated with the EGI infrastructure provided by EGI members (NGIs), research infrastructures and scientific communities at the national and European levels. Node Coordination & Structure Coordination [names removed___], EGI Foundation Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI Internal organisational structure Operated by EGI Foundation on behalf of EGI Federation Federated research data centres across Europe and beyond NGI and RI service providers Aspire to act as Federator / hub in the EOSC Federation delivering and operating Core federating capabilities Read More Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform",
+  "full_text": "About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us About About Us EGI Foundation EGI Federation EGI Infrastructure EGI Community Foundation Team Frequently Asked Questions Services Our Services Services for Research Services for Business EGI Digital Innovation Hub Services for Federation Solutions Our Solutions Use Cases Success Stories EGI for AI EGI & AI Innovation EGI for Data Spaces EGI for EOSC EGI Node Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons EOSC Mesh RI-SCALE ENSURE RItrain-DIGIT Service Contracts Project Archive Resources EGI on Zenodo Magazine Newsletter Publications Training Materials Media Kit News & Events News EGI Conference Community Events Trainings & Webinars Participate Our Users Join the EGI Federation EGI Access Call Careers Share Your News and Events Contact Us EGI for EOSC EGI Node Operated by the EGI Foundation on behalf of the EGI Federation, the Node provides scalable compute, storage, data management and advanced digital research services for data-intensive science. It delivers EOSC Core and Federating Capabilities including AAI, catalogue, monitoring, accounting, helpdesk and application deployment management, while supporting multi-node use cases in reproducible workflows, AI, sensitive data analysis, machine learning and federated LLM services. EGI for EOSC EGI EOSC Node on EOSC Association's website Objectives Impact Status Access the EGI Node Services Capabilities Coordination Key Objective in Capacity as a Node To act as a Node for data-intensive computing and large-scale research data exploitation, enabling seamless, cross-border access to FAIR data, advanced analytics, AI/ML models, compute, storage, workflow and federating capabilities for EOSC. Impact Science Areas The EGI Node is multidisciplinary, operating in the following areas: Data-intensive science Cloud computing High-throughput computing High-performance computing Artificial Intelligence and machine learning Cross-disciplinary research Scientific Impact EGI enables large-scale interdisciplinary data exploitation by combining compute, storage, workflows, data services, AI/ML models and EOSC federating capabilities across a distributed European infrastructure. Use Cases Reproducible workflows AI validation on sensitive health data Cross-node machine learning pipelines Federated LLM services Large-scale cross-node data processing FAIR Data Scientific datasets accessible through EGI DataHub and integrated NGI/RI resources. Domain data services such as EODC Data Catalog, HAL, Recherche Data Gouv, FAIDare API, WeNMR, DATAlife, yProvStore and PITHIA e-Science. FAIR-enabling services for data access, transfer, storage, provenance and reuse. Status The EGI Node currently has the status of Candidate Node. Technical status Federated AAI “Onboarded service catalogues (initially EGI Services for Research catalogue; later NGI and RI service resources and other EGI services) Application workflow management Service monitoring Service and research product accounting Order management Helpdesk Management system Timeline and milestones Phased deployment roadmap for 2026-2027, with use cases expanded through EOSC Mesh and ongoing operation of EOSC federating capabilities. Deliverables Project charter Integration with Federating Capabilities: AAI and Catalogue Application Deployment Management API – Software Release Report: Use cases – Lessons learnt and next steps Integration with Federating Capabilities: Helpdesk, Monitoring, SMS Stakeholders and communities’ engagement strategy EOSC Mesh Cross-Node use case analysis and implementation plan How to access the node Services offered through the EGI EOSC Node are provided in accordance with the EGI User Access Policy (UAP) and Acceptable Use Policy and Conditions of Use (AUP) . Individual services may define additional or service-specific access conditions reflecting their specific characteristics, funding model, technical requirements or target communities. Where a service has a customised User Access Policy, the applicable policy is provided on the service’s web page. EGI Node Services EGI EOSC Node Helpdesk Services Check-in Cloud Compute Cloud Container Compute DataHub Data Transfer FitSM Training High-Throughput Compute Infrastructure Manager ISO 27001 Training Notebooks Online Storage Replay Secrets Store Software Distribution Training Infrastructure Workload Manager Capabilities of the Node Node Core Capabilities EGI Node operates a mature portfolio of production services delivering all functions required by the Node Core Capabilities defined in the Handbook : AAI, Catalogues, Helpdesk, Service Monitoring, Service and Research Product accounting, Configuration Management System, User Space & Order Management, Application Deployment Management, Resource Provisioning. These Node Core Capabilities are also offered as building blocks to other aspiring EOSC Nodes. Services for Research A rich portfolio of services for data-intensive computing and large-scale research data exploitation including scalable compute and storage resources, cloud and container platforms, workflows, research data repositories, AI/ML models, and applications. The offering will be progressively complemented by research environments and repositories integrated with the EGI infrastructure provided by EGI members (NGIs), research infrastructures and scientific communities at the national and European levels. Node Coordination & Structure Coordination [names removed___], EGI Foundation Contributing organisations EGI Foundation EGI Federation National Grid Initiatives (NGIs) Research infrastructures and scientific communities integrated with EGI Internal organisational structure Operated by EGI Foundation on behalf of EGI Federation Federated research data centres across Europe and beyond NGI and RI service providers Aspire to act as Federator / hub in the EOSC Federation delivering and operating Core federating capabilities Read More Services for Research Our large-scale computing and data analytics services are helping scientists to accelerate the process leading EGI for EOSC The services and expertise of the EGI Federation are recognised as key assets for the Services enabling federated computing in EOSC EGI-ACE project delivers various services that ensure the efficient management of the EOSC Compute Platform Services Services for Research Services for Business Services for Federation EGI Access Call Solutions Batch computing Interactive computing Federated access Data spaces Data federation Service hosting EGI for AI EGI for Data Spaces EGI for EOSC EGI Node Resources Magazine News Publications Subcribe to our Newsletter Training Materials EGI Conference EGI on Zenodo Projects ENVRI-Hub NEXT EOSC Beyond EOSC Data Commons RI-SCALE SPECTRUM Service Contracts Past projects About EGI Foundation EGI Federation EGI Infrastructure EGI Community EGI Digital Innovation Hub Foundation Team Careers Frequently Asked Questions Contact us terms of use | data protection | certifications",
   "links": [
     {
       "href": "https://www.egi.eu/",
@@ -584,6 +584,91 @@
       "visible": true
     },
     {
+      "href": "https://www.egi.eu/service/check-in/",
+      "text": "Check-in",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/cloud-compute/",
+      "text": "Cloud Compute",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/cloud-container-compute/",
+      "text": "Cloud Container Compute",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/datahub/",
+      "text": "DataHub",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/data-transfer/",
+      "text": "Data Transfer",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/fitsm-training/",
+      "text": "FitSM Training",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/high-throughput-compute/",
+      "text": "High-Throughput Compute",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/infrastructure-manager/",
+      "text": "Infrastructure Manager",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/iso-27001-training/",
+      "text": "ISO 27001 Training",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/notebooks/",
+      "text": "Notebooks",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/online-storage/",
+      "text": "Online Storage",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/replay/",
+      "text": "Replay",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/secrets-store/",
+      "text": "Secrets Store",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/software-distribution/",
+      "text": "Software Distribution",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/training-infrastructure/",
+      "text": "Training Infrastructure",
+      "visible": true
+    },
+    {
+      "href": "https://www.egi.eu/service/workload-manager/",
+      "text": "Workload Manager",
+      "visible": true
+    },
+    {
+      "href": "https://doi.org/10.5281/zenodo.18454649",
+      "text": "Handbook",
+      "visible": true
+    },
+    {
       "href": "https://www.egi.eu/person/person-xxxxxxx/",
       "text": "Coordination [names removed___], EGI Foundation",
       "visible": true
@@ -900,6 +985,134 @@
       "aria_label": "",
       "title": "",
       "css_class": "rounded-md",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F02%2FService-icon-2400x1600-Check-in.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-Cloud-Compute.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-Cloud-Container-Compute.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-DataHub.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-Data-Transfer-.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FFITSM-1.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-High-Throughput-Compute-HTC.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2023%2F06%2Fegi-infrastructure-manager.jpg&w=3840&q=75",
+      "alt": "EGI Infrastructure Manager",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F05%2FISO27001.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-Notebooks.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-Training-Infrastructure-1.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2023%2F06%2Fegi-replay.jpg&w=3840&q=75",
+      "alt": "EGI Replay",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2024%2F06%2Fegi-secrets-store-icon.jpg&w=3840&q=75",
+      "alt": "EGI Secrets Store",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2023%2F02%2Fegi-software-distribution.jpg&w=3840&q=75",
+      "alt": "EGI Software Distribution",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FTraining-Infrastructure-1.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
+      "inline_svg": false
+    },
+    {
+      "src": "https://www.egi.eu/_next/image?url=https%3A%2F%2Fcdn.egi.eu%2Fapp%2Fuploads%2F2022%2F04%2FService-icon-2400x1600-Workload-Manager.png&w=3840&q=75",
+      "alt": "Image",
+      "aria_label": "",
+      "title": "",
+      "css_class": "object-cover overflow-hidden group-hover:scale-110 transition-all rounded-md h-[235px]",
       "inline_svg": false
     },
     {
@@ -1885,6 +2098,12 @@
       "visible": true
     },
     {
+      "text": "Services",
+      "href": "https://www.egi.eu/egi-node#services",
+      "tag": "a",
+      "visible": true
+    },
+    {
       "text": "Capabilities",
       "href": "https://www.egi.eu/egi-node#capabilities",
       "tag": "a",
@@ -1917,6 +2136,108 @@
     {
       "text": "EGI EOSC Node Helpdesk",
       "href": "mailto:helpdesk@ggus.org",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Check-in",
+      "href": "https://www.egi.eu/service/check-in/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cloud Compute",
+      "href": "https://www.egi.eu/service/cloud-compute/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cloud Container Compute",
+      "href": "https://www.egi.eu/service/cloud-container-compute/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "DataHub",
+      "href": "https://www.egi.eu/service/datahub/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Data Transfer",
+      "href": "https://www.egi.eu/service/data-transfer/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "FitSM Training",
+      "href": "https://www.egi.eu/service/fitsm-training/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "High-Throughput Compute",
+      "href": "https://www.egi.eu/service/high-throughput-compute/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Infrastructure Manager",
+      "href": "https://www.egi.eu/service/infrastructure-manager/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ISO 27001 Training",
+      "href": "https://www.egi.eu/service/iso-27001-training/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Notebooks",
+      "href": "https://www.egi.eu/service/notebooks/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Online Storage",
+      "href": "https://www.egi.eu/service/online-storage/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Replay",
+      "href": "https://www.egi.eu/service/replay/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Secrets Store",
+      "href": "https://www.egi.eu/service/secrets-store/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Software Distribution",
+      "href": "https://www.egi.eu/service/software-distribution/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training Infrastructure",
+      "href": "https://www.egi.eu/service/training-infrastructure/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Workload Manager",
+      "href": "https://www.egi.eu/service/workload-manager/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Handbook",
+      "href": "https://doi.org/10.5281/zenodo.18454649",
       "tag": "a",
       "visible": true
     },
@@ -6892,6 +7213,22 @@
     "https://www.egi.eu/services/federation/ (cap for point 5s)",
     "https://www.egi.eu/service-contracts/ (cap for point 5s)",
     "https://www.egi.eu/resources/ (cap for point 5s)",
+    "https://www.egi.eu/service/check-in/ (cap for point 5s)",
+    "https://www.egi.eu/service/cloud-compute/ (cap for point 5s)",
+    "https://www.egi.eu/service/cloud-container-compute/ (cap for point 5s)",
+    "https://www.egi.eu/service/datahub/ (cap for point 5s)",
+    "https://www.egi.eu/service/data-transfer/ (cap for point 5s)",
+    "https://www.egi.eu/service/fitsm-training/ (cap for point 5s)",
+    "https://www.egi.eu/service/high-throughput-compute/ (cap for point 5s)",
+    "https://www.egi.eu/service/infrastructure-manager/ (cap for point 5s)",
+    "https://www.egi.eu/service/iso-27001-training/ (cap for point 5s)",
+    "https://www.egi.eu/service/notebooks/ (cap for point 5s)",
+    "https://www.egi.eu/service/online-storage/ (cap for point 5s)",
+    "https://www.egi.eu/service/replay/ (cap for point 5s)",
+    "https://www.egi.eu/service/secrets-store/ (cap for point 5s)",
+    "https://www.egi.eu/service/software-distribution/ (cap for point 5s)",
+    "https://www.egi.eu/service/training-infrastructure/ (cap for point 5s)",
+    "https://www.egi.eu/service/workload-manager/ (cap for point 5s)",
     "https://www.egi.eu/egi-for-eosc/ (cap for point 5s)",
     "https://www.egi.eu/services-enabling-federated-computing-in-eosc/ (cap for point 5s)",
     "https://www.egi.eu/services/business/ (cap for point 5s)",
@@ -6927,12 +7264,7 @@
     "https://www.egi.eu/about/ (already fetched at depth 1)",
     "https://www.egi.eu/about/ (already fetched at depth 1)",
     "https://www.egi.eu/about/ (already fetched at depth 1)",
-    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
-    "https://www.egi.eu/contact-us/ (already fetched at depth 1)",
-    "https://www.egi.eu/about/ (already fetched at depth 1)",
-    "https://www.egi.eu/about/ (already fetched at depth 1)",
-    "https://www.egi.eu/about/ (already fetched at depth 1)",
-    "https://www.egi.eu/about/ (already fetched at depth 1)"
+    "https://www.egi.eu/contact-us/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 171 link(s) on the landing page, 5 followed because they matched a checklist point, 15 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 28 of 60 used"
+  "crawl_note": "depth 2: 188 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 27 of 60 used"
 }

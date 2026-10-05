@@ -179,23 +179,24 @@ def test_a_node_the_run_skipped_is_inserted_in_nodes_yaml_order(stored, monkeypa
 
 
 def test_evidence_from_another_url_is_flagged_on_that_row(stored, tmp_path):
-    """bbmri-eric's stored evidence is from its www. page; a node list giving it
-    another URL (the dev3. address it had from 25 to 26 September) is flagged."""
-    nodes = tmp_path / "nodes-dev3.yaml"
+    """bbmri-eric's stored evidence is from its dev3. page (the default since
+    5 October 2026); a node list giving it another URL (the www. address it had
+    before) is flagged."""
+    nodes = tmp_path / "nodes-www.yaml"
     nodes.write_text(
         cli.DEFAULT_NODES.read_text(encoding="utf-8").replace(
-            "url: https://www.bbmri-eric.eu/", "url: https://dev3.bbmri-eric.eu/"
+            "url: https://dev3.bbmri-eric.eu/", "url: https://www.bbmri-eric.eu/"
         ),
         encoding="utf-8",
     )
-    assert "dev3.bbmri-eric.eu" in nodes.read_text(encoding="utf-8")
+    assert "url: https://www.bbmri-eric.eu/" in nodes.read_text(encoding="utf-8")
     assert _invoke(
         "assess", "--update-results-for-node", "bbmri-eric", "--results", str(stored),
         "--nodes", str(nodes),
     ).exit_code == 0
     after = _load(stored)
     (m,) = after["url_mismatch"]
-    assert m["id"] == "bbmri-eric" and m["evidence_url"].startswith("https://www.bbmri-eric.eu/")
+    assert m["id"] == "bbmri-eric" and m["evidence_url"].startswith("https://dev3.bbmri-eric.eu/")
     assert "Evidence from a different URL" in (stored / "results.md").read_text(encoding="utf-8")
 
 

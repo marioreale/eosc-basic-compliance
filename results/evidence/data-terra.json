@@ -2,7 +2,7 @@
   "node_id": "data-terra",
   "node_name": "Data Terra",
   "requested_url": "https://www.earth-data.eu/",
-  "fetched_at": "2026-10-02T16:21:30+00:00",
+  "fetched_at": "2026-10-05T21:19:33+00:00",
   "final_url": "https://www.earth-data.eu/",
   "http_status": 200,
   "redirect_chain": [],
@@ -1622,5 +1622,5 @@
     "https://www.earth-data.eu/about/ (already fetched at depth 1)",
     "https://www.earth-data.eu/about/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 51 link(s) on the landing page, 3 followed because they matched a checklist point, 6 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 16 of 60 used"
+  "crawl_note": "depth 2: 51 link(s) on the landing page, 3 followed because they matched a checklist point, 6 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 14 of 60 used"
 }

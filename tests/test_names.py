@@ -395,7 +395,9 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     (1 October 2026) Data Terra's new page, https://www.earth-data.eu/, matches
     too ("EOSC Node Data Terra"). In web-22 (2 October 2026) GÉANT's page was
     served and matched; in web-23 it was not, and Poland's page now writes
-    "EOSC Node Poland", the seventh match.
+    "EOSC Node Poland", the seventh match. In web-24 (5 October 2026)
+    BBMRI-ERIC's new default, the dev3. page, was not fetched (its robots.txt
+    disallows it), so six remain.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -406,7 +408,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-pl"}
+    assert matched == {"eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-pl"}
 
 
 # --- what the page calls itself, when nothing matched ------------------------
