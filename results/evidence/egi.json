@@ -2,7 +2,7 @@
   "node_id": "egi",
   "node_name": "EGI",
   "requested_url": "https://www.egi.eu/egi-node",
-  "fetched_at": "2026-10-05T21:21:44+00:00",
+  "fetched_at": "2026-10-06T10:39:58+00:00",
   "final_url": "https://www.egi.eu/egi-node",
   "http_status": 200,
   "redirect_chain": [],
@@ -7266,5 +7266,5 @@
     "https://www.egi.eu/about/ (already fetched at depth 1)",
     "https://www.egi.eu/contact-us/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 188 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 27 of 60 used"
+  "crawl_note": "depth 2: 188 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 33 of 60 used"
 }

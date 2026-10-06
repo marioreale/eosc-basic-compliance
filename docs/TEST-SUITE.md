@@ -794,9 +794,33 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-24 at depth 2, 5 October 2026 (unreviewed)
+### Current run: web-25 at depth 2, 6 October 2026 (unreviewed)
 
-From `results/results.json`, run `web-24`, collected on 5 October 2026 between 21:17 and 21:23 UTC by the GitHub workflow ([run 37374849652](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37374849652), commit `42aacbe`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. Commit `42aacbe` made BBMRI-ERIC's default landing page `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`. The run made 94 page requests: 12 landing pages, 54 direct links and 28 second-hop pages. Eleven landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge; BBMRI-ERIC's was not requested, because the `dev3.` host's `robots.txt` disallows it. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-24` reproduces it exactly, apart from the generation time (verified 5 October 2026).
+From `results/results.json`, run `web-25`, collected on 6 October 2026 between 10:35 and 10:41 UTC by the GitHub workflow ([run 37450646487](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37450646487), commit `ddb7711`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200, BBMRI-ERIC's `dev3.` page among them (its `robots.txt` no longer excludes the tool); GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-25` reproduces it exactly, apart from the generation time (verified 6 October 2026).
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 68 |
+| 🔴 FAIL | 0 |
+| 🟠 MANUAL_REVIEW | 62 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+**No FAIL is left**, for the first time. Thirteen cells changed against `web-24`:
+
+| Node | Cells | Why |
+|---|---|---|
+| BBMRI-ERIC | 1, 4, 5b, 6, 7: `ERROR` to `PASS`; 1R, 2, 3, 5a, 5c: `ERROR` to review | the `dev3.` page was served; it links its own `eosc.eu` entry ("See the dedicated page on the EOSC website"), an "Acceptable Use Policy" PDF (a pointer) and its Helpdesk; no User Access Policy is linked, so 5c is review; its text writes "EOSC Node – BBMRI-ERIC", which matches the approved list |
+| EOSC Finland | 4: `FAIL` to `PASS`; 5c: review to `PASS` | it links "EOSC Node Finland (External link)" to `https://eosc.eu/building-the-eosc-federation/eosc-node-finland`, and "User Access Policy and the Acceptable Use Policy" to its Node Policies page, which was read; its text now writes "EOSC Node Finland", which matches |
+| Data Terra | 5c: review to `PASS` | the policy link now reads "EOSC Node Data Terra Acceptable Use Policy and User Access Policy" (documentation site, not fetched: a pointer) |
+
+**Masking.** The same names as before were masked, and CERN's screenshot again. BBMRI-ERIC's `dev3.` pages added fifteen personal names, masked with same-length placeholders: the Director General (legal notice), the seven members of the scientific and ethical advisory board (governance page), the Stakeholder Forum chair and the head of public affairs (contact and stakeholder forum pages), and five finance, project and HR staff listed in capitals (finance and project management page). Its screenshot shows no names. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects eight matches (BBMRI-ERIC back, at its `dev3.` page, and EOSC Finland new).
+
+### Previous run: web-24 at depth 2, 5 October 2026
+
+Run `web-24` was collected on 5 October 2026 between 21:17 and 21:23 UTC by the GitHub workflow ([run 37374849652](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37374849652), commit `42aacbe`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. Commit `42aacbe` made BBMRI-ERIC's default landing page `https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/`. The run made 94 page requests: 12 landing pages, 54 direct links and 28 second-hop pages. Eleven landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge; BBMRI-ERIC's was not requested, because the `dev3.` host's `robots.txt` disallows it. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-24` reproduces it exactly, apart from the generation time (verified 5 October 2026).
 
 | Verdict | Cells |
 |---|---|
@@ -1310,7 +1334,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 60 PASS · 1 FAIL · 59 review · 10 ERROR");
+- the headline tally in `README.md` ("130 cells: 68 PASS · 0 FAIL · 62 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 
