@@ -1,6 +1,6 @@
 {
-  "run_id": "web-25",
-  "generated_at": "2026-10-06T10:42:57+00:00",
+  "run_id": "web-26",
+  "generated_at": "2026-10-06T16:14:35+00:00",
   "checklist": {
     "checklist_version": "3.2",
     "checklist_date": "2026-09-28",
@@ -112,7 +112,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-10-06T10:35:03+00:00",
+        "fetched_at": "2026-10-06T16:07:28+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -568,7 +568,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.cern/",
-        "fetched_at": "2026-10-06T10:35:53+00:00",
+        "fetched_at": "2026-10-06T16:08:22+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
@@ -994,7 +994,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-10-06T10:36:19+00:00",
+        "fetched_at": "2026-10-06T16:08:48+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -1503,7 +1503,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-10-06T10:36:58+00:00",
+        "fetched_at": "2026-10-06T16:09:29+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -1540,7 +1540,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEidpm1IrqRS1QqpUECqPBZvK2FNq4djBY%2FP4e5JULUUCtp57z9yZcYm80S2rg9%2BbDbwGQB%2FViOC8smZhDYYG3C24NyXgfrOuyN77FhmlGNrWOp%2FIMQoFRkBi3TPlHYf2SCq41k9cvJBo2TGV4T3w286FsMF4%2FM3vgOsG6alCW2e9FVYPZBKtlhXZQlEU2U5M4pGc7eJxnvJ4lmYiziYwvhCwk1M566SIAVYGPTe%2BInmaF3GWxmlxl6VsNGXZ9JFED%2BBwyJYnKYk%2BGm2Q9Y0qEpxhlqNCZngDyLxgt%2FXVmnVCxo9LOre0%2F3uOc5B52avZkM7NHchGGdh2ZRlEz9yeZi%2FpubI8XOu6I6%2BWN1Yr8RnVWtv3RbczDxXxLgCJLq1ruP87S5Zkw4uS8W6QMmi40rWUDhAJnR%2B6%2FvwW8y8%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUsch6cNqKkWtkCoVhFpgwaZynSm1cOzgsXn8PUmqliIBW8%2B9Z%2B7MeIqi1g0vgz%2BYNbwGQB%2BViOC8smZuDYYa3Abcm5LwsF4V5OB9g5xSDE1jnR9UGUoFRsLAumcqWg7tkFQKrXdCvpBo0TKVER3w2y6ktMF4%2FM3vQOga6blCG2e9lVb3ZBItFwXZyqt8lGZyFI%2FzPYuzXGbxJGcsrthOpPlov892rJUiBlga9ML4gqRJOoxZEifDezbkyYRn4ycSPYLDPls6SEj0UWuDvGtUkOAMtwIVciNqQO4l35Q3K94KuTgt6dLS%2FO85zUFm007N%2B3Ru5qCqlYFtW66C7Jjb8%2BxTeqmcHq9125KXizurlfyMSq3t%2B7zdmYeCeBeARNfW1cL%2FnYUNWP%2BiqnjfSznUQumyqhwgEjo7dv35LWZf",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -1612,7 +1612,7 @@
             "url": "https://www.d4science.org/terms-of-use",
             "final_url": "https://www.d4science.org/terms-of-use",
             "depth": 2,
-            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEidpm1IrqRS1QqpUECqPBZvK2FNq4djBY%2FP4e5JULUUCtp57z9yZcYm80S2rg9%2BbDbwGQB%2FViOC8smZhDYYG3C24NyXgfrOuyN77FhmlGNrWOp%2FIMQoFRkBi3TPlHYf2SCq41k9cvJBo2TGV4T3w286FsMF4%2FM3vgOsG6alCW2e9FVYPZBKtlhXZQlEU2U5M4pGc7eJxnvJ4lmYiziYwvhCwk1M566SIAVYGPTe%2BInmaF3GWxmlxl6VsNGXZ9JFED%2BBwyJYnKYk%2BGm2Q9Y0qEpxhlqNCZngDyLxgt%2FXVmnVCxo9LOre0%2F3uOc5B52avZkM7NHchGGdh2ZRlEz9yeZi%2FpubI8XOu6I6%2BWN1Yr8RnVWtv3RbczDxXxLgCJLq1ruP87S5Zkw4uS8W6QMmi40rWUDhAJnR%2B6%2FvwW8y8%3D",
+            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUsch6cNqKkWtkCoVhFpgwaZynSm1cOzgsXn8PUmqliIBW8%2B9Z%2B7MeIqi1g0vgz%2BYNbwGQB%2BViOC8smZuDYYa3Abcm5LwsF4V5OB9g5xSDE1jnR9UGUoFRsLAumcqWg7tkFQKrXdCvpBo0TKVER3w2y6ktMF4%2FM3vQOga6blCG2e9lVb3ZBItFwXZyqt8lGZyFI%2FzPYuzXGbxJGcsrthOpPlov892rJUiBlga9ML4gqRJOoxZEifDezbkyYRn4ycSPYLDPls6SEj0UWuDvGtUkOAMtwIVciNqQO4l35Q3K94KuTgt6dLS%2FO85zUFm007N%2B3Ru5qCqlYFtW66C7Jjb8%2BxTeqmcHq9125KXizurlfyMSq3t%2B7zdmYeCeBeARNfW1cL%2FnYUNWP%2BiqnjfSznUQumyqhwgEjo7dv35LWZf",
             "selected_for": [
               "5b"
             ],
@@ -1911,7 +1911,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.earth-data.eu/",
-        "fetched_at": "2026-10-06T10:37:34+00:00",
+        "fetched_at": "2026-10-06T16:10:06+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
@@ -2230,12 +2230,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-10-06T10:37:55+00:00",
+        "fetched_at": "2026-10-06T16:10:28+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 92 link(s) on the landing page, 8 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 22 of 60 used",
+        "crawl_note": "depth 2: 94 link(s) on the landing page, 8 followed because they matched a checklist point, 35 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 22 of 60 used",
         "children": [
           {
             "url": "https://research.csc.fi/terms-of-use/",
@@ -2277,7 +2277,7 @@
             "link_text": "User Access Policy and the Acceptable Use Policy",
             "http_status": 200,
             "title": "Node Policies - Services for Research",
-            "chars": 2613,
+            "chars": 2644,
             "error": ""
           },
           {
@@ -2291,7 +2291,7 @@
             "link_text": "Service Desk",
             "http_status": 200,
             "title": "CSC Service Desk - Services for Research",
-            "chars": 628,
+            "chars": 650,
             "error": ""
           },
           {
@@ -2305,7 +2305,7 @@
             "link_text": "Contact",
             "http_status": 200,
             "title": "Contact - Services for Research",
-            "chars": 432,
+            "chars": 463,
             "error": ""
           },
           {
@@ -2319,7 +2319,7 @@
             "link_text": "About",
             "http_status": 200,
             "title": "About - Services for Research",
-            "chars": 1188,
+            "chars": 1219,
             "error": ""
           },
           {
@@ -2333,7 +2333,7 @@
             "link_text": "EOSC Node Finland",
             "http_status": 200,
             "title": "EOSC Node Finland - Services for Research",
-            "chars": 1677,
+            "chars": 1708,
             "error": ""
           },
           {
@@ -2365,17 +2365,17 @@
             "error": ""
           },
           {
-            "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-organisations/",
-            "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-organisations/",
+            "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-privacy-notice/",
+            "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-privacy-notice/",
             "depth": 2,
             "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/",
             "selected_for": [
               "2"
             ],
-            "link_text": "For organisations",
+            "link_text": "Node Privacy Notice",
             "http_status": 200,
-            "title": "For organisations - Services for Research",
-            "chars": 1051,
+            "title": "Node Privacy Notice - Services for Research",
+            "chars": 345,
             "error": ""
           },
           {
@@ -2393,45 +2393,45 @@
             "error": ""
           },
           {
+            "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-organisations/",
+            "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-organisations/",
+            "depth": 2,
+            "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/contact/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "For organisations",
+            "http_status": 200,
+            "title": "For organisations - Services for Research",
+            "chars": 1082,
+            "error": ""
+          },
+          {
             "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-researchers/",
             "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-researchers/",
             "depth": 2,
-            "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/contact/",
+            "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/",
             "selected_for": [
               "2"
             ],
             "link_text": "For researchers",
             "http_status": 200,
             "title": "For researchers - Services for Research",
-            "chars": 1345,
+            "chars": 1376,
             "error": ""
           },
           {
             "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/the-eosc-federation/",
             "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/the-eosc-federation/",
             "depth": 2,
-            "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/",
+            "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/",
             "selected_for": [
               "2"
             ],
             "link_text": "The EOSC Federation",
             "http_status": 200,
             "title": "The EOSC Federation - Services for Research",
-            "chars": 1324,
-            "error": ""
-          },
-          {
-            "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/the-eosc-federation/eosc-login-your-gateway-to-european-research/",
-            "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/the-eosc-federation/eosc-login-your-gateway-to-european-research/",
-            "depth": 2,
-            "parent_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "EOSC login – your gateway to European research",
-            "http_status": 200,
-            "title": "EOSC login – your gateway to European research - Services for Research",
-            "chars": 977,
+            "chars": 1355,
             "error": ""
           }
         ],
@@ -2439,11 +2439,15 @@
           "https://research.csc.fi/terms-of-use/data-processing-agreement/ (cap for point 5b)",
           "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (cap for point 5b)",
           "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ (cap for point 5b)",
+          "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-privacy-notice/ (cap for point 2)",
           "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-organisations/ (cap for point 2)",
           "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-researchers/ (cap for point 2)",
           "https://research.csc.fi/eosc-the-finnish-candidate-node/about/the-eosc-federation/ (cap for point 2)",
           "https://research.csc.fi/eosc-the-finnish-candidate-node/about/the-eosc-federation/eosc-login-your-gateway-to-european-research/ (cap for point 2)",
           "https://research.csc.fi/eosc-the-finnish-candidate-node/about/use-cases/ (cap for point 2)",
+          "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-researchers/ (cap for point 2)",
+          "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-organisations/ (cap for point 2)",
+          "https://research.csc.fi/eosc-the-finnish-candidate-node/community/ (cap for point 2)",
           "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (per-node cap of 8)",
           "https://research.csc.fi/policies/ (per-node cap of 8)",
           "https://research.csc.fi/policies/dmpol/ (per-node cap of 8)",
@@ -2491,11 +2495,7 @@
           "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)",
           "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/ (already fetched at depth 1)",
-          "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)",
-          "https://research.csc.fi/support (already fetched at depth 1)",
-          "https://research.csc.fi/support (already fetched at depth 1)",
-          "https://research.csc.fi/eosc-the-finnish-candidate-node/contact/ (already fetched at depth 1)",
-          "https://research.csc.fi/eosc-the-finnish-candidate-node/about/ (already fetched at depth 1)"
+          "https://research.csc.fi/terms-of-use/ (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -2505,7 +2505,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 3629 characters of text rendered",
+            "HTTP 200 anonymously, 3823 characters of text rendered",
             "redirects followed: 1"
           ],
           "reviewer_action": ""
@@ -2518,7 +2518,7 @@
           "evidence": [
             "8 distinct external host(s) linked from the landing page",
             "csc.fi (Detailed contact information (External link), Directions (External link), Main website – csc.fi (External link))",
-            "docs.csc.fi (Docs CSC - User guides (External link), User guides (External link), User guides – docs.csc.fi (External link))",
+            "docs.csc.fi (Docs CSC - User guides (External link), User guides – docs.csc.fi (External link))",
             "my.csc.fi (MyCSC - User portal (External link), User portal – my.csc.fi (External link))",
             "www.csc.fi (csc.fi - Company site (External link))",
             "www.facebook.com (Facebook (External link))",
@@ -2535,9 +2535,9 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "opening main text: \"EOSC Node Finland About EOSC Node Finland Node Policies For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group Competence Data stewards Training Contact Welcome to the EOSC Finland Pilot Node Welcome to EOSC Node Finland! EOSC Node Finland is your gateway to Finnish research service...\"",
-            "organisation-like names found: Browse CSC; CSC; Copyright CSC; Docs CSC; Espoo Life Science Center; IT Center",
-            "about page one level down: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ (HTTP 200) opening text: \"EOSC Node Finland About EOSC Node Finland Node Policies For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group Competence Data stewards Trainin...\""
+            "opening main text: \"Welcome to EOSC Node Finland About EOSC Node Finland Node Policies Node Privacy Notice For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group Competence Data stewards Training Contact Welcome to the EOSC Finland Pilot Node EOSC Node Finland is your gateway to Finnish research servic...\"",
+            "organisation-like names found: CSC; Copyright CSC; Docs CSC; Espoo Life Science Center; IT Center; Policies CSC",
+            "about page one level down: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ (HTTP 200) opening text: \"Welcome to EOSC Node Finland About EOSC Node Finland Node Policies Node Privacy Notice For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group C...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -2570,8 +2570,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "92 outbound link(s) on the landing page",
-            "main text length: 1231 characters"
+            "94 outbound link(s) on the landing page",
+            "main text length: 1414 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -2595,7 +2595,7 @@
           "message": "The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
             "\"User Access Policy and the Acceptable Use Policy\" -> https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/",
-            "followed: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ -> HTTP 200, 2613 chars, title: Node Policies - Services for Research",
+            "followed: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ -> HTTP 200, 2644 chars, title: Node Policies - Services for Research",
             "policy wording found: Policy, terms"
           ],
           "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
@@ -2630,7 +2630,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 3629 characters of text rendered",
+            "HTTP 200 anonymously, 3823 characters of text rendered",
             "redirects followed: 1"
           ],
           "reviewer_action": ""
@@ -2643,7 +2643,7 @@
           "evidence": [
             "8 distinct external host(s) linked from the landing page",
             "csc.fi (Detailed contact information (External link), Directions (External link), Main website – csc.fi (External link))",
-            "docs.csc.fi (Docs CSC - User guides (External link), User guides (External link), User guides – docs.csc.fi (External link))",
+            "docs.csc.fi (Docs CSC - User guides (External link), User guides – docs.csc.fi (External link))",
             "my.csc.fi (MyCSC - User portal (External link), User portal – my.csc.fi (External link))",
             "www.csc.fi (csc.fi - Company site (External link))",
             "www.facebook.com (Facebook (External link))",
@@ -2660,9 +2660,9 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "opening main text: \"EOSC Node Finland About EOSC Node Finland Node Policies For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group Competence Data stewards Training Contact Welcome to the EOSC Finland Pilot Node Welcome to EOSC Node Finland! EOSC Node Finland is your gateway to Finnish research service...\"",
-            "organisation-like names found: Browse CSC; CSC; Copyright CSC; Docs CSC; Espoo Life Science Center; IT Center",
-            "about page one level down: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ (HTTP 200) opening text: \"EOSC Node Finland About EOSC Node Finland Node Policies For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group Competence Data stewards Trainin...\""
+            "opening main text: \"Welcome to EOSC Node Finland About EOSC Node Finland Node Policies Node Privacy Notice For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group Competence Data stewards Training Contact Welcome to the EOSC Finland Pilot Node EOSC Node Finland is your gateway to Finnish research servic...\"",
+            "organisation-like names found: CSC; Copyright CSC; Docs CSC; Espoo Life Science Center; IT Center; Policies CSC",
+            "about page one level down: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ (HTTP 200) opening text: \"Welcome to EOSC Node Finland About EOSC Node Finland Node Policies Node Privacy Notice For organisations For researchers The EOSC Federation EOSC login – your gateway to European research Use cases Community EOSC Finnish Forum Open Science EOSC Working Group C...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -2695,8 +2695,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "92 outbound link(s) on the landing page",
-            "main text length: 1231 characters"
+            "94 outbound link(s) on the landing page",
+            "main text length: 1414 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -2720,7 +2720,7 @@
           "message": "The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
             "\"User Access Policy and the Acceptable Use Policy\" -> https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/",
-            "followed: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ -> HTTP 200, 2613 chars, title: Node Policies - Services for Research",
+            "followed: https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/ -> HTTP 200, 2644 chars, title: Node Policies - Services for Research",
             "policy wording found: Policy, terms"
           ],
           "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
@@ -2757,7 +2757,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-10-06T10:38:36+00:00",
+        "fetched_at": "2026-10-06T16:11:11+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "panosc.png",
@@ -3235,7 +3235,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-10-06T10:39:20+00:00",
+        "fetched_at": "2026-10-06T16:11:49+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -3733,7 +3733,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-10-06T10:39:58+00:00",
+        "fetched_at": "2026-10-06T16:12:30+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
@@ -4137,7 +4137,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-10-06T10:40:17+00:00",
+        "fetched_at": "2026-10-06T16:12:51+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
@@ -4251,7 +4251,7 @@
           "verdict": "PASS",
           "message": "The main content is English and the page declares English.",
           "evidence": [
-            "declared lang attribute: \"en-US\"",
+            "declared lang attribute: \"en-us\"",
             "detected language: en (confidence 1.0)"
           ],
           "reviewer_action": ""
@@ -4362,7 +4362,7 @@
           "verdict": "PASS",
           "message": "The main content is English and the page declares English.",
           "evidence": [
-            "declared lang attribute: \"en-US\"",
+            "declared lang attribute: \"en-us\"",
             "detected language: en (confidence 1.0)"
           ],
           "reviewer_action": ""
@@ -4377,12 +4377,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-10-06T10:40:23+00:00",
+        "fetched_at": "2026-10-06T16:12:58+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 36 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 34 of 60 used",
+        "crawl_note": "depth 2: 21 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 34 of 60 used",
         "children": [
           {
             "url": "https://eosc.pl/terms-of-use",
@@ -4413,18 +4413,18 @@
             "error": ""
           },
           {
-            "url": "https://eosc.pl/search/data_source",
-            "final_url": "https://eosc.pl/search/data_source?q=*",
+            "url": "https://marketplace.eosc.pl/backoffice/services",
+            "final_url": "",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
               "5s"
             ],
-            "link_text": "Browse resources",
-            "http_status": 200,
-            "title": "Polish Open Science Platform",
-            "chars": 2250,
-            "error": ""
+            "link_text": "Backoffice",
+            "http_status": null,
+            "title": "",
+            "chars": 0,
+            "error": "not fetched: robots.txt disallows it"
           },
           {
             "url": "https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
@@ -4437,16 +4437,13 @@
             "link_text": "Software Find tools and applications to support research.",
             "http_status": 200,
             "title": "Polish Open Science Platform",
-            "chars": 2257,
+            "chars": 2246,
             "error": ""
           }
         ],
         "children_skipped": [
-          "https://marketplace.eosc.pl/backoffice/services (cap for point 5s)",
           "https://eosc.pl/terms-of-use (already fetched at depth 1)",
-          "https://eosc.pl/terms-of-use (already fetched at depth 1)",
-          "https://eosc.pl/terms-of-use (already fetched at depth 1)",
-          "https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A (already fetched at depth 1)"
+          "https://eosc.pl/terms-of-use (already fetched at depth 1)"
         ]
       },
       "results": [
@@ -4456,8 +4453,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 5693 characters of text rendered",
-            "redirects followed: 1"
+            "HTTP 200 anonymously, 420 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -4467,20 +4463,16 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
-            "13 distinct external host(s) linked from the landing page",
-            "creativecommons.org (Public domain)",
+            "8 distinct external host(s) linked from the landing page",
             "data.eosc.pl (Work with data)",
-            "eosc.gov.pl (About, eosc.gov.pl EOSC.gov.pl is an initiative of the Polish EOSC partnership that supports the development of open science in Poland. It provides information on national EOSC-related activities and serves as a space for sharing experiences and good practices among institutions involved in open science.)",
-            "marketplace.eosc.pl (Backoffice, Become a provider, Learn how ordering works)",
+            "eosc.gov.pl (About)",
+            "marketplace.eosc.pl (Backoffice, Become a provider, Marketplace API)",
             "ncn.gov.pl (Narodowe centrum Nauki)",
-            "onedata.org (Sign-in to workspace)",
-            "pg.edu.pl (Gdańsk University of Technology., Politechnika Gdańska)",
+            "pg.edu.pl (Politechnika Gdańska)",
             "s3.cloud.cyfronet.pl (Download Logo)",
-            "www.cyfronet.pl (ACK Cyfronet AGH, Academic Computer Centre Cyfronet AGH)",
-            "www.eosc-beyond.eu (EOSC Beyond EOSC Beyond is a project developed within the European Open Science Cloud framework to strengthen collaboration among researchers across Europe. It introduces new capabilities to the EOSC Core services and helps research service providers access, integrate, and share resources more effec)",
-            "www.iopan.pl (the Institute of Oceanology of the Polish Academy of Sciences)",
-            "www.ncn.gov.pl (the National Science Centre)",
-            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
+            "www.cyfronet.pl (ACK Cyfronet AGH)",
+            "www.uw.edu.pl (Uniwersytet Warszawski)",
+            "depth 1: 3 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -4490,8 +4482,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "opening main text: \"Polish Open Science Platform We support the development of Polish science and innovation by offering modern tools and access to unique research data. All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match What can you explore on our platform? Explore the catalogue Find the resources you need qui...\"",
-            "organisation-like names found: Academic Computer Centre; EOSC Association EOSC Association; Institute; Interdisciplinary Centre; Networking Center; University"
+            "opening main text: \"About Browse resources Work with data Login Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of...\"",
+            "no organisation-like names matched by pattern"
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -4499,27 +4491,24 @@
           "point_id": "3",
           "title": "EOSC logo and official node name visible",
           "verdict": "MANUAL_REVIEW",
-          "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.",
+          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
-            "EOSC-referencing image asset(s): 5",
-            "img: EOSC Beyond",
-            "img: eosc.gov.pl",
-            "img: EOSC Association",
-            "img: EOSC Node Poland",
-            "img: About eosc.pl",
-            "approved name matched from the unscoped list: \"EOSC Node | Poland\" (the page writes it \"EOSC Node Poland\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
+            "1 image/SVG element(s) examined, none referencing EOSC",
+            "mentions of EOSC in page text: 3",
+            "NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
-          "reviewer_action": "Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say."
+          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },
         {
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
-          "verdict": "PASS",
-          "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No link to eosc.eu was found, but the page yielded too little to conclude absence: the document is essentially empty (420 chars of text in total)",
           "evidence": [
-            "\"EOSC Node Poland Learn more about the EOSC Node Poland and its role in providing a FAIR digital research environment for researchers, integrating national digital resources and services into EOSC.\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-poland/"
+            "21 link(s) examined, none pointing to eosc.eu",
+            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-poland/ but is not linked from here"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation."
         },
         {
           "point_id": "5a",
@@ -4527,8 +4516,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "36 outbound link(s) on the landing page",
-            "main text length: 5272 characters"
+            "21 outbound link(s) on the landing page",
+            "main text length: 420 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -4550,8 +4539,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
-            "36 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use, https://eosc.pl/search/all_collection?q=*, https://eosc.pl/search/data_source, https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
+            "21 link(s) on the landing page examined, none matching a User Access Policy",
+            "3 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use, https://eosc.pl/search/all_collection?q=*, https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
             "an Acceptable Use Policy: \"Terms of use\" -> https://eosc.pl/terms-of-use",
             "an Acceptable Use Policy via https://eosc.pl/terms-of-use: \"Polish Open Science Platform\" -> https://eosc.pl/terms-of-use"
           ],
@@ -4587,8 +4576,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 5693 characters of text rendered",
-            "redirects followed: 1"
+            "HTTP 200 anonymously, 420 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -4598,20 +4586,16 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
-            "13 distinct external host(s) linked from the landing page",
-            "creativecommons.org (Public domain)",
+            "8 distinct external host(s) linked from the landing page",
             "data.eosc.pl (Work with data)",
-            "eosc.gov.pl (About, eosc.gov.pl EOSC.gov.pl is an initiative of the Polish EOSC partnership that supports the development of open science in Poland. It provides information on national EOSC-related activities and serves as a space for sharing experiences and good practices among institutions involved in open science.)",
-            "marketplace.eosc.pl (Backoffice, Become a provider, Learn how ordering works)",
+            "eosc.gov.pl (About)",
+            "marketplace.eosc.pl (Backoffice, Become a provider, Marketplace API)",
             "ncn.gov.pl (Narodowe centrum Nauki)",
-            "onedata.org (Sign-in to workspace)",
-            "pg.edu.pl (Gdańsk University of Technology., Politechnika Gdańska)",
+            "pg.edu.pl (Politechnika Gdańska)",
             "s3.cloud.cyfronet.pl (Download Logo)",
-            "www.cyfronet.pl (ACK Cyfronet AGH, Academic Computer Centre Cyfronet AGH)",
-            "www.eosc-beyond.eu (EOSC Beyond EOSC Beyond is a project developed within the European Open Science Cloud framework to strengthen collaboration among researchers across Europe. It introduces new capabilities to the EOSC Core services and helps research service providers access, integrate, and share resources more effec)",
-            "www.iopan.pl (the Institute of Oceanology of the Polish Academy of Sciences)",
-            "www.ncn.gov.pl (the National Science Centre)",
-            "depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible"
+            "www.cyfronet.pl (ACK Cyfronet AGH)",
+            "www.uw.edu.pl (Uniwersytet Warszawski)",
+            "depth 1: 2 of 3 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -4621,8 +4605,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "opening main text: \"Polish Open Science Platform We support the development of Polish science and innovation by offering modern tools and access to unique research data. All Resources Datasets Publications Software Services Data sources Catalogues Providers Organisations Interoperability Guidelines Trainings Browse Exact match What can you explore on our platform? Explore the catalogue Find the resources you need qui...\"",
-            "organisation-like names found: Academic Computer Centre; EOSC Association EOSC Association; Institute; Interdisciplinary Centre; Networking Center; University"
+            "opening main text: \"About Browse resources Work with data Login Helpdesk Back to the top For users Browse resources Your projects User documentations For providers Backoffice Become a provider Marketplace API Partners Narodowe centrum Nauki ACK Cyfronet AGH Politechnika Gdańska Uniwersytet Warszawski Contact contact@eosc.pl XXXXX@eosc.pl support@eosc.pl Copyright 2026 | All rights reserved | Privacy policy | Terms of...\"",
+            "no organisation-like names matched by pattern"
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -4630,27 +4614,24 @@
           "point_id": "3",
           "title": "EOSC logo and official node name visible",
           "verdict": "MANUAL_REVIEW",
-          "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.",
+          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
           "evidence": [
-            "EOSC-referencing image asset(s): 5",
-            "img: EOSC Beyond",
-            "img: eosc.gov.pl",
-            "img: EOSC Association",
-            "img: EOSC Node Poland",
-            "img: About eosc.pl",
-            "approved name matched from the unscoped list: \"EOSC Node | Poland\" (the page writes it \"EOSC Node Poland\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
+            "1 image/SVG element(s) examined, none referencing EOSC",
+            "mentions of EOSC in page text: 3",
+            "NONE of the 13 approved name(s) for this node appear in the page body — note the <title> is not searched"
           ],
-          "reviewer_action": "Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say."
+          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
         },
         {
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
-          "verdict": "PASS",
-          "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No link to eosc.eu was found, but the page yielded too little to conclude absence: the document is essentially empty (420 chars of text in total)",
           "evidence": [
-            "\"EOSC Node Poland Learn more about the EOSC Node Poland and its role in providing a FAIR digital research environment for researchers, integrating national digital resources and services into EOSC.\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-poland/"
+            "21 link(s) examined, none pointing to eosc.eu",
+            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-poland/ but is not linked from here"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation."
         },
         {
           "point_id": "5a",
@@ -4658,8 +4639,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "36 outbound link(s) on the landing page",
-            "main text length: 5272 characters"
+            "21 outbound link(s) on the landing page",
+            "main text length: 420 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -4681,8 +4662,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
-            "36 link(s) on the landing page examined, none matching a User Access Policy",
-            "3 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use, https://eosc.pl/search/all_collection?q=*, https://eosc.pl/search/data_source",
+            "21 link(s) on the landing page examined, none matching a User Access Policy",
+            "2 linked page(s) read, none linking to a User Access Policy: https://eosc.pl/terms-of-use, https://eosc.pl/search/all_collection?q=*",
             "an Acceptable Use Policy: \"Terms of use\" -> https://eosc.pl/terms-of-use",
             "an Acceptable Use Policy via https://eosc.pl/terms-of-use: \"Polish Open Science Platform\" -> https://eosc.pl/terms-of-use"
           ],
@@ -4720,7 +4701,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.it/",
-        "fetched_at": "2026-10-06T10:40:41+00:00",
+        "fetched_at": "2026-10-06T16:13:16+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
@@ -5044,7 +5025,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-10-06T10:40:54+00:00",
+        "fetched_at": "2026-10-06T16:13:32+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-sk.png",
@@ -5076,7 +5057,7 @@
             "link_text": "Service Catalogue EOSC Node Slovakia service catalogue listing the production services of the node. It offers a public API, catalogue exchange and demonstrates harvesting of service catalogues from other EOSC nodes.",
             "http_status": 200,
             "title": "Service Catalogue",
-            "chars": 717,
+            "chars": 232,
             "error": ""
           },
           {

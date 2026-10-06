@@ -794,9 +794,31 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-25 at depth 2, 6 October 2026 (unreviewed)
+### Current run: web-26 at depth 2, 6 October 2026, afternoon (unreviewed)
 
-From `results/results.json`, run `web-25`, collected on 6 October 2026 between 10:35 and 10:41 UTC by the GitHub workflow ([run 37450646487](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37450646487), commit `ddb7711`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200, BBMRI-ERIC's `dev3.` page among them (its `robots.txt` no longer excludes the tool); GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-25` reproduces it exactly, apart from the generation time (verified 6 October 2026).
+From `results/results.json`, run `web-26`, collected on 6 October 2026 between 16:07 and 16:14 UTC by the GitHub workflow ([run 37492974153](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37492974153), commit `21d8c7d`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-26` reproduces it exactly, apart from the generation time (verified 6 October 2026).
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 67 |
+| 🔴 FAIL | 0 |
+| 🟠 MANUAL_REVIEW | 63 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+No FAIL, as in `web-25`. One cell changed against `web-25`:
+
+| Node | Cells | Why |
+|---|---|---|
+| Poland | 4: `PASS` to review | the page answered HTTP 200 but rendered only its header and footer (420 characters of text, 21 links, none to `eosc.eu`); the tool does not read an essentially empty page as an absence, so it asks for review instead of failing. Its "EOSC Node Poland" text was missing too, so point 3 lost its name match (it stays review) |
+
+**Masking.** The same names as before were masked, including the fifteen on BBMRI-ERIC's `dev3.` pages and CERN's screenshot. No new personal names were found. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects seven matches (Poland out, because its page rendered no main content).
+
+### Previous run: web-25 at depth 2, 6 October 2026, morning
+
+Run `web-25` was collected on 6 October 2026 between 10:35 and 10:41 UTC by the GitHub workflow ([run 37450646487](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37450646487), commit `ddb7711`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200, BBMRI-ERIC's `dev3.` page among them (its `robots.txt` no longer excludes the tool); GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-25` reproduces it exactly, apart from the generation time (verified 6 October 2026).
 
 | Verdict | Cells |
 |---|---|
@@ -1334,7 +1356,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 68 PASS · 0 FAIL · 62 review");
+- the headline tally in `README.md` ("130 cells: 67 PASS · 0 FAIL · 63 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 

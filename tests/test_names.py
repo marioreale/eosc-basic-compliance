@@ -399,7 +399,9 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     BBMRI-ERIC's new default, the dev3. page, was not fetched (its robots.txt
     disallows it), so six remain. In web-25 (6 October 2026) the dev3. page was
     served and matches ("EOSC Node – BBMRI-ERIC"), and EOSC Finland's page now
-    writes "EOSC Node Finland": eight matches.
+    writes "EOSC Node Finland": eight matches. In web-26 (6 October 2026)
+    Poland's page rendered only its header and footer, so its "EOSC Node
+    Poland" text was not there to match: seven.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -410,7 +412,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-pl", "eosc-fi"}
+    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-fi"}
 
 
 # --- what the page calls itself, when nothing matched ------------------------
