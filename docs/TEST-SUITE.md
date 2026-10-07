@@ -794,9 +794,34 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-26 at depth 2, 6 October 2026, afternoon (unreviewed)
+### Current run: web-27 at depth 2, 7 October 2026 (unreviewed)
 
-From `results/results.json`, run `web-26`, collected on 6 October 2026 between 16:07 and 16:14 UTC by the GitHub workflow ([run 37492974153](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37492974153), commit `21d8c7d`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-26` reproduces it exactly, apart from the generation time (verified 6 October 2026).
+From `results/results.json`, run `web-27`, collected on 7 October 2026 between 21:59 and 22:05 UTC by the GitHub workflow ([run 37692836637](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37692836637), commit `5e0e6ce`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 63 direct links and 33 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-27` reproduces it exactly, apart from the generation time (verified 7 October 2026).
+
+| Verdict | Cells |
+|---|---|
+| 🟢 PASS | 69 |
+| 🔴 FAIL | 0 |
+| 🟠 MANUAL_REVIEW | 61 |
+| 🟣 ERROR | 0 |
+| **Total** | **130** (13 nodes × 10 points) |
+
+No FAIL, as in `web-25` and `web-26`. Two cells changed against `web-26`, both Poland's:
+
+| Node | Cells | Why |
+|---|---|---|
+| Poland | 4: review to `PASS` | the page rendered in full again (5,403 characters, 37 links; in `web-26` 420 characters, header and footer only) and links `https://eosc.eu/building-the-eosc-federation/eosc-node-poland/` |
+| Poland | 5c: review to `PASS` | a new "User Access Policy" link goes to `https://eosc.pl/privacy-policy`, which was read (HTTP 200, 15,025 characters) and reads like a policy document; a reviewer should confirm that the privacy policy page serves as the User Access Policy |
+
+Poland's page also writes "EOSC Node Poland" again, so point 3 has its name match back (it stays review).
+
+**Masking.** The same names as before were masked, including the fifteen on BBMRI-ERIC's `dev3.` pages and CERN's screenshot (the attribution moved on the page, so the mask was redrawn at its new position). New in this run: the people named in the captions of two historical public-domain photos on Poland's page, masked with same-length placeholders. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects eight matches (Poland back).
+
+### Previous run: web-26 at depth 2, 6 October 2026, afternoon
+
+Run `web-26` was collected on 6 October 2026 between 16:07 and 16:14 UTC by the GitHub workflow ([run 37492974153](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37492974153), commit `21d8c7d`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 62 direct links and 34 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-26` reproduces it exactly, apart from the generation time (verified 6 October 2026).
 
 | Verdict | Cells |
 |---|---|
@@ -1356,7 +1381,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 67 PASS · 0 FAIL · 63 review");
+- the headline tally in `README.md` ("130 cells: 69 PASS · 0 FAIL · 61 review");
 - section 10 of this document ("The published figures"), and the node list
   in section 5 ("The node list — a YAML file").
 

@@ -1100,7 +1100,7 @@ not to be satisfied mechanically:
 `results/` is regenerated, but these are written by hand:
 
 - a review document for the new run, like `results/REVIEW-2026-09-24.md`;
-- the headline tally in `README.md` ("130 cells: 67 PASS · 0 FAIL · 63 review");
+- the headline tally in `README.md` ("130 cells: 69 PASS · 0 FAIL · 61 review");
 - "The published figures" in `docs/TEST-SUITE.md`, and the node list in
   "The node list — a YAML file" in the same file.
 

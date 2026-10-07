@@ -2,12 +2,12 @@
   "node_id": "eosc-cz",
   "node_name": "EOSC Node Czechia",
   "requested_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-  "fetched_at": "2026-10-06T16:08:48+00:00",
+  "fetched_at": "2026-10-07T22:00:24+00:00",
   "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
   "http_status": 200,
   "redirect_chain": [
     "https://c.clarity.ms/c.gif",
-    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=E0C30295572E448DA334EAE1E9A1EE2D&RedC=c.clarity.ms&MXFR=3C4022B2FE486F620BD63558FA486125"
+    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=0400D49E71E94379A83B7B0998933B7C&RedC=c.clarity.ms&MXFR=07FAF5A14BF6665A2C0CE24A4FF66897"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
