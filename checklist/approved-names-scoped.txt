@@ -36,3 +36,5 @@ geant: EOSC Node | GÉANT
 eosc-pl: EOSC Node | Poland
 eosc-it: EOSC Node | Italy
 eosc-sk: EOSC Node | Slovakia
+ebrains-ri: EOSC Node | EBRAINS RI
+life-sciences-connect: EOSC Node | Life Sciences Connect

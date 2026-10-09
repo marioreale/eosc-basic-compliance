@@ -23,11 +23,32 @@ from basic_check import cli
 PUBLISHED = cli.DEFAULT_RESULTS
 
 
+def _default_names_sha256() -> str:
+    return hashlib.sha256(cli.DEFAULT_APPROVED_NAMES.read_bytes()).hexdigest()
+
+
 @pytest.fixture
 def stored(tmp_path) -> Path:
-    """A copy of the published run: results.json, reports and evidence."""
+    """A copy of the published run: results.json, reports and evidence.
+
+    `--update-results-for-node` refuses to merge a row judged with a different
+    approved-name list from the one the stored run used, and these tests use
+    the default list. Between a commit that adds a node (and so its approved
+    name) and the publication of a run that includes it, the published run was
+    made with the previous list. The copy is then re-assessed offline, from its
+    own evidence and under its own run id, with the current default list, so
+    the tests exercise row replacement rather than that (correct) refusal. Only
+    the copy in tmp_path changes; results/ is never written, and no site is
+    contacted. A node configured but not yet collected is reported as missing
+    evidence (exit 2), which is the expected state at that point.
+    """
     out = tmp_path / "results"
     shutil.copytree(PUBLISHED, out, ignore=shutil.ignore_patterns("one-off"))
+    run = _load(out)
+    if run["approved_names"].get("sha256") != _default_names_sha256():
+        res = _invoke("assess", "--results", str(out), "--run", run["run_id"])
+        assert res.exit_code in (0, 2), res.output
+        assert _load(out)["approved_names"]["sha256"] == _default_names_sha256()
     return out
 
 

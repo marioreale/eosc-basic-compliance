@@ -11,4 +11,5 @@ EOSC Node | GÉANT
 EOSC Node | Poland
 EOSC Node | Italy
 EOSC Node | Slovakia
-
+EOSC Node | EBRAINS RI
+EOSC Node | Life Sciences Connect
