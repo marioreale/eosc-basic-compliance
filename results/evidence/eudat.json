@@ -2,7 +2,7 @@
   "node_id": "eudat",
   "node_name": "EUDAT",
   "requested_url": "https://portal.eudat.eu/",
-  "fetched_at": "2026-10-07T22:03:41+00:00",
+  "fetched_at": "2026-10-09T14:28:54+00:00",
   "final_url": "https://portal.eudat.eu/welcome",
   "http_status": 200,
   "redirect_chain": [
@@ -12,8 +12,8 @@
   "robots_note": "robots.txt consulted",
   "title": "Welcome | EUDAT",
   "lang_attr": "en",
-  "main_text": "Part of the EOSC Federation FAIR data management for every research community The EUDAT EOSC Node brings together services, resources and communities to share, publish and preserve research data across domains and borders. Explore the service catalogue Read the user guides View the dedicated Node page on eosc.eu",
-  "full_text": "Skip to main content Login Part of the EOSC Federation FAIR data management for every research community The EUDAT EOSC Node brings together services, resources and communities to share, publish and preserve research data across domains and borders. Explore the service catalogue Read the user guides View the dedicated Node page on eosc.eu The B2Service suite Interoperable services covering the whole research data lifecycle, from the first file you share to the dataset you publish and preserve. B2SHARE Store and publish research data Publish datasets with a DOI, rich metadata and clear licensing, ready to be cited and reused. Learn more B2DROP Sync and share research data Keep working files in sync across devices and exchange them with collaborators. Learn more B2FIND Find research data Search a cross-domain metadata catalogue harvested from research communities and repositories. Learn more B2SAFE Keep research data safe Replicate and preserve data across data centres under agreed management policies. Learn more B2HANDLE Persistent identifiers Register your data with a persistent identifier that keeps resolving as it moves. Learn more A FAIR-by-design workspace for European research data The EUDAT EOSC Node is a pan-European e-Infrastructure that provides collaborative workspaces for projects, infrastructures and communities, with data management services and interoperable resources for all scientific domains. It operates the B2Service suite for publication, curation, preservation and replication of data, together with storage and access to compute. Responsible organisation Operated by EUDAT Ltd on behalf of the EUDAT Collaborative Data Infrastructure, whose members include more than 20 organisations across 17 countries. View the dedicated Node page on eosc.eu Built for researchers , research infrastructures , projects and consortia , data stewards and service providers . Across all scientific domains, in Europe and beyond. Not sure where to start? Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limitless science. Helpdesk Sign-in problems, access requests, service incidents or questions about the Node services. Open a request FAQs Quick answers to the most common questions about EUDAT and its services. Read the FAQs User guides Step-by-step documentation for every service offered by the Node. Browse the guides Available soon. Close EUDAT is a pan-European network consisting of more than 25 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu Keilaranta 14, 02150 Espoo, Finland VAT number: FI 28953559 Navigation & Legal Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement EOSC Node EUDAT FAQs Connect LinkedIn YouTube SlideShare X © 2026 EUDAT — All rights reserved.",
+  "main_text": "Part of the EOSC Federation FAIR data management for every research community Built for researchers, research infrastructures, projects and consortia, data stewards, and service providers. Find the right service Read the user guides View the dedicated Node page on eosc.eu",
+  "full_text": "Skip to main content Node in operation Appearance System Light Dark Login Part of the EOSC Federation FAIR data management for every research community Built for researchers, research infrastructures, projects and consortia, data stewards, and service providers. Find the right service Read the user guides View the dedicated Node page on eosc.eu Find the right service for your data The B2 services follow the research data lifecycle, from the files you work on today to the dataset others will find tomorrow. Each card opens the service page in the EUDAT catalogue. Access Sign in to the B2 services Identity and authorisation for EUDAT services, compatible with EOSC AAI. Workspace Sync and share working files Keep working files in sync across your devices and exchange them with collaborators. Publish Store and publish research data Store, publish and share research datasets so others can find, cite and reuse them. Identify Give your data a persistent identifier Register your data with a persistent identifier that keeps resolving, even when the data moves. Preserve Keep research data safe Replicate and preserve data across data centres under agreed data management policies. Find Find research data Search metadata of research datasets from many communities and repositories in one place. Comparing services? See every EUDAT service with full descriptions in the EUDAT catalogue. Open the full catalogue on eudat.eu How access works Who can use the services Researchers, research groups and organisations across Europe and beyond. Each service sets its own terms of use. How to sign in One account for every service: sign in with B2ACCESS, the EUDAT login, or with EOSC Login. Your data Your data stays yours. Services follow the GDPR and the EUDAT Acceptable Use Policy. Not sure where to start? Find information about EUDAT Services and how to best utilise the EUDAT Node workspace, a platform built for better research and limitless science. Helpdesk Sign-in problems, access requests, service incidents or questions about the Node services. Open a request FAQs Quick answers to the most common questions about EUDAT and its services. Read the FAQs User guides Step-by-step documentation for every service offered by the Node. Browse the guides A FAIR-by-design workspace for European research data The EUDAT EOSC Node is a pan-European e-Infrastructure that provides collaborative workspaces for projects, infrastructures and communities, with data management services and interoperable resources for all scientific domains. It operates the B2 service suite for publication, curation, preservation and replication of data, together with storage and access to compute. Projects and service providers: contact EUDAT Responsible organisation Operated by EUDAT Ltd on behalf of the EUDAT Collaborative Data Infrastructure, whose members include more than 20 organisations across 17 countries. Node page on eosc.eu Available soon. Close EUDAT is a pan-European network consisting of more than 25 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu Keilaranta 14, 02150 Espoo, Finland VAT number: FI 28953559 Navigation & Legal Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement EOSC Node EUDAT FAQs Connect LinkedIn YouTube SlideShare X © 2026 EUDAT — All rights reserved.",
   "links": [
     {
       "href": "https://portal.eudat.eu/welcome",
@@ -26,28 +26,58 @@
       "visible": true
     },
     {
-      "href": "https://www.eudat.eu/service-catalogue/b2share-0",
-      "text": "B2SHARE Store and publish research data Publish datasets with a DOI, rich metadata and clear licensing, ready to be cited and reused. Learn more",
+      "href": "https://www.eudat.eu/service-catalogue/b2access",
+      "text": "Sign in to the B2 services",
       "visible": true
     },
     {
       "href": "https://www.eudat.eu/service-catalogue/b2drop",
-      "text": "B2DROP Sync and share research data Keep working files in sync across devices and exchange them with collaborators. Learn more",
+      "text": "Sync and share working files",
       "visible": true
     },
     {
-      "href": "https://www.eudat.eu/service-catalogue/b2find",
-      "text": "B2FIND Find research data Search a cross-domain metadata catalogue harvested from research communities and repositories. Learn more",
-      "visible": true
-    },
-    {
-      "href": "https://www.eudat.eu/service-catalogue/b2safe",
-      "text": "B2SAFE Keep research data safe Replicate and preserve data across data centres under agreed management policies. Learn more",
+      "href": "https://www.eudat.eu/service-catalogue/b2share-0",
+      "text": "Store and publish research data",
       "visible": true
     },
     {
       "href": "https://www.eudat.eu/service-catalogue/b2handle",
-      "text": "B2HANDLE Persistent identifiers Register your data with a persistent identifier that keeps resolving as it moves. Learn more",
+      "text": "Give your data a persistent identifier",
+      "visible": true
+    },
+    {
+      "href": "https://www.eudat.eu/service-catalogue/b2safe",
+      "text": "Keep research data safe",
+      "visible": true
+    },
+    {
+      "href": "https://www.eudat.eu/service-catalogue/b2find",
+      "text": "Find research data",
+      "visible": true
+    },
+    {
+      "href": "https://eudat.eu/catalogue",
+      "text": "Open the full catalogue on eudat.eu",
+      "visible": true
+    },
+    {
+      "href": "https://portal.eudat.eu/helpdesk",
+      "text": "Open a request",
+      "visible": true
+    },
+    {
+      "href": "https://www.eudat.eu/frequently-asked-questions",
+      "text": "Read the FAQs",
+      "visible": true
+    },
+    {
+      "href": "https://docs.eudat.eu",
+      "text": "Browse the guides",
+      "visible": true
+    },
+    {
+      "href": "https://portal.eudat.eu/helpdesk",
+      "text": "Projects and service providers: contact EUDAT",
       "visible": true
     },
     {
@@ -88,6 +118,14 @@
   ],
   "images": [
     {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/eosc_logo_white.svg",
+      "alt": "EOSC",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
       "src": "https://portal.eudat.eu/themes/custom/site_theme/images/eosc-node-final.webp",
       "alt": "EOSC Node",
       "aria_label": "",
@@ -96,43 +134,99 @@
       "inline_svg": false
     },
     {
-      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/b2share.png",
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2access-b2.svg",
       "alt": "",
       "aria_label": "",
       "title": "",
-      "css_class": "sw-service__logo",
+      "css_class": "",
       "inline_svg": false
     },
     {
-      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/b2drop.png",
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2access-name.svg",
       "alt": "",
       "aria_label": "",
       "title": "",
-      "css_class": "sw-service__logo",
+      "css_class": "",
       "inline_svg": false
     },
     {
-      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/b2find.png",
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2drop-b2.svg",
       "alt": "",
       "aria_label": "",
       "title": "",
-      "css_class": "sw-service__logo",
+      "css_class": "",
       "inline_svg": false
     },
     {
-      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/b2safe.png",
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2drop-name.svg",
       "alt": "",
       "aria_label": "",
       "title": "",
-      "css_class": "sw-service__logo",
+      "css_class": "",
       "inline_svg": false
     },
     {
-      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/b2handle.png",
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2share-b2.svg",
       "alt": "",
       "aria_label": "",
       "title": "",
-      "css_class": "sw-service__logo",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2share-name.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2handle-b2.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2handle-name.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2safe-b2.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2safe-name.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2find-b2.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://portal.eudat.eu/themes/custom/site_theme/images/services/wordmarks/b2find-name.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
       "inline_svg": false
     },
     {
@@ -212,32 +306,68 @@
       "visible": true
     },
     {
-      "text": "B2SHARE Store and publish research data Publish datasets with a DOI, rich metadata and clear licensing, ready to be cited and reused. Learn more",
-      "href": "https://www.eudat.eu/service-catalogue/b2share-0",
+      "text": "Sign in to the B2 services",
+      "href": "https://www.eudat.eu/service-catalogue/b2access",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "B2DROP Sync and share research data Keep working files in sync across devices and exchange them with collaborators. Learn more",
+      "text": "Sync and share working files",
       "href": "https://www.eudat.eu/service-catalogue/b2drop",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "B2FIND Find research data Search a cross-domain metadata catalogue harvested from research communities and repositories. Learn more",
-      "href": "https://www.eudat.eu/service-catalogue/b2find",
+      "text": "Store and publish research data",
+      "href": "https://www.eudat.eu/service-catalogue/b2share-0",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "B2SAFE Keep research data safe Replicate and preserve data across data centres under agreed management policies. Learn more",
+      "text": "Give your data a persistent identifier",
+      "href": "https://www.eudat.eu/service-catalogue/b2handle",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Keep research data safe",
       "href": "https://www.eudat.eu/service-catalogue/b2safe",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "B2HANDLE Persistent identifiers Register your data with a persistent identifier that keeps resolving as it moves. Learn more",
-      "href": "https://www.eudat.eu/service-catalogue/b2handle",
+      "text": "Find research data",
+      "href": "https://www.eudat.eu/service-catalogue/b2find",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open the full catalogue on eudat.eu",
+      "href": "https://eudat.eu/catalogue",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Open a request",
+      "href": "https://portal.eudat.eu/helpdesk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Read the FAQs",
+      "href": "https://www.eudat.eu/frequently-asked-questions",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Browse the guides",
+      "href": "https://docs.eudat.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Projects and service providers: contact EUDAT",
+      "href": "https://portal.eudat.eu/helpdesk",
       "tag": "a",
       "visible": true
     },
@@ -1033,543 +1163,33 @@
       "error": ""
     },
     {
-      "url": "https://www.eudat.eu/service-catalogue/b2safe",
+      "url": "https://portal.eudat.eu/helpdesk",
       "selected_for": [
-        "5p"
+        "6"
       ],
-      "link_text": "B2SAFE Keep research data safe Replicate and preserve data across data centres under agreed management policies. Learn more",
+      "link_text": "Open a request",
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://www.eudat.eu/service-catalogue/b2safe",
-      "title": "B2SAFE | EUDAT",
+      "final_url": "https://portal.eudat.eu/helpdesk",
+      "title": "Helpdesk | EUDAT",
       "lang_attr": "en",
-      "main_text": "B2SAFE Keep research data safe via data management policies Request B2SAFE and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2SAFE B2SAFE is a robust and highly available service which allows community and departmental repositories to implement data management policies on their research data across multiple administrative domains in a trustworthy manner. It offers an abstraction layer of large scale, heterogeneous data storages, guards against data loss in long-term archiving, allows to optimize access for users (e.g. from different regions), brings data closer to facilities for compute-intensive analysis. Features Support for data management policies (e.g. registration of PIDs, cross-site replication, data integrity checks) Support for policies customised to community and organisational needs Support for less frequently used archival data, but can also support active data Support for large scale storage resources (e.g up to PB-scale) A single namespace across hetrogeneous storages Supports integration with different kind of storage systems (e.g. Tape based HSM, POSIX filesystems, Object storage) Access via GridFTP, Webdav, iRODS commands Service offered by a network of EUDAT service providers Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Research Managers, Researchers, Research Communities, Research Projects, Research Groups, Research Organisations Access Types: Virtual Access Modes: Free Conditionally, Paid Tags: replication policy-based data management persistent identifiers data archiving Availablity Geographical Availabilities: European Union Languages: English Marketing Multimedia 1 Dependencies Related Resources: B2HANDLE Platforms: Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Order Required Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Open Source Technologies: iRODS ( https://irods.org/ ) Version: 4.2 Management Helpdesk Manual Terms of use Training information Status Monitoring Financial Information Pricing Resource offers For Archival data B2SAFE can provide an higher level of abstraction to different underlying Data Archival mechanisms, in order to maintain Data Objects metadata (including also PIDs) and integrating with external tools. This offer targets data which is not frequently used and needs to be stored for long term and offers the option to replicate data across different sites for safe keeping. Requested initial storage capacity 10TB - higher than 500TB Expected increase per year 10TB - higher than 100TB Type of storage Online - Offline Replication None - More than 1 site Average file size smaller than 100MB - larger than 10GB Expected number of files less than 10k - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - None Preferred provider(s) BSC, CINECA, CYPRUS, GRNET, KIT, MPCDF, SURF Contact For Active data As a standard default mechanism B2SAFE can allow users to simply store data directly in the iRODS File System (iRODS FS), rather than the Object Storage or the Data Archival (as previously described). B2SAFE can create and assign PIDs to data objects, and store metadata associated to files and directories that have been saved to the Posix FS, on users behalf. This offer targets active data which is frequently used. Requested initial storage capacity 1TB - higher than 100TB Expected increase per year 1TB - higher than 20TB Replication None - More than 1 site Backup yes - no Average file size smaller than 10MB - larger than 1GB Expected number of files less than 10K - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - Other Preferred provider(s) CINECA, FZJ, GRNET, IT4I, KIT, SNIC Contact Communities Organisations B2SAFE is perfect for: Communities and organisations looking for long-term preservation of their data can use B2SAFE to replicating them to one or several other EUDAT sites. Community centres can also join the B2SAFE network which allows them to deploy the full B2SAFE software stack Get started Need more information? Contact us and get in touch with one of our representatives Use Cases The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more Common Language Resources and Technology Infrastructure CLARIN is the Common Language Resources and Technology Infrastructure in Europe. Read more Long-term preservation of herbarium specimen images Herbadrop is both an archival service for long-term preservation of herbarium specimen images and a tool for extracting information by image analysis. Read more Support to scientific research on seasonal-to-decadal climate and air quality modelling This pilot aims to “better simulate” climate change, at seasonal to decadal time scale and forecast air quality using both existing and locally developed models EC-Earth (global circulation model, Read more High resolution simulations for Precision Cosmology The SIMCODE-DS project deals with the need of high resolution simulations in view of the advent of what is known as the epoch of “Precision Cosmology”. Read more Enriching Europeana Newspapers Enriching Europeana Newspapers aims to expose the full text aggregated as part of the Europeana Newspapers project. Read more European Plate Observing System The European Plate Observing System (EPOS) is the integrated solid Earth Sciences research infrastructure approved by the European Strategy For Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more",
-      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT Service Catalogue B2SAFE B2SAFE B2SAFE Keep research data safe via data management policies Request B2SAFE and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2SAFE B2SAFE is a robust and highly available service which allows community and departmental repositories to implement data management policies on their research data across multiple administrative domains in a trustworthy manner. It offers an abstraction layer of large scale, heterogeneous data storages, guards against data loss in long-term archiving, allows to optimize access for users (e.g. from different regions), brings data closer to facilities for compute-intensive analysis. Features Support for data management policies (e.g. registration of PIDs, cross-site replication, data integrity checks) Support for policies customised to community and organisational needs Support for less frequently used archival data, but can also support active data Support for large scale storage resources (e.g up to PB-scale) A single namespace across hetrogeneous storages Supports integration with different kind of storage systems (e.g. Tape based HSM, POSIX filesystems, Object storage) Access via GridFTP, Webdav, iRODS commands Service offered by a network of EUDAT service providers Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Research Managers, Researchers, Research Communities, Research Projects, Research Groups, Research Organisations Access Types: Virtual Access Modes: Free Conditionally, Paid Tags: replication policy-based data management persistent identifiers data archiving Availablity Geographical Availabilities: European Union Languages: English Marketing Multimedia 1 Dependencies Related Resources: B2HANDLE Platforms: Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Order Required Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Open Source Technologies: iRODS ( https://irods.org/ ) Version: 4.2 Management Helpdesk Manual Terms of use Training information Status Monitoring Financial Information Pricing Resource offers For Archival data B2SAFE can provide an higher level of abstraction to different underlying Data Archival mechanisms, in order to maintain Data Objects metadata (including also PIDs) and integrating with external tools. This offer targets data which is not frequently used and needs to be stored for long term and offers the option to replicate data across different sites for safe keeping. Requested initial storage capacity 10TB - higher than 500TB Expected increase per year 10TB - higher than 100TB Type of storage Online - Offline Replication None - More than 1 site Average file size smaller than 100MB - larger than 10GB Expected number of files less than 10k - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - None Preferred provider(s) BSC, CINECA, CYPRUS, GRNET, KIT, MPCDF, SURF Contact For Active data As a standard default mechanism B2SAFE can allow users to simply store data directly in the iRODS File System (iRODS FS), rather than the Object Storage or the Data Archival (as previously described). B2SAFE can create and assign PIDs to data objects, and store metadata associated to files and directories that have been saved to the Posix FS, on users behalf. This offer targets active data which is frequently used. Requested initial storage capacity 1TB - higher than 100TB Expected increase per year 1TB - higher than 20TB Replication None - More than 1 site Backup yes - no Average file size smaller than 10MB - larger than 1GB Expected number of files less than 10K - more than 10M Data access protocol GridFTP - Other Data management policies PID registration - Other Preferred provider(s) CINECA, FZJ, GRNET, IT4I, KIT, SNIC Contact Communities Organisations B2SAFE is perfect for: Communities and organisations looking for long-term preservation of their data can use B2SAFE to replicating them to one or several other EUDAT sites. Community centres can also join the B2SAFE network which allows them to deploy the full B2SAFE software stack Get started Need more information? Contact us and get in touch with one of our representatives Use Cases The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more Common Language Resources and Technology Infrastructure CLARIN is the Common Language Resources and Technology Infrastructure in Europe. Read more Long-term preservation of herbarium specimen images Herbadrop is both an archival service for long-term preservation of herbarium specimen images and a tool for extracting information by image analysis. Read more Support to scientific research on seasonal-to-decadal climate and air quality modelling This pilot aims to “better simulate” climate change, at seasonal to decadal time scale and forecast air quality using both existing and locally developed models EC-Earth (global circulation model, Read more High resolution simulations for Precision Cosmology The SIMCODE-DS project deals with the need of high resolution simulations in view of the advent of what is known as the epoch of “Precision Cosmology”. Read more Enriching Europeana Newspapers Enriching Europeana Newspapers aims to expose the full text aggregated as part of the Europeana Newspapers project. Read more European Plate Observing System The European Plate Observing System (EPOS) is the integrated solid Earth Sciences research infrastructure approved by the European Strategy For Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more Unified Access to EISCAT radar data The European Incoherent Scatter Scientific Association (EISCAT) operates three incoherent scatter radars, instruments probing the Earth’s ionosphere. Read more European Long Term Ecological Research Network Long-Term Ecosystem Research (LTER) is an essential component of worldwide efforts to better understand ecosystems. This comprises their structure, functions, and long-term response to environmental, societal and economic drivers. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria IST DataRep is the institutional repository for publishing research output of IST Austria affiliates. Read more A distributed infrastructure for life-science information ELIXIR builds a sustainable pan-European infrastructure for biological information, supporting life science research and its translation Read more EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement FAQs",
+      "main_text": "Support Fast Response Helpdesk Whether you are troubleshooting or seeking guidance, our support team is here to help you. Send a Message Direct Ticket Name Surname E-Mail address Type - None - Issue Request Request services (Project) Integration Support Request (start pilot) Become a community Service - None - B2DROP B2SHARE B2SAFE B2STAGE B2FIND B2ACCESS B2HANDLE B2INST B2NOTE DATACITE DOCUMENTATION GEF METADATA WEBSITE Other Please describe briefly the intention of your request and indicate which EUDAT services are of interest Subject Message By sending this message you accept the Privacy Statement Send message What to Expect Fast Response We aim to get back to you within one business day. Straight to the Team Your message reaches the EUDAT support specialists directly. Looking for Services? Check service specifications, documentation, and pricing plans directly in our catalog. Browse Service Catalog",
+      "full_text": "Skip to main content Main navigation Catalog Catalog My Hub My Hub Status Status Helpdesk (current page) Helpdesk / Home / Helpdesk / User account menu Account Portal Member Log in Appearance System Light Dark Appearance System Light Dark Log in Support Fast Response Helpdesk Whether you are troubleshooting or seeking guidance, our support team is here to help you. Send a Message Direct Ticket Name Surname E-Mail address Type - None - Issue Request Request services (Project) Integration Support Request (start pilot) Become a community Service - None - B2DROP B2SHARE B2SAFE B2STAGE B2FIND B2ACCESS B2HANDLE B2INST B2NOTE DATACITE DOCUMENTATION GEF METADATA WEBSITE Other Please describe briefly the intention of your request and indicate which EUDAT services are of interest Subject Message By sending this message you accept the Privacy Statement Send message What to Expect Fast Response We aim to get back to you within one business day. Straight to the Team Your message reaches the EUDAT support specialists directly. Looking for Services? Check service specifications, documentation, and pricing plans directly in our catalog. Browse Service Catalog EUDAT is a pan-European network consisting of more than 25 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu Keilaranta 14, 02150 Espoo, Finland VAT number: FI 28953559 Navigation & Legal Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement EOSC Node EUDAT FAQs Connect LinkedIn YouTube SlideShare X © 2026 EUDAT — All rights reserved.",
       "links": [
         {
-          "href": "https://www.eudat.eu/",
-          "text": "Home",
+          "href": "https://portal.eudat.eu/welcome",
+          "text": "EOSC Node",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/about",
-          "text": "About",
+          "href": "https://portal.eudat.eu/user/login",
+          "text": "Log in",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/about",
-          "text": "EUDAT",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/governance",
-          "text": "Governance",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/members",
-          "text": "Members",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/collaborations",
-          "text": "Collaborations",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/projects",
-          "text": "Projects",
-          "visible": true
-        },
-        {
-          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
-          "text": "Communications Kit",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/membership",
-          "text": "Membership",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Services & Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-eosc-node",
-          "text": "EOSC EUDAT Node",
-          "visible": true
-        },
-        {
-          "href": "https://docs.eudat.eu/",
-          "text": "User Documentation",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-training",
-          "text": "Training",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Help Desk",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases",
-          "text": "Research Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/news",
-          "text": "News",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/events",
-          "text": "Events",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "About",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "EUDAT",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/governance",
-          "text": "Governance",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/members",
-          "text": "Members",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/collaborations",
-          "text": "Collaborations",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/projects",
-          "text": "Projects",
-          "visible": true
-        },
-        {
-          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
-          "text": "Communications Kit",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/membership",
-          "text": "Membership",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Services & Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-eosc-node",
-          "text": "EOSC EUDAT Node",
-          "visible": true
-        },
-        {
-          "href": "https://docs.eudat.eu/",
-          "text": "User Documentation",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-training",
-          "text": "Training",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Help Desk",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases",
-          "text": "Research Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/news",
-          "text": "News",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/events",
-          "text": "Events",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "About",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "EUDAT",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/governance",
-          "text": "Governance",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/members",
-          "text": "Members",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/collaborations",
-          "text": "Collaborations",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/projects",
-          "text": "Projects",
-          "visible": true
-        },
-        {
-          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
-          "text": "Communications Kit",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/membership",
-          "text": "Membership",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Services & Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-eosc-node",
-          "text": "EOSC EUDAT Node",
-          "visible": true
-        },
-        {
-          "href": "https://docs.eudat.eu/",
-          "text": "User Documentation",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-training",
-          "text": "Training",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Help Desk",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases",
-          "text": "Research Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/news",
-          "text": "News",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/events",
-          "text": "Events",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "EUDAT Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?Service=B2SAFE",
-          "text": "Request B2SAFE and receive a custom setup!",
-          "visible": true
-        },
-        {
-          "href": "https://b2share.eudat.eu/records/b90812d56b014db78db33cdd9efb632a",
-          "text": "Get brochure",
-          "visible": true
-        },
-        {
-          "href": "https://docs.eudat.eu/",
-          "text": "Access the user documentation",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=replication",
-          "text": "replication",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=policy-based+data+management",
-          "text": "policy-based data management",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=persistent+identifiers",
-          "text": "persistent identifiers",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=data+archiving",
-          "text": "data archiving",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc-portal.eu/services?geographical_availabilities=European+Union",
-          "text": "European Union",
-          "visible": true
-        },
-        {
-          "href": "https://www.youtube.com/watch?v=Vb4Q3x7hNBM",
-          "text": "Multimedia 1",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue/b2handle",
-          "text": "B2HANDLE",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?Service=B2SAFE",
-          "text": "Order url",
-          "visible": true
-        },
-        {
-          "href": "mailto:helpdesk@eudat.eu",
-          "text": "helpdesk@eudat.eu",
-          "visible": true
-        },
-        {
-          "href": "https://irods.org/",
-          "text": "https://irods.org/",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/support-request?Service=B2SAFE",
-          "text": "Helpdesk",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/services/userdoc/b2safe",
-          "text": "Manual",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-cdi-aup",
-          "text": "Terms of use",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/b2safe-training-suite",
-          "text": "Training information",
-          "visible": true
-        },
-        {
-          "href": "https://avail.eudat.eu/eudat/dashboard/Critical/B2SAFE%20catch%20all",
-          "text": "Status Monitoring",
-          "visible": true
-        },
-        {
-          "href": "http://eudat.eu/support-request?service=B2STAGE",
-          "text": "Pricing",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?Service=B2SAFE",
-          "text": "Contact",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?Service=B2SAFE",
-          "text": "Contact",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?Service=B2SAFE",
-          "text": "Get started",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-cdi/contact-us",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/the-use-of-the-eudat-repository-to-store-clinical-trials-in-a-secure-and-compliant-way-0",
-          "text": "The use of the EUDAT repository to store clinical trials in a secure and compliant way",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/unified-access-to-eiscat-radar-data-0",
-          "text": "Unified Access to EISCAT radar data",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/european-long-term-ecological-research-network-0",
-          "text": "European Long Term Ecological Research Network",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/data-management-in-compbiomed-using-eudat-services",
-          "text": "Data Management in CompBioMed using EUDAT services",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/eudat-services-to-guarantee-long-time-archiving-and-visibility-to-the-repository-of-ist-0",
-          "text": "EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/a-distributed-infrastructure-for-life-science-information-0",
-          "text": "A distributed infrastructure for life-science information",
-          "visible": true
-        },
-        {
-          "href": "https://www.elixir-europe.org/",
-          "text": "ELIXIR",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/common-language-resources-and-technology-infrastructure-0",
-          "text": "Common Language Resources and Technology Infrastructure",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/long-term-preservation-of-herbarium-specimen-images-0",
-          "text": "Long-term preservation of herbarium specimen images",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/support-to-scientific-research-on-seasonal-to-decadal-climate-and-air-quality-modelling-0",
-          "text": "Support to scientific research on seasonal-to-decadal climate and air quality modelling",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/high-resolution-simulations-for-precision-cosmology-0",
-          "text": "High resolution simulations for Precision Cosmology",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/enriching-europeana-newspapers-0",
-          "text": "Enriching Europeana Newspapers",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/european-plate-observing-system-0",
-          "text": "European Plate Observing System",
-          "visible": true
-        },
-        {
-          "href": "http://www.epos-eu.org/",
-          "text": "The European Plate Observing System (EPOS)",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/integrated-carbon-observation-system-0",
-          "text": "Integrated Carbon Observation System",
-          "visible": true
-        },
-        {
-          "href": "http://www.icos-ri.eu/",
-          "text": "ICOS (Integrated Carbon Observation System)",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/tokamak-data-mirror-for-jet-and-mast-data-0",
-          "text": "Tokamak data mirror for JET and MAST data",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/the-use-of-the-eudat-repository-to-store-clinical-trials-in-a-secure-and-compliant-way-0",
-          "text": "The use of the EUDAT repository to store clinical trials in a secure and compliant way",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/unified-access-to-eiscat-radar-data-0",
-          "text": "Unified Access to EISCAT radar data",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/european-long-term-ecological-research-network-0",
-          "text": "European Long Term Ecological Research Network",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/data-management-in-compbiomed-using-eudat-services",
-          "text": "Data Management in CompBioMed using EUDAT services",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/eudat-services-to-guarantee-long-time-archiving-and-visibility-to-the-repository-of-ist-0",
-          "text": "EUDAT services to guarantee long time archiving and visibility to the repository of IST Austria",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/a-distributed-infrastructure-for-life-science-information-0",
-          "text": "A distributed infrastructure for life-science information",
-          "visible": true
-        },
-        {
-          "href": "https://www.elixir-europe.org/",
-          "text": "ELIXIR",
+          "href": "https://open-science-cloud.ec.europa.eu/sites/default/files/2026-07/EOSC-EU-Node-Data-Privacy-Statement-v1.7.pdf",
+          "text": "Privacy Statement",
           "visible": true
         },
         {
@@ -1588,7 +1208,7 @@
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/privacy-policy-summary",
+          "href": "https://www.eudat.eu/privacy-policy",
           "text": "Privacy Policy",
           "visible": true
         },
@@ -1598,28 +1218,13 @@
           "visible": true
         },
         {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-eudat",
+          "text": "EOSC Node EUDAT",
+          "visible": true
+        },
+        {
           "href": "https://www.eudat.eu/frequently-asked-questions",
           "text": "FAQs",
-          "visible": true
-        },
-        {
-          "href": "https://twitter.com/Eudat_eu",
-          "text": "",
-          "visible": true
-        },
-        {
-          "href": "http://www.slideshare.net/EUDAT/",
-          "text": "",
-          "visible": true
-        },
-        {
-          "href": "https://www.youtube.com/user/EUDATTraining",
-          "text": "",
-          "visible": true
-        },
-        {
-          "href": "https://www.linkedin.com/company/eudat/",
-          "text": "",
           "visible": true
         }
       ],
@@ -1627,19 +1232,19 @@
       "error": ""
     },
     {
-      "url": "https://www.eudat.eu/service-catalogue/b2share-0",
+      "url": "https://www.eudat.eu/service-catalogue/b2access",
       "selected_for": [
         "5s"
       ],
-      "link_text": "B2SHARE Store and publish research data Publish datasets with a DOI, rich metadata and clear licensing, ready to be cited and reused. Learn more",
+      "link_text": "Sign in to the B2 services",
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://www.eudat.eu/service-catalogue/b2share-0",
-      "title": "B2SHARE | EUDAT",
+      "final_url": "https://www.eudat.eu/service-catalogue/b2access",
+      "title": "B2ACCESS | EUDAT",
       "lang_attr": "en",
-      "main_text": "B2SHARE Store and publish research data Request B2SHARE and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2SHARE B2SHARE is a user-friendly, reliable and trustworthy way for researchers, scientific communities and citizen scientists to store, publish and share research data in a FAIR way. B2SHARE is a solution that facilitates research data storage, guarantees long-term persistence of data and allows data, results or ideas to be shared worldwide. B2SHARE supports community domains with metadata extensions, access rules and publishing workflows. EUDAT offers communities and organisations customised instances and/or access to repositories supporting large datasets. Features Support of metadata descriptions via the EUDAT metadata schema Registers DOIs for datasets and Handle PIDs for data objects Supports versioning Harvested by B2FIND and OpenAIRE explorer Direct upload from B2DROP Accessible via a Web GUI and an API to support automatic publishing workflows Supports community domains Allows communities to define metadata extensions, access rules and publishing workflows Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Researchers, Research Communities, Research Projects, Research Groups Access Types: Virtual Access Modes: Free, Paid Tags: data repository data sharing data publishing fair Availablity Geographical Availabilities: European Union Languages: English Marketing Multimedia 2 Multimedia 1 Dependencies Required Resources: B2ACCESS Related Resources: B2DROP B2FIND Platforms: Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Open Access Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Open Source Technologies: Invenio ( https://inveniosoftware.org/ ) Version: 2.1.6 Management Helpdesk Manual Terms of use Privacy policy Training information Status Monitoring Resource offers For Researchers - Basic B2SHARE is a free-to-use public service supporting cross disciplinary research, self-registration for any scientists and researchers, free upload of stable research data, data will receive a DOI which can be used for citing, data objects will receive a B2HANDLE PID, access policy is defined by the data owner, metadata in openly accessible and made discoverable via B2FIND, Direct uploads from B2DROP, data integrity is ensured by checksums which are calculated during data ingest. Contact For Data managers - Premium The B2SHARE - Premium service is the same as the basic service, but provides researchers the option to upload of larger data files and datasets (>20GB) and the customization of metadata extensions. Requested resource capacity 100GB - higher than 1TB Max size dataset lower than 40GB - higher than 80GB Is a specific community domain required yes - no Is specific metadata required yes - no Contact For Communities And Organisations The B2SHARE option for communities and organizations offers the option for dedicated and branded B2SHARE instances which can be customized to community and organizational needs. This support customization to the metadata schemas, community domains and access rights. Requested total storage capacity 1TB - higher than 10TB How long must the data be stored 3 years - more than 10 years Contact For Large datasets EUDAT is a network service providers across Europe specialist in large ICT infrastructure supporting research. To researchers and/or communities seeking need to publish and/or make large datasets accessible in a FAIR way EUDAT can offer access to data repositories supporting large datasets (>50TB). These repositories are made available through the EUDAT partners. Requested total storage capacity 50TB - higher than 500TB How long must the data be stored 3 years - longer than 10 years Contact Communities Researchers B2SHARE is perfect for: Researchers who require adequate facilities for storing research data with metadata Researchers who would like to guarantee the long-term persistence of their locally-stored data Researchers who require adequate facilities to easily share data, results or ideas with colleagues worldwide B2SHARE is available for all researchers and scientists who are affiliated to research institutions or universities as well as to individual researchers (citizen scientists). To deposit research data, researchers must register. Get started Need more information? Contact us and get in touch with one of our representatives Use Cases Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more PreMaCOOL: Predictive Maintenance for Commercial Cooling Systems Since 1984, Klimamichaniki has been a dynamic force in Greece's HVAC and energy sectors, consistently leading the way with innovative approaches. Read more EUDAT services in ROHub for storage of scientific artefacts and publication of research objects ROHub is a research-enabling service in EOSC supporting scientists in the adoption of FAIR and Open Science principles. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more European Network for Earth System Modelling The European Network for Earth System Modeling (ENES) is developing a common climate and Earth system modeling distributed research infrastructure in Europe integrating the European community on Ea Read more Linked Data service pilot The EUDAT semantic annotation service aims to look at the technical options for providing a linked data service to EUDAT participants and stakeholders. Read more Common Language Resources and Technology Infrastructure CLARIN is the Common Language Resources and Technology Infrastructure in Europe. Read more Jülich Atmospheric Data Distribution Service The Jülich Atmospheric Data Distribution Service (JADDS) aims at providing the regional air quality community world-wide with customized atmospheric boundary conditions of trace gas and aerosol con Read more High resolution simulations for Precision Cosmology The SIMCODE-DS project deals with the need of high resolution simulations in view of the advent of what is known as the epoch of “Precision Cosmology”. Read more Research data repository for students’ own results In the Department of Physics of University of Helsinki, the masters level training of physicists have traditionally included extensive laboratory experiments, their documentation and reporting. Read more EUDAT as a long-term repository for the University of Porto The DataPublication@ U.Porto pilot gathers experiments where Dendro, a prototype Research Data Management platform, is used as a gateway to EUDAT. Read more Cloud-like services to improve the preservation of digital cultural heritage For the benefit of cultural organisations the National Library of Scotland, working with Edinburgh Parallel Computing Centre (EPCC) and with the support of the National Galleries of Scotland and th Read more European Plate Observing System The European Plate Observing System (EPOS) is the integrated solid Earth Sciences research infrastructure approved by the European Strategy For Read more Central online location for data sharing for all Aalto University researchers Creation of a central online location for data sharing for all Aalto University researchers. Read more Public access to fine-grained city air quality data from roving sensors PAIRQURS is the public data access component of the project LIFE+RESPIRA . Read more Information and Data Management Repository Platform for Nanoscience in Europe The efficient data archiving for nanoscience community is a key challenge, i.e. Read more Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more PreMaCOOL: Predictive Maintenance for Commercial Cooling Systems Since 1984, Klimamichaniki has been a dynamic force in Greece's HVAC and energy sectors, consistently leading the way with innovative approaches. Read more EUDAT services in ROHub for storage of scientific artefacts and publication of research objects ROHub is a research-enabling service in EOSC supporting scientists in the adoption of FAIR and Open Science principles. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more",
-      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT Service Catalogue B2SHARE B2SHARE B2SHARE Store and publish research data Request B2SHARE and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2SHARE B2SHARE is a user-friendly, reliable and trustworthy way for researchers, scientific communities and citizen scientists to store, publish and share research data in a FAIR way. B2SHARE is a solution that facilitates research data storage, guarantees long-term persistence of data and allows data, results or ideas to be shared worldwide. B2SHARE supports community domains with metadata extensions, access rules and publishing workflows. EUDAT offers communities and organisations customised instances and/or access to repositories supporting large datasets. Features Support of metadata descriptions via the EUDAT metadata schema Registers DOIs for datasets and Handle PIDs for data objects Supports versioning Harvested by B2FIND and OpenAIRE explorer Direct upload from B2DROP Accessible via a Web GUI and an API to support automatic publishing workflows Supports community domains Allows communities to define metadata extensions, access rules and publishing workflows Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Researchers, Research Communities, Research Projects, Research Groups Access Types: Virtual Access Modes: Free, Paid Tags: data repository data sharing data publishing fair Availablity Geographical Availabilities: European Union Languages: English Marketing Multimedia 2 Multimedia 1 Dependencies Required Resources: B2ACCESS Related Resources: B2DROP B2FIND Platforms: Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Open Access Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Open Source Technologies: Invenio ( https://inveniosoftware.org/ ) Version: 2.1.6 Management Helpdesk Manual Terms of use Privacy policy Training information Status Monitoring Resource offers For Researchers - Basic B2SHARE is a free-to-use public service supporting cross disciplinary research, self-registration for any scientists and researchers, free upload of stable research data, data will receive a DOI which can be used for citing, data objects will receive a B2HANDLE PID, access policy is defined by the data owner, metadata in openly accessible and made discoverable via B2FIND, Direct uploads from B2DROP, data integrity is ensured by checksums which are calculated during data ingest. Contact For Data managers - Premium The B2SHARE - Premium service is the same as the basic service, but provides researchers the option to upload of larger data files and datasets (>20GB) and the customization of metadata extensions. Requested resource capacity 100GB - higher than 1TB Max size dataset lower than 40GB - higher than 80GB Is a specific community domain required yes - no Is specific metadata required yes - no Contact For Communities And Organisations The B2SHARE option for communities and organizations offers the option for dedicated and branded B2SHARE instances which can be customized to community and organizational needs. This support customization to the metadata schemas, community domains and access rights. Requested total storage capacity 1TB - higher than 10TB How long must the data be stored 3 years - more than 10 years Contact For Large datasets EUDAT is a network service providers across Europe specialist in large ICT infrastructure supporting research. To researchers and/or communities seeking need to publish and/or make large datasets accessible in a FAIR way EUDAT can offer access to data repositories supporting large datasets (>50TB). These repositories are made available through the EUDAT partners. Requested total storage capacity 50TB - higher than 500TB How long must the data be stored 3 years - longer than 10 years Contact Communities Researchers B2SHARE is perfect for: Researchers who require adequate facilities for storing research data with metadata Researchers who would like to guarantee the long-term persistence of their locally-stored data Researchers who require adequate facilities to easily share data, results or ideas with colleagues worldwide B2SHARE is available for all researchers and scientists who are affiliated to research institutions or universities as well as to individual researchers (citizen scientists). To deposit research data, researchers must register. Get started Need more information? Contact us and get in touch with one of our representatives Use Cases Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more PreMaCOOL: Predictive Maintenance for Commercial Cooling Systems Since 1984, Klimamichaniki has been a dynamic force in Greece's HVAC and energy sectors, consistently leading the way with innovative approaches. Read more EUDAT services in ROHub for storage of scientific artefacts and publication of research objects ROHub is a research-enabling service in EOSC supporting scientists in the adoption of FAIR and Open Science principles. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more European Network for Earth System Modelling The European Network for Earth System Modeling (ENES) is developing a common climate and Earth system modeling distributed research infrastructure in Europe integrating the European community on Ea Read more Linked Data service pilot The EUDAT semantic annotation service aims to look at the technical options for providing a linked data service to EUDAT participants and stakeholders. Read more Common Language Resources and Technology Infrastructure CLARIN is the Common Language Resources and Technology Infrastructure in Europe. Read more Jülich Atmospheric Data Distribution Service The Jülich Atmospheric Data Distribution Service (JADDS) aims at providing the regional air quality community world-wide with customized atmospheric boundary conditions of trace gas and aerosol con Read more High resolution simulations for Precision Cosmology The SIMCODE-DS project deals with the need of high resolution simulations in view of the advent of what is known as the epoch of “Precision Cosmology”. Read more Research data repository for students’ own results In the Department of Physics of University of Helsinki, the masters level training of physicists have traditionally included extensive laboratory experiments, their documentation and reporting. Read more EUDAT as a long-term repository for the University of Porto The DataPublication@ U.Porto pilot gathers experiments where Dendro, a prototype Research Data Management platform, is used as a gateway to EUDAT. Read more Cloud-like services to improve the preservation of digital cultural heritage For the benefit of cultural organisations the National Library of Scotland, working with Edinburgh Parallel Computing Centre (EPCC) and with the support of the National Galleries of Scotland and th Read more European Plate Observing System The European Plate Observing System (EPOS) is the integrated solid Earth Sciences research infrastructure approved by the European Strategy For Read more Central online location for data sharing for all Aalto University researchers Creation of a central online location for data sharing for all Aalto University researchers. Read more Public access to fine-grained city air quality data from roving sensors PAIRQURS is the public data access component of the project LIFE+RESPIRA . Read more Information and Data Management Repository Platform for Nanoscience in Europe The efficient data archiving for nanoscience community is a key challenge, i.e. Read more Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more Tokamak data mirror for JET and MAST data Our data pilot will provide a mirror of experimental data from two magnetic confinement nuclear fusion devices (Tokamaks) at the Culham Centre for Fusion Energy (CCFE): the Joint European Torus (JE Read more The use of the EUDAT repository to store clinical trials in a secure and compliant way The EUDAT repository and services will be used for the secure, GCP (Good Clinical Practice) compliant and transparent storage of clinical trials data. Read more PreMaCOOL: Predictive Maintenance for Commercial Cooling Systems Since 1984, Klimamichaniki has been a dynamic force in Greece's HVAC and energy sectors, consistently leading the way with innovative approaches. Read more EUDAT services in ROHub for storage of scientific artefacts and publication of research objects ROHub is a research-enabling service in EOSC supporting scientists in the adoption of FAIR and Open Science principles. Read more Data Management in CompBioMed using EUDAT services CompBioMed is a European commission H2020 funded Centre of Excellence (CoE) focused on the use and development of computational methods for biomedical application. Read more EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
+      "main_text": "B2ACCESS Identity & authorisation Request B2ACCESS and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2ACCESS B2ACCESS is a federated cross-infrastructure authorisation and authentication proxy for user identification and community-defined access control enforcement. It allows users to authenticate themselves using a variety of credentials providing federated access and single-sign-on to services and service providers in a trusted way. B2ACCESS offers communities and service providers an AARC compliant AAI proxy ready to be integrated within the EOSC AAI Federation Features Compliant to the AARC Blueprint and REFEDS Sirtfi Supports group management Supports authorisation via group membership Supports authentication e.g. via eduGAIN, ORCID and Social Identities Support for EUDAT B2ACCESS local accounts Support for IdP and service integration via SAML, OAuth and OIDC Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Researchers, Research Communities, Providers Access Types: Virtual Access Modes: Free, Paid Tags: single sign-on federated identity management federated aai proxy Availablity Geographical Availabilities: European Union Languages: English Dependencies Platforms : Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Order Required Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Standards: Supported standards for Service and IdP integration: SAML, OAuth2, X.509 Open Source Technologies: Unity Idm ( https://www.unity-idm.eu/ ) Version: 3.14.0 Management Helpdesk Manual Terms of use Privacy policy Training information Financial Information Pricing Community application End-users B2ACCESS is perfect for: End-users of the B2 Suite and community applications that can be integrated with B2ACCESS to get user identities and attributes got Authorization and Authentication decisions Get started Need more information? Contact us and get in touch with one of our representatives Use Cases Information and Data Management Repository Platform for Nanoscience in Europe The efficient data archiving for nanoscience community is a key challenge, i.e. Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more The EIDA Authentication System: a federated approach to AAI for the scientific community EIDA is a collaborative network of seismological data centres aimed at securely storing seismic waveform data and metadata collected by European research infrastructures. Read more Research data repository for students’ own results In the Department of Physics of University of Helsinki, the masters level training of physicists have traditionally included extensive laboratory experiments, their documentation and reporting. Read more Central online location for data sharing for all Aalto University researchers Creation of a central online location for data sharing for all Aalto University researchers. Read more Public access to fine-grained city air quality data from roving sensors PAIRQURS is the public data access component of the project LIFE+RESPIRA . Read more Information and Data Management Repository Platform for Nanoscience in Europe The efficient data archiving for nanoscience community is a key challenge, i.e. Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more The EIDA Authentication System: a federated approach to AAI for the scientific community EIDA is a collaborative network of seismological data centres aimed at securely storing seismic waveform data and metadata collected by European research infrastructures. Read more Research data repository for students’ own results In the Department of Physics of University of Helsinki, the masters level training of physicists have traditionally included extensive laboratory experiments, their documentation and reporting. Read more Central online location for data sharing for all Aalto University researchers Creation of a central online location for data sharing for all Aalto University researchers. Read more",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT Service Catalogue B2ACCESS B2ACCESS B2ACCESS Identity & authorisation Request B2ACCESS and receive a custom setup! Click in the button and send a request to EUDAT team About Details What is B2ACCESS B2ACCESS is a federated cross-infrastructure authorisation and authentication proxy for user identification and community-defined access control enforcement. It allows users to authenticate themselves using a variety of credentials providing federated access and single-sign-on to services and service providers in a trusted way. B2ACCESS offers communities and service providers an AARC compliant AAI proxy ready to be integrated within the EOSC AAI Federation Features Compliant to the AARC Blueprint and REFEDS Sirtfi Supports group management Supports authorisation via group membership Supports authentication e.g. via eduGAIN, ORCID and Social Identities Support for EUDAT B2ACCESS local accounts Support for IdP and service integration via SAML, OAuth and OIDC Get brochure Access the user documentation Classification Target Users: Research Infrastructure Managers, Researchers, Research Communities, Providers Access Types: Virtual Access Modes: Free, Paid Tags: single sign-on federated identity management federated aai proxy Availablity Geographical Availabilities: European Union Languages: English Dependencies Platforms : Data Infrastructure Capacity for EOSC (DICE), EUDAT CDI Attribution Funding Bodies: European Comission (EC) Funding Programs: The framework programme for research and innovation (H2020) Grant Project Names: DICE (101017207) Order Order type: Order Required Order url Public Contacts EUDAT Secretariat helpdesk@eudat.eu Maturity Information Trl: 9 - ACTUAL SYSTEM PROVEN IN OPERATIONAL ENVIRONMENT Life Cycle Status: Production Standards: Supported standards for Service and IdP integration: SAML, OAuth2, X.509 Open Source Technologies: Unity Idm ( https://www.unity-idm.eu/ ) Version: 3.14.0 Management Helpdesk Manual Terms of use Privacy policy Training information Financial Information Pricing Community application End-users B2ACCESS is perfect for: End-users of the B2 Suite and community applications that can be integrated with B2ACCESS to get user identities and attributes got Authorization and Authentication decisions Get started Need more information? Contact us and get in touch with one of our representatives Use Cases Information and Data Management Repository Platform for Nanoscience in Europe The efficient data archiving for nanoscience community is a key challenge, i.e. Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more The EIDA Authentication System: a federated approach to AAI for the scientific community EIDA is a collaborative network of seismological data centres aimed at securely storing seismic waveform data and metadata collected by European research infrastructures. Read more Research data repository for students’ own results In the Department of Physics of University of Helsinki, the masters level training of physicists have traditionally included extensive laboratory experiments, their documentation and reporting. Read more Central online location for data sharing for all Aalto University researchers Creation of a central online location for data sharing for all Aalto University researchers. Read more Public access to fine-grained city air quality data from roving sensors PAIRQURS is the public data access component of the project LIFE+RESPIRA . Read more Information and Data Management Repository Platform for Nanoscience in Europe The efficient data archiving for nanoscience community is a key challenge, i.e. Read more Integrated Carbon Observation System ICOS (Integrated Carbon Observation System) is a new European research infrastructure (RI) with the mission to enable research to understand the Read more Supporting data management for structural biologists West-Life will provide a Virtual Research Environment (VRE) for structural biologists across Europe with users ranging from PhD students to professors. Read more The EIDA Authentication System: a federated approach to AAI for the scientific community EIDA is a collaborative network of seismological data centres aimed at securely storing seismic waveform data and metadata collected by European research infrastructures. Read more Research data repository for students’ own results In the Department of Physics of University of Helsinki, the masters level training of physicists have traditionally included extensive laboratory experiments, their documentation and reporting. Read more Central online location for data sharing for all Aalto University researchers Creation of a central online location for data sharing for all Aalto University researchers. Read more EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
       "links": [
         {
           "href": "https://www.eudat.eu/",
@@ -1932,12 +1537,12 @@
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
-          "text": "Request B2SHARE and receive a custom setup!",
+          "href": "https://www.eudat.eu/contact-support-request?service=B2ACCESS",
+          "text": "Request B2ACCESS and receive a custom setup!",
           "visible": true
         },
         {
-          "href": "https://b2share.eudat.eu/records/566cb4b12ea94e97ab17be38dc6cd7cd",
+          "href": "https://b2share.eudat.eu/records/4b5c77661d6e456ea48d17b69ce79b44",
           "text": "Get brochure",
           "visible": true
         },
@@ -1947,23 +1552,18 @@
           "visible": true
         },
         {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=data+repository",
-          "text": "data repository",
+          "href": "https://marketplace.eosc-portal.eu/services?tag=single+sign-on",
+          "text": "single sign-on",
           "visible": true
         },
         {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=data+sharing",
-          "text": "data sharing",
+          "href": "https://marketplace.eosc-portal.eu/services?tag=federated+identity+management",
+          "text": "federated identity management",
           "visible": true
         },
         {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=data+publishing",
-          "text": "data publishing",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc-portal.eu/services?tag=fair",
-          "text": "fair",
+          "href": "https://marketplace.eosc-portal.eu/services?tag=federated+aai+proxy",
+          "text": "federated aai proxy",
           "visible": true
         },
         {
@@ -1972,32 +1572,7 @@
           "visible": true
         },
         {
-          "href": "https://www.youtube.com/watch?v=17HUb6tcFoA",
-          "text": "Multimedia 2",
-          "visible": true
-        },
-        {
-          "href": "https://www2.slideshare.net/EUDAT/eudat-b2share-how-to-store-and-publish-research-data-wwweudateu",
-          "text": "Multimedia 1",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/service-catalogue/catalogue/b2access",
-          "text": "B2ACCESS",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/service-catalogue/catalogue/b2drop",
-          "text": "B2DROP",
-          "visible": true
-        },
-        {
-          "href": "https://catalogue/b2find",
-          "text": "B2FIND",
-          "visible": true
-        },
-        {
-          "href": "https://eudat.eu/support-request?service=B2SHARE",
+          "href": "https://www.eudat.eu/support-request?service=B2ACCESS",
           "text": "Order url",
           "visible": true
         },
@@ -2007,17 +1582,17 @@
           "visible": true
         },
         {
-          "href": "https://inveniosoftware.org/",
-          "text": "https://inveniosoftware.org/",
+          "href": "https://www.unity-idm.eu/",
+          "text": "https://www.unity-idm.eu/",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/support-request?Service=B2SHARE",
+          "href": "https://www.eudat.eu/support-request?Service=B2ACCESS",
           "text": "Helpdesk",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/services/userdoc/b2share",
+          "href": "https://www.eudat.eu/services/userdoc/b2access-management",
           "text": "Manual",
           "visible": true
         },
@@ -2027,42 +1602,22 @@
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/privacy-policy-summary",
+          "href": "https://b2access.eudat.eu/unitygw/VAADIN/files/data-privacy-statement.html",
           "text": "Privacy policy",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/b2share-training-suite",
+          "href": "https://www.eudat.eu/b2access-training-suite",
           "text": "Training information",
           "visible": true
         },
         {
-          "href": "https://avail.eudat.eu/eudat/dashboard/Critical/B2SHARE%20CDI",
-          "text": "Status Monitoring",
+          "href": "https://b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html",
+          "text": "Pricing",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
-          "text": "Contact",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
-          "text": "Contact",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
-          "text": "Contact",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
-          "text": "Contact",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
+          "href": "https://www.eudat.eu/contact-support-request?service=B2ACCESS",
           "text": "Get started",
           "visible": true
         },
@@ -2072,88 +1627,33 @@
           "visible": true
         },
         {
+          "href": "https://www.eudat.eu/use-cases/information-and-data-management-repository-platform-for-nanoscience-in-europe-0",
+          "text": "Information and Data Management Repository Platform for Nanoscience in Europe",
+          "visible": true
+        },
+        {
+          "href": "https://www.eudat.eu/use-cases/integrated-carbon-observation-system-0",
+          "text": "Integrated Carbon Observation System",
+          "visible": true
+        },
+        {
+          "href": "http://www.icos-ri.eu/",
+          "text": "ICOS (Integrated Carbon Observation System)",
+          "visible": true
+        },
+        {
           "href": "https://www.eudat.eu/use-cases/supporting-data-management-for-structural-biologists-0",
           "text": "Supporting data management for structural biologists",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/use-cases/tokamak-data-mirror-for-jet-and-mast-data-0",
-          "text": "Tokamak data mirror for JET and MAST data",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/the-use-of-the-eudat-repository-to-store-clinical-trials-in-a-secure-and-compliant-way-0",
-          "text": "The use of the EUDAT repository to store clinical trials in a secure and compliant way",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/premacool-predictive-maintenance-for-commercial-cooling-systems",
-          "text": "PreMaCOOL: Predictive Maintenance for Commercial Cooling Systems",
-          "visible": true
-        },
-        {
-          "href": "https://klimamichaniki.gr/",
-          "text": "Klimamichaniki",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/eudat-services-in-rohub-for-storage-of-scientific-artefacts-and-publication-of-research",
-          "text": "EUDAT services in ROHub for storage of scientific artefacts and publication of research objects",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/data-management-in-compbiomed-using-eudat-services",
-          "text": "Data Management in CompBioMed using EUDAT services",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/european-network-for-earth-system-modelling-0",
-          "text": "European Network for Earth System Modelling",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/linked-data-service-pilot-0",
-          "text": "Linked Data service pilot",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/common-language-resources-and-technology-infrastructure-0",
-          "text": "Common Language Resources and Technology Infrastructure",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/j%C3%BClich-atmospheric-data-distribution-service-0",
-          "text": "Jülich Atmospheric Data Distribution Service",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/high-resolution-simulations-for-precision-cosmology-0",
-          "text": "High resolution simulations for Precision Cosmology",
+          "href": "https://www.eudat.eu/use-cases/the-eida-authentication-system-a-federated-approach-to-aai-for-the-scientific-community",
+          "text": "The EIDA Authentication System: a federated approach to AAI for the scientific community",
           "visible": true
         },
         {
           "href": "https://www.eudat.eu/use-cases/research-data-repository-for-students%E2%80%99-own-results-0",
           "text": "Research data repository for students’ own results",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/eudat-as-a-long-term-repository-for-the-university-of-porto-0",
-          "text": "EUDAT as a long-term repository for the University of Porto",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/cloud-like-services-to-improve-the-preservation-of-digital-cultural-heritage-0",
-          "text": "Cloud-like services to improve the preservation of digital cultural heritage",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/european-plate-observing-system-0",
-          "text": "European Plate Observing System",
-          "visible": true
-        },
-        {
-          "href": "http://www.epos-eu.org/",
-          "text": "The European Plate Observing System (EPOS)",
           "visible": true
         },
         {
@@ -2177,38 +1677,33 @@
           "visible": true
         },
         {
+          "href": "https://www.eudat.eu/use-cases/integrated-carbon-observation-system-0",
+          "text": "Integrated Carbon Observation System",
+          "visible": true
+        },
+        {
+          "href": "http://www.icos-ri.eu/",
+          "text": "ICOS (Integrated Carbon Observation System)",
+          "visible": true
+        },
+        {
           "href": "https://www.eudat.eu/use-cases/supporting-data-management-for-structural-biologists-0",
           "text": "Supporting data management for structural biologists",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/use-cases/tokamak-data-mirror-for-jet-and-mast-data-0",
-          "text": "Tokamak data mirror for JET and MAST data",
+          "href": "https://www.eudat.eu/use-cases/the-eida-authentication-system-a-federated-approach-to-aai-for-the-scientific-community",
+          "text": "The EIDA Authentication System: a federated approach to AAI for the scientific community",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/use-cases/the-use-of-the-eudat-repository-to-store-clinical-trials-in-a-secure-and-compliant-way-0",
-          "text": "The use of the EUDAT repository to store clinical trials in a secure and compliant way",
+          "href": "https://www.eudat.eu/use-cases/research-data-repository-for-students%E2%80%99-own-results-0",
+          "text": "Research data repository for students’ own results",
           "visible": true
         },
         {
-          "href": "https://www.eudat.eu/use-cases/premacool-predictive-maintenance-for-commercial-cooling-systems",
-          "text": "PreMaCOOL: Predictive Maintenance for Commercial Cooling Systems",
-          "visible": true
-        },
-        {
-          "href": "https://klimamichaniki.gr/",
-          "text": "Klimamichaniki",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/eudat-services-in-rohub-for-storage-of-scientific-artefacts-and-publication-of-research",
-          "text": "EUDAT services in ROHub for storage of scientific artefacts and publication of research objects",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases/data-management-in-compbiomed-using-eudat-services",
-          "text": "Data Management in CompBioMed using EUDAT services",
+          "href": "https://www.eudat.eu/use-cases/central-online-location-for-data-sharing-for-all-aalto-university-researchers-0",
+          "text": "Central online location for data sharing for all Aalto University researchers",
           "visible": true
         },
         {
@@ -2270,7 +1765,7 @@
       "selected_for": [
         "5s"
       ],
-      "link_text": "B2DROP Sync and share research data Keep working files in sync across devices and exchange them with collaborators. Learn more",
+      "link_text": "Sync and share working files",
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
@@ -3416,7 +2911,7 @@
       "title": "EUDAT Service catalogue | EUDAT",
       "lang_attr": "en",
       "main_text": "Using EUDAT services Any researcher or research group (organisations or individuals) may use the services that are supplied by EUDAT (and deployed at the service provider within EUDAT) according to the terms and conditions agreed on by EUDAT and its relevant service provider . Examples of Users range from single researchers or small research groups up to major research infrastructures (e.g. ESFRI research infrastructures) and other e-Infrastructures (e.g. EGI compute clusters or PRACE supercomputers). Users interact with the EUDAT through one or more of its service providers. Using EUDAT, they can rely on innovative data services to support their research collaboration and data management. In particular, they can: Benefit from a simple, efficient, trustworthy, affordable collaborative and interoperable data infrastructure Connect with Europe’s most powerful supercomputers Be supported by a pool of experts to tackle your data challenge Trace data origin in the metadata catalogue B2FIND Find research data View service B2SAFE Keep research data safe via data management policies View service B2SHARE Store and publish research data View service B2DROP Sync and share research data View service B2ACCESS Identity & authorisation View service B2HANDLE Register your research data with a persistent identifier View service DataCite Register your DOIs with EUDAT DataCite Consortium View service",
-      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT Service Catalogue EUDAT Service catalogue Using EUDAT services Any researcher or research group (organisations or individuals) may use the services that are supplied by EUDAT (and deployed at the service provider within EUDAT) according to the terms and conditions agreed on by EUDAT and its relevant service provider . Examples of Users range from single researchers or small research groups up to major research infrastructures (e.g. ESFRI research infrastructures) and other e-Infrastructures (e.g. EGI compute clusters or PRACE supercomputers). Users interact with the EUDAT through one or more of its service providers. Using EUDAT, they can rely on innovative data services to support their research collaboration and data management. In particular, they can: Benefit from a simple, efficient, trustworthy, affordable collaborative and interoperable data infrastructure Connect with Europe’s most powerful supercomputers Be supported by a pool of experts to tackle your data challenge Trace data origin in the metadata catalogue B2FIND Find research data View service B2SAFE Keep research data safe via data management policies View service B2SHARE Store and publish research data View service B2DROP Sync and share research data View service B2ACCESS Identity & authorisation View service B2HANDLE Register your research data with a persistent identifier View service DataCite Register your DOIs with EUDAT DataCite Consortium View service EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement FAQs",
+      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home EUDAT Service Catalogue EUDAT Service catalogue Using EUDAT services Any researcher or research group (organisations or individuals) may use the services that are supplied by EUDAT (and deployed at the service provider within EUDAT) according to the terms and conditions agreed on by EUDAT and its relevant service provider . Examples of Users range from single researchers or small research groups up to major research infrastructures (e.g. ESFRI research infrastructures) and other e-Infrastructures (e.g. EGI compute clusters or PRACE supercomputers). Users interact with the EUDAT through one or more of its service providers. Using EUDAT, they can rely on innovative data services to support their research collaboration and data management. In particular, they can: Benefit from a simple, efficient, trustworthy, affordable collaborative and interoperable data infrastructure Connect with Europe’s most powerful supercomputers Be supported by a pool of experts to tackle your data challenge Trace data origin in the metadata catalogue B2FIND Find research data View service B2SAFE Keep research data safe via data management policies View service B2SHARE Store and publish research data View service B2DROP Sync and share research data View service B2ACCESS Identity & authorisation View service B2HANDLE Register your research data with a persistent identifier View service DataCite Register your DOIs with EUDAT DataCite Consortium View service EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
       "links": [
         {
           "href": "https://www.eudat.eu/",
@@ -4551,379 +4046,33 @@
       "error": ""
     },
     {
-      "url": "https://www.eudat.eu/contact-support-request?Service=B2SAFE",
+      "url": "https://b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html",
       "selected_for": [
-        "6"
+        "5b"
       ],
-      "link_text": "Request B2SAFE and receive a custom setup!",
+      "link_text": "Pricing",
       "depth": 2,
-      "parent_url": "https://www.eudat.eu/service-catalogue/b2safe",
-      "http_status": 200,
-      "final_url": "https://www.eudat.eu/contact-support-request?Service=B2SAFE",
-      "title": "Contact & Support request | EUDAT",
-      "lang_attr": "en",
-      "main_text": "Name Surname E-Mail address Community Community - None - CLARIN ELIXIR ENES EPOS ICOS LTER Europe VPH Citizen EOSCpilot SeaDataCloud Others Enter other… Type - None - Issue Request Request services (Project) Integration Support Request (start pilot) Become a community Service - None - B2DROP B2SHARE B2SAFE B2STAGE B2FIND B2ACCESS B2HANDLE B2INST B2NOTE DATACITE DOCUMENTATION GEF METADATA WEBSITE Other Please describe briefly the intention of your request and indicate which EUDAT services are of interest Subject Message 240 character(s) remaining This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.",
-      "full_text": "Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us Breadcrumb Home Contact & Support request Contact & Support request Name Surname E-Mail address Community Community - None - CLARIN ELIXIR ENES EPOS ICOS LTER Europe VPH Citizen EOSCpilot SeaDataCloud Others Enter other… Type - None - Issue Request Request services (Project) Integration Support Request (start pilot) Become a community Service - None - B2DROP B2SHARE B2SAFE B2STAGE B2FIND B2ACCESS B2HANDLE B2INST B2NOTE DATACITE DOCUMENTATION GEF METADATA WEBSITE Other Please describe briefly the intention of your request and indicate which EUDAT services are of interest Subject Message 240 character(s) remaining This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. The EUDAT helpdesk is co-funded by the EOSC-hub project (Horizon 2020) under Grant number 777536. EUDAT EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers. EUDAT Ltd CONTACTS info@eudat.eu EUDAT Ltd Keilaranta 14 02150 Espoo Finland, VAT number: FI 28953559 Acceptable Use Policy User Access Policy Privacy Policy Accessibility Statement FAQs We value your privacy Cookies consist of portions of code installed in the browser that assist the owner in providing the service based on the purposes described. To continue with navigation, it is required to accept at least the technical cookies. Other cookies are optional and require the user's consent. When the installation of cookies takes place on the basis of consent, this consent can be revoked freely at any time following the instructions contained in this document. Read the full privacy policy Strictly Necessary Cookies These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information. Measurement These trackers help us to measure traffic and analyze your behavior with the goal of improving our service. Accept technical cookies Manage preferences Accept all cookies",
-      "links": [
-        {
-          "href": "https://www.eudat.eu/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "About",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "EUDAT",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/governance",
-          "text": "Governance",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/members",
-          "text": "Members",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/collaborations",
-          "text": "Collaborations",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/projects",
-          "text": "Projects",
-          "visible": true
-        },
-        {
-          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
-          "text": "Communications Kit",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/membership",
-          "text": "Membership",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Services & Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-eosc-node",
-          "text": "EOSC EUDAT Node",
-          "visible": true
-        },
-        {
-          "href": "https://docs.eudat.eu/",
-          "text": "User Documentation",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-training",
-          "text": "Training",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Help Desk",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases",
-          "text": "Research Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/news",
-          "text": "News",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/events",
-          "text": "Events",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "About",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "EUDAT",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/governance",
-          "text": "Governance",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/members",
-          "text": "Members",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/collaborations",
-          "text": "Collaborations",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/projects",
-          "text": "Projects",
-          "visible": true
-        },
-        {
-          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
-          "text": "Communications Kit",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/membership",
-          "text": "Membership",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Services & Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-eosc-node",
-          "text": "EOSC EUDAT Node",
-          "visible": true
-        },
-        {
-          "href": "https://docs.eudat.eu/",
-          "text": "User Documentation",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-training",
-          "text": "Training",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Help Desk",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases",
-          "text": "Research Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/news",
-          "text": "News",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/events",
-          "text": "Events",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "About",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/about",
-          "text": "EUDAT",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/governance",
-          "text": "Governance",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/members",
-          "text": "Members",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/collaborations",
-          "text": "Collaborations",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/projects",
-          "text": "Projects",
-          "visible": true
-        },
-        {
-          "href": "https://eudat.eu/sites/default/files/2024-01/EUDAT%20Visual%20Guidelines%20WEB%20Jan2024%20%281%29.pdf",
-          "text": "Communications Kit",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/membership",
-          "text": "Membership",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Services & Support",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/catalogue",
-          "text": "Service Catalogue",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-eosc-node",
-          "text": "EOSC EUDAT Node",
-          "visible": true
-        },
-        {
-          "href": "https://docs.eudat.eu/",
-          "text": "User Documentation",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-training",
-          "text": "Training",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Help Desk",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/use-cases",
-          "text": "Research Communities",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/news",
-          "text": "News",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/events",
-          "text": "Events",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/contact-support-request",
-          "text": "Contact us",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/",
-          "text": "Home",
-          "visible": true
-        },
-        {
-          "href": "https://policies.google.com/privacy",
-          "text": "Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://policies.google.com/terms",
-          "text": "Terms of Service",
-          "visible": true
-        },
-        {
-          "href": "mailto:info@eudat.eu",
-          "text": "info@eudat.eu",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-cdi-aup",
-          "text": "Acceptable Use Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/eudat-cdi-uap",
-          "text": "User Access Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/privacy-policy-summary",
-          "text": "Privacy Policy",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/accessibility-statement",
-          "text": "Accessibility Statement",
-          "visible": true
-        },
-        {
-          "href": "https://www.eudat.eu/frequently-asked-questions",
-          "text": "FAQs",
-          "visible": true
-        },
-        {
-          "href": "https://twitter.com/Eudat_eu",
-          "text": "",
-          "visible": true
-        },
-        {
-          "href": "http://www.slideshare.net/EUDAT/",
-          "text": "",
-          "visible": true
-        },
-        {
-          "href": "https://www.youtube.com/user/EUDATTraining",
-          "text": "",
-          "visible": true
-        },
-        {
-          "href": "https://www.linkedin.com/company/eudat/",
-          "text": "",
-          "visible": true
-        }
-      ],
+      "parent_url": "https://www.eudat.eu/service-catalogue/b2access",
+      "http_status": 404,
+      "final_url": "https://b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html",
+      "title": "Error 404 Request was not handled by any registered handler.",
+      "lang_attr": "",
+      "main_text": "HTTP ERROR 404 Request was not handled by any registered handler. URI: https://b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html STATUS: 404 MESSAGE: Request was not handled by any registered handler. SERVLET: io.imunity.vaadin.shared.endpoint.SimpleVaadin2XServlet-26f6ed79",
+      "full_text": "HTTP ERROR 404 Request was not handled by any registered handler. URI: https://b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html STATUS: 404 MESSAGE: Request was not handled by any registered handler. SERVLET: io.imunity.vaadin.shared.endpoint.SimpleVaadin2XServlet-26f6ed79",
+      "links": [],
       "robots_allowed": true,
       "error": ""
     },
     {
-      "url": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
+      "url": "https://www.eudat.eu/contact-support-request?service=B2ACCESS",
       "selected_for": [
         "6"
       ],
-      "link_text": "Request B2SHARE and receive a custom setup!",
+      "link_text": "Request B2ACCESS and receive a custom setup!",
       "depth": 2,
-      "parent_url": "https://www.eudat.eu/service-catalogue/b2share-0",
+      "parent_url": "https://www.eudat.eu/service-catalogue/b2access",
       "http_status": 200,
-      "final_url": "https://www.eudat.eu/contact-support-request?service=B2SHARE",
+      "final_url": "https://www.eudat.eu/contact-support-request?service=B2ACCESS",
       "title": "Contact & Support request | EUDAT",
       "lang_attr": "en",
       "main_text": "Name Surname E-Mail address Community Community - None - CLARIN ELIXIR ENES EPOS ICOS LTER Europe VPH Citizen EOSCpilot SeaDataCloud Others Enter other… Type - None - Issue Request Request services (Project) Integration Support Request (start pilot) Become a community Service - None - B2DROP B2SHARE B2SAFE B2STAGE B2FIND B2ACCESS B2HANDLE B2INST B2NOTE DATACITE DOCUMENTATION GEF METADATA WEBSITE Other Please describe briefly the intention of your request and indicate which EUDAT services are of interest Subject Message 240 character(s) remaining This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.",
@@ -6168,8 +5317,11 @@
     }
   ],
   "children_skipped": [
-    "https://www.eudat.eu/service-catalogue/b2find (cap for point 5s)",
+    "https://www.eudat.eu/service-catalogue/b2share-0 (cap for point 5s)",
     "https://www.eudat.eu/service-catalogue/b2handle (cap for point 5s)",
+    "https://www.eudat.eu/service-catalogue/b2safe (cap for point 5s)",
+    "https://www.eudat.eu/service-catalogue/b2find (cap for point 5s)",
+    "https://eudat.eu/catalogue (cap for point 5s)",
     "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
     "https://www.eudat.eu/eudat-cdi-uap (already fetched at depth 1)",
     "https://www.eudat.eu/contact-support-request (depth 2 cap for point 6)",
@@ -6186,15 +5338,7 @@
     "https://www.eudat.eu/catalogue (already fetched at depth 1)",
     "https://www.eudat.eu/catalogue (already fetched at depth 1)",
     "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
-    "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
     "https://www.eudat.eu/eudat-cdi-uap (already fetched at depth 1)",
-    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
-    "https://www.eudat.eu/contact-support-request (already fetched at depth 1)",
-    "https://www.eudat.eu/contact-support-request (already fetched at depth 1)",
-    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
-    "https://www.eudat.eu/contact-support-request (already fetched at depth 1)",
-    "https://www.eudat.eu/contact-support-request (already fetched at depth 1)",
-    "https://www.eudat.eu/catalogue (already fetched at depth 1)",
     "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
     "https://www.eudat.eu/eudat-cdi-aup (already fetched at depth 1)",
     "https://www.eudat.eu/eudat-cdi-uap (already fetched at depth 1)",
@@ -6216,5 +5360,5 @@
     "https://www.eudat.eu/contact-support-request (already fetched at depth 1)",
     "https://www.eudat.eu/catalogue (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 14 link(s) on the landing page, 5 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 8 page(s); fetch budget: 31 of 60 used"
+  "crawl_note": "depth 2: 20 link(s) on the landing page, 5 followed because they matched a checklist point, 5 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 8 page(s); fetch budget: 33 of 60 used"
 }

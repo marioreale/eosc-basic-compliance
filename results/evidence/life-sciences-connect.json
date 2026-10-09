@@ -1,0 +1,100 @@
+{
+  "node_id": "life-sciences-connect",
+  "node_name": "Life Sciences Connect",
+  "requested_url": "https://eosc-lifesciences-connect.eu/home",
+  "fetched_at": "2026-10-09T14:31:48+00:00",
+  "final_url": "https://eosc-lifesciences-connect.eu/home",
+  "http_status": 200,
+  "redirect_chain": [
+    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=39770375-1444-4708-8cd3-51c90e163694&response_mode=fragment&response_type=code&scope=openid&nonce=41e1d1de-3a58-4b20-8fef-04756f24016e&prompt=none",
+    "https://eosc-lifesciences-connect.eu/env-config.js",
+    "https://eosc-lifesciences-connect.eu/static/js/main.42547141.js"
+  ],
+  "robots_allowed": true,
+  "robots_note": "robots.txt consulted",
+  "title": "Home Page",
+  "lang_attr": "en",
+  "main_text": "The EOSC Life Sciences Connect Node brings together four world-leading European Research Infrastructures — ELIXIR, EMBL, Euro-BioImaging ERIC, and Instruct-ERIC — to form a thematic Life Science Node within the European Open Science Cloud (EOSC) Federation. By formalising long-standing collaboration between these infrastructures, the Node plays a key role in enabling federated, FAIR, and trusted access to life science data, software, and services for researchers across Europe and beyond. For more information, view us on the EOSC website . FAIR data The Life Sciences Connect EOSC Node federates FAIR omics, imaging, structural and clinical data repositories, along with FAIR compliant software, workflows and training to accelerate discovery, support personalised medicine and strengthen European competitiveness in life sciences.",
+  "full_text": "Home About Contact Us Home About Contact Us Log in The EOSC Life Sciences Connect Node brings together four world-leading European Research Infrastructures — ELIXIR, EMBL, Euro-BioImaging ERIC, and Instruct-ERIC — to form a thematic Life Science Node within the European Open Science Cloud (EOSC) Federation. By formalising long-standing collaboration between these infrastructures, the Node plays a key role in enabling federated, FAIR, and trusted access to life science data, software, and services for researchers across Europe and beyond. For more information, view us on the EOSC website . FAIR data The Life Sciences Connect EOSC Node federates FAIR omics, imaging, structural and clinical data repositories, along with FAIR compliant software, workflows and training to accelerate discovery, support personalised medicine and strengthen European competitiveness in life sciences. Home About © 2026 eosc-lifesciences-connect.eu All Rights Reserved. Powered by ARIA",
+  "links": [
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-life-sciences-connect",
+      "text": "view us on the EOSC website",
+      "visible": true
+    },
+    {
+      "href": "https://aria.services",
+      "text": "ARIA",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://core.aria.services/upload/OuDA67yGqjfNKSBOPO7K88FjV8apHZX3.png",
+      "alt": "Logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "sc-chPdSV cODwAs logo-image",
+      "inline_svg": false
+    },
+    {
+      "src": "https://core.aria.services/upload/bl9f8VGKM6NYpSIPgRVyYXfxiiEOgS0Z.jpg",
+      "alt": "Text",
+      "aria_label": "",
+      "title": "",
+      "css_class": "sc-chPdSV eEByaS image",
+      "inline_svg": false
+    },
+    {
+      "src": "https://core.aria.services/upload/da7aOHPZDyE9AzZ0OuFVafdJoBCVLBLk.png",
+      "alt": "Logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "sc-chPdSV eEByaS logo",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "MuiSvgIcon-root",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "MuiSvgIcon-root",
+      "inline_svg": true
+    }
+  ],
+  "controls": [
+    {
+      "text": "Log in",
+      "href": "https://eosc-lifesciences-connect.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "view us on the EOSC website",
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-life-sciences-connect",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ARIA",
+      "href": "https://aria.services",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "",
+  "error": "",
+  "screenshot": "life-sciences-connect.png",
+  "crawl_depth": 2,
+  "children": [],
+  "children_skipped": [],
+  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
+}

@@ -108,7 +108,7 @@ does not record (section 3), or if you want a fresh
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 8. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run covers all thirteen nodes, so no `--skip` is
+a copy first. The published run covers all fifteen nodes, so no `--skip` is
 needed for the same scope.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.

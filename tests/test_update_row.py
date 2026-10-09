@@ -93,9 +93,10 @@ def _egi_evidence(stored: Path, **changes) -> dict:
 
 
 def test_published_results_are_the_run_these_tests_copy():
-    """The fixture relies on the committed run: rows and evidence for all 13 nodes."""
+    """The fixture relies on the committed run: rows and evidence for all 15 nodes
+    (13 until run web-28, which added EBRAINS-RI and Life Sciences Connect)."""
     run = _load(PUBLISHED)
-    assert len(run["nodes"]) == 13 and run["skipped"] == []
+    assert len(run["nodes"]) == 15 and run["skipped"] == []
     assert "row_updates" not in run
 
 

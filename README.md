@@ -37,20 +37,20 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-27`, collected at `--depth 2`, and it has
-> not been reviewed yet.** It was collected on 7 October 2026 between 21:59 and
-> 22:05 UTC by the GitHub workflow ([run 37692836637](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37692836637), commit `5e0e6ce`), from all thirteen
-> nodes, under the **re-issued checklist v3.2**. The report shows both depths,
-> and they agree: **69 PASS, 0 FAIL, 61 review**, the best tally so far. No FAIL
-> is left, as in `web-25` and `web-26` ([run 37492974153](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37492974153), 6 October, 67 / 0 / 63). Two
-> cells changed, both **Poland**'s, both from review to `PASS`. Its page
-> rendered in full again (5,403 characters, 37 links; in `web-26` only its
-> header and footer), so it links its own `eosc.eu` entry again (point 4) and
-> writes "EOSC Node Poland" again. It now also links a "User Access Policy"
-> (5c), which points to its privacy policy page, `https://eosc.pl/privacy-policy`:
-> a reviewer should confirm that page serves as the User Access Policy.
-> **GÉANT** got the Cloudflare challenge again (`HTTP 403`), so points 1, 4, 5b
-> and 6 stay review.
+> **The published report is run `web-28`, collected at `--depth 2`, and it has
+> not been reviewed yet.** It was collected on 9 October 2026 between 14:24 and
+> 14:32 UTC by the GitHub workflow ([run 37943784224](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37943784224), commit `df4be09`), from all
+> **fifteen** nodes, under the **re-issued checklist v3.2**. Two nodes are new:
+> **EBRAINS-RI** (`https://ebrains.eu/`) and **Life Sciences Connect**
+> (`https://eosc-lifesciences-connect.eu/home`), whose approved names
+> "EOSC Node | EBRAINS RI" and "EOSC Node | Life Sciences Connect" were added to
+> the official list. At depth 2 the tally is **78 PASS, 4 FAIL, 68 review**; at
+> depth 1 it is 77 / 4 / 69, the one difference being EBRAINS-RI point 6. All
+> four FAILs are on the new nodes. On the thirteen nodes of `web-27` (69 / 0 / 61)
+> one cell changed: **EUDAT** point 6 moved from review to `PASS`, because its
+> page now links "Open a request" to `https://portal.eudat.eu/helpdesk`. **GÉANT** got the Cloudflare
+> challenge again (`HTTP 403`), so points 1, 4, 5b and 6 stay review.
+> The previous run, `web-27` ([run 37692836637](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37692836637), 7 October), is in the git history at `8b4ca7b`.
 > Before `web-14`, `web-13-rescored` (the
 > evidence of `web-13` scored offline against the re-issued v3.2) and `web-13`
 > itself ([run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672)), scored under the
@@ -73,15 +73,36 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > nodes that failed 5b and 5c under the first copy: CERN now passes both, and
 > Data Terra fails both after its services pages were read; PaNOSC is review.
 
-All thirteen configured nodes were fetched on 7 October 2026 at `--depth 2`
-(109 page requests: 13 landing pages, 63 direct links, 33 second-hop pages) and
-assessed against the official unscoped names list. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and on BBMRI-ERIC's `dev3.` pages (`web-25`) its Director General, its advisory board, its Stakeholder Forum chair, its head of public affairs and its finance and project staff, about 120 names on GÉANT's executive team, governance and membership pages in `web-16` and `web-22` (including names cut short in link labels; GÉANT's page was not served in `web-23` to `web-27`), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, the people named in the captions of historical public-domain photos on Poland's page (`web-27`), and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
+All fifteen configured nodes were fetched on 9 October 2026 at `--depth 2`
+(129 page requests: 15 landing pages, 70 direct links, 44 second-hop pages) and
+assessed against the official unscoped names list, now fifteen names. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and on BBMRI-ERIC's `dev3.` pages (`web-25`) its Director General, its advisory board, its Stakeholder Forum chair, its head of public affairs and its finance and project staff, about 120 names on GÉANT's executive team, governance and membership pages in `web-16` and `web-22` (including names cut short in link labels; GÉANT's page was not served in `web-23` to `web-28`), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, the people named in the captions of historical public-domain photos on Poland's page (`web-27`), on EBRAINS-RI's pages (`web-28`) its CEO, a section head, its press contact, the authors of three testimonials and two people in news items and image captions, the coordinator named in a video title in Life Sciences Connect's screenshot (`web-28`), and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-130 cells: 🟢 69 PASS · 🔴 0 FAIL · 🟠 61 review · 0 ERROR.
+150 cells at depth 2: 🟢 78 PASS · 🔴 4 FAIL · 🟠 68 review · 0 ERROR.
+
+- **EBRAINS-RI**, first assessed in `web-28`, has 6 PASS, 1 FAIL and 3 review at
+  depth 2. Point 4 fails: none of the landing page's 126 links goes to
+  `eosc.eu`, although the node's entry exists at
+  `https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/`. 5b and 5c
+  pass as pointers: its "Terms & Policies" page links the General Terms of Use
+  and the Access Policy (PDFs, not read). Point 6 passes at depth 2 only: its Contact
+  page, reached at the second hop from the Media Contact page, uses ticketing
+  wording; at depth 1 that page was beyond the link cap and the point is review.
+  Point 3 is review: the page does not write an approved name ("EBRAINS RI" is
+  there, without "EOSC Node"), and no EOSC image was found in the markup.
+- **Life Sciences Connect**, first assessed in `web-28`, has 3 PASS, 3 FAIL and
+  4 review. It links its own `eosc.eu` entry (point 4). The tool captured only
+  two links on the page, because its HOME, ABOUT and CONTACT US menu items are
+  `<a>` elements with no `href` that navigate by script. **Point 6 is a false
+  FAIL**: a hand check on 9 October 2026 found a Contact page at
+  `/contact-information` with `help@eosc-lifesciences-connect.eu`, which the
+  tool cannot reach. 5b and 5c fail: the same hand check found no policy link on
+  the Home, About or Contact pages, but a reviewer should confirm this before the
+  FAILs are quoted. Point 3 is review: the logo reads "EOSC Node | Life Sciences
+  Connect" but the page text never writes an approved name.
 
 - **Item 5 under v3.2.** CERN links no policy from its landing page, but its
   "Policies" page links an Acceptable Use Policy and a User Access Policy, and
@@ -159,7 +180,7 @@ No other verdict changed.
 dedicated page under `eosc.eu/building-the-eosc-federation/` — the slugs were
 read from the live index. In `web-25`, for the first time, **every one of the
 twelve landing pages read links to its own**; in `web-26` eleven did, because
-Poland's page rendered almost empty, and in `web-27` all twelve do again. EOSC Finland, the last to fail
+Poland's page rendered almost empty, in `web-27` and `web-28` all twelve do again; of the two nodes added in `web-28`, Life Sciences Connect links its own and EBRAINS-RI links nothing on `eosc.eu`. EOSC Finland, the last to fail
 (it linked to nothing on `eosc.eu`), now links
 `https://eosc.eu/building-the-eosc-federation/eosc-node-finland`. PaNOSC (which
 linked only the federation index, then only the User Forum) and Poland (which

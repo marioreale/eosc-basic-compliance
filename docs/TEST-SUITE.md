@@ -186,7 +186,7 @@ Two depth-2 runs on 21 September, of 18 and 14 second-hop requests, each changed
 
 ### The node list — a YAML file
 
-The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **thirteen** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `eosc-pl`, `eosc-it`, `eosc-sk`.
+The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **fifteen** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `eosc-pl`, `eosc-it`, `eosc-sk`, and, since 9 October 2026, `ebrains-ri` and `life-sciences-connect`.
 
 ```yaml
 nodes:
@@ -352,7 +352,7 @@ does not record (section 3 of [the analysis workflow](ANALYSIS-WORKFLOW.md)), or
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 11. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run covers all thirteen nodes, so no `--skip` is
+a copy first. The published run covers all fifteen nodes, so no `--skip` is
 needed for the same scope.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
@@ -794,9 +794,37 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-27 at depth 2, 7 October 2026 (unreviewed)
+### Current run: web-28 at depth 2, 9 October 2026 (unreviewed)
 
-From `results/results.json`, run `web-27`, collected on 7 October 2026 between 21:59 and 22:05 UTC by the GitHub workflow ([run 37692836637](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37692836637), commit `5e0e6ce`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 63 direct links and 33 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-27` reproduces it exactly, apart from the generation time (verified 7 October 2026).
+From `results/results.json`, run `web-28`, collected on 9 October 2026 between 14:24 and 14:32 UTC by the GitHub workflow ([run 37943784224](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37943784224), commit `df4be09`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, now fifteen names (SHA-256 `e23f7d1c…`). It made 129 page requests: 15 landing pages, 70 direct links and 44 second-hop pages. Fourteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Offline, `uv run basic-check assess --run web-28` reproduces it exactly, apart from the generation time (verified 9 October 2026).
+
+| Verdict | Depth 2 | Depth 1 |
+|---|---|---|
+| 🟢 PASS | 78 | 77 |
+| 🔴 FAIL | 4 | 4 |
+| 🟠 MANUAL_REVIEW | 68 | 69 |
+| 🟣 ERROR | 0 | 0 |
+| **Total** | **150** (15 nodes × 10 points) | **150** |
+
+The depths differ in one cell, EBRAINS-RI point 6: at depth 2 its Contact page, reached from its Media Contact page, uses ticketing wording.
+
+**Two nodes added.** EBRAINS-RI (`https://ebrains.eu/`, approved name "EOSC Node | EBRAINS RI") and Life Sciences Connect (`https://eosc-lifesciences-connect.eu/home`, "EOSC Node | Life Sciences Connect") were added on 9 October 2026 in commit `df4be09`. All four FAILs are theirs:
+
+| Node | Cells | Why |
+|---|---|---|
+| EBRAINS-RI | 4: `FAIL` | none of 126 links goes to `eosc.eu`; its entry exists at `https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/` |
+| Life Sciences Connect | 5b, 5c: `FAIL` | no policy pointer among the two links captured; a hand check of its Home, About and Contact pages found none either, still to be confirmed by a reviewer |
+| Life Sciences Connect | 6: `FAIL` | **a false negative.** Its menu items are `<a>` elements with no `href` that navigate by script, so the tool captured two links only and judged the DOM complete. A hand check on 9 October 2026 found `help@eosc-lifesciences-connect.eu` on its Contact page (`/contact-information`) |
+
+On the thirteen nodes of `web-27`, one cell changed: EUDAT 6, review to `PASS` (the page links "Open a request" to `https://portal.eudat.eu/helpdesk`).
+
+**Masking.** The same names as before were masked, and CERN's screenshot again. New in this run: on EBRAINS-RI's pages, its CEO, a section head, its press contact, three testimonial authors, and two people named in news items and image captions, including in image file names and link addresses; and in Life Sciences Connect's screenshot, the coordinator named in a video title. All were replaced with same-length placeholders. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes.
+
+**Tests pinned to the published run.** `test_update_row.py::test_published_results_are_the_run_these_tests_copy` now expects fifteen nodes. The `stored` fixture in `test_update_row.py` now re-assesses its copy of the published run offline when the default approved-name list has changed since that run, so that adding a node and its name does not break the row-replacement tests before the new run is published. `test_names.py::test_the_official_names_match_the_nodes_that_show_them` still expects eight matches: neither new page writes its approved name in its text.
+
+### Previous run: web-27 at depth 2, 7 October 2026
+
+Run `web-27` was collected on 7 October 2026 between 21:59 and 22:05 UTC by the GitHub workflow ([run 37692836637](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37692836637), commit `5e0e6ce`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list. It made 109 page requests: 13 landing pages, 63 direct links and 33 second-hop pages. Twelve landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Depth 1 and depth 2 agree in every cell. Offline, `uv run basic-check assess --run web-27` reproduces it exactly, apart from the generation time (verified 7 October 2026).
 
 | Verdict | Cells |
 |---|---|
@@ -1217,7 +1245,7 @@ Three caveats the tool states itself, and which matter more than the count:
 - The `<title>` element is not searched, only the page body. Several of the six "not found" results say so explicitly.
 - Most of those six pages *do* contain the phrase "EOSC Node"; what is absent is the full approved form.
 
-The current default list carries **thirteen** names, one per configured node, with a scoped variant that binds each name to its node id. The 21 September run predates that and used the nine-name version. The published run of 24 September used the thirteen-name list, and point 3 is `MANUAL_REVIEW` for all twelve of its nodes, for the same reason.
+The current default list carries **fifteen** names, one per configured node, with a scoped variant that binds each name to its node id. The 21 September run predates that and used the nine-name version. The published run of 24 September used the thirteen-name list, and point 3 is `MANUAL_REVIEW` for all twelve of its nodes, for the same reason.
 
 
 ## 11. Worked examples
@@ -1633,5 +1661,5 @@ the documents together, so the commit shows the whole change.
 - Figures in section 10, current run: `results/results.json`, run `web-13`, collected 28 September 2026 at depth 2 by [workflow run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672) under checklist v3.2, not reviewed; the same verdicts as run `web-12` ([workflow run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)) and the same verdicts as run `web-11` ([workflow run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) re-scored offline against v3.2
 - Figures in section 10, 24 September run: `results/results.json` at commit `800d632`, run `live-2026-09-24-no-italy`, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
-- Approved node names: `checklist/approved-names.txt` (thirteen names, SHA-256 `46af586b…`, since 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`
+- Approved node names: `checklist/approved-names.txt` (fifteen names, SHA-256 `e23f7d1c…`, since 9 October 2026; thirteen names, `46af586b…`, from 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`
 - Test counts, line counts, runtimes, name-list results and command options in this document were measured on 25 September 2026 against a clean clone of the repository state it is committed with (the test count re-checked on 26 September at `4c5dea7`), not carried over from the previous edition

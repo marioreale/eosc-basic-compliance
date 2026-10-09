@@ -2,7 +2,7 @@
   "node_id": "eosc-sk",
   "node_name": "EOSC Node Slovakia",
   "requested_url": "https://eosc.sk/",
-  "fetched_at": "2026-10-07T22:05:23+00:00",
+  "fetched_at": "2026-10-09T14:30:38+00:00",
   "final_url": "https://eosc.sk/",
   "http_status": 200,
   "redirect_chain": [],
@@ -265,11 +265,11 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc.sk/imgs/eosc2.png",
-      "alt": "EOSC",
+      "src": "https://eosc.sk/imgs/intro_banner.jpg",
+      "alt": "",
       "aria_label": "",
       "title": "",
-      "css_class": "mx-auto animate-float",
+      "css_class": "mx-auto w-full h-auto rounded-xl shadow-lg pointer-events-none select-none",
       "inline_svg": false
     },
     {
@@ -1073,5 +1073,5 @@
     "https://hd.eosc.sk (already fetched at depth 1)",
     "https://hd.eosc.sk (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 45 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 33 of 60 used"
+  "crawl_note": "depth 2: 45 link(s) on the landing page, 3 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
 }
