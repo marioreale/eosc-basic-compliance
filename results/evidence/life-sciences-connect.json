@@ -2,13 +2,13 @@
   "node_id": "life-sciences-connect",
   "node_name": "Life Sciences Connect",
   "requested_url": "https://eosc-lifesciences-connect.eu/home",
-  "fetched_at": "2026-10-09T14:31:48+00:00",
+  "fetched_at": "2026-10-19T20:51:19+00:00",
   "final_url": "https://eosc-lifesciences-connect.eu/home",
   "http_status": 200,
   "redirect_chain": [
-    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=39770375-1444-4708-8cd3-51c90e163694&response_mode=fragment&response_type=code&scope=openid&nonce=41e1d1de-3a58-4b20-8fef-04756f24016e&prompt=none",
+    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=d7134b71-cb5e-489d-84b8-f7c9ccaafc53&response_mode=fragment&response_type=code&scope=openid&nonce=55358d79-257c-4c35-b19d-8a7c3971d395&prompt=none",
     "https://eosc-lifesciences-connect.eu/env-config.js",
-    "https://eosc-lifesciences-connect.eu/static/js/main.42547141.js"
+    "https://eosc-lifesciences-connect.eu/static/js/main.e859dd68.js"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
@@ -34,7 +34,7 @@
       "alt": "Logo",
       "aria_label": "",
       "title": "",
-      "css_class": "sc-chPdSV cODwAs logo-image",
+      "css_class": "sc-cMljjf iOTVQi logo-image",
       "inline_svg": false
     },
     {
@@ -42,7 +42,7 @@
       "alt": "Text",
       "aria_label": "",
       "title": "",
-      "css_class": "sc-chPdSV eEByaS image",
+      "css_class": "sc-cMljjf QJVEe image",
       "inline_svg": false
     },
     {
@@ -50,7 +50,7 @@
       "alt": "Logo",
       "aria_label": "",
       "title": "",
-      "css_class": "sc-chPdSV eEByaS logo",
+      "css_class": "sc-cMljjf QJVEe logo",
       "inline_svg": false
     },
     {

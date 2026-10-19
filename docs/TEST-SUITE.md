@@ -261,7 +261,7 @@ uv run basic-check show example-org-our-eosc-node --one-off
 Point 4 needs to know which `eosc.eu` page the node ought to link to. Without it the point is still decided — a link to the federation index still fails — but the message cannot name the missing URL. Supply it for a single URL with `--eosc-page`:
 
 ```bash
-uv run basic-check run --url https://eosc.panosc.eu/ \
+uv run basic-check run --url https://panosc.eu/panosc-eosc-node \
   --eosc-page https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/
 ```
 
@@ -765,7 +765,7 @@ At that point the test suite is running locally. The next two commands are only 
 uv run playwright install chromium
 
 # 8 - check one page without touching nodes.yaml
-uv run basic-check run --url https://eosc.panosc.eu/ \
+uv run basic-check run --url https://panosc.eu/panosc-eosc-node \
   --eosc-page https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/
 
 # 9 - or run the full federation list from nodes.yaml
@@ -794,7 +794,34 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-28 at depth 2, 9 October 2026 (unreviewed)
+### Current run: web-31 at depth 2, 19 October 2026 (unreviewed)
+
+From `results/results.json`, run `web-31`, collected on 19 October 2026 between 20:44 and 20:51 UTC by the GitHub workflow ([run 39321743220](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39321743220), commit `e9c5f9c`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of fifteen names (SHA-256 `e23f7d1c…`, unchanged). It made 129 page requests: 15 landing pages, 70 direct links and 44 second-hop pages (budget: 44 of 60). Fourteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Offline, `uv run basic-check assess --run web-31` reproduces it exactly, apart from the generation time (verified 19 October 2026).
+
+| Verdict | Depth 2 | Depth 1 |
+|---|---|---|
+| 🟢 PASS | 78 | 76 |
+| 🔴 FAIL | 4 | 4 |
+| 🟠 MANUAL_REVIEW | 68 | 70 |
+| 🟣 ERROR | 0 | 0 |
+| **Total** | **150** (15 nodes × 10 points) | **150** |
+
+**PaNOSC's landing page changed.** On 19 October 2026 (commit `e9c5f9c`, made with `basic-check --update-nlp`) PaNOSC's URL in `nodes.yaml` and in the shipped default copy changed from `https://eosc.panosc.eu/` to `https://panosc.eu/panosc-eosc-node`. Both redirect to `https://www.panosc.eu/panosc-eosc-node/`, which was already the `final_url` in `web-28`, so the page read is the same and PaNOSC's ten verdicts did not change (5 PASS, 5 review).
+
+**No cell changed at depth 2** against `web-28`. The depths now differ in two cells:
+
+| Node | Point | Depth 1 | Depth 2 | Why |
+|---|---|---|---|---|
+| EBRAINS-RI | 6 | review | `PASS` | as in `web-28`: its Contact page, reached at the second hop from its Media Contact page, uses ticketing wording |
+| Poland | 6 | review | `PASS` | new: the landing page shows `contact@eosc.pl` where it showed `support@eosc.pl`, a general address; at depth 2 a page it links (`/search/software`) carries "Helpdesk" wording. In `web-28` it passed at both depths |
+
+The four FAILs are those of `web-28`: EBRAINS-RI 4, and Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative; its menu links still have no `href`, and the tool again captured two links only).
+
+**Two runs not published.** `web-29` ([run 39316592630](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39316592630), 19 October, commit `61e4e36`) was cancelled by the job's 30-minute `timeout-minutes`: the first thirteen nodes were collected between 20:08 and 20:14 UTC, then EBRAINS-RI's collection stalled after its screenshot was taken, and Life Sciences Connect was never reached. The log shows no per-node lines, because the progress output is buffered and was lost with the cancelled step. `web-30` ([run 39321255714](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39321255714), `--only ebrains-ri`) completed in two minutes, and so did EBRAINS-RI inside `web-31`. The cause was not found: each navigation has a timeout (45 s for a landing page, 25 s for a child page), but nothing bounds a whole node, `page.content()` or the `robots.txt` reads. A per-node time limit, recorded as `ERROR` rather than a hung job, is a possible fix, not yet made.
+
+**Masking.** The same names as in `web-28` were masked, with the same placeholders, and the same two screenshots (CERN's quotation attribution, Life Sciences Connect's video title, both at unchanged positions). New in this run: the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy, and a person interviewed in an EBRAINS-RI news item. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes. The test suite (453 cases) passes on the published evidence.
+
+### Previous run: web-28 at depth 2, 9 October 2026
 
 From `results/results.json`, run `web-28`, collected on 9 October 2026 between 14:24 and 14:32 UTC by the GitHub workflow ([run 37943784224](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37943784224), commit `df4be09`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, now fifteen names (SHA-256 `e23f7d1c…`). It made 129 page requests: 15 landing pages, 70 direct links and 44 second-hop pages. Fourteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Offline, `uv run basic-check assess --run web-28` reproduces it exactly, apart from the generation time (verified 9 October 2026).
 
