@@ -49,7 +49,8 @@ nodes:
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-finland/
   - id: panosc
     name: PaNOSC
-    url: https://eosc.panosc.eu/
+    # Changed on 19 October 2026 from https://eosc.panosc.eu/ (basic-check --update-nlp).
+    url: https://panosc.eu/panosc-eosc-node
     eosc_page: https://eosc.eu/building-the-eosc-federation/eosc-node-panosc/
   - id: eudat
     name: EUDAT
