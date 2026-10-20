@@ -13,3 +13,4 @@ EOSC Node | Italy
 EOSC Node | Slovakia
 EOSC Node | EBRAINS RI
 EOSC Node | Life Sciences Connect
+EOSC Node | Germany
