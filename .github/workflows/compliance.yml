@@ -70,6 +70,11 @@ jobs:
           DEPTH: ${{ inputs.depth }}
           DELAY: ${{ inputs.delay }}
           RUN_LABEL: web-${{ github.run_number }}
+          # Progress lines reach the log as each node finishes. Buffered, they
+          # were lost with the step cancelled at the job limit in web-29, hiding
+          # which node had stalled. Each node is also bounded by basic-check's
+          # --node-timeout (default 300 s), so one hung node cannot hold the job.
+          PYTHONUNBUFFERED: "1"
         run: |
           set -euo pipefail
           args=(--depth "$DEPTH" --delay "$DELAY" --run "$RUN_LABEL")

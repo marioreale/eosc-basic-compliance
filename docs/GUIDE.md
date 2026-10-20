@@ -17,9 +17,11 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-This edition was revised on 19 October 2026, when PaNOSC's landing page
-changed and run `web-31` was published: the test count (453), the tallies and
-the rebuild of the published report were re-measured offline that day. The
+This edition was revised on 20 October 2026, when a per-node time limit
+(`--node-timeout`, section 4) was added and the test count became 462. The
+edition of 19 October 2026 published run `web-31` after PaNOSC's landing page
+changed; its tallies and the rebuild of the published report were re-measured
+offline that day. The
 previous edition, of 9 October 2026, added EBRAINS-RI and Life Sciences Connect
 with run `web-28`. The nodes were contacted only by the GitHub workflow; a hand check of Life
 Sciences Connect's pages, made from a browser, is reported where it is used.
@@ -198,13 +200,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-453 tests still pass, while `collect` fails with Playwright's
+462 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 453 passed
+uv run pytest -q                  # expect: 462 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -798,6 +800,7 @@ accept the option.
 | `--depth N` | How far to follow links. See section 5. |
 | `--delay S` | Seconds between hosts (default 2.0). Raise it to be gentler. |
 | `--fetch-budget N` | Depth 2 only: hard ceiling on second-hop requests for the **whole run** (default 60). |
+| `--node-timeout S` | The most seconds one node may take, landing page and linked pages together (default 300; `0` = no limit). A node that hits it is abandoned: every point reads `ERROR` with a `TimeoutError` message, the browser is restarted, and the run goes on to the next node. Added on 20 October 2026, after one node's collection stalled and held the GitHub run of `web-29` until its 30-minute limit. |
 | `--max-children N` | Cap on followed pages per node at depth 1 (default 8). **`collect` only — `run` rejects it**, so use `collect` then `assess` if you need it. |
 
 **Choosing what to check** — accepted by `collect`, `assess` and `run`:
@@ -1185,7 +1188,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 453 tests, offline, a few seconds
+uv run pytest -q                    # 462 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth

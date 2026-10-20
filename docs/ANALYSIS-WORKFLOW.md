@@ -76,6 +76,7 @@ command also takes `--help`.
 | `--depth 0/1/2` | ✓ | — | ✓ | How far to follow links (default 1) |
 | `--max-children <n>` | ✓ | — | — | Linked pages followed per node at depth 1 (default 8; `run` always uses 8) |
 | `--fetch-budget <n>` | ✓ | — | ✓ | Depth 2 only: ceiling on second-hop requests (default 60) |
+| `--node-timeout <s>` | ✓ | — | ✓ | Most seconds per node before it is abandoned as `ERROR` (default 300; `0` = no limit) |
 | `--checklist`, `-c <file>` | — | ✓ | ✓ | Checklist revision to apply (default `checklist/v3.2.yaml`) |
 | `--approved-names <file>` | — | ✓ | ✓ | Approved-name list for point 3 (default `checklist/approved-names.txt`) |
 | `--no-approved-names` | — | ✓ | ✓ | Use no name list at all |
@@ -119,7 +120,7 @@ which is why the table runs `assess` without it.
 
 Per node, in order:
 
-1. **`robots.txt` for the landing page host** (`_robots`, `fetch.py:194`).
+1. **`robots.txt` for the landing page host** (`_robots`, `fetch.py:208`).
    Fetched with a plain HTTP client (`httpx`, not the browser), with the tool's
    own User-Agent string. Three outcomes:
    - disallowed → `error = "not fetched: robots.txt disallows it"`, evidence
@@ -141,7 +142,7 @@ Per node, in order:
    node as having no content — a false accusation produced by the tool.
 3. **Record status, final URL and redirect chain.** Redirects are captured from
    response events (first 10 kept).
-4. **Extract the evidence** from the rendered DOM (`_extract`, `fetch.py:211`).
+4. **Extract the evidence** from the rendered DOM (`_extract`, `fetch.py:225`).
    `script`, `style`, `noscript` and `template` are removed first. Then:
    - `full_text` — all body text, whitespace-collapsed;
    - `main_text` — text of the first of `main`, `[role=main]`, `article`,
@@ -161,7 +162,7 @@ Per node, in order:
    the screenshot; it exists for the human reviewer. It captures the visible
    viewport, not the full page, so it cannot be used to confirm the absence of
    anything — a footer link is real but off-image.
-6. **Depth 1, if requested.** `select_children` (`fetch.py:414`) picks which links
+6. **Depth 1, if requested.** `select_children` (`fetch.py:435`) picks which links
    to follow. A link qualifies only if it is `http(s)`, is not a binary by
    extension, is on the node's own host or a related host, and its combined link
    text and URL path matches the vocabulary of a point that a second page can
@@ -213,11 +214,23 @@ Per node, in order:
 
 8. **Write** the whole record as JSON.
 
+**The whole node is bounded** (`fetch_with_limit`, `fetch.py:671`). Steps 1 to 7
+run under one time limit, `--node-timeout`, default 300 s (`NODE_TIMEOUT_S`). If
+it expires the work is cancelled, given 15 s to close its browser context, and
+then left behind; the record keeps whatever was gathered, but its `error` is set
+to `TimeoutError: node collection did not finish within … s`, so **every point
+becomes `ERROR`**, never a `FAIL` built on evidence that stopped half-way. The
+browser is restarted before the next node, in case the stall was the browser's
+own. The `robots.txt` reads (steps 1 and 7) run in a worker thread, because a
+blocking read on the event loop would stop the limit itself from firing. The
+limit was added on 20 October 2026, after one node's collection stalled in the
+GitHub run `web-29` and held the job until its 30-minute limit.
+
 ---
 
 ## 3. What the evidence contains — and what it does not
 
-`PageEvidence` (`fetch.py:126`) holds: `node_id`, `node_name`, `requested_url`,
+`PageEvidence` (`fetch.py:140`) holds: `node_id`, `node_name`, `requested_url`,
 `fetched_at`, `final_url`, `http_status`, `redirect_chain`, `robots_allowed`,
 `robots_note`, `title`, `lang_attr`, `main_text`, `full_text`, `links`, `images`,
 `controls`, `meta_description`, `error`, `screenshot`, `crawl_depth`, `children`,

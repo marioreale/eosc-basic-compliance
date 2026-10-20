@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 453
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 462
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -55,8 +55,9 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > was cancelled by the workflow's 30-minute timeout while collecting EBRAINS-RI,
 > after the other thirteen nodes before it had been read in about six minutes;
 > `web-30` ([run 39321255714](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39321255714)), EBRAINS-RI alone, completed in two minutes,
-> so the stall did not recur. The cause was not identified; the collector bounds
-> each page load but not a whole node.
+> so the stall did not recur. The cause was not identified. Since 20 October 2026
+> each node is also bounded as a whole (`--node-timeout`, default 300 s): a node
+> that hangs is recorded as `ERROR` and the run moves on.
 > The previous run, `web-28` ([run 37943784224](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37943784224), 9 October, commit `df4be09`), which added
 > EBRAINS-RI and Life Sciences Connect, is in the git history at `61e4e36`; `web-27`
 > ([run 37692836637](https://github.com/marioreale/eosc-basic-compliance/actions/runs/37692836637), 7 October) at `8b4ca7b`.
@@ -340,6 +341,7 @@ nodes; `assess`, `points` and `show` work offline.
 | `--depth 0\|1\|2` | `1` | `0` fetches the landing page only. `1` also follows links that can settle a checklist point (policies, contact, about) and, for item 5, policies, legal, services and resources pages. `2` follows one more hop from those pages, and the report shows both depths side by side. |
 | `--max-children <n>` | `8` | The most linked pages followed per node at depth 1. `collect` only; `run` always uses 8. |
 | `--fetch-budget <n>` | `60` | Depth 2 only: a hard limit on second-hop requests for the whole run, shared across all nodes. |
+| `--node-timeout <s>` | `300` | The most seconds one node may take, landing page and linked pages together. A node that hits it gets `ERROR` on every point and the run moves on; `0` = no limit. |
 | `--delay <seconds>` | `2.0` | The pause between hosts, to go easy on the servers. |
 
 **How to assess** (`assess`, `run`)
@@ -685,7 +687,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 453 tests, a few seconds, no network, no browser
+uv run pytest -q          # 462 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

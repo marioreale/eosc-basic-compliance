@@ -67,6 +67,20 @@ MAX_PER_PURPOSE_D2 = 1
 DEFAULT_FETCH_BUDGET = 60
 GRANDCHILD_DELAY_S = 1.5
 
+# Every navigation above has its own timeout, but nothing bounded a node as a
+# whole: on 19 October 2026 (run web-29) one node's collection stalled after its
+# screenshot and held the GitHub job until its 30-minute limit, so the nodes
+# after it were never reached and nothing could be published. A node that has
+# not finished within NODE_TIMEOUT_S is abandoned, recorded with an error (every
+# point then reads ERROR, never a FAIL built on half-collected evidence), and the
+# run moves on. 300 s is several times the slowest node seen in a full run (about
+# a minute) while leaving room for the legitimate worst case of slow child pages.
+NODE_TIMEOUT_S = 300.0
+# After the limit, the abandoned work gets this long to unwind (closing its
+# browser context) before it is left behind and the browser is restarted.
+CANCEL_GRACE_S = 15.0
+CLOSE_TIMEOUT_S = 15.0
+
 # Which links are worth following is defined in patterns.py, shared with the
 # checks so the two cannot disagree about what a policy link looks like.
 
@@ -500,7 +514,9 @@ def _match_any(text: str, patterns: list[str]) -> bool:
 
 async def _fetch_child(context, child: ChildPage) -> ChildPage:
     """Fetch one child page. Lighter than the landing page: text and links only."""
-    if not _robots_ok(child.url):
+    # robots.txt is read with a blocking client; in a worker thread it cannot
+    # freeze the event loop, so the per-node limit can always fire.
+    if not await asyncio.to_thread(_robots_ok, child.url):
         child.robots_allowed = False
         child.error = "not fetched: robots.txt disallows it"
         return child
@@ -536,14 +552,13 @@ async def _fetch_one(
     depth: int = 0,
     max_children: int = MAX_CHILDREN,
     budget: FetchBudget | None = None,
+    ev: PageEvidence | None = None,
 ) -> PageEvidence:
-    ev = PageEvidence(
-        node_id=node["id"],
-        node_name=node["name"],
-        requested_url=node["url"],
-        fetched_at=datetime.now(UTC).isoformat(timespec="seconds"),
-    )
-    allowed, note = _robots(node["url"])
+    # `ev` may be supplied by the caller and is filled in place, so that if the
+    # node is abandoned at the per-node limit what was gathered so far survives.
+    if ev is None:
+        ev = new_evidence(node)
+    allowed, note = await asyncio.to_thread(_robots, node["url"])
     ev.robots_allowed, ev.robots_note = allowed, note
     if not allowed:
         ev.error = "not fetched: robots.txt disallows it"
@@ -630,8 +645,61 @@ async def _fetch_one(
     except Exception as exc:
         ev.error = f"{type(exc).__name__}: {exc}"
     finally:
-        await context.close()
+        # Bounded: a wedged browser must not turn the clean-up into the hang.
+        with contextlib.suppress(Exception, asyncio.CancelledError):
+            await asyncio.wait_for(context.close(), CLOSE_TIMEOUT_S)
     return ev
+
+
+def new_evidence(node: dict) -> PageEvidence:
+    return PageEvidence(
+        node_id=node["id"],
+        node_name=node["name"],
+        requested_url=node["url"],
+        fetched_at=datetime.now(UTC).isoformat(timespec="seconds"),
+    )
+
+
+def timeout_message(timeout_s: float) -> str:
+    return (
+        f"TimeoutError: node collection did not finish within {timeout_s:g} s "
+        "(per-node limit, --node-timeout); abandoned so the run could continue, "
+        "and any partial evidence is not assessed"
+    )
+
+
+async def fetch_with_limit(
+    browser,
+    node: dict,
+    shots: Path,
+    depth: int = 0,
+    max_children: int = MAX_CHILDREN,
+    budget: FetchBudget | None = None,
+    timeout_s: float | None = NODE_TIMEOUT_S,
+) -> tuple[PageEvidence, bool]:
+    """Collect one node, giving up after `timeout_s` seconds (None or 0: no limit).
+
+    Returns the evidence and whether the limit was hit. asyncio.wait is used
+    rather than wait_for because wait_for waits for the cancelled task to finish
+    unwinding, which is exactly what a hung browser call may never do: here the
+    task gets CANCEL_GRACE_S to clean up and is then left behind.
+    """
+    ev = new_evidence(node)
+    task = asyncio.create_task(
+        _fetch_one(browser, node, shots, depth, max_children, budget, ev=ev)
+    )
+    done, _ = await asyncio.wait({task}, timeout=timeout_s or None)
+    if task in done:
+        return task.result(), False
+    task.cancel()
+    await asyncio.wait({task}, timeout=CANCEL_GRACE_S)
+    ev.error = timeout_message(timeout_s)
+    ev.crawl_note = (
+        (ev.crawl_note + "; " if ev.crawl_note else "")
+        + f"stopped at the per-node limit of {timeout_s:g} s after "
+        f"{len(ev.children)} linked page(s)"
+    )
+    return ev, True
 
 
 def without_depth_2(ev: PageEvidence) -> PageEvidence:
@@ -658,8 +726,13 @@ async def collect_all(
     depth: int = 0,
     max_children: int = MAX_CHILDREN,
     fetch_budget: int = DEFAULT_FETCH_BUDGET,
+    node_timeout_s: float | None = NODE_TIMEOUT_S,
 ) -> list[PageEvidence]:
     """Fetch every landing page, sequentially, with a gap between hosts.
+
+    Each node is bounded by `node_timeout_s` (see fetch_with_limit). A node that
+    hits it is recorded with an error and the browser is restarted, in case the
+    stall was the browser's own, before the next node.
 
     At depth 1 a bounded set of child pages is fetched too -- see select_children
     for how few, and why.
@@ -681,7 +754,18 @@ async def collect_all(
         browser = await pw.chromium.launch(args=["--disable-dev-shm-usage"])
         try:
             for i, node in enumerate(nodes):
-                ev = await _fetch_one(browser, node, shots, depth, max_children, budget)
+                ev, timed_out = await fetch_with_limit(
+                    browser, node, shots, depth, max_children, budget, node_timeout_s
+                )
+                if timed_out:
+                    print(
+                        f"  [{i + 1}/{len(nodes)}] {node['id']:12} stopped at the "
+                        f"per-node limit of {node_timeout_s:g} s; restarting the browser",
+                        flush=True,
+                    )
+                    with contextlib.suppress(Exception):
+                        await asyncio.wait_for(browser.close(), CLOSE_TIMEOUT_S)
+                    browser = await pw.chromium.launch(args=["--disable-dev-shm-usage"])
                 results.append(ev)
                 write_evidence(out_dir, ev)
                 status = ev.error or f"HTTP {ev.http_status}"
@@ -692,13 +776,16 @@ async def collect_all(
                     if depth >= 2:
                         g = sum(1 for c in ev.children if c.depth == 2)
                         extra += f" ({g} at depth 2)"
-                print(f"  [{i + 1}/{len(nodes)}] {node['id']:12} {status}{extra}")
+                # flush: on GitHub stdout is a pipe, and buffered progress was lost
+                # with the cancelled step of web-29, hiding which node had stalled.
+                print(f"  [{i + 1}/{len(nodes)}] {node['id']:12} {status}{extra}", flush=True)
                 if i < len(nodes) - 1:
                     await asyncio.sleep(delay_s)
         finally:
-            await browser.close()
+            with contextlib.suppress(Exception):
+                await asyncio.wait_for(browser.close(), CLOSE_TIMEOUT_S)
     if budget is not None:
-        print(f"\n  {budget.note}")
+        print(f"\n  {budget.note}", flush=True)
     return results
 
 

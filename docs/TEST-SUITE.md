@@ -6,7 +6,7 @@ a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
 clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
 **426 test cases, all passing in CI**. It was re-checked again on 29 September
-2026 for checklist v3.2: **453 test cases**, all passing. No node website was
+2026 for checklist v3.2: **453 test cases**, all passing (**462** since the per-node time limit of 20 October 2026, below). No node website was
 contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -71,7 +71,7 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**364 test functions, expanding to 453 executed cases** (twenty-two tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**372 test functions, expanding to 462 executed cases** (twenty-three tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
 The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 425 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
@@ -85,8 +85,9 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_checklist.py` | 19 | Provenance of the checklist: source document hash for every committed revision, point-to-rule mapping, version/filename convention, that the default revision is one line that `--help` follows, and that each revision selects its own item 5 rule |
 | `test_nodes.py` | 14 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list, and the default copy for `--restore-default-config` identical to the committed `nodes.yaml` |
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
+| `test_node_timeout.py` | 9 | The per-node time limit, with a fake browser: a node that finishes is untouched; a node hung in navigation or in reading the page is abandoned at the limit, keeps what it had gathered and reads `ERROR` on all ten points; a clean-up that hangs too does not become the hang; `0` disables the limit; in a three-node run the node after a hung one is still collected and the browser is restarted |
 | `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
-| **Total** | **453** | |
+| **Total** | **462** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -165,6 +166,7 @@ A link is followed only when its target could settle a specific checklist point:
 | Pages per purpose at depth 1 | 2 | `MAX_PER_PURPOSE` — two candidate AUP links is enough to decide |
 | Pages per purpose at depth 2 | 1 | `MAX_PER_PURPOSE_D2` |
 | Run-wide second-hop budget | 60 | Configurable via `--fetch-budget`. A whole-run ceiling, not per node |
+| Time per node | 300 s | Configurable via `--node-timeout` (`0` = none). Landing page and linked pages together; on expiry every point is `ERROR` and the run continues |
 | Delay between children | 1.2 s | `CHILD_DELAY_S` |
 | Delay between grandchildren | 1.5 s | `GRANDCHILD_DELAY_S` |
 | Delay between nodes | 2.0 s | Configurable via `--delay` |
@@ -320,6 +322,7 @@ command also takes `--help`.
 | `--depth 0/1/2` | ✓ | — | ✓ | How far to follow links (default 1) |
 | `--max-children <n>` | ✓ | — | — | Linked pages followed per node at depth 1 (default 8; `run` always uses 8) |
 | `--fetch-budget <n>` | ✓ | — | ✓ | Depth 2 only: ceiling on second-hop requests (default 60) |
+| `--node-timeout <s>` | ✓ | — | ✓ | Most seconds per node before it is abandoned as `ERROR` (default 300; `0` = no limit) |
 | `--checklist`, `-c <file>` | — | ✓ | ✓ | Checklist revision to apply (default `checklist/v3.2.yaml`) |
 | `--approved-names <file>` | — | ✓ | ✓ | Approved-name list for point 3 (default `checklist/approved-names.txt`) |
 | `--no-approved-names` | — | ✓ | ✓ | Use no name list at all |
@@ -382,6 +385,7 @@ Only `collect` and `run` need a browser or network access. `points`, `assess`, `
 | `--skip` | collect assess run | none | Node ids or names, comma-separated or repeated. Left out of fetch and report; the report says so |
 | `--depth` | collect run | 1 | 0 = landing page only; 1 = one hop; 2 = two hops, reporting both depths. Range-checked 0–2 |
 | `--fetch-budget` | collect run | 60 | Depth 2 only: run-wide ceiling on second-hop requests |
+| `--node-timeout` | collect run | 300 | Seconds per node, landing page and linked pages together; on expiry the node is `ERROR` and the run continues |
 | `--max-children` | collect | 8 | Cap on followed pages per node |
 | `--delay` | collect run | 2.0 | Seconds between hosts |
 | `--checklist` / `-c` | assess run points | `checklist/v3.2.yaml` | Which checklist version to apply |
@@ -668,7 +672,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 453 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 462 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -753,7 +757,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 453 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 462 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -817,7 +821,7 @@ From `results/results.json`, run `web-31`, collected on 19 October 2026 between 
 
 The four FAILs are those of `web-28`: EBRAINS-RI 4, and Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative; its menu links still have no `href`, and the tool again captured two links only).
 
-**Two runs not published.** `web-29` ([run 39316592630](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39316592630), 19 October, commit `61e4e36`) was cancelled by the job's 30-minute `timeout-minutes`: the first thirteen nodes were collected between 20:08 and 20:14 UTC, then EBRAINS-RI's collection stalled after its screenshot was taken, and Life Sciences Connect was never reached. The log shows no per-node lines, because the progress output is buffered and was lost with the cancelled step. `web-30` ([run 39321255714](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39321255714), `--only ebrains-ri`) completed in two minutes, and so did EBRAINS-RI inside `web-31`. The cause was not found: each navigation has a timeout (45 s for a landing page, 25 s for a child page), but nothing bounds a whole node, `page.content()` or the `robots.txt` reads. A per-node time limit, recorded as `ERROR` rather than a hung job, is a possible fix, not yet made.
+**Two runs not published.** `web-29` ([run 39316592630](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39316592630), 19 October, commit `61e4e36`) was cancelled by the job's 30-minute `timeout-minutes`: the first thirteen nodes were collected between 20:08 and 20:14 UTC, then EBRAINS-RI's collection stalled after its screenshot was taken, and Life Sciences Connect was never reached. The log shows no per-node lines, because the progress output is buffered and was lost with the cancelled step. `web-30` ([run 39321255714](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39321255714), `--only ebrains-ri`) completed in two minutes, and so did EBRAINS-RI inside `web-31`. The cause was not found: each navigation has a timeout (45 s for a landing page, 25 s for a child page), but nothing bounds a whole node, `page.content()` or the `robots.txt` reads. **Fixed on 20 October 2026:** each node is now bounded as a whole by `--node-timeout` (default 300 s, `NODE_TIMEOUT_S` in `fetch.py`). A node that hits it is abandoned, keeps what it had gathered in its evidence file, reads `ERROR` on every point with a `TimeoutError` message (never a `FAIL` built on half-collected evidence), and the browser is restarted before the next node. The `robots.txt` reads now run in a worker thread so they cannot freeze the limit, the browser clean-up is itself bounded to 15 s, progress lines are flushed as each node finishes, and the workflow sets `PYTHONUNBUFFERED=1`, so a future log shows which node stopped.
 
 **Masking.** The same names as in `web-28` were masked, with the same placeholders, and the same two screenshots (CERN's quotation attribution, Life Sciences Connect's video title, both at unchanged positions). New in this run: the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy, and a person interviewed in an EBRAINS-RI news item. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes. The test suite (453 cases) passes on the published evidence.
 

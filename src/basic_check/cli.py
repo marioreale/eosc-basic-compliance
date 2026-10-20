@@ -20,6 +20,7 @@ from . import checks, report
 from .fetch import (
     DEFAULT_FETCH_BUDGET,
     MAX_CHILDREN,
+    NODE_TIMEOUT_S,
     collect_all,
     load_evidence,
     without_depth_2,
@@ -111,6 +112,11 @@ H_FETCH_BUDGET = (
     "Depth 2 only: hard ceiling on second-hop requests for the whole run, "
     "shared across nodes. Raise it deliberately; it exists to keep a check "
     "from becoming a crawl of other people's sites."
+)
+H_NODE_TIMEOUT = (
+    "Seconds one node may take, landing page and linked pages together, before "
+    "it is abandoned: its points are then ERROR and the run moves on to the next "
+    "node. 0 = no limit."
 )
 H_CHECKLIST = (
     f"Checklist rules file to use instead of {DEFAULT_CHECKLIST_LABEL}, e.g. a "
@@ -824,6 +830,9 @@ def collect(
         min=0,
         help=H_FETCH_BUDGET,
     ),
+    node_timeout: float = typer.Option(
+        NODE_TIMEOUT_S, "--node-timeout", min=0, help=H_NODE_TIMEOUT
+    ),
 ):
     """Fetch each landing page and save the evidence. Contacts the nodes.
 
@@ -833,7 +842,7 @@ def collect(
     nodes, _reported, resolved = _resolve(
         url, nodes_file, only, results_dir, eosc_page, skip, node
     )
-    _do_collect(nodes, resolved, delay, depth, max_children, fetch_budget)
+    _do_collect(nodes, resolved, delay, depth, max_children, fetch_budget, node_timeout)
 
 
 def _do_collect(
@@ -843,6 +852,7 @@ def _do_collect(
     depth: int,
     max_children: int,
     fetch_budget: int = DEFAULT_FETCH_BUDGET,
+    node_timeout: float = NODE_TIMEOUT_S,
 ) -> None:
     """The actual work, taking plain values.
 
@@ -875,6 +885,7 @@ def _do_collect(
             depth=depth,
             max_children=max_children,
             fetch_budget=fetch_budget,
+            node_timeout_s=node_timeout,
         )
     )
     typer.echo(f"\nEvidence written to {evidence_dir}")
@@ -1257,6 +1268,7 @@ def _update_results_for_node(
     depth: int = 1,
     fetch_budget: int = DEFAULT_FETCH_BUDGET,
     accept_error: bool = False,
+    node_timeout: float = NODE_TIMEOUT_S,
 ) -> dict:
     """Replace one node's row in the stored results.json and rebuild the reports.
 
@@ -1323,7 +1335,7 @@ def _update_results_for_node(
     evidence_dir = results_dir / "evidence"
     if fetch:
         staging = Path(tempfile.mkdtemp(prefix=f"basic-check-{node_id}-"))
-        _do_collect([node], staging, delay, depth, MAX_CHILDREN, fetch_budget)
+        _do_collect([node], staging, delay, depth, MAX_CHILDREN, fetch_budget, node_timeout)
         staged = staging / "evidence"
         ev = load_evidence(staged, node_id)
         if _fetch_failed(ev) and not accept_error:
@@ -1464,6 +1476,9 @@ def run(
         min=0,
         help=H_FETCH_BUDGET,
     ),
+    node_timeout: float = typer.Option(
+        NODE_TIMEOUT_S, "--node-timeout", min=0, help=H_NODE_TIMEOUT
+    ),
     update_row: str = typer.Option(
         "", "--update-results-for-node", metavar="NODE", help=H_UPDATE_ROW
     ),
@@ -1484,13 +1499,14 @@ def run(
             update_row, results_dir, nodes_file, checklist_file, approved_names,
             no_approved_names, strict_separators, fetch=True, delay=delay, depth=depth,
             fetch_budget=fetch_budget, accept_error=accept_error,
+            node_timeout=node_timeout,
         )
         return
     # Resolve once so both phases agree on the node list and the directory.
     nodes, reported, resolved = _resolve(
         url, nodes_file, only, results_dir, eosc_page, skip, node
     )
-    _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget)
+    _do_collect(nodes, resolved, delay, depth, MAX_CHILDREN, fetch_budget, node_timeout)
     _do_assess(
         reported, resolved, checklist_file, approved_names, run_id, no_approved_names,
         strict_separators=strict_separators,
