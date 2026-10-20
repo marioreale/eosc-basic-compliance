@@ -403,6 +403,8 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     Poland's page rendered only its header and footer, so its "EOSC Node
     Poland" text was not there to match: seven. In web-27 (7 October 2026)
     Poland's page rendered in full again and writes "EOSC Node Poland": eight.
+    In web-33 (20 October 2026) the new node, Germany, writes "EOSC Node
+    Germany": nine.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -413,7 +415,10 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
         for e in r["evidence"]
         if "approved name matched" in e
     }
-    assert matched == {"bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-fi", "eosc-pl"}
+    assert matched == {
+        "bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-fi", "eosc-pl",
+        "eosc-de",
+    }
 
 
 # --- what the page calls itself, when nothing matched ------------------------

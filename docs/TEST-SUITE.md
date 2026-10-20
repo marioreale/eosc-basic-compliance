@@ -355,7 +355,7 @@ does not record (section 3 of [the analysis workflow](ANALYSIS-WORKFLOW.md)), or
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 11. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run covers all fifteen nodes, so no `--skip` is
+a copy first. The published run covers all sixteen nodes, so no `--skip` is
 needed for the same scope.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
@@ -798,7 +798,36 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-31 at depth 2, 19 October 2026 (unreviewed)
+### Current run: web-33 at depth 2, 20 October 2026 (unreviewed)
+
+From `results/results.json`, run `web-33`, collected on 20 October 2026 between 20:13 and 20:21 UTC by the GitHub workflow ([run 39489960802](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39489960802), commit `1353fda`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, now sixteen names (SHA-256 `24b816b0…`). It made 130 page requests: 16 landing pages, 70 direct links and 44 second-hop pages (budget: 44 of 60). Fifteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. No node hit the per-node limit. Offline, `uv run basic-check assess --run web-33` reproduces it exactly, apart from the generation time (verified 20 October 2026).
+
+| Verdict | Depth 2 | Depth 1 |
+|---|---|---|
+| 🟢 PASS | 81 | 79 |
+| 🔴 FAIL | 7 | 7 |
+| 🟠 MANUAL_REVIEW | 72 | 74 |
+| 🟣 ERROR | 0 | 0 |
+| **Total** | **160** (16 nodes × 10 points) | **160** |
+
+**One node added.** EOSC Node Germany (`eosc-de`, `https://eosc-node.de`, approved name "EOSC Node | Germany", EOSC page `eosc-node-germany`) was added on 20 October 2026 in commit `1353fda`, to `nodes.yaml`, the shipped default copy, and both approved-name lists. **No cell of the other fifteen nodes changed** against `web-31`, at either depth; the depths still differ only in EBRAINS-RI 6 and Poland 6.
+
+| Node | Point | Verdict | Why |
+|---|---|---|---|
+| Germany | 1, 4, 7 | `PASS` | anonymous access; links its own `eosc.eu` entry; English, declared |
+| Germany | 1R, 2, 3, 5a | review | as for every node; for 3, the page writes "EOSC Node Germany" (the ninth approved-name match) and shows an EOSC logo |
+| Germany | 5b, 5c | `FAIL` | the page is a "Coming soon" placeholder with seven links (EOSC, EOSC Nodes, its EOSC entry, NFDI twice, a "Details" page on `nfdi.de`, "Imprint and Data Privacy"); none is a policy pointer or a page that could carry one |
+| Germany | 6 | `FAIL` | no `mailto:` and no contact, support or helpdesk link. The imprint was not followed, since its label matches no point; a reviewer should check it before quoting this FAIL |
+
+The seven FAILs are EBRAINS-RI 4, Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative), and Germany 5b, 5c and 6.
+
+**One run not published.** `web-32` ([run 39387128370](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39387128370), 20 October, commit `dab73b4`) was the first run with the per-node time limit. EBRAINS-RI read its landing page and its seven direct links, then stalled at its second hop, whose first page is a form on `forms.ebrains.eu`, and was stopped at 300 s: its ten points were `ERROR`, and the run finished the remaining node normally in 12.5 minutes, instead of being cancelled at the job limit as in `web-29`. Publishing it would have replaced EBRAINS-RI's real verdicts with `ERROR`. In `web-33` EBRAINS-RI completed, with all 16 pages.
+
+**Tests pinned to the published run.** `test_update_row.py::test_published_results_are_the_run_these_tests_copy` now expects sixteen nodes, and `test_names.py::test_the_official_names_match_the_nodes_that_show_them` nine matches (Germany added). 462 cases pass on the published evidence.
+
+**Masking.** The same names as in `web-31` were masked, with the same placeholders, and the same two screenshots (CERN's quotation attribution, Life Sciences Connect's video title, at unchanged positions). Germany's page carries no personal name, address or phone number, and no new personal name was found on the other pages. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes.
+
+### Previous run: web-31 at depth 2, 19 October 2026
 
 From `results/results.json`, run `web-31`, collected on 19 October 2026 between 20:44 and 20:51 UTC by the GitHub workflow ([run 39321743220](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39321743220), commit `e9c5f9c`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of fifteen names (SHA-256 `e23f7d1c…`, unchanged). It made 129 page requests: 15 landing pages, 70 direct links and 44 second-hop pages (budget: 44 of 60). Fourteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. Offline, `uv run basic-check assess --run web-31` reproduces it exactly, apart from the generation time (verified 19 October 2026).
 
@@ -1276,7 +1305,7 @@ Three caveats the tool states itself, and which matter more than the count:
 - The `<title>` element is not searched, only the page body. Several of the six "not found" results say so explicitly.
 - Most of those six pages *do* contain the phrase "EOSC Node"; what is absent is the full approved form.
 
-The current default list carries **fifteen** names, one per configured node, with a scoped variant that binds each name to its node id. The 21 September run predates that and used the nine-name version. The published run of 24 September used the thirteen-name list, and point 3 is `MANUAL_REVIEW` for all twelve of its nodes, for the same reason.
+The current default list carries **sixteen** names, one per configured node, with a scoped variant that binds each name to its node id. The 21 September run predates that and used the nine-name version. The published run of 24 September used the thirteen-name list, and point 3 is `MANUAL_REVIEW` for all twelve of its nodes, for the same reason.
 
 
 ## 11. Worked examples
@@ -1692,5 +1721,5 @@ the documents together, so the commit shows the whole change.
 - Figures in section 10, current run: `results/results.json`, run `web-13`, collected 28 September 2026 at depth 2 by [workflow run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672) under checklist v3.2, not reviewed; the same verdicts as run `web-12` ([workflow run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)) and the same verdicts as run `web-11` ([workflow run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) re-scored offline against v3.2
 - Figures in section 10, 24 September run: `results/results.json` at commit `800d632`, run `live-2026-09-24-no-italy`, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
-- Approved node names: `checklist/approved-names.txt` (fifteen names, SHA-256 `e23f7d1c…`, since 9 October 2026; thirteen names, `46af586b…`, from 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`
+- Approved node names: `checklist/approved-names.txt` (sixteen names, SHA-256 `24b816b0…`, since 20 October 2026; fifteen, `e23f7d1c…`, from 9 October 2026; thirteen names, `46af586b…`, from 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`
 - Test counts, line counts, runtimes, name-list results and command options in this document were measured on 25 September 2026 against a clean clone of the repository state it is committed with (the test count re-checked on 26 September at `4c5dea7`), not carried over from the previous edition

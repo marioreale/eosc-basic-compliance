@@ -2,7 +2,7 @@
   "node_id": "eosc-it",
   "node_name": "EOSC Node Italy",
   "requested_url": "https://eosc.it/",
-  "fetched_at": "2026-10-19T20:50:05+00:00",
+  "fetched_at": "2026-10-20T20:19:36+00:00",
   "final_url": "https://eosc.it/",
   "http_status": 200,
   "redirect_chain": [],
@@ -321,7 +321,7 @@
   ],
   "images": [
     {
-      "src": "https://eosc.it/image/layout_set_logo?img_id=498203629&t=1791395642671",
+      "src": "https://eosc.it/image/layout_set_logo?img_id=498203629&t=1792510063765",
       "alt": "EOSC Node | Italy",
       "aria_label": "",
       "title": "",
@@ -329,7 +329,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc.it/image/layout_icon?img_id=559203608&t=1792123953396",
+      "src": "https://eosc.it/image/layout_icon?img_id=559203608&t=1792510063816",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",
@@ -337,7 +337,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://eosc.it/image/layout_icon?img_id=559202587&t=1792123953397",
+      "src": "https://eosc.it/image/layout_icon?img_id=559202587&t=1792510063817",
       "alt": "Page Icon",
       "aria_label": "",
       "title": "",

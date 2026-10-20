@@ -2,7 +2,7 @@
   "node_id": "eosc-pl",
   "node_name": "EOSC Node Poland",
   "requested_url": "https://eosc.pl/",
-  "fetched_at": "2026-10-19T20:49:46+00:00",
+  "fetched_at": "2026-10-20T20:19:16+00:00",
   "final_url": "https://eosc.pl/",
   "http_status": 200,
   "redirect_chain": [
@@ -1146,8 +1146,8 @@
       "final_url": "https://eosc.pl/search/data_source?q=*",
       "title": "Polish Open Science Platform",
       "lang_attr": "en",
-      "main_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Data sources Filters (6 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results ROHub Data Source 3 Downloads 0 Views ROHub enables the management, sharing and preservation of research artefacts related to a particular investigation/research challenge as a single information unit through the Research Object (RO) concept and model. ROHub supports scientists and related ... Show more Share Browse data source Keywords: research-objects ro-crate fair open-science research-lifecycle reliance Show more Organisation: Poznan Supercomputing and Networking Center Scientific domain: Generic Learn more Most Wiedzy Open Research Data Catalog Data Source 1 Downloads 0 Views The nature of the ‘Bridge of Data’ project is to design and build a platform that allows collecting, searching, analyzing and sharing open research data and to provide it with unique data collected from the three most important Pomeranian universities: ... Show more Share Browse data source Organisation: Gdańsk University of Technology Scientific domain: Generic Learn more RepOD Repository for Open Data Data Source 0 Downloads 0 Views RepOD is the first Polish repository for open research data. All researchers, regardless of affiliation and academic discipline, can create a free account and start sharing data produced, collected, or described during research activities. Research-perf... Show more Share Browse data source Organisation: Interdisciplinary Centre for Mathematical and Computational Modelling, University of Warsaw Scientific domain: Generic Learn more Elektroniczne Centrum Udostępniania Danych Oceanograficznych Data Source 0 Downloads 0 Views The eCUDO.pl project is created by a consortium of Project partners. These are research units, scientific institutes and universities whose scientific activity focuses on the area of knowledge related to the seas and oceans. The genesis of the project w... Show more Share Browse data source Organisation: Institute of Oceanology Polish Academy of Sciences Scientific domain: Biological Sciences Natural Sciences Learn more Onedata Data Source 0 Downloads 0 Views High-performance data management solution that offers unified data access across globally distributed environments and multiple types of underlying storage, allowing users to share, collaborate and perform computations on the stored data easily. Desi... Show more Share Browse data source Organisation: Academic Computer Centre CYFRONET AGH Scientific domain: Other Learn more The European Genome-phenome Archive Data Source 0 Downloads 0 Views The European Genome-phenome Archive (EGA) is a service for permanent archiving and sharing of personally identifiable genetic, phenotypic, and clinical data generated for the purposes of biomedical research projects or in the context of research-focused... Show more Share Browse data source Organisation: The European Genome-phenome Archive Scientific domain: Natural Sciences Basic Medicine Medical & Health Sciences Learn more << < 1 Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
-      "full_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Data sources Filters (6 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results ROHub Data Source 3 Downloads 0 Views ROHub enables the management, sharing and preservation of research artefacts related to a particular investigation/research challenge as a single information unit through the Research Object (RO) concept and model. ROHub supports scientists and related ... Show more Share Browse data source Keywords: research-objects ro-crate fair open-science research-lifecycle reliance Show more Organisation: Poznan Supercomputing and Networking Center Scientific domain: Generic Learn more Most Wiedzy Open Research Data Catalog Data Source 1 Downloads 0 Views The nature of the ‘Bridge of Data’ project is to design and build a platform that allows collecting, searching, analyzing and sharing open research data and to provide it with unique data collected from the three most important Pomeranian universities: ... Show more Share Browse data source Organisation: Gdańsk University of Technology Scientific domain: Generic Learn more RepOD Repository for Open Data Data Source 0 Downloads 0 Views RepOD is the first Polish repository for open research data. All researchers, regardless of affiliation and academic discipline, can create a free account and start sharing data produced, collected, or described during research activities. Research-perf... Show more Share Browse data source Organisation: Interdisciplinary Centre for Mathematical and Computational Modelling, University of Warsaw Scientific domain: Generic Learn more Elektroniczne Centrum Udostępniania Danych Oceanograficznych Data Source 0 Downloads 0 Views The eCUDO.pl project is created by a consortium of Project partners. These are research units, scientific institutes and universities whose scientific activity focuses on the area of knowledge related to the seas and oceans. The genesis of the project w... Show more Share Browse data source Organisation: Institute of Oceanology Polish Academy of Sciences Scientific domain: Biological Sciences Natural Sciences Learn more Onedata Data Source 0 Downloads 0 Views High-performance data management solution that offers unified data access across globally distributed environments and multiple types of underlying storage, allowing users to share, collaborate and perform computations on the stored data easily. Desi... Show more Share Browse data source Organisation: Academic Computer Centre CYFRONET AGH Scientific domain: Other Learn more The European Genome-phenome Archive Data Source 0 Downloads 0 Views The European Genome-phenome Archive (EGA) is a service for permanent archiving and sharing of personally identifiable genetic, phenotypic, and clinical data generated for the purposes of biomedical research projects or in the context of research-focused... Show more Share Browse data source Organisation: The European Genome-phenome Archive Scientific domain: Natural Sciences Basic Medicine Medical & Health Sciences Learn more << < 1 Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
+      "main_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Data sources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
+      "full_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Data sources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
       "links": [
         {
           "href": "https://eosc.pl",
@@ -1257,96 +1257,6 @@
         {
           "href": "https://eosc.pl/search/all_collection",
           "text": "All Resources",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.psnc.rohub/offers",
-          "text": "ROHub",
-          "visible": true
-        },
-        {
-          "href": "https://eosc.pl/search/search/all_collection?q=*&fq=datasource_pids:\"eosc.psnc.rohub\"",
-          "text": "Browse data source",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.psnc.rohub/offers",
-          "text": "Learn more",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.gdansk_tech.most/offers",
-          "text": "Most Wiedzy Open Research Data Catalog",
-          "visible": true
-        },
-        {
-          "href": "https://eosc.pl/search/search/all_collection?q=*&fq=datasource_pids:\"eosc.gdansk_tech.most\"",
-          "text": "Browse data source",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.gdansk_tech.most/offers",
-          "text": "Learn more",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.icm.repod/offers",
-          "text": "RepOD Repository for Open Data",
-          "visible": true
-        },
-        {
-          "href": "https://eosc.pl/search/search/all_collection?q=*&fq=datasource_pids:\"eosc.icm.repod\"",
-          "text": "Browse data source",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.icm.repod/offers",
-          "text": "Learn more",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.gdansk_tech.ecudo/offers",
-          "text": "Elektroniczne Centrum Udostępniania Danych Oceanograficznych",
-          "visible": true
-        },
-        {
-          "href": "https://eosc.pl/search/search/all_collection?q=*&fq=datasource_pids:\"eosc.gdansk_tech.ecudo\"",
-          "text": "Browse data source",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.gdansk_tech.ecudo/offers",
-          "text": "Learn more",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.cyfronet.onedata/offers",
-          "text": "Onedata",
-          "visible": true
-        },
-        {
-          "href": "https://eosc.pl/search/search/all_collection?q=*&fq=datasource_pids:\"eosc.cyfronet.onedata\"",
-          "text": "Browse data source",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.cyfronet.onedata/offers",
-          "text": "Learn more",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.ega.ega/offers",
-          "text": "The European Genome-phenome Archive",
-          "visible": true
-        },
-        {
-          "href": "https://eosc.pl/search/search/all_collection?q=*&fq=datasource_pids:\"eosc.ega.ega\"",
-          "text": "Browse data source",
-          "visible": true
-        },
-        {
-          "href": "https://marketplace.eosc.pl//services/eosc.ega.ega/offers",
-          "text": "Learn more",
           "visible": true
         },
         {

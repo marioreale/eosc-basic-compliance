@@ -2,7 +2,7 @@
   "node_id": "bbmri-eric",
   "node_name": "BBMRI-ERIC",
   "requested_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-  "fetched_at": "2026-10-19T20:44:45+00:00",
+  "fetched_at": "2026-10-20T20:13:45+00:00",
   "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
   "http_status": 200,
   "redirect_chain": [],
@@ -119,7 +119,7 @@
       "visible": true
     },
     {
-      "href": "https://dev3.bbmri-eric.eu/news-events/",
+      "href": "https://dev3.bbmri-eric.eu/news-event/",
       "text": "News",
       "visible": true
     },
@@ -568,7 +568,7 @@
     },
     {
       "text": "News",
-      "href": "https://dev3.bbmri-eric.eu/news-events/",
+      "href": "https://dev3.bbmri-eric.eu/news-event/",
       "tag": "a",
       "visible": true
     },
@@ -975,7 +975,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -1304,7 +1304,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -1618,7 +1618,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -1932,7 +1932,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -2266,7 +2266,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -2595,7 +2595,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -2904,7 +2904,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -3238,7 +3238,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -3602,7 +3602,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },
@@ -4126,7 +4126,7 @@
           "visible": true
         },
         {
-          "href": "https://dev3.bbmri-eric.eu/news-events/",
+          "href": "https://dev3.bbmri-eric.eu/news-event/",
           "text": "News",
           "visible": true
         },

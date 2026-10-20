@@ -1,10 +1,10 @@
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-31` · 2026-10-19T20:53:42+00:00 · 15 nodes · one page request per node plus 70 followed link(s), then 44 second-hop page(s) (depth 2).
+Run `web-33` · 2026-10-20T20:22:31+00:00 · 16 nodes · one page request per node plus 70 followed link(s), then 44 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
-**Node names.** 15 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `e23f7d1ce8b4…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
+**Node names.** 16 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `24b816b0bad0…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
 
 🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
 
@@ -14,7 +14,7 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-150 cells: 🟢 76 PASS · 🔴 4 FAIL · 🟠 70 review.
+160 cells: 🟢 79 PASS · 🔴 7 FAIL · 🟠 74 review.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -33,12 +33,13 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EBRAINS-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟢 PASS | 🟠 review | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
+| EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 
 ### Results at depth 2
 
 The same evidence plus 44 page(s) reached one further hop out, under a shared run budget.
 
-150 cells: 🟢 78 PASS · 🔴 4 FAIL · 🟠 68 review.
+160 cells: 🟢 81 PASS · 🔴 7 FAIL · 🟠 72 review.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -57,6 +58,7 @@ The same evidence plus 44 page(s) reached one further hop out, under a shared ru
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EBRAINS-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
+| EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 
 ### What the second hop changed
 
@@ -254,7 +256,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - EOSC-referencing image asset(s): 2
   - img: EOSC Node CERN
   - img: EOSC Node CERN
-  - NONE of the 15 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
+  - NONE of the 16 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "CERN Node on eosc.eu ↗" -> https://eosc.eu/building-the-eosc-federation/eosc-node-cern
@@ -351,7 +353,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - EOSC-referencing image asset(s): 2
   - img: EOSC Federation
   - img: Official logo of EOSC Node European Digital Twin Ocean
-  - NONE of the 15 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 6 times, but never followed by an approved name — note the <title> is not searched
+  - NONE of the 16 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 6 times, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "View the dedicated Node page on eosc.eu →" -> https://eosc.eu/building-the-eosc-federation/eosc-node-digital-twin-of-the-ocean
@@ -474,13 +476,13 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://panosc.eu/panosc-eosc-node>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 8234 characters of text rendered
+  - HTTP 200 anonymously, 8020 characters of text rendered
   - redirects followed: 1
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 28 distinct external host(s) linked from the landing page
   - api.whatsapp.com
   - archive.materialscloud.org (Materials Cloud Archive)
-  - doi.desy.de (PETRA III Public Data Repository)
+  - data.cells.es (ALBA synchrotron Data Portal)
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
   - opening main text: "Menu About About PaNOSC Node PaNOSC project (2018-2022) European Research Infrastructures FAIR Principles Contact Science Cluster About Members Services Photon and Neutron Competence Centre PaNOSC data policy framework PaN OSCARS funded projects PaNOSC Node About Services Training Project (2018-2022) Services Data E-learning platform Use Cases Video Women in science Materials Branding Material Pub..."
@@ -491,13 +493,13 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - EOSC-referencing image asset(s): 2
   - img: EOSC Federation User Forum
   - img: European Open Science Cloud
-  - NONE of the 15 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur once, but never followed by an approved name — note the <title> is not searched
+  - NONE of the 16 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur once, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "PaNOSC Node" -> https://eosc.eu/building-the-eosc-federation/eosc-node-panosc
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
   - 120 outbound link(s) on the landing page
-  - main text length: 8234 characters
+  - main text length: 8020 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
 - **5b** 🟠 review — No pointer to an Acceptable Use Policy was found on the NLP, but it links to a User Access Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
   - 120 link(s) on the landing page examined, none matching an Acceptable Use Policy
@@ -584,7 +586,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
   - EOSC-referencing image asset(s): 1
   - img: EOSC Node EGI in operation
-  - NONE of the 15 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
+  - NONE of the 16 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur 3 times, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "EGI EOSC Node on EOSC Association's website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-egi
@@ -628,7 +630,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 1 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 0
-  - NONE of the 15 approved name(s) for this node appear in the page body — note the <title> is not searched
+  - NONE of the 16 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
   - 2 link(s) examined, none pointing to eosc.eu
@@ -810,7 +812,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 45 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 0
-  - NONE of the 15 approved name(s) for this node appear in the page body — note the <title> is not searched
+  - NONE of the 16 approved name(s) for this node appear in the page body — note the <title> is not searched
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🔴 **FAIL** — No link to eosc.eu was found on the landing page.
   - 126 link(s) examined, none pointing to eosc.eu
@@ -854,7 +856,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
   - 5 image/SVG element(s) examined, none referencing EOSC
   - mentions of EOSC in page text: 5
-  - NONE of the 15 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur once, but never followed by an approved name — note the <title> is not searched
+  - NONE of the 16 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur once, but never followed by an approved name — note the <title> is not searched
   - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "view us on the EOSC website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-life-sciences-connect
@@ -873,6 +875,47 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 - **6** 🔴 **FAIL** — No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.
   - 2 link(s) examined
   - note: only 2 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en"
+  - detected language: en (confidence 1.0)
+
+### EOSC Node Germany
+<https://eosc-node.de>
+
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 642 characters of text rendered
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - 1 distinct external host(s) linked from the landing page
+  - www.nfdi.de (Coordinated by NFDI, Details, NFDI)
+  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
+- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
+  - meta description: "EOSC Node Germany – Coming soon."
+  - opening main text: "Scope The German EOSC Node provides seamless access to high-quality FAIR data and specialised services from all science areas, it connects NFDI and other national infrastructures to the EOSC Federation. Intended Users European researchers, connecting to German science organisations and service providers by joining the EOSC Federation through integrated AAI connectivity. Responsible organisation NF..."
+  - no organisation-like names matched by pattern
+  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
+  - EOSC-referencing image asset(s): 2
+  - img: EOSC Node Germany
+  - inline SVG: Dot grid map of Europe: the EOSC Node Germany in Karlsruhe is connected to the locations of all other EOSC Nodes
+  - approved name matched from the unscoped list: "EOSC Node | Germany" (the page writes it "EOSC Node Germany") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
+  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "EOSC Node Germany" -> https://eosc.eu/building-the-eosc-federation/eosc-node-germany
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+  - 7 outbound link(s) on the landing page
+  - main text length: 543 characters
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
+- **5b** 🔴 **FAIL** — No pointer to an Acceptable Use Policy was found on the landing page. The landing page links to no policies, legal, services or resources page that could carry it. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
+  - 7 link(s) on the landing page examined, none matching an Acceptable Use Policy
+  - note: only 7 links captured, low for a landing page; only 543 characters of main text captured — the DOM was nonetheless complete, so absence stands
+  - *Reviewer action:* Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
+- **5c** 🔴 **FAIL** — No pointer to a User Access Policy was found on the landing page. The landing page links to no policies, legal, services or resources page that could carry it. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
+  - 7 link(s) on the landing page examined, none matching a User Access Policy
+  - note: only 7 links captured, low for a landing page; only 543 characters of main text captured — the DOM was nonetheless complete, so absence stands
+  - *Reviewer action:* Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
+- **6** 🔴 **FAIL** — No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.
+  - 7 link(s) examined
+  - note: only 7 links captured, low for a landing page; only 543 characters of main text captured — the DOM was nonetheless complete, so absence stands
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
   - detected language: en (confidence 1.0)

@@ -2,7 +2,7 @@
   "node_id": "data-terra",
   "node_name": "Data Terra",
   "requested_url": "https://www.earth-data.eu/",
-  "fetched_at": "2026-10-19T20:47:11+00:00",
+  "fetched_at": "2026-10-20T20:16:29+00:00",
   "final_url": "https://www.earth-data.eu/",
   "http_status": 200,
   "redirect_chain": [],
@@ -291,7 +291,7 @@
   ],
   "images": [
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSI1MCUiIHkxPSIwJSIgeDI9IjUwJSIgeTI9IjEwMCUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjRkZGIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0YwRjBGMCIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSIgaWQ9ImIiPjxzdG9wIHN0b3AtY29sb3I9IiMyNjI2MjYiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjMEQwRDBEIiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMCUiIHgyPSI1MCUiIHkyPSIxMDAlIiBpZD0iYyI+PHN0b3Agc3RvcC1jb2xvcj0iI0YwMTUxNSIgb2Zmc2V0PSIwJSIvPjxzdG9wIHN0b3AtY29sb3I9IiNERTAwMDAiIG9mZnNldD0iMTAwJSIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IHgxPSI1MCUiIHkxPSIwJSIgeDI9IjUwJSIgeTI9IjEwMCUiIGlkPSJkIj48c3RvcCBzdG9wLWNvbG9yPSIjRkZENTIxIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0ZGQ0YwMCIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBmaWxsPSJ1cmwoI2EpIiBkPSJNMCAwaDIxdjE1SDB6Ii8+PHBhdGggZmlsbD0idXJsKCNiKSIgZD0iTTAgMGgyMXY1SDB6Ii8+PHBhdGggZmlsbD0idXJsKCNjKSIgZD0iTTAgNWgyMXY1SDB6Ii8+PHBhdGggZmlsbD0idXJsKCNkKSIgZD0iTTAgMTBoMjF2NUgweiIvPjwvZz48L3N2Zz4=",
+      "src": "https://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/de.svg",
       "alt": "Deutsch",
       "aria_label": "",
       "title": "",
@@ -299,7 +299,7 @@
       "inline_svg": false
     },
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSI1MCUiIHkxPSIwJSIgeDI9IjUwJSIgeTI9IjEwMCUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjRkZGIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0YwRjBGMCIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSIgaWQ9ImIiPjxzdG9wIHN0b3AtY29sb3I9IiNGNDQ2NTMiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRUUyQTM5IiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMCUiIHgyPSI1MCUiIHkyPSIxMDAlIiBpZD0iYyI+PHN0b3Agc3RvcC1jb2xvcj0iIzEwMzVCQiIgb2Zmc2V0PSIwJSIvPjxzdG9wIHN0b3AtY29sb3I9IiMwNDIzOTYiIG9mZnNldD0iMTAwJSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTAgMGgyMXYxNUgweiIvPjxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0xMCAwaDExdjE1SDEweiIvPjxwYXRoIGZpbGw9InVybCgjYykiIGQ9Ik0wIDBoN3YxNUgweiIvPjxwYXRoIGZpbGw9InVybCgjYSkiIGQ9Ik03IDBoN3YxNUg3eiIvPjwvZz48L3N2Zz4=",
+      "src": "https://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/fr.svg",
       "alt": "Français",
       "aria_label": "",
       "title": "",
@@ -307,7 +307,7 @@
       "inline_svg": false
     },
     {
-      "src": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iMTUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IHgxPSI1MCUiIHkxPSIwJSIgeDI9IjUwJSIgeTI9IjEwMCUiIGlkPSJhIj48c3RvcCBzdG9wLWNvbG9yPSIjRkZGIiBvZmZzZXQ9IjAlIi8+PHN0b3Agc3RvcC1jb2xvcj0iI0YwRjBGMCIgb2Zmc2V0PSIxMDAlIi8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSIgaWQ9ImIiPjxzdG9wIHN0b3AtY29sb3I9IiMwQTE3QTciIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjMDMwRTg4IiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjxsaW5lYXJHcmFkaWVudCB4MT0iNTAlIiB5MT0iMCUiIHgyPSI1MCUiIHkyPSIxMDAlIiBpZD0iYyI+PHN0b3Agc3RvcC1jb2xvcj0iI0U2MjczRSIgb2Zmc2V0PSIwJSIvPjxzdG9wIHN0b3AtY29sb3I9IiNDRjE1MkIiIG9mZnNldD0iMTAwJSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0iTTAgMGgyMXYxNUgweiIvPjxwYXRoIGZpbGw9InVybCgjYikiIGQ9Ik0tLjAwMiAwaDIxdjE1aC0yMXoiLz48cGF0aCBkPSJNNS4wMDMgMTBILS4wMDJWNWg1LjAwNUwtMi4wODIuMjJsMS4xMTgtMS42NTcgOC45NjIgNi4wNDVWLTFoNXY1LjYwOGw4Ljk2Mi02LjA0NUwyMy4wNzguMjIgMTUuOTkzIDVoNS4wMDV2NWgtNS4wMDVsNy4wODUgNC43OC0xLjExOCAxLjY1Ny04Ljk2Mi02LjA0NVYxNmgtNXYtNS42MDhsLTguOTYyIDYuMDQ1LTEuMTE4LTEuNjU4TDUuMDAzIDEweiIgZmlsbD0idXJsKCNhKSIvPjxwYXRoIGQ9Ik0xNC4xMzYgNC45NThsOS41LTYuMjVhLjI1LjI1IDAgMDAtLjI3NS0uNDE3bC05LjUgNi4yNWEuMjUuMjUgMCAxMC4yNzUuNDE3em0uNzMyIDUuNTIybDguNTE1IDUuNzRhLjI1LjI1IDAgMTAuMjgtLjQxNWwtOC41MTYtNS43NGEuMjUuMjUgMCAwMC0uMjc5LjQxNXpNNi4xNDIgNC41MjZMLTIuNzQtMS40NjFhLjI1LjI1IDAgMDAtLjI4LjQxNUw1Ljg2MyA0Ljk0YS4yNS4yNSAwIDAwLjI3OS0uNDE0em0uNjg1IDUuNDY5bC05Ljg0NSA2LjUzYS4yNS4yNSAwIDEwLjI3Ni40MTZsOS44NDYtNi41MjlhLjI1LjI1IDAgMDAtLjI3Ny0uNDE3eiIgZmlsbD0iI0RCMUYzNSIgZmlsbC1ydWxlPSJub256ZXJvIi8+PHBhdGggZmlsbD0idXJsKCNjKSIgZD0iTS0uMDAyIDloOXY2aDNWOWg5VjZoLTlWMGgtM3Y2aC05eiIvPjwvZz48L3N2Zz4=",
+      "src": "https://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/gb.svg",
       "alt": "English",
       "aria_label": "",
       "title": "",

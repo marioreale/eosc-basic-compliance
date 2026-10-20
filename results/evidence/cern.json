@@ -2,7 +2,7 @@
   "node_id": "cern",
   "node_name": "CERN",
   "requested_url": "https://eosc.cern/",
-  "fetched_at": "2026-10-19T20:45:34+00:00",
+  "fetched_at": "2026-10-20T20:14:50+00:00",
   "final_url": "https://eosc.cern/",
   "http_status": 200,
   "redirect_chain": [],
