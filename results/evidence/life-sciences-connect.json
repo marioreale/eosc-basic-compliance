@@ -2,11 +2,11 @@
   "node_id": "life-sciences-connect",
   "node_name": "Life Sciences Connect",
   "requested_url": "https://eosc-lifesciences-connect.eu/home",
-  "fetched_at": "2026-10-20T20:20:51+00:00",
+  "fetched_at": "2026-10-27T10:28:52+00:00",
   "final_url": "https://eosc-lifesciences-connect.eu/home",
   "http_status": 200,
   "redirect_chain": [
-    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=fead78ac-15c6-4bc7-88ff-76a22f3e6672&response_mode=fragment&response_type=code&scope=openid&nonce=79b68863-935e-4db4-bfe1-b16feba730aa&prompt=none",
+    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=273ac7b5-2226-45a2-8e00-950c66149fe2&response_mode=fragment&response_type=code&scope=openid&nonce=a335a740-70c2-4ed6-893e-404d1ceff7c5&prompt=none",
     "https://eosc-lifesciences-connect.eu/env-config.js",
     "https://eosc-lifesciences-connect.eu/static/js/main.e859dd68.js"
   ],
@@ -96,5 +96,5 @@
   "crawl_depth": 2,
   "children": [],
   "children_skipped": [],
-  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
+  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 52 of 60 used"
 }

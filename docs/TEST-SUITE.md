@@ -798,7 +798,32 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-33 at depth 2, 20 October 2026 (unreviewed)
+### Current run: web-34 at depth 2, 27 October 2026 (unreviewed)
+
+From `results/results.json`, run `web-34`, collected on 27 October 2026 between 10:20 and 10:29 UTC by the GitHub workflow ([run 40486581247](https://github.com/marioreale/eosc-basic-compliance/actions/runs/40486581247), commit `55657ac`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of sixteen names (SHA-256 `24b816b0…`). It made 145 page requests: 16 landing pages, 77 direct links and 52 second-hop pages (budget: 52 of 60). All sixteen landing pages returned HTTP 200. No node hit the per-node limit; the whole job took 17.5 minutes, of which about 8.5 were collection. Offline, `uv run basic-check assess --run web-34` reproduces it exactly, apart from the generation time (verified 27 October 2026, on the masked evidence).
+
+| Verdict | Depth 2 | Depth 1 |
+|---|---|---|
+| 🟢 PASS | 85 | 83 |
+| 🔴 FAIL | 7 | 7 |
+| 🟠 MANUAL_REVIEW | 68 | 70 |
+| 🟣 ERROR | 0 | 0 |
+| **Total** | **160** (16 nodes × 10 points) | **160** |
+
+**Only GÉANT changed.** Against `web-33`, the same four cells moved at both depths; no cell of the other fifteen nodes changed, and the depths still differ only in EBRAINS-RI 6 and Poland 6.
+
+| Node | Point | Change | Why |
+|---|---|---|---|
+| GÉANT | 1, 4, 5b, 6 | review to `PASS` | the page was served (HTTP 200, final URL `https://geant.org/projects/geant-eosc-node/`) for the first time since `web-22`; it is public, links its own `eosc.eu` entry and the "GÉANT Node Acceptable Use Policy" page (read), and its Contact page gives a support route |
+| GÉANT | 3, 5c | review (message changed) | 3: the page writes "EOSC Node GÉANT", the tenth approved-name match, and shows two EOSC image assets; 5c: no separate User Access Policy is linked, and v3.2 allows one document for both |
+
+The seven FAILs are unchanged: EBRAINS-RI 4, Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative), and Germany 5b, 5c and 6.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects ten matches (GÉANT added back); `test_update_row.py` still expects sixteen nodes. 462 cases pass on the published evidence.
+
+**Masking.** The names masked in `web-33` were masked again with the same placeholders, and the same two screenshot regions (CERN's quotation attribution, Life Sciences Connect's video title) were masked at unchanged positions. GÉANT's second hop reached its executive team, governance and membership pages again: about 120 names of officers, board members and General Assembly representatives, taken from the fixed patterns of those pages and masked everywhere, including one cut short in a control label ("Heidi Fraser-Kr…"). Phone numbers on GÉANT's contact and cookie pages were masked by the automatic rule. The changed screenshots (CERN, Data Terra, EBRAINS-RI, Germany, Poland, EUDAT, GÉANT, PaNOSC) were checked by eye and show no personal name. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes.
+
+### Previous run: web-33 at depth 2, 20 October 2026 (unreviewed)
 
 From `results/results.json`, run `web-33`, collected on 20 October 2026 between 20:13 and 20:21 UTC by the GitHub workflow ([run 39489960802](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39489960802), commit `1353fda`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list, now sixteen names (SHA-256 `24b816b0…`). It made 130 page requests: 16 landing pages, 70 direct links and 44 second-hop pages (budget: 44 of 60). Fifteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. No node hit the per-node limit. Offline, `uv run basic-check assess --run web-33` reproduces it exactly, apart from the generation time (verified 20 October 2026).
 

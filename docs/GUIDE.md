@@ -17,8 +17,9 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-This edition was revised on 20 October 2026, when EOSC Node Germany was added
-and run `web-33` was published, after a per-node time limit
+This edition was revised on 27 October 2026, when run `web-34` was published
+(all sixteen nodes; GÉANT's page served again). The edition of 20 October 2026
+added EOSC Node Germany and published run `web-33`, after a per-node time limit
 (`--node-timeout`, section 4) was added the same day; the test count is 462. The
 edition of 19 October 2026 published run `web-31` after PaNOSC's landing page
 changed; its tallies and the rebuild of the published report were re-measured
@@ -47,8 +48,20 @@ Sciences Connect's pages, made from a browser, is reported where it is used.
 > differences point by point, and section 5 of the
 > [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
-> **The published run changed again on 20 October 2026.**
-> `results/` now holds run `web-33`, collected by the GitHub workflow at
+> **The published run changed again on 27 October 2026.**
+> `results/` now holds run `web-34`, collected by the GitHub workflow at
+> `--depth 2` on 27 October 2026 between 10:20 and 10:29 UTC from all sixteen
+> nodes ([run 40486581247](https://github.com/marioreale/eosc-basic-compliance/actions/runs/40486581247), commit `55657ac`), under the re-issued v3.2: 85 PASS, 7 FAIL
+> and 68 MANUAL_REVIEW at depth 2 (83 / 7 / 70 at depth 1), in 145 page
+> requests (16 landing pages, 77 direct links, 52 second-hop pages; the shared
+> second-hop budget used 52 of 60). Only **GÉANT** changed: its page was served
+> (`HTTP 200`) for the first time since `web-22`, so points 1, 4, 5b and 6 moved
+> from review to `PASS` at both depths. No cell of the other fifteen nodes
+> changed against `web-33`, and every node finished within its time limit. It
+> has **not** been reviewed by hand.
+>
+> **Previously, on 20 October 2026,**
+> `results/` held run `web-33`, collected by the GitHub workflow at
 > `--depth 2` on 20 October 2026 between 20:13 and 20:21 UTC from all sixteen
 > nodes ([run 39489960802](https://github.com/marioreale/eosc-basic-compliance/actions/runs/39489960802), commit `1353fda`), under the re-issued v3.2: 81 PASS, 7 FAIL
 > and 72 MANUAL_REVIEW at depth 2 (79 / 7 / 74 at depth 1), in 130 page
@@ -276,12 +289,12 @@ the git history at `73fbb93`.
 had no address record on 24 September; Italy was assessed from that address in
 runs `web-4` to `web-16`. On 1 October it changed back to `https://eosc.it/`,
 which now resolves, and `nodes.yaml` carries a comment saying so. Runs `web-18`,
-`web-21` to `web-33` (the published run) were collected from `https://eosc.it/`.
+`web-21` to `web-34` (`web-34` is the published run) were collected from `https://eosc.it/`.
 
 **Data Terra's URL changed on 1 October 2026**, from
 `https://www.data-terra.org/eosc/` to `https://www.earth-data.eu/`, and
 `nodes.yaml` carries a comment saying so. Runs up to `web-18` read the old
-address; runs `web-21` to `web-33` (the published run) read the new one.
+address; runs `web-21` to `web-34` (`web-34` is the published run) read the new one.
 
 **PaNOSC's URL changed on 19 October 2026**, from `https://eosc.panosc.eu/` to
 `https://panosc.eu/panosc-eosc-node`, with `basic-check --update-nlp` (commit
@@ -289,13 +302,13 @@ address; runs `web-21` to `web-33` (the published run) read the new one.
 Both addresses redirect to `https://www.panosc.eu/panosc-eosc-node/`, which is
 the `final_url` of every run since the redirect appeared, so the change records
 the node's chosen address rather than a different page. Runs up to `web-28` were
-requested at the old address; `web-31` and `web-33` (the published run) at the new one.
+requested at the old address; `web-31`, `web-33` and `web-34` (the published run) at the new one.
 
 **EOSC Node Germany was added on 20 October 2026** (commit `1353fda`): id
 `eosc-de`, URL `https://eosc-node.de`, EOSC page
 `https://eosc.eu/building-the-eosc-federation/eosc-node-germany/`, and the
 approved name "EOSC Node | Germany" in both `checklist/approved-names.txt` and
-the scoped list. It was first collected in `web-33`.
+the scoped list. It was first collected in `web-33`, and again in `web-34`.
 
 ### Changing a node's URL
 
@@ -356,7 +369,7 @@ from the committed `nodes.yaml` and scored under the default checklist, so no
 other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-33
+uv run basic-check assess --run web-34
 ```
 
 The evidence records the depth it was collected at, so `assess` renders both
@@ -377,7 +390,7 @@ exactly, apart from the generation time, with 60 PASS, 1 FAIL, 59
 MANUAL_REVIEW and 10 ERROR for `web-24`; verified again on 6 October 2026 for
 `web-25`, with 68 PASS, 0 FAIL and 62 MANUAL_REVIEW, and for `web-26`, with 67
 PASS, 0 FAIL and 63 MANUAL_REVIEW; verified on 7 October 2026 for `web-27`,
-with 69 PASS, 0 FAIL and 61 MANUAL_REVIEW; on 9 October 2026 for `web-28`, with 78 PASS, 4 FAIL and 68 MANUAL_REVIEW at depth 2; on 19 October 2026 for `web-31`, with the same counts at depth 2; and on 20 October 2026 for `web-33`, with 81 PASS, 7 FAIL and 72 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
+with 69 PASS, 0 FAIL and 61 MANUAL_REVIEW; on 9 October 2026 for `web-28`, with 78 PASS, 4 FAIL and 68 MANUAL_REVIEW at depth 2; on 19 October 2026 for `web-31`, with the same counts at depth 2; on 20 October 2026 for `web-33`, with 81 PASS, 7 FAIL and 72 MANUAL_REVIEW; and on 27 October 2026 for `web-34`, with 85 PASS, 7 FAIL and 68 MANUAL_REVIEW. The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
 commit `53081f6`. Runs published before 28 September 2026 were also scored with the earlier name list, so pass it too: `git show e7da5a8:checklist/approved-names.txt > /tmp/names-before-2026-09-28.txt`, then add `--approved-names /tmp/names-before-2026-09-28.txt`. The full procedure, including how to publish the new node's
@@ -619,9 +632,9 @@ the list's own separator), Data Terra at its new address (`EOSC Node Data
 Terra`), EOSC Finland, whose page writes `EOSC Node Finland` (since `web-25`),
 and Poland, whose page writes `EOSC Node Poland` (from `web-23`; in `web-26`
 it rendered only its header and footer, so there was nothing to match). GÉANT
-matched (`EOSC Node GÉANT`) in `web-16` and `web-22`, when its page was
+matched (`EOSC Node GÉANT`) in `web-16`, `web-22` and `web-34`, when its page was
 served; in `web-23` to `web-33` it was not. In `web-28` (9 October 2026, fifteen
-names) and `web-31` (19 October 2026) the same eight match; in `web-33` (20 October 2026, sixteen names) the new node, Germany, writes "EOSC Node Germany" and matches too: nine. Neither new node does: Life Sciences Connect's
+names) and `web-31` (19 October 2026) the same eight match; in `web-33` (20 October 2026, sixteen names) the new node, Germany, writes "EOSC Node Germany" and matches too: nine. In `web-34` (27 October 2026) GÉANT's page was served and matches again: ten. Neither new node does: Life Sciences Connect's
 logo reads "EOSC Node | Life Sciences Connect" and the phrase `EOSC Node` occurs
 once in its text, but never followed by an approved name; EBRAINS-RI's page
 writes "EBRAINS RI" without `EOSC Node`.
@@ -1171,9 +1184,9 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-33` (20 October 2026) was collected
+**The published run is masked.** Run `web-34` (27 October 2026) was collected
 with masking in place, and a search of all its evidence and reports found no
-personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). `web-14`, which also reads services and policies pages, added many more, and `web-15`, `web-16`, `web-18`, `web-21`, `web-22`, `web-23`, `web-24`, `web-25`, `web-26`, `web-27`, `web-28`, `web-31` and `web-33` carry the same ones (BBMRI-ERIC's apart, in `web-24`, where its page was not fetched; `web-25` adds fifteen on BBMRI-ERIC's `dev3.` pages: its Director General on the legal notice, the seven members of its scientific and ethical advisory board, the Stakeholder Forum chair and the head of public affairs, and five finance, project and HR staff listed in capitals) (`web-21` adds one, a photo credit in an image description on Data Terra's new page; `web-22` adds two staff names in a news item on EUDAT's new page and one more GÉANT observer; `web-27` adds the people named in the captions of historical public-domain photos on Poland's page; `web-28` adds, on EBRAINS-RI's pages, its CEO, a section head, its press contact, three testimonial authors and two people named in news items and image captions, also in image file names and link addresses, and the coordinator named in a video title in Life Sciences Connect's screenshot; `web-31` adds the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy and a person interviewed in an EBRAINS-RI news item): about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO, Italy) and PaNOSC's pages. Two of those citation lists were already in the evidence published as `web-13` and were missed then; they remain in the git history. `web-16`, the first run with GÉANT's page served since 24 September, reached its executive team, governance and membership pages: about 120 names of officers, board members and General Assembly representatives, some cut short at the end of a link label ("Firstname Lastna…"). They were taken from the fixed patterns of those pages ("Representative:", "Substitute:", "… Chief … Officer", "… Member") and masked everywhere, truncated forms included. A deeper run reads more pages, and so needs this check more; look for citations ("Surname, I." lists before a year) as well as for people named in prose. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
+personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). `web-14`, which also reads services and policies pages, added many more, and `web-15`, `web-16`, `web-18`, `web-21`, `web-22`, `web-23`, `web-24`, `web-25`, `web-26`, `web-27`, `web-28`, `web-31`, `web-33` and `web-34` carry the same ones (BBMRI-ERIC's apart, in `web-24`, where its page was not fetched; `web-25` adds fifteen on BBMRI-ERIC's `dev3.` pages: its Director General on the legal notice, the seven members of its scientific and ethical advisory board, the Stakeholder Forum chair and the head of public affairs, and five finance, project and HR staff listed in capitals) (`web-21` adds one, a photo credit in an image description on Data Terra's new page; `web-22` adds two staff names in a news item on EUDAT's new page and one more GÉANT observer; `web-27` adds the people named in the captions of historical public-domain photos on Poland's page; `web-28` adds, on EBRAINS-RI's pages, its CEO, a section head, its press contact, three testimonial authors and two people named in news items and image captions, also in image file names and link addresses, and the coordinator named in a video title in Life Sciences Connect's screenshot; `web-31` adds the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy and a person interviewed in an EBRAINS-RI news item): about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO, Italy) and PaNOSC's pages. Two of those citation lists were already in the evidence published as `web-13` and were missed then; they remain in the git history. `web-16`, the first run with GÉANT's page served since 24 September, reached its executive team, governance and membership pages: about 120 names of officers, board members and General Assembly representatives, some cut short at the end of a link label ("Firstname Lastna…"). They were taken from the fixed patterns of those pages ("Representative:", "Substitute:", "… Chief … Officer", "… Member") and masked everywhere, truncated forms included. `web-34`, the next run with GÉANT's page served, reached the same pages again; the same patterns gave about 120 names (122 full names and one cut short in a control label), masked the same way. A deeper run reads more pages, and so needs this check more; look for citations ("Surname, I." lists before a year) as well as for people named in prose. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports
 offline. All 120 verdicts and the 44 / 6 / 70 tally were unchanged. A few character counts in the report dropped
 slightly, by the length of the masked text (BBMRI-ERIC's page from 7100 to

@@ -2,7 +2,7 @@
   "node_id": "eosc-de",
   "node_name": "EOSC Node Germany",
   "requested_url": "https://eosc-node.de",
-  "fetched_at": "2026-10-20T20:21:00+00:00",
+  "fetched_at": "2026-10-27T10:29:02+00:00",
   "final_url": "https://eosc-node.de/",
   "http_status": 200,
   "redirect_chain": [],
@@ -117,5 +117,5 @@
   "crawl_depth": 2,
   "children": [],
   "children_skipped": [],
-  "crawl_note": "depth 2: 7 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
+  "crawl_note": "depth 2: 7 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 52 of 60 used"
 }
