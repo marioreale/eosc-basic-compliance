@@ -6,6 +6,7 @@ and every cell should be clickable through to the evidence that produced it.
 
 from __future__ import annotations
 
+import base64
 import csv
 import html
 import json
@@ -65,6 +66,16 @@ def gloss_for(checklist: dict | None) -> dict:
         return {**COLUMN_GLOSS, **ITEM5_ON_NLP_GLOSS}
     return COLUMN_GLOSS
 
+# EOSC Federation logo at the top of the report, linking to the federation's page.
+# Inlined as a data URI so index.html stays a single self-contained file.
+LOGO = Path(__file__).parent / "assets" / "eosc-federation-logo.png"
+BRAND = (
+    '<a class="brand" href="https://eosc.eu/building-the-eosc-federation" '
+    'target="_blank" rel="noopener"><img src="data:image/png;base64,'
+    + base64.b64encode(LOGO.read_bytes()).decode()
+    + '" alt="EOSC Federation" width="690" height="114"></a>'
+)
+
 CSS = """
 :root{--bg:#fff;--fg:#1a1d21;--muted:#5b6470;--line:#e3e7ec;
 --pass:#0f7b3f;--pass-bg:#e7f5ec;--fail:#b3261e;--fail-bg:#fdeceb;
@@ -73,6 +84,8 @@ CSS = """
 body{margin:0;padding:2.5rem 2rem 4rem;background:var(--bg);color:var(--fg);
 font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
 .wrap{max-width:1500px;margin:0 auto}
+.brand{display:inline-block;margin:0 0 1.4rem}
+.brand img{display:block;height:48px;width:auto}
 h1{font-size:1.65rem;margin:0 0 .3rem;letter-spacing:-.01em}
 h2{font-size:1.15rem;margin:2.5rem 0 .75rem;padding-bottom:.35rem;border-bottom:1px solid var(--line)}
 .sub{color:var(--muted);margin:0 0 1.5rem;font-size:.92rem}
@@ -611,6 +624,7 @@ def render_html(run: dict, out: Path) -> Path:
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EOSC Node Landing Page compliance — checklist v{html.escape(run["checklist"]["checklist_version"])}</title>
 <style>{CSS}</style></head><body><div class="wrap">
+{BRAND}
 <h1>EOSC Node Landing Page compliance</h1>
 <p class="sub">Node Landing Page Verification Checklist v{html.escape(run["checklist"]["checklist_version"])}
 ({html.escape(run["checklist"]["checklist_date"])}) · {len(run["nodes"])} nodes ·
