@@ -10,6 +10,7 @@ import base64
 import csv
 import html
 import json
+import shutil
 from datetime import UTC, datetime
 from pathlib import Path
 
@@ -74,6 +75,13 @@ BRAND = (
     'target="_blank" rel="noopener"><img src="data:image/png;base64,'
     + base64.b64encode(LOGO.read_bytes()).decode()
     + '" alt="EOSC Federation" width="690" height="114"></a>'
+)
+# results.md cannot use a data URI (GitHub does not render them), so the logo is
+# copied next to the Markdown file on every write and referenced relatively.
+LOGO_MD_NAME = "eosc-federation-logo.png"
+BRAND_MD = (
+    '<p><a href="https://eosc.eu/building-the-eosc-federation">'
+    f'<img src="{LOGO_MD_NAME}" alt="EOSC Federation" height="48"></a></p>'
 )
 
 CSS = """
@@ -936,7 +944,10 @@ def render_markdown(run: dict, out: Path) -> Path:
     if alternative and len(alternative) == len(run["nodes"]):
         title = "Alternative URL check (not a federation run)"
 
+    shutil.copyfile(LOGO, out.parent / LOGO_MD_NAME)
     lines = [
+        BRAND_MD,
+        "",
         f"# {title} — checklist v{run['checklist']['checklist_version']}",
         "",
     ]

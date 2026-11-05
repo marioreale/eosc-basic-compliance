@@ -18,7 +18,7 @@ import pytest
 import typer
 from typer.testing import CliRunner
 
-from basic_check import cli
+from basic_check import cli, report
 
 # --- id derivation ------------------------------------------------------------
 
@@ -658,7 +658,9 @@ def test_a_node_run_says_in_every_report_that_the_url_is_not_the_configured_one(
         text = (out / name).read_text()
         assert "Alternative URL, not a federation run." in text, name
         assert alt in text and configured in text, name
-    assert (out / "results.md").read_text().startswith("# Alternative URL check (not a federation run)")
+    md_lines = (out / "results.md").read_text().splitlines()
+    assert md_lines[0] == report.BRAND_MD
+    assert md_lines[2].startswith("# Alternative URL check (not a federation run)")
 
     shown = CliRunner().invoke(cli.app, ["show", "egi", "--results", str(out)])
     assert shown.exit_code == 0 and f"configured: {configured}" in shown.output

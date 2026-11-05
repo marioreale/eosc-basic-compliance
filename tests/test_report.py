@@ -586,3 +586,23 @@ def test_column_glosses_follow_the_item5_rule_of_the_checklist():
     assert {k: v for k, v in strict.items() if k not in ("5a", "5b", "5c")} == {
         k: v for k, v in COLUMN_GLOSS.items() if k not in ("5a", "5b", "5c")
     }
+
+
+# --- the EOSC Federation logo heads results.md on every write ----------------
+
+
+def test_markdown_starts_with_the_federation_logo_and_ships_the_image(tmp_path):
+    md = render(run_dict([_node("Alpha", [("4", "PASS")])]), tmp_path)
+    assert md.splitlines()[0] == report.BRAND_MD
+    assert md.index(report.BRAND_MD) < md.index("# ")
+    logo = tmp_path / report.LOGO_MD_NAME
+    assert logo.read_bytes() == report.LOGO.read_bytes()
+
+
+def test_the_logo_survives_a_rewrite_even_if_it_was_deleted(tmp_path):
+    run = run_dict([_node("Alpha", [("4", "PASS")])])
+    render(run, tmp_path)
+    (tmp_path / report.LOGO_MD_NAME).unlink()
+    md = render(run, tmp_path)
+    assert md.startswith(report.BRAND_MD)
+    assert (tmp_path / report.LOGO_MD_NAME).exists()

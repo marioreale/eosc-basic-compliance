@@ -1,3 +1,5 @@
+<p><a href="https://eosc.eu/building-the-eosc-federation"><img src="eosc-federation-logo.png" alt="EOSC Federation" height="48"></a></p>
+
 # EOSC Node Landing Page compliance — checklist v3.2
 
 Run `web-35` · 2026-11-05T14:15:04+00:00 · 16 nodes · one page request per node plus 69 followed link(s), then 35 second-hop page(s) (depth 2).
