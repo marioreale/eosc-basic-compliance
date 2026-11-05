@@ -798,7 +798,33 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-### Current run: web-34 at depth 2, 27 October 2026 (unreviewed)
+### Current run: web-35 at depth 2, 5 November 2026 (unreviewed, degraded)
+
+From `results/results.json`, run `web-35`, collected on 5 November 2026 between 13:59 and 14:10 UTC by the GitHub workflow ([run 42040464373](https://github.com/marioreale/eosc-basic-compliance/actions/runs/42040464373), commit `fc050b3`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of sixteen names (SHA-256 `24b816b0…`, unchanged). It made 120 page requests: 16 landing pages, 69 direct links and 35 second-hop pages (budget: 37 of 60). Fifteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. EBRAINS-RI hit the per-node limit; the whole job took 12.5 minutes, of which about 11 were collection. Offline, `uv run basic-check assess --run web-35` reproduces it exactly, apart from the generation time (verified 5 November 2026, on the masked evidence).
+
+| Verdict | Depth 2 | Depth 1 |
+|---|---|---|
+| 🟢 PASS | 76 | 75 |
+| 🔴 FAIL | 6 | 6 |
+| 🟠 MANUAL_REVIEW | 68 | 69 |
+| 🟣 ERROR | 10 | 10 |
+| **Total** | **160** (16 nodes × 10 points) | **160** |
+
+**Published as is, on request.** Two nodes changed against `web-34`, both on the collection side; no cell of the other fourteen nodes changed, and the depths now differ only in Poland 6. For EBRAINS-RI and GÉANT, `web-34` (in the git history at `76eeac0`) remains the last complete evidence.
+
+| Node | Point | Change | Why |
+|---|---|---|---|
+| EBRAINS-RI | all ten | to `ERROR` | collection reached the per-node limit of 300 s after the landing page and seven linked pages (`TimeoutError`), as in the unpublished `web-32`; the partial evidence is kept but not assessed |
+| GÉANT | 1, 4, 5b, 6 | `PASS` to review | `https://geant.org/geant-eosc-node/` answered HTTP 403 and redirected to `?ki-cf-botcl=1`, Cloudflare's "Performing security verification" page, with 2 links; the tool does not turn bot protection into a verdict, and the page is too small to conclude absence |
+| GÉANT | 3, 5c | review (message changed) | no body to match, so "EOSC Node GÉANT" is no longer found: nine approved-name matches instead of ten |
+
+The six FAILs are Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative) and Germany 5b, 5c and 6. EBRAINS-RI 4, a FAIL in `web-34`, is `ERROR` in this run.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects nine matches (GÉANT removed); `test_update_row.py` still expects sixteen nodes. 462 cases pass on the published evidence.
+
+**Masking.** The names masked in `web-34` were carried over by aligning each placeholder with the new evidence, with the same placeholders, and the same two screenshot regions (CERN's quotation attribution, Life Sciences Connect's video title) were masked at unchanged positions. The new text of every node was then read for names not seen before; two were added: a professor named in an EBRAINS-RI news item and the surname of BBMRI-ERIC's head of public affairs, next to a masked contact line. GÉANT's governance names are not in this run, since its pages were not served. The changed screenshots (Data Terra, Poland, GÉANT) were checked by eye and show no personal name. Masking changed no verdict, message or evidence line. The privacy check found only role mailboxes and no phone-shaped text.
+
+### Previous run: web-34 at depth 2, 27 October 2026 (unreviewed)
 
 From `results/results.json`, run `web-34`, collected on 27 October 2026 between 10:20 and 10:29 UTC by the GitHub workflow ([run 40486581247](https://github.com/marioreale/eosc-basic-compliance/actions/runs/40486581247), commit `55657ac`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of sixteen names (SHA-256 `24b816b0…`). It made 145 page requests: 16 landing pages, 77 direct links and 52 second-hop pages (budget: 52 of 60). All sixteen landing pages returned HTTP 200. No node hit the per-node limit; the whole job took 17.5 minutes, of which about 8.5 were collection. Offline, `uv run basic-check assess --run web-34` reproduces it exactly, apart from the generation time (verified 27 October 2026, on the masked evidence).
 

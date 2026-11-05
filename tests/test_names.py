@@ -406,6 +406,8 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     In web-33 (20 October 2026) the new node, Germany, writes "EOSC Node
     Germany": nine. In web-34 (27 October 2026) GÉANT's page was served for
     the first time since web-22 and matches again ("EOSC Node GÉANT"): ten.
+    In web-35 (5 November 2026) GÉANT answered with the Cloudflare challenge
+    again (HTTP 403), so there was no body to match: nine.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -418,7 +420,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     }
     assert matched == {
         "bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-fi", "eosc-pl",
-        "eosc-de", "geant",
+        "eosc-de",
     }
 
 
