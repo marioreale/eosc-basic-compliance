@@ -17,7 +17,7 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-This edition was revised on 5 November 2026, when run `web-35` was published
+This edition was revised on 10 November 2026, when **EOSC Node Latvia** and **Scholarly Commons** were added (eighteen nodes configured; the published run is still `web-35`, with sixteen; the test count is 464). The edition of 5 November 2026 published run `web-35`
 as is, on request (all sixteen nodes; EBRAINS-RI stopped at the per-node time
 limit, GÉANT behind the Cloudflare challenge again). The edition of 27 October
 2026 published run `web-34` (GÉANT's page served again). The edition of 20 October 2026
@@ -29,6 +29,8 @@ offline that day. The
 previous edition, of 9 October 2026, added EBRAINS-RI and Life Sciences Connect
 with run `web-28`. The nodes were contacted only by the GitHub workflow; a hand check of Life
 Sciences Connect's pages, made from a browser, is reported where it is used.
+
+> **Two nodes added on 10 November 2026, not yet in the published run.** **EOSC Node Latvia** (id `eosc-lv`, landing page `https://eosc.lv/en/`, approved name "EOSC Node | Latvia", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-latvia/`) and **Scholarly Commons** (id `scholarly-commons`, landing page `https://eosc.scholarlycommons.eu/home`, approved name "EOSC Node | Scholarly Commons", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons/`) were added to `nodes.yaml`, the shipped default copy `src/basic_check/defaults/nodes.yaml` and both approved-name lists, so **eighteen** nodes are configured (approved-names list SHA-256 `b9f0fbec…`). Both eosc.eu pages were checked live on 10 November 2026 and carry those titles. The published run `web-35` predates them and covers sixteen. A trial collection of only the two nodes at `--depth 2`, into a scratch folder and not published, gave: **Scholarly Commons** HTTP 200, but only 169 characters rendered (a JavaScript application shell), so points 1 to 6 are review and point 7 passes; its name matches as written "EOSC Node · Scholarly Commons", and its eosc.eu page exists but was not found linked. **Latvia** HTTP 403 with Cloudflare's "Performing security verification" page, as GÉANT's, so points 1 to 6 are review and point 7 passes; nothing in that row describes the page itself. The two enter the published report at the next workflow run. Until then a bare `assess` on `results/` exits 2 and names them, as designed; to rebuild `web-35` exactly as published, use the node and name lists it was made with: `git show a556394:nodes.yaml > /tmp/nodes16.yaml; git show a556394:checklist/approved-names.txt > /tmp/names16.txt; uv run basic-check assess --run web-35 --nodes /tmp/nodes16.yaml --approved-names /tmp/names16.txt --results /tmp/copy` (after copying `results/` to `/tmp/copy`; verified 10 November 2026: identical apart from the generation time and the name-list path).
 
 > **Checklist v3.2 since 29 September 2026.** The default reference checklist
 > is now v3.2 of 28 September 2026 (`checklist/v3.2.yaml`). Only item 5 changed:
@@ -242,13 +244,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-462 tests still pass, while `collect` fails with Playwright's
+464 tests still pass, while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 462 passed
+uv run pytest -q                  # expect: 464 passed
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```
@@ -325,6 +327,8 @@ requested at the old address; `web-31`, `web-33`, `web-34` and `web-35` (the pub
 `https://eosc.eu/building-the-eosc-federation/eosc-node-germany/`, and the
 approved name "EOSC Node | Germany" in both `checklist/approved-names.txt` and
 the scoped list. It was first collected in `web-33`, and again in `web-34` and `web-35`.
+
+**EOSC Node Latvia and Scholarly Commons were added on 10 November 2026**, following the three steps of [Adding a node](#adding-a-node): id `eosc-lv`, URL `https://eosc.lv/en/`, EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-latvia/`, approved name "EOSC Node | Latvia"; and id `scholarly-commons`, URL `https://eosc.scholarlycommons.eu/home`, EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons/`, approved name "EOSC Node | Scholarly Commons". The names are the ones supplied for the two nodes, in the `EOSC Node | ` form of the official list; both eosc.eu pages carry them as their titles. Neither node is in the published run yet: a trial collection on 10 November 2026 found Latvia behind Cloudflare's bot check (HTTP 403) and Scholarly Commons rendering only a JavaScript shell (169 characters), see the note at the top of this guide.
 
 ### Changing a node's URL
 
@@ -1236,7 +1240,7 @@ changed since then is shown against evidence taken from the old one (section 3,
 ## 7. The test suite
 
 ```bash
-uv run pytest -q                    # 462 tests, offline, a few seconds
+uv run pytest -q                    # 464 tests, offline, a few seconds
 uv run pytest -v                    # names of every test
 uv run pytest tests/test_checks.py  # one file
 uv run pytest -k depth              # anything about depth

@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 462
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 464
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -37,6 +37,8 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
+> **Two nodes added on 10 November 2026, not yet in the published run.** **EOSC Node Latvia** (id `eosc-lv`, landing page `https://eosc.lv/en/`, approved name "EOSC Node | Latvia", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-latvia/`) and **Scholarly Commons** (id `scholarly-commons`, landing page `https://eosc.scholarlycommons.eu/home`, approved name "EOSC Node | Scholarly Commons", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons/`) were added to `nodes.yaml`, the shipped default copy `src/basic_check/defaults/nodes.yaml` and both approved-name lists, so **eighteen** nodes are configured (approved-names list SHA-256 `b9f0fbec…`). Both eosc.eu pages were checked live on 10 November 2026 and carry those titles. The published run `web-35` predates them and covers sixteen. A trial collection of only the two nodes at `--depth 2`, into a scratch folder and not published, gave: **Scholarly Commons** HTTP 200, but only 169 characters rendered (a JavaScript application shell), so points 1 to 6 are review and point 7 passes; its name matches as written "EOSC Node · Scholarly Commons", and its eosc.eu page exists but was not found linked. **Latvia** HTTP 403 with Cloudflare's "Performing security verification" page, as GÉANT's, so points 1 to 6 are review and point 7 passes; nothing in that row describes the page itself. The two enter the published report at the next workflow run. Until then a bare `assess` on `results/` exits 2 and names them, as designed; to rebuild `web-35` exactly as published, use the node and name lists it was made with: `git show a556394:nodes.yaml > /tmp/nodes16.yaml; git show a556394:checklist/approved-names.txt > /tmp/names16.txt; uv run basic-check assess --run web-35 --nodes /tmp/nodes16.yaml --approved-names /tmp/names16.txt --results /tmp/copy` (after copying `results/` to `/tmp/copy`; verified 10 November 2026: identical apart from the generation time and the name-list path).
+>
 > **The published report is run `web-35`, collected at `--depth 2`, and it has
 > not been reviewed yet.** It was collected on 5 November 2026 between 13:59 and
 > 14:10 UTC by the GitHub workflow ([run 42040464373](https://github.com/marioreale/eosc-basic-compliance/actions/runs/42040464373), commit `fc050b3`), from all
@@ -725,7 +727,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 462 tests, a few seconds, no network, no browser
+uv run pytest -q          # 464 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

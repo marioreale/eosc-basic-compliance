@@ -39,3 +39,5 @@ eosc-sk: EOSC Node | Slovakia
 ebrains-ri: EOSC Node | EBRAINS RI
 life-sciences-connect: EOSC Node | Life Sciences Connect
 eosc-de: EOSC Node | Germany
+eosc-lv: EOSC Node | Latvia
+scholarly-commons: EOSC Node | Scholarly Commons

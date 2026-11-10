@@ -6,7 +6,7 @@ a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
 clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
 **426 test cases, all passing in CI**. It was re-checked again on 29 September
-2026 for checklist v3.2: **453 test cases**, all passing (**462** since the per-node time limit of 20 October 2026, below). No node website was
+2026 for checklist v3.2: **453 test cases**, all passing (**462** since the per-node time limit of 20 October 2026, below; **464** since the two cases for the EOSC Federation logo on the results page, in `test_report.py`, of 5 November 2026 (commit `6b24380`). Adding EOSC Node Latvia and Scholarly Commons on 10 November 2026 added no case: the node guards check every entry inside one case). No node website was
 contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -71,7 +71,7 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**372 test functions, expanding to 462 executed cases** (twenty-three tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**374 test functions, expanding to 464 executed cases** (twenty-three tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
 The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 425 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
@@ -79,7 +79,7 @@ The absence of a browser requirement is verified rather than assumed: running th
 |---|---|---|
 | `test_names.py` | 64 | The approved-name matcher: separator tolerance, scoping to a node, anchoring, the committed default list and its provenance |
 | `test_checks.py` | 94 | The checklist rules per point — 1, 3, 4, 5b, 5c, 6, 7 — with both item 5 rules (v3.1 and v3.2) and policy pointers on linked pages, plus cross-point invariants, that a point 3 summary never contradicts its own evidence, and the point 6 and 5b/5c cases found by the 24 September review |
-| `test_report.py` | 37 | Matrix rendering, the column legend under each item 5 rule, the dual-depth tables, Markdown escaping, table-breaking input |
+| `test_report.py` | 39 | Matrix rendering, the column legend under each item 5 rule, the dual-depth tables, Markdown escaping, table-breaking input |
 | `test_crawl.py` | 39 | Link selection, the item 5 intermediate pages, host containment, whether following a link changes a verdict, the depth-2 budget, the depth-1 view |
 | `test_cli.py` | 113 | Argument handling, node-id derivation, output isolation, report scope, `--skip`, command wiring, and that every option has help text, shared options are described alike, and `--help` lists the node ids; that evidence from a URL other than the configured one is flagged in every report; `--node` with an alternative `--url`; the configuration listings (`--list-nodes`/`--list-nodes-ids`, `--list-nlps`, `--list-approved-names`, `--print-config`, `--show-node`) and `--update-nlp` |
 | `test_checklist.py` | 19 | Provenance of the checklist: source document hash for every committed revision, point-to-rule mapping, version/filename convention, that the default revision is one line that `--help` follows, and that each revision selects its own item 5 rule |
@@ -87,7 +87,7 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
 | `test_node_timeout.py` | 9 | The per-node time limit, with a fake browser: a node that finishes is untouched; a node hung in navigation or in reading the page is abandoned at the limit, keeps what it had gathered and reads `ERROR` on all ten points; a clean-up that hangs too does not become the hang; `0` disables the limit; in a three-node run the node after a hung one is still collected and the browser is restarted |
 | `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
-| **Total** | **462** | |
+| **Total** | **464** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -355,8 +355,10 @@ does not record (section 3 of [the analysis workflow](ANALYSIS-WORKFLOW.md)), or
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 11. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run covers all sixteen nodes, so no `--skip` is
-needed for the same scope.
+a copy first. The published run covers sixteen of the eighteen configured nodes: EOSC Node Latvia
+and Scholarly Commons, added on 10 November 2026, have no evidence in it yet, so `assess` on `results/`
+exits 2 until a run collects them. To rebuild the published run as it is, pass the node and name lists it
+was made with (`--nodes` and `--approved-names`, from commit `a556394`), not `--skip`.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
 
@@ -672,7 +674,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 462 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 464 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -757,7 +759,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 462 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 464 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -797,6 +799,8 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 ---
 
 ## 10. The published figures
+
+> **Two nodes added on 10 November 2026, not yet in the published run.** **EOSC Node Latvia** (id `eosc-lv`, landing page `https://eosc.lv/en/`, approved name "EOSC Node | Latvia", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-latvia/`) and **Scholarly Commons** (id `scholarly-commons`, landing page `https://eosc.scholarlycommons.eu/home`, approved name "EOSC Node | Scholarly Commons", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons/`) were added to `nodes.yaml`, the shipped default copy `src/basic_check/defaults/nodes.yaml` and both approved-name lists, so **eighteen** nodes are configured (approved-names list SHA-256 `b9f0fbec…`). Both eosc.eu pages were checked live on 10 November 2026 and carry those titles. The published run `web-35` predates them and covers sixteen. A trial collection of only the two nodes at `--depth 2`, into a scratch folder and not published, gave: **Scholarly Commons** HTTP 200, but only 169 characters rendered (a JavaScript application shell), so points 1 to 6 are review and point 7 passes; its name matches as written "EOSC Node · Scholarly Commons", and its eosc.eu page exists but was not found linked. **Latvia** HTTP 403 with Cloudflare's "Performing security verification" page, as GÉANT's, so points 1 to 6 are review and point 7 passes; nothing in that row describes the page itself. The two enter the published report at the next workflow run. Until then a bare `assess` on `results/` exits 2 and names them, as designed; to rebuild `web-35` exactly as published, use the node and name lists it was made with: `git show a556394:nodes.yaml > /tmp/nodes16.yaml; git show a556394:checklist/approved-names.txt > /tmp/names16.txt; uv run basic-check assess --run web-35 --nodes /tmp/nodes16.yaml --approved-names /tmp/names16.txt --results /tmp/copy` (after copying `results/` to `/tmp/copy`; verified 10 November 2026: identical apart from the generation time and the name-list path).
 
 ### Current run: web-35 at depth 2, 5 November 2026 (unreviewed, degraded)
 
@@ -1356,7 +1360,7 @@ Three caveats the tool states itself, and which matter more than the count:
 - The `<title>` element is not searched, only the page body. Several of the six "not found" results say so explicitly.
 - Most of those six pages *do* contain the phrase "EOSC Node"; what is absent is the full approved form.
 
-The current default list carries **sixteen** names, one per configured node, with a scoped variant that binds each name to its node id. The 21 September run predates that and used the nine-name version. The published run of 24 September used the thirteen-name list, and point 3 is `MANUAL_REVIEW` for all twelve of its nodes, for the same reason.
+The current default list carries **eighteen** names (since 10 November 2026, when Latvia and Scholarly Commons were added), one per configured node, with a scoped variant that binds each name to its node id. The 21 September run predates that and used the nine-name version. The published run of 24 September used the thirteen-name list, and point 3 is `MANUAL_REVIEW` for all twelve of its nodes, for the same reason.
 
 
 ## 11. Worked examples
@@ -1772,5 +1776,5 @@ the documents together, so the commit shows the whole change.
 - Figures in section 10, current run: `results/results.json`, run `web-13`, collected 28 September 2026 at depth 2 by [workflow run 36494907672](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36494907672) under checklist v3.2, not reviewed; the same verdicts as run `web-12` ([workflow run 36493197701](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36493197701)) and the same verdicts as run `web-11` ([workflow run 36431202625](https://github.com/marioreale/eosc-basic-compliance/actions/runs/36431202625)) re-scored offline against v3.2
 - Figures in section 10, 24 September run: `results/results.json` at commit `800d632`, run `live-2026-09-24-no-italy`, reviewed in `results/REVIEW-2026-09-24.md`
 - Figures in section 10, previous run: `results/results.json` at commit `47f08af` (unchanged since `014682c`) — evidence collected 21 September 2026 13:04–13:07 UTC, report regenerated 17:38 UTC
-- Approved node names: `checklist/approved-names.txt` (sixteen names, SHA-256 `24b816b0…`, since 20 October 2026; fifteen, `e23f7d1c…`, from 9 October 2026; thirteen names, `46af586b…`, from 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`
+- Approved node names: `checklist/approved-names.txt` (eighteen names, SHA-256 `b9f0fbec…`, since 10 November 2026; sixteen, `24b816b0…`, from 20 October 2026; fifteen, `e23f7d1c…`, from 9 October 2026; thirteen names, `46af586b…`, from 28 September 2026; `871161a5…` before, with the name of the node listed by mistake) and the node-scoped variant `checklist/approved-names-scoped.txt`
 - Test counts, line counts, runtimes, name-list results and command options in this document were measured on 25 September 2026 against a clean clone of the repository state it is committed with (the test count re-checked on 26 September at `4c5dea7`), not carried over from the previous edition
