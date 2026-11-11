@@ -132,7 +132,7 @@ jobs:
           print()
           print("| Verdict | Count |")
           print("|---|---|")
-          for verdict in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR"):
+          for verdict in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR", "FIREWALL"):
               if tally.get(verdict):
                   print(f"| {verdict} | {tally[verdict]} |")
           print()

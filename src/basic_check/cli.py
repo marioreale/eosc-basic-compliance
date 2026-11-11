@@ -1234,7 +1234,7 @@ def _do_assess(
             tally[res["verdict"]] = tally.get(res["verdict"], 0) + 1
 
     typer.echo(f"\nAssessed {len(run['nodes'])} node(s) against {len(checklist['points'])} points.")
-    for verdict in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR"):
+    for verdict in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR", "FIREWALL"):
         if tally.get(verdict):
             typer.echo(f"  {verdict:14} {tally[verdict]}")
     for kind, path in paths.items():

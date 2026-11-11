@@ -6,6 +6,9 @@ Verdict vocabulary, and why it is not just pass/fail:
     FAIL           the point is violated, and a script can show why
     MANUAL_REVIEW  a human must decide; evidence is attached to make that quick
     ERROR          the tool could not assess (page unreachable, etc.)
+    FIREWALL       the server answered, but with a bot-protection challenge page
+                   (Cloudflare's "Performing security verification") instead of
+                   the landing page: the site is up, and nothing can be asserted
 
 MANUAL_REVIEW is the important one. Several checklist points turn on words like
 "clearly state" or quantify over "all Node Exchange research resources offered by
@@ -44,6 +47,7 @@ PASS = "PASS"
 FAIL = "FAIL"
 MANUAL_REVIEW = "MANUAL_REVIEW"
 ERROR = "ERROR"
+FIREWALL = "FIREWALL"
 
 
 @dataclass
@@ -1403,6 +1407,56 @@ def check_7(ev: PageEvidence) -> Result:
     )
 
 
+# A challenge page served in place of the landing page. Both a challenge phrase
+# and a Cloudflare marker are required, so a page that merely mentions
+# Cloudflare, or a plain "403 Forbidden", is not taken for one.
+CHALLENGE_PATTERNS = [
+    r"(?i)performing security verification", r"(?i)^\s*just a moment",
+    r"(?i)attention required", r"(?i)checking (?:if the site connection is secure|your browser)",
+    r"(?i)verif(?:y|ies) (?:that )?you are (?:not a bot|human)",
+]
+CLOUDFLARE_MARKERS = [r"(?i)cloudflare", r"(?i)\bray id\b", r"(?i)[?&_](?:ki-)?cf[-_]"]
+CHALLENGE_STATUSES = (403, 429, 503)
+
+
+def firewall_challenge(ev: PageEvidence) -> list[str]:
+    """The signals showing that the landing page was a bot-protection challenge.
+
+    Empty when it was not. The signals are read from the same render as the
+    screenshot (status, title, text and final URL), so the verdict says what
+    the screenshot shows: the challenge, not the node's page.
+    """
+    if ev.error or ev.http_status not in CHALLENGE_STATUSES:
+        return []
+    challenge = _match(ev.title, CHALLENGE_PATTERNS) + _match(ev.full_text, CHALLENGE_PATTERNS)
+    marker = _match(ev.full_text + " " + ev.title + " " + ev.final_url, CLOUDFLARE_MARKERS)
+    if not (challenge and marker):
+        return []
+    return sorted(set(challenge)) + sorted(set(marker))
+
+
+def _firewall_results(ev: PageEvidence, signals: list[str], points: list[tuple[str, str]]) -> list[Result]:
+    message = (
+        f"HTTP {ev.http_status}: the site answered with a bot-protection challenge "
+        "(Cloudflare's \"Performing security verification\" page) instead of the landing "
+        "page. The server is up and responding, but the challenge is all this tool was "
+        "shown, so nothing can be asserted about this point, either way."
+    )
+    evidence = [
+        f"HTTP {ev.http_status}",
+        f"page title: {ev.title!r}",
+        f"challenge wording seen: {', '.join(signals[:5])}",
+        f"final URL: {ev.final_url}",
+        f"text captured: {len(ev.full_text)} characters (the challenge page)",
+    ]
+    action = (
+        "Open the URL in a normal browser and assess the page by hand; a later run may "
+        "be served the page."
+    )
+    return [Result(pid, title, FIREWALL, message, list(evidence), reviewer_action=action)
+            for pid, title in points]
+
+
 def run_all(
     ev: PageEvidence,
     approved_names: ApprovedNames | list[str] | None = None,
@@ -1415,8 +1469,13 @@ def run_all(
     (the information must be on the NLP and in the Catalogue), False for v3.0 and
     v3.1 (on the NLP or in the Catalogue). The CLI reads it from the checklist
     file (`item5_on_nlp`), so rebuilding an older run applies that run's rule.
+
+    When the landing page was a bot-protection challenge, every point is
+    FIREWALL: what the checks would read is the challenge page, so a verdict
+    on it (point 7 passed on its English, for one) would describe Cloudflare,
+    not the node.
     """
-    return [
+    results = [
         check_1(ev),
         check_1R(ev),
         check_2(ev),
@@ -1428,3 +1487,7 @@ def run_all(
         check_6(ev),
         check_7(ev),
     ]
+    signals = firewall_challenge(ev)
+    if signals:
+        return _firewall_results(ev, signals, [(r.point_id, r.title) for r in results])
+    return results

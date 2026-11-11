@@ -2,13 +2,13 @@
 
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-36` · 2026-11-11T08:33:09+00:00 · 18 nodes · one page request per node plus 71 followed link(s), then 44 second-hop page(s) (depth 2).
+Run `web-36` · 2026-11-11T18:43:01+00:00 · 18 nodes · one page request per node plus 71 followed link(s), then 44 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
 **Node names.** 18 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `b9f0fbeccf37…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
 
-🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed
+🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed · 🧱 **Firewall** — the site is up but served a bot-protection challenge (Cloudflare), so nothing can be asserted
 
 This run was collected at `--depth=2`, so it is reported twice: once using only the landing page and its direct links, and once using the second hop as well. Both tables come from the **same capture** — the shallow view is the deep evidence with the second-hop pages set aside, not a separate run — so any difference between them is the hop itself and not the passage of time.
 
@@ -16,7 +16,7 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-180 cells: 🟢 81 PASS · 🔴 7 FAIL · 🟠 92 review.
+180 cells: 🟢 79 PASS · 🔴 7 FAIL · 🟠 74 review · 🧱 20 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -29,21 +29,21 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| GÉANT | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟠 review | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EBRAINS-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟢 PASS | 🟠 review | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
-| EOSC Node Latvia | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
 | Scholarly Commons | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 
 ### Results at depth 2
 
 The same evidence plus 44 page(s) reached one further hop out, under a shared run budget.
 
-180 cells: 🟢 83 PASS · 🔴 7 FAIL · 🟠 90 review.
+180 cells: 🟢 81 PASS · 🔴 7 FAIL · 🟠 72 review · 🧱 20 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -56,14 +56,14 @@ The same evidence plus 44 page(s) reached one further hop out, under a shared ru
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| GÉANT | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EBRAINS-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
-| EOSC Node Latvia | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
 | Scholarly Commons | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
 
 ### What the second hop changed
@@ -621,44 +621,66 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 ### GÉANT
 <https://geant.org/geant-eosc-node/>
 
-- **1** 🟠 review — HTTP 403 to this tool's anonymous request, with no login affordance found. This is most likely bot protection reacting to an automated client rather than an access policy, so it is not treated as a failure: a browser may well be served normally. It could not be verified either way.
+- **1** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
-  - bot-protection wording seen: Cloudflare, Just a moment, Ray ID
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
   - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser. If it loads, this point passes and the block was bot protection. If it demands a login, confirm that the login is EOSC AAI compliant, as verified under requirement [P.2] of the Production 1.0 Checklist.
-- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 1 distinct external host(s) linked from the landing page
-  - www.cloudflare.com (Cloudflare, Privacy)
-  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
-- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "geant.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for geant.org to respond..."
-  - no organisation-like names matched by pattern
-  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
-  - 1 image/SVG element(s) examined, none referencing EOSC
-  - mentions of EOSC in page text: 0
-  - NONE of the 18 approved name(s) for this node appear in the page body — note the <title> is not searched
-  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
-- **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) examined, none pointing to eosc.eu
-  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-geant/ but is not linked from here
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 2 outbound link(s) on the landing page
-  - main text length: 241 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
-- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) on the landing page examined, none matching an Acceptable Use Policy
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for an Acceptable Use Policy linked for each resource the page presents.
-- **5c** 🟠 review — No pointer to a User Access Policy was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) on the landing page examined, none matching a User Access Policy
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a User Access Policy linked for each resource the page presents.
-- **6** 🟠 review — No contact route was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) examined
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
-- **7** 🟢 PASS — The main content is English and the page declares English.
-  - declared lang attribute: "en-us"
-  - detected language: en (confidence 1.0)
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **1R** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **2** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **3** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **4** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **5a** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **5b** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **5c** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **6** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **7** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
+  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
 
 ### EOSC Node Poland
 <https://eosc.pl/>
@@ -932,44 +954,66 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 ### EOSC Node Latvia
 <https://eosc.lv/en/>
 
-- **1** 🟠 review — HTTP 403 to this tool's anonymous request, with no login affordance found. This is most likely bot protection reacting to an automated client rather than an access policy, so it is not treated as a failure: a browser may well be served normally. It could not be verified either way.
+- **1** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
-  - bot-protection wording seen: Cloudflare, Just a moment, Ray ID
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
-  - *Reviewer action:* Open the URL in a normal browser. If it loads, this point passes and the block was bot protection. If it demands a login, confirm that the login is EOSC AAI compliant, as verified under requirement [P.2] of the Production 1.0 Checklist.
-- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 1 distinct external host(s) linked from the landing page
-  - www.cloudflare.com (Cloudflare, Privacy)
-  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
-- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond..."
-  - no organisation-like names matched by pattern
-  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
-  - EOSC-referencing image asset(s): 1
-  - img: Icon for eosc.lv
-  - NONE of the 18 approved name(s) for this node appear in the page body — note the <title> is not searched
-  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
-- **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) examined, none pointing to eosc.eu
-  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-latvia/ but is not linked from here
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
-- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 2 outbound link(s) on the landing page
-  - main text length: 237 characters
-  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
-- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) on the landing page examined, none matching an Acceptable Use Policy
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for an Acceptable Use Policy linked for each resource the page presents.
-- **5c** 🟠 review — No pointer to a User Access Policy was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) on the landing page examined, none matching a User Access Policy
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a User Access Policy linked for each resource the page presents.
-- **6** 🟠 review — No contact route was found, but the page yielded too little to conclude absence: only 5 DOM element(s) captured (2 link(s), 1 image(s), 2 control(s)) — too little structure to treat the document as delivered
-  - 2 link(s) examined
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
-- **7** 🟢 PASS — The main content is English and the page declares English.
-  - declared lang attribute: "en-us"
-  - detected language: en (confidence 1.0)
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **1R** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **2** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **3** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **4** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **5a** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **5b** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **5c** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **6** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **7** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+  - HTTP 403
+  - page title: 'Just a moment...'
+  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
+  - final URL: https://eosc.lv/en/
+  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
 
 ### Scholarly Commons
 <https://eosc.scholarlycommons.eu/home>

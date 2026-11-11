@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 464
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 473
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -120,7 +120,7 @@ The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-180 cells at depth 2: 🟢 83 PASS · 🔴 7 FAIL · 🟠 90 review · 0 ERROR.
+180 cells at depth 2: 🟢 81 PASS · 🔴 7 FAIL · 🟠 72 review · 🧱 20 Firewall · 0 ERROR (as collected, before the `FIREWALL` outcome existed: 83 / 7 / 90 / 0; Latvia and GÉANT are now `FIREWALL` on all ten points).
 
 - **EBRAINS-RI** completed again in `web-36`, with the same verdicts as in
   `web-34`; in `web-35` it was `ERROR` on all ten points, because its collection
@@ -344,6 +344,23 @@ a genuinely missing link still FAILs — the gate is not a blanket excuse
 | `FAIL` | Violated, and the tool can show why. |
 | `review` | A human must decide. Evidence is attached. |
 | `ERROR` | The page could not be assessed at all. |
+| 🧱 `FIREWALL` | The site answered, but with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The node's server is up and responding, but nothing can be asserted about any point, so all ten are `FIREWALL`. Drawn as a solid red badge in the HTML report and as 🧱 **Firewall** in Markdown, distinct from `FAIL` and `ERROR`. |
+
+**When a result is `FIREWALL`.** Since 11 November 2026, when the landing page
+answers `HTTP 403`, `429` or `503` with a challenge phrase ("Performing security
+verification", "Just a moment…", "Attention Required", "verifies you are not a
+bot") **and** a Cloudflare marker (the word Cloudflare, a "Ray ID", or a
+`cf-`/`cf_` query parameter such as GÉANT's `?ki-cf-botcl=1`), every point of
+that node is `FIREWALL`. These signals come from the same render as the
+screenshot, so the verdict says what the screenshot shows. Before, those nodes
+were `review` on points 1 to 6 and passed point 7 on the challenge page's own
+English, a PASS that described Cloudflare, not the node; that PASS is gone. A
+plain `403 Forbidden`, a served page that only mentions Cloudflare, or a fetch
+error are not `FIREWALL` (`tests/test_firewall.py`). In run `web-36` this
+applies to **EOSC Node Latvia** and **GÉANT**; rescored with this rule, `web-36`
+is 81 PASS, 7 FAIL, 72 review and 20 FIREWALL at depth 2 (79 / 7 / 74 / 20 at
+depth 1), the same cells as before for the other sixteen nodes. Earlier runs in
+the git history in which GÉANT was behind the challenge rescore the same way.
 
 ## Usage
 
@@ -756,7 +773,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 464 tests, a few seconds, no network, no browser
+uv run pytest -q          # 473 tests, a few seconds, no network, no browser
 uv run ruff check src tests
 ```
 

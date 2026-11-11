@@ -21,6 +21,7 @@ VERDICT_STYLE = {
     "FAIL": ("fail", "FAIL", "✗"),
     "MANUAL_REVIEW": ("manual", "REVIEW", "?"),
     "ERROR": ("error", "ERROR", "!"),
+    "FIREWALL": ("firewall", "🧱 FIREWALL", "▦"),
 }
 
 # GitHub renders Markdown through a sanitiser that strips style attributes and
@@ -33,7 +34,11 @@ VERDICT_MD = {
     "FAIL": "🔴 **FAIL**",
     "MANUAL_REVIEW": "🟠 review",
     "ERROR": "🟣 ERROR",
+    "FIREWALL": "🧱 **Firewall**",
 }
+
+# The order verdicts are counted and listed in, everywhere.
+VERDICT_ORDER = ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR", "FIREWALL")
 
 # One line per checklist point, for readers who will not open the checklist PDF.
 # This is what the matrix columns mean in practice, as opposed to the formal
@@ -87,7 +92,8 @@ BRAND_MD = (
 CSS = """
 :root{--bg:#fff;--fg:#1a1d21;--muted:#5b6470;--line:#e3e7ec;
 --pass:#0f7b3f;--pass-bg:#e7f5ec;--fail:#b3261e;--fail-bg:#fdeceb;
---manual:#8a5a00;--manual-bg:#fdf3e0;--error:#5b21b6;--error-bg:#f3ecfd;}
+--manual:#8a5a00;--manual-bg:#fdf3e0;--error:#5b21b6;--error-bg:#f3ecfd;
+--firewall:#fff;--firewall-bg:#c62828;}
 *{box-sizing:border-box}
 body{margin:0;padding:2.5rem 2rem 4rem;background:var(--bg);color:var(--fg);
 font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
@@ -119,6 +125,7 @@ font-size:.72rem;font-weight:700;letter-spacing:.02em}
 .v.fail{color:var(--fail);background:var(--fail-bg)}
 .v.manual{color:var(--manual);background:var(--manual-bg)}
 .v.error{color:var(--error);background:var(--error-bg)}
+.v.firewall{color:var(--firewall);background:var(--firewall-bg);white-space:nowrap}
 .legend{margin:.9rem 0 0;font-size:.84rem;color:var(--muted)}
 .adhoc{border:1px solid #d9b8e8;background:#f9f2fd;border-left:4px solid #8e44ad;
 padding:.85rem 1rem;border-radius:0 5px 5px 0;margin:0 0 1rem;font-size:.92rem;color:#4a2560}
@@ -441,13 +448,13 @@ def render_html(run: dict, out: Path) -> Path:
         chips1 = "".join(
             f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
             f"<b>{d1.get(v, 0)}</b></span>"
-            for v in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR")
+            for v in VERDICT_ORDER
             if d1.get(v)
         )
         chips2 = "".join(
             f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
             f"<b>{d2.get(v, 0)}</b></span>"
-            for v in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR")
+            for v in VERDICT_ORDER
             if d2.get(v)
         )
         if changes:
@@ -543,7 +550,7 @@ def render_html(run: dict, out: Path) -> Path:
     chips = "".join(
         f'<span class="chip"><span class="v {VERDICT_STYLE[v][0]}">{VERDICT_STYLE[v][1]}</span> '
         f"<b>{tally.get(v, 0)}</b></span>"
-        for v in ("PASS", "FAIL", "MANUAL_REVIEW", "ERROR")
+        for v in VERDICT_ORDER
         if tally.get(v)
     )
 
@@ -625,6 +632,11 @@ def render_html(run: dict, out: Path) -> Path:
                 "quantifies over more than this tool collects. Evidence is attached.",
             ),
             ("ERROR", "The tool could not assess the page at all."),
+            (
+                "FIREWALL",
+                "The site answered with a bot-protection challenge (Cloudflare) instead of "
+                "the landing page: it is up and responding, but nothing can be asserted.",
+            ),
         ]
     )
 
@@ -892,6 +904,7 @@ def _tally_line(counts: dict[str, int]) -> str:
         f"{total} cells: 🟢 {counts.get('PASS', 0)} PASS · "
         f"🔴 {counts.get('FAIL', 0)} FAIL · 🟠 {counts.get('MANUAL_REVIEW', 0)} review"
         + (f" · 🟣 {counts['ERROR']} error" if counts.get("ERROR") else "")
+        + (f" · 🧱 {counts['FIREWALL']} firewall" if counts.get("FIREWALL") else "")
     )
 
 
@@ -978,7 +991,9 @@ def render_markdown(run: dict, out: Path) -> Path:
             else []
         ),
         "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
-        "🟠 review — a human must decide · 🟣 ERROR — could not be assessed",
+        "🟠 review — a human must decide · 🟣 ERROR — could not be assessed · "
+        "🧱 **Firewall** — the site is up but served a bot-protection challenge (Cloudflare), "
+        "so nothing can be asserted",
         "",
     ]
 
