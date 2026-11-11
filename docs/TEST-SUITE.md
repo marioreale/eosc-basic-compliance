@@ -355,10 +355,10 @@ does not record (section 3 of [the analysis workflow](ANALYSIS-WORKFLOW.md)), or
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 11. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run covers sixteen of the eighteen configured nodes: EOSC Node Latvia
-and Scholarly Commons, added on 10 November 2026, have no evidence in it yet, so `assess` on `results/`
-exits 2 until a run collects them. To rebuild the published run as it is, pass the node and name lists it
-was made with (`--nodes` and `--approved-names`, from commit `a556394`), not `--skip`.
+a copy first. The published run, `web-36`, covers all eighteen configured nodes, so `assess` on
+`results/` needs no `--skip`. To rebuild the earlier `web-35`, which predates EOSC
+Node Latvia and Scholarly Commons, pass the node and name lists it was made with
+(`--nodes` and `--approved-names`, from commit `a556394`), not `--skip`.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
 
@@ -800,9 +800,36 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-> **Two nodes added on 10 November 2026, not yet in the published run.** **EOSC Node Latvia** (id `eosc-lv`, landing page `https://eosc.lv/en/`, approved name "EOSC Node | Latvia", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-latvia/`) and **Scholarly Commons** (id `scholarly-commons`, landing page `https://eosc.scholarlycommons.eu/home`, approved name "EOSC Node | Scholarly Commons", EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons/`) were added to `nodes.yaml`, the shipped default copy `src/basic_check/defaults/nodes.yaml` and both approved-name lists, so **eighteen** nodes are configured (approved-names list SHA-256 `b9f0fbec…`). Both eosc.eu pages were checked live on 10 November 2026 and carry those titles. The published run `web-35` predates them and covers sixteen. A trial collection of only the two nodes at `--depth 2`, into a scratch folder and not published, gave: **Scholarly Commons** HTTP 200, but only 169 characters rendered (a JavaScript application shell), so points 1 to 6 are review and point 7 passes; its name matches as written "EOSC Node · Scholarly Commons", and its eosc.eu page exists but was not found linked. **Latvia** HTTP 403 with Cloudflare's "Performing security verification" page, as GÉANT's, so points 1 to 6 are review and point 7 passes; nothing in that row describes the page itself. The two enter the published report at the next workflow run. Until then a bare `assess` on `results/` exits 2 and names them, as designed; to rebuild `web-35` exactly as published, use the node and name lists it was made with: `git show a556394:nodes.yaml > /tmp/nodes16.yaml; git show a556394:checklist/approved-names.txt > /tmp/names16.txt; uv run basic-check assess --run web-35 --nodes /tmp/nodes16.yaml --approved-names /tmp/names16.txt --results /tmp/copy` (after copying `results/` to `/tmp/copy`; verified 10 November 2026: identical apart from the generation time and the name-list path).
+> **Run `web-36` (11 November 2026) is the first with all eighteen nodes.** EOSC Node Latvia (id `eosc-lv`, `https://eosc.lv/en/`) and Scholarly Commons (id `scholarly-commons`, `https://eosc.scholarlycommons.eu/home`), added on 10 November 2026 to `nodes.yaml`, the shipped default copy and both approved-name lists (SHA-256 `b9f0fbec…`), are in the published report. `web-35`, with sixteen nodes, is in the git history at `7b215f2`; to rebuild it, pass the node and name lists of commit `a556394` with `--nodes` and `--approved-names`.
 
-### Current run: web-35 at depth 2, 5 November 2026 (unreviewed, degraded)
+### Current run: web-36 at depth 2, 11 November 2026 (unreviewed)
+
+From `results/results.json`, run `web-36`, collected on 11 November 2026 between 08:24 and 08:32 UTC by the GitHub workflow ([run 42986689788](https://github.com/marioreale/eosc-basic-compliance/actions/runs/42986689788), commit `7b215f2`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of eighteen names (SHA-256 `b9f0fbec…`). It made 133 page requests: 18 landing pages, 71 direct links and 44 second-hop pages (budget: 44 of 60). Sixteen landing pages returned HTTP 200; GÉANT's and Latvia's returned HTTP 403 with the Cloudflare challenge. Every node finished within its time limit; the whole job took about 8.5 minutes, of which about 7.5 were collection. Offline, `uv run basic-check assess --run web-36` reproduces it exactly, apart from the generation time (verified 11 November 2026, on the masked evidence).
+
+| Verdict | Depth 2 | Depth 1 |
+|---|---|---|
+| 🟢 PASS | 83 | 81 |
+| 🔴 FAIL | 7 | 7 |
+| 🟠 MANUAL_REVIEW | 90 | 92 |
+| 🟣 ERROR | 0 | 0 |
+| **Total** | **180** (18 nodes × 10 points) | **180** |
+
+**What changed against `web-35`.** Two nodes are new, and one completed again; no cell of the other fifteen nodes changed, and apart from GÉANT none changed against `web-34`. The depths differ in Poland 6 and EBRAINS-RI 6 (PASS at depth 2, review at depth 1), as in `web-34`.
+
+| Node | Point | Change | Why |
+|---|---|---|---|
+| EBRAINS-RI | all ten | from `ERROR` to its `web-34` verdicts (1, 5b, 5c, 6, 7 PASS; 4 FAIL; 1R, 2, 3, 5a review) | collection finished within the per-node limit (126 links on the landing page, 7 followed, 9 more at the second hop) |
+| EOSC Node Latvia | all ten (new) | 7 PASS, 1 to 6 review | `https://eosc.lv/en/` answered HTTP 403 with Cloudflare's "Performing security verification" page (5 DOM elements, 2 links); the tool does not turn bot protection into a verdict |
+| Scholarly Commons | all ten (new) | 7 PASS, 1 to 6 review | HTTP 200, but only 169 characters of text rendered, a JavaScript application shell; its two followed pages ("Terms & Policies", 169 characters, and "Services" at `/discover`, 587) settled no point; the approved name matches, written "EOSC Node · Scholarly Commons" |
+| GÉANT | — | unchanged | still HTTP 403 (Cloudflare), as in `web-35`; `web-34` remains its last served evidence |
+
+The seven FAILs are EBRAINS-RI 4, Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative) and Germany 5b, 5c and 6.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` now expects ten matches (Scholarly Commons added); `test_update_row.py` now expects eighteen nodes. 464 cases pass on the published evidence.
+
+**Masking.** The names masked in `web-34` and `web-35` were carried over by aligning each placeholder with the new evidence (130 replacements of 49 distinct strings), and the same two screenshot regions (CERN's quotation attribution, Life Sciences Connect's video title) were masked at unchanged positions. EBRAINS-RI's evidence was compared with its `web-34` evidence, and the new text of every node was read for names not seen before; none was found. The new screenshots (Latvia's Cloudflare page, Scholarly Commons) and the changed one of Data Terra were checked by eye and show no personal name. Masking changed no verdict or message.
+
+### Previous run: web-35 at depth 2, 5 November 2026 (unreviewed, degraded)
 
 From `results/results.json`, run `web-35`, collected on 5 November 2026 between 13:59 and 14:10 UTC by the GitHub workflow ([run 42040464373](https://github.com/marioreale/eosc-basic-compliance/actions/runs/42040464373), commit `fc050b3`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of sixteen names (SHA-256 `24b816b0…`, unchanged). It made 120 page requests: 16 landing pages, 69 direct links and 35 second-hop pages (budget: 37 of 60). Fifteen landing pages returned HTTP 200; GÉANT's returned HTTP 403 with the Cloudflare challenge. EBRAINS-RI hit the per-node limit; the whole job took 12.5 minutes, of which about 11 were collection. Offline, `uv run basic-check assess --run web-35` reproduces it exactly, apart from the generation time (verified 5 November 2026, on the masked evidence).
 

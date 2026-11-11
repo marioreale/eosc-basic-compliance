@@ -109,10 +109,10 @@ does not record (section 3), or if you want a fresh
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 8. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run covers sixteen of the eighteen configured nodes: EOSC Node Latvia
-and Scholarly Commons, added on 10 November 2026, have no evidence in it yet, so `assess` on `results/`
-exits 2 until a run collects them. To rebuild the published run as it is, pass the node and name lists it
-was made with (`--nodes` and `--approved-names`, from commit `a556394`), not `--skip`.
+a copy first. The published run, `web-36`, covers all eighteen configured nodes, so `assess` on
+`results/` needs no `--skip`. To rebuild the earlier `web-35`, which predates EOSC
+Node Latvia and Scholarly Commons, pass the node and name lists it was made with
+(`--nodes` and `--approved-names`, from commit `a556394`), not `--skip`.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
 

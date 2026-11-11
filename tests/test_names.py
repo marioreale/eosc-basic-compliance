@@ -407,7 +407,11 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     Germany": nine. In web-34 (27 October 2026) GÉANT's page was served for
     the first time since web-22 and matches again ("EOSC Node GÉANT"): ten.
     In web-35 (5 November 2026) GÉANT answered with the Cloudflare challenge
-    again (HTTP 403), so there was no body to match: nine.
+    again (HTTP 403), so there was no body to match: nine. In web-36
+    (11 November 2026) GÉANT is still behind the challenge, and the new node
+    Scholarly Commons matches in the 169 characters its page rendered ("EOSC
+    Node · Scholarly Commons"): ten. The other new node, Latvia, answered with
+    the Cloudflare challenge (HTTP 403).
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -420,7 +424,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     }
     assert matched == {
         "bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-fi", "eosc-pl",
-        "eosc-de",
+        "eosc-de", "scholarly-commons",
     }
 
 

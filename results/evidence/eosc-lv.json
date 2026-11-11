@@ -1,0 +1,60 @@
+{
+  "node_id": "eosc-lv",
+  "node_name": "EOSC Node Latvia",
+  "requested_url": "https://eosc.lv/en/",
+  "fetched_at": "2026-11-11T08:31:50+00:00",
+  "final_url": "https://eosc.lv/en/",
+  "http_status": 403,
+  "redirect_chain": [
+    "https://eosc.lv/en/"
+  ],
+  "robots_allowed": true,
+  "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
+  "title": "Just a moment...",
+  "lang_attr": "en-us",
+  "main_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond",
+  "full_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond Ray ID: a58bf1662a10a66d Performance and Security by Cloudflare Privacy",
+  "links": [
+    {
+      "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
+      "text": "Cloudflare",
+      "visible": true
+    },
+    {
+      "href": "https://www.cloudflare.com/privacypolicy/",
+      "text": "Privacy",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://eosc.lv/favicon.ico",
+      "alt": "Icon for eosc.lv",
+      "aria_label": "",
+      "title": "",
+      "css_class": "_be458453f1f558696be19372 _6463ec7ba7378635329f611a",
+      "inline_svg": false
+    }
+  ],
+  "controls": [
+    {
+      "text": "Cloudflare",
+      "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy",
+      "href": "https://www.cloudflare.com/privacypolicy/",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "",
+  "error": "",
+  "screenshot": "eosc-lv.png",
+  "crawl_depth": 2,
+  "children": [],
+  "children_skipped": [],
+  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
+}
