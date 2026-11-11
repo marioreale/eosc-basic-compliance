@@ -2,11 +2,11 @@
   "node_id": "life-sciences-connect",
   "node_name": "Life Sciences Connect",
   "requested_url": "https://eosc-lifesciences-connect.eu/home",
-  "fetched_at": "2026-11-11T08:31:34+00:00",
+  "fetched_at": "2026-11-11T19:25:37+00:00",
   "final_url": "https://eosc-lifesciences-connect.eu/home",
   "http_status": 200,
   "redirect_chain": [
-    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=33d836df-038a-473f-a355-b6be18e78f0f&response_mode=fragment&response_type=code&scope=openid&nonce=f2a1e791-1b3b-43f5-841d-faa34503c285&prompt=none",
+    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=c763d4a9-1cdd-4e8b-97a3-30b2270e3441&response_mode=fragment&response_type=code&scope=openid&nonce=95c99026-9668-452c-8908-316a78facab0&prompt=none",
     "https://eosc-lifesciences-connect.eu/static/js/main.e859dd68.js",
     "https://eosc-lifesciences-connect.eu/env-config.js"
   ],

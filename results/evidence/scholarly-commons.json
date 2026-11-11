@@ -2,20 +2,25 @@
   "node_id": "scholarly-commons",
   "node_name": "Scholarly Commons",
   "requested_url": "https://eosc.scholarlycommons.eu/home",
-  "fetched_at": "2026-11-11T08:31:56+00:00",
+  "fetched_at": "2026-11-11T19:26:01+00:00",
   "final_url": "https://eosc.scholarlycommons.eu/home",
   "http_status": 200,
   "redirect_chain": [],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
-  "title": "EOSC Scholarly Commons Node",
+  "title": "Home | EOSC Scholarly Commons Node",
   "lang_attr": "en",
-  "main_text": "Services How to start Use Cases News Training Terms & Policies Join EOSC Node · Scholarly Commons — Data, Computing & Digital Terms & Policies Contact Provider dashboard",
-  "full_text": "Services How to start Use Cases News Training Terms & Policies Join EOSC Node · Scholarly Commons — Data, Computing & Digital Terms & Policies Contact Provider dashboard",
+  "main_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+  "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
   "links": [
     {
       "href": "https://eosc.scholarlycommons.eu/home",
       "text": "EOSC Node Scholarly Commons",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "text": "About",
       "visible": true
     },
     {
@@ -51,6 +56,101 @@
     {
       "href": "https://eosc.scholarlycommons.eu/join",
       "text": "Join",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "text": "About",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/how-to-start",
+      "text": "How to start",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/use-cases",
+      "text": "Use Cases",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/news",
+      "text": "News",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/training",
+      "text": "Training",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "text": "Terms & Policies",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/join",
+      "text": "Join",
+      "visible": true
+    },
+    {
+      "href": "https://www.openaire.eu/",
+      "text": "OpenAIRE",
+      "visible": true
+    },
+    {
+      "href": "https://www.operas-eu.org/",
+      "text": "OPERAS",
+      "visible": true
+    },
+    {
+      "href": "https://www.openaire.eu/helpdesk",
+      "text": "Contact the Node team",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "text": "About",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/how-to-start",
+      "text": "How to access",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/join",
+      "text": "Join as a provider",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+      "text": "Node profile on eosc.eu",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "text": "All EOSC Nodes",
+      "visible": true
+    },
+    {
+      "href": "https://user-forum.eosc.eu/",
+      "text": "EOSC Federation User Forum",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "text": "Terms and policies",
       "visible": true
     },
     {
@@ -65,11 +165,79 @@
       "alt": "EOSC Node Scholarly Commons",
       "aria_label": "",
       "title": "",
-      "css_class": "sc-top-menu__logo",
+      "css_class": "uk-responsive-width sc-top-menu__logo",
       "inline_svg": false
+    },
+    {
+      "src": "https://eosc.scholarlycommons.eu/assets/images/openaire-logo.png",
+      "alt": "OpenAIRE",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.scholarlycommons.eu/assets/images/operas-logo.png",
+      "alt": "OPERAS",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
     }
   ],
   "controls": [
+    {
+      "text": "Open menu",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Close menu",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Reject all",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Accept all",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Save my choices",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "About",
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "tag": "a",
+      "visible": true
+    },
     {
       "text": "Services",
       "href": "https://eosc.scholarlycommons.eu/discover",
@@ -113,35 +281,154 @@
       "visible": true
     },
     {
+      "text": "About",
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "How to start",
+      "href": "https://eosc.scholarlycommons.eu/how-to-start",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Use Cases",
+      "href": "https://eosc.scholarlycommons.eu/use-cases",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "News",
+      "href": "https://eosc.scholarlycommons.eu/news",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Training",
+      "href": "https://eosc.scholarlycommons.eu/training",
+      "tag": "a",
+      "visible": true
+    },
+    {
       "text": "Terms & Policies",
       "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
       "tag": "a",
       "visible": true
+    },
+    {
+      "text": "Join",
+      "href": "https://eosc.scholarlycommons.eu/join",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact the Node team",
+      "href": "https://www.openaire.eu/helpdesk",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "About",
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "How to access",
+      "href": "https://eosc.scholarlycommons.eu/how-to-start",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Join as a provider",
+      "href": "https://eosc.scholarlycommons.eu/join",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Node profile on eosc.eu",
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "All EOSC Nodes",
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Federation User Forum",
+      "href": "https://user-forum.eosc.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Terms and policies",
+      "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cookie settings",
+      "href": "https://eosc.scholarlycommons.eu/home#",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Terms & Policies",
+      "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Cookie settings",
+      "href": "https://eosc.scholarlycommons.eu/home#",
+      "tag": "a",
+      "visible": true
     }
   ],
-  "meta_description": "",
+  "meta_description": "Services from trusted providers for the scholarly commons, for institutions, funders, research teams and individual researchers.",
   "error": "",
   "screenshot": "scholarly-commons.png",
   "crawl_depth": 2,
   "children": [
     {
-      "url": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "url": "https://eosc.scholarlycommons.eu/about",
       "selected_for": [
-        "5p"
+        "2"
       ],
-      "link_text": "Terms & Policies",
+      "link_text": "About",
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://eosc.scholarlycommons.eu/terms-and-policies",
-      "title": "EOSC Scholarly Commons Node",
+      "final_url": "https://eosc.scholarlycommons.eu/about",
+      "title": "About | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "Services How to start Use Cases News Training Terms & Policies Join EOSC Node · Scholarly Commons — Data, Computing & Digital Terms & Policies Contact Provider dashboard",
-      "full_text": "Services How to start Use Cases News Training Terms & Policies Join EOSC Node · Scholarly Commons — Data, Computing & Digital Terms & Policies Contact Provider dashboard",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
           "text": "EOSC Node Scholarly Commons",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
           "visible": true
         },
         {
@@ -177,6 +464,265 @@
         {
           "href": "https://eosc.scholarlycommons.eu/join",
           "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/",
+          "text": "OpenAIRE",
+          "visible": true
+        },
+        {
+          "href": "https://www.operas-eu.org/",
+          "text": "OPERAS",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/helpdesk",
+          "text": "Contact the Node team",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to access",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join as a provider",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+          "text": "Node profile on eosc.eu",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation",
+          "text": "All EOSC Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://user-forum.eosc.eu/",
+          "text": "EOSC Federation User Forum",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms and policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "selected_for": [
+        "5p"
+      ],
+      "link_text": "Terms & Policies",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "title": "Terms & Policies | EOSC Scholarly Commons Node",
+      "lang_attr": "en",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+      "links": [
+        {
+          "href": "https://eosc.scholarlycommons.eu/home",
+          "text": "EOSC Node Scholarly Commons",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/",
+          "text": "OpenAIRE",
+          "visible": true
+        },
+        {
+          "href": "https://www.operas-eu.org/",
+          "text": "OPERAS",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/helpdesk",
+          "text": "Contact the Node team",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to access",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join as a provider",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+          "text": "Node profile on eosc.eu",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation",
+          "text": "All EOSC Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://user-forum.eosc.eu/",
+          "text": "EOSC Federation User Forum",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms and policies",
           "visible": true
         },
         {
@@ -198,14 +744,19 @@
       "parent_url": "",
       "http_status": 200,
       "final_url": "https://eosc.scholarlycommons.eu/discover",
-      "title": "EOSC Scholarly Commons Node",
+      "title": "Discover services | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear",
-      "full_text": "Services How to start Use Cases News Training Terms & Policies Join Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear EOSC Node · Scholarly Commons — Data, Computing & Digital Terms & Policies Contact Provider dashboard",
+      "main_text": "Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear Refine Clear",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear Refine Clear A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
           "text": "EOSC Node Scholarly Commons",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
           "visible": true
         },
         {
@@ -244,6 +795,101 @@
           "visible": true
         },
         {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/",
+          "text": "OpenAIRE",
+          "visible": true
+        },
+        {
+          "href": "https://www.operas-eu.org/",
+          "text": "OPERAS",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/helpdesk",
+          "text": "Contact the Node team",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to access",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join as a provider",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+          "text": "Node profile on eosc.eu",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation",
+          "text": "All EOSC Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://user-forum.eosc.eu/",
+          "text": "EOSC Federation User Forum",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms and policies",
+          "visible": true
+        },
+        {
           "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
           "text": "Terms & Policies",
           "visible": true
@@ -253,6 +899,16 @@
       "error": ""
     }
   ],
-  "children_skipped": [],
-  "crawl_note": "depth 2: 9 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
+  "children_skipped": [
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)"
+  ],
+  "crawl_note": "depth 2: 29 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
 }

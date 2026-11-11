@@ -2,7 +2,7 @@
 
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-36` · 2026-11-11T18:43:01+00:00 · 18 nodes · one page request per node plus 71 followed link(s), then 44 second-hop page(s) (depth 2).
+Run `web-37` · 2026-11-11T20:42:48+00:00 · 18 nodes · one page request per node plus 72 followed link(s), then 44 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -16,7 +16,7 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-180 cells: 🟢 79 PASS · 🔴 7 FAIL · 🟠 74 review · 🧱 20 firewall.
+180 cells: 🟢 82 PASS · 🔴 9 FAIL · 🟠 69 review · 🧱 20 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -37,13 +37,13 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
-| Scholarly Commons | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS | 🟢 PASS |
 
 ### Results at depth 2
 
 The same evidence plus 44 page(s) reached one further hop out, under a shared run budget.
 
-180 cells: 🟢 81 PASS · 🔴 7 FAIL · 🟠 72 review · 🧱 20 firewall.
+180 cells: 🟢 84 PASS · 🔴 9 FAIL · 🟠 67 review · 🧱 20 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -64,7 +64,7 @@ The same evidence plus 44 page(s) reached one further hop out, under a shared ru
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
-| Scholarly Commons | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS |
+| Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS | 🟢 PASS |
 
 ### What the second hop changed
 
@@ -1018,42 +1018,44 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 ### Scholarly Commons
 <https://eosc.scholarlycommons.eu/home>
 
-- **1** 🟠 review — HTTP 200 but only 169 characters rendered. The page may require JavaScript the tool did not execute, or may be a shell.
-  - HTTP 200
-  - text length: 169
-  - *Reviewer action:* Open the page in a browser and confirm content is served anonymously.
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 945 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 0 distinct external host(s) linked from the landing page
-  - depth 1: 2 of 2 followed page(s) were served anonymously, so those are publicly accessible
+  - 2 distinct external host(s) linked from the landing page
+  - www.openaire.eu (Contact the Node team, OpenAIRE)
+  - www.operas-eu.org (OPERAS)
+  - depth 1: 3 of 3 followed page(s) were served anonymously, so those are publicly accessible
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
-  - opening main text: "Services How to start Use Cases News Training Terms & Policies Join EOSC Node · Scholarly Commons — Data, Computing & Digital Terms & Policies Contact Provider dashboard..."
+  - meta description: "Services from trusted providers for the scholarly commons, for institutions, funders, research teams and individual researchers."
+  - opening main text: "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Coo..."
   - no organisation-like names matched by pattern
+  - about page one level down: https://eosc.scholarlycommons.eu/about (HTTP 200) opening text: "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About S..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
-- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
   - EOSC-referencing image asset(s): 1
   - img: EOSC Node Scholarly Commons
-  - approved name matched from the unscoped list: "EOSC Node | Scholarly Commons" (the page writes it "EOSC Node · Scholarly Commons") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
-  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
-- **4** 🟠 review — No link to eosc.eu was found, but the page yielded too little to conclude absence: the document is essentially empty (169 chars of text in total)
-  - 9 link(s) examined, none pointing to eosc.eu
-  - the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons/ but is not linked from here
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a link to the node's entry under eosc.eu/building-the-eosc-federation.
+  - NONE of the 18 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur once, but never followed by an approved name — note the <title> is not searched
+  - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "Node profile on eosc.eu" -> https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 9 outbound link(s) on the landing page
-  - main text length: 169 characters
+  - 29 outbound link(s) on the landing page
+  - main text length: 945 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
-- **5b** 🟠 review — No pointer to an Acceptable Use Policy was found, but the page yielded too little to conclude absence: the document is essentially empty (169 chars of text in total)
-  - 9 link(s) on the landing page examined, none matching an Acceptable Use Policy
-  - 2 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for an Acceptable Use Policy linked for each resource the page presents.
-- **5c** 🟠 review — No pointer to a User Access Policy was found, but the page yielded too little to conclude absence: the document is essentially empty (169 chars of text in total)
-  - 9 link(s) on the landing page examined, none matching a User Access Policy
-  - 2 linked page(s) read, none linking to a User Access Policy: https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a User Access Policy linked for each resource the page presents.
-- **6** 🟠 review — No contact route was found, but the page yielded too little to conclude absence: the document is essentially empty (169 chars of text in total)
-  - 9 link(s) examined
-  - *Reviewer action:* Open the page, dismiss any consent banner, and look for a helpdesk or support contact.
+- **5b** 🔴 **FAIL** — No pointer to an Acceptable Use Policy was found on the landing page. None of the 3 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
+  - 29 link(s) on the landing page examined, none matching an Acceptable Use Policy
+  - 3 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover
+  - note: a cookie-consent overlay dominates the captured text (main text only 945 chars; markers: Accept all, Cookie settings, Reject all) — the DOM was nonetheless complete, so absence stands
+  - *Reviewer action:* Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
+- **5c** 🔴 **FAIL** — No pointer to a User Access Policy was found on the landing page. None of the 3 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
+  - 29 link(s) on the landing page examined, none matching a User Access Policy
+  - 3 linked page(s) read, none linking to a User Access Policy: https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover
+  - note: a cookie-consent overlay dominates the captured text (main text only 945 chars; markers: Accept all, Cookie settings, Reject all) — the DOM was nonetheless complete, so absence stands
+  - *Reviewer action:* Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
+- **6** 🟢 PASS — The landing page links to a route identified as a helpdesk or user support.
+  - "Contact the Node team" -> https://www.openaire.eu/helpdesk
+  - *Reviewer action:* Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it.
 - **7** 🟢 PASS — The main content is English and the page declares English.
   - declared lang attribute: "en"
   - detected language: en (confidence 1.0)

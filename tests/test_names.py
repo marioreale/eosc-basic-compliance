@@ -411,7 +411,10 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     (11 November 2026) GÉANT is still behind the challenge, and the new node
     Scholarly Commons matches in the 169 characters its page rendered ("EOSC
     Node · Scholarly Commons"): ten. The other new node, Latvia, answered with
-    the Cloudflare challenge (HTTP 403).
+    the Cloudflare challenge (HTTP 403). In web-37 (11 November 2026) Scholarly
+    Commons' page rendered in full, and the name is then only in its logo
+    image ("EOSC Node Scholarly Commons" as alt text), not in the page text:
+    nine again.
     """
     run = _run_assess(tmp_path)
     matched = {
@@ -424,7 +427,7 @@ def test_the_official_names_match_the_nodes_that_show_them(tmp_path):
     }
     assert matched == {
         "bbmri-eric", "eosc-cz", "eudat", "eosc-sk", "eosc-it", "data-terra", "eosc-fi", "eosc-pl",
-        "eosc-de", "scholarly-commons",
+        "eosc-de",
     }
 
 
