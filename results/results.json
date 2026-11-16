@@ -1,6 +1,6 @@
 {
-  "run_id": "web-37",
-  "generated_at": "2026-11-11T20:42:48+00:00",
+  "run_id": "web-38",
+  "generated_at": "2026-11-16T20:18:40+00:00",
   "checklist": {
     "checklist_version": "3.2",
     "checklist_date": "2026-09-28",
@@ -97,7 +97,7 @@
     "count": 18,
     "source": "checklist/approved-names.txt",
     "default_used": true,
-    "sha256": "b9f0fbeccf378626da23c7813324859dc7c9b9520c5a6137917e8b73c157591a",
+    "sha256": "6d8c249a0b2eaf883c949eba35800a442a486f42d2b20c5ee4d84924a054cc0e",
     "strict_separators": false
   },
   "selection": [],
@@ -112,7 +112,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-11-11T19:18:17+00:00",
+        "fetched_at": "2026-11-16T20:05:04+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -572,7 +572,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.cern/",
-        "fetched_at": "2026-11-11T19:19:23+00:00",
+        "fetched_at": "2026-11-16T20:06:01+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
@@ -996,7 +996,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-11-11T19:19:49+00:00",
+        "fetched_at": "2026-11-16T20:06:27+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -1505,7 +1505,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-11-11T19:20:32+00:00",
+        "fetched_at": "2026-11-16T20:07:08+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -1542,7 +1542,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new?issue%5Bassigned_to_id%5D=24684",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJfS8MwFMW%2FSt%2Fy1KUtW2fDOigbwmCKbOqDLyNN7lwwTWpu4p9vb9uxOUGFPOWe87vn3mSGvNEtq4I%2FmA28BkAfVYjgvLJmYQ2GBtwW3JsS8LBZl%2BTgfYuMUgxta50fyTEKBUbAyLpnyjsO7ZFUcK1rLl5ItOyYyvAe%2BG3nQthgPP7md8B1g%2FRcoa2z3gqrBzKJVsuS7IpiCnku0rjeSxmP8yKLOU8m8eSqyKcyryWvp50UMcDKoOfGlyRLsjxO0%2B7cpwXLEjZJnkj0CA6HbNkoIdFHow2yvlFJgjPMclTIDG8AmRdsW92sWSdk%2FLSkS0v7v%2Bc0B5nPejUb0rm5A9koA7uuLIPombvz7DN6qZwdX%2Bu2I6%2BWd1Yr8RlVWtv3RbczDyXxLgCJrq1ruP87SzpKhxsl4%2F0gZdBwpSspHSASOj92%2Ffkt5l8%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEsdplYLVRIpaIVUqCPFasKlcewALxw4em8ff4wQBRQJ2lufeM3fGXqLozcC7GB7sBTxFwJB1iOCDdnblLMYe%2FCX4Zy3h%2BmLbkIcQBuSUYhwG50Oh5ig1WAmF8%2FdUJA4dkVQKY%2FZCPpJsnZjaihH4bRdSumgD%2Fub3IEyP9KtCB%2B%2BCk85MZJJt1g3ZCbVXbFGzfFYvWD6Xdyw%2Frst9LmfpLI5qxWaQpIgRNhaDsKEhVVnVOWM5q6%2BqkpcLXh3dkuwGPE7ZqqIk2WtvLPKxUUOit9wJ1Mit6AF5kPyyO93yJOTic0mHluF%2Fz%2BccpF2Oaj6l860H1WsLu1RWUY7M3dfsS3qoXH681lkib9bnzmj5lnXGuJdV2lmAhgQf09Qnzvci%2FJ2FFWy60Sq%2Fm6QceqFNp5QHRELbj64%2Fv0X7Dg%3D%3D",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -1614,7 +1614,7 @@
             "url": "https://www.d4science.org/terms-of-use",
             "final_url": "https://www.d4science.org/terms-of-use",
             "depth": 2,
-            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJfS8MwFMW%2FSt%2Fy1KUtW2fDOigbwmCKbOqDLyNN7lwwTWpu4p9vb9uxOUGFPOWe87vn3mSGvNEtq4I%2FmA28BkAfVYjgvLJmYQ2GBtwW3JsS8LBZl%2BTgfYuMUgxta50fyTEKBUbAyLpnyjsO7ZFUcK1rLl5ItOyYyvAe%2BG3nQthgPP7md8B1g%2FRcoa2z3gqrBzKJVsuS7IpiCnku0rjeSxmP8yKLOU8m8eSqyKcyryWvp50UMcDKoOfGlyRLsjxO0%2B7cpwXLEjZJnkj0CA6HbNkoIdFHow2yvlFJgjPMclTIDG8AmRdsW92sWSdk%2FLSkS0v7v%2Bc0B5nPejUb0rm5A9koA7uuLIPombvz7DN6qZwdX%2Bu2I6%2BWd1Yr8RlVWtv3RbczDyXxLgCJrq1ruP87SzpKhxsl4%2F0gZdBwpSspHSASOj92%2Ffkt5l8%3D",
+            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEsdplYLVRIpaIVUqCPFasKlcewALxw4em8ff4wQBRQJ2lufeM3fGXqLozcC7GB7sBTxFwJB1iOCDdnblLMYe%2FCX4Zy3h%2BmLbkIcQBuSUYhwG50Oh5ig1WAmF8%2FdUJA4dkVQKY%2FZCPpJsnZjaihH4bRdSumgD%2Fub3IEyP9KtCB%2B%2BCk85MZJJt1g3ZCbVXbFGzfFYvWD6Xdyw%2Frst9LmfpLI5qxWaQpIgRNhaDsKEhVVnVOWM5q6%2BqkpcLXh3dkuwGPE7ZqqIk2WtvLPKxUUOit9wJ1Mit6AF5kPyyO93yJOTic0mHluF%2Fz%2BccpF2Oaj6l860H1WsLu1RWUY7M3dfsS3qoXH681lkib9bnzmj5lnXGuJdV2lmAhgQf09Qnzvci%2FJ2FFWy60Sq%2Fm6QceqFNp5QHRELbj64%2Fv0X7Dg%3D%3D",
             "selected_for": [
               "5b"
             ],
@@ -1626,7 +1626,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJfT8IwFMW%2Fyt76NLoNhNFsJAvEhASNAfXBF1LaizR27ext%2FfPt3UZATNSkT73n%2FO65ty2Q17phVfAHs4bXAOijChGcV9bMrcFQg9uAe1MCHtarkhy8b5BRiqFprPMDOUKhwAgYWPdMecuhHZIKrvWOixcSLVqmMrwDftu5EDYYj7%2F5HXBdIz1XaOOst8Lqnkyi5aIk29Ge7yZZImMhJcSjJN%2FH%2FCrJ42G%2By4fTZDTdTUQrRQywNOi58SXJkmwcp2l77tMpy1KWjJ9I9AgO%2B2zZICHRR60Nsq5RSYIzzHJUyAyvAZkXbFPdrFgrZPy0pEtL87%2FnNAeZFZ2a9enczIGslYFtW5ZBdMztefaCXiqL42vdtuTl4s5qJT6jSmv7Pm935qEk3gUg0bV1Nfd%2FZ0kHaX%2BjZLzvpQxqrnQlpQNEQmfHrj%2B%2FxewL",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUifpE6upFLVCqlQQaoEFm2rqTKmFYwePzePvSVK1FAnYeu49c2fGU4JK16II%2FmDW%2BBqQfFQQofPKmrk1FCp0G3RvSuLDepWzg%2Fc1Cc4p1LV1vlcOSCo0EnvWPXNoOLxFcgla70C%2BsGjRMJWBFvhtByltMJ5%2B8zsEXRE%2FV3jtrLfS6o7MouUiZ1vY7yfDpJ%2FF%2FRJkPLi6GsUAOxkPh%2BVkPNkNd1k2aaREAZeGPBifsyzJRnGaxunoPktEMhaDwROLHtFRly3rJSz6qLQh0TbKWXBGWCBFwkCFJLwUm%2BJmJRqhgNOSLi31%2F57THGw2bdWiS%2BdmDstKGdw25TLIlrk9zz7ll8rp8Vq3DXm5uLNayc%2Bo0Nq%2Bz5udecyZdwFZdG1dBf7vLGkv7V5UGe87qcAKlC7K0iER47Nj15%2FfYvYF",
             "depth": 2,
             "parent_url": "https://eosc-dto.d4science.org/catalogue",
             "selected_for": [
@@ -1933,12 +1933,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.earth-data.eu/",
-        "fetched_at": "2026-11-11T19:21:11+00:00",
+        "fetched_at": "2026-11-16T20:07:49+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 56 link(s) on the landing page, 3 followed because they matched a checklist point, 6 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 17 of 60 used",
+        "crawl_note": "depth 2: 55 link(s) on the landing page, 3 followed because they matched a checklist point, 6 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 17 of 60 used",
         "children": [
           {
             "url": "https://www.earth-data.eu/about/",
@@ -1965,7 +1965,7 @@
             "link_text": "Resource hub",
             "http_status": 200,
             "title": "Resource hub – Data Terra EOSC Node",
-            "chars": 496,
+            "chars": 480,
             "error": ""
           },
           {
@@ -1979,7 +1979,7 @@
             "link_text": "Service Hub",
             "http_status": 200,
             "title": "Service Hub – Data Terra EOSC Node",
-            "chars": 495,
+            "chars": 479,
             "error": ""
           },
           {
@@ -2020,7 +2020,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 4330 characters of text rendered"
+            "HTTP 200 anonymously, 4274 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -2045,9 +2045,9 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "opening main text: \"Welcome to EOSC thematic node for Earth system, biodiversity and environmental sciences A digital gateway to FAIR-ready, multi-source data and cross-domain services supported by high-performance computing facilities Explore Our Resources Learn more Powered by Discover Resource Catalogue with community-tailored data information curated by EOSC Node Data Terra Search a dataset, a service… Search Bro...\"",
-            "organisation-like names found: EOSC Association",
-            "about page one level down: https://www.earth-data.eu/about/ (HTTP 200) opening text: \"A thematic node within the European Open Science Cloud dedicated to Earth system, biodiversity, and environmental sciences About EOSC Node Data Terra Partnership landscape Node Coordination Governance and EOSC alignment Who is it for ? Architecture overview Ab...\""
+            "opening main text: \"Welcome to EOSC thematic node for Earth system, biodiversity and environmental sciences A digital gateway to FAIR-ready, multi-source data and cross-domain services supported by high-performance computing facilities Explore Our Resources Learn more Powered by Search for resources through EOSC Node Data Terra catalogues Search a dataset, a service… Search Browse by resource categories Research Prod...\"",
+            "organisation-like names found: EOSC Federation EOSC Association",
+            "about page one level down: https://www.earth-data.eu/about/ (HTTP 200) opening text: \"A thematic node within the European Open Science Cloud dedicated to Earth system, biodiversity, and environmental sciences About EOSC Node Data Terra Partnership landscape Node Coordination Governance and EOSC alignment Scope and users Architecture overview Ab...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -2070,7 +2070,7 @@
           "verdict": "PASS",
           "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
           "evidence": [
-            "\"EOSC F\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra"
+            "\"Node entry in EOSC Federation\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra"
           ],
           "reviewer_action": ""
         },
@@ -2080,8 +2080,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "56 outbound link(s) on the landing page",
-            "main text length: 3846 characters"
+            "55 outbound link(s) on the landing page",
+            "main text length: 3806 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -2135,7 +2135,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 4330 characters of text rendered"
+            "HTTP 200 anonymously, 4274 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -2160,9 +2160,9 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "opening main text: \"Welcome to EOSC thematic node for Earth system, biodiversity and environmental sciences A digital gateway to FAIR-ready, multi-source data and cross-domain services supported by high-performance computing facilities Explore Our Resources Learn more Powered by Discover Resource Catalogue with community-tailored data information curated by EOSC Node Data Terra Search a dataset, a service… Search Bro...\"",
-            "organisation-like names found: EOSC Association",
-            "about page one level down: https://www.earth-data.eu/about/ (HTTP 200) opening text: \"A thematic node within the European Open Science Cloud dedicated to Earth system, biodiversity, and environmental sciences About EOSC Node Data Terra Partnership landscape Node Coordination Governance and EOSC alignment Who is it for ? Architecture overview Ab...\""
+            "opening main text: \"Welcome to EOSC thematic node for Earth system, biodiversity and environmental sciences A digital gateway to FAIR-ready, multi-source data and cross-domain services supported by high-performance computing facilities Explore Our Resources Learn more Powered by Search for resources through EOSC Node Data Terra catalogues Search a dataset, a service… Search Browse by resource categories Research Prod...\"",
+            "organisation-like names found: EOSC Federation EOSC Association",
+            "about page one level down: https://www.earth-data.eu/about/ (HTTP 200) opening text: \"A thematic node within the European Open Science Cloud dedicated to Earth system, biodiversity, and environmental sciences About EOSC Node Data Terra Partnership landscape Node Coordination Governance and EOSC alignment Scope and users Architecture overview Ab...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -2185,7 +2185,7 @@
           "verdict": "PASS",
           "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
           "evidence": [
-            "\"EOSC F\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra"
+            "\"Node entry in EOSC Federation\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-data-terra"
           ],
           "reviewer_action": ""
         },
@@ -2195,8 +2195,8 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "56 outbound link(s) on the landing page",
-            "main text length: 3846 characters"
+            "55 outbound link(s) on the landing page",
+            "main text length: 3806 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -2252,7 +2252,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-11-11T19:21:32+00:00",
+        "fetched_at": "2026-11-16T20:08:10+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
@@ -2397,7 +2397,7 @@
             "link_text": "Node Privacy Notice",
             "http_status": 200,
             "title": "Node Privacy Notice - Services for Research",
-            "chars": 9875,
+            "chars": 9870,
             "error": ""
           },
           {
@@ -2779,7 +2779,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-11-11T19:22:15+00:00",
+        "fetched_at": "2026-11-16T20:08:52+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "panosc.png",
@@ -2811,7 +2811,7 @@
             "link_text": "Contact",
             "http_status": 200,
             "title": "Contact us - Panosc",
-            "chars": 1984,
+            "chars": 2445,
             "error": ""
           },
           {
@@ -2853,7 +2853,7 @@
             "link_text": "PaNOSC data policy framework",
             "http_status": 200,
             "title": "PaNOSC data policy framework - Panosc",
-            "chars": 4886,
+            "chars": 5233,
             "error": ""
           },
           {
@@ -2895,7 +2895,7 @@
             "link_text": "Photon and Neutron Competence Centre",
             "http_status": 200,
             "title": "Photon and Neutron Competence Centre - Panosc",
-            "chars": 3603,
+            "chars": 3950,
             "error": ""
           },
           {
@@ -2983,7 +2983,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 8322 characters of text rendered",
+            "HTTP 200 anonymously, 8152 characters of text rendered",
             "redirects followed: 1"
           ],
           "reviewer_action": ""
@@ -3004,9 +3004,9 @@
             "doi.psi.ch (PSI Data Portal)",
             "ess.eu (ESS)",
             "github.com (PaNOSC repository on Github)",
-            "human-organ-atlas.esrf.fr (Human Organ Atlas)",
             "open-science-cloud.ec.europa.eu (EU Node)",
-            "paleo.esrf.fr (Paleontology data portal)",
+            "pan-finder.panosc.ess.eu (PaN-Finder)",
+            "pan-space.hzdr.de (PaN-Space)",
             "depth 1: 9 of 9 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
@@ -3053,7 +3053,7 @@
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
             "131 outbound link(s) on the landing page",
-            "main text length: 8322 characters"
+            "main text length: 8152 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -3112,7 +3112,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 8322 characters of text rendered",
+            "HTTP 200 anonymously, 8152 characters of text rendered",
             "redirects followed: 1"
           ],
           "reviewer_action": ""
@@ -3133,9 +3133,9 @@
             "doi.psi.ch (PSI Data Portal)",
             "ess.eu (ESS)",
             "github.com (PaNOSC repository on Github)",
-            "human-organ-atlas.esrf.fr (Human Organ Atlas)",
             "open-science-cloud.ec.europa.eu (EU Node)",
-            "paleo.esrf.fr (Paleontology data portal)",
+            "pan-finder.panosc.ess.eu (PaN-Finder)",
+            "pan-space.hzdr.de (PaN-Space)",
             "depth 1: 7 of 7 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
@@ -3182,7 +3182,7 @@
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
             "131 outbound link(s) on the landing page",
-            "main text length: 8322 characters"
+            "main text length: 8152 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
@@ -3243,7 +3243,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-11-11T19:22:48+00:00",
+        "fetched_at": "2026-11-16T20:09:27+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -3735,12 +3735,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-11-11T19:23:29+00:00",
+        "fetched_at": "2026-11-16T20:10:08+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 188 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 34 of 60 used",
+        "crawl_note": "depth 2: 189 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 34 of 60 used",
         "children": [
           {
             "url": "https://www.egi.eu/terms-of-use",
@@ -3897,7 +3897,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 7717 characters of text rendered"
+            "HTTP 200 anonymously, 7735 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -3959,7 +3959,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "188 outbound link(s) on the landing page",
+            "189 outbound link(s) on the landing page",
             "main text length: 5530 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
@@ -4017,7 +4017,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 7717 characters of text rendered"
+            "HTTP 200 anonymously, 7735 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -4079,7 +4079,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "188 outbound link(s) on the landing page",
+            "189 outbound link(s) on the landing page",
             "main text length: 5530 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
@@ -4139,7 +4139,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-11-11T19:23:48+00:00",
+        "fetched_at": "2026-11-16T20:10:28+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
@@ -4441,7 +4441,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-11-11T19:23:54+00:00",
+        "fetched_at": "2026-11-16T20:10:34+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
@@ -4803,7 +4803,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.it/",
-        "fetched_at": "2026-11-11T19:24:14+00:00",
+        "fetched_at": "2026-11-16T20:10:54+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
@@ -5129,7 +5129,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-11-11T19:24:29+00:00",
+        "fetched_at": "2026-11-16T20:11:09+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-sk.png",
@@ -5442,569 +5442,19 @@
       ]
     },
     {
-      "id": "ebrains-ri",
-      "name": "EBRAINS-RI",
-      "url": "https://ebrains.eu/",
-      "ad_hoc": false,
-      "fetch": {
-        "http_status": 200,
-        "final_url": "https://ebrains.eu/",
-        "fetched_at": "2026-11-11T19:24:47+00:00",
-        "error": "",
-        "robots_note": "robots.txt consulted",
-        "screenshot": "ebrains-ri.png",
-        "crawl_depth": 2,
-        "crawl_note": "depth 2: 126 link(s) on the landing page, 7 followed because they matched a checklist point, 55 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 9 page(s); fetch budget: 44 of 60 used",
-        "children": [
-          {
-            "url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "final_url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "6"
-            ],
-            "link_text": "EBRAINS Support for EuroHPC Applications",
-            "http_status": 200,
-            "title": "EBRAINS Support for EuroHPC Applications | EBRAINS",
-            "chars": 2509,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/news-events/media/media-contact",
-            "final_url": "https://ebrains.eu/news-events/media/media-contact",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "6"
-            ],
-            "link_text": "Media Contact",
-            "http_status": 200,
-            "title": "Media Contact | EBRAINS",
-            "chars": 233,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about",
-            "final_url": "https://ebrains.eu/about",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "About",
-            "http_status": 200,
-            "title": "About | EBRAINS",
-            "chars": 3111,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/at-a-glance",
-            "final_url": "https://ebrains.eu/about/at-a-glance",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "At a glance",
-            "http_status": 200,
-            "title": "At a Glance | EBRAINS",
-            "chars": 6329,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/terms-policies",
-            "final_url": "https://ebrains.eu/terms-policies",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "5p"
-            ],
-            "link_text": "Terms & Policies",
-            "http_status": 200,
-            "title": "Terms & Policies | EBRAINS",
-            "chars": 2186,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/data-tools-services",
-            "final_url": "https://ebrains.eu/data-tools-services",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "5s"
-            ],
-            "link_text": "Data, Tools & Services",
-            "http_status": 200,
-            "title": "Data, Tools & Services | EBRAINS",
-            "chars": 1015,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/data-tools-services/brain-atlases",
-            "final_url": "https://ebrains.eu/data-tools-services/brain-atlases",
-            "depth": 1,
-            "parent_url": "",
-            "selected_for": [
-              "5s"
-            ],
-            "link_text": "Brain Atlases",
-            "http_status": 200,
-            "title": "Brain Atlases | EBRAINS",
-            "chars": 7958,
-            "error": ""
-          },
-          {
-            "url": "https://forms.ebrains.eu/f/request-ebr4eurohpc-support",
-            "final_url": "https://forms.ebrains.eu/f/request-ebr4eurohpc-support",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "selected_for": [
-              "6"
-            ],
-            "link_text": "https://forms.ebrains.eu/f/request-ebr4eurohpc-support",
-            "http_status": 200,
-            "title": "EBRAINS Forms",
-            "chars": 0,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/at-a-glance/mission",
-            "final_url": "https://ebrains.eu/about/at-a-glance/mission",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "Mission",
-            "http_status": 200,
-            "title": "Mission | EBRAINS",
-            "chars": 2364,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/contact",
-            "final_url": "https://ebrains.eu/contact",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/news-events/media/media-contact",
-            "selected_for": [
-              "6"
-            ],
-            "link_text": "Contact Us",
-            "http_status": 200,
-            "title": "Contact Us | EBRAINS",
-            "chars": 1658,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/at-a-glance/science-vision",
-            "final_url": "https://ebrains.eu/about/at-a-glance/science-vision",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/news-events/media/media-contact",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "Science Vision",
-            "http_status": 200,
-            "title": "Science Vision | EBRAINS",
-            "chars": 2920,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/at-a-glance/ebrains-20",
-            "final_url": "https://ebrains.eu/about/at-a-glance/ebrains-20",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/about",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "EBRAINS 2.0",
-            "http_status": 200,
-            "title": "EBRAINS 2.0 | EBRAINS",
-            "chars": 6351,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/at-a-glance/becoming-an-edic",
-            "final_url": "https://ebrains.eu/about/at-a-glance/becoming-an-edic",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/about/at-a-glance",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "Becoming an EDIC",
-            "http_status": 200,
-            "title": "Becoming an EDIC | EBRAINS",
-            "chars": 6072,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/at-a-glance/ethics-society",
-            "final_url": "https://ebrains.eu/about/at-a-glance/ethics-society",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/terms-policies",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "Ethics & Society",
-            "http_status": 200,
-            "title": "Ethics & Society | EBRAINS",
-            "chars": 3942,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/regional-presence",
-            "final_url": "https://ebrains.eu/about/regional-presence",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/data-tools-services",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "Regional presence",
-            "http_status": 200,
-            "title": "Regional Presence | EBRAINS",
-            "chars": 1444,
-            "error": ""
-          },
-          {
-            "url": "https://ebrains.eu/about/regional-presence/national-nodes",
-            "final_url": "https://ebrains.eu/about/regional-presence/national-nodes",
-            "depth": 2,
-            "parent_url": "https://ebrains.eu/data-tools-services/brain-atlases",
-            "selected_for": [
-              "2"
-            ],
-            "link_text": "National Nodes",
-            "http_status": 200,
-            "title": "National Nodes | EBRAINS",
-            "chars": 3112,
-            "error": ""
-          }
-        ],
-        "children_skipped": [
-          "https://ebrains.eu/contact (cap for point 6)",
-          "https://ebrains.eu/about/at-a-glance/mission (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/ebrains-20 (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/becoming-an-edic (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/ethics-society (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/governance (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/our-people (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/careers (cap for point 2)",
-          "https://ebrains.eu/about/ebrains-aisbl/procurements (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/national-nodes (cap for point 2)",
-          "https://ebrains.eu/about/regional-presence/members (cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/science-vision (cap for point 2)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/human-brain (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/macaque-brain (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/marmoset-brain-atlas (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/rat-brain (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/mouse-brain (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/brain-atlas-resources (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/apis (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/data-integration (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/brain-atlases/analysis (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/medical-analytics (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/medical-analytics/platform-for-human-imaging-phi (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/medical-analytics/medical-informatics-platform (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/medical-analytics/human-intracerebral-eeg-platform (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/medical-analytics/health-data-cloud (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation/whole-brain-simulation (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation/network-level-simulation (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation/cellular-level-simulation (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation/molecular-and-subcellular-simulation (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation/neuromorphic-computing (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation/visualisation-analysis (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/modelling-simulation/inference-validation (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/data-knowledge (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/data-knowledge/find-data (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/data-knowledge/share-data (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/data-knowledge/live-papers (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/collaborative-platform (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/collaborative-platform/collaboratory (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/computing-infrastructure (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/computing-infrastructure/neuromorphic-computing (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/computing-infrastructure/high-performance-computing-hpc (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/tools (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/resources (cap for point 5s)",
-          "https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications (already fetched at depth 1)",
-          "https://ebrains.eu/news-events/media/media-contact (already fetched at depth 1)",
-          "https://ebrains.eu/contact (depth 2 cap for point 6)",
-          "https://ebrains.eu/about (already fetched at depth 1)",
-          "https://ebrains.eu/about/at-a-glance (already fetched at depth 1)",
-          "https://ebrains.eu/about/at-a-glance/science-vision (depth 2 cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/ebrains-20 (depth 2 cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/becoming-an-edic (depth 2 cap for point 2)",
-          "https://ebrains.eu/about/at-a-glance/ethics-society (depth 2 cap for point 2)",
-          "https://ebrains.eu/about/regional-presence (depth 2 cap for point 2)"
-        ]
-      },
-      "results": [
-        {
-          "point_id": "1",
-          "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "PASS",
-          "message": "Served content to an anonymous request, satisfying branch (a).",
-          "evidence": [
-            "HTTP 200 anonymously, 6803 characters of text rendered"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "1R",
-          "title": "Linked resources public or via EOSC AAI",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
-          "evidence": [
-            "5 distinct external host(s) linked from the landing page",
-            "bsky.app (Bluesky)",
-            "mastodon.social (Mastodon)",
-            "www.linkedin.com (LinkedIn)",
-            "www.youtube.com (YouTube)",
-            "x.com (X)",
-            "depth 1: 16 of 16 followed page(s) were served anonymously, so those are publicly accessible"
-          ],
-          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
-        },
-        {
-          "point_id": "2",
-          "title": "Scope, users and responsible organisation stated",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
-          "evidence": [
-            "meta description: \"An open research infrastructure that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ.\"",
-            "opening main text: \"Built for Brain Breakthroughs Europe's Digital Infrastructure for Brain Research Explore data, tools and services EBRAINS RI EBRAINS is an open research infrastructure (RI) that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ. The EBRAINS infrastructure was originally built by the EU-funded Human Brain Project and is now adva...\"",
-            "organisation-like names found: Heinrich Heine University; Lithuanian University; O. Vogt Institute; University",
-            "about page one level down: https://ebrains.eu/about (HTTP 200) opening text: \"Breadcrumb Start > About About A Pioneering Ecosystem for Neuroscience Breakthroughs Digital Infrastructure for Brain Research Who we are EBRAINS is Europe’s digital infrastructure for brain research. It provides unique tools and data bringing together neurosc...\""
-          ],
-          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
-        },
-        {
-          "point_id": "3",
-          "title": "EOSC logo and official node name visible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
-          "evidence": [
-            "45 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 0",
-            "NONE of the 18 approved name(s) for this node appear in the page body — note the <title> is not searched"
-          ],
-          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
-        },
-        {
-          "point_id": "4",
-          "title": "Link to the node's page on eosc.eu",
-          "verdict": "FAIL",
-          "message": "No link to eosc.eu was found on the landing page.",
-          "evidence": [
-            "126 link(s) examined, none pointing to eosc.eu",
-            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/ but is not linked from here"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "5a",
-          "title": "Purpose description for research resources",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
-          "evidence": [
-            "126 outbound link(s) on the landing page",
-            "main text length: 4926 characters"
-          ],
-          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
-        },
-        {
-          "point_id": "5b",
-          "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "PASS",
-          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.",
-          "evidence": [
-            "landing page -> https://ebrains.eu/terms-policies (\"Terms & Policies\")",
-            "via https://ebrains.eu/terms-policies: \"Download the General Terms of Use\" -> https://ebrains.eu/sites/default/files/2025-10/EBRAINS_General_Terms_of_use_e457353c1a_d2122f84c2.pdf"
-          ],
-          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
-        },
-        {
-          "point_id": "5c",
-          "title": "User Access Policy (UAP) accessible",
-          "verdict": "PASS",
-          "message": "The landing page does not link to a User Access Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.",
-          "evidence": [
-            "landing page -> https://ebrains.eu/terms-policies (\"Terms & Policies\")",
-            "via https://ebrains.eu/terms-policies: \"Download the Access Policy\" -> https://ebrains.eu/sites/default/files/2025-10/EBRAINS_AISBL_Access_Policy_04_2022_85c8e61216.pdf"
-          ],
-          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
-        },
-        {
-          "point_id": "6",
-          "title": "Means of contacting the node helpdesk",
-          "verdict": "PASS",
-          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
-          "evidence": [
-            "\"EBRAINS Support for EuroHPC Applications\" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "\"Media Contact\" -> https://ebrains.eu/news-events/media/media-contact",
-            "followed: https://ebrains.eu/contact -> HTTP 200",
-            "helpdesk wording on that page: ticket"
-          ],
-          "reviewer_action": "Confirm the route reaches the node's user support."
-        },
-        {
-          "point_id": "7",
-          "title": "The page is in English",
-          "verdict": "PASS",
-          "message": "The main content is English and the page declares English.",
-          "evidence": [
-            "declared lang attribute: \"en\"",
-            "detected language: en (confidence 1.0)"
-          ],
-          "reviewer_action": ""
-        }
-      ],
-      "results_depth_1": [
-        {
-          "point_id": "1",
-          "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "PASS",
-          "message": "Served content to an anonymous request, satisfying branch (a).",
-          "evidence": [
-            "HTTP 200 anonymously, 6803 characters of text rendered"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "1R",
-          "title": "Linked resources public or via EOSC AAI",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
-          "evidence": [
-            "5 distinct external host(s) linked from the landing page",
-            "bsky.app (Bluesky)",
-            "mastodon.social (Mastodon)",
-            "www.linkedin.com (LinkedIn)",
-            "www.youtube.com (YouTube)",
-            "x.com (X)",
-            "depth 1: 7 of 7 followed page(s) were served anonymously, so those are publicly accessible"
-          ],
-          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
-        },
-        {
-          "point_id": "2",
-          "title": "Scope, users and responsible organisation stated",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
-          "evidence": [
-            "meta description: \"An open research infrastructure that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ.\"",
-            "opening main text: \"Built for Brain Breakthroughs Europe's Digital Infrastructure for Brain Research Explore data, tools and services EBRAINS RI EBRAINS is an open research infrastructure (RI) that provides data, tools and services for brain-related research – from the molecular and cellular levels to the whole organ. The EBRAINS infrastructure was originally built by the EU-funded Human Brain Project and is now adva...\"",
-            "organisation-like names found: Heinrich Heine University; Lithuanian University; O. Vogt Institute; University",
-            "about page one level down: https://ebrains.eu/about (HTTP 200) opening text: \"Breadcrumb Start > About About A Pioneering Ecosystem for Neuroscience Breakthroughs Digital Infrastructure for Brain Research Who we are EBRAINS is Europe’s digital infrastructure for brain research. It provides unique tools and data bringing together neurosc...\""
-          ],
-          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
-        },
-        {
-          "point_id": "3",
-          "title": "EOSC logo and official node name visible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
-          "evidence": [
-            "45 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 0",
-            "NONE of the 18 approved name(s) for this node appear in the page body — note the <title> is not searched"
-          ],
-          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
-        },
-        {
-          "point_id": "4",
-          "title": "Link to the node's page on eosc.eu",
-          "verdict": "FAIL",
-          "message": "No link to eosc.eu was found on the landing page.",
-          "evidence": [
-            "126 link(s) examined, none pointing to eosc.eu",
-            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-ebrains-ri/ but is not linked from here"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "5a",
-          "title": "Purpose description for research resources",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
-          "evidence": [
-            "126 outbound link(s) on the landing page",
-            "main text length: 4926 characters"
-          ],
-          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
-        },
-        {
-          "point_id": "5b",
-          "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "PASS",
-          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.",
-          "evidence": [
-            "landing page -> https://ebrains.eu/terms-policies (\"Terms & Policies\")",
-            "via https://ebrains.eu/terms-policies: \"Download the General Terms of Use\" -> https://ebrains.eu/sites/default/files/2025-10/EBRAINS_General_Terms_of_use_e457353c1a_d2122f84c2.pdf"
-          ],
-          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
-        },
-        {
-          "point_id": "5c",
-          "title": "User Access Policy (UAP) accessible",
-          "verdict": "PASS",
-          "message": "The landing page does not link to a User Access Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.",
-          "evidence": [
-            "landing page -> https://ebrains.eu/terms-policies (\"Terms & Policies\")",
-            "via https://ebrains.eu/terms-policies: \"Download the Access Policy\" -> https://ebrains.eu/sites/default/files/2025-10/EBRAINS_AISBL_Access_Policy_04_2022_85c8e61216.pdf"
-          ],
-          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
-        },
-        {
-          "point_id": "6",
-          "title": "Means of contacting the node helpdesk",
-          "verdict": "MANUAL_REVIEW",
-          "message": "A contact page exists and offers a way to get in touch, but nothing on it identifies a helpdesk specifically. A link labelled \"support\" was found, but that word alone does not identify a helpdesk: it also labels funding programmes and service catalogues. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
-          "evidence": [
-            "\"EBRAINS Support for EuroHPC Applications\" -> https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications",
-            "\"Media Contact\" -> https://ebrains.eu/news-events/media/media-contact",
-            "\"Contact Us\" -> https://ebrains.eu/contact",
-            "followed: https://ebrains.eu/data-tools-services/computing-infrastructure/ebrains-support-for-eurohpc-applications -> HTTP 200",
-            "followed: https://ebrains.eu/news-events/media/media-contact -> HTTP 200",
-            "address given: mailto:base-infra-resources@ebrains.eu",
-            "not followed: https://ebrains.eu/contact (cap for point 6)",
-            "not followed: https://ebrains.eu/contact (depth 2 cap for point 6)"
-          ],
-          "reviewer_action": "Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service."
-        },
-        {
-          "point_id": "7",
-          "title": "The page is in English",
-          "verdict": "PASS",
-          "message": "The main content is English and the page declares English.",
-          "evidence": [
-            "declared lang attribute: \"en\"",
-            "detected language: en (confidence 1.0)"
-          ],
-          "reviewer_action": ""
-        }
-      ]
-    },
-    {
       "id": "life-sciences-connect",
       "name": "Life Sciences Connect",
       "url": "https://eosc-lifesciences-connect.eu/home",
       "ad_hoc": false,
       "fetch": {
-        "http_status": 200,
-        "final_url": "https://eosc-lifesciences-connect.eu/home",
-        "fetched_at": "2026-11-11T19:25:37+00:00",
-        "error": "",
-        "robots_note": "robots.txt consulted",
-        "screenshot": "life-sciences-connect.png",
-        "crawl_depth": 2,
-        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used",
+        "http_status": null,
+        "final_url": "",
+        "fetched_at": "2026-11-16T20:11:28+00:00",
+        "error": "TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+        "robots_note": "robots.txt unreachable (ConnectTimeout); proceeding with one request",
+        "screenshot": "",
+        "crawl_depth": 0,
+        "crawl_note": "",
         "children": [],
         "children_skipped": []
       },
@@ -6012,227 +5462,81 @@
         {
           "point_id": "1",
           "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "PASS",
-          "message": "Served content to an anonymous request, satisfying branch (a).",
-          "evidence": [
-            "HTTP 200 anonymously, 983 characters of text rendered",
-            "redirects followed: 3"
-          ],
-          "reviewer_action": ""
+          "verdict": "ERROR",
+          "message": "The page could not be fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
+          "reviewer_action": "Retry; if it persists, check the URL registered in the Contributors Dashboard."
         },
         {
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
-          "evidence": [
-            "1 distinct external host(s) linked from the landing page",
-            "aria.services (ARIA)"
-          ],
-          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
+          "reviewer_action": ""
         },
         {
           "point_id": "2",
           "title": "Scope, users and responsible organisation stated",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
-          "evidence": [
-            "opening main text: \"The EOSC Life Sciences Connect Node brings together four world-leading European Research Infrastructures — ELIXIR, EMBL, Euro-BioImaging ERIC, and Instruct-ERIC — to form a thematic Life Science Node within the European Open Science Cloud (EOSC) Federation. By formalising long-standing collaboration between these infrastructures, the Node plays a key role in enabling federated, FAIR, and trusted a...\"",
-            "organisation-like names found: ERIC; Euro-BioImaging ERIC"
-          ],
-          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
+          "reviewer_action": ""
         },
         {
           "point_id": "3",
           "title": "EOSC logo and official node name visible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
-          "evidence": [
-            "5 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 5",
-            "NONE of the 18 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur once, but never followed by an approved name — note the <title> is not searched"
-          ],
-          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
+          "reviewer_action": ""
         },
         {
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
-          "verdict": "PASS",
-          "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
-          "evidence": [
-            "\"view us on the EOSC website\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-life-sciences-connect"
-          ],
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
           "reviewer_action": ""
         },
         {
           "point_id": "5a",
           "title": "Purpose description for research resources",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
-          "evidence": [
-            "2 outbound link(s) on the landing page",
-            "main text length: 836 characters"
-          ],
-          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
+          "reviewer_action": ""
         },
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "An acceptable use policy is named in the page text, but no link to it was found. The landing page links to no policies, legal, services or resources page that could carry it. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
-          "evidence": [
-            "2 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "named in the text without a link: AUP",
-            "note: only 2 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
-          ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
+          "reviewer_action": ""
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "A user access policy is named in the page text, but no link to it was found. The landing page links to no policies, legal, services or resources page that could carry it. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
-          "evidence": [
-            "2 link(s) on the landing page examined, none matching a User Access Policy",
-            "named in the text without a link: UAP",
-            "note: only 2 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
-          ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
+          "reviewer_action": ""
         },
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "FAIL",
-          "message": "No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.",
-          "evidence": [
-            "2 link(s) examined",
-            "note: only 2 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
-          ],
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
           "reviewer_action": ""
         },
         {
           "point_id": "7",
           "title": "The page is in English",
-          "verdict": "PASS",
-          "message": "The main content is English and the page declares English.",
-          "evidence": [
-            "declared lang attribute: \"en\"",
-            "detected language: en (confidence 1.0)"
-          ],
-          "reviewer_action": ""
-        }
-      ],
-      "results_depth_1": [
-        {
-          "point_id": "1",
-          "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "PASS",
-          "message": "Served content to an anonymous request, satisfying branch (a).",
-          "evidence": [
-            "HTTP 200 anonymously, 983 characters of text rendered",
-            "redirects followed: 3"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "1R",
-          "title": "Linked resources public or via EOSC AAI",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
-          "evidence": [
-            "1 distinct external host(s) linked from the landing page",
-            "aria.services (ARIA)"
-          ],
-          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
-        },
-        {
-          "point_id": "2",
-          "title": "Scope, users and responsible organisation stated",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
-          "evidence": [
-            "opening main text: \"The EOSC Life Sciences Connect Node brings together four world-leading European Research Infrastructures — ELIXIR, EMBL, Euro-BioImaging ERIC, and Instruct-ERIC — to form a thematic Life Science Node within the European Open Science Cloud (EOSC) Federation. By formalising long-standing collaboration between these infrastructures, the Node plays a key role in enabling federated, FAIR, and trusted a...\"",
-            "organisation-like names found: ERIC; Euro-BioImaging ERIC"
-          ],
-          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
-        },
-        {
-          "point_id": "3",
-          "title": "EOSC logo and official node name visible",
-          "verdict": "MANUAL_REVIEW",
-          "message": "No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without \"eosc\" would all be missed by this check.",
-          "evidence": [
-            "5 image/SVG element(s) examined, none referencing EOSC",
-            "mentions of EOSC in page text: 5",
-            "NONE of the 18 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur once, but never followed by an approved name — note the <title> is not searched"
-          ],
-          "reviewer_action": "Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed."
-        },
-        {
-          "point_id": "4",
-          "title": "Link to the node's page on eosc.eu",
-          "verdict": "PASS",
-          "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
-          "evidence": [
-            "\"view us on the EOSC website\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-life-sciences-connect"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "5a",
-          "title": "Purpose description for research resources",
-          "verdict": "MANUAL_REVIEW",
-          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
-          "evidence": [
-            "2 outbound link(s) on the landing page",
-            "main text length: 836 characters"
-          ],
-          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
-        },
-        {
-          "point_id": "5b",
-          "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "An acceptable use policy is named in the page text, but no link to it was found. The landing page links to no policies, legal, services or resources page that could carry it. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
-          "evidence": [
-            "2 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "named in the text without a link: AUP",
-            "note: only 2 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
-          ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
-        },
-        {
-          "point_id": "5c",
-          "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "A user access policy is named in the page text, but no link to it was found. The landing page links to no policies, legal, services or resources page that could carry it. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
-          "evidence": [
-            "2 link(s) on the landing page examined, none matching a User Access Policy",
-            "named in the text without a link: UAP",
-            "note: only 2 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
-          ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
-        },
-        {
-          "point_id": "6",
-          "title": "Means of contacting the node helpdesk",
-          "verdict": "FAIL",
-          "message": "No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.",
-          "evidence": [
-            "2 link(s) examined",
-            "note: only 2 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
-          ],
-          "reviewer_action": ""
-        },
-        {
-          "point_id": "7",
-          "title": "The page is in English",
-          "verdict": "PASS",
-          "message": "The main content is English and the page declares English.",
-          "evidence": [
-            "declared lang attribute: \"en\"",
-            "detected language: en (confidence 1.0)"
-          ],
+          "verdict": "ERROR",
+          "message": "Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded.\nCall log:\n  - navigating to \"https://eosc-lifesciences-connect.eu/home\", waiting until \"domcontentloaded\"\n",
+          "evidence": [],
           "reviewer_action": ""
         }
       ]
@@ -6245,12 +5549,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-node.de/",
-        "fetched_at": "2026-11-11T19:25:47+00:00",
+        "fetched_at": "2026-11-16T20:12:30+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-de.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 7 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used",
+        "crawl_note": "depth 2: 7 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
         "children": [],
         "children_skipped": []
       },
@@ -6489,12 +5793,12 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://eosc.lv/en/",
-        "fetched_at": "2026-11-11T19:25:55+00:00",
+        "fetched_at": "2026-11-16T20:12:36+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "eosc-lv.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used",
+        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
         "children": [],
         "children_skipped": []
       },
@@ -6791,12 +6095,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.scholarlycommons.eu/home",
-        "fetched_at": "2026-11-11T19:26:01+00:00",
+        "fetched_at": "2026-11-16T20:12:42+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "scholarly-commons.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 29 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used",
+        "crawl_note": "depth 2: 29 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
         "children": [
           {
             "url": "https://eosc.scholarlycommons.eu/about",
@@ -7070,6 +6374,312 @@
           "message": "The landing page links to a route identified as a helpdesk or user support.",
           "evidence": [
             "\"Contact the Node team\" -> https://www.openaire.eu/helpdesk"
+          ],
+          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
+        },
+        {
+          "point_id": "7",
+          "title": "The page is in English",
+          "verdict": "PASS",
+          "message": "The main content is English and the page declares English.",
+          "evidence": [
+            "declared lang attribute: \"en\"",
+            "detected language: en (confidence 1.0)"
+          ],
+          "reviewer_action": ""
+        }
+      ]
+    },
+    {
+      "id": "metrofood-ri",
+      "name": "METROFOOD-RI",
+      "url": "https://services.metrofood-services.eu/eosc",
+      "ad_hoc": false,
+      "fetch": {
+        "http_status": 200,
+        "final_url": "https://services.metrofood-services.eu/eosc",
+        "fetched_at": "2026-11-16T20:12:56+00:00",
+        "error": "",
+        "robots_note": "robots.txt consulted",
+        "screenshot": "metrofood-ri.png",
+        "crawl_depth": 2,
+        "crawl_note": "depth 2: 26 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "children": [
+          {
+            "url": "https://services.metrofood-services.eu/#contact",
+            "final_url": "https://services.metrofood-services.eu/#contact",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "Contact",
+            "http_status": 200,
+            "title": "METROFOOD-RI · Digital Services",
+            "chars": 1976,
+            "error": ""
+          },
+          {
+            "url": "https://catalogues.staging.metrofood-services.eu/",
+            "final_url": "https://catalogues.staging.metrofood-services.eu/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "METROFOOD-RI EOSC Catalogue",
+            "http_status": 200,
+            "title": "Metrofood Catalogues",
+            "chars": 0,
+            "error": ""
+          }
+        ],
+        "children_skipped": [
+          "https://services.metrofood-services.eu/#contact (already fetched at depth 1)",
+          "https://services.metrofood-services.eu/#contact (already fetched at depth 1)"
+        ]
+      },
+      "results": [
+        {
+          "point_id": "1",
+          "title": "NLP publicly accessible or via EOSC AAI",
+          "verdict": "PASS",
+          "message": "Served content to an anonymous request, satisfying branch (a).",
+          "evidence": [
+            "HTTP 200 anonymously, 6183 characters of text rendered",
+            "redirects followed: 3"
+          ],
+          "reviewer_action": ""
+        },
+        {
+          "point_id": "1R",
+          "title": "Linked resources public or via EOSC AAI",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "evidence": [
+            "7 distinct external host(s) linked from the landing page",
+            "catalogues.eosc.metrofood-services.eu (Visit EOSC Catalogues)",
+            "catalogues.it.metrofood-services.eu (Visit METROFOOD-IT Catalogues)",
+            "catalogues.staging.metrofood-services.eu (METROFOOD-RI EOSC Catalogue)",
+            "rm.metrofood-services.eu (Visit RM-App)",
+            "www.enea.it (ENEA — Italian National Agency for New Technologies, Energy and Sustainable Economic Development)",
+            "www.eosc-beyond.eu (METROFOOD-RI on EOSC Beyond ↗, Visit CESSDA, Visit Instruct-ERIC)",
+            "www.metrofood.eu (METROFOOD-RI official website, METROFOOD-RI partner institutions, Privacy policy)",
+            "EOSC AAI indicators seen: EOSC AAI",
+            "depth 1: 2 of 2 followed page(s) were served anonymously, so those are publicly accessible"
+          ],
+          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
+        },
+        {
+          "point_id": "2",
+          "title": "Scope, users and responsible organisation stated",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
+          "evidence": [
+            "meta description: \"Digital services hub of METROFOOD-RI — the European Research Infrastructure for metrology in food and nutrition. Access reference-material databases, service catalogues and node resources.\"",
+            "opening main text: \"Skip to main content METROFOOD-RI Digital Services Hub Services Contact metrofood.eu ↗ ☰ METROFOOD-RI Pilot Node Metrology-driven data for safe and sustainable food. Explore our offer METROFOOD-RI EOSC Catalogue Our digital ecosystem RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. Acceptable Use Policy ...\"",
+            "organisation-like names found: Casaccia Research Centre; ERIC; Italian National Agency; LifeWatch ERIC; Visit CESSDA LifeWatch ERIC; Visit LifeWatch ERIC"
+          ],
+          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
+        },
+        {
+          "point_id": "3",
+          "title": "EOSC logo and official node name visible",
+          "verdict": "MANUAL_REVIEW",
+          "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.",
+          "evidence": [
+            "EOSC-referencing image asset(s): 3",
+            "img: EOSC logo",
+            "img: EOSC Catalogues logo",
+            "img: EOSC Beyond logo",
+            "NONE of the 18 approved name(s) for this node appear in the page body — note the <title> is not searched"
+          ],
+          "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
+        },
+        {
+          "point_id": "4",
+          "title": "Link to the node's page on eosc.eu",
+          "verdict": "FAIL",
+          "message": "No link to eosc.eu was found on the landing page.",
+          "evidence": [
+            "26 link(s) examined, none pointing to eosc.eu",
+            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-metrofood-ri/ but is not linked from here"
+          ],
+          "reviewer_action": ""
+        },
+        {
+          "point_id": "5a",
+          "title": "Purpose description for research resources",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
+          "evidence": [
+            "26 outbound link(s) on the landing page",
+            "main text length: 6183 characters"
+          ],
+          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
+        },
+        {
+          "point_id": "5b",
+          "title": "Acceptable Use Policy (AUP) accessible",
+          "verdict": "FAIL",
+          "message": "An acceptable use policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "evidence": [
+            "26 link(s) on the landing page examined, none matching an Acceptable Use Policy",
+            "2 linked page(s) read, none linking to an Acceptable Use Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
+            "named in the text without a link: Acceptable Use Polic"
+          ],
+          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+        },
+        {
+          "point_id": "5c",
+          "title": "User Access Policy (UAP) accessible",
+          "verdict": "FAIL",
+          "message": "A user access policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "evidence": [
+            "26 link(s) on the landing page examined, none matching a User Access Policy",
+            "2 linked page(s) read, none linking to a User Access Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
+            "named in the text without a link: Access Polic, User Access Polic"
+          ],
+          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+        },
+        {
+          "point_id": "6",
+          "title": "Means of contacting the node helpdesk",
+          "verdict": "PASS",
+          "message": "The landing page links to a route identified as a helpdesk or user support.",
+          "evidence": [
+            "\"premotec-helpdesk@scc.kit.edu\" -> mailto:premotec-helpdesk@scc.kit.edu",
+            "\"Contact us\" -> mailto:premotec-helpdesk@scc.kit.edu",
+            "\"premotec-helpdesk@scc.kit.edu\" -> mailto:premotec-helpdesk@scc.kit.edu",
+            "\"Contact us\" -> mailto:premotec-helpdesk@scc.kit.edu"
+          ],
+          "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
+        },
+        {
+          "point_id": "7",
+          "title": "The page is in English",
+          "verdict": "PASS",
+          "message": "The main content is English and the page declares English.",
+          "evidence": [
+            "declared lang attribute: \"en\"",
+            "detected language: en (confidence 1.0)"
+          ],
+          "reviewer_action": ""
+        }
+      ],
+      "results_depth_1": [
+        {
+          "point_id": "1",
+          "title": "NLP publicly accessible or via EOSC AAI",
+          "verdict": "PASS",
+          "message": "Served content to an anonymous request, satisfying branch (a).",
+          "evidence": [
+            "HTTP 200 anonymously, 6183 characters of text rendered",
+            "redirects followed: 3"
+          ],
+          "reviewer_action": ""
+        },
+        {
+          "point_id": "1R",
+          "title": "Linked resources public or via EOSC AAI",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
+          "evidence": [
+            "7 distinct external host(s) linked from the landing page",
+            "catalogues.eosc.metrofood-services.eu (Visit EOSC Catalogues)",
+            "catalogues.it.metrofood-services.eu (Visit METROFOOD-IT Catalogues)",
+            "catalogues.staging.metrofood-services.eu (METROFOOD-RI EOSC Catalogue)",
+            "rm.metrofood-services.eu (Visit RM-App)",
+            "www.enea.it (ENEA — Italian National Agency for New Technologies, Energy and Sustainable Economic Development)",
+            "www.eosc-beyond.eu (METROFOOD-RI on EOSC Beyond ↗, Visit CESSDA, Visit Instruct-ERIC)",
+            "www.metrofood.eu (METROFOOD-RI official website, METROFOOD-RI partner institutions, Privacy policy)",
+            "EOSC AAI indicators seen: EOSC AAI",
+            "depth 1: 2 of 2 followed page(s) were served anonymously, so those are publicly accessible"
+          ],
+          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
+        },
+        {
+          "point_id": "2",
+          "title": "Scope, users and responsible organisation stated",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
+          "evidence": [
+            "meta description: \"Digital services hub of METROFOOD-RI — the European Research Infrastructure for metrology in food and nutrition. Access reference-material databases, service catalogues and node resources.\"",
+            "opening main text: \"Skip to main content METROFOOD-RI Digital Services Hub Services Contact metrofood.eu ↗ ☰ METROFOOD-RI Pilot Node Metrology-driven data for safe and sustainable food. Explore our offer METROFOOD-RI EOSC Catalogue Our digital ecosystem RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. Acceptable Use Policy ...\"",
+            "organisation-like names found: Casaccia Research Centre; ERIC; Italian National Agency; LifeWatch ERIC; Visit CESSDA LifeWatch ERIC; Visit LifeWatch ERIC"
+          ],
+          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
+        },
+        {
+          "point_id": "3",
+          "title": "EOSC logo and official node name visible",
+          "verdict": "MANUAL_REVIEW",
+          "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.",
+          "evidence": [
+            "EOSC-referencing image asset(s): 3",
+            "img: EOSC logo",
+            "img: EOSC Catalogues logo",
+            "img: EOSC Beyond logo",
+            "NONE of the 18 approved name(s) for this node appear in the page body — note the <title> is not searched"
+          ],
+          "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
+        },
+        {
+          "point_id": "4",
+          "title": "Link to the node's page on eosc.eu",
+          "verdict": "FAIL",
+          "message": "No link to eosc.eu was found on the landing page.",
+          "evidence": [
+            "26 link(s) examined, none pointing to eosc.eu",
+            "the node's dedicated page exists at https://eosc.eu/building-the-eosc-federation/eosc-node-metrofood-ri/ but is not linked from here"
+          ],
+          "reviewer_action": ""
+        },
+        {
+          "point_id": "5a",
+          "title": "Purpose description for research resources",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
+          "evidence": [
+            "26 outbound link(s) on the landing page",
+            "main text length: 6183 characters"
+          ],
+          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
+        },
+        {
+          "point_id": "5b",
+          "title": "Acceptable Use Policy (AUP) accessible",
+          "verdict": "FAIL",
+          "message": "An acceptable use policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "evidence": [
+            "26 link(s) on the landing page examined, none matching an Acceptable Use Policy",
+            "2 linked page(s) read, none linking to an Acceptable Use Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
+            "named in the text without a link: Acceptable Use Polic"
+          ],
+          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+        },
+        {
+          "point_id": "5c",
+          "title": "User Access Policy (UAP) accessible",
+          "verdict": "FAIL",
+          "message": "A user access policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "evidence": [
+            "26 link(s) on the landing page examined, none matching a User Access Policy",
+            "2 linked page(s) read, none linking to a User Access Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
+            "named in the text without a link: Access Polic, User Access Polic"
+          ],
+          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+        },
+        {
+          "point_id": "6",
+          "title": "Means of contacting the node helpdesk",
+          "verdict": "PASS",
+          "message": "The landing page links to a route identified as a helpdesk or user support.",
+          "evidence": [
+            "\"premotec-helpdesk@scc.kit.edu\" -> mailto:premotec-helpdesk@scc.kit.edu",
+            "\"Contact us\" -> mailto:premotec-helpdesk@scc.kit.edu",
+            "\"premotec-helpdesk@scc.kit.edu\" -> mailto:premotec-helpdesk@scc.kit.edu",
+            "\"Contact us\" -> mailto:premotec-helpdesk@scc.kit.edu"
           ],
           "reviewer_action": "Confirm the route reaches the node's user support. A helpdesk behind a sign-in form is still a means of contact, but note it."
         },

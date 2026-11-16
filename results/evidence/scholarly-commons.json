@@ -2,7 +2,7 @@
   "node_id": "scholarly-commons",
   "node_name": "Scholarly Commons",
   "requested_url": "https://eosc.scholarlycommons.eu/home",
-  "fetched_at": "2026-11-11T19:26:01+00:00",
+  "fetched_at": "2026-11-16T20:12:42+00:00",
   "final_url": "https://eosc.scholarlycommons.eu/home",
   "http_status": 200,
   "redirect_chain": [],
@@ -910,5 +910,5 @@
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 29 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
+  "crawl_note": "depth 2: 29 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
 }

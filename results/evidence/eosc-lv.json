@@ -2,7 +2,7 @@
   "node_id": "eosc-lv",
   "node_name": "EOSC Node Latvia",
   "requested_url": "https://eosc.lv/en/",
-  "fetched_at": "2026-11-11T19:25:55+00:00",
+  "fetched_at": "2026-11-16T20:12:36+00:00",
   "final_url": "https://eosc.lv/en/",
   "http_status": 403,
   "redirect_chain": [
@@ -13,7 +13,7 @@
   "title": "Just a moment...",
   "lang_attr": "en-us",
   "main_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond",
-  "full_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond Ray ID: a58faf895acc5efe Performance and Security by Cloudflare Privacy",
+  "full_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond Ray ID: a5b926ca4bad765b Performance and Security by Cloudflare Privacy",
   "links": [
     {
       "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
@@ -32,7 +32,7 @@
       "alt": "Icon for eosc.lv",
       "aria_label": "",
       "title": "",
-      "css_class": "_2a2c8878b3975720ca768afc _c9f342e6b710f2e5efb93a83",
+      "css_class": "_3ff52eeb7e58d2125ad8a7c5 _eb4685f4966562e8e7023ccd",
       "inline_svg": false
     }
   ],
@@ -56,5 +56,5 @@
   "crawl_depth": 2,
   "children": [],
   "children_skipped": [],
-  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 44 of 60 used"
+  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
 }

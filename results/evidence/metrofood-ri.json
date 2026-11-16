@@ -1,0 +1,651 @@
+{
+  "node_id": "metrofood-ri",
+  "node_name": "METROFOOD-RI",
+  "requested_url": "https://services.metrofood-services.eu/eosc",
+  "fetched_at": "2026-11-16T20:12:56+00:00",
+  "final_url": "https://services.metrofood-services.eu/eosc",
+  "http_status": 200,
+  "redirect_chain": [
+    "https://services.metrofood-services.eu/eosc",
+    "http://services.metrofood-services.eu/eosc/",
+    "https://googleads.g.doubleclick.net/pagead/id"
+  ],
+  "robots_allowed": true,
+  "robots_note": "robots.txt consulted",
+  "title": "METROFOOD-RI · Digital Services",
+  "lang_attr": "en",
+  "main_text": "Skip to main content METROFOOD-RI Digital Services Hub Services Contact metrofood.eu ↗ ☰ METROFOOD-RI Pilot Node Metrology-driven data for safe and sustainable food. Explore our offer METROFOOD-RI EOSC Catalogue Our digital ecosystem RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. Acceptable Use Policy User Access Policy Visit RM-App EOSC Catalogues Browse the METROFOOD service catalogues integrated with the European Open Science Cloud — services, datasets and training resources. Acceptable Use Policy User Access Policy Visit EOSC Catalogues METROFOOD-IT Catalogues Italian national-node catalogue — specialised services, laboratory capabilities and research infrastructure available across Italy. Acceptable Use Policy User Access Policy Visit METROFOOD-IT Catalogues About METROFOOD-RI METROFOOD-RI is a European research infrastructure for metrology in food and nutrition, supporting quality, safety, traceability and sustainability across the agrifood sector. Included on the ESFRI Roadmap since 2018, it brings together 13+ partner countries and over €17.79M in funding. The infrastructure provides one entry point to reference-material databases, service catalogues and research resources, integrating analytical laboratories and data with the EOSC ecosystem to enable interoperable, FAIR food data access and cross-disciplinary research. Mission To promote metrology in food and nutrition, enhancing food quality and safety across Europe through open access, FAIR data principles, and the digitalisation of agrifood systems. Target Groups Researchers and laboratories needing reference materials and metrological data for food quality and safety. National nodes and partner institutions integrating services into the METROFOOD-RI network. Policymakers requiring evidence-based data on food quality, safety and traceability. EOSC participants exploring METROFOOD-RI services and resources through the EOSC portal. Key Functionalities Reference-material search and cross-search by matrix–analyte combination (RM-App). EOSC-integrated service catalogues. National-node catalogues (e.g. METROFOOD-IT). Membership and partner-onboarding portal. Open, FAIR-compliant data access. Responsible Organisations ENEA — Italian National Agency for New Technologies, Energy and Sustainable Economic Development METROFOOD-RI coordinator (Casaccia Research Centre, Rome, IT) METROFOOD-RI partner institutions National nodes contributing services and resources to the node Case study Metabolomic Analysis of Food Products via Federated METROFOOD-RI Services Exchange Services AAI Service Catalogue Marketplace / Resource Discovery Hub METROFOOD-RI Data Catalogue METROFOOD-RI Helpdesk EGI Cloud Compute User profile A food chemist at an European Research Institution, wants to perform metabolomic analysis of food products to evaluate freshness, flavor, and environmental influences on quality. Problem or Need The researcher needs to identify key metabolic markers, assess nutrient variations, and detect potential contaminants in food samples — however this requires specialised datasets and compute power that their home institution cannot provide. Solution The researcher searches the federated Resource Discovery Hub and finds the relevant METROFOOD-RI services and datasets. They authenticate via EOSC AAI to access the METROFOOD-RI Data Catalogue and submit an access request through the METROFOOD-RI Helpdesk. They then locate and request access to EGI Cloud Compute through the same federated hub, using EOSC AAI, and run their metabolic analyses on the provisioned compute resources, saving the results. Results / Benefits The researcher identifies key metabolic markers, assesses nutrient variations, and detects potential contaminants, without needing to invest in local infrastructure. Data access, authentication and compute provisioning are streamlined end-to-end through federated discovery and single sign-on. EOSC Beyond EOSC Beyond is a European project advancing the implementation of the European Open Science Cloud by connecting research infrastructures as federated Pilot Nodes. METROFOOD-RI participates as a Pilot Node, integrating its digital ecosystem, including the RM-App reference-material search, EOSC Catalogues and national-node catalogues, into the EOSC ecosystem to enable federated discovery, machine-actionable access, and cross-infrastructure support for food and nutrition research. METROFOOD-RI on EOSC Beyond ↗ FAQ & Support Helpdesk Questions about METROFOOD-RI resources, access requests or technical problems? Contact the node helpdesk. premotec-helpdesk@scc.kit.edu How can I access METROFOOD-RI resources in EOSC? Do I need an account to access and use the services? Who can I contact for technical support? Under which policies can I use METROFOOD-RI resources? Useful Links METROFOOD-RI official website METROFOOD-RI EOSC Catalogue Acceptable Use Policy User Access Policy Privacy policy Explore Other Nodes CESSDA Integrating domain-specific services for Social Sciences into the EOSC ecosystem. Visit CESSDA LifeWatch ERIC Facilitating biodiversity and ecosystem research by integrating LifeWatch ERIC digital assets into the EOSC ecosystem. Visit LifeWatch ERIC Instruct-ERIC Providing automatic synchronisation between ARIA and EOSC. Visit Instruct-ERIC Ready to Explore METROFOOD-RI? Explore our integrated digital ecosystem and benefit from interoperable tools that support modern food and nutrition research. For direct contact, reach the coordination office or your national-node reference person — Coordinator: [removed____], ENEA — Casaccia Research Centre, Rome (IT). Explore Services Contact us METROFOOD-RI Part of the European Research Infrastructure for metrology in food and nutrition — supporting quality, safety, traceability and sustainability across the agrifood sector. Explore Services Contact metrofood.eu ↗ Coordination office [removed____] (Coordinator) ENEA — Casaccia Research Centre Via Anguillarese 301, 00123 Rome, Italy Phone: +39 XXXXXX info@metrofood.eu © 2026 METROFOOD-RI. All rights reserved. Privacy policy",
+  "full_text": "Skip to main content METROFOOD-RI Digital Services Hub Services Contact metrofood.eu ↗ ☰ METROFOOD-RI Pilot Node Metrology-driven data for safe and sustainable food. Explore our offer METROFOOD-RI EOSC Catalogue Our digital ecosystem RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. Acceptable Use Policy User Access Policy Visit RM-App EOSC Catalogues Browse the METROFOOD service catalogues integrated with the European Open Science Cloud — services, datasets and training resources. Acceptable Use Policy User Access Policy Visit EOSC Catalogues METROFOOD-IT Catalogues Italian national-node catalogue — specialised services, laboratory capabilities and research infrastructure available across Italy. Acceptable Use Policy User Access Policy Visit METROFOOD-IT Catalogues About METROFOOD-RI METROFOOD-RI is a European research infrastructure for metrology in food and nutrition, supporting quality, safety, traceability and sustainability across the agrifood sector. Included on the ESFRI Roadmap since 2018, it brings together 13+ partner countries and over €17.79M in funding. The infrastructure provides one entry point to reference-material databases, service catalogues and research resources, integrating analytical laboratories and data with the EOSC ecosystem to enable interoperable, FAIR food data access and cross-disciplinary research. Mission To promote metrology in food and nutrition, enhancing food quality and safety across Europe through open access, FAIR data principles, and the digitalisation of agrifood systems. Target Groups Researchers and laboratories needing reference materials and metrological data for food quality and safety. National nodes and partner institutions integrating services into the METROFOOD-RI network. Policymakers requiring evidence-based data on food quality, safety and traceability. EOSC participants exploring METROFOOD-RI services and resources through the EOSC portal. Key Functionalities Reference-material search and cross-search by matrix–analyte combination (RM-App). EOSC-integrated service catalogues. National-node catalogues (e.g. METROFOOD-IT). Membership and partner-onboarding portal. Open, FAIR-compliant data access. Responsible Organisations ENEA — Italian National Agency for New Technologies, Energy and Sustainable Economic Development METROFOOD-RI coordinator (Casaccia Research Centre, Rome, IT) METROFOOD-RI partner institutions National nodes contributing services and resources to the node Case study Metabolomic Analysis of Food Products via Federated METROFOOD-RI Services Exchange Services AAI Service Catalogue Marketplace / Resource Discovery Hub METROFOOD-RI Data Catalogue METROFOOD-RI Helpdesk EGI Cloud Compute User profile A food chemist at an European Research Institution, wants to perform metabolomic analysis of food products to evaluate freshness, flavor, and environmental influences on quality. Problem or Need The researcher needs to identify key metabolic markers, assess nutrient variations, and detect potential contaminants in food samples — however this requires specialised datasets and compute power that their home institution cannot provide. Solution The researcher searches the federated Resource Discovery Hub and finds the relevant METROFOOD-RI services and datasets. They authenticate via EOSC AAI to access the METROFOOD-RI Data Catalogue and submit an access request through the METROFOOD-RI Helpdesk. They then locate and request access to EGI Cloud Compute through the same federated hub, using EOSC AAI, and run their metabolic analyses on the provisioned compute resources, saving the results. Results / Benefits The researcher identifies key metabolic markers, assesses nutrient variations, and detects potential contaminants, without needing to invest in local infrastructure. Data access, authentication and compute provisioning are streamlined end-to-end through federated discovery and single sign-on. EOSC Beyond EOSC Beyond is a European project advancing the implementation of the European Open Science Cloud by connecting research infrastructures as federated Pilot Nodes. METROFOOD-RI participates as a Pilot Node, integrating its digital ecosystem, including the RM-App reference-material search, EOSC Catalogues and national-node catalogues, into the EOSC ecosystem to enable federated discovery, machine-actionable access, and cross-infrastructure support for food and nutrition research. METROFOOD-RI on EOSC Beyond ↗ FAQ & Support Helpdesk Questions about METROFOOD-RI resources, access requests or technical problems? Contact the node helpdesk. premotec-helpdesk@scc.kit.edu How can I access METROFOOD-RI resources in EOSC? Do I need an account to access and use the services? Who can I contact for technical support? Under which policies can I use METROFOOD-RI resources? Useful Links METROFOOD-RI official website METROFOOD-RI EOSC Catalogue Acceptable Use Policy User Access Policy Privacy policy Explore Other Nodes CESSDA Integrating domain-specific services for Social Sciences into the EOSC ecosystem. Visit CESSDA LifeWatch ERIC Facilitating biodiversity and ecosystem research by integrating LifeWatch ERIC digital assets into the EOSC ecosystem. Visit LifeWatch ERIC Instruct-ERIC Providing automatic synchronisation between ARIA and EOSC. Visit Instruct-ERIC Ready to Explore METROFOOD-RI? Explore our integrated digital ecosystem and benefit from interoperable tools that support modern food and nutrition research. For direct contact, reach the coordination office or your national-node reference person — Coordinator: [removed____], ENEA — Casaccia Research Centre, Rome (IT). Explore Services Contact us METROFOOD-RI Part of the European Research Infrastructure for metrology in food and nutrition — supporting quality, safety, traceability and sustainability across the agrifood sector. Explore Services Contact metrofood.eu ↗ Coordination office [removed____] (Coordinator) ENEA — Casaccia Research Centre Via Anguillarese 301, 00123 Rome, Italy Phone: +39 XXXXXX info@metrofood.eu © 2026 METROFOOD-RI. All rights reserved. Privacy policy",
+  "links": [
+    {
+      "href": "https://services.metrofood-services.eu/",
+      "text": "METROFOOD-RI Digital Services Hub",
+      "visible": true
+    },
+    {
+      "href": "https://services.metrofood-services.eu/#services",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://services.metrofood-services.eu/#contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://www.metrofood.eu/",
+      "text": "metrofood.eu ↗",
+      "visible": true
+    },
+    {
+      "href": "https://services.metrofood-services.eu/eosc#our-offer",
+      "text": "Explore our offer",
+      "visible": true
+    },
+    {
+      "href": "https://catalogues.staging.metrofood-services.eu/",
+      "text": "METROFOOD-RI EOSC Catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://rm.metrofood-services.eu/",
+      "text": "Visit RM-App",
+      "visible": true
+    },
+    {
+      "href": "https://catalogues.eosc.metrofood-services.eu/",
+      "text": "Visit EOSC Catalogues",
+      "visible": true
+    },
+    {
+      "href": "https://catalogues.it.metrofood-services.eu/catalogues",
+      "text": "Visit METROFOOD-IT Catalogues",
+      "visible": true
+    },
+    {
+      "href": "https://www.enea.it/en/",
+      "text": "ENEA — Italian National Agency for New Technologies, Energy and Sustainable Economic Development",
+      "visible": true
+    },
+    {
+      "href": "https://www.metrofood.eu/",
+      "text": "METROFOOD-RI partner institutions",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc-beyond.eu/pilot/metrofood-ri",
+      "text": "METROFOOD-RI on EOSC Beyond ↗",
+      "visible": true
+    },
+    {
+      "href": "mailto:premotec-helpdesk@scc.kit.edu",
+      "text": "premotec-helpdesk@scc.kit.edu",
+      "visible": true
+    },
+    {
+      "href": "https://www.metrofood.eu/",
+      "text": "METROFOOD-RI official website",
+      "visible": true
+    },
+    {
+      "href": "https://catalogues.staging.metrofood-services.eu/",
+      "text": "METROFOOD-RI EOSC Catalogue",
+      "visible": true
+    },
+    {
+      "href": "https://www.metrofood.eu/privacy.html",
+      "text": "Privacy policy",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc-beyond.eu/pilot/cessda",
+      "text": "Visit CESSDA",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc-beyond.eu/pilot/lifewatch-eric",
+      "text": "Visit LifeWatch ERIC",
+      "visible": true
+    },
+    {
+      "href": "https://www.eosc-beyond.eu/pilot/instruct-eric",
+      "text": "Visit Instruct-ERIC",
+      "visible": true
+    },
+    {
+      "href": "https://services.metrofood-services.eu/#services",
+      "text": "Explore Services",
+      "visible": true
+    },
+    {
+      "href": "mailto:premotec-helpdesk@scc.kit.edu",
+      "text": "Contact us",
+      "visible": true
+    },
+    {
+      "href": "https://services.metrofood-services.eu/#services",
+      "text": "Services",
+      "visible": true
+    },
+    {
+      "href": "https://services.metrofood-services.eu/#contact",
+      "text": "Contact",
+      "visible": true
+    },
+    {
+      "href": "https://www.metrofood.eu/",
+      "text": "metrofood.eu ↗",
+      "visible": true
+    },
+    {
+      "href": "mailto:info@metrofood.eu",
+      "text": "info@metrofood.eu",
+      "visible": true
+    },
+    {
+      "href": "https://www.metrofood.eu/privacy.html",
+      "text": "Privacy policy",
+      "visible": true
+    }
+  ],
+  "images": [
+    {
+      "src": "https://services.metrofood-services.eu/images/logometrofood.png",
+      "alt": "METROFOOD-RI logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/logometrofood.png",
+      "alt": "METROFOOD-RI logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "node-hero-logo",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/eosc-logo.png",
+      "alt": "EOSC logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "node-hero-eosc-logo",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/rm_app.png",
+      "alt": "RM-App logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/metrofood-catalogues.png",
+      "alt": "EOSC Catalogues logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/metrofood_it.png",
+      "alt": "METROFOOD-IT Catalogues logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/EOSC-Beyond-logo.png",
+      "alt": "EOSC Beyond logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/logometrofood.png",
+      "alt": "METROFOOD-RI logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/CESSDA-logo.png",
+      "alt": "CESSDA logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/LifeWatch_logo.jpg",
+      "alt": "LifeWatch ERIC logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/instruct-eric-logo.png",
+      "alt": "Instruct-ERIC logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "https://services.metrofood-services.eu/images/logometrofood.png",
+      "alt": "METROFOOD-RI logo",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": false
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "chevron",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "chevron",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "chevron",
+      "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "chevron",
+      "inline_svg": true
+    }
+  ],
+  "controls": [
+    {
+      "text": "☰",
+      "href": "https://services.metrofood-services.eu/eosc",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "How can I access METROFOOD-RI resources in EOSC?",
+      "href": "https://services.metrofood-services.eu/eosc",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Do I need an account to access and use the services?",
+      "href": "https://services.metrofood-services.eu/eosc",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Who can I contact for technical support?",
+      "href": "https://services.metrofood-services.eu/eosc",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Under which policies can I use METROFOOD-RI resources?",
+      "href": "https://services.metrofood-services.eu/eosc",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Skip to main content",
+      "href": "https://services.metrofood-services.eu/eosc#main",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "METROFOOD-RI Digital Services Hub",
+      "href": "https://services.metrofood-services.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://services.metrofood-services.eu/#services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://services.metrofood-services.eu/#contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "metrofood.eu ↗",
+      "href": "https://www.metrofood.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Explore our offer",
+      "href": "https://services.metrofood-services.eu/eosc#our-offer",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "METROFOOD-RI EOSC Catalogue",
+      "href": "https://catalogues.staging.metrofood-services.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Acceptable Use Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-acceptable-use-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User Access Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-user-access-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit RM-App",
+      "href": "https://rm.metrofood-services.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Acceptable Use Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-acceptable-use-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User Access Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-user-access-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit EOSC Catalogues",
+      "href": "https://catalogues.eosc.metrofood-services.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Acceptable Use Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-acceptable-use-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User Access Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-user-access-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit METROFOOD-IT Catalogues",
+      "href": "https://catalogues.it.metrofood-services.eu/catalogues",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "ENEA — Italian National Agency for New Technologies, Energy and Sustainable Economic Development",
+      "href": "https://www.enea.it/en/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "METROFOOD-RI partner institutions",
+      "href": "https://www.metrofood.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "METROFOOD-RI on EOSC Beyond ↗",
+      "href": "https://www.eosc-beyond.eu/pilot/metrofood-ri",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "premotec-helpdesk@scc.kit.edu",
+      "href": "mailto:premotec-helpdesk@scc.kit.edu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "METROFOOD-RI official website",
+      "href": "https://www.metrofood.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "METROFOOD-RI EOSC Catalogue",
+      "href": "https://catalogues.staging.metrofood-services.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Acceptable Use Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-acceptable-use-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "User Access Policy",
+      "href": "https://services.metrofood-services.eu/eosc#TODO-user-access-policy",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy policy",
+      "href": "https://www.metrofood.eu/privacy.html",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit CESSDA",
+      "href": "https://www.eosc-beyond.eu/pilot/cessda",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit LifeWatch ERIC",
+      "href": "https://www.eosc-beyond.eu/pilot/lifewatch-eric",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Visit Instruct-ERIC",
+      "href": "https://www.eosc-beyond.eu/pilot/instruct-eric",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Explore Services",
+      "href": "https://services.metrofood-services.eu/#services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact us",
+      "href": "mailto:premotec-helpdesk@scc.kit.edu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Services",
+      "href": "https://services.metrofood-services.eu/#services",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact",
+      "href": "https://services.metrofood-services.eu/#contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "metrofood.eu ↗",
+      "href": "https://www.metrofood.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "info@metrofood.eu",
+      "href": "mailto:info@metrofood.eu",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Privacy policy",
+      "href": "https://www.metrofood.eu/privacy.html",
+      "tag": "a",
+      "visible": true
+    }
+  ],
+  "meta_description": "Digital services hub of METROFOOD-RI — the European Research Infrastructure for metrology in food and nutrition. Access reference-material databases, service catalogues and node resources.",
+  "error": "",
+  "screenshot": "metrofood-ri.png",
+  "crawl_depth": 2,
+  "children": [
+    {
+      "url": "https://services.metrofood-services.eu/#contact",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "Contact",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://services.metrofood-services.eu/#contact",
+      "title": "METROFOOD-RI · Digital Services",
+      "lang_attr": "en",
+      "main_text": "High-level metrology services in food & nutrition Infrastructure for promoting metrology in food & nutrition One entry point to the METROFOOD-RI digital tools — reference-material databases, service catalogues and research resources — supporting the enhancement of food quality and safety across Europe. Explore services Visit metrofood.eu ★ ESFRI Roadmap 2018 13+ Partner countries €17.79M Total funding Research infrastructure ESFRI Roadmap 2018 Food quality & safety Core mission Open access FAIR data principles Digitalisation Agrifood systems e-Services & applications Our digital ecosystem Each application plays a distinct role in the infrastructure. Open calls and services will progressively be centralised through the future ERIC. Select a service to get started. ● Live RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. rm.metrofood-services.eu Coming soon Membership App Portal for managing METROFOOD-RI membership, partner onboarding, national-node coordination and institutional profiles. membership.metrofood-services.eu ● Live EOSC Catalogues Browse the METROFOOD service catalogues integrated with the European Open Science Cloud — services, datasets and training resources. catalogues.eosc.metrofood-services.eu ● Live METROFOOD-IT Catalogues Italian national-node catalogue — specialised services, laboratory capabilities and research infrastructure available across Italy. catalogues.it.metrofood-services.eu Contact Who to get in touch with Reach the coordination office or your national-node reference person directly. XX [removed____] Coordinator, METROFOOD-RI ENEA — Casaccia Research Centre, Rome (IT) info@metrofood.eu NN National-node scientific contact Scientific representative [ Institute / partner — to complete ] [ XXXXX@node.eu ] NN National-node operational contact Operational representative [ Institute / partner — to complete ] [ XXXXX@node.eu ]",
+      "full_text": "Skip to main content METROFOOD-RI Digital Services Hub Services Contact metrofood.eu ↗ ☰ High-level metrology services in food & nutrition Infrastructure for promoting metrology in food & nutrition One entry point to the METROFOOD-RI digital tools — reference-material databases, service catalogues and research resources — supporting the enhancement of food quality and safety across Europe. Explore services Visit metrofood.eu ★ ESFRI Roadmap 2018 13+ Partner countries €17.79M Total funding Research infrastructure ESFRI Roadmap 2018 Food quality & safety Core mission Open access FAIR data principles Digitalisation Agrifood systems e-Services & applications Our digital ecosystem Each application plays a distinct role in the infrastructure. Open calls and services will progressively be centralised through the future ERIC. Select a service to get started. ● Live RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. rm.metrofood-services.eu Coming soon Membership App Portal for managing METROFOOD-RI membership, partner onboarding, national-node coordination and institutional profiles. membership.metrofood-services.eu ● Live EOSC Catalogues Browse the METROFOOD service catalogues integrated with the European Open Science Cloud — services, datasets and training resources. catalogues.eosc.metrofood-services.eu ● Live METROFOOD-IT Catalogues Italian national-node catalogue — specialised services, laboratory capabilities and research infrastructure available across Italy. catalogues.it.metrofood-services.eu Contact Who to get in touch with Reach the coordination office or your national-node reference person directly. XX [removed____] Coordinator, METROFOOD-RI ENEA — Casaccia Research Centre, Rome (IT) info@metrofood.eu NN National-node scientific contact Scientific representative [ Institute / partner — to complete ] [ XXXXX@node.eu ] NN National-node operational contact Operational representative [ Institute / partner — to complete ] [ XXXXX@node.eu ] Funded by the European Union. METROFOOD-RI is part of the ESFRI Roadmap and receives funding from the European Union's research and innovation framework programmes. The views expressed are those of the authors and do not necessarily reflect those of the European Union. METROFOOD-RI Part of the European Research Infrastructure for metrology in food and nutrition — supporting quality, safety, traceability and sustainability across the agrifood sector. Explore Services Contact metrofood.eu ↗ Coordination office [removed____] (Coordinator) ENEA — Casaccia Research Centre Via Anguillarese 301, 00123 Rome, Italy Phone: +39 XXXXXX info@metrofood.eu © 2026 METROFOOD-RI. All rights reserved. Privacy policy",
+      "links": [
+        {
+          "href": "https://services.metrofood-services.eu/",
+          "text": "METROFOOD-RI Digital Services Hub",
+          "visible": true
+        },
+        {
+          "href": "https://services.metrofood-services.eu/#services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://services.metrofood-services.eu/#contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.metrofood.eu/",
+          "text": "metrofood.eu ↗",
+          "visible": true
+        },
+        {
+          "href": "https://www.metrofood.eu/",
+          "text": "Visit metrofood.eu",
+          "visible": true
+        },
+        {
+          "href": "https://rm.metrofood-services.eu/",
+          "text": "● Live RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. rm.metrofood-services.eu",
+          "visible": true
+        },
+        {
+          "href": "https://catalogues.eosc.metrofood-services.eu/",
+          "text": "● Live EOSC Catalogues Browse the METROFOOD service catalogues integrated with the European Open Science Cloud — services, datasets and training resources. catalogues.eosc.metrofood-services.eu",
+          "visible": true
+        },
+        {
+          "href": "https://catalogues.it.metrofood-services.eu/catalogues",
+          "text": "● Live METROFOOD-IT Catalogues Italian national-node catalogue — specialised services, laboratory capabilities and research infrastructure available across Italy. catalogues.it.metrofood-services.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@metrofood.eu",
+          "text": "info@metrofood.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@metrofood.eu",
+          "text": "[ XXXXX@node.eu ]",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@metrofood.eu",
+          "text": "[ XXXXX@node.eu ]",
+          "visible": true
+        },
+        {
+          "href": "https://services.metrofood-services.eu/#services",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://services.metrofood-services.eu/#contact",
+          "text": "Contact",
+          "visible": true
+        },
+        {
+          "href": "https://www.metrofood.eu/",
+          "text": "metrofood.eu ↗",
+          "visible": true
+        },
+        {
+          "href": "mailto:info@metrofood.eu",
+          "text": "info@metrofood.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.metrofood.eu/privacy.html",
+          "text": "Privacy policy",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://catalogues.staging.metrofood-services.eu/",
+      "selected_for": [
+        "5s"
+      ],
+      "link_text": "METROFOOD-RI EOSC Catalogue",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://catalogues.staging.metrofood-services.eu/",
+      "title": "Metrofood Catalogues",
+      "lang_attr": "en",
+      "main_text": "",
+      "full_text": "",
+      "links": [],
+      "robots_allowed": true,
+      "error": ""
+    }
+  ],
+  "children_skipped": [
+    "https://services.metrofood-services.eu/#contact (already fetched at depth 1)",
+    "https://services.metrofood-services.eu/#contact (already fetched at depth 1)"
+  ],
+  "crawl_note": "depth 2: 26 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
+}
