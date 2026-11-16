@@ -37,6 +37,14 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
+> **Node list changed on 16 November 2026.** **EBRAINS-RI** was removed from
+> `nodes.yaml`, the shipped default copy and both approved-name lists (its name
+> "EOSC Node | EBRAINS RI" dropped). **METROFOOD-RI** was added (`metrofood-ri`,
+> landing page `https://services.metrofood-services.eu/eosc`, approved name
+> "EOSC Node | METROFOOD-RI", EOSC page `eosc-node-metrofood-ri`). Eighteen nodes
+> stay configured. Run `web-37`, described below, predates this change; EBRAINS-RI's
+earlier results remain in it and in the git history.
+
 > **The published report is run `web-37`, collected at `--depth 2`, and it has
 > not been reviewed yet.** It was collected on 11 November 2026 between 19:18 and
 > 19:26 UTC by the GitHub workflow ([run 43085726876](https://github.com/marioreale/eosc-basic-compliance/actions/runs/43085726876), commit `77afd2c`), from all

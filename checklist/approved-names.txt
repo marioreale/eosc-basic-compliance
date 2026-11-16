@@ -11,8 +11,8 @@ EOSC Node | GÉANT
 EOSC Node | Poland
 EOSC Node | Italy
 EOSC Node | Slovakia
-EOSC Node | EBRAINS RI
 EOSC Node | Life Sciences Connect
 EOSC Node | Germany
 EOSC Node | Latvia
 EOSC Node | Scholarly Commons
+EOSC Node | METROFOOD-RI
