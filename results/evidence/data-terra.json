@@ -2,7 +2,7 @@
   "node_id": "data-terra",
   "node_name": "Data Terra",
   "requested_url": "https://www.earth-data.eu/",
-  "fetched_at": "2026-11-16T20:07:49+00:00",
+  "fetched_at": "2026-11-17T16:42:38+00:00",
   "final_url": "https://www.earth-data.eu/",
   "http_status": 200,
   "redirect_chain": [],
@@ -291,7 +291,7 @@
   ],
   "images": [
     {
-      "src": "https://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/de.svg",
+      "src": "http://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/de.svg",
       "alt": "Deutsch",
       "aria_label": "",
       "title": "",
@@ -299,7 +299,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/fr.svg",
+      "src": "http://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/fr.svg",
       "alt": "Français",
       "aria_label": "",
       "title": "",
@@ -307,7 +307,7 @@
       "inline_svg": false
     },
     {
-      "src": "https://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/gb.svg",
+      "src": "http://www.earth-data.eu/wp-content/plugins/polylang/vendor/wpsyntex/flags/gb.svg",
       "alt": "English",
       "aria_label": "",
       "title": "",

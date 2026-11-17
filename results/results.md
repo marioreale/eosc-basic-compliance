@@ -2,7 +2,7 @@
 
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-38` · 2026-11-16T20:18:40+00:00 · 18 nodes · one page request per node plus 67 followed link(s), then 35 second-hop page(s) (depth 2).
+Run `web-39` · 2026-11-17T16:49:06+00:00 · 18 nodes · one page request per node plus 68 followed link(s), then 35 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -16,7 +16,7 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-180 cells: 🟢 78 PASS · 🔴 8 FAIL · 🟠 64 review · 🟣 10 error · 🧱 20 firewall.
+180 cells: 🟢 81 PASS · 🔴 11 FAIL · 🟠 68 review · 🧱 20 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -33,7 +33,7 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟠 review | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| Life Sciences Connect | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR |
+| Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
 | Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS | 🟢 PASS |
@@ -43,7 +43,7 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 
 The same evidence plus 35 page(s) reached one further hop out, under a shared run budget.
 
-180 cells: 🟢 79 PASS · 🔴 8 FAIL · 🟠 63 review · 🟣 10 error · 🧱 20 firewall.
+180 cells: 🟢 82 PASS · 🔴 11 FAIL · 🟠 67 review · 🧱 20 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -60,7 +60,7 @@ The same evidence plus 35 page(s) reached one further hop out, under a shared ru
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| Life Sciences Connect | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR | 🟣 ERROR |
+| Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
 | Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS | 🟢 PASS |
@@ -814,17 +814,47 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 ### Life Sciences Connect
 <https://eosc-lifesciences-connect.eu/home>
 
-- **1** 🟣 ERROR — The page could not be fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-  - *Reviewer action:* Retry; if it persists, check the URL registered in the Contributors Dashboard.
-- **1R** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **2** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **3** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **4** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **5a** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **5b** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **5c** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **6** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
-- **7** 🟣 ERROR — Page not fetched: TimeoutError: Page.goto: Timeout 45000ms exceeded. Call log: - navigating to "https://eosc-lifesciences-connect.eu/home", waiting until "domcontentloaded"
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 1673 characters of text rendered
+  - redirects followed: 3
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - 1 distinct external host(s) linked from the landing page
+  - aria.services (ARIA)
+  - depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible
+  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
+- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
+  - opening main text: "The EOSC Life Sciences Connect Node brings together four world-leading European Research Infrastructures to form a thematic Life Science Node within the European Open Science Cloud (EOSC) Federation: ELIXIR: A distributed life science data infrastructure, bringing together 600+ services including databases, software and workflows, training, standards, data management and compute. EMBL: Europe’s fl..."
+  - organisation-like names found: ERIC; Euro-BioImaging ERIC
+  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
+- **3** 🟠 review — No EOSC-referencing image asset was found in the markup. This is NOT proof of absence: a logo shown as a CSS background image, an SVG sprite reference, or a file named without "eosc" would all be missed by this check.
+  - 5 image/SVG element(s) examined, none referencing EOSC
+  - mentions of EOSC in page text: 8
+  - NONE of the 18 approved name(s) for this node appear in the page body — note the <title> is not searched
+  - *Reviewer action:* Look at the page (or its screenshot) and confirm whether an EOSC logo is visibly displayed.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "our dedicated page on the EOSC Federation website" -> https://eosc.eu/building-the-eosc-federation/eosc-node-life-sciences-connect
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+  - 6 outbound link(s) on the landing page
+  - main text length: 1506 characters
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
+- **5b** 🔴 **FAIL** — An acceptable use policy is named in the page text, but no link to it was found. None of the 1 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
+  - 6 link(s) on the landing page examined, none matching an Acceptable Use Policy
+  - 1 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc-lifesciences-connect.eu/catalogue
+  - named in the text without a link: AUP
+  - note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands
+  - *Reviewer action:* Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
+- **5c** 🔴 **FAIL** — A user access policy is named in the page text, but no link to it was found. None of the 1 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
+  - 6 link(s) on the landing page examined, none matching a User Access Policy
+  - 1 linked page(s) read, none linking to a User Access Policy: https://eosc-lifesciences-connect.eu/catalogue
+  - named in the text without a link: UAP
+  - note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands
+  - *Reviewer action:* Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
+- **6** 🔴 **FAIL** — No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.
+  - 6 link(s) examined
+  - note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en"
+  - detected language: en (confidence 1.0)
 
 ### EOSC Node Germany
 <https://eosc-node.de>

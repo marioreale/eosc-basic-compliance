@@ -2,7 +2,7 @@
   "node_id": "metrofood-ri",
   "node_name": "METROFOOD-RI",
   "requested_url": "https://services.metrofood-services.eu/eosc",
-  "fetched_at": "2026-11-16T20:12:56+00:00",
+  "fetched_at": "2026-11-17T16:46:48+00:00",
   "final_url": "https://services.metrofood-services.eu/eosc",
   "http_status": 200,
   "redirect_chain": [

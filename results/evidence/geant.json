@@ -2,7 +2,7 @@
   "node_id": "geant",
   "node_name": "GÉANT",
   "requested_url": "https://geant.org/geant-eosc-node/",
-  "fetched_at": "2026-11-16T20:10:28+00:00",
+  "fetched_at": "2026-11-17T16:45:13+00:00",
   "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
   "http_status": 403,
   "redirect_chain": [
@@ -13,7 +13,7 @@
   "title": "Just a moment...",
   "lang_attr": "en-us",
   "main_text": "geant.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for geant.org to respond",
-  "full_text": "geant.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for geant.org to respond Ray ID: a5b923aafe14eb3c Performance and Security by Cloudflare Privacy",
+  "full_text": "geant.org Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for geant.org to respond Ray ID: a5c03463e8ea8bdc Performance and Security by Cloudflare Privacy",
   "links": [
     {
       "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
@@ -32,7 +32,7 @@
       "alt": "Icon for geant.org",
       "aria_label": "",
       "title": "",
-      "css_class": "_e3d2b0fe9b8601e957153b84 _4dc72847aee10fe14e48676c",
+      "css_class": "_7844a2ff971b1ad798708d74 _c771e54e3df8da3aefb8181f",
       "inline_svg": false
     }
   ],
