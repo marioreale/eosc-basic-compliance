@@ -2,7 +2,7 @@
 
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-39` · 2026-11-17T16:49:06+00:00 · 18 nodes · one page request per node plus 68 followed link(s), then 35 second-hop page(s) (depth 2).
+Run `web-40` · 2026-11-18T10:44:43+00:00 · 18 nodes · one page request per node plus 68 followed link(s), then 35 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -382,7 +382,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://www.earth-data.eu/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 4274 characters of text rendered
+  - HTTP 200 anonymously, 4260 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 4 distinct external host(s) linked from the landing page
   - earth-data-community.github.io (Acceptable Use Policy, Documentation, User Access Policy)
@@ -424,7 +424,7 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://eosc.fi/>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 3983 characters of text rendered
+  - HTTP 200 anonymously, 4061 characters of text rendered
   - redirects followed: 1
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
   - 8 distinct external host(s) linked from the landing page

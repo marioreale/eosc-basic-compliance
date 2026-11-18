@@ -109,10 +109,12 @@ does not record (section 3), or if you want a fresh
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 8. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run, `web-36`, covers all eighteen configured nodes, so `assess` on
-`results/` needs no `--skip`. To rebuild the earlier `web-35`, which predates EOSC
-Node Latvia and Scholarly Commons, pass the node and name lists it was made with
-(`--nodes` and `--approved-names`, from commit `a556394`), not `--skip`.
+a copy first. The published run, `web-40`, covers all eighteen configured nodes, so `assess` on
+`results/` needs no `--skip`. To rebuild a run made with another node list, pass
+the node and name lists it was made with (`--nodes` and `--approved-names`), not
+`--skip`: from commit `77afd2c` for `web-37` and earlier runs with EBRAINS-RI,
+and from commit `a556394` for `web-35`, which predates EOSC Node Latvia and
+Scholarly Commons.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
 
@@ -285,6 +287,7 @@ of strings), and `reviewer_action`.
 | `FAIL` | Violated, and the tool can show why |
 | `MANUAL_REVIEW` | A human must decide; evidence is attached to make that fast |
 | `ERROR` | The tool could not assess at all (page unreachable, robots disallowed) |
+| `FIREWALL` | The site answered, but with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page; nothing can be asserted, so all ten points of that node are `FIREWALL` (since 11 November 2026, commit `77afd2c`) |
 
 `MANUAL_REVIEW` is the load-bearing one. Several checklist points turn on phrases
 like "clearly state", or quantify over "all Node Exchange research resources
@@ -303,6 +306,23 @@ if ev.error:  ->  ERROR
 
 So a node whose landing page could not be fetched at all returns ten `ERROR`
 cells, never a mix of passes and a failure.
+
+**Before any point is scored, `run_all` asks whether the page is a firewall
+challenge** (`firewall_challenge`, since 11 November 2026). When the landing page
+answered HTTP 403, 429 or 503 (`CHALLENGE_STATUSES`) **and** its title or text
+carries a challenge phrase (`CHALLENGE_PATTERNS`: "Performing security
+verification", "Just a moment…", "Attention Required", "Checking your browser",
+"verifies you are not a bot") **and** the text, title or final URL carries a
+Cloudflare marker (`CLOUDFLARE_MARKERS`: the word Cloudflare, a "Ray ID", or a
+`cf-`/`cf_` query parameter such as `?ki-cf-botcl=1`), all ten points are
+`FIREWALL`, with the status, title, matched wording and final URL as evidence.
+These signals come from the same render as the screenshot, so the verdict says
+what the screenshot shows. Before this rule such nodes were `MANUAL_REVIEW` on
+points 1 to 6 and passed point 7 on the challenge page's own English, a `PASS`
+that described Cloudflare, not the node. A plain `403 Forbidden`, a served page
+that merely mentions Cloudflare, and a fetch error are not `FIREWALL`
+(`tests/test_firewall.py`, 9 cases). It is drawn as a solid red 🧱 badge in the
+HTML report and as 🧱 **Firewall** in Markdown, distinct from `FAIL` and `ERROR`.
 
 ### Shared helpers
 

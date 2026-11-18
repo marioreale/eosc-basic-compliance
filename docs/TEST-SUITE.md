@@ -6,7 +6,7 @@ a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
 clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
 **426 test cases, all passing in CI**. It was re-checked again on 29 September
-2026 for checklist v3.2: **453 test cases**, all passing (**462** since the per-node time limit of 20 October 2026, below; **464** since the two cases for the EOSC Federation logo on the results page, in `test_report.py`, of 5 November 2026 (commit `6b24380`). Adding EOSC Node Latvia and Scholarly Commons on 10 November 2026 added no case: the node guards check every entry inside one case). No node website was
+2026 for checklist v3.2: **453 test cases**, all passing (**462** since the per-node time limit of 20 October 2026, below; **464** since the two cases for the EOSC Federation logo on the results page, in `test_report.py`, of 5 November 2026 (commit `6b24380`). Adding EOSC Node Latvia and Scholarly Commons on 10 November 2026 added no case: the node guards check every entry inside one case; **473** since the nine cases of `tests/test_firewall.py` for the `FIREWALL` outcome, 11 November 2026, commit `77afd2c`; replacing EBRAINS-RI with METROFOOD-RI on 16 November 2026 added none). No node website was
 contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -71,7 +71,7 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**374 test functions, expanding to 464 executed cases** (twenty-three tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**383 test functions, expanding to 473 executed cases** (twenty-three tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
 The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 425 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
@@ -86,8 +86,9 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_nodes.py` | 14 | The node configuration itself: required fields, unique ids, well-formed URLs, no two nodes sharing an eosc.eu entry, every node's name covered by the scoped list, and the default copy for `--restore-default-config` identical to the committed `nodes.yaml` |
 | `test_privacy.py` | 51 | Personal-data masking: what is masked, what is kept, that evidence files and every report format are written masked, and that the committed evidence stays masked |
 | `test_node_timeout.py` | 9 | The per-node time limit, with a fake browser: a node that finishes is untouched; a node hung in navigation or in reading the page is abandoned at the limit, keeps what it had gathered and reads `ERROR` on all ten points; a clean-up that hangs too does not become the hang; `0` disables the limit; in a three-node run the node after a hung one is still collected and the browser is restarted |
+| `test_firewall.py` | 9 | The `FIREWALL` outcome: a 403/429/503 Cloudflare challenge turns all ten points into `FIREWALL` with its evidence; a plain 403, a served page that mentions Cloudflare, and a fetch error do not; the report draws the badge and orders the verdict |
 | `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
-| **Total** | **464** | |
+| **Total** | **473** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -145,6 +146,8 @@ The last column is not decoration. Each point declares its implementing function
 
 > **On the honesty of the output.** Three of the ten points cannot be settled by a script at all and four only partly. Those are reported as `MANUAL_REVIEW` with the evidence attached rather than guessed at. Roughly 60% of cells land in review by design. A confident wrong verdict about a named organisation costs more to retract than an honest "a human must look".
 
+> **When the page is a firewall challenge.** Since 11 November 2026 a landing page that answers HTTP 403, 429 or 503 with Cloudflare's challenge is scored `FIREWALL` on all ten points (a solid red 🧱 badge), not review: the server is up, but the tool was shown the challenge, not the node's page, so nothing is asserted either way. Before, point 7 passed on the challenge page's own English. Latvia and GÉANT are in this state in `web-37` to `web-40`.
+
 ---
 
 ## 4. Link-following depth
@@ -188,7 +191,7 @@ Two depth-2 runs on 21 September, of 18 and 14 second-hop requests, each changed
 
 ### The node list — a YAML file
 
-The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **fifteen** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `eosc-pl`, `eosc-it`, `eosc-sk`, and, since 9 October 2026, `ebrains-ri` and `life-sciences-connect`.
+The landing pages you want checked live in a configuration file, and that is the intended way to change them. `nodes.yaml` sits at the repository root and currently lists **eighteen** nodes: `bbmri-eric`, `cern`, `eosc-cz`, `eosc-dto`, `data-terra`, `eosc-fi`, `panosc`, `eudat`, `egi`, `geant`, `eosc-pl`, `eosc-it`, `eosc-sk`, `life-sciences-connect` (since 9 October 2026), `eosc-de` (since 20 October), `eosc-lv` and `scholarly-commons` (since 10 November), and `metrofood-ri` (since 16 November 2026, replacing `ebrains-ri`, which was removed together with its approved names).
 
 ```yaml
 nodes:
@@ -355,10 +358,12 @@ does not record (section 3 of [the analysis workflow](ANALYSIS-WORKFLOW.md)), or
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 11. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run, `web-36`, covers all eighteen configured nodes, so `assess` on
-`results/` needs no `--skip`. To rebuild the earlier `web-35`, which predates EOSC
-Node Latvia and Scholarly Commons, pass the node and name lists it was made with
-(`--nodes` and `--approved-names`, from commit `a556394`), not `--skip`.
+a copy first. The published run, `web-40`, covers all eighteen configured nodes, so `assess` on
+`results/` needs no `--skip`. To rebuild a run made with another node list, pass
+the node and name lists it was made with (`--nodes` and `--approved-names`), not
+`--skip`: from commit `77afd2c` for `web-37` and earlier runs with EBRAINS-RI,
+and from commit `a556394` for `web-35`, which predates EOSC Node Latvia and
+Scholarly Commons.
 With an explicit `--results`, `--only` also narrows the report to those nodes,
 which is why the table runs `assess` without it.
 
@@ -674,7 +679,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 464 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 473 cases, ~5-6 s, no network, no browser
 uv run ruff check src tests
 ```
 
@@ -759,7 +764,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 464 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 473 cases, ~5-6 s, no network, no browser
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -800,11 +805,42 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
+> **Run `web-40` (18 November 2026) is the published run.** It covers the eighteen nodes configured since 16 November 2026, when EBRAINS-RI was removed from `nodes.yaml`, the shipped default copy and both approved-name lists, and METROFOOD-RI (id `metrofood-ri`, `https://services.metrofood-services.eu/eosc`, approved name "EOSC Node | METROFOOD-RI") was added (commit `403e185`; approved list SHA-256 `6d8c249a…`). Since 11 November 2026 (commit `77afd2c`) a landing page that answers with a Cloudflare challenge is scored `FIREWALL` on all ten points rather than review (section 4 of the [analysis workflow](ANALYSIS-WORKFLOW.md); `tests/test_firewall.py`).
+
+### Current run: web-40 at depth 2, 18 November 2026 (unreviewed)
+
+From `results/results.json`, run `web-40`, collected on 18 November 2026 between 10:36 and 10:43 UTC by the GitHub workflow ([run 44286806986](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44286806986), commit `d9e35f9`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of eighteen names (SHA-256 `6d8c249a…`). It made 121 page requests: 18 landing pages, 68 direct links and 35 second-hop pages (budget: 35 of 60). Sixteen landing pages returned HTTP 200; GÉANT's and Latvia's returned HTTP 403 with the Cloudflare challenge. Every node finished within its time limit; the whole job took 8 minutes, of which about 7 were collection. Offline, `uv run basic-check assess --run web-40` reproduces it exactly, apart from the generation time (verified 18 November 2026, on the masked evidence).
+
+| Verdict | Depth 2 | Depth 1 |
+|---|---|---|
+| 🟢 PASS | 82 | 81 |
+| 🔴 FAIL | 11 | 11 |
+| 🟠 MANUAL_REVIEW | 67 | 68 |
+| 🧱 FIREWALL | 20 | 20 |
+| 🟣 ERROR | 0 | 0 |
+| **Total** | **180** (18 nodes × 10 points) | **180** |
+
+**What changed against `web-39`.** No cell changed, at either depth. Every node followed the same links, with the same HTTP statuses, as in `web-39`. The only evidence lines that moved are the rendered text lengths of two landing pages in point 1: Data Terra (4260 characters, was 4274) and EOSC Finland (4061, was 3983, with a new user-survey banner).
+
+The eleven FAILs are Germany 5b, 5c and 6; Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative); METROFOOD-RI 4, 5b and 5c (no `eosc.eu` link; its "Acceptable Use Policy" and "User Access Policy" links are `#TODO-…` placeholders); and Scholarly Commons 5b and 5c. **The Scholarly Commons FAILs are unreliable:** its "Terms & Policies" and "About" pages came back with the landing page's own text, because the JavaScript application had not yet drawn them when they were captured, so the policy page was never read. The twenty `FIREWALL` cells are Latvia and GÉANT.
+
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` expects nine matches (as since `web-37`: Scholarly Commons carries its name only in its logo's alt text, and METROFOOD-RI does not write it); `test_update_row.py` expects eighteen nodes. 473 cases pass on the published evidence.
+
+**Masking.** The names masked in `web-39` were carried over by aligning each placeholder with the new evidence (109 replacements of 44 distinct strings), with the same number of placeholders per node as in `web-39`, and the CERN screenshot region (its quotation attribution) was masked at the unchanged position. The new text of every node was read for names not seen before (it is service-catalogue listing text); none was found. The seven changed screenshots (Data Terra, Germany, Finland, Poland, EUDAT, and the Cloudflare pages of Latvia and GÉANT) were checked by eye and show no personal name. Masking changed no verdict or message.
+
+### Runs web-37 to web-39 (published from the README)
+
+| Run | Collected | Workflow run, commit | Depth 2: PASS / FAIL / review / FIREWALL / ERROR | Notes |
+|---|---|---|---|---|
+| `web-39` | 17 November 2026, 16:39–16:47 UTC | [44128153077](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44128153077), `f02b9cb` | 82 / 11 / 67 / 20 / 0 (depth 1: 81 / 11 / 68 / 20 / 0) | Life Sciences Connect answered again, on a new layout, with its `web-37` verdicts; no other cell changed. 121 requests (18 + 68 + 35). In the git history at `d9e35f9` |
+| `web-38` | 16 November 2026, 20:05–20:13 UTC | [43945817292](https://github.com/marioreale/eosc-basic-compliance/actions/runs/43945817292), `403e185` | 79 / 8 / 63 / 20 / 10 (depth 1: 78 / 8 / 64 / 20 / 10) | First with METROFOOD-RI (1, 6, 7 PASS; 4, 5b, 5c FAIL; the rest review) and without EBRAINS-RI; Life Sciences Connect timed out (`ERROR`). Published as is, on request. 120 requests (18 + 67 + 35). In the git history at `f02b9cb` |
+| `web-37` | 11 November 2026 | [43085726876](https://github.com/marioreale/eosc-basic-compliance/actions/runs/43085726876), `77afd2c` | 84 / 9 / 67 / 20 / 0 | First scored with `FIREWALL` (Latvia and GÉANT), last with EBRAINS-RI. Scholarly Commons rendered in full (4 PASS, 2 FAIL, 4 review). In the git history at `403e185` |
+
+### Earlier run: web-36 at depth 2, 11 November 2026 (unreviewed)
+
 > **Run `web-36` (11 November 2026) is the first with all eighteen nodes.** EOSC Node Latvia (id `eosc-lv`, `https://eosc.lv/en/`) and Scholarly Commons (id `scholarly-commons`, `https://eosc.scholarlycommons.eu/home`), added on 10 November 2026 to `nodes.yaml`, the shipped default copy and both approved-name lists (SHA-256 `b9f0fbec…`), are in the published report. `web-35`, with sixteen nodes, is in the git history at `7b215f2`; to rebuild it, pass the node and name lists of commit `a556394` with `--nodes` and `--approved-names`.
 
-### Current run: web-36 at depth 2, 11 November 2026 (unreviewed)
-
-From `results/results.json`, run `web-36`, collected on 11 November 2026 between 08:24 and 08:32 UTC by the GitHub workflow ([run 42986689788](https://github.com/marioreale/eosc-basic-compliance/actions/runs/42986689788), commit `7b215f2`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of eighteen names (SHA-256 `b9f0fbec…`). It made 133 page requests: 18 landing pages, 71 direct links and 44 second-hop pages (budget: 44 of 60). Sixteen landing pages returned HTTP 200; GÉANT's and Latvia's returned HTTP 403 with the Cloudflare challenge. Every node finished within its time limit; the whole job took about 8.5 minutes, of which about 7.5 were collection. Offline, `uv run basic-check assess --run web-36` reproduces it exactly, apart from the generation time (verified 11 November 2026, on the masked evidence).
+From `results/results.json` as published (in the git history at `77afd2c`), run `web-36`, collected on 11 November 2026 between 08:24 and 08:32 UTC by the GitHub workflow ([run 42986689788](https://github.com/marioreale/eosc-basic-compliance/actions/runs/42986689788), commit `7b215f2`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of eighteen names (SHA-256 `b9f0fbec…`). It made 133 page requests: 18 landing pages, 71 direct links and 44 second-hop pages (budget: 44 of 60). Sixteen landing pages returned HTTP 200; GÉANT's and Latvia's returned HTTP 403 with the Cloudflare challenge. Every node finished within its time limit; the whole job took about 8.5 minutes, of which about 7.5 were collection. Offline, `uv run basic-check assess --run web-36` reproduces it exactly, apart from the generation time (verified 11 November 2026, on the masked evidence).
 
 | Verdict | Depth 2 | Depth 1 |
 |---|---|---|

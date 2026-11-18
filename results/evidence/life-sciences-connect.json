@@ -2,13 +2,13 @@
   "node_id": "life-sciences-connect",
   "node_name": "Life Sciences Connect",
   "requested_url": "https://eosc-lifesciences-connect.eu/home",
-  "fetched_at": "2026-11-17T16:46:11+00:00",
+  "fetched_at": "2026-11-18T10:42:26+00:00",
   "final_url": "https://eosc-lifesciences-connect.eu/home",
   "http_status": 200,
   "redirect_chain": [
-    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=2756f94f-1a3c-4ca8-8982-19f0a72773af&response_mode=fragment&response_type=code&scope=openid&nonce=110ff719-25db-4131-a378-eafb4f36a0e5&prompt=none",
-    "https://eosc-lifesciences-connect.eu/static/js/main.e859dd68.js",
-    "https://eosc-lifesciences-connect.eu/env-config.js"
+    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=1b149d96-7bf7-4471-8848-5550877bfaef&response_mode=fragment&response_type=code&scope=openid&nonce=76047333-2309-4ffc-a598-d4b46af7ecb5&prompt=none",
+    "https://eosc-lifesciences-connect.eu/env-config.js",
+    "https://eosc-lifesciences-connect.eu/static/js/main.79602b19.js"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
@@ -151,8 +151,8 @@
       "final_url": "https://eosc-lifesciences-connect.eu/catalogue",
       "title": "Home Page",
       "lang_attr": "en",
-      "main_text": "",
-      "full_text": "",
+      "main_text": "Log in",
+      "full_text": "Log in",
       "links": [],
       "robots_allowed": true,
       "error": ""

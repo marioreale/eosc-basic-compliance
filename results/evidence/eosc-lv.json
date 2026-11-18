@@ -2,7 +2,7 @@
   "node_id": "eosc-lv",
   "node_name": "EOSC Node Latvia",
   "requested_url": "https://eosc.lv/en/",
-  "fetched_at": "2026-11-17T16:46:28+00:00",
+  "fetched_at": "2026-11-18T10:42:42+00:00",
   "final_url": "https://eosc.lv/en/",
   "http_status": 403,
   "redirect_chain": [
@@ -13,7 +13,7 @@
   "title": "Just a moment...",
   "lang_attr": "en-us",
   "main_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond",
-  "full_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond Ray ID: a5c03634fe4a3f0e Performance and Security by Cloudflare Privacy",
+  "full_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond Ray ID: a5c65eb72bc181ed Performance and Security by Cloudflare Privacy",
   "links": [
     {
       "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
@@ -32,7 +32,7 @@
       "alt": "Icon for eosc.lv",
       "aria_label": "",
       "title": "",
-      "css_class": "_86d51494a4a74b5135f3dcc8 _fbd1281f1332e182c643cf7c",
+      "css_class": "_5506ffda98594cdcfade19e4 _c04a7d986e65aac6c2b80007",
       "inline_svg": false
     }
   ],
