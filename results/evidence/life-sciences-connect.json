@@ -2,13 +2,13 @@
   "node_id": "life-sciences-connect",
   "node_name": "Life Sciences Connect",
   "requested_url": "https://eosc-lifesciences-connect.eu/home",
-  "fetched_at": "2026-11-18T10:42:26+00:00",
+  "fetched_at": "2026-11-20T14:42:50+00:00",
   "final_url": "https://eosc-lifesciences-connect.eu/home",
   "http_status": 200,
   "redirect_chain": [
-    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=1b149d96-7bf7-4471-8848-5550877bfaef&response_mode=fragment&response_type=code&scope=openid&nonce=76047333-2309-4ffc-a598-d4b46af7ecb5&prompt=none",
-    "https://eosc-lifesciences-connect.eu/env-config.js",
-    "https://eosc-lifesciences-connect.eu/static/js/main.79602b19.js"
+    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=e51853ef-d699-45a8-a010-c54c775c2ee8&response_mode=fragment&response_type=code&scope=openid&nonce=75f39cdc-074e-4ee3-b0a5-3d0f40de3bea&prompt=none",
+    "https://eosc-lifesciences-connect.eu/static/js/main.96f36b85.js",
+    "https://eosc-lifesciences-connect.eu/env-config.js"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
@@ -54,7 +54,7 @@
       "alt": "Logo",
       "aria_label": "",
       "title": "",
-      "css_class": "sc-cMljjf iOTVQi logo-image",
+      "css_class": "sc-jDwBTQ lcSpOY logo-image",
       "inline_svg": false
     },
     {
@@ -62,7 +62,7 @@
       "alt": "Text",
       "aria_label": "",
       "title": "",
-      "css_class": "sc-cMljjf QJVEe image",
+      "css_class": "sc-jDwBTQ jERIVz image",
       "inline_svg": false
     },
     {
@@ -70,7 +70,7 @@
       "alt": "Logo",
       "aria_label": "",
       "title": "",
-      "css_class": "sc-cMljjf QJVEe logo",
+      "css_class": "sc-jDwBTQ jERIVz logo",
       "inline_svg": false
     },
     {
@@ -151,8 +151,8 @@
       "final_url": "https://eosc-lifesciences-connect.eu/catalogue",
       "title": "Home Page",
       "lang_attr": "en",
-      "main_text": "Log in",
-      "full_text": "Log in",
+      "main_text": "",
+      "full_text": "",
       "links": [],
       "robots_allowed": true,
       "error": ""

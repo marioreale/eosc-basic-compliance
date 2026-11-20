@@ -2,7 +2,7 @@
   "node_id": "scholarly-commons",
   "node_name": "Scholarly Commons",
   "requested_url": "https://eosc.scholarlycommons.eu/home",
-  "fetched_at": "2026-11-18T10:42:48+00:00",
+  "fetched_at": "2026-11-20T14:43:14+00:00",
   "final_url": "https://eosc.scholarlycommons.eu/home",
   "http_status": 200,
   "redirect_chain": [],
@@ -10,8 +10,8 @@
   "robots_note": "robots.txt consulted",
   "title": "Home | EOSC Scholarly Commons Node",
   "lang_attr": "en",
-  "main_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
-  "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+  "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+  "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
   "links": [
     {
       "href": "https://eosc.scholarlycommons.eu/home",
@@ -109,7 +109,7 @@
       "visible": true
     },
     {
-      "href": "https://www.openaire.eu/helpdesk",
+      "href": "https://eosc.scholarlycommons.eu/contact",
       "text": "Contact the Node team",
       "visible": true
     },
@@ -154,8 +154,18 @@
       "visible": true
     },
     {
-      "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
-      "text": "Terms & Policies",
+      "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+      "text": "Cookie policy",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+      "text": "Cookie policy",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+      "text": "Cookie policy",
       "visible": true
     }
   ],
@@ -199,9 +209,23 @@
       "title": "",
       "css_class": "",
       "inline_svg": true
+    },
+    {
+      "src": "",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "",
+      "inline_svg": true
     }
   ],
   "controls": [
+    {
+      "text": "Login",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
     {
       "text": "Open menu",
       "href": "https://eosc.scholarlycommons.eu/home",
@@ -210,6 +234,18 @@
     },
     {
       "text": "Close menu",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Login",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Settings",
       "href": "https://eosc.scholarlycommons.eu/home",
       "tag": "button",
       "visible": true
@@ -227,7 +263,25 @@
       "visible": true
     },
     {
-      "text": "Save my choices",
+      "text": "Close cookie settings",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Reject all",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Accept all",
+      "href": "https://eosc.scholarlycommons.eu/home",
+      "tag": "button",
+      "visible": true
+    },
+    {
+      "text": "Save settings",
       "href": "https://eosc.scholarlycommons.eu/home",
       "tag": "button",
       "visible": true
@@ -330,7 +384,7 @@
     },
     {
       "text": "Contact the Node team",
-      "href": "https://www.openaire.eu/helpdesk",
+      "href": "https://eosc.scholarlycommons.eu/contact",
       "tag": "a",
       "visible": true
     },
@@ -383,20 +437,20 @@
       "visible": true
     },
     {
-      "text": "Cookie settings",
-      "href": "https://eosc.scholarlycommons.eu/home#",
+      "text": "Cookie policy",
+      "href": "https://eosc.scholarlycommons.eu/cookie-policy",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "Terms & Policies",
-      "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+      "text": "Cookie policy",
+      "href": "https://eosc.scholarlycommons.eu/cookie-policy",
       "tag": "a",
       "visible": true
     },
     {
-      "text": "Cookie settings",
-      "href": "https://eosc.scholarlycommons.eu/home#",
+      "text": "Cookie policy",
+      "href": "https://eosc.scholarlycommons.eu/cookie-policy",
       "tag": "a",
       "visible": true
     }
@@ -407,19 +461,19 @@
   "crawl_depth": 2,
   "children": [
     {
-      "url": "https://eosc.scholarlycommons.eu/about",
+      "url": "https://eosc.scholarlycommons.eu/contact",
       "selected_for": [
-        "2"
+        "6"
       ],
-      "link_text": "About",
+      "link_text": "Contact the Node team",
       "depth": 1,
       "parent_url": "",
       "http_status": 200,
-      "final_url": "https://eosc.scholarlycommons.eu/about",
-      "title": "About | EOSC Scholarly Commons Node",
+      "final_url": "https://eosc.scholarlycommons.eu/contact",
+      "title": "Contact | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
-      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
@@ -517,7 +571,7 @@
           "visible": true
         },
         {
-          "href": "https://www.openaire.eu/helpdesk",
+          "href": "https://eosc.scholarlycommons.eu/contact",
           "text": "Contact the Node team",
           "visible": true
         },
@@ -562,8 +616,192 @@
           "visible": true
         },
         {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc.scholarlycommons.eu/about",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "About",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc.scholarlycommons.eu/about",
+      "title": "About | EOSC Scholarly Commons Node",
+      "lang_attr": "en",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "links": [
+        {
+          "href": "https://eosc.scholarlycommons.eu/home",
+          "text": "EOSC Node Scholarly Commons",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
           "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
           "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to start",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/use-cases",
+          "text": "Use Cases",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/news",
+          "text": "News",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/training",
+          "text": "Training",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms & Policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/",
+          "text": "OpenAIRE",
+          "visible": true
+        },
+        {
+          "href": "https://www.operas-eu.org/",
+          "text": "OPERAS",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/contact",
+          "text": "Contact the Node team",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/about",
+          "text": "About",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover",
+          "text": "Services",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/how-to-start",
+          "text": "How to access",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/join",
+          "text": "Join as a provider",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+          "text": "Node profile on eosc.eu",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.eu/building-the-eosc-federation",
+          "text": "All EOSC Nodes",
+          "visible": true
+        },
+        {
+          "href": "https://user-forum.eosc.eu/",
+          "text": "EOSC Federation User Forum",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Terms and policies",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
           "visible": true
         }
       ],
@@ -582,8 +820,8 @@
       "final_url": "https://eosc.scholarlycommons.eu/terms-and-policies",
       "title": "Terms & Policies | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
-      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
@@ -681,7 +919,7 @@
           "visible": true
         },
         {
-          "href": "https://www.openaire.eu/helpdesk",
+          "href": "https://eosc.scholarlycommons.eu/contact",
           "text": "Contact the Node team",
           "visible": true
         },
@@ -726,8 +964,18 @@
           "visible": true
         },
         {
-          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
-          "text": "Terms & Policies",
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
           "visible": true
         }
       ],
@@ -747,7 +995,7 @@
       "title": "Discover services | EOSC Scholarly Commons Node",
       "lang_attr": "en",
       "main_text": "Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear Refine Clear",
-      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join About Services How to start Use Cases News Training Terms & Policies Join Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear Refine Clear A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie settings Cookies and privacy The site stores only what it needs to work (such as your sign-in) without asking. The two options below are off until you switch them on. You can change your mind at any time with \"Cookie settings\" in the footer. See the Terms & Policies for details. Statistics. Matomo counts visits and page views so the service can be improved (analytics.openaire.eu). Error reports. Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. Reject all Accept all Save my choices",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear Refine Clear A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
@@ -845,7 +1093,7 @@
           "visible": true
         },
         {
-          "href": "https://www.openaire.eu/helpdesk",
+          "href": "https://eosc.scholarlycommons.eu/contact",
           "text": "Contact the Node team",
           "visible": true
         },
@@ -890,8 +1138,18 @@
           "visible": true
         },
         {
-          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
-          "text": "Terms & Policies",
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/cookie-policy",
+          "text": "Cookie policy",
           "visible": true
         }
       ],
@@ -900,15 +1158,22 @@
     }
   ],
   "children_skipped": [
+    "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 29 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
+  "crawl_note": "depth 2: 31 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
 }

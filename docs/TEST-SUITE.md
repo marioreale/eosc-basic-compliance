@@ -146,7 +146,7 @@ The last column is not decoration. Each point declares its implementing function
 
 > **On the honesty of the output.** Three of the ten points cannot be settled by a script at all and four only partly. Those are reported as `MANUAL_REVIEW` with the evidence attached rather than guessed at. Roughly 60% of cells land in review by design. A confident wrong verdict about a named organisation costs more to retract than an honest "a human must look".
 
-> **When the page is a firewall challenge.** Since 11 November 2026 a landing page that answers HTTP 403, 429 or 503 with Cloudflare's challenge is scored `FIREWALL` on all ten points (a solid red 🧱 badge), not review: the server is up, but the tool was shown the challenge, not the node's page, so nothing is asserted either way. Before, point 7 passed on the challenge page's own English. Latvia and GÉANT are in this state in `web-37` to `web-40`.
+> **When the page is a firewall challenge.** Since 11 November 2026 a landing page that answers HTTP 403, 429 or 503 with Cloudflare's challenge is scored `FIREWALL` on all ten points (a solid red 🧱 badge), not review: the server is up, but the tool was shown the challenge, not the node's page, so nothing is asserted either way. Before, point 7 passed on the challenge page's own English. Latvia and GÉANT are in this state in `web-37` to `web-42`.
 
 ---
 
@@ -358,7 +358,7 @@ does not record (section 3 of [the analysis workflow](ANALYSIS-WORKFLOW.md)), or
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 11. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run, `web-40`, covers all eighteen configured nodes, so `assess` on
+a copy first. The published run, `web-42`, covers all eighteen configured nodes, so `assess` on
 `results/` needs no `--skip`. To rebuild a run made with another node list, pass
 the node and name lists it was made with (`--nodes` and `--approved-names`), not
 `--skip`: from commit `77afd2c` for `web-37` and earlier runs with EBRAINS-RI,
@@ -805,33 +805,34 @@ The clone above uses HTTPS, so the first `git push` will ask for credentials. Gi
 
 ## 10. The published figures
 
-> **Run `web-40` (18 November 2026) is the published run.** It covers the eighteen nodes configured since 16 November 2026, when EBRAINS-RI was removed from `nodes.yaml`, the shipped default copy and both approved-name lists, and METROFOOD-RI (id `metrofood-ri`, `https://services.metrofood-services.eu/eosc`, approved name "EOSC Node | METROFOOD-RI") was added (commit `403e185`; approved list SHA-256 `6d8c249a…`). Since 11 November 2026 (commit `77afd2c`) a landing page that answers with a Cloudflare challenge is scored `FIREWALL` on all ten points rather than review (section 4 of the [analysis workflow](ANALYSIS-WORKFLOW.md); `tests/test_firewall.py`).
+> **Run `web-42` (20 November 2026) is the published run.** It covers the eighteen nodes configured since 16 November 2026, when EBRAINS-RI was removed from `nodes.yaml`, the shipped default copy and both approved-name lists, and METROFOOD-RI (id `metrofood-ri`, `https://services.metrofood-services.eu/eosc`, approved name "EOSC Node | METROFOOD-RI") was added (commit `403e185`; approved list SHA-256 `6d8c249a…`). Since 11 November 2026 (commit `77afd2c`) a landing page that answers with a Cloudflare challenge is scored `FIREWALL` on all ten points rather than review (section 4 of the [analysis workflow](ANALYSIS-WORKFLOW.md); `tests/test_firewall.py`).
 
-### Current run: web-40 at depth 2, 18 November 2026 (unreviewed)
+### Current run: web-42 at depth 2, 20 November 2026 (unreviewed)
 
-From `results/results.json`, run `web-40`, collected on 18 November 2026 between 10:36 and 10:43 UTC by the GitHub workflow ([run 44286806986](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44286806986), commit `d9e35f9`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of eighteen names (SHA-256 `6d8c249a…`). It made 121 page requests: 18 landing pages, 68 direct links and 35 second-hop pages (budget: 35 of 60). Sixteen landing pages returned HTTP 200; GÉANT's and Latvia's returned HTTP 403 with the Cloudflare challenge. Every node finished within its time limit; the whole job took 8 minutes, of which about 7 were collection. Offline, `uv run basic-check assess --run web-40` reproduces it exactly, apart from the generation time (verified 18 November 2026, on the masked evidence).
+From `results/results.json`, run `web-42`, collected on 20 November 2026 between 14:36 and 14:43 UTC by the GitHub workflow ([run 44753632474](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44753632474), commit `1163f08`) at `--depth 2`, under the re-issued checklist v3.2 and the official unscoped names list of eighteen names (SHA-256 `6d8c249a…`). It made 122 page requests: 18 landing pages, 69 direct links and 35 second-hop pages (budget: 35 of 60). Sixteen landing pages returned HTTP 200; GÉANT's and Latvia's returned HTTP 403 with the Cloudflare challenge. Every node finished within its time limit; collection took about 7.5 minutes, and the whole job 16 (Chromium's installation took 8). Offline, `uv run basic-check assess --run web-42` reproduces it exactly, apart from the generation time (verified 20 November 2026, on the masked evidence).
 
 | Verdict | Depth 2 | Depth 1 |
 |---|---|---|
-| 🟢 PASS | 82 | 81 |
+| 🟢 PASS | 81 | 80 |
 | 🔴 FAIL | 11 | 11 |
-| 🟠 MANUAL_REVIEW | 67 | 68 |
+| 🟠 MANUAL_REVIEW | 68 | 69 |
 | 🧱 FIREWALL | 20 | 20 |
 | 🟣 ERROR | 0 | 0 |
 | **Total** | **180** (18 nodes × 10 points) | **180** |
 
-**What changed against `web-39`.** No cell changed, at either depth. Every node followed the same links, with the same HTTP statuses, as in `web-39`. The only evidence lines that moved are the rendered text lengths of two landing pages in point 1: Data Terra (4260 characters, was 4274) and EOSC Finland (4061, was 3983, with a new user-survey banner).
+**What changed against `web-40`.** One cell, at both depths: **Scholarly Commons point 6, PASS → MANUAL_REVIEW.** The node's "Contact the Node team" link, which pointed to `https://www.openaire.eu/helpdesk`, now points to its own `https://eosc.scholarlycommons.eu/contact`. The tool followed it (HTTP 200), but the captured text is exactly the landing page's (2307 characters, as for "About" and "Terms & Policies"): the JavaScript application had not yet drawn the page, so "do not identify a helpdesk" was judged on text that is not the contact page's. The landing page also gained a Login button and a new cookie banner; its main text is now 2307 characters (945 in `web-40`, when a cookie overlay dominated it). EOSC Finland's menu item "EOSC login" now reads "EOSC AAI" (text lengths moved by two characters). No other evidence line moved.
 
-The eleven FAILs are Germany 5b, 5c and 6; Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative); METROFOOD-RI 4, 5b and 5c (no `eosc.eu` link; its "Acceptable Use Policy" and "User Access Policy" links are `#TODO-…` placeholders); and Scholarly Commons 5b and 5c. **The Scholarly Commons FAILs are unreliable:** its "Terms & Policies" and "About" pages came back with the landing page's own text, because the JavaScript application had not yet drawn them when they were captured, so the policy page was never read. The twenty `FIREWALL` cells are Latvia and GÉANT.
+The eleven FAILs are unchanged: Germany 5b, 5c and 6; Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative); METROFOOD-RI 4, 5b and 5c; and Scholarly Commons 5b and 5c. **The Scholarly Commons FAILs, and now its point 6 review, are unreliable** for the reason above: none of its linked pages was read after it had been drawn. The twenty `FIREWALL` cells are Latvia and GÉANT.
 
-**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` expects nine matches (as since `web-37`: Scholarly Commons carries its name only in its logo's alt text, and METROFOOD-RI does not write it); `test_update_row.py` expects eighteen nodes. 473 cases pass on the published evidence.
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` still expects nine matches; `test_update_row.py` expects eighteen nodes. 473 cases pass on the published evidence.
 
-**Masking.** The names masked in `web-39` were carried over by aligning each placeholder with the new evidence (109 replacements of 44 distinct strings), with the same number of placeholders per node as in `web-39`, and the CERN screenshot region (its quotation attribution) was masked at the unchanged position. The new text of every node was read for names not seen before (it is service-catalogue listing text); none was found. The seven changed screenshots (Data Terra, Germany, Finland, Poland, EUDAT, and the Cloudflare pages of Latvia and GÉANT) were checked by eye and show no personal name. Masking changed no verdict or message.
+**Masking.** The names masked in `web-40` were carried over by aligning each placeholder with the new evidence (109 replacements of 44 distinct strings), with the same number of placeholders per node, and the CERN screenshot region was masked at the unchanged position. The only new text is Scholarly Commons' cookie table and menu, which names no person. The seven changed screenshots (Data Terra, Germany, Poland, EUDAT, Scholarly Commons, and the Cloudflare pages of Latvia and GÉANT) were checked and show no personal name. Masking changed no verdict or message.
 
-### Runs web-37 to web-39 (published from the README)
+### Runs web-37 to web-40 (published from the README or the guides)
 
 | Run | Collected | Workflow run, commit | Depth 2: PASS / FAIL / review / FIREWALL / ERROR | Notes |
 |---|---|---|---|---|
+| `web-40` | 18 November 2026, 10:36–10:43 UTC | [44286806986](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44286806986), `d9e35f9` | 82 / 11 / 67 / 20 / 0 (depth 1: 81 / 11 / 68 / 20 / 0) | No cell changed against `web-39`; only Data Terra's and Finland's text lengths moved. 121 requests (18 + 68 + 35). In the git history at `1163f08`. (`web-41`, [44291752754](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44291752754), was not published) |
 | `web-39` | 17 November 2026, 16:39–16:47 UTC | [44128153077](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44128153077), `f02b9cb` | 82 / 11 / 67 / 20 / 0 (depth 1: 81 / 11 / 68 / 20 / 0) | Life Sciences Connect answered again, on a new layout, with its `web-37` verdicts; no other cell changed. 121 requests (18 + 68 + 35). In the git history at `d9e35f9` |
 | `web-38` | 16 November 2026, 20:05–20:13 UTC | [43945817292](https://github.com/marioreale/eosc-basic-compliance/actions/runs/43945817292), `403e185` | 79 / 8 / 63 / 20 / 10 (depth 1: 78 / 8 / 64 / 20 / 10) | First with METROFOOD-RI (1, 6, 7 PASS; 4, 5b, 5c FAIL; the rest review) and without EBRAINS-RI; Life Sciences Connect timed out (`ERROR`). Published as is, on request. 120 requests (18 + 67 + 35). In the git history at `f02b9cb` |
 | `web-37` | 11 November 2026 | [43085726876](https://github.com/marioreale/eosc-basic-compliance/actions/runs/43085726876), `77afd2c` | 84 / 9 / 67 / 20 / 0 | First scored with `FIREWALL` (Latvia and GÉANT), last with EBRAINS-RI. Scholarly Commons rendered in full (4 PASS, 2 FAIL, 4 review). In the git history at `403e185` |
