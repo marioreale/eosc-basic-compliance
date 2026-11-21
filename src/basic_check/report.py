@@ -21,7 +21,7 @@ VERDICT_STYLE = {
     "FAIL": ("fail", "FAIL", "✗"),
     "MANUAL_REVIEW": ("manual", "REVIEW", "?"),
     "ERROR": ("error", "ERROR", "!"),
-    "FIREWALL": ("firewall", "🧱 FIREWALL", "▦"),
+    "FIREWALL": ("firewall", '<i class="fw-ico" aria-hidden="true"></i>FIREWALL', "▦"),
 }
 
 # GitHub renders Markdown through a sanitiser that strips style attributes and
@@ -87,6 +87,17 @@ LOGO_MD_NAME = "eosc-federation-logo.png"
 BRAND_MD = (
     '<p><a href="https://eosc.eu/building-the-eosc-federation">'
     f'<img src="{LOGO_MD_NAME}" alt="EOSC Federation" height="48"></a></p>'
+)
+
+# Firewall icon shown inside the HTML FIREWALL badge. It is declared once in the
+# stylesheet as a background image, so the data URI is not repeated in every cell.
+FIREWALL_ICON = Path(__file__).parent / "assets" / "firewall-icon.png"
+FIREWALL_ICON_CSS = (
+    ".fw-ico{display:inline-block;width:1.9em;height:1.25em;margin-right:.35em;"
+    "vertical-align:-.3em;border-radius:3px;background:#fff "
+    "url(data:image/png;base64,"
+    + base64.b64encode(FIREWALL_ICON.read_bytes()).decode()
+    + ") center/contain no-repeat;background-origin:content-box;padding:1px 2px}"
 )
 
 CSS = """
@@ -643,7 +654,7 @@ def render_html(run: dict, out: Path) -> Path:
     doc = f"""<!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>EOSC Node Landing Page compliance — checklist v{html.escape(run["checklist"]["checklist_version"])}</title>
-<style>{CSS}</style></head><body><div class="wrap">
+<style>{CSS}{FIREWALL_ICON_CSS}</style></head><body><div class="wrap">
 {BRAND}
 <h1>EOSC Node Landing Page compliance</h1>
 <p class="sub">Node Landing Page Verification Checklist v{html.escape(run["checklist"]["checklist_version"])}

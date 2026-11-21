@@ -109,3 +109,12 @@ def test_the_published_run_has_latvia_and_geant_behind_the_firewall():
     behind = {n["id"] for n in run["nodes"] if all(r["verdict"] == "FIREWALL" for r in n["results"])}
     anywhere = {n["id"] for n in run["nodes"] if any(r["verdict"] == "FIREWALL" for r in n["results"])}
     assert behind == anywhere == {"eosc-lv", "geant"}
+
+
+def test_the_html_firewall_badge_uses_the_firewall_icon():
+    # The HTML badge shows the wall-and-flame icon, declared once in the stylesheet.
+    assert "fw-ico" in report.VERDICT_STYLE["FIREWALL"][1]
+    assert "🧱" not in report.VERDICT_STYLE["FIREWALL"][1]
+    assert report.FIREWALL_ICON.is_file()
+    assert report.FIREWALL_ICON_CSS.startswith(".fw-ico{")
+    assert "data:image/png;base64," in report.FIREWALL_ICON_CSS
