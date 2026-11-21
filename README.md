@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 473
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 482
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -44,6 +44,22 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > eighteen-name approved list (SHA-256 `6d8c249a…`). At depth 2 the tally is
 > **81 PASS, 11 FAIL, 68 review, 20 FIREWALL, 0 ERROR** (80 / 11 / 69 / 20 / 0 at
 > depth 1).
+>
+> **Correction, 21 November 2026: Life Sciences Connect's 5b, 5c and 6 FAILs
+> are false negatives** (in `web-43`, and in `web-42` and earlier). The node does
+> publish both policies: its footer item "AUP and UAP" opens
+> [`/aup-and-uap`](https://eosc-lifesciences-connect.eu/aup-and-uap), headed
+> "Life Sciences Connect – Acceptable Use Policy" and further down "Life
+> Sciences Connect – User Access Policy"; and its "Contact Us" menu item opens
+> `/contact-information`, which gives `help@eosc-lifesciences-connect.eu`. The
+> site is a JavaScript application: the footer item is an `<a>` with no `href`
+> and the menu item a `<span>`, and the address changes only on a click. The tool
+> read links from `a[href]` only, so it saw the words "AUP and UAP" in the page
+> text but no link, and scored "named but not linked". **The tool is fixed for
+> the next run** (see "Clickable items without a link address" in the
+> [test-suite overview](docs/TEST-SUITE.md)): a trial collection of this node on
+> 21 November 2026 scores 5b, 5c and 6 `PASS`. The published `web-43` cells are
+> left as collected; read them as PASS candidates for a reviewer.
 >
 > **What changed against `web-42`.** **Nothing: all 180 cells are the same at
 > both depths, every node read the same linked pages with the same HTTP
@@ -253,12 +269,12 @@ evidence behind every verdict, is in the report linked above:
 - **Life Sciences Connect** was `ERROR` on all ten points in `web-38` (its landing page timed out) and is back in `web-39` with its `web-37` verdicts, on a new page layout (six links captured). First assessed in `web-28`, it has 3 PASS, 3 FAIL and
   4 review. It links its own `eosc.eu` entry (point 4). The tool captured only
   two links on the page, because its HOME, ABOUT and CONTACT US menu items are
-  `<a>` elements with no `href` that navigate by script. **Point 6 is a false
-  FAIL**: a hand check on 9 October 2026 found a Contact page at
-  `/contact-information` with `help@eosc-lifesciences-connect.eu`, which the
-  tool cannot reach. 5b and 5c fail: the same hand check found no policy link on
-  the Home, About or Contact pages, but a reviewer should confirm this before the
-  FAILs are quoted. Point 3 is review: the logo reads "EOSC Node | Life Sciences
+  `<a>` elements with no `href` that navigate by script. **Points 5b, 5c and 6
+  are false FAILs**: a hand check on 9 October 2026 found a Contact page at
+  `/contact-information` with `help@eosc-lifesciences-connect.eu`, and on 21
+  November 2026 the footer item "AUP and UAP" (also an `<a>` without `href`)
+  opens `/aup-and-uap` with both policies. Until the 21 November fix the tool
+  could not reach either page (see the correction at the top). Point 3 is review: the logo reads "EOSC Node | Life Sciences
   Connect" but the page text never writes an approved name.
 
 - **Item 5 under v3.2.** CERN links no policy from its landing page, but its
@@ -853,7 +869,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 473 tests, a few seconds, no network, no browser
+uv run pytest -q          # 482 tests (1 opt-in browser test skipped), no network
 uv run ruff check src tests
 ```
 

@@ -6,7 +6,7 @@ a clean clone of the repository state this document is committed with (from
 commit `ada1b4a`). The test count was re-checked on 26 September 2026 against a
 clean clone of commit `678b75e` (checklist v3.1, run `web-8` published):
 **426 test cases, all passing in CI**. It was re-checked again on 29 September
-2026 for checklist v3.2: **453 test cases**, all passing (**462** since the per-node time limit of 20 October 2026, below; **464** since the two cases for the EOSC Federation logo on the results page, in `test_report.py`, of 5 November 2026 (commit `6b24380`). Adding EOSC Node Latvia and Scholarly Commons on 10 November 2026 added no case: the node guards check every entry inside one case; **473** since the nine cases of `tests/test_firewall.py` for the `FIREWALL` outcome, 11 November 2026, commit `77afd2c`; replacing EBRAINS-RI with METROFOOD-RI on 16 November 2026 added none). No node website was
+2026 for checklist v3.2: **453 test cases**, all passing (**462** since the per-node time limit of 20 October 2026, below; **464** since the two cases for the EOSC Federation logo on the results page, in `test_report.py`, of 5 November 2026 (commit `6b24380`). Adding EOSC Node Latvia and Scholarly Commons on 10 November 2026 added no case: the node guards check every entry inside one case; **473** since the nine cases of `tests/test_firewall.py` for the `FIREWALL` outcome, 11 November 2026, commit `77afd2c`; replacing EBRAINS-RI with METROFOOD-RI on 16 November 2026 added none; **482** since the nine cases of `tests/test_scripted_links.py` for clickable items without a link address, 21 November 2026, one of which opens a browser and runs only with `BASIC_CHECK_BROWSER_TESTS=1`). No node website was
 contacted to prepare this edition.
 
 👉 **[Installation, configuration and run guide](GUIDE.md)** — how to install and
@@ -71,7 +71,7 @@ The suite is **pytest** — the PyUnit lineage rather than JUnit, but it does no
 
 ## 2. What is actually tested
 
-**383 test functions, expanding to 473 executed cases** (twenty-three tests are parametrized). **None of them touch the network, and none of them open a browser.** This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
+**392 test functions, expanding to 482 cases** (twenty-three tests are parametrized). **None of them touch the network, and by default none of them open a browser:** the one browser test, in `test_scripted_links.py`, is skipped unless `BASIC_CHECK_BROWSER_TESTS=1` is set, so a default run reports 481 passed and 1 skipped. This is the central design decision: most tests construct `PageEvidence` objects directly in memory — a synthetic page carrying the links, HTTP status and text a scenario needs. Nothing in the suite requests a real website, so the suite costs nothing and cannot fail because a node is down or because someone edited a page.
 
 The absence of a browser requirement is verified rather than assumed: running the suite with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory still yields 425 passed, while `collect` fails with Playwright's "Executable doesn't exist" error. That is why the CI job installs no browser.
 
@@ -88,7 +88,8 @@ The absence of a browser requirement is verified rather than assumed: running th
 | `test_node_timeout.py` | 9 | The per-node time limit, with a fake browser: a node that finishes is untouched; a node hung in navigation or in reading the page is abandoned at the limit, keeps what it had gathered and reads `ERROR` on all ten points; a clean-up that hangs too does not become the hang; `0` disables the limit; in a three-node run the node after a hung one is still collected and the browser is restarted |
 | `test_firewall.py` | 9 | The `FIREWALL` outcome: a 403/429/503 Cloudflare challenge turns all ten points into `FIREWALL` with its evidence; a plain 403, a served page that mentions Cloudflare, and a fetch error do not; the report draws the badge and orders the verdict |
 | `test_update_row.py` | 22 | `--update-results-for-node`: only the named row of the stored results changes, the reports gain one banner, one node is collected, a failed fetch changes nothing, a skipped node is inserted in order, and the refusals |
-| **Total** | **473** | |
+| `test_scripted_links.py` | 9 | Clickable items without a link address, and the render wait for linked pages (it stops once the text settles, and is bounded): which labels are clicked (only those that can settle a point, never cookie or login buttons, at most six), how clicks become links, that the resolved links are followed and settle 5b, 5c and 6 on a Life Sciences Connect–shaped page, the `help@` mailbox wording, and (opt-in) the clicks in a real browser |
+| **Total** | **482** | |
 
 `test_names.py` is the largest file in the suite, and deliberately so: point 3 is the only check that compares page text against an externally supplied list of official names, which makes it the check most able to produce a confident wrong answer. `test_nodes.py` is new since the node list grew — adding a node is now a configuration edit that the suite validates rather than a change nothing checks.
 
@@ -145,6 +146,8 @@ The last column is not decoration. Each point declares its implementing function
 **Item 5 under v3.2.** The tool never reads the EOSC Catalogue, so for 5a–5c it checks the NLP half only, and every 5a–5c result says so. For 5b and 5c: a policy link that works is `PASS`, with a reviewer action to confirm the Catalogue half; a link to the other policy (one document may be both) or to a licence (allowed for datasets, archives and software) is `MANUAL_REVIEW`; a page whose links did not arrive is `MANUAL_REVIEW`; anything else is `FAIL`, including a policy named in the text without a link. Under v3.0 and v3.1 the same absence was `MANUAL_REVIEW`, because the policy could have been in the Catalogue alone. The decision procedure is in section 5 of the [analysis workflow](ANALYSIS-WORKFLOW.md).
 
 > **On the honesty of the output.** Three of the ten points cannot be settled by a script at all and four only partly. Those are reported as `MANUAL_REVIEW` with the evidence attached rather than guessed at. Roughly 60% of cells land in review by design. A confident wrong verdict about a named organisation costs more to retract than an honest "a human must look".
+
+> **Clickable items without a link address.** Since 21 November 2026, at depth 1 and 2, the tool also looks for visible menu, footer and other clickable items that have no `href` (an `<a>` without one, `role=link` or `menuitem`, an `onclick`, or a pointer cursor), waits until the list stops changing, and clicks those whose label matches a checklist purpose (AUP, UAP, contact or helpdesk, about, policies, services), at most six per page; cookie and login buttons never match. The address each click opens is recorded as a link, and every click and its outcome is kept in the evidence under `scripted_links`. It was added because EOSC Life Sciences Connect's "AUP and UAP" and "Contact Us" items navigate by script, and the tool reported its policies and contact route as missing (false FAILs on 5b, 5c and 6 up to `web-43`). Pages are now also read only once their visible text has stopped changing, within 2% (linked pages at most 6 s, the landing page at most 8 s), since a JavaScript application can return an empty page at first: in trials this made METROFOOD-RI's catalogue page readable (empty in `web-43`); and a `help@` address in a linked page's text now names a helpdesk, as it already did in a `mailto:` link. Scholarly Commons' unreliable 5b, 5c and 6 have a different cause (its pages carry little visible text), which this does not fix.
 
 > **When the page is a firewall challenge.** Since 11 November 2026 a landing page that answers HTTP 403, 429 or 503 with Cloudflare's challenge is scored `FIREWALL` on all ten points (a solid red 🧱 badge), not review: the server is up, but the tool was shown the challenge, not the node's page, so nothing is asserted either way. Before, point 7 passed on the challenge page's own English. Latvia and GÉANT are in this state in `web-37` to `web-43`.
 
@@ -679,7 +682,7 @@ uv run basic-check assess     # evidence -> reports, offline, repeatable
 uv run basic-check run        # collect, then assess
 uv run basic-check show egi   # one node in the terminal
 
-uv run pytest -q              # 473 cases, ~5-6 s, no network, no browser
+uv run pytest -q              # 482 cases (1 opt-in browser case skipped), no network
 uv run ruff check src tests
 ```
 
@@ -764,7 +767,7 @@ git log --oneline -5
 # 5 - create the environment and install every dependency
 uv sync
 
-# 6 - run the suite: 473 cases, ~5-6 s, no network, no browser
+# 6 - run the suite: 482 cases (1 opt-in browser case skipped), no network
 uv run pytest -q
 uv run ruff check src tests
 ```
@@ -826,9 +829,9 @@ From `results/results.json`, run `web-42`, collected on 20 November 2026 between
 
 **What changed against `web-40`.** One cell, at both depths: **Scholarly Commons point 6, PASS → MANUAL_REVIEW.** The node's "Contact the Node team" link, which pointed to `https://www.openaire.eu/helpdesk`, now points to its own `https://eosc.scholarlycommons.eu/contact`. The tool followed it (HTTP 200), but the captured text is exactly the landing page's (2307 characters, as for "About" and "Terms & Policies"): the JavaScript application had not yet drawn the page, so "do not identify a helpdesk" was judged on text that is not the contact page's. The landing page also gained a Login button and a new cookie banner; its main text is now 2307 characters (945 in `web-40`, when a cookie overlay dominated it). EOSC Finland's menu item "EOSC login" now reads "EOSC AAI" (text lengths moved by two characters). No other evidence line moved.
 
-The eleven FAILs are unchanged: Germany 5b, 5c and 6; Life Sciences Connect 5b, 5c and 6 (6 still a documented false negative); METROFOOD-RI 4, 5b and 5c; and Scholarly Commons 5b and 5c. **The Scholarly Commons FAILs, and now its point 6 review, are unreliable** for the reason above: none of its linked pages was read after it had been drawn. The twenty `FIREWALL` cells are Latvia and GÉANT.
+The eleven FAILs are unchanged: Germany 5b, 5c and 6; Life Sciences Connect 5b, 5c and 6 (**all three false negatives**, corrected on 21 November 2026 for the next run: see "Clickable items without a link address" above); METROFOOD-RI 4, 5b and 5c; and Scholarly Commons 5b and 5c. **The Scholarly Commons FAILs, and now its point 6 review, are unreliable** for the reason above: none of its linked pages was read after it had been drawn. The twenty `FIREWALL` cells are Latvia and GÉANT.
 
-**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` still expects nine matches; `test_update_row.py` expects eighteen nodes. 473 cases pass on the published evidence.
+**Tests pinned to the published run.** `test_names.py::test_the_official_names_match_the_nodes_that_show_them` still expects nine matches; `test_update_row.py` expects eighteen nodes. 482 cases (481 run, 1 opt-in) pass on the published evidence.
 
 **Masking.** The names masked in `web-40` were carried over by aligning each placeholder with the new evidence (109 replacements of 44 distinct strings), with the same number of placeholders per node, and the CERN screenshot region was masked at the unchanged position. The only new text is Scholarly Commons' cookie table and menu, which names no person. The seven changed screenshots (Data Terra, Germany, Poland, EUDAT, Scholarly Commons, and the Cloudflare pages of Latvia and GÉANT) were checked and show no personal name. Masking changed no verdict or message.
 

@@ -17,7 +17,7 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-This edition of 21 November 2026 publishes run `web-43` (eighteen nodes; no change against `web-42`); the test count is still 473. The edition of 20 November 2026 published run `web-42` (one cell changed against `web-40`, Scholarly Commons point 6, PASS to review). The edition of 18 November 2026 published run `web-40` (eighteen nodes, with METROFOOD-RI in place of EBRAINS-RI since 16 November 2026) and documented the `FIREWALL` outcome of 11 November 2026. Runs `web-37`, `web-38` and `web-39`, published on 11, 16 and 17 November 2026 with the README only, are summarised in the note below; `web-41` (18 November 2026) was collected but not published. The edition of 11 November 2026 published run `web-36`, the first with all eighteen nodes, including **EOSC Node Latvia** and **Scholarly Commons**, which the edition of 10 November 2026 added (the test count is 464). The edition of 5 November 2026 published run `web-35`
+This edition of 21 November 2026 publishes run `web-43` (eighteen nodes; no change against `web-42`). Later the same day the tool learnt to click menu and footer items that have no link address (Life Sciences Connect's 5b, 5c and 6 FAILs in `web-43` are false negatives, see the README), and the test count rose to 482. The edition of 20 November 2026 published run `web-42` (one cell changed against `web-40`, Scholarly Commons point 6, PASS to review). The edition of 18 November 2026 published run `web-40` (eighteen nodes, with METROFOOD-RI in place of EBRAINS-RI since 16 November 2026) and documented the `FIREWALL` outcome of 11 November 2026. Runs `web-37`, `web-38` and `web-39`, published on 11, 16 and 17 November 2026 with the README only, are summarised in the note below; `web-41` (18 November 2026) was collected but not published. The edition of 11 November 2026 published run `web-36`, the first with all eighteen nodes, including **EOSC Node Latvia** and **Scholarly Commons**, which the edition of 10 November 2026 added (the test count is 464). The edition of 5 November 2026 published run `web-35`
 as is, on request (all sixteen nodes; EBRAINS-RI stopped at the per-node time
 limit, GÉANT behind the Cloudflare challenge again). The edition of 27 October
 2026 published run `web-34` (GÉANT's page served again). The edition of 20 October 2026
@@ -65,8 +65,8 @@ Sciences Connect's pages, made from a browser, is reported where it is used.
 > it yet; the review therefore rests on a page the tool did not read. It has
 > **not** been reviewed by hand. The twenty `FIREWALL` cells are EOSC Node Latvia
 > and GÉANT (HTTP 403 with Cloudflare's challenge). The eleven FAILs are
-> Germany 5b, 5c and 6; Life Sciences Connect 5b, 5c and 6 (6 a documented false
-> negative); METROFOOD-RI 4, 5b and 5c (no `eosc.eu` link; its AUP and UAP links
+> Germany 5b, 5c and 6; Life Sciences Connect 5b, 5c and 6 (all three false
+> negatives, corrected for the next run); METROFOOD-RI 4, 5b and 5c (no `eosc.eu` link; its AUP and UAP links
 > are `#TODO-…` placeholders); and Scholarly Commons 5b and 5c, which are
 > **unreliable**: the tool read its "Terms & Policies" page before the
 > JavaScript application had drawn it, so a reviewer must open it in a browser.
@@ -308,13 +308,13 @@ This distinction saves a large download in CI and on review machines:
 | `pytest` | no | no | The whole test suite is offline |
 
 Verified: with `PLAYWRIGHT_BROWSERS_PATH` pointed at an empty directory, all
-473 tests still pass, while `collect` fails with Playwright's
+482 tests still pass (481, plus one opt-in browser test skipped), while `collect` fails with Playwright's
 `Executable doesn't exist … run playwright install`.
 
 ### Verifying the installation
 
 ```bash
-uv run pytest -q                  # expect: 473 passed
+uv run pytest -q                  # expect: 481 passed, 1 skipped
 uv run ruff check src tests       # expect: All checks passed!
 uv run basic-check points         # prints the ten checklist points
 ```

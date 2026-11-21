@@ -67,6 +67,10 @@ HELPDESK_ON_PAGE = [
     r"(?i)\bservice\s?desk\b",
     r"(?i)\bticket(s|ing)?\b",
     r"(?i)\bsupport\s*(@|\[at\]|\(at\))\s*[a-z0-9-]+",
+    # A help@ mailbox, as HELPDESK_MAILBOXES already accepts in a mailto: link.
+    # EOSC Life Sciences Connect gives help@eosc-lifesciences-connect.eu as page
+    # text on its contact page, not as a link.
+    r"(?i)(?<![\w.+-])help\s*(@|\[at\]|\(at\))\s*[a-z0-9-]+(\.[a-z0-9-]+)+",
     r"(?i)\bservice-?now\b",
 ]
 

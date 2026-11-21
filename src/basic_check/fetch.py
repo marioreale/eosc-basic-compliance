@@ -52,6 +52,21 @@ SETTLE_MS = 1_200
 # networkidle wait and no screenshot. This keeps a federation-wide run to minutes.
 CHILD_NAV_TIMEOUT_MS = 25_000
 CHILD_SETTLE_MS = 600
+# A linked page served by a JavaScript application can still be an empty shell
+# after CHILD_SETTLE_MS: in web-42 and web-43 Scholarly Commons' /contact came
+# back with the landing page's text, and Life Sciences Connect's /aup-and-uap
+# came back empty in trials. So the page's visible text is read every
+# CHILD_RENDER_POLL_MS until it is non-empty and has stopped changing, for at
+# most CHILD_RENDER_MAX_MS. A static page is stable on the first two reads, so
+# this costs it a fraction of a second.
+# Text that keeps moving by a few characters (a carousel, a counter) counts as
+# stable, so such pages do not wait out the whole limit. The landing page gets
+# the same wait before it is read: in a trial on 21 November 2026 PaNOSC and
+# Life Sciences Connect were read with 58 and 166 characters.
+CHILD_RENDER_POLL_MS = 400
+CHILD_RENDER_MAX_MS = 6_000
+LANDING_RENDER_MAX_MS = 8_000
+RENDER_TOLERANCE = 0.02
 MAX_CHILDREN = 8
 MAX_PER_PURPOSE = 2
 CHILD_DELAY_S = 1.2
@@ -83,6 +98,171 @@ CLOSE_TIMEOUT_S = 15.0
 
 # Which links are worth following is defined in patterns.py, shared with the
 # checks so the two cannot disagree about what a policy link looks like.
+
+# Scripted links. Some landing pages are JavaScript applications whose menu and
+# footer items are not links at all: EOSC Life Sciences Connect's footer item
+# "AUP and UAP" is an <a> with no href, and its "Contact Us" a <span>; the app
+# changes the address only when they are clicked. Reading a[href] alone, the
+# tool saw the words in the page text but no link, and in web-42 and web-43
+# reported its AUP, UAP and contact route as missing -- a false accusation
+# caused by the tool. So at depth >= 1, visible clickable items without an href
+# whose label matches a checklist purpose are clicked, one at a time, and the
+# address they open is recorded as a link. Only labels that could settle a
+# point are clicked (a cookie or login button never is), at most
+# MAX_SCRIPTED_CLICKS per page, and the outcome of every click is kept in the
+# evidence (`scripted_links`) so a reader can see how a link was found.
+MAX_SCRIPTED_CLICKS = 6
+SCRIPTED_CLICK_WAIT_MS = 2_500
+SCRIPTED_STABLE_TRIES = 6
+
+# Called with null it lists the labels of candidate items; called with a label
+# it marks the first visible candidate carrying it with data-basic-check-click,
+# so that Playwright can give it a real mouse click (a synthetic element.click()
+# does not reach the handlers of some applications), and returns whether it did.
+# A candidate is a visible element with a short label, not inside or around an
+# a[href], that is an <a> without href, has role link or menuitem, an onclick
+# attribute, or a pointer cursor; only the innermost element per label counts.
+SCRIPTED_JS = r"""
+(label) => {
+  const norm = (s) => (s || '').trim().replace(/\s+/g, ' ');
+  const visible = (e) => {
+    const r = e.getBoundingClientRect(); const s = getComputedStyle(e);
+    return r.width > 0 && r.height > 0 && s.visibility !== 'hidden' && s.display !== 'none';
+  };
+  const found = [];
+  const seen = new Set();
+  const sel = 'a:not([href]), [role=link], [role=menuitem], [onclick], li, span, div, button';
+  for (const e of document.querySelectorAll(sel)) {
+    if (e.closest('a[href]') || e.querySelector('a[href]')) continue;
+    if (e.closest('form')) continue;
+    const text = norm(e.innerText);
+    if (!text || text.length > 60) continue;
+    const scripted = e.tagName === 'A' || ['link', 'menuitem'].includes(e.getAttribute('role'))
+      || e.hasAttribute('onclick') || getComputedStyle(e).cursor === 'pointer';
+    if (!scripted || !visible(e)) continue;
+    if ([...e.children].some((c) => norm(c.innerText) === text)) continue;
+    if (label === null) {
+      if (!seen.has(text)) { seen.add(text); found.push(text); }
+    } else if (text === label) {
+      document.querySelectorAll('[data-basic-check-click]')
+        .forEach((m) => m.removeAttribute('data-basic-check-click'));
+      e.setAttribute('data-basic-check-click', '1');
+      return true;
+    }
+  }
+  return label === null ? found : false;
+}
+"""
+
+
+def scripted_labels_to_click(
+    labels: list[str], links: list[Link], max_clicks: int = MAX_SCRIPTED_CLICKS
+) -> list[str]:
+    """Pick which scripted items are worth a click: those whose label matches a
+    checklist purpose and is not already the label of a real link."""
+    known = {" ".join(lnk.text.split()).lower() for lnk in links}
+    chosen: list[str] = []
+    for label in labels:
+        if label.lower() in known or label.lower() in {c.lower() for c in chosen}:
+            continue
+        if not any(_match_any(link_haystack(label, ""), pats) for _, pats in CRAWL_PURPOSES):
+            continue
+        chosen.append(label)
+        if len(chosen) >= max_clicks:
+            break
+    return chosen
+
+
+def _same_page(a: str, b: str) -> bool:
+    return a.split("#")[0].rstrip("/") == b.split("#")[0].rstrip("/") and (
+        urlparse(a).fragment.lstrip("/") == urlparse(b).fragment.lstrip("/")
+    )
+
+
+async def resolve_scripted_links(page, landing_url: str, links: list[Link]) -> list[dict]:
+    """Click each purpose-relevant scripted item and record where it leads.
+
+    Returns one record per click: label, the address opened ("" if none) and an
+    outcome. The landing page is restored after each click (back, or reloaded).
+    """
+    # Applications draw their chrome in stages (Life Sciences Connect's footer
+    # appears about a second after its menu), so the list is read until it stops
+    # changing, for at most SCRIPTED_STABLE_TRIES reads.
+    labels: list[str] = []
+    for _ in range(SCRIPTED_STABLE_TRIES):
+        now = list(await page.evaluate(SCRIPTED_JS, None) or [])
+        if now == labels and now:
+            break
+        labels = now
+        await page.wait_for_timeout(500)
+    records: list[dict] = []
+    for label in scripted_labels_to_click(labels, links):
+        popups: list = []
+
+        def handler(new_page, popups=popups):
+            popups.append(new_page)
+
+        page.context.on("page", handler)
+        target, outcome = "", ""
+        try:
+            clicked = await page.evaluate(SCRIPTED_JS, label)
+            if clicked:
+                await page.locator("[data-basic-check-click]").first.click(timeout=5_000)
+            if not clicked:
+                outcome = "not found again on the page"
+            else:
+                for _ in range(SCRIPTED_CLICK_WAIT_MS // 100):
+                    await page.wait_for_timeout(100)
+                    if popups or not _same_page(page.url, landing_url):
+                        break
+                if popups:
+                    with contextlib.suppress(Exception):
+                        await popups[0].wait_for_load_state("domcontentloaded", timeout=5_000)
+                    target = popups[0].url
+                    outcome = "opened in a new tab"
+                    for pop in popups:
+                        with contextlib.suppress(Exception):
+                            await pop.close()
+                elif not _same_page(page.url, landing_url):
+                    target = page.url
+                    outcome = "opened in the same tab"
+                else:
+                    outcome = "clicking it did not open a page"
+        except Exception as exc:
+            outcome = f"click failed: {type(exc).__name__}"
+        finally:
+            page.context.remove_listener("page", handler)
+        if target and urlparse(target).scheme not in ("http", "https"):
+            outcome, target = f"opened a non-web address ({urlparse(target).scheme})", ""
+        records.append({"text": label, "href": target, "outcome": outcome})
+        if not _same_page(page.url, landing_url):
+            with contextlib.suppress(Exception):
+                await page.go_back(wait_until="domcontentloaded", timeout=CHILD_NAV_TIMEOUT_MS)
+            if not _same_page(page.url, landing_url):
+                with contextlib.suppress(Exception):
+                    await page.goto(
+                        landing_url, wait_until="domcontentloaded", timeout=NAV_TIMEOUT_MS
+                    )
+            await page.wait_for_timeout(SETTLE_MS)
+    return records
+
+
+def scripted_records_to_links(
+    records: list[dict], landing_url: str, links: list[Link] | None = None
+) -> list[Link]:
+    """The clicks that opened a page, as links, leaving out the landing page and
+    any address already linked normally."""
+    out: list[Link] = []
+    seen = {landing_url.split("#")[0].rstrip("/")}
+    seen |= {lnk.href.split("#")[0].rstrip("/") for lnk in links or []}
+    for r in records:
+        href = r.get("href") or ""
+        key = href.split("#")[0].rstrip("/") if "#/" not in href else href
+        if not href or key in seen:
+            continue
+        seen.add(key)
+        out.append(Link(href=href, text=r["text"][:300]))
+    return out
 
 
 @dataclass
@@ -163,6 +343,9 @@ class PageEvidence:
     # Without this a reader cannot tell a checked absence from an unchecked one.
     children_skipped: list[str] = field(default_factory=list)
     crawl_note: str = ""
+    # Clickable items without an href that were clicked to find where they lead
+    # (see resolve_scripted_links): {"text", "href", "outcome"} per click.
+    scripted_links: list[dict] = field(default_factory=list)
 
     def to_json(self) -> dict:
         return asdict(self)
@@ -512,6 +695,22 @@ def _match_any(text: str, patterns: list[str]) -> bool:
     return any(re.search(pat, text) for pat in patterns)
 
 
+async def _wait_for_render(page, max_ms: int = CHILD_RENDER_MAX_MS) -> None:
+    """Wait until the page's visible text is non-empty and stable (bounded)."""
+    js = "() => document.body ? document.body.innerText.trim().length : 0"
+    prev, waited = -1, 0
+    while waited < max_ms:
+        try:
+            now = await page.evaluate(js)
+        except Exception:
+            return
+        if now > 0 and prev >= 0 and abs(now - prev) <= max(10, prev * RENDER_TOLERANCE):
+            return
+        prev = now
+        await page.wait_for_timeout(CHILD_RENDER_POLL_MS)
+        waited += CHILD_RENDER_POLL_MS
+
+
 async def _fetch_child(context, child: ChildPage) -> ChildPage:
     """Fetch one child page. Lighter than the landing page: text and links only."""
     # robots.txt is read with a blocking client; in a worker thread it cannot
@@ -527,6 +726,7 @@ async def _fetch_child(context, child: ChildPage) -> ChildPage:
             child.url, wait_until="domcontentloaded", timeout=CHILD_NAV_TIMEOUT_MS
         )
         await page.wait_for_timeout(CHILD_SETTLE_MS)
+        await _wait_for_render(page)
         child.http_status = resp.status if resp else None
         child.final_url = page.url
         parsed = _extract(await page.content(), child.final_url or child.url)
@@ -580,6 +780,7 @@ async def _fetch_one(
         with contextlib.suppress(Exception):
             await page.wait_for_load_state("networkidle", timeout=NETWORKIDLE_MS)
         await page.wait_for_timeout(SETTLE_MS)
+        await _wait_for_render(page, LANDING_RENDER_MAX_MS)
         ev.http_status = resp.status if resp else None
         ev.final_url = page.url
         ev.redirect_chain = redirects[:10]
@@ -594,6 +795,10 @@ async def _fetch_one(
 
         if depth >= 1:
             ev.crawl_depth = 1
+            landing = ev.final_url or node["url"]
+            with contextlib.suppress(Exception):
+                ev.scripted_links = await resolve_scripted_links(page, landing, ev.links)
+            ev.links.extend(scripted_records_to_links(ev.scripted_links, landing, ev.links))
             selected, skipped = select_children(ev, max_children)
             ev.children_skipped = skipped[:50]
             node_host = urlparse(ev.final_url or node["url"]).netloc.lower()
@@ -634,6 +839,12 @@ async def _fetch_one(
                 f"{len(skipped)} matched but dropped by a cap, "
                 f"the rest not relevant to any point"
             )
+            if ev.scripted_links:
+                opened = sum(1 for r in ev.scripted_links if r.get("href"))
+                ev.crawl_note += (
+                    f"; {len(ev.scripted_links)} clickable item(s) without a link address "
+                    f"clicked, {opened} opened a page (recorded as links)"
+                )
             if depth >= 2:
                 ev.crawl_note += (
                     f"; depth 2 added {len(grandchildren)} page(s)"
