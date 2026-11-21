@@ -1,6 +1,6 @@
 {
-  "run_id": "web-42",
-  "generated_at": "2026-11-20T14:44:50+00:00",
+  "run_id": "web-43",
+  "generated_at": "2026-11-21T08:00:45+00:00",
   "checklist": {
     "checklist_version": "3.2",
     "checklist_date": "2026-09-28",
@@ -112,7 +112,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-11-20T14:36:17+00:00",
+        "fetched_at": "2026-11-21T07:52:39+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -572,7 +572,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.cern/",
-        "fetched_at": "2026-11-20T14:37:12+00:00",
+        "fetched_at": "2026-11-21T07:53:33+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
@@ -996,7 +996,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-11-20T14:37:39+00:00",
+        "fetched_at": "2026-11-21T07:54:00+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -1505,7 +1505,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-11-20T14:38:20+00:00",
+        "fetched_at": "2026-11-21T07:54:41+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -1542,7 +1542,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new?issue%5Bassigned_to_id%5D=24684",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUidpqILVVIpaIVUqCPFasKkGe6AWjh08No%2B%2FJwlqKRIgeeW598ydsecErelEE8POXuFLRApJQ4Q%2BaGeXzlJs0V%2Bjf9USb682NduF0JHgnGLXOR8mqiSp0UqcOP%2FEoefwAcklGPMA8pklq56pLQzAbztI6aIN9JvfI5iW%2BKHCO%2B%2BCk86MZJasVzXbnp5WIB8ylU4rqNJSZkUK%2BUmRqscKVTmDqsynvZQo4tpSABtqVmTFLM3ztMhu8lJMq%2F7cs%2BQOPY3ZiknGkvfWWBJDo5pFb4UD0iQstEgiSHHdnG9ELxSwX9Kxpfvfs5%2BDLeaDWozp%2FMKjarXFbV9WUQ7M7WH2OT9Wzr9e66Inr1eXzmj5kTTGuLdlv7OANQs%2BIkvOnG8h%2FJ0ln%2BTjjVbp4ygV2II2jVIeiRhffHX9%2BS0Wnw%3D%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEichaamVRIpaIVUqCJXHgk3lOlNq4djBY%2FP4e5JULUUCtp57z52HC%2BSt6ljt3V6v4dUDuqBGBOuk0XOj0bdg78C%2BSQEP61VJ9s51yChF33XGuqjJUEjQAiJjnynvOXRAUsGV2nLxQoJFz5SaD8BvOxfCeO3wN78FrlqkpwrtrHFGGDWSSbBclGSzS%2BOLbMfjcDvJIMzEZRPOxBRCENuk6YPzdJb3UkQPS42Oa1eSNE4nYZKEaXIfT1mesXz2RIJHsDj2lkYxCT5apZENQSXxVjPDUSLTvAVkTrC7%2BnrFeiHjxyWdW7r%2FPcc5SFUMajZ2ZysLTSs1bPpy48XA3JxmL%2Bi5sjhc66YnLxe3RknxGdRKmfd5vzMHJXHWAwmujG25%2B7uXJErGF9mEu1HKoOVS1U1jAZHQ6pD681tUXw%3D%3D",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -1614,7 +1614,7 @@
             "url": "https://www.d4science.org/terms-of-use",
             "final_url": "https://www.d4science.org/terms-of-use",
             "depth": 2,
-            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUidpqILVVIpaIVUqCPFasKkGe6AWjh08No%2B%2FJwlqKRIgeeW598ydsecErelEE8POXuFLRApJQ4Q%2BaGeXzlJs0V%2Bjf9USb682NduF0JHgnGLXOR8mqiSp0UqcOP%2FEoefwAcklGPMA8pklq56pLQzAbztI6aIN9JvfI5iW%2BKHCO%2B%2BCk86MZJasVzXbnp5WIB8ylU4rqNJSZkUK%2BUmRqscKVTmDqsynvZQo4tpSABtqVmTFLM3ztMhu8lJMq%2F7cs%2BQOPY3ZiknGkvfWWBJDo5pFb4UD0iQstEgiSHHdnG9ELxSwX9Kxpfvfs5%2BDLeaDWozp%2FMKjarXFbV9WUQ7M7WH2OT9Wzr9e66Inr1eXzmj5kTTGuLdlv7OANQs%2BIkvOnG8h%2FJ0ln%2BTjjVbp4ygV2II2jVIeiRhffHX9%2BS0Wnw%3D%3D",
+            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEichaamVRIpaIVUqCJXHgk3lOlNq4djBY%2FP4e5JULUUCtp57z52HC%2BSt6ljt3V6v4dUDuqBGBOuk0XOj0bdg78C%2BSQEP61VJ9s51yChF33XGuqjJUEjQAiJjnynvOXRAUsGV2nLxQoJFz5SaD8BvOxfCeO3wN78FrlqkpwrtrHFGGDWSSbBclGSzS%2BOLbMfjcDvJIMzEZRPOxBRCENuk6YPzdJb3UkQPS42Oa1eSNE4nYZKEaXIfT1mesXz2RIJHsDj2lkYxCT5apZENQSXxVjPDUSLTvAVkTrC7%2BnrFeiHjxyWdW7r%2FPcc5SFUMajZ2ZysLTSs1bPpy48XA3JxmL%2Bi5sjhc66YnLxe3RknxGdRKmfd5vzMHJXHWAwmujG25%2B7uXJErGF9mEu1HKoOVS1U1jAZHQ6pD681tUXw%3D%3D",
             "selected_for": [
               "5b"
             ],
@@ -1626,7 +1626,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEjdp0ofVRIpaIVUqCLXAgk3lOAO1cOzgsXn8PUmqliIBW8%2B9Z%2B7MeIG8US0rvTvoLbx6QBeUiGCdNHppNPoG7A7smxRwv93k5OBci4xS9G1rrIvqFIUELSAy9pnyjkN7JBVcqYqLFxKsOqbUvAd%2B27kQxmuHv%2FktcNUgPVdoa40zwqiBTIL1Kif72byeZ%2BMsDad8XIVpOk%2FDKqlEyLNpzGGeTUBMOimih7VGx7XLSTJKJmEch8noLk7ZeMay9JEED2BxyJZEIxJ8NEoj6xvlxFvNDEeJTPMGkDnBduX1hnVCxk9LurS0%2F3tOc5Bi0avZkM4WFupGath35dqLnrk%2Fz76gl8rF8Vo3HXm9ujVKis%2BgVMq8L7udOciJsx5IcGVsw93fWeIoHl5kHT4NUgYNl6qsawuIhBbHrj%2B%2FRfEF",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefEjehScFqKkWtkCoVhFrgwKVy7C21cOzgtfl5e5JULUUCLj54Z76dXXuKvNEtq4LfmzW8BkAfVYjgvLJmbg2GBtwG3JsS8LBelWTvfYuMUgxta51P5BiFAiMgse6Z8o5DeyQVXOuaixcSLTqmMrwHftu5EDYYj7%2F5HXDdID1VaOust8LqgUyi5aIk26KYSLgsRLyr86t4LGAS1xfdMYIsF0JeyaKuOyligKVBz40vSTbKijhN4yy9H01YnrM0fyLRIzgcsmXJiEQfjTbI%2BkYlCc4wy1EhM7wBZF6wTXWzYp2Q8eOSzi3t%2F57jHGQ27dVsSOdmDmSjDGy7sgyiZ25Ps0%2FpuXJ6eK3bjrxc3FmtxGdUaW3f593OPJTEuwAkurau4f7vLGmSDjdKxrtByqDhSldSOkAkdHbo%2BvNbzL4A",
             "depth": 2,
             "parent_url": "https://eosc-dto.d4science.org/catalogue",
             "selected_for": [
@@ -1933,7 +1933,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.earth-data.eu/",
-        "fetched_at": "2026-11-20T14:38:58+00:00",
+        "fetched_at": "2026-11-21T07:55:20+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
@@ -2252,7 +2252,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-11-20T14:39:21+00:00",
+        "fetched_at": "2026-11-21T07:55:40+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
@@ -2781,7 +2781,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-11-20T14:40:04+00:00",
+        "fetched_at": "2026-11-21T07:56:24+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "panosc.png",
@@ -3245,7 +3245,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-11-20T14:40:50+00:00",
+        "fetched_at": "2026-11-21T07:56:54+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -3737,7 +3737,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-11-20T14:41:31+00:00",
+        "fetched_at": "2026-11-21T07:57:35+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
@@ -4141,7 +4141,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-11-20T14:41:50+00:00",
+        "fetched_at": "2026-11-21T07:57:55+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
@@ -4443,7 +4443,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-11-20T14:41:56+00:00",
+        "fetched_at": "2026-11-21T07:58:02+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
@@ -4517,7 +4517,7 @@
             "link_text": "Software Find tools and applications to support research.",
             "http_status": 200,
             "title": "Polish Open Science Platform",
-            "chars": 1869,
+            "chars": 1858,
             "error": ""
           }
         ],
@@ -4805,7 +4805,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.it/",
-        "fetched_at": "2026-11-20T14:42:16+00:00",
+        "fetched_at": "2026-11-21T07:58:22+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
@@ -5131,7 +5131,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-11-20T14:42:31+00:00",
+        "fetched_at": "2026-11-21T07:58:36+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-sk.png",
@@ -5451,7 +5451,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-lifesciences-connect.eu/home",
-        "fetched_at": "2026-11-20T14:42:50+00:00",
+        "fetched_at": "2026-11-21T07:58:55+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "life-sciences-connect.png",
@@ -5718,7 +5718,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-node.de/",
-        "fetched_at": "2026-11-20T14:43:02+00:00",
+        "fetched_at": "2026-11-21T07:59:07+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-de.png",
@@ -5962,7 +5962,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://eosc.lv/en/",
-        "fetched_at": "2026-11-20T14:43:07+00:00",
+        "fetched_at": "2026-11-21T07:59:12+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "eosc-lv.png",
@@ -6264,7 +6264,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.scholarlycommons.eu/home",
-        "fetched_at": "2026-11-20T14:43:14+00:00",
+        "fetched_at": "2026-11-21T07:59:18+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "scholarly-commons.png",
@@ -6586,7 +6586,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://services.metrofood-services.eu/eosc",
-        "fetched_at": "2026-11-20T14:43:30+00:00",
+        "fetched_at": "2026-11-21T07:59:34+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "metrofood-ri.png",

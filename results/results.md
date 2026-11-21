@@ -2,7 +2,7 @@
 
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-42` · 2026-11-20T14:44:50+00:00 · 18 nodes · one page request per node plus 69 followed link(s), then 35 second-hop page(s) (depth 2).
+Run `web-43` · 2026-11-21T08:00:45+00:00 · 18 nodes · one page request per node plus 69 followed link(s), then 35 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 

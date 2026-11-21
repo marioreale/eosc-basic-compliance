@@ -37,15 +37,25 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-42`, collected at `--depth 2`, and it has
-> not been reviewed yet.** It was collected on 20 November 2026 between 14:36 and
-> 14:43 UTC by the GitHub workflow ([run 44753632474](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44753632474), commit `1163f08`), from all
+> **The published report is run `web-43`, collected at `--depth 2`, and it has
+> not been reviewed yet.** It was collected on 21 November 2026 between 07:52 and
+> 07:59 UTC by the GitHub workflow ([run 44882165868](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44882165868), commit `05b8500`), from all
 > **eighteen** configured nodes, under the **re-issued checklist v3.2**, with the
 > eighteen-name approved list (SHA-256 `6d8c249a…`). At depth 2 the tally is
 > **81 PASS, 11 FAIL, 68 review, 20 FIREWALL, 0 ERROR** (80 / 11 / 69 / 20 / 0 at
 > depth 1).
 >
-> **What changed against `web-40`.** **One cell: Scholarly Commons point 6
+> **What changed against `web-42`.** **Nothing: all 180 cells are the same at
+> both depths, every node read the same linked pages with the same HTTP
+> statuses (122 page requests), and no verdict, message or evidence line
+> differs.** The Scholarly Commons warnings below (point 6 review, 5b and 5c
+> FAILs, all judged on pages captured before they were drawn) still apply.
+>
+> The previous published run, `web-42` ([run 44753632474](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44753632474), 20 November,
+> commit `1163f08`: 81 / 11 / 68 / 20 FIREWALL / 0 ERROR), is in the git history
+> at `05b8500`.
+>
+> **`web-42` against `web-40`.** **One cell: Scholarly Commons point 6
 > went from PASS to review**, at both depths. The node changed its page: "Contact
 > the Node team" now links its own `/contact` page instead of
 > `https://www.openaire.eu/helpdesk`. The tool followed it (HTTP 200), but the
@@ -174,10 +184,10 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > nodes that failed 5b and 5c under the first copy: CERN now passes both, and
 > Data Terra fails both after its services pages were read; PaNOSC is review.
 
-All eighteen configured nodes were fetched on 20 November 2026 at `--depth 2`
+All eighteen configured nodes were fetched on 21 November 2026 at `--depth 2`
 (122 page requests: 18 landing pages, 69 direct links, 35 second-hop pages; the
 shared fetch budget reached 35 of 60) and
-assessed against the official unscoped names list, now eighteen names. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and on BBMRI-ERIC's `dev3.` pages (`web-25`) its Director General, its advisory board, its Stakeholder Forum chair, its head of public affairs and its finance and project staff, about 120 names on GÉANT's executive team, governance and membership pages in `web-16`, `web-22` and again in `web-34` (including names cut short in link labels; GÉANT's page was not served in `web-23` to `web-33`), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, the people named in the captions of historical public-domain photos on Poland's page (`web-27`), on EBRAINS-RI's pages (`web-28`) its CEO, a section head, its press contact, the authors of three testimonials and two people in news items and image captions, the coordinator named in a video title in Life Sciences Connect's screenshot (`web-28`), the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy and a person interviewed in an EBRAINS-RI news item (`web-31`; the same in `web-33` and `web-34`, where Germany's page carries no personal data; in `web-35` also a professor named in an EBRAINS-RI news item and the surname of BBMRI-ERIC's head of public affairs, next to a masked contact line; in `web-36` and `web-37` the same names again, and the pages of Latvia and Scholarly Commons carry no personal data; in `web-38` the same names again where the pages still carry them, and the coordinator named on METROFOOD-RI's page, also next to her initials; in `web-39`, `web-40` and `web-42` the same names again, and Scholarly Commons' new cookie table names no person; Life Sciences Connect's new page has no video title, so its screenshot needs no mask), and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
+assessed against the official unscoped names list, now eighteen names. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and on BBMRI-ERIC's `dev3.` pages (`web-25`) its Director General, its advisory board, its Stakeholder Forum chair, its head of public affairs and its finance and project staff, about 120 names on GÉANT's executive team, governance and membership pages in `web-16`, `web-22` and again in `web-34` (including names cut short in link labels; GÉANT's page was not served in `web-23` to `web-33`), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, the people named in the captions of historical public-domain photos on Poland's page (`web-27`), on EBRAINS-RI's pages (`web-28`) its CEO, a section head, its press contact, the authors of three testimonials and two people in news items and image captions, the coordinator named in a video title in Life Sciences Connect's screenshot (`web-28`), the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy and a person interviewed in an EBRAINS-RI news item (`web-31`; the same in `web-33` and `web-34`, where Germany's page carries no personal data; in `web-35` also a professor named in an EBRAINS-RI news item and the surname of BBMRI-ERIC's head of public affairs, next to a masked contact line; in `web-36` and `web-37` the same names again, and the pages of Latvia and Scholarly Commons carry no personal data; in `web-38` the same names again where the pages still carry them, and the coordinator named on METROFOOD-RI's page, also next to her initials; in `web-39`, `web-40`, `web-42` and `web-43` the same names again, and Scholarly Commons' new cookie table names no person; Life Sciences Connect's new page has no video title, so its screenshot needs no mask), and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
@@ -209,17 +219,17 @@ evidence behind every verdict, is in the report linked above:
   These FAILs describe a placeholder page; a reviewer should check whether the
   imprint gives a contact route before quoting 6.
 - **EOSC Node Latvia**, first assessed in `web-36`, was not served in `web-36`
-  to `web-42`: `https://eosc.lv/en/` answered `HTTP 403` with Cloudflare's
+  to `web-43`: `https://eosc.lv/en/` answered `HTTP 403` with Cloudflare's
   "Performing security verification" page (2 links, 5 DOM elements, no linked
   page read), so all ten points are 🧱 `FIREWALL` (since `web-37`). Its eosc.eu entry exists
   (checked live on 10 November 2026); whether the page links it is unknown.
 - **Scholarly Commons**, first assessed in `web-36`, had 4 PASS, 2 FAIL and 4
   review in `web-37` to `web-40`, and has 3 PASS, 2 FAIL and 5 review in
-  `web-42`. Its page rendered in full: point 1 passes (served
+  `web-42` and `web-43`. Its page rendered in full: point 1 passes (served
   anonymously), point 4 passes (it links
   `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons`)
   and point 7 passes. Point 6 passed up to `web-40` ("Contact the Node team",
-  OpenAIRE's helpdesk); in `web-42` the link goes to the node's own `/contact`
+  OpenAIRE's helpdesk); from `web-42` the link goes to the node's own `/contact`
   page, which came back with the landing page's text (not yet drawn), so 6 is
   review on a page the tool did not read. The page now also has a Login button. Point 3 is review: an image labelled "EOSC Node Scholarly Commons" was
   found, but the approved name is not in the page text (in `web-36` the shell's
@@ -231,7 +241,7 @@ evidence behind every verdict, is in the report linked above:
   not quote these two FAILs until a reviewer has checked the page in a browser,
   or a later run reads it properly. In `web-36` it rendered only a
   169-character shell and was review on points 1 to 6.
-- **GÉANT** was not served in `web-35` to `web-42` (from `web-37` all ten points are 🧱 `FIREWALL`): `https://geant.org/geant-eosc-node/`
+- **GÉANT** was not served in `web-35` to `web-43` (from `web-37` all ten points are 🧱 `FIREWALL`): `https://geant.org/geant-eosc-node/`
   answered `HTTP 403` and redirected to `?ki-cf-botcl=1`, Cloudflare's "Performing
   security verification" page (2 links, no linked page read). Up to `web-36`, before the
   `FIREWALL` outcome, only point 7 (English) passed and the other nine were
@@ -286,7 +296,7 @@ evidence behind every verdict, is in the report linked above:
   serves as the User Access Policy (up to `web-26` 5c was review). GÉANT, when its page is served (`web-22`, `web-34`), links a "GÉANT
   Node Acceptable Use Policy" page, which was read, so 5b passes; 5c is review,
   since no separate User Access Policy is linked and v3.2 allows one document
-  for both. In `web-23` to `web-33` and in `web-35` to `web-42` its page was not served. A PASS covers
+  for both. In `web-23` to `web-33` and in `web-35` to `web-43` its page was not served. A PASS covers
   only the
   NLP half: no node's Catalogue metadata was read.
 - **CERN** was assessed at its new Node Landing Page, `https://eosc.cern/`, for
@@ -338,7 +348,7 @@ linked only the `eosc.eu` homepage) fixed theirs on 2 October 2026.
 BBMRI-ERIC (from its `www.` page up to `web-23`, and from its `dev3.` page in `web-25`), CERN, Czechia (since `web-16`), Data Terra (since `web-21`, at
 `earth-data.eu`), EOSC DTO, EGI (since `web-15`), EUDAT, Italy (since `web-18`,
 at `eosc.it`), PaNOSC and Poland (since `web-23`; Poland's page rendered almost empty in `web-26` only), EOSC Finland (since `web-25`) and Slovakia link correctly;
-GÉANT does too whenever its page is served (`web-16`, `web-22`, `web-34`; not in `web-35` to `web-42`). The failure
+GÉANT does too whenever its page is served (`web-16`, `web-22`, `web-34`; not in `web-35` to `web-43`). The failure
 names the exact URL that is missing, so the fix is a one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and

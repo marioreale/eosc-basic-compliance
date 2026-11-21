@@ -17,7 +17,7 @@ from the runs of 24 and 26 September and from a trial run on 25 September,
 and each figure says which. Where a command's behaviour is surprising, that is
 noted rather than smoothed over.
 
-This edition of 20 November 2026 publishes run `web-42` (eighteen nodes; one cell changed against `web-40`, Scholarly Commons point 6, PASS to review); the test count is still 473. The edition of 18 November 2026 published run `web-40` (eighteen nodes, with METROFOOD-RI in place of EBRAINS-RI since 16 November 2026) and documented the `FIREWALL` outcome of 11 November 2026. Runs `web-37`, `web-38` and `web-39`, published on 11, 16 and 17 November 2026 with the README only, are summarised in the note below; `web-41` (18 November 2026) was collected but not published. The edition of 11 November 2026 published run `web-36`, the first with all eighteen nodes, including **EOSC Node Latvia** and **Scholarly Commons**, which the edition of 10 November 2026 added (the test count is 464). The edition of 5 November 2026 published run `web-35`
+This edition of 21 November 2026 publishes run `web-43` (eighteen nodes; no change against `web-42`); the test count is still 473. The edition of 20 November 2026 published run `web-42` (one cell changed against `web-40`, Scholarly Commons point 6, PASS to review). The edition of 18 November 2026 published run `web-40` (eighteen nodes, with METROFOOD-RI in place of EBRAINS-RI since 16 November 2026) and documented the `FIREWALL` outcome of 11 November 2026. Runs `web-37`, `web-38` and `web-39`, published on 11, 16 and 17 November 2026 with the README only, are summarised in the note below; `web-41` (18 November 2026) was collected but not published. The edition of 11 November 2026 published run `web-36`, the first with all eighteen nodes, including **EOSC Node Latvia** and **Scholarly Commons**, which the edition of 10 November 2026 added (the test count is 464). The edition of 5 November 2026 published run `web-35`
 as is, on request (all sixteen nodes; EBRAINS-RI stopped at the per-node time
 limit, GÉANT behind the Cloudflare challenge again). The edition of 27 October
 2026 published run `web-34` (GÉANT's page served again). The edition of 20 October 2026
@@ -50,14 +50,14 @@ Sciences Connect's pages, made from a browser, is reported where it is used.
 > differences point by point, and section 5 of the
 > [analysis workflow](ANALYSIS-WORKFLOW.md) has the decision procedure.
 >
-> **The published run changed again on 20 November 2026.**
-> `results/` now holds run `web-42`, collected by the GitHub workflow at
-> `--depth 2` on 20 November 2026 between 14:36 and 14:43 UTC from all eighteen
-> nodes ([run 44753632474](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44753632474), commit `1163f08`), under the re-issued v3.2 and the
+> **The published run changed again on 21 November 2026.**
+> `results/` now holds run `web-43`, collected by the GitHub workflow at
+> `--depth 2` on 21 November 2026 between 07:52 and 07:59 UTC from all eighteen
+> nodes ([run 44882165868](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44882165868), commit `05b8500`), under the re-issued v3.2 and the
 > eighteen-name approved list (SHA-256 `6d8c249a…`): 81 PASS, 11 FAIL, 68
 > MANUAL_REVIEW, 20 FIREWALL and 0 ERROR at depth 2 (80 / 11 / 69 / 20 / 0 at
 > depth 1), in 122 page requests (18 landing pages, 69 direct links, 35
-> second-hop pages; the shared second-hop budget used 35 of 60). **One cell
+> second-hop pages; the shared second-hop budget used 35 of 60). **It is identical to `web-42`** ([run 44753632474](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44753632474), 20 November, commit `1163f08`) in every verdict, message and evidence line. In `web-42` **one cell
 > changed against `web-40`**, at both depths: **Scholarly Commons point 6, PASS
 > to review.** Its "Contact the Node team" link now goes to the node's own
 > `/contact` page rather than OpenAIRE's helpdesk, and that page came back with
@@ -371,12 +371,12 @@ the git history at `73fbb93`.
 had no address record on 24 September; Italy was assessed from that address in
 runs `web-4` to `web-16`. On 1 October it changed back to `https://eosc.it/`,
 which now resolves, and `nodes.yaml` carries a comment saying so. Runs `web-18`,
-`web-21` to `web-42` (`web-42` is the published run; `web-41` was not published) were collected from `https://eosc.it/`.
+`web-21` to `web-43` (`web-43` is the published run; `web-41` was not published) were collected from `https://eosc.it/`.
 
 **Data Terra's URL changed on 1 October 2026**, from
 `https://www.data-terra.org/eosc/` to `https://www.earth-data.eu/`, and
 `nodes.yaml` carries a comment saying so. Runs up to `web-18` read the old
-address; runs `web-21` to `web-42` (`web-42` is the published run) read the new one.
+address; runs `web-21` to `web-43` (`web-43` is the published run) read the new one.
 
 **PaNOSC's URL changed on 19 October 2026**, from `https://eosc.panosc.eu/` to
 `https://panosc.eu/panosc-eosc-node`, with `basic-check --update-nlp` (commit
@@ -384,17 +384,17 @@ address; runs `web-21` to `web-42` (`web-42` is the published run) read the new 
 Both addresses redirect to `https://www.panosc.eu/panosc-eosc-node/`, which is
 the `final_url` of every run since the redirect appeared, so the change records
 the node's chosen address rather than a different page. Runs up to `web-28` were
-requested at the old address; `web-31` and `web-33` to `web-42` (`web-42` is the published run) at the new one.
+requested at the old address; `web-31` and `web-33` to `web-43` (`web-43` is the published run) at the new one.
 
 **EOSC Node Germany was added on 20 October 2026** (commit `1353fda`): id
 `eosc-de`, URL `https://eosc-node.de`, EOSC page
 `https://eosc.eu/building-the-eosc-federation/eosc-node-germany/`, and the
 approved name "EOSC Node | Germany" in both `checklist/approved-names.txt` and
-the scoped list. It was first collected in `web-33`, and again in every run since, up to `web-42`.
+the scoped list. It was first collected in `web-33`, and again in every run since, up to `web-43`.
 
 **EOSC Node Latvia and Scholarly Commons were added on 10 November 2026**, following the three steps of [Adding a node](#adding-a-node): id `eosc-lv`, URL `https://eosc.lv/en/`, EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-latvia/`, approved name "EOSC Node | Latvia"; and id `scholarly-commons`, URL `https://eosc.scholarlycommons.eu/home`, EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons/`, approved name "EOSC Node | Scholarly Commons". The names are the ones supplied for the two nodes, in the `EOSC Node | ` form of the official list; both eosc.eu pages carry them as their titles. Both were first collected in `web-36` (11 November 2026), the published run: Latvia was behind Cloudflare's bot check (HTTP 403) and Scholarly Commons rendered only a JavaScript shell (169 characters), as a trial collection on 10 November had found; see the note at the top of this guide.
 
-**EBRAINS-RI was removed and METROFOOD-RI added on 16 November 2026** (commit `403e185`). EBRAINS-RI's entry was deleted from `nodes.yaml` and the shipped default copy, its approved name "EOSC Node | EBRAINS RI" from both name lists, and its evidence file and screenshot from `results/evidence/` when `web-38` was published; its results up to `web-37` remain in the git history. METROFOOD-RI was added following [Adding a node](#adding-a-node): id `metrofood-ri`, URL `https://services.metrofood-services.eu/eosc`, EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-metrofood-ri/`, approved name "EOSC Node | METROFOOD-RI". The approved list still has eighteen names, now with SHA-256 `6d8c249a…`. It was first collected in `web-38` and, in `web-38` to `web-42`, fails point 4 (it links EOSC Beyond but not `eosc.eu`) and 5b and 5c (its policy links are `#TODO-acceptable-use-policy` and `#TODO-user-access-policy` placeholders).
+**EBRAINS-RI was removed and METROFOOD-RI added on 16 November 2026** (commit `403e185`). EBRAINS-RI's entry was deleted from `nodes.yaml` and the shipped default copy, its approved name "EOSC Node | EBRAINS RI" from both name lists, and its evidence file and screenshot from `results/evidence/` when `web-38` was published; its results up to `web-37` remain in the git history. METROFOOD-RI was added following [Adding a node](#adding-a-node): id `metrofood-ri`, URL `https://services.metrofood-services.eu/eosc`, EOSC page `https://eosc.eu/building-the-eosc-federation/eosc-node-metrofood-ri/`, approved name "EOSC Node | METROFOOD-RI". The approved list still has eighteen names, now with SHA-256 `6d8c249a…`. It was first collected in `web-38` and, in `web-38` to `web-43`, fails point 4 (it links EOSC Beyond but not `eosc.eu`) and 5b and 5c (its policy links are `#TODO-acceptable-use-policy` and `#TODO-user-access-policy` placeholders).
 
 ### Changing a node's URL
 
@@ -455,7 +455,7 @@ from the committed `nodes.yaml` and scored under the default checklist, so no
 other option is needed and there is no URL warning:
 
 ```bash
-uv run basic-check assess --run web-42
+uv run basic-check assess --run web-43
 ```
 
 The evidence records the depth it was collected at, so `assess` renders both
@@ -476,7 +476,7 @@ exactly, apart from the generation time, with 60 PASS, 1 FAIL, 59
 MANUAL_REVIEW and 10 ERROR for `web-24`; verified again on 6 October 2026 for
 `web-25`, with 68 PASS, 0 FAIL and 62 MANUAL_REVIEW, and for `web-26`, with 67
 PASS, 0 FAIL and 63 MANUAL_REVIEW; verified on 7 October 2026 for `web-27`,
-with 69 PASS, 0 FAIL and 61 MANUAL_REVIEW; on 9 October 2026 for `web-28`, with 78 PASS, 4 FAIL and 68 MANUAL_REVIEW at depth 2; on 19 October 2026 for `web-31`, with the same counts at depth 2; on 20 October 2026 for `web-33`, with 81 PASS, 7 FAIL and 72 MANUAL_REVIEW; on 27 October 2026 for `web-34`, with 85 PASS, 7 FAIL and 68 MANUAL_REVIEW; on 5 November 2026 for `web-35`, with 76 PASS, 6 FAIL, 68 MANUAL_REVIEW and 10 ERROR; on 11 November 2026 for `web-36`, with 83 PASS, 7 FAIL, 90 MANUAL_REVIEW and 0 ERROR; on 18 November 2026 for `web-40`, with 82 PASS, 11 FAIL, 67 MANUAL_REVIEW, 20 FIREWALL and 0 ERROR; and on 20 November 2026 for `web-42`, with 81 PASS, 11 FAIL, 68 MANUAL_REVIEW, 20 FIREWALL and 0 ERROR (the masked evidence gives the same verdicts and messages as the workflow's artifact). To rebuild `web-35`, which predates Latvia and Scholarly Commons, pass the node and name lists it was made with: `git show a556394:nodes.yaml > /tmp/nodes16.yaml; git show a556394:checklist/approved-names.txt > /tmp/names16.txt`, restore `results/` from commit `7b215f2` into `/tmp/copy`, then `uv run basic-check assess --run web-35 --nodes /tmp/nodes16.yaml --approved-names /tmp/names16.txt --results /tmp/copy` (verified 10 November 2026: identical apart from the generation time and the name-list path). The reviewed run of 24 September that it replaced is in the git
+with 69 PASS, 0 FAIL and 61 MANUAL_REVIEW; on 9 October 2026 for `web-28`, with 78 PASS, 4 FAIL and 68 MANUAL_REVIEW at depth 2; on 19 October 2026 for `web-31`, with the same counts at depth 2; on 20 October 2026 for `web-33`, with 81 PASS, 7 FAIL and 72 MANUAL_REVIEW; on 27 October 2026 for `web-34`, with 85 PASS, 7 FAIL and 68 MANUAL_REVIEW; on 5 November 2026 for `web-35`, with 76 PASS, 6 FAIL, 68 MANUAL_REVIEW and 10 ERROR; on 11 November 2026 for `web-36`, with 83 PASS, 7 FAIL, 90 MANUAL_REVIEW and 0 ERROR; on 18 November 2026 for `web-40`, with 82 PASS, 11 FAIL, 67 MANUAL_REVIEW, 20 FIREWALL and 0 ERROR; on 20 November 2026 for `web-42`, with 81 PASS, 11 FAIL, 68 MANUAL_REVIEW, 20 FIREWALL and 0 ERROR; and on 21 November 2026 for `web-43`, with the same counts (the masked evidence gives the same verdicts and messages as the workflow's artifact). To rebuild `web-35`, which predates Latvia and Scholarly Commons, pass the node and name lists it was made with: `git show a556394:nodes.yaml > /tmp/nodes16.yaml; git show a556394:checklist/approved-names.txt > /tmp/names16.txt`, restore `results/` from commit `7b215f2` into `/tmp/copy`, then `uv run basic-check assess --run web-35 --nodes /tmp/nodes16.yaml --approved-names /tmp/names16.txt --results /tmp/copy` (verified 10 November 2026: identical apart from the generation time and the name-list path). The reviewed run of 24 September that it replaced is in the git
 history at commit `800d632`; to rebuild that one, restore its `results/` into a
 scratch directory and assess it with `--skip Italy` and the node list from
 commit `53081f6`. Runs published before 28 September 2026 were also scored with the earlier name list, so pass it too: `git show e7da5a8:checklist/approved-names.txt > /tmp/names-before-2026-09-28.txt`, then add `--approved-names /tmp/names-before-2026-09-28.txt`. The full procedure, including how to publish the new node's
@@ -720,7 +720,7 @@ and Poland, whose page writes `EOSC Node Poland` (from `web-23`; in `web-26`
 it rendered only its header and footer, so there was nothing to match). GÉANT
 matched (`EOSC Node GÉANT`) in `web-16`, `web-22` and `web-34`, when its page was
 served; in `web-23` to `web-33` and in `web-35` and `web-36` it was not. In `web-28` (9 October 2026, fifteen
-names) and `web-31` (19 October 2026) the same eight match; in `web-33` (20 October 2026, sixteen names) the new node, Germany, writes "EOSC Node Germany" and matches too: nine. In `web-34` (27 October 2026) GÉANT's page was served and matches again: ten. In `web-35` (5 November 2026) it was behind the Cloudflare challenge again: nine. In `web-36` (11 November 2026, eighteen names) GÉANT is still behind it, Latvia is too (HTTP 403), and Scholarly Commons matches in the 169 characters its page rendered, written "EOSC Node · Scholarly Commons": ten. In `web-37` to `web-42` Scholarly Commons' page rendered in full and carries the name only as its logo's alt text, not in the page text: nine; METROFOOD-RI, in the list since `web-38`, does not write its approved name. Neither of the nodes added in `web-28` does: Life Sciences Connect's
+names) and `web-31` (19 October 2026) the same eight match; in `web-33` (20 October 2026, sixteen names) the new node, Germany, writes "EOSC Node Germany" and matches too: nine. In `web-34` (27 October 2026) GÉANT's page was served and matches again: ten. In `web-35` (5 November 2026) it was behind the Cloudflare challenge again: nine. In `web-36` (11 November 2026, eighteen names) GÉANT is still behind it, Latvia is too (HTTP 403), and Scholarly Commons matches in the 169 characters its page rendered, written "EOSC Node · Scholarly Commons": ten. In `web-37` to `web-43` Scholarly Commons' page rendered in full and carries the name only as its logo's alt text, not in the page text: nine; METROFOOD-RI, in the list since `web-38`, does not write its approved name. Neither of the nodes added in `web-28` does: Life Sciences Connect's
 logo reads "EOSC Node | Life Sciences Connect" and the phrase `EOSC Node` occurs
 once in its text, but never followed by an approved name; EBRAINS-RI's page
 writes "EBRAINS RI" without `EOSC Node`.
@@ -1270,7 +1270,7 @@ because every check works from the parts that are kept. Screenshots are not
 masked; they show the visible part of the landing page only, not the contact
 pages where these details appeared.
 
-**The published run is masked.** Run `web-42` (20 November 2026), like `web-36` to `web-40` before it, was collected
+**The published run is masked.** Run `web-43` (21 November 2026), like `web-36` to `web-42` before it, was collected
 with masking in place, and a search of all its evidence and reports found no
 personal address or phone number. Two personal names that the masking does not cover were removed by hand from the evidence, each replaced by a placeholder of the same length so every character count and verdict stays as collected: a quotation attribution on CERN's page (in `cern.json` and in its screenshot) and the node coordinator named on EGI's page (in `egi.json`, in the link text and, since `web-12`, also in the link's address, `/person/…/`, which earlier published runs still carried). The second hop of `web-13` added a third: a person quoted in a news item on a Czechia page reached only at depth 2 (in `eosc-cz.json`, in the quotation and in the address of the interview it links to). `web-14`, which also reads services and policies pages, added many more, and `web-15`, `web-16`, `web-18`, `web-21`, `web-22`, `web-23`, `web-24`, `web-25`, `web-26`, `web-27`, `web-28`, `web-31`, `web-33`, `web-34`, `web-35` and `web-36` carry the same ones (BBMRI-ERIC's apart, in `web-24`, where its page was not fetched; `web-25` adds fifteen on BBMRI-ERIC's `dev3.` pages: its Director General on the legal notice, the seven members of its scientific and ethical advisory board, the Stakeholder Forum chair and the head of public affairs, and five finance, project and HR staff listed in capitals) (`web-21` adds one, a photo credit in an image description on Data Terra's new page; `web-22` adds two staff names in a news item on EUDAT's new page and one more GÉANT observer; `web-27` adds the people named in the captions of historical public-domain photos on Poland's page; `web-28` adds, on EBRAINS-RI's pages, its CEO, a section head, its press contact, three testimonial authors and two people named in news items and image captions, also in image file names and link addresses, and the coordinator named in a video title in Life Sciences Connect's screenshot; `web-31` adds the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy and a person interviewed in an EBRAINS-RI news item; `web-35` adds a professor named in an EBRAINS-RI news item, among the seven pages read before the time limit, and the surname of BBMRI-ERIC's head of public affairs next to a masked contact line; GÉANT's pages were not served, so its names are not in `web-35` or `web-36`; `web-36` adds none: EBRAINS-RI's pages, complete again, carry the names already masked in `web-34`, and the pages of Latvia and Scholarly Commons carry no personal data): about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and the author lists of publication citations on Czechia's, D4Science's (EOSC DTO, Italy) and PaNOSC's pages. Two of those citation lists were already in the evidence published as `web-13` and were missed then; they remain in the git history. `web-16`, the first run with GÉANT's page served since 24 September, reached its executive team, governance and membership pages: about 120 names of officers, board members and General Assembly representatives, some cut short at the end of a link label ("Firstname Lastna…"). They were taken from the fixed patterns of those pages ("Representative:", "Substitute:", "… Chief … Officer", "… Member") and masked everywhere, truncated forms included. `web-34`, the next run with GÉANT's page served, reached the same pages again; the same patterns gave about 120 names (122 full names and one cut short in a control label), masked the same way. In `web-35` and `web-36` the names were carried over from the previous runs by aligning each placeholder with the new evidence, and the new text of every node was then read for names not seen before. A deeper run reads more pages, and so needs this check more; look for citations ("Surname, I." lists before a year) as well as for people named in prose. The masking handles addresses and phone numbers only, so a new run needs the same check for names. Before it, commit `ada1b4a` (25 September
 2026) masked the 24 September run's `results/evidence/` and rebuilt the reports

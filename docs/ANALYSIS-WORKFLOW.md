@@ -109,7 +109,7 @@ does not record (section 3), or if you want a fresh
 capture date. For the full procedure of each case, with every file and
 command, see the worked examples in section 8. Each command writes to
 `results/`, the published run, by default. Add `--results /tmp/copy` to work on
-a copy first. The published run, `web-42`, covers all eighteen configured nodes, so `assess` on
+a copy first. The published run, `web-43`, covers all eighteen configured nodes, so `assess` on
 `results/` needs no `--skip`. To rebuild a run made with another node list, pass
 the node and name lists it was made with (`--nodes` and `--approved-names`), not
 `--skip`: from commit `77afd2c` for `web-37` and earlier runs with EBRAINS-RI,
