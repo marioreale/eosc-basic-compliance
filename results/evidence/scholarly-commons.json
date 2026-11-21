@@ -2,7 +2,7 @@
   "node_id": "scholarly-commons",
   "node_name": "Scholarly Commons",
   "requested_url": "https://eosc.scholarlycommons.eu/home",
-  "fetched_at": "2026-11-21T07:59:18+00:00",
+  "fetched_at": "2026-11-21T08:41:31+00:00",
   "final_url": "https://eosc.scholarlycommons.eu/home",
   "http_status": 200,
   "redirect_chain": [],
@@ -994,8 +994,8 @@
       "final_url": "https://eosc.scholarlycommons.eu/discover",
       "title": "Discover services | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear Refine Clear",
-      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login Services for the scholarly commons . Services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services Show All Open to anyone Set up for your organisation Refine Clear Refine Clear A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "main_text": "Services for the scholarly commons . 7 services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services 7 results Show All Open to anyone Set up for your organisation Open Access Argos Plan your data management: Create, link and share Data Management Plans Develop and publish your Data Management Plan on the cloud. Manage Data Researchers, Research Projects, Research Communities, Research Organisations, Funders, Businesses Openaire Details Order required OpenAIRE CONNECT Custom Gateway for your Community OpenAIRE CONNECT is a platform‑as‑a‑service that empowers research communities to create and manage customised Community Gateways. Discover Research Communities, Research Infrastructure Managers, Research Projects, Research Organisations Openaire Details Open Access OpenAIRE Graph An intelligent gateway to scholarly communication The OpenAIRE Graph is a collection of interlinked research objects that aggregates metadata records from more than 70K scholarly communication sources from all over the world for researchers, service providers, research managers and policy makers, by following a participatory approach. Discover Providers, Research Communities, Research Groups, Research Infrastructure Managers, Research Managers, Research Organisations, Innovators, Businesses, Provider Managers Openaire Details Open Access OpenAIRE MONITOR Personalised research monitoring OpenAIRE MONITOR is a service that produces well-documented, timely and accurate monitoring indicators of research activities for funders, research initiatives and organisations, by creating personalised and on-demand online configurable dashboards. Assess Funders, Research Infrastructure Managers, Research Organisations Openaire Details Open Access OpenAIRE PROVIDE One-stop-shop for sharing, improving, and enriching your content OpenAIRE PROVIDE is the scholarly gateway that receives content registration requests and provides guidance for content providers by viewing a personalised, user-friendly dashboard that shows the necessary steps and status of the services to complete the process. Outreach Providers, Provider Managers Openaire Details Open Access OpenAIRE UsageCounts Measure.Track Open Access repositories usage UsageCounts is an OpenAIRE service for content providers, research funders and policy makers, that collects and visualises usage activity of Open Access Repositories by using automated and standardised scientific methods. Assess Provider Managers, Research Managers, Resource Managers, Providers, Research Infrastructure Managers Openaire Details Open Access OpenPlato The e-learning Hub for Open Science training experiences. OpenPlato is a modular learning platform developed by OpenAIRE to support training in Open Science, Research Data Management, and related topics across Europe. Support & Train Researchers, Providers, Policy Makers, Research Communities, Research Groups, Research Projects, Research Organisations, Research Networks, Funders Openaire Details Refine Clear Category Assess Outreach Discover Interoperability Manage Data Support & Train Provider Openaire Target user Research Organisations Providers Research Communities Research Infrastructure Managers Funders Provider Managers Research Projects Businesses Research Groups Research Managers Researchers Innovators Policy Makers Research Networks Resource Managers Maturity TRL 9 Order type Open Access Order required Refine Clear Category Assess Outreach Discover Interoperability Manage Data Support & Train Provider Openaire Target user Research Organisations Providers Research Communities Research Infrastructure Managers Funders Provider Managers Research Projects Businesses Research Groups Research Managers Researchers Innovators Policy Makers Research Networks Resource Managers Maturity TRL 9 Order type Open Access Order required",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login Services for the scholarly commons . 7 services from trusted providers, for institutions, funders, research teams and individual researchers. Start from a task, or filter your way in. Search I want to… Plan my data DMP templates, funder requirements, machine-actionable output Publish & preserve Repositories with DOIs, versioning and long-term custody Work with metadata Graph dumps, citation data, APIs and SPARQL endpoints Monitor open science Dashboards and indicators for projects, institutions, countries All services 7 results Show All Open to anyone Set up for your organisation Open Access Argos Plan your data management: Create, link and share Data Management Plans Develop and publish your Data Management Plan on the cloud. Manage Data Researchers, Research Projects, Research Communities, Research Organisations, Funders, Businesses Openaire Details Order required OpenAIRE CONNECT Custom Gateway for your Community OpenAIRE CONNECT is a platform‑as‑a‑service that empowers research communities to create and manage customised Community Gateways. Discover Research Communities, Research Infrastructure Managers, Research Projects, Research Organisations Openaire Details Open Access OpenAIRE Graph An intelligent gateway to scholarly communication The OpenAIRE Graph is a collection of interlinked research objects that aggregates metadata records from more than 70K scholarly communication sources from all over the world for researchers, service providers, research managers and policy makers, by following a participatory approach. Discover Providers, Research Communities, Research Groups, Research Infrastructure Managers, Research Managers, Research Organisations, Innovators, Businesses, Provider Managers Openaire Details Open Access OpenAIRE MONITOR Personalised research monitoring OpenAIRE MONITOR is a service that produces well-documented, timely and accurate monitoring indicators of research activities for funders, research initiatives and organisations, by creating personalised and on-demand online configurable dashboards. Assess Funders, Research Infrastructure Managers, Research Organisations Openaire Details Open Access OpenAIRE PROVIDE One-stop-shop for sharing, improving, and enriching your content OpenAIRE PROVIDE is the scholarly gateway that receives content registration requests and provides guidance for content providers by viewing a personalised, user-friendly dashboard that shows the necessary steps and status of the services to complete the process. Outreach Providers, Provider Managers Openaire Details Open Access OpenAIRE UsageCounts Measure.Track Open Access repositories usage UsageCounts is an OpenAIRE service for content providers, research funders and policy makers, that collects and visualises usage activity of Open Access Repositories by using automated and standardised scientific methods. Assess Provider Managers, Research Managers, Resource Managers, Providers, Research Infrastructure Managers Openaire Details Open Access OpenPlato The e-learning Hub for Open Science training experiences. OpenPlato is a modular learning platform developed by OpenAIRE to support training in Open Science, Research Data Management, and related topics across Europe. Support & Train Researchers, Providers, Policy Makers, Research Communities, Research Groups, Research Projects, Research Organisations, Research Networks, Funders Openaire Details Refine Clear Category Assess Outreach Discover Interoperability Manage Data Support & Train Provider Openaire Target user Research Organisations Providers Research Communities Research Infrastructure Managers Funders Provider Managers Research Projects Businesses Research Groups Research Managers Researchers Innovators Policy Makers Research Networks Resource Managers Maturity TRL 9 Order type Open Access Order required Refine Clear Category Assess Outreach Discover Interoperability Manage Data Support & Train Provider Openaire Target user Research Organisations Providers Research Communities Research Infrastructure Managers Funders Provider Managers Research Projects Businesses Research Groups Research Managers Researchers Innovators Policy Makers Research Networks Resource Managers Maturity TRL 9 Order type Open Access Order required A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
@@ -1080,6 +1080,76 @@
         {
           "href": "https://eosc.scholarlycommons.eu/join",
           "text": "Join",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.argos",
+          "text": "Argos",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.argos",
+          "text": "Details",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.connect",
+          "text": "OpenAIRE CONNECT",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.connect",
+          "text": "Details",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.graph",
+          "text": "OpenAIRE Graph",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.graph",
+          "text": "Details",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.monitor",
+          "text": "OpenAIRE MONITOR",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.monitor",
+          "text": "Details",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.provide",
+          "text": "OpenAIRE PROVIDE",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.provide",
+          "text": "Details",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.usagecounts",
+          "text": "OpenAIRE UsageCounts",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.usagecounts",
+          "text": "Details",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.openplato",
+          "text": "OpenPlato",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/discover/service/openaire.openplato",
+          "text": "Details",
           "visible": true
         },
         {
@@ -1175,5 +1245,6 @@
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 31 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
+  "crawl_note": "depth 2: 31 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+  "scripted_links": []
 }

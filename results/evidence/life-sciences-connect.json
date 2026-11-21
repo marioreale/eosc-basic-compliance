@@ -2,11 +2,11 @@
   "node_id": "life-sciences-connect",
   "node_name": "Life Sciences Connect",
   "requested_url": "https://eosc-lifesciences-connect.eu/home",
-  "fetched_at": "2026-11-21T07:58:55+00:00",
+  "fetched_at": "2026-11-21T08:40:39+00:00",
   "final_url": "https://eosc-lifesciences-connect.eu/home",
   "http_status": 200,
   "redirect_chain": [
-    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=bfe6487e-06b4-4f9a-ab73-b183e4fc7c1a&response_mode=fragment&response_type=code&scope=openid&nonce=c7211960-bf2b-4ebf-92cc-96580827d907&prompt=none",
+    "https://auth.aria.services/auth/realms/ARIA/protocol/openid-connect/auth?client_id=eosc-lifesciences-connect&redirect_uri=https%3A%2F%2Feosc-lifesciences-connect.eu%2Fhome&state=c12d709a-6bf2-45cf-b7ea-3457e9bc2f0b&response_mode=fragment&response_type=code&scope=openid&nonce=619ace48-c4bf-4d3a-8a77-7a7d0479fdf6&prompt=none",
     "https://eosc-lifesciences-connect.eu/static/js/main.96f36b85.js",
     "https://eosc-lifesciences-connect.eu/env-config.js"
   ],
@@ -45,6 +45,21 @@
     {
       "href": "https://aria.services",
       "text": "ARIA",
+      "visible": true
+    },
+    {
+      "href": "https://eosc-lifesciences-connect.eu/about",
+      "text": "ABOUT",
+      "visible": true
+    },
+    {
+      "href": "https://eosc-lifesciences-connect.eu/contact-information",
+      "text": "CONTACT US",
+      "visible": true
+    },
+    {
+      "href": "https://eosc-lifesciences-connect.eu/aup-and-uap",
+      "text": "AUP and UAP",
       "visible": true
     }
   ],
@@ -140,6 +155,84 @@
   "crawl_depth": 2,
   "children": [
     {
+      "url": "https://eosc-lifesciences-connect.eu/aup-and-uap",
+      "selected_for": [
+        "5b",
+        "5c"
+      ],
+      "link_text": "AUP and UAP",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc-lifesciences-connect.eu/aup-and-uap",
+      "title": "Home Page",
+      "lang_attr": "en",
+      "main_text": "Life Sciences Connect – Acceptable Use Policy The Life Sciences Connect EOSC Node provides access to digital services, research infrastructure, data resources and computational facilities to support life sciences research and Open Science. By accessing or using services provided through the Node, users agree to: Use the services exclusively for lawful purposes and in accordance with applicable legislation, regulations and institutional policies. Use the services responsibly, respecting the rights of other users and avoiding activities that may compromise the availability, integrity or security of the infrastructure. Respect intellectual property rights, data licences, confidentiality obligations and applicable data protection requirements. Protect their authentication credentials and not share accounts or access tokens with unauthorised individuals. Ensure that data uploaded, processed or shared through the services is handled in accordance with applicable ethical, legal and security requirements, including GDPR where applicable. Not attempt to circumvent access controls, interfere with service operations, or access data or resources without appropriate authorisation. Report suspected security incidents, misuse or vulnerabilities to the relevant service provider or Node support contact. Comply with any additional terms of use imposed by individual service providers or infrastructure operators. Access to services may be restricted, suspended or withdrawn where these conditions are breached, or where necessary for operational, security or administrative reasons. Individual services may impose additional acceptable-use conditions, which take precedence where they relate specifically to the operation of that service. Life Sciences Connect – User Access Policy The Life Sciences Connect EOSC Node provides federated access to services and resources contributed by participating European life sciences research infrastructures and service providers. Access is provided according to the following principles: Federated authentication: Users may authenticate through recognised federated identity providers, including Life Science AAI and ELIXIR AAI, subject to the authentication mechanisms supported by the relevant service. Eligibility: Access is primarily intended for researchers, research institutions, research infrastructure users and other individuals engaged in legitimate research, education or related activities. Service-specific authorisation: Authentication does not automatically confer access to all services. Individual service providers determine access requirements, eligibility criteria and authorisation rules. Access requests: Where a service requires additional authorisation, users may be required to submit an access request, provide relevant affiliation or research information, or demonstrate eligibility. Resource allocation: Access to computational resources, storage and other capacity-constrained services may be subject to quotas, allocation policies or additional approval. Third-party services: Services provided by external organisations remain subject to the access policies, terms and conditions of their respective providers. Access review: Access rights may be reviewed, restricted or withdrawn where eligibility requirements are no longer met, where access is no longer required, or where there has been a breach of applicable policies. The Node aims to facilitate equitable, transparent and secure access to research resources while respecting the autonomy and operational responsibilities of participating service providers.",
+      "full_text": "Home About Contact Us Catalogue Home About Contact Us Catalogue Log in Life Sciences Connect – Acceptable Use Policy The Life Sciences Connect EOSC Node provides access to digital services, research infrastructure, data resources and computational facilities to support life sciences research and Open Science. By accessing or using services provided through the Node, users agree to: Use the services exclusively for lawful purposes and in accordance with applicable legislation, regulations and institutional policies. Use the services responsibly, respecting the rights of other users and avoiding activities that may compromise the availability, integrity or security of the infrastructure. Respect intellectual property rights, data licences, confidentiality obligations and applicable data protection requirements. Protect their authentication credentials and not share accounts or access tokens with unauthorised individuals. Ensure that data uploaded, processed or shared through the services is handled in accordance with applicable ethical, legal and security requirements, including GDPR where applicable. Not attempt to circumvent access controls, interfere with service operations, or access data or resources without appropriate authorisation. Report suspected security incidents, misuse or vulnerabilities to the relevant service provider or Node support contact. Comply with any additional terms of use imposed by individual service providers or infrastructure operators. Access to services may be restricted, suspended or withdrawn where these conditions are breached, or where necessary for operational, security or administrative reasons. Individual services may impose additional acceptable-use conditions, which take precedence where they relate specifically to the operation of that service. Life Sciences Connect – User Access Policy The Life Sciences Connect EOSC Node provides federated access to services and resources contributed by participating European life sciences research infrastructures and service providers. Access is provided according to the following principles: Federated authentication: Users may authenticate through recognised federated identity providers, including Life Science AAI and ELIXIR AAI, subject to the authentication mechanisms supported by the relevant service. Eligibility: Access is primarily intended for researchers, research institutions, research infrastructure users and other individuals engaged in legitimate research, education or related activities. Service-specific authorisation: Authentication does not automatically confer access to all services. Individual service providers determine access requirements, eligibility criteria and authorisation rules. Access requests: Where a service requires additional authorisation, users may be required to submit an access request, provide relevant affiliation or research information, or demonstrate eligibility. Resource allocation: Access to computational resources, storage and other capacity-constrained services may be subject to quotas, allocation policies or additional approval. Third-party services: Services provided by external organisations remain subject to the access policies, terms and conditions of their respective providers. Access review: Access rights may be reviewed, restricted or withdrawn where eligibility requirements are no longer met, where access is no longer required, or where there has been a breach of applicable policies. The Node aims to facilitate equitable, transparent and secure access to research resources while respecting the autonomy and operational responsibilities of participating service providers. Home About AUP and UAP © 2026 eosc-lifesciences-connect.eu All Rights Reserved. Powered by ARIA",
+      "links": [
+        {
+          "href": "https://aria.services",
+          "text": "ARIA",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc-lifesciences-connect.eu/contact-information",
+      "selected_for": [
+        "6"
+      ],
+      "link_text": "CONTACT US",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc-lifesciences-connect.eu/contact-information",
+      "title": "Home Page",
+      "lang_attr": "en",
+      "main_text": "Contact us General information and questions: Contact us via help@eosc-lifesciences-connect.eu Security: Contact us via security@eosc-lifesciences-connect-eu",
+      "full_text": "Home About Contact Us Catalogue Home About Contact Us Catalogue Log in Contact us General information and questions: Contact us via help@eosc-lifesciences-connect.eu Security: Contact us via security@eosc-lifesciences-connect-eu Home About AUP and UAP © 2026 eosc-lifesciences-connect.eu All Rights Reserved. Powered by ARIA",
+      "links": [
+        {
+          "href": "https://aria.services",
+          "text": "ARIA",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
+      "url": "https://eosc-lifesciences-connect.eu/about",
+      "selected_for": [
+        "2"
+      ],
+      "link_text": "ABOUT",
+      "depth": 1,
+      "parent_url": "",
+      "http_status": 200,
+      "final_url": "https://eosc-lifesciences-connect.eu/about",
+      "title": "Home Page",
+      "lang_attr": "en",
+      "main_text": "About the LSC Node About the Life Sciences Connect Node Life science research generates vast, complex, and diverse data — from molecular structures and biological images to genomic sequences and biodiversity observations. These data are produced across distributed facilities and analysed using increasingly sophisticated digital tools and workflows. The EOSC Life Sciences Connect Node exists to connect these capabilities , not centralise them. It provides a coordinated entry point to life science data and services within the EOSC Federation, while fully respecting the governance, autonomy, and diversity of the participating Research Infrastructures. Scope As a thematic EOSC Node , the Life Sciences Connect Node: Integrates services and expertise across multiple life science domains Supports cross-border and cross-disciplinary research Enables interoperability with other EOSC Nodes, including national and thematic Nodes Acts as a platform for collaboration, experimentation, and onboarding of future partners Target users of the LSC Node include life sciences researchers from across Europe and Globally. The thematic and general purpose services from the Node will also be available to all EOSC users through common federating capabilities. The LSC Node is currently taking a phased approach to onboarding services to its catalogue - you can see more information on currently onboarded services in our catalogue page Node Organisation Co-ordinator : [removed______] (ELIXIR) Steering Committee : EMBL (current chair), ELIXIR, EuroBioImaging, Instruct-ERIC Operations Manager : [removed____] (Euro-BioImaging) Security Officer: [removed_____] (ELIXIR) Technical Officer : [removed___] (Instruct-ERIC) Scientific Officer : [removed______] (EMBL) Communications Officer: [removed______] (ELIXIR)",
+      "full_text": "Home About Contact Us Catalogue Home About Contact Us Catalogue Log in About the LSC Node About the Life Sciences Connect Node Life science research generates vast, complex, and diverse data — from molecular structures and biological images to genomic sequences and biodiversity observations. These data are produced across distributed facilities and analysed using increasingly sophisticated digital tools and workflows. The EOSC Life Sciences Connect Node exists to connect these capabilities , not centralise them. It provides a coordinated entry point to life science data and services within the EOSC Federation, while fully respecting the governance, autonomy, and diversity of the participating Research Infrastructures. Scope As a thematic EOSC Node , the Life Sciences Connect Node: Integrates services and expertise across multiple life science domains Supports cross-border and cross-disciplinary research Enables interoperability with other EOSC Nodes, including national and thematic Nodes Acts as a platform for collaboration, experimentation, and onboarding of future partners Target users of the LSC Node include life sciences researchers from across Europe and Globally. The thematic and general purpose services from the Node will also be available to all EOSC users through common federating capabilities. The LSC Node is currently taking a phased approach to onboarding services to its catalogue - you can see more information on currently onboarded services in our catalogue page Node Organisation Co-ordinator : [removed______] (ELIXIR) Steering Committee : EMBL (current chair), ELIXIR, EuroBioImaging, Instruct-ERIC Operations Manager : [removed____] (Euro-BioImaging) Security Officer: [removed_____] (ELIXIR) Technical Officer : [removed___] (Instruct-ERIC) Scientific Officer : [removed______] (EMBL) Communications Officer: [removed______] (ELIXIR) Home About AUP and UAP © 2026 eosc-lifesciences-connect.eu All Rights Reserved. Powered by ARIA",
+      "links": [
+        {
+          "href": "https://eosc-lifesciences-connect.eu/catalogue",
+          "text": "catalogue page",
+          "visible": true
+        },
+        {
+          "href": "https://aria.services",
+          "text": "ARIA",
+          "visible": true
+        }
+      ],
+      "robots_allowed": true,
+      "error": ""
+    },
+    {
       "url": "https://eosc-lifesciences-connect.eu/catalogue",
       "selected_for": [
         "5s"
@@ -151,13 +244,41 @@
       "final_url": "https://eosc-lifesciences-connect.eu/catalogue",
       "title": "Home Page",
       "lang_attr": "en",
-      "main_text": "",
-      "full_text": "",
-      "links": [],
+      "main_text": "Home About Contact Us Catalogue Home About Contact Us Catalogue Log in Home About AUP and UAP © 2026 eosc-lifesciences-connect.eu All Rights Reserved. Powered by ARIA",
+      "full_text": "Home About Contact Us Catalogue Home About Contact Us Catalogue Log in Home About AUP and UAP © 2026 eosc-lifesciences-connect.eu All Rights Reserved. Powered by ARIA",
+      "links": [
+        {
+          "href": "https://aria.services",
+          "text": "ARIA",
+          "visible": true
+        }
+      ],
       "robots_allowed": true,
       "error": ""
     }
   ],
   "children_skipped": [],
-  "crawl_note": "depth 2: 6 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used"
+  "crawl_note": "depth 2: 9 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 clickable item(s) without a link address clicked, 4 opened a page (recorded as links); depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+  "scripted_links": [
+    {
+      "text": "ABOUT",
+      "href": "https://eosc-lifesciences-connect.eu/about",
+      "outcome": "opened in the same tab"
+    },
+    {
+      "text": "CONTACT US",
+      "href": "https://eosc-lifesciences-connect.eu/contact-information",
+      "outcome": "opened in the same tab"
+    },
+    {
+      "text": "CATALOGUE",
+      "href": "https://eosc-lifesciences-connect.eu/catalogue",
+      "outcome": "opened in the same tab"
+    },
+    {
+      "text": "AUP and UAP",
+      "href": "https://eosc-lifesciences-connect.eu/aup-and-uap",
+      "outcome": "opened in the same tab"
+    }
+  ]
 }

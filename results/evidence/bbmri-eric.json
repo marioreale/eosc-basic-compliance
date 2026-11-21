@@ -2,7 +2,7 @@
   "node_id": "bbmri-eric",
   "node_name": "BBMRI-ERIC",
   "requested_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-  "fetched_at": "2026-11-21T07:52:39+00:00",
+  "fetched_at": "2026-11-21T08:33:09+00:00",
   "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
   "http_status": 200,
   "redirect_chain": [],
@@ -4339,5 +4339,6 @@
     "https://dev3.bbmri-eric.eu/about/bbmri-eric-governance-structure/ (already fetched at depth 1)",
     "https://dev3.bbmri-eric.eu/about/stakeholder-forum/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 69 link(s) on the landing page, 8 followed because they matched a checklist point, 4 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 2 of 60 used"
+  "crawl_note": "depth 2: 69 link(s) on the landing page, 8 followed because they matched a checklist point, 4 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 2 of 60 used",
+  "scripted_links": []
 }

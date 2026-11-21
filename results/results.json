@@ -1,6 +1,6 @@
 {
-  "run_id": "web-43",
-  "generated_at": "2026-11-21T08:00:45+00:00",
+  "run_id": "web-44",
+  "generated_at": "2026-11-21T08:43:59+00:00",
   "checklist": {
     "checklist_version": "3.2",
     "checklist_date": "2026-09-28",
@@ -112,7 +112,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-11-21T07:52:39+00:00",
+        "fetched_at": "2026-11-21T08:33:09+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -572,7 +572,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.cern/",
-        "fetched_at": "2026-11-21T07:53:33+00:00",
+        "fetched_at": "2026-11-21T08:34:10+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
@@ -996,7 +996,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-11-21T07:54:00+00:00",
+        "fetched_at": "2026-11-21T08:34:43+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -1505,7 +1505,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-11-21T07:54:41+00:00",
+        "fetched_at": "2026-11-21T08:35:32+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -1542,7 +1542,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new?issue%5Bassigned_to_id%5D=24684",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEichaamVRIpaIVUqCJXHgk3lOlNq4djBY%2FP4e5JULUUCtp57z52HC%2BSt6ljt3V6v4dUDuqBGBOuk0XOj0bdg78C%2BSQEP61VJ9s51yChF33XGuqjJUEjQAiJjnynvOXRAUsGV2nLxQoJFz5SaD8BvOxfCeO3wN78FrlqkpwrtrHFGGDWSSbBclGSzS%2BOLbMfjcDvJIMzEZRPOxBRCENuk6YPzdJb3UkQPS42Oa1eSNE4nYZKEaXIfT1mesXz2RIJHsDj2lkYxCT5apZENQSXxVjPDUSLTvAVkTrC7%2BnrFeiHjxyWdW7r%2FPcc5SFUMajZ2ZysLTSs1bPpy48XA3JxmL%2Bi5sjhc66YnLxe3RknxGdRKmfd5vzMHJXHWAwmujG25%2B7uXJErGF9mEu1HKoOVS1U1jAZHQ6pD681tUXw%3D%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUtfpQ6nVVIpaIVUqCLXAgk3l2FNq4djBY%2FP4e5KgliIBW8%2B9Z%2B7MeI6iNg0vYzjaLbxEwJCUiOCDdnbpLMYa%2FA78q5Zwv90U5BhCg5xSjE3jfBioMUoNVsLA%2BScqWg7tkFQKYyohn0myapnaig74bRdSumgD%2Fub3IEyN9FyhjXfBSWd6MknWq4Ls1YTN8gpUmo2mIh3PlEwrWeWpOsgZy%2FMZsGneShEjrC0GYUNBsmE2TRlLM3Y3zPlowifskSQP4LHPlg2GJHmvjUXeNSpI9JY7gRq5FTUgD5LvyusNb4VcnJZ0aWn%2B95zmIIt5p%2BZ9Or%2FwoGptYd%2BWVZQdc3%2BefU4vlfOva9205PXq1hktP5LSGPe2bHcWoCDBRyDJlfO1CH9nYQPWv2iVHnoph1poUyrlAZHQxVfXn99i8Qk%3D",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -1614,7 +1614,7 @@
             "url": "https://www.d4science.org/terms-of-use",
             "final_url": "https://www.d4science.org/terms-of-use",
             "depth": 2,
-            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEichaamVRIpaIVUqCJXHgk3lOlNq4djBY%2FP4e5JULUUCtp57z52HC%2BSt6ljt3V6v4dUDuqBGBOuk0XOj0bdg78C%2BSQEP61VJ9s51yChF33XGuqjJUEjQAiJjnynvOXRAUsGV2nLxQoJFz5SaD8BvOxfCeO3wN78FrlqkpwrtrHFGGDWSSbBclGSzS%2BOLbMfjcDvJIMzEZRPOxBRCENuk6YPzdJb3UkQPS42Oa1eSNE4nYZKEaXIfT1mesXz2RIJHsDj2lkYxCT5apZENQSXxVjPDUSLTvAVkTrC7%2BnrFeiHjxyWdW7r%2FPcc5SFUMajZ2ZysLTSs1bPpy48XA3JxmL%2Bi5sjhc66YnLxe3RknxGdRKmfd5vzMHJXHWAwmujG25%2B7uXJErGF9mEu1HKoOVS1U1jAZHQ6pD681tUXw%3D%3D",
+            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUtfpQ6nVVIpaIVUqCLXAgk3l2FNq4djBY%2FP4e5KgliIBW8%2B9Z%2B7MeI6iNg0vYzjaLbxEwJCUiOCDdnbpLMYa%2FA78q5Zwv90U5BhCg5xSjE3jfBioMUoNVsLA%2BScqWg7tkFQKYyohn0myapnaig74bRdSumgD%2Fub3IEyN9FyhjXfBSWd6MknWq4Ls1YTN8gpUmo2mIh3PlEwrWeWpOsgZy%2FMZsGneShEjrC0GYUNBsmE2TRlLM3Y3zPlowifskSQP4LHPlg2GJHmvjUXeNSpI9JY7gRq5FTUgD5LvyusNb4VcnJZ0aWn%2B95zmIIt5p%2BZ9Or%2FwoGptYd%2BWVZQdc3%2BefU4vlfOva9205PXq1hktP5LSGPe2bHcWoCDBRyDJlfO1CH9nYQPWv2iVHnoph1poUyrlAZHQxVfXn99i8Qk%3D",
             "selected_for": [
               "5b"
             ],
@@ -1626,7 +1626,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLNTsMwEIRfJTefEjehScFqKkWtkCoVhFrgwKVy7C21cOzgtfl5e5JULUUCLj54Z76dXXuKvNEtq4LfmzW8BkAfVYjgvLJmbg2GBtwG3JsS8LBelWTvfYuMUgxta51P5BiFAiMgse6Z8o5DeyQVXOuaixcSLTqmMrwHftu5EDYYj7%2F5HXDdID1VaOust8LqgUyi5aIk26KYSLgsRLyr86t4LGAS1xfdMYIsF0JeyaKuOyligKVBz40vSTbKijhN4yy9H01YnrM0fyLRIzgcsmXJiEQfjTbI%2BkYlCc4wy1EhM7wBZF6wTXWzYp2Q8eOSzi3t%2F57jHGQ27dVsSOdmDmSjDGy7sgyiZ25Ps0%2FpuXJ6eK3bjrxc3FmtxGdUaW3f593OPJTEuwAkurau4f7vLGmSDjdKxrtByqDhSldSOkAkdHbo%2BvNbzL4A",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEidpKKnVRIpaIVUqCJXHgk3lOFNq4djBY%2FP4e5JULUUCtp57z8yd8Rx5qzpWebfXG3j1gC6oEME6afTCaPQt2Duwb1LAw2ZdkL1zHTJK0XedsS5qMhQStIDI2GfKew4dkFRwpWouXkiw7JlS8wH4bedCGK8d%2Fua3wFWL9FShnTXOCKNGMglWy4Jscw55DPEuvOCXeZjNIA%2FzLK%2FDeiLEJMn4rM6glyJ6WGl0XLuCpHE6DZMkTJP7OGeTKYtnTyR4BIvjbGkUk%2BCjVRrZ0Kgg3mpmOEpkmreAzAl2V12vWS9k%2FLikc0v3v%2BeYg5TzQc3G6WxpoWmlhm1fbrwYmNtT9jk9V84P17rpyavlrVFSfAaVUuZ90e%2FMQUGc9X3qK2Nb7v6eJYmS8UU24W6UMmi5VFXTWEAktDx0%2Ffktyi8%3D",
             "depth": 2,
             "parent_url": "https://eosc-dto.d4science.org/catalogue",
             "selected_for": [
@@ -1933,7 +1933,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.earth-data.eu/",
-        "fetched_at": "2026-11-21T07:55:20+00:00",
+        "fetched_at": "2026-11-21T08:36:14+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
@@ -2252,7 +2252,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-11-21T07:55:40+00:00",
+        "fetched_at": "2026-11-21T08:36:39+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
@@ -2781,7 +2781,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-11-21T07:56:24+00:00",
+        "fetched_at": "2026-11-21T08:37:31+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "panosc.png",
@@ -3245,7 +3245,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-11-21T07:56:54+00:00",
+        "fetched_at": "2026-11-21T08:38:05+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -3737,7 +3737,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-11-21T07:57:35+00:00",
+        "fetched_at": "2026-11-21T08:38:54+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
@@ -4141,7 +4141,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-11-21T07:57:55+00:00",
+        "fetched_at": "2026-11-21T08:39:19+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
@@ -4443,12 +4443,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-11-21T07:58:02+00:00",
+        "fetched_at": "2026-11-21T08:39:29+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 34 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 34 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; 2 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 1 page(s); fetch budget: 35 of 60 used",
         "children": [
           {
             "url": "https://eosc.pl/terms-of-use",
@@ -4503,7 +4503,7 @@
             "link_text": "Browse resources",
             "http_status": 200,
             "title": "Polish Open Science Platform",
-            "chars": 1862,
+            "chars": 5344,
             "error": ""
           },
           {
@@ -4517,7 +4517,7 @@
             "link_text": "Software Find tools and applications to support research.",
             "http_status": 200,
             "title": "Polish Open Science Platform",
-            "chars": 1858,
+            "chars": 8512,
             "error": ""
           }
         ],
@@ -4805,7 +4805,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.it/",
-        "fetched_at": "2026-11-21T07:58:22+00:00",
+        "fetched_at": "2026-11-21T08:40:00+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
@@ -5131,7 +5131,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-11-21T07:58:36+00:00",
+        "fetched_at": "2026-11-21T08:40:19+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-sk.png",
@@ -5163,7 +5163,7 @@
             "link_text": "Service Catalogue EOSC Node Slovakia service catalogue listing the production services of the node. It offers a public API, catalogue exchange and demonstrates harvesting of service catalogues from other EOSC nodes.",
             "http_status": 200,
             "title": "Service Catalogue",
-            "chars": 232,
+            "chars": 12749,
             "error": ""
           },
           {
@@ -5177,7 +5177,7 @@
             "link_text": "Genome of Slovakia by Science Park, Comenius University in Bratislava, Slovakia open access TRL 8 production Genomic variant browser of Slovak population View in the catalogue",
             "http_status": 200,
             "title": "Service Catalogue",
-            "chars": 232,
+            "chars": 12749,
             "error": ""
           }
         ],
@@ -5451,13 +5451,56 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-lifesciences-connect.eu/home",
-        "fetched_at": "2026-11-21T07:58:55+00:00",
+        "fetched_at": "2026-11-21T08:40:39+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "life-sciences-connect.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 6 link(s) on the landing page, 1 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 9 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 clickable item(s) without a link address clicked, 4 opened a page (recorded as links); depth 2 added 0 page(s); fetch budget: 35 of 60 used",
         "children": [
+          {
+            "url": "https://eosc-lifesciences-connect.eu/aup-and-uap",
+            "final_url": "https://eosc-lifesciences-connect.eu/aup-and-uap",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5b",
+              "5c"
+            ],
+            "link_text": "AUP and UAP",
+            "http_status": 200,
+            "title": "Home Page",
+            "chars": 3589,
+            "error": ""
+          },
+          {
+            "url": "https://eosc-lifesciences-connect.eu/contact-information",
+            "final_url": "https://eosc-lifesciences-connect.eu/contact-information",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "6"
+            ],
+            "link_text": "CONTACT US",
+            "http_status": 200,
+            "title": "Home Page",
+            "chars": 157,
+            "error": ""
+          },
+          {
+            "url": "https://eosc-lifesciences-connect.eu/about",
+            "final_url": "https://eosc-lifesciences-connect.eu/about",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "ABOUT",
+            "http_status": 200,
+            "title": "Home Page",
+            "chars": 1805,
+            "error": ""
+          },
           {
             "url": "https://eosc-lifesciences-connect.eu/catalogue",
             "final_url": "https://eosc-lifesciences-connect.eu/catalogue",
@@ -5469,7 +5512,7 @@
             "link_text": "service catalogue",
             "http_status": 200,
             "title": "Home Page",
-            "chars": 0,
+            "chars": 166,
             "error": ""
           }
         ],
@@ -5495,7 +5538,7 @@
           "evidence": [
             "1 distinct external host(s) linked from the landing page",
             "aria.services (ARIA)",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -5506,7 +5549,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"The EOSC Life Sciences Connect Node brings together four world-leading European Research Infrastructures to form a thematic Life Science Node within the European Open Science Cloud (EOSC) Federation: ELIXIR: A distributed life science data infrastructure, bringing together 600+ services including databases, software and workflows, training, standards, data management and compute. EMBL: Europe’s fl...\"",
-            "organisation-like names found: ERIC; Euro-BioImaging ERIC"
+            "organisation-like names found: ERIC; Euro-BioImaging ERIC",
+            "about page one level down: https://eosc-lifesciences-connect.eu/about (HTTP 200) opening text: \"About the LSC Node About the Life Sciences Connect Node Life science research generates vast, complex, and diverse data — from molecular structures and biological images to genomic sequences and biodiversity observations. These data are produced across distrib...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -5538,7 +5582,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "6 outbound link(s) on the landing page",
+            "9 outbound link(s) on the landing page",
             "main text length: 1506 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
@@ -5546,39 +5590,38 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "An acceptable use policy is named in the page text, but no link to it was found. None of the 1 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "6 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "1 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc-lifesciences-connect.eu/catalogue",
-            "named in the text without a link: AUP",
-            "note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
+            "\"AUP and UAP\" -> https://eosc-lifesciences-connect.eu/aup-and-uap",
+            "followed: https://eosc-lifesciences-connect.eu/aup-and-uap -> HTTP 200, 3589 chars, title: Home Page",
+            "policy wording found: Comply, Policy, conditions, responsib"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "A user access policy is named in the page text, but no link to it was found. None of the 1 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "6 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://eosc-lifesciences-connect.eu/catalogue",
-            "named in the text without a link: UAP",
-            "note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
+            "\"AUP and UAP\" -> https://eosc-lifesciences-connect.eu/aup-and-uap",
+            "followed: https://eosc-lifesciences-connect.eu/aup-and-uap -> HTTP 200, 3589 chars, title: Home Page",
+            "policy wording found: Comply, Policy, conditions, responsib"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "FAIL",
-          "message": "No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.",
+          "verdict": "PASS",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
-            "6 link(s) examined",
-            "note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
+            "\"CONTACT US\" -> https://eosc-lifesciences-connect.eu/contact-information",
+            "followed: https://eosc-lifesciences-connect.eu/contact-information -> HTTP 200",
+            "helpdesk wording on that page: help@eosc-lifesciences-connect.eu"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
@@ -5612,7 +5655,7 @@
           "evidence": [
             "1 distinct external host(s) linked from the landing page",
             "aria.services (ARIA)",
-            "depth 1: 1 of 1 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -5623,7 +5666,8 @@
           "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
             "opening main text: \"The EOSC Life Sciences Connect Node brings together four world-leading European Research Infrastructures to form a thematic Life Science Node within the European Open Science Cloud (EOSC) Federation: ELIXIR: A distributed life science data infrastructure, bringing together 600+ services including databases, software and workflows, training, standards, data management and compute. EMBL: Europe’s fl...\"",
-            "organisation-like names found: ERIC; Euro-BioImaging ERIC"
+            "organisation-like names found: ERIC; Euro-BioImaging ERIC",
+            "about page one level down: https://eosc-lifesciences-connect.eu/about (HTTP 200) opening text: \"About the LSC Node About the Life Sciences Connect Node Life science research generates vast, complex, and diverse data — from molecular structures and biological images to genomic sequences and biodiversity observations. These data are produced across distrib...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -5655,7 +5699,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "6 outbound link(s) on the landing page",
+            "9 outbound link(s) on the landing page",
             "main text length: 1506 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
@@ -5663,39 +5707,38 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "An acceptable use policy is named in the page text, but no link to it was found. None of the 1 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "6 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "1 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc-lifesciences-connect.eu/catalogue",
-            "named in the text without a link: AUP",
-            "note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
+            "\"AUP and UAP\" -> https://eosc-lifesciences-connect.eu/aup-and-uap",
+            "followed: https://eosc-lifesciences-connect.eu/aup-and-uap -> HTTP 200, 3589 chars, title: Home Page",
+            "policy wording found: Comply, Policy, conditions, responsib"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "A user access policy is named in the page text, but no link to it was found. None of the 1 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page links to a User Access Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "6 link(s) on the landing page examined, none matching a User Access Policy",
-            "1 linked page(s) read, none linking to a User Access Policy: https://eosc-lifesciences-connect.eu/catalogue",
-            "named in the text without a link: UAP",
-            "note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
+            "\"AUP and UAP\" -> https://eosc-lifesciences-connect.eu/aup-and-uap",
+            "followed: https://eosc-lifesciences-connect.eu/aup-and-uap -> HTTP 200, 3589 chars, title: Home Page",
+            "policy wording found: Comply, Policy, conditions, responsib"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "FAIL",
-          "message": "No contact route of any kind was found among the landing page's links: no mailto:, and no link labelled or addressed as contact, support or helpdesk.",
+          "verdict": "PASS",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
-            "6 link(s) examined",
-            "note: only 6 links captured, low for a landing page — the DOM was nonetheless complete, so absence stands"
+            "\"CONTACT US\" -> https://eosc-lifesciences-connect.eu/contact-information",
+            "followed: https://eosc-lifesciences-connect.eu/contact-information -> HTTP 200",
+            "helpdesk wording on that page: help@eosc-lifesciences-connect.eu"
           ],
-          "reviewer_action": ""
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
@@ -5718,7 +5761,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-node.de/",
-        "fetched_at": "2026-11-21T07:59:07+00:00",
+        "fetched_at": "2026-11-21T08:41:13+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-de.png",
@@ -5962,7 +6005,7 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://eosc.lv/en/",
-        "fetched_at": "2026-11-21T07:59:12+00:00",
+        "fetched_at": "2026-11-21T08:41:22+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "eosc-lv.png",
@@ -6264,7 +6307,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.scholarlycommons.eu/home",
-        "fetched_at": "2026-11-21T07:59:18+00:00",
+        "fetched_at": "2026-11-21T08:41:31+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "scholarly-commons.png",
@@ -6324,7 +6367,7 @@
             "link_text": "Services",
             "http_status": 200,
             "title": "Discover services | EOSC Scholarly Commons Node",
-            "chars": 600,
+            "chars": 4252,
             "error": ""
           }
         ],
@@ -6586,12 +6629,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://services.metrofood-services.eu/eosc",
-        "fetched_at": "2026-11-21T07:59:34+00:00",
+        "fetched_at": "2026-11-21T08:41:50+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "metrofood-ri.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 26 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 26 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 2 page(s); fetch budget: 37 of 60 used",
         "children": [
           {
             "url": "https://services.metrofood-services.eu/#contact",
@@ -6618,7 +6661,35 @@
             "link_text": "METROFOOD-RI EOSC Catalogue",
             "http_status": 200,
             "title": "Metrofood Catalogues",
-            "chars": 0,
+            "chars": 1975,
+            "error": ""
+          },
+          {
+            "url": "https://catalogues.staging.metrofood-services.eu/tos",
+            "final_url": "https://catalogues.staging.metrofood-services.eu/tos",
+            "depth": 2,
+            "parent_url": "https://catalogues.staging.metrofood-services.eu/",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "Terms of use",
+            "http_status": 200,
+            "title": "Metrofood Catalogues",
+            "chars": 2307,
+            "error": ""
+          },
+          {
+            "url": "https://catalogues.staging.metrofood-services.eu/about",
+            "final_url": "https://catalogues.staging.metrofood-services.eu/about",
+            "depth": 2,
+            "parent_url": "https://catalogues.staging.metrofood-services.eu/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About",
+            "http_status": 200,
+            "title": "Metrofood Catalogues",
+            "chars": 1850,
             "error": ""
           }
         ],
@@ -6654,7 +6725,7 @@
             "www.eosc-beyond.eu (METROFOOD-RI on EOSC Beyond ↗, Visit CESSDA, Visit Instruct-ERIC)",
             "www.metrofood.eu (METROFOOD-RI official website, METROFOOD-RI partner institutions, Privacy policy)",
             "EOSC AAI indicators seen: EOSC AAI",
-            "depth 1: 2 of 2 followed page(s) were served anonymously, so those are publicly accessible"
+            "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
           ],
           "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
@@ -6666,7 +6737,8 @@
           "evidence": [
             "meta description: \"Digital services hub of METROFOOD-RI — the European Research Infrastructure for metrology in food and nutrition. Access reference-material databases, service catalogues and node resources.\"",
             "opening main text: \"Skip to main content METROFOOD-RI Digital Services Hub Services Contact metrofood.eu ↗ ☰ METROFOOD-RI Pilot Node Metrology-driven data for safe and sustainable food. Explore our offer METROFOOD-RI EOSC Catalogue Our digital ecosystem RM-App Search available reference materials in the agrifood area. Filter by parameter or matrix, or cross-search by matrix–analyte combination. Acceptable Use Policy ...\"",
-            "organisation-like names found: Casaccia Research Centre; ERIC; Italian National Agency; LifeWatch ERIC; Visit CESSDA LifeWatch ERIC; Visit LifeWatch ERIC"
+            "organisation-like names found: Casaccia Research Centre; ERIC; Italian National Agency; LifeWatch ERIC; Visit CESSDA LifeWatch ERIC; Visit LifeWatch ERIC",
+            "about page one level down: https://catalogues.staging.metrofood-services.eu/about (HTTP 200) opening text: \"Return to Metrofood page Who we are Etiam at pretium turpis. Sed tristique sed ante sit amet volutpat. Curabitur ex sapien, dictum eu magna feugiat, molestie scelerisque odio. Sed lorem turpis, fringilla at maximus quis, venenatis vitae sapien. Morbi vel leo a...\""
           ],
           "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
@@ -6709,26 +6781,29 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "An acceptable use policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page was fetched too.",
           "evidence": [
-            "26 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "2 linked page(s) read, none linking to an Acceptable Use Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
-            "named in the text without a link: Acceptable Use Polic"
+            "landing page -> https://catalogues.staging.metrofood-services.eu/ (\"METROFOOD-RI EOSC Catalogue\")",
+            "via https://catalogues.staging.metrofood-services.eu/: \"Terms of use\" -> https://catalogues.staging.metrofood-services.eu/tos",
+            "via https://catalogues.staging.metrofood-services.eu/tos: \"Metrofood Catalogues\" -> https://catalogues.staging.metrofood-services.eu/tos",
+            "via https://catalogues.staging.metrofood-services.eu/about: \"Terms of use\" -> https://catalogues.staging.metrofood-services.eu/tos"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "A user access policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "26 link(s) on the landing page examined, none matching a User Access Policy",
-            "2 linked page(s) read, none linking to a User Access Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
-            "named in the text without a link: Access Polic, User Access Polic"
+            "4 linked page(s) read, none linking to a User Access Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/, https://catalogues.staging.metrofood-services.eu/tos, https://catalogues.staging.metrofood-services.eu/about",
+            "named in the text without a link: Access Polic, User Access Polic",
+            "an Acceptable Use Policy via https://catalogues.staging.metrofood-services.eu/: \"Terms of use\" -> https://catalogues.staging.metrofood-services.eu/tos",
+            "an Acceptable Use Policy via https://catalogues.staging.metrofood-services.eu/tos: \"Metrofood Catalogues\" -> https://catalogues.staging.metrofood-services.eu/tos"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
@@ -6837,26 +6912,26 @@
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "An acceptable use policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page itself was not fetched, so this is a pointer, not a verified document.",
           "evidence": [
-            "26 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "2 linked page(s) read, none linking to an Acceptable Use Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
-            "named in the text without a link: Acceptable Use Polic"
+            "landing page -> https://catalogues.staging.metrofood-services.eu/ (\"METROFOOD-RI EOSC Catalogue\")",
+            "via https://catalogues.staging.metrofood-services.eu/: \"Terms of use\" -> https://catalogues.staging.metrofood-services.eu/tos"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "A user access policy is named in the page text, but no link to it was found. None of the 2 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
             "26 link(s) on the landing page examined, none matching a User Access Policy",
             "2 linked page(s) read, none linking to a User Access Policy: https://services.metrofood-services.eu/#contact, https://catalogues.staging.metrofood-services.eu/",
-            "named in the text without a link: Access Polic, User Access Polic"
+            "named in the text without a link: Access Polic, User Access Polic",
+            "an Acceptable Use Policy via https://catalogues.staging.metrofood-services.eu/: \"Terms of use\" -> https://catalogues.staging.metrofood-services.eu/tos"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",

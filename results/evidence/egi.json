@@ -2,7 +2,7 @@
   "node_id": "egi",
   "node_name": "EGI",
   "requested_url": "https://www.egi.eu/egi-node",
-  "fetched_at": "2026-11-21T07:57:35+00:00",
+  "fetched_at": "2026-11-21T08:38:54+00:00",
   "final_url": "https://www.egi.eu/egi-node",
   "http_status": 200,
   "redirect_chain": [],
@@ -669,7 +669,7 @@
       "visible": true
     },
     {
-      "href": "https://www.egi.eu/people/person-xxxxxxx/",
+      "href": "https://www.egi.eu/people/diego-scardaci/",
       "text": "Coordination [removed_________], EGI Foundation",
       "visible": true
     },
@@ -2248,7 +2248,7 @@
     },
     {
       "text": "Coordination [removed_________], EGI Foundation",
-      "href": "https://www.egi.eu/people/person-xxxxxxx/",
+      "href": "https://www.egi.eu/people/diego-scardaci/",
       "tag": "a",
       "visible": true
     },
@@ -7277,5 +7277,6 @@
     "https://www.egi.eu/about/ (already fetched at depth 1)",
     "https://www.egi.eu/contact-us/ (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 189 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 34 of 60 used"
+  "crawl_note": "depth 2: 189 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 34 of 60 used",
+  "scripted_links": []
 }
