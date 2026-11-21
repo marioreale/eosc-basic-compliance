@@ -321,8 +321,9 @@ what the screenshot shows. Before this rule such nodes were `MANUAL_REVIEW` on
 points 1 to 6 and passed point 7 on the challenge page's own English, a `PASS`
 that described Cloudflare, not the node. A plain `403 Forbidden`, a served page
 that merely mentions Cloudflare, and a fetch error are not `FIREWALL`
-(`tests/test_firewall.py`, 9 cases). It is drawn as a solid red 🧱 badge in the
-HTML report and as 🧱 **Firewall** in Markdown, distinct from `FAIL` and `ERROR`.
+(`tests/test_firewall.py`, 9 cases). It is drawn as a solid red badge with the
+firewall icon in the HTML report and as the same icon (`results/firewall-icon.png`)
+with **Firewall** in Markdown, distinct from `FAIL` and `ERROR`.
 
 ### Shared helpers
 

@@ -8,7 +8,7 @@ Run `web-45` · 2026-11-21T13:28:27+00:00 · 18 nodes · one page request per no
 
 **Node names.** 18 approved node name(s) were used, from the official list committed with the checklist (`checklist/approved-names.txt`, sha256 `6d8c249a0b2e…`), as an unscoped list: a match shows the name appears on the page but not that it is that node's own name. Separator glyphs are treated as interchangeable, so a page writing “EOSC Node - X” satisfies a list writing “EOSC Node | X”.
 
-🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed · 🧱 **Firewall** — the site is up but served a bot-protection challenge (Cloudflare), so nothing can be asserted
+🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · 🟠 review — a human must decide · 🟣 ERROR — could not be assessed · <img src="firewall-icon.png" alt="" height="16"> **Firewall** — the site is up but served a bot-protection challenge (Cloudflare), so nothing can be asserted
 
 This run was collected at `--depth=2`, so it is reported twice: once using only the landing page and its direct links, and once using the second hop as well. Both tables come from the **same capture** — the shallow view is the deep evidence with the second-hop pages set aside, not a separate run — so any difference between them is the hop itself and not the passage of time.
 
@@ -16,7 +16,7 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-180 cells: 🟢 90 PASS · 🔴 4 FAIL · 🟠 76 review · 🧱 10 firewall.
+180 cells: 🟢 90 PASS · 🔴 4 FAIL · 🟠 76 review · <img src="firewall-icon.png" alt="" height="16"> 10 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -35,7 +35,7 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
-| EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
+| EOSC Node Latvia | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** |
 | Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
 | METROFOOD-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 
@@ -43,7 +43,7 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 
 The same evidence plus 45 page(s) reached one further hop out, under a shared run budget.
 
-180 cells: 🟢 91 PASS · 🔴 4 FAIL · 🟠 75 review · 🧱 10 firewall.
+180 cells: 🟢 91 PASS · 🔴 4 FAIL · 🟠 75 review · <img src="firewall-icon.png" alt="" height="16"> 10 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -62,7 +62,7 @@ The same evidence plus 45 page(s) reached one further hop out, under a shared ru
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
-| EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
+| EOSC Node Latvia | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** | <img src="firewall-icon.png" alt="" height="16"> **Firewall** |
 | Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
 | METROFOOD-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 
@@ -898,61 +898,61 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 ### EOSC Node Latvia
 <https://eosc.lv/en/>
 
-- **1** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **1** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **1R** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **1R** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **2** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **2** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **3** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **3** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **4** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **4** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **5a** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **5a** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **5b** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **5b** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **5c** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **5c** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **6** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **6** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID
   - final URL: https://eosc.lv/en/
   - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **7** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
+- **7** <img src="firewall-icon.png" alt="" height="16"> **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
   - HTTP 403
   - page title: 'Just a moment...'
   - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, Cloudflare, Ray ID

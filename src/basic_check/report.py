@@ -29,12 +29,16 @@ VERDICT_STYLE = {
 # only colour primitive that renders consistently in a Markdown table on GitHub,
 # so the Markdown and CSV outputs carry one alongside the word. The word is kept
 # because colour alone fails for colour-blind readers and in plain-text diffs.
+# The firewall icon, copied next to results.md like the logo (GitHub renders a
+# relative <img> but not a data URI). The empty alt keeps the word as the label.
+FIREWALL_MD_NAME = "firewall-icon.png"
+FW_MD = f'<img src="{FIREWALL_MD_NAME}" alt="" height="16">'
 VERDICT_MD = {
     "PASS": "🟢 PASS",
     "FAIL": "🔴 **FAIL**",
     "MANUAL_REVIEW": "🟠 review",
     "ERROR": "🟣 ERROR",
-    "FIREWALL": "🧱 **Firewall**",
+    "FIREWALL": FW_MD + " **Firewall**",
 }
 
 # The order verdicts are counted and listed in, everywhere.
@@ -915,7 +919,7 @@ def _tally_line(counts: dict[str, int]) -> str:
         f"{total} cells: 🟢 {counts.get('PASS', 0)} PASS · "
         f"🔴 {counts.get('FAIL', 0)} FAIL · 🟠 {counts.get('MANUAL_REVIEW', 0)} review"
         + (f" · 🟣 {counts['ERROR']} error" if counts.get("ERROR") else "")
-        + (f" · 🧱 {counts['FIREWALL']} firewall" if counts.get("FIREWALL") else "")
+        + (f" · {FW_MD} {counts['FIREWALL']} firewall" if counts.get("FIREWALL") else "")
     )
 
 
@@ -969,6 +973,7 @@ def render_markdown(run: dict, out: Path) -> Path:
         title = "Alternative URL check (not a federation run)"
 
     shutil.copyfile(LOGO, out.parent / LOGO_MD_NAME)
+    shutil.copyfile(FIREWALL_ICON, out.parent / FIREWALL_MD_NAME)
     lines = [
         BRAND_MD,
         "",
@@ -1003,7 +1008,7 @@ def render_markdown(run: dict, out: Path) -> Path:
         ),
         "🟢 PASS — satisfied, with evidence · 🔴 **FAIL** — violated, with evidence · "
         "🟠 review — a human must decide · 🟣 ERROR — could not be assessed · "
-        "🧱 **Firewall** — the site is up but served a bot-protection challenge (Cloudflare), "
+        f"{FW_MD} **Firewall** — the site is up but served a bot-protection challenge (Cloudflare), "
         "so nothing can be asserted",
         "",
     ]

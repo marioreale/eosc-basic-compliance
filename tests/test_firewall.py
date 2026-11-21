@@ -90,8 +90,10 @@ def _run():
 
 def test_the_markdown_report_has_its_own_icon_and_tally(tmp_path):
     md = report.render_markdown(_run(), tmp_path / "r.md").read_text(encoding="utf-8")
-    assert "🧱 **Firewall**" in md
-    assert report._tally_line({"PASS": 1, "FIREWALL": 10}).endswith("🧱 10 firewall")
+    assert '<img src="firewall-icon.png" alt="" height="16"> **Firewall**' in md
+    assert "🧱" not in md
+    assert (tmp_path / "firewall-icon.png").read_bytes() == report.FIREWALL_ICON.read_bytes()
+    assert report._tally_line({"PASS": 1, "FIREWALL": 10}).endswith('<img src="firewall-icon.png" alt="" height="16"> 10 firewall')
     assert "🟣" not in md.split("| Node |")[1].split("\n\n")[0]  # not drawn as ERROR in the matrix
 
 
