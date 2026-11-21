@@ -103,12 +103,15 @@ def test_the_html_report_draws_it_red_and_distinct_from_fail_and_error(tmp_path)
     assert report.VERDICT_STYLE["FIREWALL"][0] not in (report.VERDICT_STYLE["FAIL"][0], report.VERDICT_STYLE["ERROR"][0])
 
 
-def test_the_published_run_has_latvia_and_geant_behind_the_firewall():
-    """Pinned to the committed evidence: the two nodes whose screenshots show the challenge."""
+def test_the_published_run_has_only_latvia_behind_the_firewall():
+    """Pinned to the committed evidence: the node whose screenshot shows the challenge.
+
+    GÉANT was behind the challenge in web-35 to web-44 and was served in web-45.
+    """
     run = json.loads((ROOT / "results" / "results.json").read_text(encoding="utf-8"))
     behind = {n["id"] for n in run["nodes"] if all(r["verdict"] == "FIREWALL" for r in n["results"])}
     anywhere = {n["id"] for n in run["nodes"] if any(r["verdict"] == "FIREWALL" for r in n["results"])}
-    assert behind == anywhere == {"eosc-lv", "geant"}
+    assert behind == anywhere == {"eosc-lv"}
 
 
 def test_the_html_firewall_badge_uses_the_firewall_icon():

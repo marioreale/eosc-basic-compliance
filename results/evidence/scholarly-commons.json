@@ -2,7 +2,7 @@
   "node_id": "scholarly-commons",
   "node_name": "Scholarly Commons",
   "requested_url": "https://eosc.scholarlycommons.eu/home",
-  "fetched_at": "2026-11-21T08:41:31+00:00",
+  "fetched_at": "2026-11-21T13:27:37+00:00",
   "final_url": "https://eosc.scholarlycommons.eu/home",
   "http_status": 200,
   "redirect_chain": [],
@@ -10,8 +10,8 @@
   "robots_note": "robots.txt consulted",
   "title": "Home | EOSC Scholarly Commons Node",
   "lang_attr": "en",
-  "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
-  "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+  "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings EOSC Federation · e-Infrastructure Node Open scholarly communication for all of European research Open services to find, publish, manage and assess research, built for EOSC. About the Node Discover services OpenAIRE and OPERAS · 2026–2028 15 services at TRL 7–9 130+ member institutions across both organisations 400M+ research records accessible 10+ languages in multilingual SSH discovery Natural sciences Engineering and technology Medical and health sciences Agricultural and veterinary sciences Social sciences Humanities and the arts Services for organisations and researchers For Organisations For Researchers For organisations Adopt open science across your organisation Run, connect and assess your research infrastructure with open services built for EOSC. See services for organisations → 01 Set up and run repositories and journals, connected to EOSC and the OpenAIRE Graph 02 Follow publishing guidelines and monitor quality 03 Track usage metrics for repositories and journals 04 Analyse and assess research, and follow open science mandates 05 Provide data management planning for your research community 06 Operate researcher profiles, community gateways, content registration and validation For researchers Practise open science in your daily work Open tools for every step of your research, free at the point of use. See services for researchers → 01 Discover research across all disciplines and 10+ languages 02 Plan and manage your data 03 Create Journal or publish in Diamond Open Access 04 Showcase your work in a researcher profile 05 Build your open science skills 06 Free at the point of use, with institutional sign-in Access scholarly content Explore research from every discipline Two open discovery services give access to the scholarly content behind the Node: EXPLORE , connecting research across all disciplines worldwide, and GoTriple for the Social Sciences and Humanities. All of research. Connected. Publications, research data, software and grants across all disciplines, worldwide and connected through the OpenAIRE Graph. Go to EXPLORE → Social Sciences and Humanities Resources and people across the Social Sciences and Humanities, in 10+ languages. Go to GoTriple → For service providers Bring your service to EOSC users and the world The Node is onboarding further European scholarly communication services into the EOSC Federation. 01 Reach users in EOSC and worldwide Register in the EOSC Catalogue, and connect to the OpenAIRE Graph for global outreach. 02 Align with the community Work with other providers on technical interoperability, policy and shared standards. 03 Have a voice Onboarded providers join the Advisory Group and take a growing role in how the Node is governed. Get in touch For service onboarding, Node-to-Node collaboration, or questions about joining the EOSC Scholarly Commons Node, contact the Node team. Contact the Node team Node profile on eosc.eu OpenAIRE OPERAS All EOSC Nodes EOSC Federation User Forum",
+  "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings EOSC Federation · e-Infrastructure Node Open scholarly communication for all of European research Open services to find, publish, manage and assess research, built for EOSC. About the Node Discover services OpenAIRE and OPERAS · 2026–2028 15 services at TRL 7–9 130+ member institutions across both organisations 400M+ research records accessible 10+ languages in multilingual SSH discovery Natural sciences Engineering and technology Medical and health sciences Agricultural and veterinary sciences Social sciences Humanities and the arts Services for organisations and researchers For Organisations For Researchers For organisations Adopt open science across your organisation Run, connect and assess your research infrastructure with open services built for EOSC. See services for organisations → 01 Set up and run repositories and journals, connected to EOSC and the OpenAIRE Graph 02 Follow publishing guidelines and monitor quality 03 Track usage metrics for repositories and journals 04 Analyse and assess research, and follow open science mandates 05 Provide data management planning for your research community 06 Operate researcher profiles, community gateways, content registration and validation For researchers Practise open science in your daily work Open tools for every step of your research, free at the point of use. See services for researchers → 01 Discover research across all disciplines and 10+ languages 02 Plan and manage your data 03 Create Journal or publish in Diamond Open Access 04 Showcase your work in a researcher profile 05 Build your open science skills 06 Free at the point of use, with institutional sign-in Access scholarly content Explore research from every discipline Two open discovery services give access to the scholarly content behind the Node: EXPLORE , connecting research across all disciplines worldwide, and GoTriple for the Social Sciences and Humanities. All of research. Connected. Publications, research data, software and grants across all disciplines, worldwide and connected through the OpenAIRE Graph. Go to EXPLORE → Social Sciences and Humanities Resources and people across the Social Sciences and Humanities, in 10+ languages. Go to GoTriple → For service providers Bring your service to EOSC users and the world The Node is onboarding further European scholarly communication services into the EOSC Federation. 01 Reach users in EOSC and worldwide Register in the EOSC Catalogue, and connect to the OpenAIRE Graph for global outreach. 02 Align with the community Work with other providers on technical interoperability, policy and shared standards. 03 Have a voice Onboarded providers join the Advisory Group and take a growing role in how the Node is governed. Get in touch For service onboarding, Node-to-Node collaboration, or questions about joining the EOSC Scholarly Commons Node, contact the Node team. Contact the Node team Node profile on eosc.eu OpenAIRE OPERAS All EOSC Nodes EOSC Federation User Forum",
   "links": [
     {
       "href": "https://eosc.scholarlycommons.eu/home",
@@ -167,6 +167,66 @@
       "href": "https://eosc.scholarlycommons.eu/cookie-policy",
       "text": "Cookie policy",
       "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "text": "About the Node",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "text": "Discover services",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "text": "See services for organisations →",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "text": "See services for researchers →",
+      "visible": true
+    },
+    {
+      "href": "https://explore.openaire.eu/",
+      "text": "Go to EXPLORE →",
+      "visible": true
+    },
+    {
+      "href": "https://gotriple.eu/",
+      "text": "Go to GoTriple →",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.scholarlycommons.eu/contact",
+      "text": "Contact the Node team",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+      "text": "Node profile on eosc.eu",
+      "visible": true
+    },
+    {
+      "href": "https://www.openaire.eu/",
+      "text": "OpenAIRE",
+      "visible": true
+    },
+    {
+      "href": "https://www.operas-eu.org/",
+      "text": "OPERAS",
+      "visible": true
+    },
+    {
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "text": "All EOSC Nodes",
+      "visible": true
+    },
+    {
+      "href": "https://user-forum.eosc.eu/",
+      "text": "EOSC Federation User Forum",
+      "visible": true
     }
   ],
   "images": [
@@ -217,6 +277,22 @@
       "title": "",
       "css_class": "",
       "inline_svg": true
+    },
+    {
+      "src": "https://eosc.scholarlycommons.eu/images/images/eosc-node/explore%201.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "el-image",
+      "inline_svg": false
+    },
+    {
+      "src": "https://eosc.scholarlycommons.eu/images/images/eosc-node/gotriple.svg",
+      "alt": "",
+      "aria_label": "",
+      "title": "",
+      "css_class": "el-image",
+      "inline_svg": false
     }
   ],
   "controls": [
@@ -453,6 +529,90 @@
       "href": "https://eosc.scholarlycommons.eu/cookie-policy",
       "tag": "a",
       "visible": true
+    },
+    {
+      "text": "About the Node",
+      "href": "https://eosc.scholarlycommons.eu/about",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Discover services",
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "For Organisations",
+      "href": "https://eosc.scholarlycommons.eu/pages/?option=com_content&view=article&id=23&Itemid=192&tmpl=yootheme#for-organisations",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "For Researchers",
+      "href": "https://eosc.scholarlycommons.eu/pages/?option=com_content&view=article&id=23&Itemid=192&tmpl=yootheme#for-researchers",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "See services for organisations →",
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "See services for researchers →",
+      "href": "https://eosc.scholarlycommons.eu/discover",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to EXPLORE →",
+      "href": "https://explore.openaire.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Go to GoTriple →",
+      "href": "https://gotriple.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Contact the Node team",
+      "href": "https://eosc.scholarlycommons.eu/contact",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "Node profile on eosc.eu",
+      "href": "https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "OpenAIRE",
+      "href": "https://www.openaire.eu/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "OPERAS",
+      "href": "https://www.operas-eu.org/",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "All EOSC Nodes",
+      "href": "https://eosc.eu/building-the-eosc-federation",
+      "tag": "a",
+      "visible": true
+    },
+    {
+      "text": "EOSC Federation User Forum",
+      "href": "https://user-forum.eosc.eu/",
+      "tag": "a",
+      "visible": true
     }
   ],
   "meta_description": "Services from trusted providers for the scholarly commons, for institutions, funders, research teams and individual researchers.",
@@ -472,8 +632,8 @@
       "final_url": "https://eosc.scholarlycommons.eu/contact",
       "title": "Contact | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
-      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings Contact the Node team Name Email Subject Message Attachments I accept the Privacy Policy and the Acceptable Use Policy Send message",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings Contact the Node team Name Email Subject Message Attachments I accept the Privacy Policy and the Acceptable Use Policy Send message",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
@@ -629,10 +789,29 @@
           "href": "https://eosc.scholarlycommons.eu/cookie-policy",
           "text": "Cookie policy",
           "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/terms-and-policies",
+          "text": "Acceptable Use Policy",
+          "visible": true
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://eosc.scholarlycommons.eu/pages/?option=com_content&view=article&id=38&tmpl=yootheme",
+          "title": "Contact",
+          "chars": 131,
+          "links": 2,
+          "outcome": "read"
+        }
+      ]
     },
     {
       "url": "https://eosc.scholarlycommons.eu/about",
@@ -646,8 +825,8 @@
       "final_url": "https://eosc.scholarlycommons.eu/about",
       "title": "About | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
-      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings About the Node The scholarly communication layer of EOSC An e-Infrastructure Node that integrates services across the research lifecycle, so that research outputs of every discipline can be registered, published, discovered, monitored and assessed on open, European, community-governed infrastructure. Status EOSC Node, second wave Period 2026–2028 Coordinator OpenAIRE AMKE Partner OPERAS AISBL Services 15, at TRL 7–9 Overview Gap & Impact Who it serves Scope Timeline Governance On this page Overview Gap and impact Who it serves Scope Timeline Governance Contact the Node team Overview A dedicated layer within the EOSC Federation The Node is coordinated by OpenAIRE and built on its open science infrastructure, used across Europe for over fifteen years: the OpenAIRE Graph with 400M+ research records, and services for discovery, data management planning, repository onboarding, training and research monitoring and assessment. OPERAS complements it with depth in the Social Sciences and Humanities and in Diamond Open Access. All services are free at the point of use for researchers. Independent infrastructure - Compute and storage for the Node’s services are provided through OpenAIRE and OPERAS infrastructure. All services operate independently of the EOSC EU Node. Gap addressed Connecting research to its community Universities and research-performing organisations, the main producers and users of scholarly communication, remain underrepresented in the EOSC Federation. Research Infrastructures and other Nodes lack the connection to the scholarly communication ecosystem needed to monitor, discover and assess their outputs. No other Node provides this layer. Scientific impact Open scholarly communication, end to end The Node treats scholarly communication as shared, open infrastructure across the whole research lifecycle. Discovery Research from every discipline and language, findable in one connected space through the OpenAIRE Graph and GoTriple. Responsible assessment Open, transparent evidence for CoARA-aligned research assessment, beyond journal-based metrics. AI readiness Linked, openly licensed metadata built on persistent identifiers, ready for AI-driven discovery, enrichment and data-sovereign research assistants. Trust Community-governed European infrastructure with transparent provenance, reducing dependence on proprietary databases. Full lifecycle Data management planning, open publishing, interoperable repositories and research monitoring, connected end to end. Who it serves Science areas and beneficiaries All scientific disciplines Social Sciences and Humanities Meta-research Research analytics Researchers in all disciplines, with SSH depth through OPERAS Universities and RPOs: monitoring, assessment, compliance and institutional DMP tooling Research funders: policy dashboards and mandate tracking Diamond OA publishers and platforms Repository and publishing platform managers National and thematic EOSC Nodes The scientometrics and meta-research community Policymakers Scope Three objectives for the build-up phase 01 A joint scholarly communication offer Integrate the Node’s services with the EOSC Federated AAI, register them in the EOSC Catalogue, and deliver three multi-Node use cases. 02 Onboarding more services Bring further open European services into the Federation, and act as a forum on interoperability, policy and sustainability. 03 Rules, business models and governance Shape how the Federation’s rules and business models apply to services that are open by nature and community-governed. Timeline Six milestones, September 2026 to August 2028 M1 Sep 2026 Node kick-off; project work plan and OpenAIRE–OPERAS partnership agreement finalised. M6 Feb 2027 All TRL 9 services registered in the EOSC Catalogue; Node charter drafted. M9 May 2027 EOSC Federated AAI integration roadmap complete; user and API documentation published; third-party onboarding template available; second batch of TRL 7–8 services registered. M12 Aug 2027 Rules of participation report; service packages defined; UC1 prototype; OpenPlato training modules. M18 Feb 2028 All three use cases operational; business model, sustainability and governance reports; updated documentation. M24 Aug 2028 Node operations report, lessons learned, and contributions to the EOSC Federation Handbook. Timeline Coordinated by OpenAIRE, with OPERAS as partner As more services join, contributing partners take a larger role in decisions, moving the Node towards broader, community-governed operation. Quarterly Node Steering Board OpenAIRE and OPERAS leadership. Sets strategic direction and oversees the partnership and alignment with EOSC Federation governance. Bi-monthly Node Operations Committee Node officers and technical leads. Runs day-to-day operations, service integration and use case delivery. At key milestones - tbc. Advisory Group The NOAD network, OPERAS members, National Nodes and external stakeholders. Advises on service design and onboarding priorities.",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings About the Node The scholarly communication layer of EOSC An e-Infrastructure Node that integrates services across the research lifecycle, so that research outputs of every discipline can be registered, published, discovered, monitored and assessed on open, European, community-governed infrastructure. Status EOSC Node, second wave Period 2026–2028 Coordinator OpenAIRE AMKE Partner OPERAS AISBL Services 15, at TRL 7–9 Overview Gap & Impact Who it serves Scope Timeline Governance On this page Overview Gap and impact Who it serves Scope Timeline Governance Contact the Node team Overview A dedicated layer within the EOSC Federation The Node is coordinated by OpenAIRE and built on its open science infrastructure, used across Europe for over fifteen years: the OpenAIRE Graph with 400M+ research records, and services for discovery, data management planning, repository onboarding, training and research monitoring and assessment. OPERAS complements it with depth in the Social Sciences and Humanities and in Diamond Open Access. All services are free at the point of use for researchers. Independent infrastructure - Compute and storage for the Node’s services are provided through OpenAIRE and OPERAS infrastructure. All services operate independently of the EOSC EU Node. Gap addressed Connecting research to its community Universities and research-performing organisations, the main producers and users of scholarly communication, remain underrepresented in the EOSC Federation. Research Infrastructures and other Nodes lack the connection to the scholarly communication ecosystem needed to monitor, discover and assess their outputs. No other Node provides this layer. Scientific impact Open scholarly communication, end to end The Node treats scholarly communication as shared, open infrastructure across the whole research lifecycle. Discovery Research from every discipline and language, findable in one connected space through the OpenAIRE Graph and GoTriple. Responsible assessment Open, transparent evidence for CoARA-aligned research assessment, beyond journal-based metrics. AI readiness Linked, openly licensed metadata built on persistent identifiers, ready for AI-driven discovery, enrichment and data-sovereign research assistants. Trust Community-governed European infrastructure with transparent provenance, reducing dependence on proprietary databases. Full lifecycle Data management planning, open publishing, interoperable repositories and research monitoring, connected end to end. Who it serves Science areas and beneficiaries All scientific disciplines Social Sciences and Humanities Meta-research Research analytics Researchers in all disciplines, with SSH depth through OPERAS Universities and RPOs: monitoring, assessment, compliance and institutional DMP tooling Research funders: policy dashboards and mandate tracking Diamond OA publishers and platforms Repository and publishing platform managers National and thematic EOSC Nodes The scientometrics and meta-research community Policymakers Scope Three objectives for the build-up phase 01 A joint scholarly communication offer Integrate the Node’s services with the EOSC Federated AAI, register them in the EOSC Catalogue, and deliver three multi-Node use cases. 02 Onboarding more services Bring further open European services into the Federation, and act as a forum on interoperability, policy and sustainability. 03 Rules, business models and governance Shape how the Federation’s rules and business models apply to services that are open by nature and community-governed. Timeline Six milestones, September 2026 to August 2028 M1 Sep 2026 Node kick-off; project work plan and OpenAIRE–OPERAS partnership agreement finalised. M6 Feb 2027 All TRL 9 services registered in the EOSC Catalogue; Node charter drafted. M9 May 2027 EOSC Federated AAI integration roadmap complete; user and API documentation published; third-party onboarding template available; second batch of TRL 7–8 services registered. M12 Aug 2027 Rules of participation report; service packages defined; UC1 prototype; OpenPlato training modules. M18 Feb 2028 All three use cases operational; business model, sustainability and governance reports; updated documentation. M24 Aug 2028 Node operations report, lessons learned, and contributions to the EOSC Federation Handbook. Timeline Coordinated by OpenAIRE, with OPERAS as partner As more services join, contributing partners take a larger role in decisions, moving the Node towards broader, community-governed operation. Quarterly Node Steering Board OpenAIRE and OPERAS leadership. Sets strategic direction and oversees the partnership and alignment with EOSC Federation governance. Bi-monthly Node Operations Committee Node officers and technical leads. Runs day-to-day operations, service integration and use case delivery. At key milestones - tbc. Advisory Group The NOAD network, OPERAS members, National Nodes and external stakeholders. Advises on service design and onboarding priorities.",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
@@ -803,10 +982,24 @@
           "href": "https://eosc.scholarlycommons.eu/cookie-policy",
           "text": "Cookie policy",
           "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/helpdesk",
+          "text": "Contact the Node team",
+          "visible": true
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://eosc.scholarlycommons.eu/pages/?option=com_content&view=article&id=41&Itemid=306&tmpl=yootheme",
+          "title": "About",
+          "chars": 5002,
+          "links": 1,
+          "outcome": "read"
+        }
+      ]
     },
     {
       "url": "https://eosc.scholarlycommons.eu/terms-and-policies",
@@ -820,8 +1013,8 @@
       "final_url": "https://eosc.scholarlycommons.eu/terms-and-policies",
       "title": "Terms & Policies | EOSC Scholarly Commons Node",
       "lang_attr": "en",
-      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
-      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings",
+      "main_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings Legal Terms and policies Which terms apply to you depends on the service you use. Each service in the Node is operated by OpenAIRE AMKE or OPERAS AISBL, under that organisation's own policies. Node-level policies are being adopted during the build-up phase. Overview Gap & Impact Who it serves Scope Timeline Governance On this page Overview Policies in force Personal data Security Liability and access Acceptable Use Policy User Access Policy Contact Points Questions Overview Every service in the Node operates under the policies of the organisation that runs it. These policies are in force now, and they are the documents to read before using a service. This page also sets out the Node's Acceptable Use Policy and User Access Policy, and who to contact about terms, personal data and security. Policies that apply today Operator Policy Applies to OpenAIRE AMKE Terms and Conditions of Service OpenAIRE Graph, Scholexplorer, EXPLORE, CONNECT, PROVIDE, MONITOR, UsageCounts, Argos, MyResearchFolio Privacy Policy and the Personal Data Protection Policy for OpenAIRE Services All OpenAIRE services Acceptable Use Policy OpenAIRE infrastructure and APIs All OpenAIRE policies Index of everything above, plus service-specific policies OPERAS AISBL Terms of Use GoTriple, VERA, OPERAS Metrics, Pathfinder Privacy Policy All OPERAS services Personal data Under the EOSC Federation Framework Agreement (Article 9.1), each organisation remains solely responsible for its own compliance with data protection law, including deciding whether it acts as controller or processor for a given service. The Node does not act as a single controller for all its services. For any question about your personal data, contact the operator of the service you used, OpenAIRE AMKE or OPERAS AISBL, using the contacts in their privacy policies. Services that handle researcher identifiers, including MyResearchFolio, Argos and OpenCDMP, operate under a GDPR-compliant data protection framework. Data protection impact assessments are maintained for the relevant services and reviewed every year, under the oversight of the Node Legal Officer. Security Node services are hosted in certified data centres and operate under the established security policies and incident response procedures of their operators. The Node has a designated Cybersecurity Officer. Security incidents that materially affect the EOSC Federation are notified to the EOSC Association and the Federation's operational committee without undue delay, in accordance with Article 9A.3 of the Framework Agreement. To report a security issue in a Node service, contact the operator of that service directly. The operator notifies the Node Cybersecurity Officer. Liability and Access Services are provided free at the point of use to researchers, on the terms of the operating organisation. Liability for the provision and use of an individual service is governed by that service's own terms, not by this page and not by the Federation-level agreement. Bulk data from the OpenAIRE Graph is available under open licences, including CC BY, and the APIs are open. Access conditions differ by service and are stated for each service in its EOSC Catalogue entry and on the Node services page. Acceptable Use Policy and Conditions of Use Version 1.0 · 19 October 2026 Introduction This Acceptable Use Policy and Conditions of Use (\"AUP\") sets the rules and conditions for your access to and use (including transmission, processing and storage of data) of the resources and services (\"Services\") offered through the EOSC Scholarly Commons Node, for the purpose of supporting open scholarly communication and research in the European Open Science Cloud. Each Service is operated by OpenAIRE AMKE or OPERAS AISBL (the \"Operators\"), as indicated on the page of the Service. By accessing or using the Services, you accept this AUP. Conditions You shall use the Services only in a way consistent with the purposes and limitations described above, show consideration towards other users, avoid causing harm to the Services and cooperate in resolving issues arising from your use. You shall use the Services only for lawful purposes and shall not breach, attempt to breach or circumvent administrative or security controls. You shall not interfere with the normal operation of the Services, including by exceeding published rate limits. You shall respect intellectual property rights, licence conditions and confidentiality agreements. You shall protect your access credentials (for example passwords, private keys or multi-factor tokens); no intentional sharing is permitted. You shall keep your registration information correct and up to date. You shall promptly report known or suspected security breaches, credential compromise or misuse to the security contact below, and report compromised credentials to the issuing authority. You may rely on the Services only to the extent set out in any applicable service level agreement with the Operator. Use without such an agreement is at your own risk, to the extent permitted by applicable law. Your personal data will be processed in accordance with the privacy notices referenced below. Your use of the Services may be restricted or suspended where necessary for administrative, operational or security reasons, without prior notice and without compensation. If you violate these rules, you may be liable for the consequences, which may include suspension of your account and a report to your home organisation or to the competent authorities. Service-specific terms, such as API rate limits and content licences, are published with each resource and apply in addition to this AUP, together with the terms of use of the Operator concerned. Where you have a separate agreement with an Operator, that agreement prevails in case of conflict. User Access Policy Version 1.0 · 19 October 2026 Scope This policy sets out who may access the research resources that the EOSC Scholarly Commons Node offers to EOSC users, and on what terms. Conditions specific to a resource are stated on its page and in its EOSC Catalogue entry. Each resource is operated by OpenAIRE AMKE or OPERAS AISBL (the \"Operator\"), which sets its access conditions. This policy is intended to be compatible with the access policies of the EOSC Federation. Access mode Resources are offered under wide access: open to all users and free at the point of use for researchers, unless the resource page states otherwise. Institutions may access services as a managed service, supported deployment or self-deployment, by agreement with the Operator. Who can access Anyone, without registration, for discovery and for reading open content and metadata. Registered users, for personalised functions such as saved searches, claims, dashboards and API use above anonymous limits. Authorised users, for restricted resources, as defined by the resource manager (the \"Operator\"). How to obtain access Public resources need no registration. Registered access is through EOSC AAI or the OpenAIRE and OPERAS login services, using an institutional identity (eduGAIN), ORCID or another supported identity provider, with acceptance of the AUP at first login. Access to restricted resources is requested through the support channel of the resource and granted by its manager (the \"Operator\"). Conditions Access is subject to the AUP, the terms of use of the Operator, any service-specific terms and the licence of the content concerned. Fair use Where demand exceeds capacity, the Operator may apply fair use limits, published on the resource page. Suspension and withdrawal Access may be suspended or withdrawn in the cases set out in the AUP. Where possible, users are informed of the reason and of how to restore access. Support Questions and access requests: helpdesk . Personal data Personal data are processed in accordance with the privacy notices referenced in the AUP. Review This policy is reviewed by the Operators at least once a year and whenever EOSC requirements change. The version and date are shown above. Contact points Administrative contact XXXXX@openaire.eu Terms of use OpenAIRE: openaire.eu/terms-of-use OPERAS: operas-eu.org/terms-of-use Privacy notices OpenAIRE services: openaire.eu/privacy-policy OPERAS services: operas-eu.org/privacy-policy Data protection OpenAIRE Data Protection Officer: dpo@openaire.eu OPERAS: privacy@operas-eu.org Security OpenAIRE: security email OPERAS: security email General questions Node helpdesk Questions General questions about the Node, its services or these policies go through the Node helpdesk. Personal data requests and security disclosures are kept separate, because they carry statutory deadlines and must reach the right people directly. Topic Where to go General enquiries Node helpdesk Personal data requests The operator of the service you used: OpenAIRE data protection contact or OPERAS data protection contact Security disclosure Security disclosure OpenAIRE email and Security disclosure OPERAS email",
+      "full_text": "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The Node About Services How to access Join as a provider EOSC Node profile on eosc.eu All EOSC Nodes EOSC Federation User Forum Legal Terms and policies Cookie policy We use cookies The site uses the cookies it needs to work, such as your sign-in. Statistics and error reports are switched on only if you accept them. Read more in our Cookie policy . Settings Reject all Accept all Cookie preferences We use cookies to make the site work and, if you allow it, to understand how it is used and to fix errors. You can switch each optional category on or off at any time. Strictly necessary Needed for the site to work, for example to keep you signed in. They cannot be switched off. View cookies Name SESSION Description Keeps you signed in while you browse. Provider EOSC Scholarly Commons Node Expiration Session Name sc-consent Description Stores your cookie choices, so you are not asked again. Kept in local storage. Provider EOSC Scholarly Commons Node Expiration 6 months Name compareServices Description Remembers the services you picked to compare. Kept in session storage. Provider EOSC Scholarly Commons Node Expiration Until you close the tab Statistics Matomo counts visits and page views, so the service can be improved (analytics.openaire.eu). View cookies Name _pk_id.* Description Stores a visitor ID, so repeat visits are counted once. Provider Matomo (OpenAIRE) Expiration 13 months Name _pk_ses.* Description Groups the pages of one visit. Provider Matomo (OpenAIRE) Expiration 30 minutes Name _pk_ref.* Description Stores the website that brought you here. Provider Matomo (OpenAIRE) Expiration 6 months Error reports Sentry receives details of errors, with a recording of the page around each error, so they can be fixed. View cookies Name sentryReplaySession Description Links the page recording to your visit, so it can be sent with an error report. Kept in session storage. Provider Sentry Expiration Until you close the tab How we handle cookies is described in detail in our Cookie policy . Reject all Accept all Save settings Legal Terms and policies Which terms apply to you depends on the service you use. Each service in the Node is operated by OpenAIRE AMKE or OPERAS AISBL, under that organisation's own policies. Node-level policies are being adopted during the build-up phase. Overview Gap & Impact Who it serves Scope Timeline Governance On this page Overview Policies in force Personal data Security Liability and access Acceptable Use Policy User Access Policy Contact Points Questions Overview Every service in the Node operates under the policies of the organisation that runs it. These policies are in force now, and they are the documents to read before using a service. This page also sets out the Node's Acceptable Use Policy and User Access Policy, and who to contact about terms, personal data and security. Policies that apply today Operator Policy Applies to OpenAIRE AMKE Terms and Conditions of Service OpenAIRE Graph, Scholexplorer, EXPLORE, CONNECT, PROVIDE, MONITOR, UsageCounts, Argos, MyResearchFolio Privacy Policy and the Personal Data Protection Policy for OpenAIRE Services All OpenAIRE services Acceptable Use Policy OpenAIRE infrastructure and APIs All OpenAIRE policies Index of everything above, plus service-specific policies OPERAS AISBL Terms of Use GoTriple, VERA, OPERAS Metrics, Pathfinder Privacy Policy All OPERAS services Personal data Under the EOSC Federation Framework Agreement (Article 9.1), each organisation remains solely responsible for its own compliance with data protection law, including deciding whether it acts as controller or processor for a given service. The Node does not act as a single controller for all its services. For any question about your personal data, contact the operator of the service you used, OpenAIRE AMKE or OPERAS AISBL, using the contacts in their privacy policies. Services that handle researcher identifiers, including MyResearchFolio, Argos and OpenCDMP, operate under a GDPR-compliant data protection framework. Data protection impact assessments are maintained for the relevant services and reviewed every year, under the oversight of the Node Legal Officer. Security Node services are hosted in certified data centres and operate under the established security policies and incident response procedures of their operators. The Node has a designated Cybersecurity Officer. Security incidents that materially affect the EOSC Federation are notified to the EOSC Association and the Federation's operational committee without undue delay, in accordance with Article 9A.3 of the Framework Agreement. To report a security issue in a Node service, contact the operator of that service directly. The operator notifies the Node Cybersecurity Officer. Liability and Access Services are provided free at the point of use to researchers, on the terms of the operating organisation. Liability for the provision and use of an individual service is governed by that service's own terms, not by this page and not by the Federation-level agreement. Bulk data from the OpenAIRE Graph is available under open licences, including CC BY, and the APIs are open. Access conditions differ by service and are stated for each service in its EOSC Catalogue entry and on the Node services page. Acceptable Use Policy and Conditions of Use Version 1.0 · 19 October 2026 Introduction This Acceptable Use Policy and Conditions of Use (\"AUP\") sets the rules and conditions for your access to and use (including transmission, processing and storage of data) of the resources and services (\"Services\") offered through the EOSC Scholarly Commons Node, for the purpose of supporting open scholarly communication and research in the European Open Science Cloud. Each Service is operated by OpenAIRE AMKE or OPERAS AISBL (the \"Operators\"), as indicated on the page of the Service. By accessing or using the Services, you accept this AUP. Conditions You shall use the Services only in a way consistent with the purposes and limitations described above, show consideration towards other users, avoid causing harm to the Services and cooperate in resolving issues arising from your use. You shall use the Services only for lawful purposes and shall not breach, attempt to breach or circumvent administrative or security controls. You shall not interfere with the normal operation of the Services, including by exceeding published rate limits. You shall respect intellectual property rights, licence conditions and confidentiality agreements. You shall protect your access credentials (for example passwords, private keys or multi-factor tokens); no intentional sharing is permitted. You shall keep your registration information correct and up to date. You shall promptly report known or suspected security breaches, credential compromise or misuse to the security contact below, and report compromised credentials to the issuing authority. You may rely on the Services only to the extent set out in any applicable service level agreement with the Operator. Use without such an agreement is at your own risk, to the extent permitted by applicable law. Your personal data will be processed in accordance with the privacy notices referenced below. Your use of the Services may be restricted or suspended where necessary for administrative, operational or security reasons, without prior notice and without compensation. If you violate these rules, you may be liable for the consequences, which may include suspension of your account and a report to your home organisation or to the competent authorities. Service-specific terms, such as API rate limits and content licences, are published with each resource and apply in addition to this AUP, together with the terms of use of the Operator concerned. Where you have a separate agreement with an Operator, that agreement prevails in case of conflict. User Access Policy Version 1.0 · 19 October 2026 Scope This policy sets out who may access the research resources that the EOSC Scholarly Commons Node offers to EOSC users, and on what terms. Conditions specific to a resource are stated on its page and in its EOSC Catalogue entry. Each resource is operated by OpenAIRE AMKE or OPERAS AISBL (the \"Operator\"), which sets its access conditions. This policy is intended to be compatible with the access policies of the EOSC Federation. Access mode Resources are offered under wide access: open to all users and free at the point of use for researchers, unless the resource page states otherwise. Institutions may access services as a managed service, supported deployment or self-deployment, by agreement with the Operator. Who can access Anyone, without registration, for discovery and for reading open content and metadata. Registered users, for personalised functions such as saved searches, claims, dashboards and API use above anonymous limits. Authorised users, for restricted resources, as defined by the resource manager (the \"Operator\"). How to obtain access Public resources need no registration. Registered access is through EOSC AAI or the OpenAIRE and OPERAS login services, using an institutional identity (eduGAIN), ORCID or another supported identity provider, with acceptance of the AUP at first login. Access to restricted resources is requested through the support channel of the resource and granted by its manager (the \"Operator\"). Conditions Access is subject to the AUP, the terms of use of the Operator, any service-specific terms and the licence of the content concerned. Fair use Where demand exceeds capacity, the Operator may apply fair use limits, published on the resource page. Suspension and withdrawal Access may be suspended or withdrawn in the cases set out in the AUP. Where possible, users are informed of the reason and of how to restore access. Support Questions and access requests: helpdesk . Personal data Personal data are processed in accordance with the privacy notices referenced in the AUP. Review This policy is reviewed by the Operators at least once a year and whenever EOSC requirements change. The version and date are shown above. Contact points Administrative contact XXXXX@openaire.eu Terms of use OpenAIRE: openaire.eu/terms-of-use OPERAS: operas-eu.org/terms-of-use Privacy notices OpenAIRE services: openaire.eu/privacy-policy OPERAS services: operas-eu.org/privacy-policy Data protection OpenAIRE Data Protection Officer: dpo@openaire.eu OPERAS: privacy@operas-eu.org Security OpenAIRE: security email OPERAS: security email General questions Node helpdesk Questions General questions about the Node, its services or these policies go through the Node helpdesk. Personal data requests and security disclosures are kept separate, because they carry statutory deadlines and must reach the right people directly. Topic Where to go General enquiries Node helpdesk Personal data requests The operator of the service you used: OpenAIRE data protection contact or OPERAS data protection contact Security disclosure Security disclosure OpenAIRE email and Security disclosure OPERAS email",
       "links": [
         {
           "href": "https://eosc.scholarlycommons.eu/home",
@@ -977,10 +1170,129 @@
           "href": "https://eosc.scholarlycommons.eu/cookie-policy",
           "text": "Cookie policy",
           "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/terms-of-use",
+          "text": "Terms and Conditions of Service",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/privacy-policy",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/infrastructure-acceptable-use-policy",
+          "text": "Acceptable Use Policy",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/policies",
+          "text": "All OpenAIRE policies",
+          "visible": true
+        },
+        {
+          "href": "https://operas-eu.org/terms-of-use/",
+          "text": "Terms of Use",
+          "visible": true
+        },
+        {
+          "href": "https://operas-eu.org/privacy-policy/",
+          "text": "Privacy Policy",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/contact",
+          "text": "helpdesk",
+          "visible": true
+        },
+        {
+          "href": "mailto:XXXXX@openaire.eu",
+          "text": "XXXXX@openaire.eu",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/terms-of-use",
+          "text": "openaire.eu/terms-of-use",
+          "visible": true
+        },
+        {
+          "href": "https://operas-eu.org/terms-of-use/",
+          "text": "operas-eu.org/terms-of-use",
+          "visible": true
+        },
+        {
+          "href": "https://www.openaire.eu/privacy-policy",
+          "text": "openaire.eu/privacy-policy",
+          "visible": true
+        },
+        {
+          "href": "https://operas-eu.org/privacy-policy/",
+          "text": "operas-eu.org/privacy-policy",
+          "visible": true
+        },
+        {
+          "href": "mailto:dpo@openaire.eu",
+          "text": "dpo@openaire.eu",
+          "visible": true
+        },
+        {
+          "href": "mailto:privacy@operas-eu.org",
+          "text": "privacy@operas-eu.org",
+          "visible": true
+        },
+        {
+          "href": "mailto:security-team@openaire.eu",
+          "text": "security email",
+          "visible": true
+        },
+        {
+          "href": "mailto:security@operas-eu.org",
+          "text": "security email",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/contact",
+          "text": "Node helpdesk",
+          "visible": true
+        },
+        {
+          "href": "https://eosc.scholarlycommons.eu/contact",
+          "text": "Node helpdesk",
+          "visible": true
+        },
+        {
+          "href": "mailto:dpo@openaire.eu",
+          "text": "OpenAIRE data protection contact",
+          "visible": true
+        },
+        {
+          "href": "mailto:privacy@operas-eu.org",
+          "text": "OPERAS data protection contact",
+          "visible": true
+        },
+        {
+          "href": "mailto:security-team@openaire.eu",
+          "text": "Security disclosure OpenAIRE email",
+          "visible": true
+        },
+        {
+          "href": "mailto:security@operas-eu.org",
+          "text": "Security disclosure OPERAS email",
+          "visible": true
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://eosc.scholarlycommons.eu/pages/?option=com_content&view=article&id=29&Itemid=197&tmpl=yootheme",
+          "title": "Terms & Policies",
+          "chars": 9017,
+          "links": 22,
+          "outcome": "read"
+        }
+      ]
     },
     {
       "url": "https://eosc.scholarlycommons.eu/discover",
@@ -1224,10 +1536,12 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
+    "https://eosc.scholarlycommons.eu/terms-and-policies (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
@@ -1236,6 +1550,9 @@
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
+    "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
@@ -1245,6 +1562,15 @@
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
     "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 31 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
-  "scripted_links": []
+  "crawl_note": "depth 2: 43 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 page(s) read with the content of a same-site embedded frame; depth 2 added 0 page(s); fetch budget: 43 of 60 used",
+  "scripted_links": [],
+  "frames": [
+    {
+      "url": "https://eosc.scholarlycommons.eu/pages/?option=com_content&view=article&id=23&Itemid=192&tmpl=yootheme",
+      "title": "Home",
+      "chars": 2977,
+      "links": 12,
+      "outcome": "read"
+    }
+  ]
 }

@@ -2,7 +2,7 @@
   "node_id": "eosc-pl",
   "node_name": "EOSC Node Poland",
   "requested_url": "https://eosc.pl/",
-  "fetched_at": "2026-11-21T08:39:29+00:00",
+  "fetched_at": "2026-11-21T13:25:42+00:00",
   "final_url": "https://eosc.pl/",
   "http_status": 200,
   "redirect_chain": [
@@ -784,7 +784,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.pl/privacy-policy",
@@ -938,7 +939,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.pl/search/all_collection?q=*",
@@ -952,8 +954,8 @@
       "final_url": "https://eosc.pl/search/all_collection?q=*",
       "title": "Polish Open Science Platform",
       "lang_attr": "en",
-      "main_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
-      "full_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Filters (0 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
+      "main_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Filters (61938 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Aspicilia lutzoniana Data License: CC_0 English Aspicilia lutzoniana Rodr. [removed___________________], is a novel freshwater species from Bolivian high mountains. The species is named in honour of [removed_______] (Durham, USA), our friend and the prominent Canadian-born lichenologist, for his magn... Show more Share Pin Keywords: lichezid fungi Bolivia biodiversity Author: [removed______________] Affiliation: Polish Academy of Sciences Learn more SWM for porous hierarchical nanocarbons composites Data License: CC_BY Funder: Gdańsk University of Technology English Raw Raman spectra and XRD diffractograms (background subtracted) of 13 among which carbon-derived secondary waste and reference materials. Raman spectra were collected measured using a commercial Raman microscope (LabRam Aramis, Horiba) with excitation... Show more Share Pin Keywords: raman spectroscopy x-ray diffraction secondary waste materials Show more Author: [removed_______] Affiliation: Gdańsk University of Technology - Department of Metrology and Optoelectronics Learn more Data and codes accompanying the paper: Parteka A., Kordalska A. \"XXX\". Data License: CC_BY_NC_ND Funder: Gdańsk University of Technology English The folder contains the data and codes used in the analysis described in the paper: Parteka A., Kordalska A. (2024) XXXX Share Pin Keywords: technological diversification foreign direct investments global value chains theil decomposition export diversification Show more Author: [removed______________________________] Affiliation: Politechnika Gdańska - Katedra Statystyki i Ekonometrii Politechnika Gdańska - Wydział Zarządzania i Ekonomii Learn more Separation of bacteria in UF process Data License: CC_BY Funder West Pomeranian University of Technology in Szczecin English Large quantities of water are used in car washing, so it is necessary to recycle the water, which is made possible by membrane filtration. FP100 (100 kDa) membranes have been used to treat car wash wastewater by ultrafiltration (UF). With time of operat... Show more Share Pin Keywords: water reuse bacteria ultrafiltration carwash wastewater Show more Author: [removed_________] Affiliation: Wydział Technologii i Inżynierii Chemicznej Learn more A survey examining the level of knowledge about open educational resources among local librarians Data License: CC_BY Funder: Gdańsk University of Technology Polish The file contains the results of a survey conducted by the librarians of the Gdansk University of Technology Library among employees of Tricity public libraries on the subject of the use of open educational resources in their daily work. The survey was ... Show more Share Pin Keywords: public library open educational resources surveying results Show more Author: [removed_____________________________________] Affiliation: Politechnika Gdańska - Sekcja Budowy Zbiorów Cyfrowych i Multimedialnych Politechnika Gdańska - Sekcja Obsługi Czytelnika Learn more SkinDepth - synthetic 3D skin lesion database Data License: CC_BY_NC Funder: Gdańsk University of Technology English SkinDepth is the first synthetic 3D skin lesion database. The release of SkinDepth dataset intends to contribute to the development of algorithms for: (1) skin lesion thickness prediction, (2) skin lesion segmentation, (3) skin lesion classification, (4... Show more Share Pin Keywords: Skin lession segmentation depth maps classification thickness melanoma Show more Author: [removed_____________________] Affiliation: Gdańsk University of Technology - Department of Biomedical Engineering Learn more Cechy morfologiczne wybranych gatunków rodzaju Maz Data License: CC_BY English Dataset contains morphological features of various species of genus Maxillaria, 56 features are defined in 0-1 system. Share Pin Keywords: maxillaria phenetics morphology Author: [removed________________] Learn more A study of nighttime vehicle detection algorithms Data License: CC_0 Funder: Gdańsk University of Technology English This dataset is from my master's thesis \"A study of nighttime vehicle detection algorithms\". It contains both raw data and preprocessed dataset ready to use. In the pictures below you can see how images were annotated. Package contains 3 datasets for: ... Show more Share Pin Keywords: voc night yolo vehicle detection car Author: [removed________] Learn more Skin Conductance Level (SCL) data collected during mental training of group of 30 athletes Data License: CC_BY_NC_SA Funder: Gdańsk University of Technology English The dataset contain raw Skin Conductance Level (SCL) data, collected at a frequency of 40 Hz and expressed in units of microsiemens (μS), during mental training of group of 30 athletes, under the project \"Psychophysiology of guided and self-produced ima... Show more Share Pin Keywords: biosignal processing mental training skin conductance level athletes Show more Author: [removed___________________________________________________________________________________________________________________________________________________________] Affiliation: Politechnika Gdańska - Instytut Fizyki i Informatyki Stosowanej Politechnika Gdańska - Katedra Biomechatroniki Learn more Biofouling UF car wash Data License: CC_BY Funder West Pomeranian University of Technology in Szczecin English Polyethersulfone (PES) membranes were used to separate wastewater from car washes containing bacteria.After the separation was completed, the UF installations were washed with chemical agents.The study examined how effectively these chemical agents remo... Show more Share Pin Keywords: ultrafiltration membrane washing water reuse biofouling car wash Show more Author: [removed_______________________] Affiliation: Wydział Technologii i Inżynierii Chemicznej Szkoła Doktorska Learn more << < 1 2 3 4 5 > Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
+      "full_text": "About Browse resources Work with data Login Basic Search Advanced Search Advanced Search Guide All Resources Datasets Publications Software Services Data sources Providers Interoperability Guidelines Browse Exact match Show filters All catalogs Research Outputs Datasets Access curated or raw datasets with metadata for analysis. Publications Browse articles, papers, and reports. Software Find tools and applications to support research. Research Outputs Browse publications and datasets from scientific projects. Service Offerings Services Explore compute, data processing, storage, and analysis services. Bundles Discover packages combining multiple services. Service Offerings Discover and access to compute, storage, data-processing, and other services. Providers & Data Sources Data sources Find original data providers or endpoints where data is collected. Providers Browse list of providers offering platform services. Providers & Data Sources Explore service providers and data repositories or endpoints. Standards & Libraries Interoperability Guidelines Access standards and best practices for seamless integration. Standards & Libraries Access interoperability standards, configuration templates, and integration libraries. All Resources Datasets Publications Software Services Data sources Interoperability Guidelines All Resources Filters (61938 results) Sort By Best match Date - Most recent Date – Least recent Downloads & Views Recommended Download search results Aspicilia lutzoniana Data License: CC_0 English Aspicilia lutzoniana Rodr. [removed___________________], is a novel freshwater species from Bolivian high mountains. The species is named in honour of [removed_______] (Durham, USA), our friend and the prominent Canadian-born lichenologist, for his magn... Show more Share Pin Keywords: lichezid fungi Bolivia biodiversity Author: [removed______________] Affiliation: Polish Academy of Sciences Learn more SWM for porous hierarchical nanocarbons composites Data License: CC_BY Funder: Gdańsk University of Technology English Raw Raman spectra and XRD diffractograms (background subtracted) of 13 among which carbon-derived secondary waste and reference materials. Raman spectra were collected measured using a commercial Raman microscope (LabRam Aramis, Horiba) with excitation... Show more Share Pin Keywords: raman spectroscopy x-ray diffraction secondary waste materials Show more Author: [removed_______] Affiliation: Gdańsk University of Technology - Department of Metrology and Optoelectronics Learn more Data and codes accompanying the paper: Parteka A., Kordalska A. \"XXX\". Data License: CC_BY_NC_ND Funder: Gdańsk University of Technology English The folder contains the data and codes used in the analysis described in the paper: Parteka A., Kordalska A. (2024) XXXX Share Pin Keywords: technological diversification foreign direct investments global value chains theil decomposition export diversification Show more Author: [removed______________________________] Affiliation: Politechnika Gdańska - Katedra Statystyki i Ekonometrii Politechnika Gdańska - Wydział Zarządzania i Ekonomii Learn more Separation of bacteria in UF process Data License: CC_BY Funder West Pomeranian University of Technology in Szczecin English Large quantities of water are used in car washing, so it is necessary to recycle the water, which is made possible by membrane filtration. FP100 (100 kDa) membranes have been used to treat car wash wastewater by ultrafiltration (UF). With time of operat... Show more Share Pin Keywords: water reuse bacteria ultrafiltration carwash wastewater Show more Author: [removed_________] Affiliation: Wydział Technologii i Inżynierii Chemicznej Learn more A survey examining the level of knowledge about open educational resources among local librarians Data License: CC_BY Funder: Gdańsk University of Technology Polish The file contains the results of a survey conducted by the librarians of the Gdansk University of Technology Library among employees of Tricity public libraries on the subject of the use of open educational resources in their daily work. The survey was ... Show more Share Pin Keywords: public library open educational resources surveying results Show more Author: [removed_____________________________________] Affiliation: Politechnika Gdańska - Sekcja Budowy Zbiorów Cyfrowych i Multimedialnych Politechnika Gdańska - Sekcja Obsługi Czytelnika Learn more SkinDepth - synthetic 3D skin lesion database Data License: CC_BY_NC Funder: Gdańsk University of Technology English SkinDepth is the first synthetic 3D skin lesion database. The release of SkinDepth dataset intends to contribute to the development of algorithms for: (1) skin lesion thickness prediction, (2) skin lesion segmentation, (3) skin lesion classification, (4... Show more Share Pin Keywords: Skin lession segmentation depth maps classification thickness melanoma Show more Author: [removed_____________________] Affiliation: Gdańsk University of Technology - Department of Biomedical Engineering Learn more Cechy morfologiczne wybranych gatunków rodzaju Maz Data License: CC_BY English Dataset contains morphological features of various species of genus Maxillaria, 56 features are defined in 0-1 system. Share Pin Keywords: maxillaria phenetics morphology Author: [removed________________] Learn more A study of nighttime vehicle detection algorithms Data License: CC_0 Funder: Gdańsk University of Technology English This dataset is from my master's thesis \"A study of nighttime vehicle detection algorithms\". It contains both raw data and preprocessed dataset ready to use. In the pictures below you can see how images were annotated. Package contains 3 datasets for: ... Show more Share Pin Keywords: voc night yolo vehicle detection car Author: [removed________] Learn more Skin Conductance Level (SCL) data collected during mental training of group of 30 athletes Data License: CC_BY_NC_SA Funder: Gdańsk University of Technology English The dataset contain raw Skin Conductance Level (SCL) data, collected at a frequency of 40 Hz and expressed in units of microsiemens (μS), during mental training of group of 30 athletes, under the project \"Psychophysiology of guided and self-produced ima... Show more Share Pin Keywords: biosignal processing mental training skin conductance level athletes Show more Author: [removed___________________________________________________________________________________________________________________________________________________________] Affiliation: Politechnika Gdańska - Instytut Fizyki i Informatyki Stosowanej Politechnika Gdańska - Katedra Biomechatroniki Learn more Biofouling UF car wash Data License: CC_BY Funder West Pomeranian University of Technology in Szczecin English Polyethersulfone (PES) membranes were used to separate wastewater from car washes containing bacteria.After the separation was completed, the UF installations were washed with chemical agents.The study examined how effectively these chemical agents remo... Show more Share Pin Keywords: ultrafiltration membrane washing water reuse biofouling car wash Show more Author: [removed_______________________] Affiliation: Wydział Technologii i Inżynierii Chemicznej Szkoła Doktorska Learn more << < 1 2 3 4 5 > Helpdesk Back to the top For users Browse resources Your projects Documentation For providers Backoffice Marketplace API Partners National Science Centre ACC Cyfronet AGH Gdańsk University of Technology University of Warsaw Institute of Oceanology PAN Contact contact@eosc.pl Copyright 2026 | All rights reserved | User Access Policy | Acceptable Use Policy | Download Logo",
       "links": [
         {
           "href": "https://eosc.pl",
@@ -1061,6 +1063,156 @@
           "visible": true
         },
         {
+          "href": "https://doi.org/10.34808/5sde-p268",
+          "text": "Aspicilia lutzoniana",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10020144101010295_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/5sde-p268",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/ynj6-6r28",
+          "text": "SWM for porous hierarchical nanocarbons composites",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10031256441044123_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/ynj6-6r28",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/yhbq-d345",
+          "text": "Data and codes accompanying the paper: Parteka A., Kordalska A. \"XXX\".",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10040223271027673_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/yhbq-d345",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/z5xc-2m49",
+          "text": "Separation of bacteria in UF process",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_1004053202102190_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/z5xc-2m49",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/ea5p-dm56",
+          "text": "A survey examining the level of knowledge about open educational resources among local librarians",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10041106401040248_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/ea5p-dm56",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/vhk0-ww51",
+          "text": "SkinDepth - synthetic 3D skin lesion database",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10061105501050578_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/vhk0-ww51",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/9vh5-3553",
+          "text": "Cechy morfologiczne wybranych gatunków rodzaju Maz",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_1007024306106462_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/9vh5-3553",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/5p14-0c72",
+          "text": "A study of nighttime vehicle detection algorithms",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10070936421042877_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/5p14-0c72",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/7pfg-1w13",
+          "text": "Skin Conductance Level (SCL) data collected during mental training of group of 30 athletes",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10090619221022480_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/7pfg-1w13",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/rn6j-x502",
+          "text": "Biofouling UF car wash",
+          "visible": true
+        },
+        {
+          "href": "https://marketplace.eosc.pl//research_products/new?resource_id=0_10100925151015711_ORD&resource_type=dataset&scope=pl",
+          "text": "Pin",
+          "visible": true
+        },
+        {
+          "href": "https://doi.org/10.34808/rn6j-x502",
+          "text": "Learn more",
+          "visible": true
+        },
+        {
           "href": "https://eosc.pl/search/all_collection?q=*",
           "text": "Browse resources",
           "visible": true
@@ -1132,7 +1284,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.pl/search/data_source",
@@ -1421,7 +1574,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A",
@@ -1770,7 +1924,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
@@ -1785,7 +1940,7 @@
     "https://eosc.pl/privacy-policy (already fetched at depth 1)",
     "https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A (already fetched at depth 1)"
   ],
-  "crawl_note": "depth 2: 34 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; 2 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 1 page(s); fetch budget: 35 of 60 used",
+  "crawl_note": "depth 2: 34 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; 2 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 1 page(s); fetch budget: 43 of 60 used",
   "scripted_links": [
     {
       "text": "Contact our team",
@@ -1796,6 +1951,15 @@
       "text": "Helpdesk",
       "href": "",
       "outcome": "click failed: TimeoutError"
+    }
+  ],
+  "frames": [
+    {
+      "url": "https://www.youtube.com/embed/VroPDGtugx8",
+      "title": "",
+      "chars": 0,
+      "links": 0,
+      "outcome": "not read: another site"
     }
   ]
 }

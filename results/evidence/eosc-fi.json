@@ -2,7 +2,7 @@
   "node_id": "eosc-fi",
   "node_name": "EOSC Finland",
   "requested_url": "https://eosc.fi/",
-  "fetched_at": "2026-11-21T08:36:39+00:00",
+  "fetched_at": "2026-11-21T13:22:12+00:00",
   "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -2074,7 +2074,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/terms-of-use/prerequisites-for-a-project-manager/",
@@ -2538,7 +2539,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-policies/",
@@ -3058,7 +3060,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/support",
@@ -3487,7 +3490,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/contact/",
@@ -3991,7 +3995,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/",
@@ -4510,7 +4515,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/",
@@ -5044,7 +5050,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/terms-of-use/data-processing-agreement/",
@@ -5528,7 +5535,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/terms-of-use/export-restrictions-and-sanctions/",
@@ -6032,7 +6040,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/eosc-node-finland/node-privacy-notice/",
@@ -6606,7 +6615,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/training/csc-research-support-coffee-every-wednesday-at-1400-finnish-time/",
@@ -7080,7 +7090,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-organisations/",
@@ -7614,7 +7625,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/for-researchers/",
@@ -8138,7 +8150,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://research.csc.fi/eosc-the-finnish-candidate-node/about/the-eosc-federation/",
@@ -8647,7 +8660,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
@@ -8713,5 +8727,6 @@
     "https://research.csc.fi/terms-of-use/data-processing-agreement/ (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 103 link(s) on the landing page, 8 followed because they matched a checklist point, 37 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 23 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }

@@ -2,7 +2,7 @@
   "node_id": "data-terra",
   "node_name": "Data Terra",
   "requested_url": "https://www.earth-data.eu/",
-  "fetched_at": "2026-11-21T08:36:14+00:00",
+  "fetched_at": "2026-11-21T13:21:49+00:00",
   "final_url": "https://www.earth-data.eu/",
   "http_status": 200,
   "redirect_chain": [],
@@ -1244,7 +1244,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.earth-data.eu/resource-hub/",
@@ -1388,7 +1389,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.earth-data.eu/service-hub/",
@@ -1532,7 +1534,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.earth-data.eu/fr/about-2/",
@@ -1661,7 +1664,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
@@ -1680,5 +1684,6 @@
     "https://www.earth-data.eu/about/ (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 55 link(s) on the landing page, 3 followed because they matched a checklist point, 6 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 17 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }

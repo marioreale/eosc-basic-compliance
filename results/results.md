@@ -2,7 +2,7 @@
 
 # EOSC Node Landing Page compliance — checklist v3.2
 
-Run `web-44` · 2026-11-21T08:43:59+00:00 · 18 nodes · one page request per node plus 72 followed link(s), then 37 second-hop page(s) (depth 2).
+Run `web-45` · 2026-11-21T13:28:27+00:00 · 18 nodes · one page request per node plus 80 followed link(s), then 45 second-hop page(s) (depth 2).
 
 > **This is not a compliance statement.** Points marked 🟠 review are ones this tool refuses to guess at: they either turn on a judgement ("clearly state") or quantify over things this tool does not enumerate ("all Node Exchange research resources").
 
@@ -16,7 +16,7 @@ This run was collected at `--depth=2`, so it is reported twice: once using only 
 
 Landing page plus links that can settle a checklist point (policies, contact, about). This is the default the tool ships with.
 
-180 cells: 🟢 84 PASS · 🔴 6 FAIL · 🟠 70 review · 🧱 20 firewall.
+180 cells: 🟢 90 PASS · 🔴 4 FAIL · 🟠 76 review · 🧱 10 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -29,21 +29,21 @@ Landing page plus links that can settle a checklist point (policies, contact, ab
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
+| GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟠 review | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
-| Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
 | METROFOOD-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 
 ### Results at depth 2
 
-The same evidence plus 37 page(s) reached one further hop out, under a shared run budget.
+The same evidence plus 45 page(s) reached one further hop out, under a shared run budget.
 
-180 cells: 🟢 85 PASS · 🔴 6 FAIL · 🟠 69 review · 🧱 20 firewall.
+180 cells: 🟢 91 PASS · 🔴 4 FAIL · 🟠 75 review · 🧱 10 firewall.
 
 | Node | 1 | 1R | 2 | 3 | 4 | 5a | 5b | 5c | 6 | 7 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -56,14 +56,14 @@ The same evidence plus 37 page(s) reached one further hop out, under a shared ru
 | PaNOSC | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EUDAT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EGI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
-| GÉANT | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
+| GÉANT | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 | EOSC Node Poland | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Italy | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Slovakia | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | Life Sciences Connect | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS | 🟢 PASS | 🟢 PASS |
 | EOSC Node Germany | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🔴 **FAIL** | 🟢 PASS |
 | EOSC Node Latvia | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** | 🧱 **Firewall** |
-| Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🔴 **FAIL** | 🔴 **FAIL** | 🟠 review | 🟢 PASS |
+| Scholarly Commons | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟠 review | 🟠 review | 🟢 PASS |
 | METROFOOD-RI | 🟢 PASS | 🟠 review | 🟠 review | 🟠 review | 🔴 **FAIL** | 🟠 review | 🟢 PASS | 🟠 review | 🟢 PASS | 🟢 PASS |
 
 ### What the second hop changed
@@ -112,6 +112,14 @@ The same evidence plus 37 page(s) reached one further hop out, under a shared ru
 | EUDAT | 5b | <https://www.eudat.eu/b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html> | 200 |
 | EUDAT | 6 | <https://www.eudat.eu/contact-support-request?service=B2DROP> | 200 |
 | EGI | 2 | <https://www.egi.eu/egi-federation/> | 200 |
+| GÉANT | 5b | <https://security.geant.org/contact/> | 200 |
+| GÉANT | 2 | <https://geant.org/about-geant/geant-executive-team/> | 200 |
+| GÉANT | 2 | <https://geant.org/about-geant/governance/> | 200 |
+| GÉANT | 2 | <https://geant.org/about-geant/membership/> | 200 |
+| GÉANT | 2 | <https://geant.org/about-geant/become-a-geant-member/> | 200 |
+| GÉANT | 2 | <https://geant.org/about-geant/equity-diversity-and-inclusion/> | 200 |
+| GÉANT | 2 | <https://clouds.geant.org/geant-cloud-frameworks/> | 200 |
+| GÉANT | 2 | <https://about.geant.org> | 200 |
 | EOSC Node Poland | 6 | <https://eosc.pl/search/software?q=*&standard=true&exact=false&radioValueAuthor=A&radioValueExact=A&radioValueTitle=A&radioValueKeyword=A> | 200 |
 | METROFOOD-RI | 5b | <https://catalogues.staging.metrofood-services.eu/tos> | 200 |
 | METROFOOD-RI | 2 | <https://catalogues.staging.metrofood-services.eu/about> | 200 |
@@ -613,66 +621,53 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 ### GÉANT
 <https://geant.org/geant-eosc-node/>
 
-- **1** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **1R** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **2** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **3** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **4** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **5a** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **5b** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **5c** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **6** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
-- **7** 🧱 **Firewall** — HTTP 403: the site answered with a bot-protection challenge (Cloudflare's "Performing security verification" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.
-  - HTTP 403
-  - page title: 'Just a moment...'
-  - challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare
-  - final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1
-  - *Reviewer action:* Open the URL in a normal browser and assess the page by hand; a later run may be served the page.
+- **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
+  - HTTP 200 anonymously, 10197 characters of text rendered
+  - redirects followed: 1
+- **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
+  - 27 distinct external host(s) linked from the landing page
+  - careers.geant.org (Careers)
+  - clouds.geant.org (About the GÉANT Cloud Frameworks, Above-the-Net Services Incubator, Clouds)
+  - community.geant.org (Community Award, Community Programme, GÉANT Community)
+  - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
+- **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
+  - meta description: "The GÉANT EOSC Node provides trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly."
+  - opening main text: "Home . Projects . GÉANT EOSC Node GÉANT EOSC Node The GÉANT EOSC Node is GÉANT's contribution to the EOSC Federation, providing trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly. GÉANT Service Catalogue An overview of the GÉANT services onboarded into the EOSC Federation. GÉANT Node Acceptable Use Policy This policy defi..."
+  - organisation-like names found: Association; Security Operations Centre
+  - about page one level down: https://geant.org/contact (HTTP 200) opening text: "Home . Contact Contact Get in touch, learn more or request support. GDPR For questions related to our Privacy Notice and how GÉANT processes your personal data. Contact us General enquiries Submit a general enquiry, and we will put you in contact with the appr..."
+  - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
+- **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.
+  - EOSC-referencing image asset(s): 2
+  - img: EOSC-node-website-banner.jpg
+  - img: GEANT-EOSC-node-news-1024x429.jpg
+  - approved name matched from the unscoped list: "EOSC Node | GÉANT" (the page writes it "EOSC Node GÉANT") — the list does not say which name belongs to which node, so this does not establish it is this node's own name
+  - *Reviewer action:* Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say.
+- **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
+  - "Explore the GÉANT Node page on the EOSC website." -> https://eosc.eu/building-the-eosc-federation/eosc-node-geant
+- **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
+  - 127 outbound link(s) on the landing page
+  - main text length: 6489 characters
+  - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
+- **5b** 🟢 PASS — The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.
+  - "This policy defines the rules that govern access and use of resources and services of the GÉANT Node." -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/
+  - followed: https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/ -> HTTP 200, 3383 chars, title: GÉANT Node Acceptable Use Policy - GÉANT
+  - policy wording found: Conditions, Policy, You shall, permitted
+  - *Reviewer action:* Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 127 link(s) on the landing page examined, none matching a User Access Policy
+  - 16 linked page(s) read, none linking to a User Access Policy: https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/, https://geant.org/contact, https://geant.org/about-geant/, https://geant.org/about-geant/vision-mission-strategy/, https://geant.org/procurement-and-legal/ ...
+  - an Acceptable Use Policy: "This policy defines the rules that govern access and use of resources and services of the GÉANT Node." -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/
+  - an Acceptable Use Policy via https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/: "GÉANT Node Acceptable Use Policy - GÉANT" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/
+  - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+- **6** 🟢 PASS — A page reached from the landing page identifies a helpdesk or user support route.
+  - "Contact" -> https://geant.org/contact
+  - "Contact To find out more about the GÉANT EOSC Node get in touch via the contact form." -> https://geant.org/contact/
+  - followed: https://geant.org/contact -> HTTP 200
+  - helpdesk wording on that page: helpdesk
+  - *Reviewer action:* Confirm the route reaches the node's user support.
+- **7** 🟢 PASS — The main content is English and the page declares English.
+  - declared lang attribute: "en-US"
+  - detected language: en (confidence 1.0)
 
 ### EOSC Node Poland
 <https://eosc.pl/>
@@ -968,12 +963,12 @@ The NLP itself is in English. Other pages need not be, except for the informatio
 <https://eosc.scholarlycommons.eu/home>
 
 - **1** 🟢 PASS — Served content to an anonymous request, satisfying branch (a).
-  - HTTP 200 anonymously, 2307 characters of text rendered
+  - HTTP 200 anonymously, 5285 characters of text rendered
 - **1R** 🟠 review — Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.
-  - 2 distinct external host(s) linked from the landing page
+  - 4 distinct external host(s) linked from the landing page
+  - explore.openaire.eu (Go to EXPLORE →)
+  - gotriple.eu (Go to GoTriple →)
   - www.openaire.eu (OpenAIRE)
-  - www.operas-eu.org (OPERAS)
-  - depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible
   - *Reviewer action:* Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI.
 - **2** 🟠 review — Requires reading the page: "clearly state" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.
   - meta description: "Services from trusted providers for the scholarly commons, for institutions, funders, research teams and individual researchers."
@@ -982,25 +977,31 @@ The NLP itself is in English. Other pages need not be, except for the informatio
   - about page one level down: https://eosc.scholarlycommons.eu/about (HTTP 200) opening text: "About Services How to start Use Cases News Training Terms & Policies Join Login About Services How to start Use Cases News Training Terms & Policies Join Login A joint Node of The scholarly communication layer of the EOSC Federation. Contact the Node team The ..."
   - *Reviewer action:* Read the extracted text and confirm all three elements are present and clear.
 - **3** 🟠 review — An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is "clearly and visibly" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.
-  - EOSC-referencing image asset(s): 1
+  - EOSC-referencing image asset(s): 3
   - img: EOSC Node Scholarly Commons
-  - NONE of the 18 approved name(s) for this node appear in the page body — the phrase "EOSC Node" does occur once, but never followed by an approved name — note the <title> is not searched
+  - img: explore%201.svg
+  - img: gotriple.svg
   - *Reviewer action:* Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list.
 - **4** 🟢 PASS — Links to a specific node entry under eosc.eu/building-the-eosc-federation.
   - "Node profile on eosc.eu" -> https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons
+  - "Node profile on eosc.eu" -> https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons
 - **5a** 🟠 review — Quantifies over "all Node Exchange research resources offered by the Node", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.
-  - 31 outbound link(s) on the landing page
-  - main text length: 2307 characters
+  - 43 outbound link(s) on the landing page
+  - main text length: 5285 characters
   - *Reviewer action:* List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata.
-- **5b** 🔴 **FAIL** — No pointer to an Acceptable Use Policy was found on the landing page. None of the 4 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
-  - 31 link(s) on the landing page examined, none matching an Acceptable Use Policy
-  - 4 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover
-  - *Reviewer action:* Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
-- **5c** 🔴 **FAIL** — No pointer to a User Access Policy was found on the landing page. None of the 4 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.
-  - 31 link(s) on the landing page examined, none matching a User Access Policy
+- **5b** 🟢 PASS — The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page was fetched too.
+  - landing page -> https://eosc.scholarlycommons.eu/contact ("Contact the Node team")
+  - via https://eosc.scholarlycommons.eu/contact: "Acceptable Use Policy" -> https://eosc.scholarlycommons.eu/terms-and-policies
+  - via https://eosc.scholarlycommons.eu/terms-and-policies: "Terms and Conditions of Service" -> https://www.openaire.eu/terms-of-use
+  - *Reviewer action:* Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
+- **5c** 🟠 review — No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.
+  - 43 link(s) on the landing page examined, none matching a User Access Policy
   - 4 linked page(s) read, none linking to a User Access Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover
-  - *Reviewer action:* Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy).
+  - an Acceptable Use Policy via https://eosc.scholarlycommons.eu/contact: "Acceptable Use Policy" -> https://eosc.scholarlycommons.eu/terms-and-policies
+  - an Acceptable Use Policy via https://eosc.scholarlycommons.eu/terms-and-policies: "Terms and Conditions of Service" -> https://www.openaire.eu/terms-of-use
+  - *Reviewer action:* Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read.
 - **6** 🟠 review — The contact or support pages reached from the landing page do not identify a helpdesk. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.
+  - "Contact the Node team" -> https://eosc.scholarlycommons.eu/contact
   - "Contact the Node team" -> https://eosc.scholarlycommons.eu/contact
   - followed: https://eosc.scholarlycommons.eu/contact -> HTTP 200
   - *Reviewer action:* Confirm whether any route reaches the node's user support, not a general mailbox or an unrelated service.

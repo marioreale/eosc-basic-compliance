@@ -2,7 +2,7 @@
   "node_id": "eosc-lv",
   "node_name": "EOSC Node Latvia",
   "requested_url": "https://eosc.lv/en/",
-  "fetched_at": "2026-11-21T08:41:22+00:00",
+  "fetched_at": "2026-11-21T13:27:27+00:00",
   "final_url": "https://eosc.lv/en/",
   "http_status": 403,
   "redirect_chain": [
@@ -13,7 +13,7 @@
   "title": "Just a moment...",
   "lang_attr": "en-us",
   "main_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond",
-  "full_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond Ray ID: a5de651b5e56a600 Performance and Security by Cloudflare Privacy",
+  "full_text": "eosc.lv Performing security verification This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot. Verification successful. Waiting for eosc.lv to respond Ray ID: a5e0082ecb33d6a0 Performance and Security by Cloudflare Privacy",
   "links": [
     {
       "href": "https://www.cloudflare.com?utm_source=challenge&utm_campaign=m",
@@ -32,7 +32,7 @@
       "alt": "Icon for eosc.lv",
       "aria_label": "",
       "title": "",
-      "css_class": "_cbd6e842edeacabc73c3d6a1 _63a2ba6433f5068d00b13c8a",
+      "css_class": "_33b858d43b16b6b3f15c42cd _912a6b42cbbd7f2a472617ad",
       "inline_svg": false
     }
   ],
@@ -56,6 +56,15 @@
   "crawl_depth": 2,
   "children": [],
   "children_skipped": [],
-  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
-  "scripted_links": []
+  "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 43 of 60 used",
+  "scripted_links": [],
+  "frames": [
+    {
+      "url": "https://challenges.cloudflare.com/cdn-cgi/challenge-platform/h/b/turnstile/f/av0/rch/c3llc/0x4AAAAAAADnPIDROrmt1Wwj/light/fbE/new/normal?lang=auto",
+      "title": "",
+      "chars": 0,
+      "links": 0,
+      "outcome": "not read: another site"
+    }
+  ]
 }

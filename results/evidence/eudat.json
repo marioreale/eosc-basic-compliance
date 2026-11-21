@@ -2,7 +2,7 @@
   "node_id": "eudat",
   "node_name": "EUDAT",
   "requested_url": "https://portal.eudat.eu/",
-  "fetched_at": "2026-11-21T08:38:05+00:00",
+  "fetched_at": "2026-11-21T13:23:38+00:00",
   "final_url": "https://portal.eudat.eu/welcome",
   "http_status": 200,
   "redirect_chain": [
@@ -931,7 +931,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eudat.eu/eudat-cdi-uap",
@@ -1440,7 +1441,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://portal.eudat.eu/helpdesk",
@@ -1509,7 +1511,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eudat.eu/service-catalogue/b2access",
@@ -2153,7 +2156,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.youtube.com/embed/WYL5WlS-lno?wmode=opaque",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.eudat.eu/service-catalogue/b2drop",
@@ -2807,7 +2819,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.youtube.com/embed/YyjPv4s7DxY?wmode=opaque",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://eudat.eu/eudat-cdi-aup/data-protection-and-privacy-policies",
@@ -3546,7 +3567,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eudat.eu/catalogue",
@@ -4080,7 +4102,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.youtube.com/embed/Yubjl0J-6KI",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.eudat.eu/contact-support-request",
@@ -4574,7 +4605,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfwJQYjAAAAAAP_ThYiz1oH1__DWgtKaR0hg-oH&co=aHR0cHM6Ly93d3cuZXVkYXQuZXU6NDQz&hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=8fuka9lbkfd8",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.eudat.eu/about",
@@ -5108,7 +5148,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.youtube.com/embed/WYL5WlS-lno",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html",
@@ -5126,7 +5175,8 @@
       "full_text": "HTTP ERROR 404 Request was not handled by any registered handler. URI: https://b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html STATUS: 404 MESSAGE: Request was not handled by any registered handler. SERVLET: io.imunity.vaadin.shared.endpoint.SimpleVaadin2XServlet-70bdc9df",
       "links": [],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eudat.eu/contact-support-request?service=B2ACCESS",
@@ -5620,7 +5670,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfwJQYjAAAAAAP_ThYiz1oH1__DWgtKaR0hg-oH&co=aHR0cHM6Ly93d3cuZXVkYXQuZXU6NDQz&hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=dbua4j2ayxus",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.eudat.eu/b2access.eudat.eu/unitygw/VAADIN/files/terms-of-use.html",
@@ -5635,7 +5694,7 @@
       "title": "EUDAT | Your Gateway to Advanced Research Data Services",
       "lang_attr": "en",
       "main_text": "E-Infra Assembly welcomes MoU between EOSC Association and EOSC4ALL, EOSC-CONNECT, EOSC-Marine and EOSC Mesh During the EOSC Symposium 2026, a Memorandum of Understanding was signed between EOSC Association and EOSC4ALL, EOSC-CONNECT, EOSC-Marine and EOSC Mesh. 20 October 2026",
-      "full_text": "EUDAT Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us About Back About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Back Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events Back News & Events News Events Contact us User account menu Help Log in Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us About Back About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Back Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events Back News & Events News Events Contact us Accelerating Open Science Through Shared Data Infrastructure EUDAT enables researchers across Europe and beyond to store, find, access and reuse data through a network of research organisations and computing centres Try now 39m Persistent Identifiers assigned 13.2m Files hosted in EUDAT B2DROK 11.8k Published dataseOW 1.5m Datasets harvested and zGPioSR 108 EUDAT uNWTt 196 years of CluzkmozrnzBgTEc Access EUDAT Services Through the European Open Science Cloud The EUDAT EOSC Node enables data sharing across domains and borders through collaborative workspaces for projects, infrastructures, and communities, offering FAIR-by-design data management services and interoperable resources. Access the EOSC EU Node Explore EUDAT services Your Gateway to Advanced Research Data Services B2 FIND Find research data, research data portal B2 SAFE Keep research data safe via data management policies B2 SHARE Store and publish research data B2 DROP Sync and share research data B2 ACCESS Identity & authorisation B2 HANDLE Register your research data with a persistent identifier DataCite Register your DOIs with EUDAT DataCite Consortium Get in touch for more details about our services. Request information Real stories. Real inspiration. Learn how EUDAT has supported research communities across different disciplines. Discover success stories Communities A distributed infrastructure for life-science information Communities An EUDAT-based FAIR Data Approach for Data Interoperability Communities Blue-Cloud provides cross-domain marine data with EUDAT's B2FIND Communities Central online location for data sharing for all Aalto University researchers Communities Cloud-like services to improve the preservation of digital cultural heritage Communities Common Language Resources and Technology Infrastructure From Silos to Shared Discovery Research data locked in institutional silos slows progress. EUDAT breaks down barriers by connecting data centres across Europe, enabling seamless storage, discovery, and reuse of scientific datasets at scale. The result: faster collaboration, reproducible findings, and a unified infrastructure powering the next era of open science. Shared Data Infrastructure. Boundless Research. Empower your research team with federated storage, persistent identifiers, and cross-border data services built for open science. Explore EUDAT Services Upcoming Events Third party event International Data Week 2027 The International Data Week 2027 (IDW 2027) will take place on 20-23 September 2027 in Cape Town, South Africa. 23 September 2027 Cape Town, South Africa Discover all events News in Spotlight E-Infra Assembly welcomes MoU between EOSC Association and EOSC4ALL, EOSC-CONNECT, EOSC-Marine and EOSC Mesh During the EOSC Symposium 2026, a Memorandum of Understanding was signed between EOSC Association and EOSC4ALL, EOSC-CONNECT, EOSC-Marine and EOSC Mesh. 20 October 2026 EUDAT EOSC Node enters production as part of the EOSC Federation The EUDAT EOSC Node is moving into production, making collaborative workspaces for research projects, infrastructures, and communities, making FAIR-by-design data management services and interoperable… 13 October 2026 A new era for European science: EUDAT helps move the EOSC Federation into operations As the EOSC Federation moves into operations this October, EUDAT is contributing a new Node to a new European research environment that leverages the European Union’s treasure trove of high-quality da… 12 October 2026 Discover all news Take the next step You have options. Choose the bare metal infrastructure that works for you. Join the EUDAT community to get the latest updates * indicates required First Name * Last Name * Organisation * Best way to describe you/your organisation? * Government/Public Administration Large Enterprise Small & Medium Enterprise Data Center/Provider Library/Publisher Policy/Funding Agency Press & Media Non-profit Organisation Research/Academia Other Email Address * Privacy Policy By submitting to this form, I accept the EUDAT Privacy Policy EUDAT Ltd Contacts info@eudat.eu Post: EUDAT Ltd 02101 Espoo, Finland Address: Keilaniemen Portti Keilalahdentie 1, 02150 Espoo, Finland VAT number: FI 28953559 Resources EOSC EU Node Research Communities Collaborations Infrastructure Services Membership Training Legal &info EUDAT AUP Privacy Policy Accessibility Statement FAQs EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers.",
+      "full_text": "EUDAT Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us About Back About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Back Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events Back News & Events News Events Contact us User account menu Help Log in Main navigation About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events News Events Contact us About Back About EUDAT Governance Members Collaborations Projects Communications Kit Membership Services & Support Back Services & Support Service Catalogue EOSC EUDAT Node User Documentation Training Help Desk Research Communities News & Events Back News & Events News Events Contact us Accelerating Open Science Through Shared Data Infrastructure EUDAT enables researchers across Europe and beyond to store, find, access and reuse data through a network of research organisations and computing centres Try now 39m Persistent Identifiers assigned 13.2m Files hosted in EUDAT B2DROw 11.8k Published dataseiy 1.5m Datasets harvested and ZOeIBXF 102 EUDAT uxLZh 137 years of PfySxANfGSbefwKB Access EUDAT Services Through the European Open Science Cloud The EUDAT EOSC Node enables data sharing across domains and borders through collaborative workspaces for projects, infrastructures, and communities, offering FAIR-by-design data management services and interoperable resources. Access the EOSC EU Node Explore EUDAT services Your Gateway to Advanced Research Data Services B2 FIND Find research data, research data portal B2 SAFE Keep research data safe via data management policies B2 SHARE Store and publish research data B2 DROP Sync and share research data B2 ACCESS Identity & authorisation B2 HANDLE Register your research data with a persistent identifier DataCite Register your DOIs with EUDAT DataCite Consortium Get in touch for more details about our services. Request information Real stories. Real inspiration. Learn how EUDAT has supported research communities across different disciplines. Discover success stories Communities A distributed infrastructure for life-science information Communities An EUDAT-based FAIR Data Approach for Data Interoperability Communities Blue-Cloud provides cross-domain marine data with EUDAT's B2FIND Communities Central online location for data sharing for all Aalto University researchers Communities Cloud-like services to improve the preservation of digital cultural heritage Communities Common Language Resources and Technology Infrastructure From Silos to Shared Discovery Research data locked in institutional silos slows progress. EUDAT breaks down barriers by connecting data centres across Europe, enabling seamless storage, discovery, and reuse of scientific datasets at scale. The result: faster collaboration, reproducible findings, and a unified infrastructure powering the next era of open science. Shared Data Infrastructure. Boundless Research. Empower your research team with federated storage, persistent identifiers, and cross-border data services built for open science. Explore EUDAT Services Upcoming Events Third party event International Data Week 2027 The International Data Week 2027 (IDW 2027) will take place on 20-23 September 2027 in Cape Town, South Africa. 23 September 2027 Cape Town, South Africa Discover all events News in Spotlight E-Infra Assembly welcomes MoU between EOSC Association and EOSC4ALL, EOSC-CONNECT, EOSC-Marine and EOSC Mesh During the EOSC Symposium 2026, a Memorandum of Understanding was signed between EOSC Association and EOSC4ALL, EOSC-CONNECT, EOSC-Marine and EOSC Mesh. 20 October 2026 EUDAT EOSC Node enters production as part of the EOSC Federation The EUDAT EOSC Node is moving into production, making collaborative workspaces for research projects, infrastructures, and communities, making FAIR-by-design data management services and interoperable… 13 October 2026 A new era for European science: EUDAT helps move the EOSC Federation into operations As the EOSC Federation moves into operations this October, EUDAT is contributing a new Node to a new European research environment that leverages the European Union’s treasure trove of high-quality da… 12 October 2026 Discover all news Take the next step You have options. Choose the bare metal infrastructure that works for you. Join the EUDAT community to get the latest updates * indicates required First Name * Last Name * Organisation * Best way to describe you/your organisation? * Government/Public Administration Large Enterprise Small & Medium Enterprise Data Center/Provider Library/Publisher Policy/Funding Agency Press & Media Non-profit Organisation Research/Academia Other Email Address * Privacy Policy By submitting to this form, I accept the EUDAT Privacy Policy EUDAT Ltd Contacts info@eudat.eu Post: EUDAT Ltd 02101 Espoo, Finland Address: Keilaniemen Portti Keilalahdentie 1, 02150 Espoo, Finland VAT number: FI 28953559 Resources EOSC EU Node Research Communities Collaborations Infrastructure Services Membership Training Legal &info EUDAT AUP Privacy Policy Accessibility Statement FAQs EUDAT is a pan-European network consisting of more than 20 research organisations, data and computing centers.",
       "links": [
         {
           "href": "https://www.eudat.eu/",
@@ -6224,7 +6283,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eudat.eu/contact-support-request?service=B2DROP",
@@ -6718,7 +6778,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfwJQYjAAAAAAP_ThYiz1oH1__DWgtKaR0hg-oH&co=aHR0cHM6Ly93d3cuZXVkYXQuZXU6NDQz&hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=r8e1s1t9bujw",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     }
   ],
   "children_skipped": [
@@ -6766,5 +6835,6 @@
     "https://www.eudat.eu/catalogue (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 20 link(s) on the landing page, 5 followed because they matched a checklist point, 5 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 8 page(s); fetch budget: 33 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }

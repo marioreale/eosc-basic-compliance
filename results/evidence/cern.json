@@ -2,7 +2,7 @@
   "node_id": "cern",
   "node_name": "CERN",
   "requested_url": "https://eosc.cern/",
-  "fetched_at": "2026-11-21T08:34:10+00:00",
+  "fetched_at": "2026-11-21T13:19:51+00:00",
   "final_url": "https://eosc.cern/",
   "http_status": 200,
   "redirect_chain": [],
@@ -642,7 +642,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/about/cern-node#stages",
@@ -796,7 +797,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/about/cern",
@@ -920,7 +922,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/policies",
@@ -1074,7 +1077,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/services",
@@ -1353,7 +1357,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/about/collaboration",
@@ -1492,7 +1497,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/policies/aup",
@@ -1746,7 +1752,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/policies/uap",
@@ -1900,7 +1907,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://eosc.cern/about/technology",
@@ -2109,7 +2117,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
@@ -2143,5 +2152,6 @@
     "https://eosc.cern/policies/uap (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 36 link(s) on the landing page, 5 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 4 page(s); fetch budget: 6 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }

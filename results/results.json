@@ -1,6 +1,6 @@
 {
-  "run_id": "web-44",
-  "generated_at": "2026-11-21T08:43:59+00:00",
+  "run_id": "web-45",
+  "generated_at": "2026-11-21T13:28:27+00:00",
   "checklist": {
     "checklist_version": "3.2",
     "checklist_date": "2026-09-28",
@@ -112,7 +112,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-        "fetched_at": "2026-11-21T08:33:09+00:00",
+        "fetched_at": "2026-11-21T13:18:53+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "bbmri-eric.png",
@@ -572,7 +572,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.cern/",
-        "fetched_at": "2026-11-21T08:34:10+00:00",
+        "fetched_at": "2026-11-21T13:19:51+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "cern.png",
@@ -996,7 +996,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-        "fetched_at": "2026-11-21T08:34:43+00:00",
+        "fetched_at": "2026-11-21T13:20:24+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-cz.png",
@@ -1505,7 +1505,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-dto.d4science.org/",
-        "fetched_at": "2026-11-21T08:35:32+00:00",
+        "fetched_at": "2026-11-21T13:21:10+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-dto.png",
@@ -1542,7 +1542,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new?issue%5Bassigned_to_id%5D=24684",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUtfpQ6nVVIpaIVUqCLXAgk3l2FNq4djBY%2FP4e5KgliIBW8%2B9Z%2B7MeI6iNg0vYzjaLbxEwJCUiOCDdnbpLMYa%2FA78q5Zwv90U5BhCg5xSjE3jfBioMUoNVsLA%2BScqWg7tkFQKYyohn0myapnaig74bRdSumgD%2Fub3IEyN9FyhjXfBSWd6MknWq4Ls1YTN8gpUmo2mIh3PlEwrWeWpOsgZy%2FMZsGneShEjrC0GYUNBsmE2TRlLM3Y3zPlowifskSQP4LHPlg2GJHmvjUXeNSpI9JY7gRq5FTUgD5LvyusNb4VcnJZ0aWn%2B95zmIIt5p%2BZ9Or%2FwoGptYd%2BWVZQdc3%2BefU4vlfOva9205PXq1hktP5LSGPe2bHcWoCDBRyDJlfO1CH9nYQPWv2iVHnoph1poUyrlAZHQxVfXn99i8Qk%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEsfuQ8VqKkWtkCoVhFpgwaZynSm1cOzgsXn8PUmqliIBW8%2B9Z%2B7MeIqyNo0oYzjYNbxGwJCUiOCDdnbuLMYa%2FAb8m1bwsF4V5BBCg4JSjE3jfMiqISoNVkHm%2FDOVLYd2SKqkMTupXkiyaJnayg74bZdKuWgD%2Fub3IE2N9FyhjXfBKWd6MkmWi4Js2UAOecVUWu3YLh1OBjyd7HcslSqfjPIR41cyb6WIEZYWg7ShIDzn45SxlLN7NhCcCT5%2BIskjeOyz8ax1fNTGougaFSR6K5xEjcLKGlAEJTblzUq0QiFPS7q0NP97TnOQ2bRTiz6dn3moam1h25arqDrm9jz7lF4qp8dr3bbk5eLOGa0%2Bk9IY9z5vdxagIMFHIMm187UMf2dhGetfdJXue6mAWmpTVpUHREJnx64%2Fv8XsCw%3D%3D",
             "depth": 1,
             "parent_url": "",
             "selected_for": [
@@ -1614,7 +1614,7 @@
             "url": "https://www.d4science.org/terms-of-use",
             "final_url": "https://www.d4science.org/terms-of-use",
             "depth": 2,
-            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvUtfpQ6nVVIpaIVUqCLXAgk3l2FNq4djBY%2FP4e5KgliIBW8%2B9Z%2B7MeI6iNg0vYzjaLbxEwJCUiOCDdnbpLMYa%2FA78q5Zwv90U5BhCg5xSjE3jfBioMUoNVsLA%2BScqWg7tkFQKYyohn0myapnaig74bRdSumgD%2Fub3IEyN9FyhjXfBSWd6MknWq4Ls1YTN8gpUmo2mIh3PlEwrWeWpOsgZy%2FMZsGneShEjrC0GYUNBsmE2TRlLM3Y3zPlowifskSQP4LHPlg2GJHmvjUXeNSpI9JY7gRq5FTUgD5LvyusNb4VcnJZ0aWn%2B95zmIIt5p%2BZ9Or%2FwoGptYd%2BWVZQdc3%2BefU4vlfOva9205PXq1hktP5LSGPe2bHcWoCDBRyDJlfO1CH9nYQPWv2iVHnoph1poUyrlAZHQxVfXn99i8Qk%3D",
+            "parent_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEsfuQ8VqKkWtkCoVhFpgwaZynSm1cOzgsXn8PUmqliIBW8%2B9Z%2B7MeIqyNo0oYzjYNbxGwJCUiOCDdnbuLMYa%2FAb8m1bwsF4V5BBCg4JSjE3jfMiqISoNVkHm%2FDOVLYd2SKqkMTupXkiyaJnayg74bZdKuWgD%2Fub3IE2N9FyhjXfBKWd6MkmWi4Js2UAOecVUWu3YLh1OBjyd7HcslSqfjPIR41cyb6WIEZYWg7ShIDzn45SxlLN7NhCcCT5%2BIskjeOyz8ax1fNTGougaFSR6K5xEjcLKGlAEJTblzUq0QiFPS7q0NP97TnOQ2bRTiz6dn3moam1h25arqDrm9jz7lF4qp8dr3bbk5eLOGa0%2Bk9IY9z5vdxagIMFHIMm187UMf2dhGetfdJXue6mAWmpTVpUHREJnx64%2Fv8XsCw%3D%3D",
             "selected_for": [
               "5b"
             ],
@@ -1626,7 +1626,7 @@
           },
           {
             "url": "https://support.d4science.org/projects/eosc-node-eu-dto-support/issues/new",
-            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZLLTsMwEEV%2FJTuvEidpKKnVRIpaIVUqCJXHgk3lOFNq4djBY%2FP4e5JULUUCtp57z8yd8Rx5qzpWebfXG3j1gC6oEME6afTCaPQt2Duwb1LAw2ZdkL1zHTJK0XedsS5qMhQStIDI2GfKew4dkFRwpWouXkiw7JlS8wH4bedCGK8d%2Fua3wFWL9FShnTXOCKNGMglWy4Jscw55DPEuvOCXeZjNIA%2FzLK%2FDeiLEJMn4rM6glyJ6WGl0XLuCpHE6DZMkTJP7OGeTKYtnTyR4BIvjbGkUk%2BCjVRrZ0Kgg3mpmOEpkmreAzAl2V12vWS9k%2FLikc0v3v%2BeYg5TzQc3G6WxpoWmlhm1fbrwYmNtT9jk9V84P17rpyavlrVFSfAaVUuZ90e%2FMQUGc9X3qK2Nb7v6eJYmS8UU24W6UMmi5VFXTWEAktDx0%2Ffktyi8%3D",
+            "final_url": "https://accounts.d4science.org/auth/realms/d4science/protocol/saml?SAMLRequest=fZJPTwIxEMW%2Fyt56Wsp2V8SGJdlATEjQGFAPXkhpB2nstmun9c%2B3d3cJiIl67bz3mzcznaCoTcOrGPZ2Ba8RMCQVIvignZ05i7EGvwb%2FpiU8rJYl2YfQIKcUY9M4HwaqQKnBShg4%2F0xFy6EdkkphzFbIF5LMW6a2ogN%2B24WULtqAv%2Fk9CFMjPVVo411w0pmeTJLFvCSbocgzJXYqVZfA0iIfj9Pt6GqcCpbLCyZ3w4INWylihIXFIGwoCRuyUZplKcvus5yzjBfFE0kewWOfjQ1ax0dtLPKuUUmit9wJ1MitqAF5kHxd3Sx5K%2BTiuKRzS%2FO%2F5zgHmU46Ne%2FT%2BakHVWsLm7asouyYm9PsE3qunByudduSF%2FM7Z7T8TCpj3Pus3VmAkgQfgSTXztci%2FJ0lG2T9i1bprpdyqIU2lVIeEAmdHrr%2B%2FBbTLw%3D%3D",
             "depth": 2,
             "parent_url": "https://eosc-dto.d4science.org/catalogue",
             "selected_for": [
@@ -1933,7 +1933,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.earth-data.eu/",
-        "fetched_at": "2026-11-21T08:36:14+00:00",
+        "fetched_at": "2026-11-21T13:21:49+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "data-terra.png",
@@ -2252,7 +2252,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://research.csc.fi/eosc-the-finnish-candidate-node/",
-        "fetched_at": "2026-11-21T08:36:39+00:00",
+        "fetched_at": "2026-11-21T13:22:12+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-fi.png",
@@ -2781,7 +2781,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.panosc.eu/panosc-eosc-node/",
-        "fetched_at": "2026-11-21T08:37:31+00:00",
+        "fetched_at": "2026-11-21T13:23:01+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "panosc.png",
@@ -3245,7 +3245,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://portal.eudat.eu/welcome",
-        "fetched_at": "2026-11-21T08:38:05+00:00",
+        "fetched_at": "2026-11-21T13:23:38+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eudat.png",
@@ -3737,7 +3737,7 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://www.egi.eu/egi-node",
-        "fetched_at": "2026-11-21T08:38:54+00:00",
+        "fetched_at": "2026-11-21T13:24:24+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "egi.png",
@@ -4139,299 +4139,568 @@
       "url": "https://geant.org/geant-eosc-node/",
       "ad_hoc": false,
       "fetch": {
-        "http_status": 403,
-        "final_url": "https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-        "fetched_at": "2026-11-21T08:39:19+00:00",
+        "http_status": 200,
+        "final_url": "https://geant.org/projects/geant-eosc-node/",
+        "fetched_at": "2026-11-21T13:24:48+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "geant.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 34 of 60 used",
-        "children": [],
-        "children_skipped": []
+        "crawl_note": "depth 2: 127 link(s) on the landing page, 8 followed because they matched a checklist point, 18 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 8 page(s); fetch budget: 42 of 60 used",
+        "children": [
+          {
+            "url": "https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "final_url": "https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "This policy defines the rules that govern access and use of resources and services of the GÉANT Node.",
+            "http_status": 200,
+            "title": "GÉANT Node Acceptable Use Policy - GÉANT",
+            "chars": 3383,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/contact",
+            "final_url": "https://geant.org/contact/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "6",
+              "2"
+            ],
+            "link_text": "Contact",
+            "http_status": 200,
+            "title": "Contact - GÉANT",
+            "chars": 3135,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/",
+            "final_url": "https://geant.org/about-geant/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About GÉANT",
+            "http_status": 200,
+            "title": "About GÉANT",
+            "chars": 974,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/vision-mission-strategy/",
+            "final_url": "https://geant.org/about-geant/vision-mission-strategy/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Vision, mission, strategy",
+            "http_status": 200,
+            "title": "Vision, mission, strategy - GÉANT",
+            "chars": 7644,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/procurement-and-legal/",
+            "final_url": "https://geant.org/procurement-and-legal/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Procurement and legal",
+            "http_status": 200,
+            "title": "Procurement and legal - GÉANT",
+            "chars": 501,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+            "final_url": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5p"
+            ],
+            "link_text": "Procurement and supplier information",
+            "http_status": 200,
+            "title": "Procurement and supplier information - GÉANT",
+            "chars": 4197,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/cookie-policy-eu/#cmplz-cookies-overview",
+            "final_url": "https://geant.org/cookie-policy-eu/#cmplz-cookies-overview",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Manage services",
+            "http_status": 200,
+            "title": "Cookie Policy (EU) - GÉANT",
+            "chars": 12617,
+            "error": ""
+          },
+          {
+            "url": "https://network.geant.org/services/",
+            "final_url": "https://network.geant.org/services/",
+            "depth": 1,
+            "parent_url": "",
+            "selected_for": [
+              "5s"
+            ],
+            "link_text": "Network services",
+            "http_status": 200,
+            "title": "Services - GÉANT Network",
+            "chars": 415,
+            "error": ""
+          },
+          {
+            "url": "https://security.geant.org/contact/",
+            "final_url": "https://security.geant.org/contact/",
+            "depth": 2,
+            "parent_url": "https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "selected_for": [
+              "5b"
+            ],
+            "link_text": "Security contact for this AUP",
+            "http_status": 200,
+            "title": "Contact the GÉANT CERT - GÉANT Security",
+            "chars": 432,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/geant-executive-team/",
+            "final_url": "https://geant.org/about-geant/geant-executive-team/",
+            "depth": 2,
+            "parent_url": "https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Executive team",
+            "http_status": 200,
+            "title": "GÉANT Executive Team - GÉANT",
+            "chars": 932,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/governance/",
+            "final_url": "https://geant.org/about-geant/governance/",
+            "depth": 2,
+            "parent_url": "https://geant.org/contact/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Governance",
+            "http_status": 200,
+            "title": "Governance - GÉANT",
+            "chars": 3810,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/membership/",
+            "final_url": "https://geant.org/about-geant/membership/",
+            "depth": 2,
+            "parent_url": "https://geant.org/about-geant/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Membership",
+            "http_status": 200,
+            "title": "Membership - GÉANT",
+            "chars": 6856,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/become-a-geant-member/",
+            "final_url": "https://geant.org/about-geant/become-a-geant-member/",
+            "depth": 2,
+            "parent_url": "https://geant.org/about-geant/vision-mission-strategy/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Become a GÉANT member",
+            "http_status": 200,
+            "title": "Become a GÉANT member - GÉANT",
+            "chars": 1481,
+            "error": ""
+          },
+          {
+            "url": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+            "final_url": "https://geant.org/about-geant/equity-diversity-and-inclusion/",
+            "depth": 2,
+            "parent_url": "https://geant.org/procurement-and-legal/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "Equity, Diversity and Inclusion (EDI)",
+            "http_status": 200,
+            "title": "Equity, Diversity and Inclusion (EDI) - GÉANT",
+            "chars": 3214,
+            "error": ""
+          },
+          {
+            "url": "https://clouds.geant.org/geant-cloud-frameworks/",
+            "final_url": "https://clouds.geant.org/geant-cloud-frameworks/",
+            "depth": 2,
+            "parent_url": "https://geant.org/procurement-and-legal/procurement-and-supplier-information/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "About the GÉANT Cloud Frameworks",
+            "http_status": 200,
+            "title": "GÉANT Cloud Frameworks",
+            "chars": 3106,
+            "error": ""
+          },
+          {
+            "url": "https://about.geant.org",
+            "final_url": "https://geant.org/about-geant/",
+            "depth": 2,
+            "parent_url": "https://network.geant.org/services/",
+            "selected_for": [
+              "2"
+            ],
+            "link_text": "ABOUT",
+            "http_status": 200,
+            "title": "About GÉANT",
+            "chars": 974,
+            "error": ""
+          }
+        ],
+        "children_skipped": [
+          "https://geant.org/about-geant/geant-executive-team/ (cap for point 2)",
+          "https://geant.org/about-geant/governance/ (cap for point 2)",
+          "https://geant.org/about-geant/membership/ (cap for point 2)",
+          "https://geant.org/about-geant/become-a-geant-member/ (cap for point 2)",
+          "https://geant.org/about-geant/equity-diversity-and-inclusion/ (cap for point 2)",
+          "https://clouds.geant.org/geant-cloud-frameworks/ (cap for point 2)",
+          "https://geant.org/about-geant/membership/ (cap for point 2)",
+          "https://geant.org/procurement-and-legal/formalities/ (cap for point 5p)",
+          "https://geant.org/anti-slavery-policy/ (cap for point 5p)",
+          "https://geant.org/responsible-disclosure-policy/ (cap for point 5p)",
+          "https://security.geant.org/services/ (cap for point 5s)",
+          "https://clouds.geant.org/above-the-net-services-incubator (cap for point 5s)",
+          "https://resources.geant.org/ (cap for point 5s)",
+          "https://geant-node-catalogue.geant.org/ (cap for point 5s)",
+          "https://geant.org/projects/geant-eosc-node/geant-node-privacy-notice/ (cap for point 5s)",
+          "https://geant-node-catalogue.geant.org/ (cap for point 5s)",
+          "https://geant.org/geant-node-enters-production-in-the-eosc-federation/ (cap for point 5s)",
+          "https://resources.geant.org/ (cap for point 5s)",
+          "https://geant.org/contact/ (already fetched at depth 1)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/contact/ (already fetched at depth 1)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/vision-mission-strategy/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/governance/ (depth 2 cap for point 2)",
+          "https://geant.org/about-geant/membership/ (depth 2 cap for point 2)",
+          "https://geant.org/about-geant/become-a-geant-member/ (depth 2 cap for point 2)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://security.geant.org/contact/ (already fetched at depth 1)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/vision-mission-strategy/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/geant-executive-team/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/membership/ (depth 2 cap for point 2)",
+          "https://geant.org/about-geant/become-a-geant-member/ (depth 2 cap for point 2)",
+          "https://geant.org/about-geant/equity-diversity-and-inclusion/ (depth 2 cap for point 2)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/contact/ (already fetched at depth 1)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/vision-mission-strategy/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/geant-executive-team/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/governance/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/become-a-geant-member/ (depth 2 cap for point 2)",
+          "https://geant.org/about-geant/equity-diversity-and-inclusion/ (depth 2 cap for point 2)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/vision-mission-strategy/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/geant-executive-team/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/governance/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/membership/ (already fetched at depth 1)",
+          "https://geant.org/about-geant/equity-diversity-and-inclusion/ (depth 2 cap for point 2)",
+          "https://clouds.geant.org/geant-cloud-frameworks/ (depth 2 cap for point 2)",
+          "https://geant.org/contact (already fetched at depth 1)",
+          "https://geant.org/contact (already fetched at depth 1)"
+        ]
       },
       "results": [
         {
           "point_id": "1",
           "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "HTTP 200 anonymously, 10197 characters of text rendered",
+            "redirects followed: 1"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": ""
         },
         {
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "27 distinct external host(s) linked from the landing page",
+            "careers.geant.org (Careers)",
+            "clouds.geant.org (About the GÉANT Cloud Frameworks, Above-the-Net Services Incubator, Clouds)",
+            "community.geant.org (Community Award, Community Programme, GÉANT Community)",
+            "compendium.geant.org (A broad overview of the European NREN landscape.)",
+            "connect.geant.org (CONNECT - GÉANT community news, More news)",
+            "cookiedatabase.org (Read more about these purposes)",
+            "e-academy.geant.org (An online learning space for the research and education community.)",
+            "edugain.org (eduGAIN)",
+            "edumeet.org (eduMEET)",
+            "eduroam.org (eduroam)",
+            "eduteams.org (eduTEAMS)",
+            "events.geant.org (Community events)",
+            "EOSC AAI indicators seen: MyAccessID, myaccessid",
+            "depth 1: 16 of 16 followed page(s) were served anonymously, so those are publicly accessible"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
         {
           "point_id": "2",
           "title": "Scope, users and responsible organisation stated",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "meta description: \"The GÉANT EOSC Node provides trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly.\"",
+            "opening main text: \"Home . Projects . GÉANT EOSC Node GÉANT EOSC Node The GÉANT EOSC Node is GÉANT's contribution to the EOSC Federation, providing trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly. GÉANT Service Catalogue An overview of the GÉANT services onboarded into the EOSC Federation. GÉANT Node Acceptable Use Policy This policy defi...\"",
+            "organisation-like names found: Association; Security Operations Centre",
+            "about page one level down: https://geant.org/contact (HTTP 200) opening text: \"Home . Contact Contact Get in touch, learn more or request support. GDPR For questions related to our Privacy Notice and how GÉANT processes your personal data. Contact us General enquiries Submit a general enquiry, and we will put you in contact with the appr...\""
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
         {
           "point_id": "3",
           "title": "EOSC logo and official node name visible",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "EOSC-referencing image asset(s): 2",
+            "img: EOSC-node-website-banner.jpg",
+            "img: GEANT-EOSC-node-news-1024x429.jpg",
+            "approved name matched from the unscoped list: \"EOSC Node | GÉANT\" (the page writes it \"EOSC Node GÉANT\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say."
         },
         {
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "\"Explore the GÉANT Node page on the EOSC website.\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-geant"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": ""
         },
         {
           "point_id": "5a",
           "title": "Purpose description for research resources",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "127 outbound link(s) on the landing page",
+            "main text length: 6489 characters"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "\"This policy defines the rules that govern access and use of resources and services of the GÉANT Node.\" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "followed: https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/ -> HTTP 200, 3383 chars, title: GÉANT Node Acceptable Use Policy - GÉANT",
+            "policy wording found: Conditions, Policy, You shall, permitted"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "127 link(s) on the landing page examined, none matching a User Access Policy",
+            "16 linked page(s) read, none linking to a User Access Policy: https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/, https://geant.org/contact, https://geant.org/about-geant/, https://geant.org/about-geant/vision-mission-strategy/, https://geant.org/procurement-and-legal/ ...",
+            "an Acceptable Use Policy: \"This policy defines the rules that govern access and use of resources and services of the GÉANT Node.\" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "an Acceptable Use Policy via https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/: \"GÉANT Node Acceptable Use Policy - GÉANT\" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "\"Contact\" -> https://geant.org/contact",
+            "\"Contact To find out more about the GÉANT EOSC Node get in touch via the contact form.\" -> https://geant.org/contact/",
+            "followed: https://geant.org/contact -> HTTP 200",
+            "helpdesk wording on that page: helpdesk"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
           "title": "The page is in English",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "The main content is English and the page declares English.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "declared lang attribute: \"en-US\"",
+            "detected language: en (confidence 1.0)"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": ""
         }
       ],
       "results_depth_1": [
         {
           "point_id": "1",
           "title": "NLP publicly accessible or via EOSC AAI",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "HTTP 200 anonymously, 10197 characters of text rendered",
+            "redirects followed: 1"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": ""
         },
         {
           "point_id": "1R",
           "title": "Linked resources public or via EOSC AAI",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "27 distinct external host(s) linked from the landing page",
+            "careers.geant.org (Careers)",
+            "clouds.geant.org (About the GÉANT Cloud Frameworks, Above-the-Net Services Incubator, Clouds)",
+            "community.geant.org (Community Award, Community Programme, GÉANT Community)",
+            "compendium.geant.org (A broad overview of the European NREN landscape.)",
+            "connect.geant.org (CONNECT - GÉANT community news, More news)",
+            "cookiedatabase.org (Read more about these purposes)",
+            "e-academy.geant.org (An online learning space for the research and education community.)",
+            "edugain.org (eduGAIN)",
+            "edumeet.org (eduMEET)",
+            "eduroam.org (eduroam)",
+            "eduteams.org (eduTEAMS)",
+            "events.geant.org (Community events)",
+            "EOSC AAI indicators seen: MyAccessID, myaccessid",
+            "depth 1: 8 of 8 followed page(s) were served anonymously, so those are publicly accessible"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Walk the external hosts above; for each resource, confirm it is either anonymous or behind EOSC AAI."
         },
         {
           "point_id": "2",
           "title": "Scope, users and responsible organisation stated",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Requires reading the page: \"clearly state\" is a judgement about whether the prose conveys scope, intended users, and the responsible organisation to a researcher. Evidence is extracted below so the decision is quick.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "meta description: \"The GÉANT EOSC Node provides trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly.\"",
+            "opening main text: \"Home . Projects . GÉANT EOSC Node GÉANT EOSC Node The GÉANT EOSC Node is GÉANT's contribution to the EOSC Federation, providing trusted digital infrastructure that enables researchers across Europe to discover, access and use research resources seamlessly. GÉANT Service Catalogue An overview of the GÉANT services onboarded into the EOSC Federation. GÉANT Node Acceptable Use Policy This policy defi...\"",
+            "organisation-like names found: Association; Security Operations Centre",
+            "about page one level down: https://geant.org/contact (HTTP 200) opening text: \"Home . Contact Contact Get in touch, learn more or request support. GDPR For questions related to our Privacy Notice and how GÉANT processes your personal data. Contact us General enquiries Submit a general enquiry, and we will put you in contact with the appr...\""
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Read the extracted text and confirm all three elements are present and clear."
         },
         {
           "point_id": "3",
           "title": "EOSC logo and official node name visible",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the name found is this node's own — an approved name was found in the page body, but the list supplied is unscoped, so it does not say which node the name belongs to.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "EOSC-referencing image asset(s): 2",
+            "img: EOSC-node-website-banner.jpg",
+            "img: GEANT-EOSC-node-news-1024x429.jpg",
+            "approved name matched from the unscoped list: \"EOSC Node | GÉANT\" (the page writes it \"EOSC Node GÉANT\") — the list does not say which name belongs to which node, so this does not establish it is this node's own name"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Confirm the EOSC logo is visible without scrolling. Confirm the matched name is this node's own; the list supplied does not say."
         },
         {
           "point_id": "4",
           "title": "Link to the node's page on eosc.eu",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "\"Explore the GÉANT Node page on the EOSC website.\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-geant"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": ""
         },
         {
           "point_id": "5a",
           "title": "Purpose description for research resources",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "127 outbound link(s) on the landing page",
+            "main text length: 6489 characters"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "The landing page links to an Acceptable Use Policy, and the target was fetched and reads like a policy document.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "\"This policy defines the rules that govern access and use of resources and services of the GÉANT Node.\" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "followed: https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/ -> HTTP 200, 3383 chars, title: GÉANT Node Acceptable Use Policy - GÉANT",
+            "policy wording found: Conditions, Policy, You shall, permitted"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Confirm it covers all the node's resources and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "127 link(s) on the landing page examined, none matching a User Access Policy",
+            "8 linked page(s) read, none linking to a User Access Policy: https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/, https://geant.org/contact, https://geant.org/about-geant/, https://geant.org/about-geant/vision-mission-strategy/, https://geant.org/procurement-and-legal/ ...",
+            "an Acceptable Use Policy: \"This policy defines the rules that govern access and use of resources and services of the GÉANT Node.\" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/",
+            "an Acceptable Use Policy via https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/: \"GÉANT Node Acceptable Use Policy - GÉANT\" -> https://geant.org/projects/geant-eosc-node/geant-node-acceptable-use-policy/"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
           "title": "Means of contacting the node helpdesk",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "A page reached from the landing page identifies a helpdesk or user support route.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "\"Contact\" -> https://geant.org/contact",
+            "\"Contact To find out more about the GÉANT EOSC Node get in touch via the contact form.\" -> https://geant.org/contact/",
+            "followed: https://geant.org/contact -> HTTP 200",
+            "helpdesk wording on that page: helpdesk"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": "Confirm the route reaches the node's user support."
         },
         {
           "point_id": "7",
           "title": "The page is in English",
-          "verdict": "FIREWALL",
-          "message": "HTTP 403: the site answered with a bot-protection challenge (Cloudflare's \"Performing security verification\" page) instead of the landing page. The server is up and responding, but the challenge is all this tool was shown, so nothing can be asserted about this point, either way.",
+          "verdict": "PASS",
+          "message": "The main content is English and the page declares English.",
           "evidence": [
-            "HTTP 403",
-            "page title: 'Just a moment...'",
-            "challenge wording seen: Just a moment, Performing security verification, verifies you are not a bot, ?ki-cf-, Cloudflare",
-            "final URL: https://geant.org/geant-eosc-node/?ki-cf-botcl=1",
-            "text captured: 313 characters (the challenge page)"
+            "declared lang attribute: \"en-US\"",
+            "detected language: en (confidence 1.0)"
           ],
-          "reviewer_action": "Open the URL in a normal browser and assess the page by hand; a later run may be served the page."
+          "reviewer_action": ""
         }
       ]
     },
@@ -4443,12 +4712,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.pl/",
-        "fetched_at": "2026-11-21T08:39:29+00:00",
+        "fetched_at": "2026-11-21T13:25:42+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-pl.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 34 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; 2 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 1 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 34 link(s) on the landing page, 4 followed because they matched a checklist point, 1 matched but dropped by a cap, the rest not relevant to any point; 2 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 1 page(s); fetch budget: 43 of 60 used",
         "children": [
           {
             "url": "https://eosc.pl/terms-of-use",
@@ -4489,7 +4758,7 @@
             "link_text": "Browse resources",
             "http_status": 200,
             "title": "Polish Open Science Platform",
-            "chars": 1849,
+            "chars": 7652,
             "error": ""
           },
           {
@@ -4805,12 +5074,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.it/",
-        "fetched_at": "2026-11-21T08:40:00+00:00",
+        "fetched_at": "2026-11-21T13:26:11+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-it.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 61 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 61 link(s) on the landing page, 3 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 43 of 60 used",
         "children": [
           {
             "url": "https://eosc.it/terms-of-use",
@@ -5131,12 +5400,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.sk/",
-        "fetched_at": "2026-11-21T08:40:19+00:00",
+        "fetched_at": "2026-11-21T13:26:29+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "eosc-sk.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 46 link(s) on the landing page, 3 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 46 link(s) on the landing page, 3 followed because they matched a checklist point, 2 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 43 of 60 used",
         "children": [
           {
             "url": "https://hd.eosc.sk",
@@ -5451,12 +5720,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-lifesciences-connect.eu/home",
-        "fetched_at": "2026-11-21T08:40:39+00:00",
+        "fetched_at": "2026-11-21T13:26:48+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "life-sciences-connect.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 9 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 clickable item(s) without a link address clicked, 4 opened a page (recorded as links); depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 9 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 clickable item(s) without a link address clicked, 4 opened a page (recorded as links); depth 2 added 0 page(s); fetch budget: 43 of 60 used",
         "children": [
           {
             "url": "https://eosc-lifesciences-connect.eu/aup-and-uap",
@@ -5512,7 +5781,7 @@
             "link_text": "service catalogue",
             "http_status": 200,
             "title": "Home Page",
-            "chars": 166,
+            "chars": 670,
             "error": ""
           }
         ],
@@ -5761,12 +6030,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc-node.de/",
-        "fetched_at": "2026-11-21T08:41:13+00:00",
+        "fetched_at": "2026-11-21T13:27:19+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 404); nothing disallowed",
         "screenshot": "eosc-de.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 7 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 7 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 43 of 60 used",
         "children": [],
         "children_skipped": []
       },
@@ -6005,12 +6274,12 @@
       "fetch": {
         "http_status": 403,
         "final_url": "https://eosc.lv/en/",
-        "fetched_at": "2026-11-21T08:41:22+00:00",
+        "fetched_at": "2026-11-21T13:27:27+00:00",
         "error": "",
         "robots_note": "no robots.txt (HTTP 403); nothing disallowed",
         "screenshot": "eosc-lv.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 2 link(s) on the landing page, 0 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 43 of 60 used",
         "children": [],
         "children_skipped": []
       },
@@ -6307,12 +6576,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://eosc.scholarlycommons.eu/home",
-        "fetched_at": "2026-11-21T08:41:31+00:00",
+        "fetched_at": "2026-11-21T13:27:37+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "scholarly-commons.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 31 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 0 page(s); fetch budget: 35 of 60 used",
+        "crawl_note": "depth 2: 43 link(s) on the landing page, 4 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 page(s) read with the content of a same-site embedded frame; depth 2 added 0 page(s); fetch budget: 43 of 60 used",
         "children": [
           {
             "url": "https://eosc.scholarlycommons.eu/contact",
@@ -6325,7 +6594,7 @@
             "link_text": "Contact the Node team",
             "http_status": 200,
             "title": "Contact | EOSC Scholarly Commons Node",
-            "chars": 2307,
+            "chars": 2439,
             "error": ""
           },
           {
@@ -6339,7 +6608,7 @@
             "link_text": "About",
             "http_status": 200,
             "title": "About | EOSC Scholarly Commons Node",
-            "chars": 2307,
+            "chars": 7310,
             "error": ""
           },
           {
@@ -6353,7 +6622,7 @@
             "link_text": "Terms & Policies",
             "http_status": 200,
             "title": "Terms & Policies | EOSC Scholarly Commons Node",
-            "chars": 2307,
+            "chars": 11314,
             "error": ""
           },
           {
@@ -6372,6 +6641,7 @@
           }
         ],
         "children_skipped": [
+          "https://eosc.scholarlycommons.eu/terms-and-policies (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
@@ -6380,6 +6650,9 @@
           "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
+          "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
+          "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
+          "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/contact (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
           "https://eosc.scholarlycommons.eu/about (already fetched at depth 1)",
@@ -6397,7 +6670,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 2307 characters of text rendered"
+            "HTTP 200 anonymously, 5285 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -6407,7 +6680,9 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
-            "2 distinct external host(s) linked from the landing page",
+            "4 distinct external host(s) linked from the landing page",
+            "explore.openaire.eu (Go to EXPLORE →)",
+            "gotriple.eu (Go to GoTriple →)",
             "www.openaire.eu (OpenAIRE)",
             "www.operas-eu.org (OPERAS)",
             "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
@@ -6433,8 +6708,10 @@
           "verdict": "MANUAL_REVIEW",
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.",
           "evidence": [
-            "EOSC-referencing image asset(s): 1",
+            "EOSC-referencing image asset(s): 3",
             "img: EOSC Node Scholarly Commons",
+            "img: explore%201.svg",
+            "img: gotriple.svg",
             "NONE of the 18 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur once, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
@@ -6445,6 +6722,7 @@
           "verdict": "PASS",
           "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
           "evidence": [
+            "\"Node profile on eosc.eu\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
             "\"Node profile on eosc.eu\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons"
           ],
           "reviewer_action": ""
@@ -6455,32 +6733,35 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "31 outbound link(s) on the landing page",
-            "main text length: 2307 characters"
+            "43 outbound link(s) on the landing page",
+            "main text length: 5285 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "No pointer to an Acceptable Use Policy was found on the landing page. None of the 4 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page was fetched too.",
           "evidence": [
-            "31 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "4 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover"
+            "landing page -> https://eosc.scholarlycommons.eu/contact (\"Contact the Node team\")",
+            "via https://eosc.scholarlycommons.eu/contact: \"Acceptable Use Policy\" -> https://eosc.scholarlycommons.eu/terms-and-policies",
+            "via https://eosc.scholarlycommons.eu/terms-and-policies: \"Terms and Conditions of Service\" -> https://www.openaire.eu/terms-of-use"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "No pointer to a User Access Policy was found on the landing page. None of the 4 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
-            "31 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover"
+            "43 link(s) on the landing page examined, none matching a User Access Policy",
+            "4 linked page(s) read, none linking to a User Access Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover",
+            "an Acceptable Use Policy via https://eosc.scholarlycommons.eu/contact: \"Acceptable Use Policy\" -> https://eosc.scholarlycommons.eu/terms-and-policies",
+            "an Acceptable Use Policy via https://eosc.scholarlycommons.eu/terms-and-policies: \"Terms and Conditions of Service\" -> https://www.openaire.eu/terms-of-use"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
@@ -6488,6 +6769,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "The contact or support pages reached from the landing page do not identify a helpdesk. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
           "evidence": [
+            "\"Contact the Node team\" -> https://eosc.scholarlycommons.eu/contact",
             "\"Contact the Node team\" -> https://eosc.scholarlycommons.eu/contact",
             "followed: https://eosc.scholarlycommons.eu/contact -> HTTP 200"
           ],
@@ -6512,7 +6794,7 @@
           "verdict": "PASS",
           "message": "Served content to an anonymous request, satisfying branch (a).",
           "evidence": [
-            "HTTP 200 anonymously, 2307 characters of text rendered"
+            "HTTP 200 anonymously, 5285 characters of text rendered"
           ],
           "reviewer_action": ""
         },
@@ -6522,7 +6804,9 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Not assessable in full: it quantifies over every Node Exchange resource reachable through the landing page, including through intermediate pages, and whether a given login is genuinely EOSC AAI compliant is settled under requirement [P.2] of the Production 1.0 Checklist rather than by reading HTML. One level of crawling narrows this but cannot close it.",
           "evidence": [
-            "2 distinct external host(s) linked from the landing page",
+            "4 distinct external host(s) linked from the landing page",
+            "explore.openaire.eu (Go to EXPLORE →)",
+            "gotriple.eu (Go to GoTriple →)",
             "www.openaire.eu (OpenAIRE)",
             "www.operas-eu.org (OPERAS)",
             "depth 1: 4 of 4 followed page(s) were served anonymously, so those are publicly accessible"
@@ -6548,8 +6832,10 @@
           "verdict": "MANUAL_REVIEW",
           "message": "An EOSC-referencing image asset is present, so the logo requirement is likely met. Two things remain human judgements: whether it is \"clearly and visibly\" shown, and whether the node name on the page is the official Tripartite-approved one — it was looked for and not found in the page body, which is not proof of absence, since the <title> is not searched.",
           "evidence": [
-            "EOSC-referencing image asset(s): 1",
+            "EOSC-referencing image asset(s): 3",
             "img: EOSC Node Scholarly Commons",
+            "img: explore%201.svg",
+            "img: gotriple.svg",
             "NONE of the 18 approved name(s) for this node appear in the page body — the phrase \"EOSC Node\" does occur once, but never followed by an approved name — note the <title> is not searched"
           ],
           "reviewer_action": "Confirm the logo is visible without scrolling, and check the node name against the Tripartite-approved list."
@@ -6560,6 +6846,7 @@
           "verdict": "PASS",
           "message": "Links to a specific node entry under eosc.eu/building-the-eosc-federation.",
           "evidence": [
+            "\"Node profile on eosc.eu\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons",
             "\"Node profile on eosc.eu\" -> https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons"
           ],
           "reviewer_action": ""
@@ -6570,32 +6857,35 @@
           "verdict": "MANUAL_REVIEW",
           "message": "Quantifies over \"all Node Exchange research resources offered by the Node\", which cannot be enumerated from the landing page alone. Since checklist v3.2 each resource's purpose description must be on the NLP that presents it (directly or on a page the NLP links to) and in the resource's metadata in the EOSC Catalogue; the tool reads neither the resource list nor the Catalogue.",
           "evidence": [
-            "31 outbound link(s) on the landing page",
-            "main text length: 2307 characters"
+            "43 outbound link(s) on the landing page",
+            "main text length: 5285 characters"
           ],
           "reviewer_action": "List the node's Node Exchange resources, then confirm each has an English purpose description on the NLP (or a page it links to) and in its EOSC Catalogue metadata."
         },
         {
           "point_id": "5b",
           "title": "Acceptable Use Policy (AUP) accessible",
-          "verdict": "FAIL",
-          "message": "No pointer to an Acceptable Use Policy was found on the landing page. None of the 4 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "PASS",
+          "message": "The landing page does not link to an Acceptable Use Policy itself, but a page it links to does. Checklist v3.2 accepts the policy on the NLP or on intermediate pages linked by the NLP. The policy page was fetched too.",
           "evidence": [
-            "31 link(s) on the landing page examined, none matching an Acceptable Use Policy",
-            "4 linked page(s) read, none linking to an Acceptable Use Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover"
+            "landing page -> https://eosc.scholarlycommons.eu/contact (\"Contact the Node team\")",
+            "via https://eosc.scholarlycommons.eu/contact: \"Acceptable Use Policy\" -> https://eosc.scholarlycommons.eu/terms-and-policies",
+            "via https://eosc.scholarlycommons.eu/terms-and-policies: \"Terms and Conditions of Service\" -> https://www.openaire.eu/terms-of-use"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link an Acceptable Use Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Confirm the policy covers every Node Exchange resource the landing page presents, and is in English. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "5c",
           "title": "User Access Policy (UAP) accessible",
-          "verdict": "FAIL",
-          "message": "No pointer to a User Access Policy was found on the landing page. None of the 4 linked page(s) the tool read links to it either, and the landing page links to no other policies, legal, services or resources page. Checklist v3.2 requires it on the NLP, directly or via intermediate pages linked by the NLP, for every Node Exchange resource the page presents, as well as in each resource's EOSC Catalogue metadata; being in the Catalogue alone is not enough.",
+          "verdict": "MANUAL_REVIEW",
+          "message": "No pointer to a User Access Policy was found on the NLP, but it links to an Acceptable Use Policy. Checklist v3.2 allows the AUP and the UAP to be provided through the same, single document, so this may satisfy the point.",
           "evidence": [
-            "31 link(s) on the landing page examined, none matching a User Access Policy",
-            "4 linked page(s) read, none linking to a User Access Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover"
+            "43 link(s) on the landing page examined, none matching a User Access Policy",
+            "4 linked page(s) read, none linking to a User Access Policy: https://eosc.scholarlycommons.eu/contact, https://eosc.scholarlycommons.eu/about, https://eosc.scholarlycommons.eu/terms-and-policies, https://eosc.scholarlycommons.eu/discover",
+            "an Acceptable Use Policy via https://eosc.scholarlycommons.eu/contact: \"Acceptable Use Policy\" -> https://eosc.scholarlycommons.eu/terms-and-policies",
+            "an Acceptable Use Policy via https://eosc.scholarlycommons.eu/terms-and-policies: \"Terms and Conditions of Service\" -> https://www.openaire.eu/terms-of-use"
           ],
-          "reviewer_action": "Confirm on the live page, then ask the node to link a User Access Policy from the NLP or a page it links to, for each of its resources (one document may cover all of them, and may be the same as the other policy)."
+          "reviewer_action": "Open the linked an Acceptable Use Policy and confirm it also serves as a User Access Policy for every Node Exchange resource the page presents. Checklist v3.2 also requires it in each resource's metadata in the EOSC Catalogue, which this tool does not read."
         },
         {
           "point_id": "6",
@@ -6603,6 +6893,7 @@
           "verdict": "MANUAL_REVIEW",
           "message": "The contact or support pages reached from the landing page do not identify a helpdesk. The checklist asks for the node helpdesk, and general enquiries may not satisfy that.",
           "evidence": [
+            "\"Contact the Node team\" -> https://eosc.scholarlycommons.eu/contact",
             "\"Contact the Node team\" -> https://eosc.scholarlycommons.eu/contact",
             "followed: https://eosc.scholarlycommons.eu/contact -> HTTP 200"
           ],
@@ -6629,12 +6920,12 @@
       "fetch": {
         "http_status": 200,
         "final_url": "https://services.metrofood-services.eu/eosc",
-        "fetched_at": "2026-11-21T08:41:50+00:00",
+        "fetched_at": "2026-11-21T13:27:56+00:00",
         "error": "",
         "robots_note": "robots.txt consulted",
         "screenshot": "metrofood-ri.png",
         "crawl_depth": 2,
-        "crawl_note": "depth 2: 26 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 2 page(s); fetch budget: 37 of 60 used",
+        "crawl_note": "depth 2: 26 link(s) on the landing page, 2 followed because they matched a checklist point, 0 matched but dropped by a cap, the rest not relevant to any point; 4 clickable item(s) without a link address clicked, 0 opened a page (recorded as links); depth 2 added 2 page(s); fetch budget: 45 of 60 used",
         "children": [
           {
             "url": "https://services.metrofood-services.eu/#contact",
@@ -6675,7 +6966,7 @@
             "link_text": "Terms of use",
             "http_status": 200,
             "title": "Metrofood Catalogues",
-            "chars": 2307,
+            "chars": 2366,
             "error": ""
           },
           {

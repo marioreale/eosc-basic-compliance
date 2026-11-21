@@ -37,15 +37,48 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 
 ## What it found
 
-> **The published report is run `web-44`, collected at `--depth 2`, and it has
-> not been reviewed yet.** It was collected on 21 November 2026 between 08:33 and
-> 08:41 UTC by the GitHub workflow ([run 44885336959](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44885336959), commit `65b7c4f`), from all
+> **The published report is run `web-45`, collected at `--depth 2`, and it has
+> not been reviewed yet.** It was collected on 21 November 2026 between 13:18 and
+> 13:28 UTC by the GitHub workflow ([run 44908150417](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44908150417), commit `d5db2cf`), from all
 > **eighteen** configured nodes, under the **re-issued checklist v3.2**, with the
 > eighteen-name approved list (SHA-256 `6d8c249a…`). At depth 2 the tally is
-> **85 PASS, 6 FAIL, 69 review, 20 FIREWALL, 0 ERROR** (84 / 6 / 70 / 20 / 0 at
+> **91 PASS, 4 FAIL, 75 review, 10 FIREWALL, 0 ERROR** (90 / 4 / 76 / 10 / 0 at
 > depth 1).
 >
-> **Five cells changed against `web-43`**, at both depths, all FAIL before:
+> **Twelve cells changed against `web-44`**, at both depths. **Scholarly
+> Commons 5b is now PASS and 5c review** (both FAIL before), the correction of a
+> tool error (below). **GÉANT was served again** (`HTTP 200`, no Cloudflare
+> challenge, for the first time since `web-34`): its ten cells went from 🧱
+> `FIREWALL` to 5 PASS (points 1, 4, 5b, 6 and 7) and 5 review (1R, 2, 3, 5a and
+> 5c). Its address now redirects to `https://geant.org/projects/geant-eosc-node/`;
+> 5b passes on the linked "GÉANT Node Acceptable Use Policy" page, read; 5c is
+> review because no separate User Access Policy is linked and v3.2 allows one
+> document for both; 6 passes on its contact page. GÉANT may be behind the
+> challenge again in a later run. Latvia is still `FIREWALL`. 143 page requests
+> (18 + 80 + 45; budget 45 of 60). The four FAILs left are EOSC Node Germany 5b,
+> 5c and 6 (a "Coming soon" placeholder) and METROFOOD-RI 4.
+>
+> **Correction, 21 November 2026: Scholarly Commons' 5b and 5c FAILs were false
+> negatives** (in `web-42` to `web-44`, and most likely in `web-37` to `web-40`
+> too). Each of its pages shows its content in a same-site embedded frame
+> (a Joomla article, `/pages/?option=com_content&view=article&id=N&tmpl=yootheme`),
+> and the tool read only the outer page, so its "About", "Terms & Policies" and
+> "Contact" pages all looked like the landing page. The Terms & Policies frame
+> holds an "Acceptable Use Policy and Conditions of Use" and a "User Access
+> Policy" (both Version 1.0, 19 October 2026). **The tool was fixed in commit
+> `d5db2cf`**: it now reads up to three visible same-site frames on every page it
+> renders (the crawl note says "4 page(s) read with the content of a same-site
+> embedded frame"). In `web-45` 5b passes through the contact page's
+> "Acceptable Use Policy" link to `/terms-and-policies`; 5c is review, because
+> the UAP is a section of that same page, reached only by in-page `#` links that
+> the tool does not follow, so the single-document rule keeps a reviewer in the
+> loop. Point 6 is still review, now on a page the tool did read: the contact
+> page is a form and names no helpdesk.
+>
+> The previous published run, `web-44` ([run 44885336959](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44885336959), 21 November, commit `65b7c4f`:
+> 85 / 6 / 69 / 20 FIREWALL / 0 ERROR), is in the git history at `d5db2cf`.
+>
+> **`web-44` against `web-43`.** **Five cells changed**, at both depths, all FAIL before:
 > **Life Sciences Connect 5b, 5c and 6 are now PASS** and **METROFOOD-RI 5b is
 > PASS and 5c review**. The Life Sciences Connect cells are the correction of a
 > tool error: its "AUP and UAP" footer item and "Contact Us" menu item have no
@@ -99,8 +132,8 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > **`web-43` against `web-42`.** **Nothing: all 180 cells are the same at
 > both depths, every node read the same linked pages with the same HTTP
 > statuses (122 page requests), and no verdict, message or evidence line
-> differs.** The Scholarly Commons warnings below (point 6 review, 5b and 5c
-> FAILs, all judged on pages captured before they were drawn) still apply.
+> differs.** The Scholarly Commons point 6 review and 5b and 5c FAILs rested on
+> frame content the tool had not read (corrected in `web-45`, above).
 >
 > The previous published run, `web-42` ([run 44753632474](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44753632474), 20 November,
 > commit `1163f08`: 81 / 11 / 68 / 20 FIREWALL / 0 ERROR), is in the git history
@@ -236,15 +269,15 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 > Data Terra fails both after its services pages were read; PaNOSC is review.
 
 All eighteen configured nodes were fetched on 21 November 2026 at `--depth 2`
-(127 page requests: 18 landing pages, 72 direct links, 37 second-hop pages; the
-shared fetch budget reached 37 of 60) and
-assessed against the official unscoped names list, now eighteen names. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and on BBMRI-ERIC's `dev3.` pages (`web-25`) its Director General, its advisory board, its Stakeholder Forum chair, its head of public affairs and its finance and project staff, about 120 names on GÉANT's executive team, governance and membership pages in `web-16`, `web-22` and again in `web-34` (including names cut short in link labels; GÉANT's page was not served in `web-23` to `web-33`), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, the people named in the captions of historical public-domain photos on Poland's page (`web-27`), on EBRAINS-RI's pages (`web-28`) its CEO, a section head, its press contact, the authors of three testimonials and two people in news items and image captions, the coordinator named in a video title in Life Sciences Connect's screenshot (`web-28`), the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy and a person interviewed in an EBRAINS-RI news item (`web-31`; the same in `web-33` and `web-34`, where Germany's page carries no personal data; in `web-35` also a professor named in an EBRAINS-RI news item and the surname of BBMRI-ERIC's head of public affairs, next to a masked contact line; in `web-36` and `web-37` the same names again, and the pages of Latvia and Scholarly Commons carry no personal data; in `web-38` the same names again where the pages still carry them, and the coordinator named on METROFOOD-RI's page, also next to her initials; in `web-39`, `web-40`, `web-42`, `web-43` and `web-44` the same names again, and Scholarly Commons' new cookie table names no person; Life Sciences Connect's new page has no video title, so its screenshot needs no mask; in `web-44` also six staff names on Life Sciences Connect's About page, now reached by a click, and the dataset author lists and one author named in a description on EOSC Poland's software search page, now read in full), and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
+(143 page requests: 18 landing pages, 80 direct links, 45 second-hop pages; the
+shared fetch budget reached 45 of 60) and
+assessed against the official unscoped names list, now eighteen names. None was skipped. Names that the automatic masking does not cover were removed by hand with same-length placeholders: CERN's quotation attribution (text and screenshot), EGI's coordinator (text and link address), a person quoted on a Czechia news page, about thirty staff, board and news-author names on BBMRI-ERIC's and EGI's pages, and on BBMRI-ERIC's `dev3.` pages (`web-25`) its Director General, its advisory board, its Stakeholder Forum chair, its head of public affairs and its finance and project staff, about 120 names on GÉANT's executive team, governance and membership pages in `web-16`, `web-22` and again in `web-34` (including names cut short in link labels; GÉANT's page was not served in `web-23` to `web-33` and `web-35` to `web-44`), two staff names in a news item on EUDAT's new page, an image credit on Data Terra's new page, the people named in the captions of historical public-domain photos on Poland's page (`web-27`), on EBRAINS-RI's pages (`web-28`) its CEO, a section head, its press contact, the authors of three testimonials and two people in news items and image captions, the coordinator named in a video title in Life Sciences Connect's screenshot (`web-28`), the author credited in the document log of BBMRI-ERIC's Acceptable Use Policy and a person interviewed in an EBRAINS-RI news item (`web-31`; the same in `web-33` and `web-34`, where Germany's page carries no personal data; in `web-35` also a professor named in an EBRAINS-RI news item and the surname of BBMRI-ERIC's head of public affairs, next to a masked contact line; in `web-36` and `web-37` the same names again, and the pages of Latvia and Scholarly Commons carry no personal data; in `web-38` the same names again where the pages still carry them, and the coordinator named on METROFOOD-RI's page, also next to her initials; in `web-39`, `web-40`, `web-42`, `web-43` and `web-44` the same names again, and Scholarly Commons' new cookie table names no person; Life Sciences Connect's new page has no video title, so its screenshot needs no mask; in `web-44` also six staff names on Life Sciences Connect's About page, now reached by a click, and the dataset author lists and one author named in a description on EOSC Poland's software search page, now read in full; in `web-45` the same names again, the board and delegate names on GÉANT's governance and membership pages, served again (including a name cut short in a link label), twenty more dataset author lists on EOSC Poland's software search page, a person honoured in a species description there and the authors of its species name, while Scholarly Commons' embedded frames, now read, name no person), and the author lists of publication citations on Czechia's, EOSC DTO's and PaNOSC's pages. Masking changed no verdict, message or evidence line.
 
 The per-node results are **not reproduced here**. The full matrix, with the
 evidence behind every verdict, is in the report linked above:
 **[Latest results](results/results.md)**.
 
-180 cells at depth 2: 🟢 85 PASS · 🔴 6 FAIL · 🟠 69 review · 🧱 20 Firewall · 0 ERROR. Two of the six FAILs, Scholarly Commons 5b and 5c, are unreliable, and so is its point 6 review (below).
+180 cells at depth 2: 🟢 91 PASS · 🔴 4 FAIL · 🟠 75 review · 🧱 10 Firewall · 0 ERROR. Scholarly Commons' former 5b and 5c FAILs were false negatives, corrected in `web-45` (below).
 
 - **EBRAINS-RI** (removed on 16 November 2026; not in `web-38`; this entry is kept as history) completed again in `web-36` and `web-37`, with the same verdicts as in
   `web-34`; in `web-35` it was `ERROR` on all ten points, because its collection
@@ -270,49 +303,50 @@ evidence behind every verdict, is in the report linked above:
   These FAILs describe a placeholder page; a reviewer should check whether the
   imprint gives a contact route before quoting 6.
 - **EOSC Node Latvia**, first assessed in `web-36`, was not served in `web-36`
-  to `web-44`: `https://eosc.lv/en/` answered `HTTP 403` with Cloudflare's
+  to `web-45`: `https://eosc.lv/en/` answered `HTTP 403` with Cloudflare's
   "Performing security verification" page (2 links, 5 DOM elements, no linked
   page read), so all ten points are 🧱 `FIREWALL` (since `web-37`). Its eosc.eu entry exists
   (checked live on 10 November 2026); whether the page links it is unknown.
 - **Scholarly Commons**, first assessed in `web-36`, had 4 PASS, 2 FAIL and 4
-  review in `web-37` to `web-40`, and has 3 PASS, 2 FAIL and 5 review in
-  `web-42` to `web-44`. Its page rendered in full: point 1 passes (served
-  anonymously), point 4 passes (it links
+  review in `web-37` to `web-40`, 3 PASS, 2 FAIL and 5 review in `web-42` to
+  `web-44`, and has 4 PASS and 6 review in `web-45`. Its page rendered in full:
+  point 1 passes (served anonymously), point 4 passes (it links
   `https://eosc.eu/building-the-eosc-federation/eosc-node-scholarly-commons`)
   and point 7 passes. Point 6 passed up to `web-40` ("Contact the Node team",
   OpenAIRE's helpdesk); from `web-42` the link goes to the node's own `/contact`
-  page, which came back with the landing page's text (not yet drawn), so 6 is
-  review on a page the tool did not read. The page now also has a Login button. Point 3 is review: an image labelled "EOSC Node Scholarly Commons" was
+  page, a form that names no helpdesk, so 6 is review. The page also has a Login
+  button. Point 3 is review: an image labelled "EOSC Node Scholarly Commons" was
   found, but the approved name is not in the page text (in `web-36` the shell's
-  text had it, written "EOSC Node · Scholarly Commons"). ⚠️ **5b and 5c are
-  `FAIL`, and the FAILs are unreliable:** the tool followed "About", "Terms &
-  Policies" and "Services"; the first two returned exactly the landing page's
-  text under their own titles, because the JavaScript application had not yet
-  drawn the new page, so the Terms & Policies page was never actually read. Do
-  not quote these two FAILs until a reviewer has checked the page in a browser,
-  or a later run reads it properly. In `web-36` it rendered only a
-  169-character shell and was review on points 1 to 6. **Corrected cause (21
-  November 2026):** the page content is in a same-site embedded frame that the
-  tool did not read, not a page drawn too late; the Terms & Policies frame holds
-  both an AUP and a UAP, and the tool reads such frames from the next run on.
-- **GÉANT** was not served in `web-35` to `web-44` (from `web-37` all ten points are 🧱 `FIREWALL`): `https://geant.org/geant-eosc-node/`
+  text had it, written "EOSC Node · Scholarly Commons"). Each page shows its
+  content in a same-site embedded frame; up to `web-44` the tool read only the
+  outer page, so the "About", "Terms & Policies" and "Contact" pages looked
+  like the landing page and 5b and 5c were false FAILs (see the correction at
+  the top). **Corrected in `web-45`:** the tool reads the frames, 5b passes (the
+  contact page links the "Acceptable Use Policy" at `/terms-and-policies`) and
+  5c is review (the UAP is a section of the same page, reached only by in-page
+  links). In `web-36` it rendered only a 169-character shell and was review on
+  points 1 to 6.
+- **GÉANT** was not served in `web-35` to `web-44` (from `web-37` all ten points were 🧱 `FIREWALL`): `https://geant.org/geant-eosc-node/`
   answered `HTTP 403` and redirected to `?ki-cf-botcl=1`, Cloudflare's "Performing
   security verification" page (2 links, no linked page read). Up to `web-36`, before the
   `FIREWALL` outcome, only point 7 (English) passed and the other nine were
-  review, because the challenge page is too small to conclude absence. In `web-34` (`HTTP 200`), its last served run, it had
-  5 PASS and 5 review at both depths: points 1, 4 (its own `eosc.eu`
-  entry), 5b (the "GÉANT Node Acceptable Use Policy" page, read), 6 (a support
-  route on a linked page) and 7 passed; 1R, 2, 3, 5a and 5c were review. Its
+  review, because the challenge page is too small to conclude absence. **It was
+  served again in `web-45`** (`HTTP 200`, redirected to
+  `https://geant.org/projects/geant-eosc-node/`, 10197 characters), with the same
+  verdicts as in `web-34`, its previous served run: 5 PASS and 5 review at both
+  depths. Points 1, 4 (its own `eosc.eu` entry), 5b (the "GÉANT Node Acceptable
+  Use Policy" page, read), 6 (its contact page) and 7 pass; 1R, 2, 3, 5a and 5c
+  are review. Whether the next run is served again cannot be predicted. Its
   robots.txt answers `HTTP 403`, which the tool reads as nothing disallowed.
 - **Life Sciences Connect** was `ERROR` on all ten points in `web-38` (its landing page timed out) and is back in `web-39` with its `web-37` verdicts, on a new page layout (six links captured). First assessed in `web-28`, it has 6 PASS and
-  4 review in `web-44` (3 PASS, 3 FAIL and 4 review up to `web-43`). It links its own `eosc.eu` entry (point 4). Up to `web-43` the tool captured only
+  4 review in `web-44` and `web-45` (3 PASS, 3 FAIL and 4 review up to `web-43`). It links its own `eosc.eu` entry (point 4). Up to `web-43` the tool captured only
   the page's real links, because its HOME, ABOUT and CONTACT US menu items are
   `<a>` elements with no `href` that navigate by script. **Points 5b, 5c and 6
-  were false FAILs up to `web-43`**, and pass in `web-44`: a hand check on 9 October 2026 found a Contact page at
+  were false FAILs up to `web-43`**, and pass from `web-44`: a hand check on 9 October 2026 found a Contact page at
   `/contact-information` with `help@eosc-lifesciences-connect.eu`, and on 21
   November 2026 the footer item "AUP and UAP" (also an `<a>` without `href`)
   opens `/aup-and-uap` with both policies. Until the 21 November fix the tool
-  could not reach either page (see the correction at the top); in `web-44` it clicks the four items and reads all four pages. Point 3 is review: the logo reads "EOSC Node | Life Sciences
+  could not reach either page (see the correction at the top); from `web-44` it clicks the four items and reads all four pages. Point 3 is review: the logo reads "EOSC Node | Life Sciences
   Connect" but the page text never writes an approved name.
 
 - **Item 5 under v3.2.** CERN links no policy from its landing page, but its
@@ -347,10 +381,10 @@ evidence behind every verdict, is in the report linked above:
   both (5c was review up to `web-24`). Poland passes both since `web-27`: its
   "Acceptable Use Policy" link goes to its Terms of use, and a new "User Access
   Policy" link goes to its privacy policy page, which a reviewer should confirm
-  serves as the User Access Policy (up to `web-26` 5c was review). GÉANT, when its page is served (`web-22`, `web-34`), links a "GÉANT
+  serves as the User Access Policy (up to `web-26` 5c was review). GÉANT, when its page is served (`web-22`, `web-34`, `web-45`), links a "GÉANT
   Node Acceptable Use Policy" page, which was read, so 5b passes; 5c is review,
   since no separate User Access Policy is linked and v3.2 allows one document
-  for both. In `web-23` to `web-33` and in `web-35` to `web-44` its page was not served. A PASS covers
+  for both. In `web-23` to `web-33` and in `web-35` to `web-44` its page was not served; it was again in `web-45`. A PASS covers
   only the
   NLP half: no node's Catalogue metadata was read.
 - **CERN** was assessed at its new Node Landing Page, `https://eosc.cern/`, for
@@ -402,7 +436,7 @@ linked only the `eosc.eu` homepage) fixed theirs on 2 October 2026.
 BBMRI-ERIC (from its `www.` page up to `web-23`, and from its `dev3.` page in `web-25`), CERN, Czechia (since `web-16`), Data Terra (since `web-21`, at
 `earth-data.eu`), EOSC DTO, EGI (since `web-15`), EUDAT, Italy (since `web-18`,
 at `eosc.it`), PaNOSC and Poland (since `web-23`; Poland's page rendered almost empty in `web-26` only), EOSC Finland (since `web-25`) and Slovakia link correctly;
-GÉANT does too whenever its page is served (`web-16`, `web-22`, `web-34`; not in `web-35` to `web-44`). The failure
+GÉANT does too whenever its page is served (`web-16`, `web-22`, `web-34`, `web-45`; not in `web-35` to `web-44`). The failure
 names the exact URL that is missing, so the fix is a one-line edit.
 
 Point 4 is also the checklist's sharpest point: it names a specific page and

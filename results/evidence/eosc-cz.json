@@ -2,12 +2,12 @@
   "node_id": "eosc-cz",
   "node_name": "EOSC Node Czechia",
   "requested_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
-  "fetched_at": "2026-11-21T08:34:43+00:00",
+  "fetched_at": "2026-11-21T13:20:24+00:00",
   "final_url": "https://www.eosc.cz/en/about-eosc-cz/eosc-node-czechia",
   "http_status": 200,
   "redirect_chain": [
     "https://c.clarity.ms/c.gif",
-    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=86542E4342114D22BCBD6305914FC301&RedC=c.clarity.ms&MXFR=10FE812E3621650F1853993632216B70"
+    "https://c.bing.com/c.gif?ctsa=mr&CtsSyncId=CFB56024215C4670ACFAAB4CA651448C&RedC=c.clarity.ms&MXFR=1C1983095B8B640208D49B115F8B6A32"
   ],
   "robots_allowed": true,
   "robots_note": "robots.txt consulted",
@@ -1563,7 +1563,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/projects/national-support",
@@ -1997,7 +1998,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/about-eosc-cz",
@@ -2441,7 +2443,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz",
@@ -2885,7 +2888,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/projects/czech-academic-and-research-discovery-services-cards",
@@ -3654,7 +3658,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/services",
@@ -4218,7 +4223,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/about-eosc-cz/eosc-cz-in-data",
@@ -4682,7 +4688,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/about-eosc-cz/secretariat-eosc-cz",
@@ -5111,7 +5118,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/about-eosc-cz/templates-eosc-cz",
@@ -5610,7 +5618,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/about-eosc-cz/acknowledgement-and-citation",
@@ -6009,7 +6018,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://dmp.eosc.cz/en/",
@@ -6088,7 +6098,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.eosc.cz/en/about-eosc-cz/faq",
@@ -6492,7 +6503,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
@@ -6558,5 +6570,6 @@
     "https://www.eosc.cz/en/about-eosc-cz/initiative-eosc-cz (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 95 link(s) on the landing page, 6 followed because they matched a checklist point, 12 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 6 page(s); fetch budget: 12 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }

@@ -2,7 +2,7 @@
   "node_id": "panosc",
   "node_name": "PaNOSC",
   "requested_url": "https://panosc.eu/panosc-eosc-node",
-  "fetched_at": "2026-11-21T08:37:31+00:00",
+  "fetched_at": "2026-11-21T13:23:01+00:00",
   "final_url": "https://www.panosc.eu/panosc-eosc-node/",
   "http_status": 200,
   "redirect_chain": [
@@ -2420,7 +2420,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.panosc.eu/contact/",
@@ -2874,7 +2875,23 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LfdlLAUAAAAAAdNW95S34pRc5YC-Cwm3bzuckti&co=aHR0cHM6Ly93d3cucGFub3NjLmV1OjQ0Mw..&hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&theme=light&size=normal&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=p0t4xv89xwsb",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/bframe?hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&k=6LfdlLAUAAAAAAdNW95S34pRc5YC-Cwm3bzuckti&bft=0dAFcWeA7Og21Ky7IdCMVMhzfNIP-cyIKP6s6JsxjnUbSON3eIGZMRQGkWGQtjY7Eeuu6N9HLniS2lBDkd1DrRuXuwMEqvGiS27w",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.panosc.eu/about-panosc/",
@@ -3353,7 +3370,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.panosc.eu/about-european-research-infrastructures/",
@@ -3812,7 +3830,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.panosc.eu/data/panosc-data-policy-framework/",
@@ -4306,7 +4325,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.panosc.eu/services/",
@@ -4745,7 +4765,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.panosc.eu/training-catalogue/",
@@ -5199,7 +5220,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/",
@@ -5658,7 +5680,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.panosc.eu/services/pan-software-catalogue/",
@@ -6137,7 +6160,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
@@ -6203,5 +6227,6 @@
     "https://www.panosc.eu/about-panosc/photon-and-neutron-competence-centre/ (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 131 link(s) on the landing page, 7 followed because they matched a checklist point, 3 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 25 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }

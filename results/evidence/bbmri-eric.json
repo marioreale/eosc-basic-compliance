@@ -2,7 +2,7 @@
   "node_id": "bbmri-eric",
   "node_name": "BBMRI-ERIC",
   "requested_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
-  "fetched_at": "2026-11-21T08:33:09+00:00",
+  "fetched_at": "2026-11-21T13:18:53+00:00",
   "final_url": "https://dev3.bbmri-eric.eu/eosc-node-bbmri-eric/",
   "http_status": 200,
   "redirect_chain": [],
@@ -1181,7 +1181,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://dev3.bbmri-eric.eu/bbmri-helpdesk/",
@@ -1495,7 +1496,16 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6Lfd0UwtAAAAAERk6wAsRny6DR60o57-WEFyXWvy&co=aHR0cHM6Ly9kZXYzLmJibXJpLWVyaWMuZXU6NDQz&hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=d799z8kk9bxm",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://dev3.bbmri-eric.eu/contact",
@@ -1809,7 +1819,23 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3258.2505707954115!2d15.466531312271032!3d47.07990142407932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476e4a6f0fec9c83%3A0xc2b4f9205e5b15b!2sBBMRI-ERIC!5e1!3m2!1sen!2suk!4v1788790938499!5m2!1sen!2suk",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6Lfd0UwtAAAAAERk6wAsRny6DR60o57-WEFyXWvy&co=aHR0cHM6Ly9kZXYzLmJibXJpLWVyaWMuZXU6NDQz&hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&size=invisible&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=ep0q9vwrehhv",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://dev3.bbmri-eric.eu/about/",
@@ -2143,7 +2169,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://dev3.bbmri-eric.eu/about/bbmri-eric-governance-structure/",
@@ -2472,7 +2499,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://dev3.bbmri-eric.eu/bbmri-eric-policy-for-access-to-and-sharing-of-biological-samples-and-data/",
@@ -2781,7 +2809,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://dev3.bbmri-eric.eu/legal-notice/",
@@ -3115,7 +3144,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://dev3.bbmri-eric.eu/departments/finance-and-project-management/",
@@ -3459,7 +3489,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://dev3.bbmri-eric.eu/about/stakeholder-forum/",
@@ -3983,7 +4014,23 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://redcircle.com/embedded-player/sh/b76dd887-4388-4d7f-9a22-9572edb4791a/ep/d8f8212b-8fdd-4c72-82a1-05cb778dcdea?",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://redcircle.com/embedded-player/sh/b76dd887-4388-4d7f-9a22-9572edb4791a/ep/341656ec-2787-4375-adff-ab1c79ee407a?",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://dev3.bbmri-eric.eu/about-us/member-states-and-national-nodes/",
@@ -4287,7 +4334,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     }
   ],
   "children_skipped": [
@@ -4340,5 +4388,6 @@
     "https://dev3.bbmri-eric.eu/about/stakeholder-forum/ (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 69 link(s) on the landing page, 8 followed because they matched a checklist point, 4 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 2 page(s); fetch budget: 2 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }

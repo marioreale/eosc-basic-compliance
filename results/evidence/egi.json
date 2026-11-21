@@ -2,7 +2,7 @@
   "node_id": "egi",
   "node_name": "EGI",
   "requested_url": "https://www.egi.eu/egi-node",
-  "fetched_at": "2026-11-21T08:38:54+00:00",
+  "fetched_at": "2026-11-21T13:24:24+00:00",
   "final_url": "https://www.egi.eu/egi-node",
   "http_status": 200,
   "redirect_chain": [],
@@ -669,7 +669,7 @@
       "visible": true
     },
     {
-      "href": "https://www.egi.eu/people/diego-scardaci/",
+      "href": "https://www.egi.eu/people/person-xxxxxxx/",
       "text": "Coordination [removed_________], EGI Foundation",
       "visible": true
     },
@@ -2248,7 +2248,7 @@
     },
     {
       "text": "Coordination [removed_________], EGI Foundation",
-      "href": "https://www.egi.eu/people/diego-scardaci/",
+      "href": "https://www.egi.eu/people/person-xxxxxxx/",
       "tag": "a",
       "visible": true
     },
@@ -3367,7 +3367,8 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": []
     },
     {
       "url": "https://www.egi.eu/contact-us/",
@@ -4136,7 +4137,23 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&co=aHR0cHM6Ly93d3cuZWdpLmV1OjQ0Mw..&hl=en&type=image&v=4i3aN5wAweL7i3ADI7BSX4B-&theme=light&size=invisible&badge=bottomright&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=3nljqzz324yo",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/bframe?hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&bft=0dAFcWeA4BUHhxkU3Ppvpq30rKmLVGgP4Vqbct9pyj6QwYCMzfRuHkXHQouun_J-nKdPvGRVn8lti2vSeKdRi3T4MRACC1ZrwfCg",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.egi.eu/about/",
@@ -4905,7 +4922,30 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.youtube.com/embed/WobtiDBP7dI?autoplay=0",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&co=aHR0cHM6Ly93d3cuZWdpLmV1OjQ0Mw..&hl=en&type=image&v=4i3aN5wAweL7i3ADI7BSX4B-&theme=light&size=invisible&badge=bottomright&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=gxxzxj3r7uh3",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/bframe?hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&bft=0dAFcWeA5XEhX4q-GI0eFdNKsy79CxbZCa-fcbtCCRgn9n6qXgwHTp6Ob0EaltyKlcX2Y8adcVwo3LPU5XsIltSIPVeRFlE0E5VQ",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.egi.eu/services/",
@@ -5674,7 +5714,23 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&co=aHR0cHM6Ly93d3cuZWdpLmV1OjQ0Mw..&hl=en&type=image&v=4i3aN5wAweL7i3ADI7BSX4B-&theme=light&size=invisible&badge=bottomright&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=ixga806456go",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/bframe?hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&bft=0dAFcWeA4kYd6rwaH-OeXeIuqG05-xoeD6imCzdqz-lzQvy6qNN45Bmc3RxePYCorWRa5T0xrxP2od_tbdk3n40Wfg8bAy43OqtA",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.egi.eu/services/research/",
@@ -6443,7 +6499,23 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&co=aHR0cHM6Ly93d3cuZWdpLmV1OjQ0Mw..&hl=en&type=image&v=4i3aN5wAweL7i3ADI7BSX4B-&theme=light&size=invisible&badge=bottomright&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=1ecs40xdpdd9",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/bframe?hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&bft=0dAFcWeA7WUW3ySAdQM_PXWKoXk7TpnHLxQBHO9Fo_ST1lZa3tvidxkLc97fqJGVpO0SzoHIWgKlob6Wuo27uogrLjw1rfXjoyTA",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     },
     {
       "url": "https://www.egi.eu/egi-federation/",
@@ -7212,7 +7284,23 @@
         }
       ],
       "robots_allowed": true,
-      "error": ""
+      "error": "",
+      "frames": [
+        {
+          "url": "https://www.google.com/recaptcha/api2/anchor?ar=1&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&co=aHR0cHM6Ly93d3cuZWdpLmV1OjQ0Mw..&hl=en&type=image&v=4i3aN5wAweL7i3ADI7BSX4B-&theme=light&size=invisible&badge=bottomright&anchor-ms=20000&execute-ms=30000&ovv=CADq00gF&cb=mvgogh9zmfw5",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        },
+        {
+          "url": "https://www.google.com/recaptcha/api2/bframe?hl=en&v=4i3aN5wAweL7i3ADI7BSX4B-&k=6LdBZEMkAAAAAIKbEiqlP8XkpKBeXwLol5yXVZSC&bft=0dAFcWeA5-mgNOmHuq-WI5H0-O3YR4lm5f2ZeE63qVGRESOfJJFdvSDa99u5m78Quc5PualfVlWF54p3bs_2Q1rSKM1yaE3LWn2Q",
+          "title": "",
+          "chars": 0,
+          "links": 0,
+          "outcome": "not read: another site"
+        }
+      ]
     }
   ],
   "children_skipped": [
@@ -7278,5 +7366,6 @@
     "https://www.egi.eu/contact-us/ (already fetched at depth 1)"
   ],
   "crawl_note": "depth 2: 189 link(s) on the landing page, 5 followed because they matched a checklist point, 31 matched but dropped by a cap, the rest not relevant to any point; depth 2 added 1 page(s); fetch budget: 34 of 60 used",
-  "scripted_links": []
+  "scripted_links": [],
+  "frames": []
 }
