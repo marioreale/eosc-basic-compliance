@@ -18,7 +18,7 @@ follow one further hop under a fixed budget.
 you want to install and run it yourself.
 ([Word](docs/eosc-basic-compliance-guide.docx) · [PDF](docs/eosc-basic-compliance-guide.pdf))
 
-👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 482
+👉 **[Test suite and configuration overview](docs/TEST-SUITE.md)** — what the 489
 tests cover, every configuration option, the defects that earned a regression
 test, and what the published figures do and do not say.
 ([Word](docs/eosc-basic-compliance-testsuite.docx) · [PDF](docs/eosc-basic-compliance-testsuite.pdf))
@@ -65,6 +65,21 @@ The Markdown is the source, so if the two differ, the Markdown is current.
 >
 > The previous published run, `web-43` ([run 44882165868](https://github.com/marioreale/eosc-basic-compliance/actions/runs/44882165868), 21 November, commit `05b8500`:
 > 81 / 11 / 68 / 20 FIREWALL / 0 ERROR), is in the git history at `65b7c4f`.
+>
+> **Correction, 21 November 2026 (afternoon): Scholarly Commons' 5b and 5c FAILs
+> are false negatives**, and the cause given for them below is wrong. Every page of
+> the node draws only its menu, footer and cookie dialog itself and loads its
+> content into a same-site embedded frame (a Joomla article at
+> `/pages/?option=com_content&…`); the tool read only the outer page, so it was
+> not a timing problem and waiting longer would not have helped. Read in a
+> browser, the "Terms & Policies" frame publishes an "Acceptable Use Policy and
+> Conditions of Use" and a "User Access Policy" (both Version 1.0, 19 October
+> 2026). Since this correction the tool also reads visible same-site frames (see
+> "Same-site embedded frames" in the [test-suite overview](docs/TEST-SUITE.md));
+> a trial collection of this node on 21 November 2026 scores 5b `PASS` and 5c
+> review (the UAP is a section of the same page, reached only by in-page links,
+> so the single-document rule keeps a reviewer in the loop). Its points 2, 3, 5a
+> and 6 also rested on text the tool had not seen.
 >
 > **Correction, 21 November 2026: Life Sciences Connect's 5b, 5c and 6 FAILs
 > were false negatives** (in `web-43`, and in `web-42` and earlier). The node does
@@ -276,7 +291,10 @@ evidence behind every verdict, is in the report linked above:
   drawn the new page, so the Terms & Policies page was never actually read. Do
   not quote these two FAILs until a reviewer has checked the page in a browser,
   or a later run reads it properly. In `web-36` it rendered only a
-  169-character shell and was review on points 1 to 6.
+  169-character shell and was review on points 1 to 6. **Corrected cause (21
+  November 2026):** the page content is in a same-site embedded frame that the
+  tool did not read, not a page drawn too late; the Terms & Policies frame holds
+  both an AUP and a UAP, and the tool reads such frames from the next run on.
 - **GÉANT** was not served in `web-35` to `web-44` (from `web-37` all ten points are 🧱 `FIREWALL`): `https://geant.org/geant-eosc-node/`
   answered `HTTP 403` and redirected to `?ki-cf-botcl=1`, Cloudflare's "Performing
   security verification" page (2 links, no linked page read). Up to `web-36`, before the
@@ -889,7 +907,7 @@ format, how matching works, and what each node shows.
 ## Tests
 
 ```bash
-uv run pytest -q          # 482 tests (1 opt-in browser test skipped), no network
+uv run pytest -q          # 489 tests (2 opt-in browser tests skipped), no network
 uv run ruff check src tests
 ```
 

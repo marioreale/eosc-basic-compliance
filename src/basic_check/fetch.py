@@ -115,6 +115,18 @@ MAX_SCRIPTED_CLICKS = 6
 SCRIPTED_CLICK_WAIT_MS = 2_500
 SCRIPTED_STABLE_TRIES = 6
 
+# Embedded frames. Some sites draw only their menu, footer and cookie dialog in
+# the page itself and load each page's content into an <iframe>: every page of
+# EOSC Scholarly Commons embeds a Joomla article (/pages/?option=com_content&...),
+# and its "Terms & Policies" page holds the node's AUP and UAP inside that frame.
+# Reading the top document alone, the tool saw the landing page's text on every
+# page and reported 5b and 5c as FAIL up to web-44. So, on every page read, the
+# visible frames served from the same site are read too, and their text, links,
+# images and controls are added to the page's evidence. Frames from other sites
+# (videos, maps, chat widgets) are not read. Every frame and its outcome is kept
+# in the evidence (`frames`) so a reader can see where the text came from.
+MAX_FRAMES = 3
+
 # Called with null it lists the labels of candidate items; called with a label
 # it marks the first visible candidate carrying it with data-basic-check-click,
 # so that Playwright can give it a real mouse click (a synthetic element.click()
@@ -310,6 +322,8 @@ class ChildPage:
     links: list[Link] = field(default_factory=list)
     robots_allowed: bool | None = None
     error: str = ""
+    # Same-site embedded frames read into this page (see read_frames).
+    frames: list[dict] = field(default_factory=list)
 
     @property
     def ok(self) -> bool:
@@ -346,6 +360,9 @@ class PageEvidence:
     # Clickable items without an href that were clicked to find where they lead
     # (see resolve_scripted_links): {"text", "href", "outcome"} per click.
     scripted_links: list[dict] = field(default_factory=list)
+    # Same-site embedded frames read into the landing page (see read_frames):
+    # {"url", "title", "chars", "links", "outcome"} per frame.
+    frames: list[dict] = field(default_factory=list)
 
     def to_json(self) -> dict:
         return asdict(self)
@@ -711,6 +728,73 @@ async def _wait_for_render(page, max_ms: int = CHILD_RENDER_MAX_MS) -> None:
         waited += CHILD_RENDER_POLL_MS
 
 
+def same_site(a: str, b: str) -> bool:
+    """True when two URLs are served by the same host, ignoring a leading www."""
+    ha = urlparse(a).netloc.lower().removeprefix("www.")
+    hb = urlparse(b).netloc.lower().removeprefix("www.")
+    return bool(ha) and ha == hb
+
+
+def merge_frames(parsed: dict, framed: list[dict]) -> dict:
+    """Add the extracted content of embedded frames to a page's extraction.
+
+    The frame text is appended after the page's own text, so the page's opening
+    words (which point 2 quotes) stay first; links, images and controls are
+    appended in frame order. Title, language and meta description stay the
+    page's own.
+    """
+    out = dict(parsed)
+    for f in framed:
+        for key in ("main_text", "full_text"):
+            extra = f.get(key, "")
+            if extra:
+                out[key] = f"{out.get(key, '')} {extra}".strip()
+        for key in ("links", "images", "controls"):
+            out[key] = list(out.get(key, [])) + list(f.get(key, []))
+    return out
+
+
+async def read_frames(page, page_url: str) -> tuple[list[dict], list[dict]]:
+    """Read the visible same-site frames of a page.
+
+    Returns (records, extractions): one record per frame met, with its outcome,
+    and the extraction of each frame that was read.
+    """
+    records: list[dict] = []
+    framed: list[dict] = []
+    for frame in page.frames:
+        if frame == page.main_frame or frame.parent_frame != page.main_frame:
+            continue
+        url = frame.url or ""
+        if not url.startswith(("http://", "https://")):
+            continue
+        rec = {"url": url[:500], "title": "", "chars": 0, "links": 0, "outcome": ""}
+        records.append(rec)
+        if not same_site(url, page_url):
+            rec["outcome"] = "not read: another site"
+            continue
+        if len(framed) >= MAX_FRAMES:
+            rec["outcome"] = f"not read: more than {MAX_FRAMES} frames"
+            continue
+        try:
+            el = await frame.frame_element()
+            box = await el.bounding_box()
+            rec["title"] = ((await el.get_attribute("title")) or "").strip()[:300]
+            if not box or box["width"] < 2 or box["height"] < 2:
+                rec["outcome"] = "not read: not visible"
+                continue
+            await _wait_for_render(frame)
+            ex = _extract(await frame.content(), url)
+        except Exception as exc:
+            rec["outcome"] = f"not read: {type(exc).__name__}"
+            continue
+        rec["chars"] = len(ex["main_text"])
+        rec["links"] = len(ex["links"])
+        rec["outcome"] = "read"
+        framed.append(ex)
+    return records, framed
+
+
 async def _fetch_child(context, child: ChildPage) -> ChildPage:
     """Fetch one child page. Lighter than the landing page: text and links only."""
     # robots.txt is read with a blocking client; in a worker thread it cannot
@@ -730,6 +814,9 @@ async def _fetch_child(context, child: ChildPage) -> ChildPage:
         child.http_status = resp.status if resp else None
         child.final_url = page.url
         parsed = _extract(await page.content(), child.final_url or child.url)
+        with contextlib.suppress(Exception):
+            child.frames, framed = await read_frames(page, child.final_url or child.url)
+            parsed = merge_frames(parsed, framed)
         child.title = parsed["title"]
         child.lang_attr = parsed["lang_attr"]
         # Child text is capped: it is read for keywords and policy pointers, and
@@ -786,6 +873,9 @@ async def _fetch_one(
         ev.redirect_chain = redirects[:10]
         html = await page.content()
         parsed = _extract(html, ev.final_url or node["url"])
+        with contextlib.suppress(Exception):
+            ev.frames, framed = await read_frames(page, ev.final_url or node["url"])
+            parsed = merge_frames(parsed, framed)
         for key, value in parsed.items():
             setattr(ev, key, value)
         shot = shots / f"{node['id']}.png"
@@ -844,6 +934,13 @@ async def _fetch_one(
                 ev.crawl_note += (
                     f"; {len(ev.scripted_links)} clickable item(s) without a link address "
                     f"clicked, {opened} opened a page (recorded as links)"
+                )
+            framed_pages = sum(
+                1 for c in [ev, *ev.children] if any(f.get("outcome") == "read" for f in c.frames)
+            )
+            if framed_pages:
+                ev.crawl_note += (
+                    f"; {framed_pages} page(s) read with the content of a same-site embedded frame"
                 )
             if depth >= 2:
                 ev.crawl_note += (
